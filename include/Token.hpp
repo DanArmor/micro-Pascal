@@ -18,6 +18,7 @@ class IToken{
         VARDECL, ///< Объявление переменной
         PROGSTART, ///< Старт программы
         TERMINATE, ///< Неявная замена SEMI
+        NEWLINE,
 
         ID, ///< Индентификатор
 

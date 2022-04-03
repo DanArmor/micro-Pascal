@@ -41,16 +41,6 @@ class Lexer{
      */
     void setTemplates(List<TokenTemplate> const &templates);
 
-    void skipComments(std::stringstream &text, std::string &str);
-
-    Token collectString(std::stringstream &text, std::string &str);
-
-    void checkLine(void);
-
-    Token getToken(std::string &str);
-
-    std::string getTrimmed(std::string str);
-
     /**
      * @brief Анализирует файл
      * @param fileName имя файла для анализа
@@ -61,17 +51,13 @@ class Lexer{
      * @brief Анализирует текст программы
      * @param text строковый поток, представляющий программу
      */
-    List<Token> const &analyzeProgramText(std::stringstream &text);
+    List<Token> const &analyzeProgramText(std::string const &text);
 
     private:
     /// @brief Шаблоны токенов, которые может определять лексер
-    std::size_t currLine = 0;
-    std::vector<std::size_t> wordsInLine;
-
     List<TokenTemplate> tokenTemplates;
+
     List<Token> tokens;
-    std::size_t stringsCount = 0;
-    
 };
 
 #endif
