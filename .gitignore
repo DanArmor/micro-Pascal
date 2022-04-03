@@ -24,11 +24,6 @@
 !*.svg
 !*.dot
 
-!*.js
-!*.css
-!*.html
-
-
 !*/
 !/libs
 
