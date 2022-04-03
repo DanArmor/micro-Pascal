@@ -62,6 +62,7 @@ namespace PascalRules{
 
                 {"^[0-9]+", IToken::Type::INTEGER_CONST},
                 {"^[0-9]+\\.[0-9]*", IToken::Type::REAL_CONST},
+                //{"^'*'", IToken::STRING_CONST},
 
                 {"^\\b[_A-Za-z | А-Яа-я]+[[:alnum:]]*\\b", IToken::Type::ID}
             }
