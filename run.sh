@@ -5,7 +5,7 @@ make Main &&
 #valgrind ./testList
 cd ..
 
-for file in ./prog*
+for file in ./progs/prog*
 do
     cp $file ./build/
     if [[ $? -ne 0 ]] ; then
@@ -15,5 +15,5 @@ do
 done
 
 cd build
-./Main prog2.txt
+./Main prog1.txt
 dot out.dot -Tsvg > output.svg
