@@ -15,4 +15,5 @@ do
 done
 
 cd build
-./Main
+./Main prog2.txt
+dot out.dot -Tsvg > output.svg

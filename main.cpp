@@ -21,10 +21,14 @@ class Variable{
     std::variant<int, double, char, bool> value;
 };
 
-int main(void){
+int main(int argc, char** argv){
+    if(argc != 2){
+        std::cout << "Пожалуйста, введите только\033[31m название исходного файла\33[0m для разбора после названия программы\n";
+        exit(1);
+    }
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> tokens = lexer.analyzeFile("prog1.txt");
+    List<Token> tokens = lexer.analyzeFile(argv[1]);
 
 //    for(auto tok : tokens){
 //        std::cout << fmt::format("{}     {}\n", tok.getStr(), magic_enum::enum_name(tok.getType()));
@@ -36,6 +40,10 @@ int main(void){
     GraphvizVisitor graph("out.dot");
     root->accept(graph);
     graph.write();
+
+//    CodeGenVisitor code("test.s");
+//    root->accept(code);
+//    code.done();
 
 //    CalcVisitor calc;
 //    root->accept(calc);

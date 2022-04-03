@@ -232,101 +232,217 @@ void GraphvizVisitor::visit(whileAST &node){
 
 /*Определения TypeViewVisitor
 ==================*/
-    TypeViewVisitor::TypeViewVisitor(){};
+TypeViewVisitor::TypeViewVisitor(){};
 
-    void TypeViewVisitor::visit(BinOp &node){
-        typesStrings.push_back(node.token.getStr());
+void TypeViewVisitor::visit(BinOp &node){
+    typesStrings.push_back(node.token.getStr());
+    node.left->accept(*this);
+    node.right->accept(*this);
+}
+
+void TypeViewVisitor::visit(UnOp &node){
+    typesStrings.push_back(node.token.getStr());
+    node.down->accept(*this);
+}
+
+void TypeViewVisitor::visit(Number &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(Compound &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto child : node.children){
+        child->accept(*this);
+    }
+}
+
+void TypeViewVisitor::visit(Assign &node){
+    typesStrings.push_back(node.token.getStr());
+    node.var->accept(*this);
+    node.value->accept(*this);
+}
+
+void TypeViewVisitor::visit(Var &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(NoOp &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(ProgramAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.block->accept(*this);
+}
+
+void TypeViewVisitor::visit(BlockAST &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto child : node.consts){
+        child->accept(*this);
+    }
+    for(auto child : node.declarations){
+        child->accept(*this);
+    }
+    node.compound->accept(*this);
+}
+
+void TypeViewVisitor::visit(VarDeclaration &node){
+    typesStrings.push_back(node.token.getStr());
+    node.var->accept(*this);
+    node.type->accept(*this);
+}
+
+void TypeViewVisitor::visit(Type &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(ConstAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.constName->accept(*this);
+    node.constValue->accept(*this);
+}
+
+void TypeViewVisitor::visit(StringAST &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(ProcedureCall &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto child : node.params){
+        child->accept(*this);
+    }
+}
+
+void TypeViewVisitor::visit(ifAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.body->accept(*this);
+    node.condition->accept(*this);
+    if(node.elseBody != nullptr)
+        node.elseBody->accept(*this);
+}
+
+void TypeViewVisitor::visit(whileAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.body->accept(*this);
+    node.condition->accept(*this);
+}
+
+std::vector<std::string> TypeViewVisitor::getData(void){
+    return typesStrings;
+}
+
+
+
+    CodeGenVisitor::CodeGenVisitor(std::string filename){
+        file.open(filename, std::ios::out);
+    }
+
+    void CodeGenVisitor::done(void){
+        file.close();
+    }
+
+    void CodeGenVisitor::visit(BinOp &node){
         node.left->accept(*this);
         node.right->accept(*this);
+        file << "pop \%ecx" << "\n";
+        file << "pop \%eax" << "\n";
+        switch (node.token.getType()){
+            case IToken::PLUS : 
+                file << "addl \%ecx, \%eax" << "\n";
+                break;
+            case IToken::MUL : 
+                file << "imul \%ecx, \%eax" << "\n";
+                break;
+        }
+        file << "push \%eax" << "\n";
     }
 
-    void TypeViewVisitor::visit(UnOp &node){
-        typesStrings.push_back(node.token.getStr());
-        node.down->accept(*this);
+    void CodeGenVisitor::visit(UnOp &node){
+
     }
 
-    void TypeViewVisitor::visit(Number &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(Number &node){
+        file << "push $" << node.token.getStr() << "\n";
     }
 
-    void TypeViewVisitor::visit(Compound &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(Compound &node){
         for(auto child : node.children){
             child->accept(*this);
         }
     }
 
-    void TypeViewVisitor::visit(Assign &node){
-        typesStrings.push_back(node.token.getStr());
-        node.var->accept(*this);
-        node.value->accept(*this);
+    void CodeGenVisitor::visit(Assign &node){
+
     }
 
-    void TypeViewVisitor::visit(Var &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(Var &node){
+
     }
 
-    void TypeViewVisitor::visit(NoOp &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(NoOp &node){
+
     }
 
-    void TypeViewVisitor::visit(ProgramAST &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(ProgramAST &node){
+        file << ".file \"main.pas\"" << "\n";
+        file << ".text" << "\n";
+        file << ".globl main" << "\n";
+        file << ".type main, @function" << "\n";
+        file << "main:\n";
         node.block->accept(*this);
     }
 
-    void TypeViewVisitor::visit(BlockAST &node){
-        typesStrings.push_back(node.token.getStr());
-        for(auto child : node.consts){
-            child->accept(*this);
-        }
-        for(auto child : node.declarations){
-            child->accept(*this);
-        }
+    void CodeGenVisitor::visit(BlockAST &node){
         node.compound->accept(*this);
+        file << "ret";
+        file << "\n";
+        if(node.consts.size() != 0){
+            file << ".data" << "\n";
+            for(auto child : node.consts){
+                child->accept(*this);
+            }
+        }
+        file << "\n";
     }
 
-    void TypeViewVisitor::visit(VarDeclaration &node){
-        typesStrings.push_back(node.token.getStr());
-        node.var->accept(*this);
-        node.type->accept(*this);
+    void CodeGenVisitor::visit(VarDeclaration &node){
+
     }
 
-    void TypeViewVisitor::visit(Type &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(Type &node){
+
     }
 
-    void TypeViewVisitor::visit(ConstAST &node){
-        typesStrings.push_back(node.token.getStr());
-        node.constName->accept(*this);
+    void CodeGenVisitor::visit(ConstAST &node){
+        file << node.constName->token.getStr() << ":\n";
         node.constValue->accept(*this);
     }
 
-    void TypeViewVisitor::visit(StringAST &node){
-        typesStrings.push_back(node.token.getStr());
+    void CodeGenVisitor::visit(StringAST &node){
+        file << ".string " << "\""  << node.token.getStr().substr(1, node.token.getStr().size()-2) << "\"" << "\n";
     }
 
-    void TypeViewVisitor::visit(ProcedureCall &node){
-        typesStrings.push_back(node.token.getStr());
-        for(auto child : node.params){
-            child->accept(*this);
+    void CodeGenVisitor::visit(ProcedureCall &node){
+        if(node.token.getStr() == "RETURN"){
+            node.params[0]->accept(*this);
+            file << "pop \%eax" << "\n";
+        } else if(node.token.getStr() == "writeln"){
+            file << "movl " << "$" << node.params[0]->token.getStr() << ", " << "\%ebx" << "\n";
+            file << "push \%ebx" << "\n";
+            file << "call puts" << "\n";
+            file << "add $4, \%esp" << "\n";
         }
+
     }
 
-    void TypeViewVisitor::visit(ifAST &node){
-        typesStrings.push_back(node.token.getStr());
-        node.body->accept(*this);
-        node.condition->accept(*this);
-        if(node.elseBody != nullptr)
-            node.elseBody->accept(*this);
+    void CodeGenVisitor::visit(ifAST &node){
+
     }
 
-    void TypeViewVisitor::visit(whileAST &node){
-        typesStrings.push_back(node.token.getStr());
-        node.body->accept(*this);
-        node.condition->accept(*this);
+    void CodeGenVisitor::visit(whileAST &node){
+
     }
 
-    std::vector<std::string> TypeViewVisitor::getData(void){
-        return typesStrings;
+    void CodeGenVisitor::write(void){
+
     }

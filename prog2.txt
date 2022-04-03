@@ -1,0 +1,7 @@
+PROGRAM test;
+CONST
+    mes = 'Hello, world!';
+BEGIN
+    writeln(mes);
+    RETURN(0);
+END.

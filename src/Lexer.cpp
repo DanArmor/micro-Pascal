@@ -47,6 +47,10 @@ std::string Lexer::getTrimmed(std::string str){
 List<Token> const &Lexer::analyzeFile(std::string fileName){
     std::fstream file(fileName, std::ios::in);
 
+    if(!file){
+        throw std::invalid_argument("Невозможно открыть файл!\n");
+    }
+
     std::stringstream text;
     std::string str;
     while(std::getline(file, str)){

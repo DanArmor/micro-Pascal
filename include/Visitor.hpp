@@ -178,4 +178,50 @@ class TypeViewVisitor : public IVisitor{
     std::vector<std::string> typesStrings;
 };
 
+/// @brief Посетитель-кодовый генератор
+class CodeGenVisitor : public IVisitor{
+    public:
+
+    CodeGenVisitor(std::string filename);
+
+    void done(void);
+
+    void visit(BinOp &node);
+
+    void visit(UnOp &node);
+
+    void visit(Number &node);
+
+    void visit(Compound &node);
+
+    void visit(Assign &node);
+
+    void visit(Var &node);
+
+    void visit(NoOp &node);
+
+    void visit(ProgramAST &node);
+
+    void visit(BlockAST &node);
+
+    void visit(VarDeclaration &node);
+
+    void visit(Type &node);
+
+    void visit(ConstAST &node);
+
+    void visit(StringAST &node);
+
+    void visit(ProcedureCall &node);
+
+    void visit(ifAST &node);
+
+    void visit(whileAST &node);
+
+    void write(void);
+
+    private:
+    std::fstream file;
+};
+
 #endif
