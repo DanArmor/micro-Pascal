@@ -46,47 +46,55 @@ List<Token> const &Lexer::analyzeFile(std::string fileName){
     return analyzeProgramText(text.str());
 }
 
+std::string Lexer::getTrimmed(std::string str){
+    int s=str.find_first_not_of(" \t\n");
+    int e=str.find_last_not_of(" \t");
+
+    // if do find real content
+    if (s!=-1 && e!=-1)
+        return str.substr(s, e-s+1);
+
+    return "";
+}
+
 /**
  * @brief Анализирует текст программы
  * @param text строковый поток, представляющий программу
  */
 List<Token> const &Lexer::analyzeProgramText(std::string const &text){
     std::map<std::size_t, std::pair<std::string, IToken::Type>> result;
-    for(auto pat = tokenTemplates.begin(); pat != tokenTemplates.end(); ++pat){
-        std::regex r((*pat).getRegex());
-        auto wordsBegin = std::sregex_iterator(text.begin(), text.end(), r);
-        auto wordsEnd = std::sregex_iterator();
-        for(auto it = wordsBegin; it != wordsEnd; ++it){
-            result[it->position()] = std::make_pair(it->str(), (*pat).getType());
-        }
-    }
-    bool isStrConst = false;
-    std::size_t linePosition = 0;
-    for(auto match = result.begin(); match != result.end(); ++match){
-        switch(match->second.second){
-            case IToken::STRING_BOUND :
-                if(isStrConst){
-                    isStrConst = false;
-                } else{
-                    throw std::invalid_argument("Незакрытая кавычка строки!");
+    std::size_t position = 0;
+    std::size_t len = 0;
+    std::size_t offset = 0;
+    Token matched;
+    while(true){
+        matched = {"", IToken::ERROR};
+        for(auto pat = tokenTemplates.begin(); pat != tokenTemplates.end(); ++pat){
+            std::regex r((*pat).getRegex());
+            auto wordsBegin = std::sregex_iterator(text.begin()+position, text.end(), r);
+            auto wordsEnd = std::sregex_iterator();
+            if(wordsBegin != wordsEnd){
+                //std::cout << wordsBegin->str() << "\n";
+                std::string word = getTrimmed(wordsBegin->str());
+                if(wordsBegin->str().size() > len){
+                    len = wordsBegin->str().size();
+                    offset = wordsBegin->position();
+                    matched = {word, (*pat).getType(), 0};
                 }
-                break;
-            case IToken::STRING_CONST :
-                tokens.pushBack({match->second.first, match->second.second, linePosition});
-                isStrConst = true;
-                break;
-            case IToken::NEWLINE :
-                linePosition++;
-                break;
-            default:
-                if(!isStrConst)
-                    tokens.pushBack({match->second.first, match->second.second, linePosition});
-                break;
+            }
         }
+        //std::cout << position << " " << len << " " << offset << " ||| " << text.size() << "\n";
+        if(matched.getType() != IToken::NEWLINE && matched.getStr().size() == 0)
+            throw std::invalid_argument("Неизвестный токен");
+        position = position + len + offset;
+        //std::cout << matched.getInfo() << "\n\n";
+        if(matched.getType() != IToken::NEWLINE && matched.getType() != IToken::COMMENT)
+            tokens.pushBack(matched);
+        if(position >= text.size())
+            break;
+        len = 0;
+        offset = 0;
     }
     tokens.pushBack({"$", IToken::ENDOFSTREAM});
-    for(auto p : tokens){
-        std::cout << p.getInfo() << "\n\n";
-    }
     return tokens;
 }

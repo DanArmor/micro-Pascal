@@ -41,6 +41,8 @@ class Lexer{
      */
     void setTemplates(List<TokenTemplate> const &templates);
 
+    std::string getTrimmed(std::string str);
+
     /**
      * @brief Анализирует файл
      * @param fileName имя файла для анализа

@@ -19,6 +19,7 @@ class IToken{
         PROGSTART, ///< Старт программы
         TERMINATE, ///< Неявная замена SEMI
         NEWLINE,
+        COMMENT,
 
         ID, ///< Индентификатор
 
