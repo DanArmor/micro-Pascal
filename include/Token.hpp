@@ -110,7 +110,7 @@ class Token : public IToken{
      * @param[in] type тип токена
      */
     Token(std::string str, Type type);
-    Token(std::string str, Type type, std::size_t line);
+    Token(std::string str, Type type, std::size_t lineNum);
 
     std::size_t line(void);
     std::size_t rowLine(void);

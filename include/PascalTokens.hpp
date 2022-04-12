@@ -9,6 +9,14 @@
 /// @brief Специальные правила Паскаля
 namespace PascalRules{
 
+//    Token CONST(std::size_t lineNum){
+//        return {"CONST", IToken::CONST, lineNum};
+//    }
+//
+//    Token VAR(std::size_t lineNum){
+//        return {"VAR", IToken::VAR, lineNum};
+//    }
+
     /// @brief Возвращает шаблоны токинов языка Pascal
     List<TokenTemplate> getPascalTemplates(void){
          List<TokenTemplate> templates = {
