@@ -76,7 +76,7 @@ namespace PascalRules{
       {"^[\t ]*\\{(.|\n)*\\}", IToken::COMMENT},
 
       {"^[\t ]*[_A-Za-z|А-Яа-я]+[[:alnum:]]*\\b", IToken::Type::ID},
-      {"^\\s*\n", IToken::NEWLINE}
+      {"^[\t ]*\n", IToken::NEWLINE}
 
     }
         };

@@ -11,7 +11,7 @@ BEGIN
   fa := sin(a);
   fb := sin(b);
   assert(fb*fa<0);
-
+  { comment, hello }
   WHILE (b-a) > eps DO
     BEGIN
         x := (b+a)/2;

@@ -66,6 +66,7 @@ List<Token> const &Lexer::analyzeProgramText(std::string const &text){
     std::size_t position = 0;
     std::size_t len = 0;
     std::size_t offset = 0;
+    std::size_t lineNum = 0;
     Token matched;
     while(true){
         matched = {"", IToken::ERROR};
@@ -79,7 +80,7 @@ List<Token> const &Lexer::analyzeProgramText(std::string const &text){
                 if(wordsBegin->str().size() > len){
                     len = wordsBegin->str().size();
                     offset = wordsBegin->position();
-                    matched = {word, (*pat).getType(), 0};
+                    matched = {word, (*pat).getType(), lineNum};
                 }
             }
         }
@@ -92,6 +93,8 @@ List<Token> const &Lexer::analyzeProgramText(std::string const &text){
             tokens.pushBack(matched);
         if(position >= text.size())
             break;
+        if(matched.getType() == IToken::NEWLINE)
+            lineNum++;
         len = 0;
         offset = 0;
     }
