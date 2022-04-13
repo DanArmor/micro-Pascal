@@ -95,6 +95,8 @@ List<Token> const &Lexer::analyzeProgramText(std::string const &text){
             break;
         if(matched.getType() == IToken::NEWLINE)
             lineNum++;
+        else if(matched.getType() == IToken::COMMENT)
+            lineNum += std::count(matched.getStr().begin(), matched.getStr().end(), '\n');
         len = 0;
         offset = 0;
     }

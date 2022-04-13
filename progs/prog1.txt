@@ -11,7 +11,10 @@ BEGIN
   fa := sin(a);
   fb := sin(b);
   assert(fb*fa<0);
-  { comment, hello }
+  { comment, hello 
+  
+  
+  }
   WHILE (b-a) > eps DO
     BEGIN
         x := (b+a)/2;
@@ -26,4 +29,4 @@ BEGIN
     END;
 
   writeln('Root of function on [a,b] is equal ',(b+a)/2);
-END.
+END
