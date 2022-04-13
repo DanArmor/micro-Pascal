@@ -65,3 +65,4 @@ END.
 * magic_enum.hpp - для получения имен энамов в рантайме (https://github.com/Neargye/magic_enum)
 * plantUML - для написания объектной схемы и схемы классов (https://github.com/plantuml/plantuml)
 * Doxygen - документация (https://github.com/doxygen/doxygen)
+* Doxygen Awesome - стиль для документации (https://jothepro.github.io/doxygen-awesome-css/)
