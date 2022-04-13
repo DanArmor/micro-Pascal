@@ -33,6 +33,7 @@
 @enduml
 ```
 
+## Диаграмма классов:
 ```plantuml
 @startuml
     !theme plain
