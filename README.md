@@ -66,3 +66,6 @@ END.
 * plantUML - для написания объектной схемы и схемы классов (https://github.com/plantuml/plantuml)
 * Doxygen - документация (https://github.com/doxygen/doxygen)
 * Doxygen Awesome - стиль для документации (https://jothepro.github.io/doxygen-awesome-css/)
+
+### Диаграмма объектов и диаграмма классов:
+![Диаграмма объектов и диаграмма классов](schemes/scheme.jpeg)
