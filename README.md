@@ -67,5 +67,7 @@ END.
 * Doxygen - документация (https://github.com/doxygen/doxygen)
 * Doxygen Awesome - стиль для документации (https://jothepro.github.io/doxygen-awesome-css/)
 
+![Изображение схемы синтаксиса](schemes/diagram.xhtml)
+
 ### Диаграмма объектов и диаграмма классов:
 ![Диаграмма объектов и диаграмма классов](schemes/scheme.jpeg)
