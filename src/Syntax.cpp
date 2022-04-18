@@ -14,233 +14,6 @@ AST *SyntaxAnalyzer::syntaxProgram(void){
     return new ProgramAST(nameTok, blockPTR);
 }
 
-AST *SyntaxAnalyzer::syntaxCompoundSt(void){
-    eat(IToken::BEGIN);
-    std::vector<ASTptr> stList = syntaxStList();
-    eat(IToken::END);
-
-    CompoundAST *compoundPTR = new CompoundAST();
-    for(auto stPTR : stList)
-        compoundPTR->addChild(stPTR);
-    
-    return compoundPTR;
-}
-
-std::vector<ASTptr> SyntaxAnalyzer::syntaxStList(void){
-    AST *stPTR = syntaxSt();
-
-    std::vector<ASTptr> stList = {stPTR};
-
-    while(getCurTok().getType() == IToken::SEMI){
-        eat(getCurTok().getType());
-        stList.push_back(syntaxSt());
-    }
-
-    if(getCurTok().getType() == IToken::ID)
-        throw std::invalid_argument(fmt::format("Неожиданный индентификатор: {}", getCurTok().getInfo()));
-
-    return stList;
-}
-
-ASTptr SyntaxAnalyzer::syntaxSt(void){
-    switch(getCurTok().getType()) {
-        case IToken::BEGIN :
-            return syntaxCompoundSt();
-        case IToken::ID :{
-            if(lookFoward().getType() == IToken::ASSIGN)
-                return syntaxAssignSt();
-            else if(lookFoward().getType() == IToken::LPAREN)
-                return syntaxCallSt();
-            else{
-                // Специально форсим, будто ждали присваивание
-                eat(IToken::ID);
-                eat(IToken::ASSIGN);
-            }
-        }
-        case IToken::WHILE :
-            return syntaxWhileSt();
-        case IToken::IF :
-            return syntaxIfSt();
-        default:
-            return syntaxEmptySt();
-    }
-}
-
-ASTptr SyntaxAnalyzer::syntaxCallSt(void){
-    Token nameTok = getCurTok();
-    eat(IToken::ID);
-    eat(IToken::LPAREN);
-    std::vector<ASTptr> paramsList;
-    if(getCurTok().getType() != IToken::RPAREN){
-        ASTptr paramPTR = syntaxExpr();
-        paramsList.push_back(paramPTR);
-    }
-    while(getCurTok().getType() == IToken::COMMA){
-        eat(IToken::COMMA);
-        ASTptr paramPTR = syntaxExpr();
-        paramsList.push_back(paramPTR);
-    }
-    
-    eat(IToken::RPAREN);
-    return new CallAST(nameTok, paramsList);
-}
-
-ASTptr SyntaxAnalyzer::syntaxAssignSt(void){
-    ASTptr lValue = syntaxVariable();
-    Token assignTok = getCurTok();
-
-    eat(IToken::ASSIGN);
-
-    ASTptr toAssign = syntaxExpr();
-    return new AssignAST(lValue, assignTok, toAssign);
-}
-
-ASTptr SyntaxAnalyzer::syntaxVariable(void){
-    ASTptr varPTR = new VarAST(getCurTok());
-    eat(IToken::ID);
-    return varPTR;
-}
-
-ASTptr SyntaxAnalyzer::syntaxEmptySt(void){
-    return new NoOpAST({"$", IToken::EMPTY});
-}
-
-AST *SyntaxAnalyzer::syntaxFactor(){
-    Token token = getCurTok();
-    switch(token.getType()) {
-        case IToken::INTEGER_CONST :{
-            eat(IToken::INTEGER_CONST);
-            return new NumberAST(token);
-        }
-        case IToken::REAL_CONST :{
-            eat(IToken::REAL_CONST);
-            return new NumberAST(token);
-        }
-        case IToken::STRING_CONST :{
-            eat(IToken::STRING_CONST);
-            return new StringAST(token);
-        }
-        case IToken::LPAREN :{
-            eat(IToken::LPAREN);
-            AST *node = syntaxExpr();
-            eat(IToken::RPAREN);
-            return node;
-        }
-        case IToken::PLUS :{
-            eat(IToken::PLUS);
-            return new UnOpAST(token, syntaxFactor());
-        }
-        case IToken::MINUS :{
-            eat(IToken::MINUS);
-            return new UnOpAST(token, syntaxFactor());
-        }
-        case IToken::NOT :{
-            eat(IToken::NOT);
-            return new UnOpAST(token, syntaxFactor());
-        }
-        case IToken::ID :{
-            if(lookFoward().getType() == IToken::LPAREN)
-                return syntaxCallSt();
-            else
-                return syntaxVariable();
-        }
-        default:
-            throw std::invalid_argument(fmt::format("В syntaxFactor попал лишний токен: {}", token.getInfo()));
-    }
-    return nullptr;
-}
-
-
-AST *SyntaxAnalyzer::syntaxIfSt(void){
-    eat(IToken::IF);
-    ASTptr conditionPTR = syntaxExpr();
-    eat(IToken::THEN);
-    ASTptr bodyPTR = syntaxSt();
-    ASTptr elseBodyPTR = nullptr;
-    if(getCurTok().getType() == IToken::ELSE){
-        eat(IToken::ELSE);
-        elseBodyPTR = syntaxSt();
-    }
-    return new ifAST(conditionPTR, bodyPTR, elseBodyPTR);
-}
-
-AST *SyntaxAnalyzer::syntaxWhileSt(void){
-    eat(IToken::WHILE);
-    ASTptr conditionPTR = syntaxExpr();
-    eat(IToken::DO);
-    ASTptr bodyPTR = syntaxSt();
-    return new whileAST(conditionPTR, bodyPTR);
-}
-
-AST *SyntaxAnalyzer::syntaxTerm(void){
-    AST *factorPTR = syntaxFactor();
-
-    while(isIn(getCurTok().getType(), {IToken::FLOAT_DIV, IToken::MUL, IToken::INTEGER_DIV, IToken::MOD, IToken::AND})){
-        Token token = getCurTok();
-        eat(token.getType());
-        factorPTR = new BinOpAST(factorPTR, token, syntaxFactor());
-    }
-
-    return factorPTR;
-}
-
-AST *SyntaxAnalyzer::syntaxExpr(void){
-    AST *simpleExprPTR = syntaxSimpleExpr();
-
-    Token token;
-    if(isIn(getCurTok().getType(), {IToken::LESS, IToken::LESS_EQ, IToken::NEQ, IToken::EQ, IToken::MORE, IToken::MORE_EQ})){
-        token = getCurTok();
-        eat(token.getType());
-        return new BinOpAST(simpleExprPTR, token, syntaxSimpleExpr());
-    } else{
-        return simpleExprPTR;
-    }
-//    else 
-//        throw std::invalid_argument(fmt::format("Ожидалась операция отношения, а получен токен типа {}", magic_enum::enum_name(getCurTok().getType())));
-}
-
-AST *SyntaxAnalyzer::syntaxSimpleExpr(void){
-    AST *termPTR = syntaxTerm();
-
-    while(isIn(getCurTok().getType(), {IToken::PLUS, IToken::MINUS, IToken::OR})){
-        Token token = getCurTok();
-        eat(token.getType());
-
-        termPTR = new BinOpAST(termPTR, token, syntaxTerm());
-    }
-
-    return termPTR;
-}
-
-AST *SyntaxAnalyzer::parseTokens(void){
-    ASTptr root = syntaxProgram();
-    if(getCurTok().getType() != IToken::ENDOFSTREAM)
-        throw std::invalid_argument(fmt::format("Не вся программа просканированна: ", getCurTok().getInfo()));
-    return root;
-}
-
-void SyntaxAnalyzer::getNextToken(void){
-    currentIndex++;
-}
-
-Token &SyntaxAnalyzer::getCurTok(void){
-    return tokens[currentIndex];
-}
-
-Token &SyntaxAnalyzer::lookFoward(void){
-    if(currentIndex + 1 >= tokens.size())
-        throw std::invalid_argument("Неожиданный конец файла!");
-    return tokens[currentIndex + 1];
-}
-
-void SyntaxAnalyzer::eat(IToken::Type type){
-    if(getCurTok().getType() == type){
-        getNextToken();
-    } else{
-        throw std::invalid_argument(fmt::format("Ошибка при обработке синтаксиса! Ожидался {}, а получен {}", magic_enum::enum_name(type), getCurTok().getInfo()));
-    }
-}
-
 ASTptr SyntaxAnalyzer::syntaxBlock(void){
     std::vector<ASTptr> constsList = syntaxConsts();
     std::vector<ASTptr> declsList = syntaxVars();
@@ -330,4 +103,230 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
             break;
     }
     return new TypeSpecAST(typeTok);
+}
+
+AST *SyntaxAnalyzer::syntaxCompoundSt(void){
+    eat(IToken::BEGIN);
+    std::vector<ASTptr> stList = syntaxStList();
+    eat(IToken::END);
+
+    CompoundAST *compoundPTR = new CompoundAST();
+    for(auto stPTR : stList)
+        compoundPTR->addChild(stPTR);
+    
+    return compoundPTR;
+}
+
+std::vector<ASTptr> SyntaxAnalyzer::syntaxStList(void){
+    AST *stPTR = syntaxSt();
+
+    std::vector<ASTptr> stList = {stPTR};
+
+    while(getCurTok().getType() == IToken::SEMI){
+        eat(getCurTok().getType());
+        stList.push_back(syntaxSt());
+    }
+
+    if(getCurTok().getType() == IToken::ID)
+        throw std::invalid_argument(fmt::format("Неожиданный индентификатор: {}", getCurTok().getInfo()));
+
+    return stList;
+}
+
+ASTptr SyntaxAnalyzer::syntaxSt(void){
+    switch(getCurTok().getType()) {
+        case IToken::BEGIN :
+            return syntaxCompoundSt();
+        case IToken::ID :{
+            if(lookFoward().getType() == IToken::ASSIGN)
+                return syntaxAssignSt();
+            else if(lookFoward().getType() == IToken::LPAREN)
+                return syntaxCallSt();
+            else{
+                // Специально форсим, будто ждали присваивание
+                eat(IToken::ID);
+                eat(IToken::ASSIGN);
+            }
+        }
+        case IToken::WHILE :
+            return syntaxWhileSt();
+        case IToken::IF :
+            return syntaxIfSt();
+        default:
+            return syntaxEmptySt();
+    }
+}
+
+AST *SyntaxAnalyzer::syntaxIfSt(void){
+    eat(IToken::IF);
+    ASTptr conditionPTR = syntaxExpr();
+    eat(IToken::THEN);
+    ASTptr bodyPTR = syntaxSt();
+    ASTptr elseBodyPTR = nullptr;
+    if(getCurTok().getType() == IToken::ELSE){
+        eat(IToken::ELSE);
+        elseBodyPTR = syntaxSt();
+    }
+    return new ifAST(conditionPTR, bodyPTR, elseBodyPTR);
+}
+
+AST *SyntaxAnalyzer::syntaxWhileSt(void){
+    eat(IToken::WHILE);
+    ASTptr conditionPTR = syntaxExpr();
+    eat(IToken::DO);
+    ASTptr bodyPTR = syntaxSt();
+    return new whileAST(conditionPTR, bodyPTR);
+}
+
+ASTptr SyntaxAnalyzer::syntaxCallSt(void){
+    Token nameTok = getCurTok();
+    eat(IToken::ID);
+    eat(IToken::LPAREN);
+    std::vector<ASTptr> paramsList;
+    if(getCurTok().getType() != IToken::RPAREN){
+        ASTptr paramPTR = syntaxExpr();
+        paramsList.push_back(paramPTR);
+    }
+    while(getCurTok().getType() == IToken::COMMA){
+        eat(IToken::COMMA);
+        ASTptr paramPTR = syntaxExpr();
+        paramsList.push_back(paramPTR);
+    }
+    
+    eat(IToken::RPAREN);
+    return new CallAST(nameTok, paramsList);
+}
+
+ASTptr SyntaxAnalyzer::syntaxAssignSt(void){
+    ASTptr lValue = syntaxVariable();
+    Token assignTok = getCurTok();
+
+    eat(IToken::ASSIGN);
+
+    ASTptr toAssign = syntaxExpr();
+    return new AssignAST(lValue, assignTok, toAssign);
+}
+
+ASTptr SyntaxAnalyzer::syntaxVariable(void){
+    ASTptr varPTR = new VarAST(getCurTok());
+    eat(IToken::ID);
+    return varPTR;
+}
+
+ASTptr SyntaxAnalyzer::syntaxEmptySt(void){
+    return new NoOpAST({"$", IToken::EMPTY});
+}
+
+AST *SyntaxAnalyzer::syntaxExpr(void){
+    AST *simpleExprPTR = syntaxSimpleExpr();
+
+    Token token;
+    if(isIn(getCurTok().getType(), {IToken::LESS, IToken::LESS_EQ, IToken::NEQ, IToken::EQ, IToken::MORE, IToken::MORE_EQ})){
+        token = getCurTok();
+        eat(token.getType());
+        return new BinOpAST(simpleExprPTR, token, syntaxSimpleExpr());
+    } else{
+        return simpleExprPTR;
+    }
+//    else 
+//        throw std::invalid_argument(fmt::format("Ожидалась операция отношения, а получен токен типа {}", magic_enum::enum_name(getCurTok().getType())));
+}
+
+AST *SyntaxAnalyzer::syntaxSimpleExpr(void){
+    AST *termPTR = syntaxTerm();
+
+    while(isIn(getCurTok().getType(), {IToken::PLUS, IToken::MINUS, IToken::OR})){
+        Token token = getCurTok();
+        eat(token.getType());
+
+        termPTR = new BinOpAST(termPTR, token, syntaxTerm());
+    }
+
+    return termPTR;
+}
+
+AST *SyntaxAnalyzer::syntaxTerm(void){
+    AST *factorPTR = syntaxFactor();
+
+    while(isIn(getCurTok().getType(), {IToken::FLOAT_DIV, IToken::MUL, IToken::INTEGER_DIV, IToken::MOD, IToken::AND})){
+        Token token = getCurTok();
+        eat(token.getType());
+        factorPTR = new BinOpAST(factorPTR, token, syntaxFactor());
+    }
+
+    return factorPTR;
+}
+
+AST *SyntaxAnalyzer::syntaxFactor(){
+    Token token = getCurTok();
+    switch(token.getType()) {
+        case IToken::INTEGER_CONST :{
+            eat(IToken::INTEGER_CONST);
+            return new NumberAST(token);
+        }
+        case IToken::REAL_CONST :{
+            eat(IToken::REAL_CONST);
+            return new NumberAST(token);
+        }
+        case IToken::STRING_CONST :{
+            eat(IToken::STRING_CONST);
+            return new StringAST(token);
+        }
+        case IToken::LPAREN :{
+            eat(IToken::LPAREN);
+            AST *node = syntaxExpr();
+            eat(IToken::RPAREN);
+            return node;
+        }
+        case IToken::PLUS :{
+            eat(IToken::PLUS);
+            return new UnOpAST(token, syntaxFactor());
+        }
+        case IToken::MINUS :{
+            eat(IToken::MINUS);
+            return new UnOpAST(token, syntaxFactor());
+        }
+        case IToken::NOT :{
+            eat(IToken::NOT);
+            return new UnOpAST(token, syntaxFactor());
+        }
+        case IToken::ID :{
+            if(lookFoward().getType() == IToken::LPAREN)
+                return syntaxCallSt();
+            else
+                return syntaxVariable();
+        }
+        default:
+            throw std::invalid_argument(fmt::format("В syntaxFactor попал лишний токен: {}", token.getInfo()));
+    }
+    return nullptr;
+}
+
+AST *SyntaxAnalyzer::parseTokens(void){
+    ASTptr root = syntaxProgram();
+    if(getCurTok().getType() != IToken::ENDOFSTREAM)
+        throw std::invalid_argument(fmt::format("Не вся программа просканированна: ", getCurTok().getInfo()));
+    return root;
+}
+
+void SyntaxAnalyzer::getNextToken(void){
+    currentIndex++;
+}
+
+Token &SyntaxAnalyzer::getCurTok(void){
+    return tokens[currentIndex];
+}
+
+Token &SyntaxAnalyzer::lookFoward(void){
+    if(currentIndex + 1 >= tokens.size())
+        throw std::invalid_argument("Неожиданный конец файла!");
+    return tokens[currentIndex + 1];
+}
+
+void SyntaxAnalyzer::eat(IToken::Type type){
+    if(getCurTok().getType() == type){
+        getNextToken();
+    } else{
+        throw std::invalid_argument(fmt::format("Ошибка при обработке синтаксиса! Ожидался {}, а получен {}", magic_enum::enum_name(type), getCurTok().getInfo()));
+    }
 }
