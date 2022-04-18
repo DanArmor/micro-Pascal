@@ -1,4 +1,4 @@
-syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'
+syntaxProgram ::= 'PROGRAM' '<ID>' ';' syntaxBlock '.'
 
 syntaxBlock ::= syntaxConsts* syntaxVars* syntaxCompoundSt
 
@@ -6,11 +6,11 @@ syntaxBlock ::= syntaxConsts* syntaxVars* syntaxCompoundSt
 
 syntaxConsts ::= 'CONST' (syntaxConstDecl ';')+
 
-syntaxConstDecl ::= 'ID' '=' ('INTEGER_CONST'|'REAL_CONST'|'STRING_CONST')
+syntaxConstDecl ::= '<ID>' '=' ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>')
 
 syntaxVars ::= 'VAR' (syntaxVarDecl ';')+
 
-syntaxVarDecl ::= ('ID' ','*)+ ':' syntaxTypeSpec
+syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec
 
 syntaxTypeSpec ::= ('INTEGER'|'REAL')
 
@@ -18,17 +18,17 @@ syntaxTypeSpec ::= ('INTEGER'|'REAL')
 
 syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END'
 
-syntaxSt ::= (syntaxCompoundSt|'ID'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt)
+syntaxSt ::= (syntaxCompoundSt|'<ID>'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt)
 
-syntaxCallSt ::= 'ID' '(' (syntaxExpr ','*)* ')'
+syntaxCallSt ::= '<ID>' '(' (syntaxExpr ','*)* ')'
 
 syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr
 
-syntaxVariable ::= 'ID'
+syntaxVariable ::= '<ID>'
 
 syntaxEmptySt ::= '$NONE$'
 
-syntaxFactor ::= ('INTEGER_CONST'|'REAL_CONST'|'STRING_CONST'|'(' syntaxExpr ')'|'+' syntaxFactor| '-' syntaxFactor| 'NOT' syntaxFactor| syntaxCallSt| syntaxVariable)
+syntaxFactor ::= ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>'|'(' syntaxExpr ')'|'+' syntaxFactor| '-' syntaxFactor| 'NOT' syntaxFactor| syntaxCallSt| syntaxVariable)
 
 syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)?
 
