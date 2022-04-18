@@ -20,6 +20,10 @@ syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END'
 
 syntaxSt ::= (syntaxCompoundSt|'<ID>'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt)
 
+syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)?
+
+syntaxWhileSt ::= 'WHILE' syntaxExpr 'DO' syntaxExpr
+
 syntaxCallSt ::= '<ID>' '(' (syntaxExpr ','*)* ')'
 
 syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr
@@ -28,14 +32,10 @@ syntaxVariable ::= '<ID>'
 
 syntaxEmptySt ::= '$NONE$'
 
-syntaxFactor ::= ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>'|'(' syntaxExpr ')'|'+' syntaxFactor| '-' syntaxFactor| 'NOT' syntaxFactor| syntaxCallSt| syntaxVariable)
-
-syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)?
-
-syntaxWhileSt ::= 'WHILE' syntaxExpr 'DO' syntaxExpr
-
-syntaxTerm ::= syntaxFactor (('/'|'*'|'DIV'|'MOD'|'AND') syntaxFactor)?
-
 syntaxExpr ::= syntaxSimpleExpr (('<'|'<='|'<>'|'='|'>'|'>=') syntaxSimpleExr)?
 
 syntaxSimpleExpr ::= syntaxTerm (('+'|'-'|'OR') syntaxTerm)?
+
+syntaxTerm ::= syntaxFactor (('/'|'*'|'DIV'|'MOD'|'AND') syntaxFactor)?
+
+syntaxFactor ::= ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>'|'(' syntaxExpr ')'|'+' syntaxFactor| '-' syntaxFactor| 'NOT' syntaxFactor| syntaxCallSt| syntaxVariable)
