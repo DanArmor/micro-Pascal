@@ -29,43 +29,43 @@ class SyntaxAnalyzer{
     public:
     SyntaxAnalyzer(List<Token> const &tokens);
 
-    AST *program(void);
+    AST *syntaxProgram(void);
 
-    AST *compountStatement(void);
+    AST *syntaxCompoundSt(void);
 
-    std::vector<ASTptr> statementList(void);
+    std::vector<ASTptr> syntaxStList(void);
 
-    ASTptr statement(void);
+    ASTptr syntaxSt(void);
 
-    ASTptr assignmentStatement(void);
+    ASTptr syntaxAssignSt(void);
 
-    ASTptr variable(void);
+    ASTptr syntaxVariable(void);
 
-    ASTptr emptyStatement(void);
+    ASTptr syntaxEmptySt(void);
 
-    ASTptr block(void);
+    ASTptr syntaxBlock(void);
 
-    std::vector<ASTptr> declarations(void);
+    std::vector<ASTptr> syntaxVars(void);
 
-    std::vector<ASTptr> varDeclaration(void);
+    std::vector<ASTptr> syntaxVarDecl(void);
 
-    ASTptr typeSpec(void);
+    ASTptr syntaxTypeSpec(void);
 
-    AST *factor();
+    AST *syntaxFactor();
 
-    AST *term(void);
+    AST *syntaxTerm(void);
 
-    AST *expr(void);
+    AST *syntaxExpr(void);
 
-    AST *simpleExpr(void);
+    AST *syntaxSimpleExpr(void);
 
     AST *parseTokens(void);
 
-    AST *procCallStatement(void);
+    AST *syntaxCallSt(void);
 
-    AST *ifStatement(void);
+    AST *syntaxIfSt(void);
 
-    AST *whileStatement(void);
+    AST *syntaxWhileSt(void);
 
     void getNextToken(void);
 
@@ -73,8 +73,8 @@ class SyntaxAnalyzer{
 
     Token &lookFoward(void);
 
-    std::vector<ASTptr> constants(void);
-    ASTptr constDeclaration(void);
+    std::vector<ASTptr> syntaxConsts(void);
+    ASTptr syntaxConstDecl(void);
 
     void eat(IToken::Type type);
 
