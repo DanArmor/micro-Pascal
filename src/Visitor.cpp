@@ -7,7 +7,7 @@
 //
 //extern std::map<std::string, int> globalVariables;
 //
-//void CalcVisitor::visit(BinOp &node){
+//void CalcVisitor::visit(BinOpAST &node){
 //    switch(node.token.getType()){
 //        case IToken::PLUS :
 //            Return(getValue(node.left) + getValue(node.right));
@@ -24,7 +24,7 @@
 //    }
 //}
 //
-//void CalcVisitor::visit(UnOp &node){
+//void CalcVisitor::visit(UnOpAST &node){
 //    switch(node.token.getType()){
 //        case IToken::PLUS :
 //            Return(getValue(node.down));
@@ -35,29 +35,29 @@
 //    }
 //}
 //
-//void CalcVisitor::visit(Number &node){
+//void CalcVisitor::visit(NumberAST &node){
 //    Return(std::stoi(node.token.getStr()));
 //}
 //
-//void CalcVisitor::visit(Compound &node){
+//void CalcVisitor::visit(CompoundAST &node){
 //    for(auto child : node.children){
 //        CalcVisitor vis;
 //        child->accept(vis);
 //    }
 //}
 //
-//void CalcVisitor::visit(Assign &node){
+//void CalcVisitor::visit(AssignAST &node){
 //    globalVariables[node.var->token.getStr()] = getValue(node.value);
 //}
 //
-//void CalcVisitor::visit(Var &node){
+//void CalcVisitor::visit(VarAST &node){
 //    std::string name = node.token.getStr();
 //    if(globalVariables.count(name) == 0)
 //        throw std::invalid_argument(fmt::format("Использование переменной до её инициализации! VarName: {}", name));
 //    Return(globalVariables[name]);
 //}
 //
-//void CalcVisitor::visit(NoOp &node){
+//void CalcVisitor::visit(NoOpAST &node){
 //    return;
 //}
 
@@ -73,7 +73,7 @@ void GraphvizVisitor::done(void){
     file.close();
 }
 
-void GraphvizVisitor::visit(BinOp &node){
+void GraphvizVisitor::visit(BinOpAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -83,7 +83,7 @@ void GraphvizVisitor::visit(BinOp &node){
     node.right->accept(*this);
 }
 
-void GraphvizVisitor::visit(UnOp &node){
+void GraphvizVisitor::visit(UnOpAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -91,13 +91,13 @@ void GraphvizVisitor::visit(UnOp &node){
     node.down->accept(*this);
 }
 
-void GraphvizVisitor::visit(Number &node){
+void GraphvizVisitor::visit(NumberAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
 }
 
-void GraphvizVisitor::visit(Compound &node){
+void GraphvizVisitor::visit(CompoundAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -107,7 +107,7 @@ void GraphvizVisitor::visit(Compound &node){
     }
 }
 
-void GraphvizVisitor::visit(Assign &node){
+void GraphvizVisitor::visit(AssignAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -117,13 +117,13 @@ void GraphvizVisitor::visit(Assign &node){
     node.value->accept(*this);
 }
 
-void GraphvizVisitor::visit(Var &node){
+void GraphvizVisitor::visit(VarAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
 }
 
-void GraphvizVisitor::visit(NoOp &node){
+void GraphvizVisitor::visit(NoOpAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -163,7 +163,7 @@ void GraphvizVisitor::visit(BlockAST &node){
     node.compound->accept(*this);
 }
 
-void GraphvizVisitor::visit(VarDeclaration &node){
+void GraphvizVisitor::visit(VarDeclAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -174,7 +174,7 @@ void GraphvizVisitor::visit(VarDeclaration &node){
 
 }
 
-void GraphvizVisitor::visit(Type &node){
+void GraphvizVisitor::visit(TypeSpecAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -196,7 +196,7 @@ void GraphvizVisitor::visit(StringAST &node){
     nodeIndex++;
 }
 
-void GraphvizVisitor::visit(ProcedureCall &node){
+void GraphvizVisitor::visit(CallAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -234,39 +234,39 @@ void GraphvizVisitor::visit(whileAST &node){
 ==================*/
 TypeViewVisitor::TypeViewVisitor(){};
 
-void TypeViewVisitor::visit(BinOp &node){
+void TypeViewVisitor::visit(BinOpAST &node){
     typesStrings.push_back(node.token.getStr());
     node.left->accept(*this);
     node.right->accept(*this);
 }
 
-void TypeViewVisitor::visit(UnOp &node){
+void TypeViewVisitor::visit(UnOpAST &node){
     typesStrings.push_back(node.token.getStr());
     node.down->accept(*this);
 }
 
-void TypeViewVisitor::visit(Number &node){
+void TypeViewVisitor::visit(NumberAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
-void TypeViewVisitor::visit(Compound &node){
+void TypeViewVisitor::visit(CompoundAST &node){
     typesStrings.push_back(node.token.getStr());
     for(auto child : node.children){
         child->accept(*this);
     }
 }
 
-void TypeViewVisitor::visit(Assign &node){
+void TypeViewVisitor::visit(AssignAST &node){
     typesStrings.push_back(node.token.getStr());
     node.var->accept(*this);
     node.value->accept(*this);
 }
 
-void TypeViewVisitor::visit(Var &node){
+void TypeViewVisitor::visit(VarAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
-void TypeViewVisitor::visit(NoOp &node){
+void TypeViewVisitor::visit(NoOpAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
@@ -286,13 +286,13 @@ void TypeViewVisitor::visit(BlockAST &node){
     node.compound->accept(*this);
 }
 
-void TypeViewVisitor::visit(VarDeclaration &node){
+void TypeViewVisitor::visit(VarDeclAST &node){
     typesStrings.push_back(node.token.getStr());
     node.var->accept(*this);
     node.type->accept(*this);
 }
 
-void TypeViewVisitor::visit(Type &node){
+void TypeViewVisitor::visit(TypeSpecAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
@@ -306,7 +306,7 @@ void TypeViewVisitor::visit(StringAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
-void TypeViewVisitor::visit(ProcedureCall &node){
+void TypeViewVisitor::visit(CallAST &node){
     typesStrings.push_back(node.token.getStr());
     for(auto child : node.params){
         child->accept(*this);
@@ -341,7 +341,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         file.close();
     }
 
-    void CodeGenVisitor::visit(BinOp &node){
+    void CodeGenVisitor::visit(BinOpAST &node){
         node.left->accept(*this);
         node.right->accept(*this);
         file << "pop \%ecx" << "\n";
@@ -357,29 +357,29 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         file << "push \%eax" << "\n";
     }
 
-    void CodeGenVisitor::visit(UnOp &node){
+    void CodeGenVisitor::visit(UnOpAST &node){
 
     }
 
-    void CodeGenVisitor::visit(Number &node){
+    void CodeGenVisitor::visit(NumberAST &node){
         file << "push $" << node.token.getStr() << "\n";
     }
 
-    void CodeGenVisitor::visit(Compound &node){
+    void CodeGenVisitor::visit(CompoundAST &node){
         for(auto child : node.children){
             child->accept(*this);
         }
     }
 
-    void CodeGenVisitor::visit(Assign &node){
+    void CodeGenVisitor::visit(AssignAST &node){
 
     }
 
-    void CodeGenVisitor::visit(Var &node){
+    void CodeGenVisitor::visit(VarAST &node){
 
     }
 
-    void CodeGenVisitor::visit(NoOp &node){
+    void CodeGenVisitor::visit(NoOpAST &node){
 
     }
 
@@ -405,11 +405,11 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         file << "\n";
     }
 
-    void CodeGenVisitor::visit(VarDeclaration &node){
+    void CodeGenVisitor::visit(VarDeclAST &node){
 
     }
 
-    void CodeGenVisitor::visit(Type &node){
+    void CodeGenVisitor::visit(TypeSpecAST &node){
 
     }
 
@@ -422,7 +422,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         file << ".string " << "\""  << node.token.getStr().substr(1, node.token.getStr().size()-2) << "\"" << "\n";
     }
 
-    void CodeGenVisitor::visit(ProcedureCall &node){
+    void CodeGenVisitor::visit(CallAST &node){
         if(node.token.getStr() == "RETURN"){
             node.params[0]->accept(*this);
             file << "pop \%eax" << "\n";

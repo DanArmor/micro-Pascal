@@ -5,67 +5,67 @@
 //AST::AST() {};
 AST::AST(Token token) : token(token){};
 
-/*Определения BinOp
+/*Определения BinOpAST
 ==================*/
-BinOp::BinOp(Token token) : AST(token) {};
-BinOp::BinOp(AST *left, Token token, AST *right) : AST(token), left(left), right(right) {};
+BinOpAST::BinOpAST(Token token) : AST(token) {};
+BinOpAST::BinOpAST(AST *left, Token token, AST *right) : AST(token), left(left), right(right) {};
 
-void BinOp::accept(IVisitor &visitor){
+void BinOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения UnOp
+/*Определения UnOpAST
 ==================*/
-UnOp::UnOp(Token token) : AST(token), down(nullptr){};
-UnOp::UnOp(Token token, AST *down) : AST(token), down(down){};
+UnOpAST::UnOpAST(Token token) : AST(token), down(nullptr){};
+UnOpAST::UnOpAST(Token token, AST *down) : AST(token), down(down){};
 
-void UnOp::accept(IVisitor &visitor){
+void UnOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения Number
+/*Определения NumberAST
 ==================*/
-Number::Number(Token token) : AST(token) {};
+NumberAST::NumberAST(Token token) : AST(token) {};
 
-void Number::accept(IVisitor &visitor){
+void NumberAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения Compound
+/*Определения CompoundAST
 ==================*/
-Compound::Compound() : AST({"COMPOUND", IToken::EMPTY}) {};
+CompoundAST::CompoundAST() : AST({"COMPOUND", IToken::EMPTY}) {};
 
-void Compound::addChild(ASTptr child){
+void CompoundAST::addChild(ASTptr child){
     children.push_back(child);
 }
 
-void Compound::accept(IVisitor &visitor){
+void CompoundAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения Assign
+/*Определения AssignAST
 ==================*/
-Assign::Assign(Token token) : AST(token) {};
-Assign::Assign(AST *var, Token token, AST *value) : AST(token), var(var), value(value) {};
+AssignAST::AssignAST(Token token) : AST(token) {};
+AssignAST::AssignAST(AST *var, Token token, AST *value) : AST(token), var(var), value(value) {};
 
-void Assign::accept(IVisitor &visitor){
+void AssignAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения Var
+/*Определения VarAST
 ==================*/
-Var::Var(Token token) : AST(token) {};
-Var::Var(Token token, int value) : AST(token), value(value) {};
+VarAST::VarAST(Token token) : AST(token) {};
+VarAST::VarAST(Token token, int value) : AST(token), value(value) {};
 
-void Var::accept(IVisitor &visitor){
+void VarAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения NoOp
+/*Определения NoOpAST
 ==================*/
-NoOp::NoOp(Token token) : AST(token) {};
+NoOpAST::NoOpAST(Token token) : AST(token) {};
 
-void NoOp::accept(IVisitor &visitor){
+void NoOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
@@ -85,19 +85,19 @@ void BlockAST::accept(IVisitor &visitor){
 
 BlockAST::BlockAST(std::vector<ASTptr> consts, std::vector<ASTptr> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), consts(consts), declarations(declarations), compound(compound) {};
 
-/*Определения VarDeclaration
+/*Определения VarDeclAST
 ==================*/
-VarDeclaration::VarDeclaration(ASTptr var, ASTptr type) : AST({"DEFINITION", IToken::VARDECL}), var(var), type(type) {};
+VarDeclAST::VarDeclAST(ASTptr var, ASTptr type) : AST({"DEFINITION", IToken::VARDECL}), var(var), type(type) {};
 
-void VarDeclaration::accept(IVisitor &visitor){
+void VarDeclAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения Type
+/*Определения TypeSpecAST
 ==================*/
-Type::Type(Token token) : AST(token){};
+TypeSpecAST::TypeSpecAST(Token token) : AST(token){};
 
-void Type::accept(IVisitor &visitor){
+void TypeSpecAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
@@ -117,11 +117,11 @@ void StringAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения ProcedureCall
+/*Определения CallAST
 ==================*/
-ProcedureCall::ProcedureCall(Token token, std::vector<ASTptr> params) : AST(token), params(params){};
+CallAST::CallAST(Token token, std::vector<ASTptr> params) : AST(token), params(params){};
 
-void ProcedureCall::accept(IVisitor &visitor){
+void CallAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 

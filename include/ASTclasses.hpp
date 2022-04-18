@@ -3,20 +3,20 @@
 
 
 // Предварительные объявления
-class BinOp;
-class Number;
-class UnOp;
-class Compound;
-class Assign;
-class Var;
-class NoOp;
+class BinOpAST;
+class NumberAST;
+class UnOpAST;
+class CompoundAST;
+class AssignAST;
+class VarAST;
+class NoOpAST;
 class ProgramAST;
 class BlockAST;
-class VarDeclaration;
-class Type;
+class VarDeclAST;
+class TypeSpecAST;
 class ConstAST;
 class StringAST;
-class ProcedureCall;
+class CallAST;
 class ifAST;
 class whileAST;
 
@@ -27,20 +27,20 @@ class whileAST;
  */
 class IVisitor{
     public:
-    virtual void visit(BinOp &node) = 0;
-    virtual void visit(Number &node) = 0;
-    virtual void visit(UnOp &node) = 0;
-    virtual void visit(Compound &node) = 0;
-    virtual void visit(Assign &node) = 0;
-    virtual void visit(Var &node) = 0;
-    virtual void visit(NoOp &node) = 0;
+    virtual void visit(BinOpAST &node) = 0;
+    virtual void visit(NumberAST &node) = 0;
+    virtual void visit(UnOpAST &node) = 0;
+    virtual void visit(CompoundAST &node) = 0;
+    virtual void visit(AssignAST &node) = 0;
+    virtual void visit(VarAST &node) = 0;
+    virtual void visit(NoOpAST &node) = 0;
     virtual void visit(ProgramAST &node) = 0;
     virtual void visit(BlockAST &node) = 0;
-    virtual void visit(VarDeclaration &node) = 0;
-    virtual void visit(Type &node) = 0;
+    virtual void visit(VarDeclAST &node) = 0;
+    virtual void visit(TypeSpecAST &node) = 0;
     virtual void visit(ConstAST &node) = 0;
     virtual void visit(StringAST &node) = 0;
-    virtual void visit(ProcedureCall &node) = 0;
+    virtual void visit(CallAST &node) = 0;
     virtual void visit(ifAST &node) = 0;
     virtual void visit(whileAST &node) = 0;
 };

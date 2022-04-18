@@ -14,15 +14,15 @@
 /// @brief Посетитель для вывода узлов АСД
 //class ViewVisitor : public IVisitor{
 //    public:
-//    virtual void visit(BinOp &node){
+//    virtual void visit(BinOpAST &node){
 //        std::cout << fmt::format("Token: {}  Type: {}\n", node.token.getStr(), node.token.getType());
 //        node.left->accept(*this);
 //        node.right->accept(*this);
 //    }
-//    virtual void visit(Number &node){
+//    virtual void visit(NumberAST &node){
 //        std::cout << fmt::format("Token: {}  Type: {}\n", node.token.getStr(), node.token.getType());
 //    }
-//    virtual void visit(UnOp &node){
+//    virtual void visit(UnOpAST &node){
 //        std::cout << fmt::format("Token: {}  Type: {}\n", node.token.getStr(), node.token.getType());
 //        node.down->accept(*this);
 //    }
@@ -70,19 +70,19 @@ class VisitorValue{
 //
 //    CalcVisitor();
 //
-//    void visit(BinOp &node);
+//    void visit(BinOpAST &node);
 //
-//    void visit(UnOp &node);
+//    void visit(UnOpAST &node);
 //
-//    void visit(Number &node);
+//    void visit(NumberAST &node);
 //
-//    void visit(Compound &node);
+//    void visit(CompoundAST &node);
 //
-//    void visit(Assign &node);
+//    void visit(AssignAST &node);
 //
-//    void visit(Var &node);
+//    void visit(VarAST &node);
 //
-//    void visit(NoOp &node);
+//    void visit(NoOpAST &node);
 //};
 
 /// @brief Посетителя для построения графического отображения АДС
@@ -93,33 +93,33 @@ class GraphvizVisitor : public IVisitor{
 
     void done(void);
 
-    void visit(BinOp &node);
+    void visit(BinOpAST &node);
 
-    void visit(UnOp &node);
+    void visit(UnOpAST &node);
 
-    void visit(Number &node);
+    void visit(NumberAST &node);
 
-    void visit(Compound &node);
+    void visit(CompoundAST &node);
 
-    void visit(Assign &node);
+    void visit(AssignAST &node);
 
-    void visit(Var &node);
+    void visit(VarAST &node);
 
-    void visit(NoOp &node);
+    void visit(NoOpAST &node);
 
     void visit(ProgramAST &node);
 
     void visit(BlockAST &node);
 
-    void visit(VarDeclaration &node);
+    void visit(VarDeclAST &node);
 
-    void visit(Type &node);
+    void visit(TypeSpecAST &node);
 
     void visit(ConstAST &node);
 
     void visit(StringAST &node);
 
-    void visit(ProcedureCall &node);
+    void visit(CallAST &node);
 
     void visit(ifAST &node);
 
@@ -140,33 +140,33 @@ class TypeViewVisitor : public IVisitor{
 
     TypeViewVisitor();
 
-    void visit(BinOp &node);
+    void visit(BinOpAST &node);
 
-    void visit(UnOp &node);
+    void visit(UnOpAST &node);
 
-    void visit(Number &node);
+    void visit(NumberAST &node);
 
-    void visit(Compound &node);
+    void visit(CompoundAST &node);
 
-    void visit(Assign &node);
+    void visit(AssignAST &node);
 
-    void visit(Var &node);
+    void visit(VarAST &node);
 
-    void visit(NoOp &node);
+    void visit(NoOpAST &node);
 
     void visit(ProgramAST &node);
 
     void visit(BlockAST &node);
 
-    void visit(VarDeclaration &node);
+    void visit(VarDeclAST &node);
 
-    void visit(Type &node);
+    void visit(TypeSpecAST &node);
 
     void visit(ConstAST &node);
 
     void visit(StringAST &node);
 
-    void visit(ProcedureCall &node);
+    void visit(CallAST &node);
 
     void visit(ifAST &node);
 
@@ -186,33 +186,33 @@ class CodeGenVisitor : public IVisitor{
 
     void done(void);
 
-    void visit(BinOp &node);
+    void visit(BinOpAST &node);
 
-    void visit(UnOp &node);
+    void visit(UnOpAST &node);
 
-    void visit(Number &node);
+    void visit(NumberAST &node);
 
-    void visit(Compound &node);
+    void visit(CompoundAST &node);
 
-    void visit(Assign &node);
+    void visit(AssignAST &node);
 
-    void visit(Var &node);
+    void visit(VarAST &node);
 
-    void visit(NoOp &node);
+    void visit(NoOpAST &node);
 
     void visit(ProgramAST &node);
 
     void visit(BlockAST &node);
 
-    void visit(VarDeclaration &node);
+    void visit(VarDeclAST &node);
 
-    void visit(Type &node);
+    void visit(TypeSpecAST &node);
 
     void visit(ConstAST &node);
 
     void visit(StringAST &node);
 
-    void visit(ProcedureCall &node);
+    void visit(CallAST &node);
 
     void visit(ifAST &node);
 

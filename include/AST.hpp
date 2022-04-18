@@ -9,11 +9,11 @@
 #include "ASTclasses.hpp"
 
 /// @brief Узел, содержащий бинарную операцию
-class BinOp : public AST{
+class BinOpAST : public AST{
     public:
 
-    BinOp(Token token);
-    BinOp(AST *left, Token token, AST *right);
+    BinOpAST(Token token);
+    BinOpAST(AST *left, Token token, AST *right);
 
     void accept(IVisitor &visitor);
 
@@ -22,11 +22,11 @@ class BinOp : public AST{
 };
 
 /// @brief Узел, содержащий унарную операцию
-class UnOp : public AST{
+class UnOpAST : public AST{
     public:
 
-    UnOp(Token token);
-    UnOp(Token token, AST *down);
+    UnOpAST(Token token);
+    UnOpAST(Token token, AST *down);
 
     void accept(IVisitor &visitor);
 
@@ -34,19 +34,19 @@ class UnOp : public AST{
 };
 
 /// @brief Узел, содержащий целое число
-class Number : public AST{
+class NumberAST : public AST{
     public:
 
-    Number(Token token);
+    NumberAST(Token token);
 
     void accept(IVisitor &visitor);
 };
 
 /// @brief BEGIN END блоки
-class Compound : public AST{
+class CompoundAST : public AST{
     public:
 
-    Compound();
+    CompoundAST();
 
     void addChild(ASTptr child);
 
@@ -57,11 +57,11 @@ class Compound : public AST{
 };
 
 /// @brief Узел, содержащий бинарную операцию
-class Assign : public AST{
+class AssignAST : public AST{
     public:
 
-    Assign(Token token);
-    Assign(AST *var, Token token, AST *value);
+    AssignAST(Token token);
+    AssignAST(AST *var, Token token, AST *value);
 
     void accept(IVisitor &visitor);
 
@@ -70,11 +70,11 @@ class Assign : public AST{
 };
 
 /// @brief Узел, содержащий переменную
-class Var : public AST{
+class VarAST : public AST{
     public:
 
-    Var(Token token);
-    Var(Token token, int value);
+    VarAST(Token token);
+    VarAST(Token token, int value);
 
     void accept(IVisitor &visitor);
 
@@ -82,10 +82,10 @@ class Var : public AST{
 };
 
 /// @brief Узел, отображающий пустовые выражение, отсутствие операций
-class NoOp : public AST{
+class NoOpAST : public AST{
     public:
 
-    NoOp(Token token);
+    NoOpAST(Token token);
 
     void accept(IVisitor &visitor);
 };
@@ -113,18 +113,18 @@ class BlockAST : public AST{
     ASTptr compound;
 };
 
-class VarDeclaration : public AST{
+class VarDeclAST : public AST{
     public:
-    VarDeclaration(ASTptr var, ASTptr type);
+    VarDeclAST(ASTptr var, ASTptr type);
     void accept(IVisitor &visitor);
 
     ASTptr var;
     ASTptr type;
 };
 
-class Type : public AST{
+class TypeSpecAST : public AST{
     public:
-    Type(Token token);
+    TypeSpecAST(Token token);
     void accept(IVisitor &visitor);
 };
 
@@ -143,9 +143,9 @@ class StringAST : public AST{
     void accept(IVisitor &visitor);
 };
 
-class ProcedureCall : public AST{
+class CallAST : public AST{
     public:
-    ProcedureCall(Token token, std::vector<ASTptr> params);
+    CallAST(Token token, std::vector<ASTptr> params);
     void accept(IVisitor &visitor);
 
     std::vector<ASTptr> params;
