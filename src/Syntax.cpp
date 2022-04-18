@@ -5,40 +5,40 @@ SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
 AST *SyntaxAnalyzer::syntaxProgram(void){
     eat(IToken::PROGRAM);
-    Token name;
+    Token nameTok;
     eat(IToken::ID);
     eat(IToken::SEMI);
-    ASTptr node = syntaxBlock();
+    ASTptr blockPTR = syntaxBlock();
     eat(IToken::DOT);
-    return new ProgramAST(name, node);
+    return new ProgramAST(nameTok, blockPTR);
 }
 
 AST *SyntaxAnalyzer::syntaxCompoundSt(void){
     eat(IToken::BEGIN);
-    std::vector<ASTptr> nodes = syntaxStList();
+    std::vector<ASTptr> stList = syntaxStList();
     eat(IToken::END);
 
-    Compound *root = new Compound();
-    for(auto node : nodes)
-        root->addChild(node);
+    Compound *compoundPTR = new Compound();
+    for(auto stPTR : stList)
+        compoundPTR->addChild(stPTR);
     
-    return root;
+    return compoundPTR;
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxStList(void){
-    AST *node = syntaxSt();
+    AST *stPTR = syntaxSt();
 
-    std::vector<ASTptr> nodes = {node};
+    std::vector<ASTptr> stList = {stPTR};
 
     while(getCurTok().getType() == IToken::SEMI){
         eat(getCurTok().getType());
-        nodes.push_back(syntaxSt());
+        stList.push_back(syntaxSt());
     }
 
     if(getCurTok().getType() == IToken::ID)
         throw std::invalid_argument(fmt::format("Неожиданный индентификатор: {}", getCurTok().getInfo()));
 
-    return nodes;
+    return stList;
 }
 
 ASTptr SyntaxAnalyzer::syntaxSt(void){
@@ -66,38 +66,38 @@ ASTptr SyntaxAnalyzer::syntaxSt(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxCallSt(void){
-    Token procName = getCurTok();
+    Token nameTok = getCurTok();
     eat(IToken::ID);
     eat(IToken::LPAREN);
-    std::vector<ASTptr> params;
+    std::vector<ASTptr> paramsList;
     if(getCurTok().getType() != IToken::RPAREN){
-        ASTptr param = syntaxExpr();
-        params.push_back(param);
+        ASTptr paramPTR = syntaxExpr();
+        paramsList.push_back(paramPTR);
     }
     while(getCurTok().getType() == IToken::COMMA){
         eat(IToken::COMMA);
-        ASTptr param = syntaxExpr();
-        params.push_back(param);
+        ASTptr paramPTR = syntaxExpr();
+        paramsList.push_back(paramPTR);
     }
     
     eat(IToken::RPAREN);
-    return new ProcedureCall(procName, params);
+    return new ProcedureCall(nameTok, paramsList);
 }
 
 ASTptr SyntaxAnalyzer::syntaxAssignSt(void){
-    ASTptr left = syntaxVariable();
-    Token token = getCurTok();
+    ASTptr lValue = syntaxVariable();
+    Token assignTok = getCurTok();
 
     eat(IToken::ASSIGN);
 
-    ASTptr right = syntaxExpr();
-    return new Assign(left, token, right);
+    ASTptr toAssign = syntaxExpr();
+    return new Assign(lValue, assignTok, toAssign);
 }
 
 ASTptr SyntaxAnalyzer::syntaxVariable(void){
-    ASTptr node = new Var(getCurTok());
+    ASTptr varPTR = new Var(getCurTok());
     eat(IToken::ID);
-    return node;
+    return varPTR;
 }
 
 ASTptr SyntaxAnalyzer::syntaxEmptySt(void){
@@ -152,63 +152,63 @@ AST *SyntaxAnalyzer::syntaxFactor(){
 
 AST *SyntaxAnalyzer::syntaxIfSt(void){
     eat(IToken::IF);
-    ASTptr condition = syntaxExpr();
+    ASTptr conditionPTR = syntaxExpr();
     eat(IToken::THEN);
-    ASTptr body = syntaxSt();
-    ASTptr elseBody = nullptr;
+    ASTptr bodyPTR = syntaxSt();
+    ASTptr elseBodyPTR = nullptr;
     if(getCurTok().getType() == IToken::ELSE){
         eat(IToken::ELSE);
-        elseBody = syntaxSt();
+        elseBodyPTR = syntaxSt();
     }
-    return new ifAST(condition, body, elseBody);
+    return new ifAST(conditionPTR, bodyPTR, elseBodyPTR);
 }
 
 AST *SyntaxAnalyzer::syntaxWhileSt(void){
     eat(IToken::WHILE);
-    ASTptr condition = syntaxExpr();
+    ASTptr conditionPTR = syntaxExpr();
     eat(IToken::DO);
-    ASTptr body = syntaxSt();
-    return new whileAST(condition, body);
+    ASTptr bodyPTR = syntaxSt();
+    return new whileAST(conditionPTR, bodyPTR);
 }
 
 AST *SyntaxAnalyzer::syntaxTerm(void){
-    AST *node = syntaxFactor();
+    AST *factorPTR = syntaxFactor();
 
     while(isIn(getCurTok().getType(), {IToken::FLOAT_DIV, IToken::MUL, IToken::INTEGER_DIV, IToken::MOD, IToken::AND})){
         Token token = getCurTok();
         eat(token.getType());
-        node = new BinOp(node, token, syntaxFactor());
+        factorPTR = new BinOp(factorPTR, token, syntaxFactor());
     }
 
-    return node;
+    return factorPTR;
 }
 
 AST *SyntaxAnalyzer::syntaxExpr(void){
-    AST *node = syntaxSimpleExpr();
+    AST *simpleExprPTR = syntaxSimpleExpr();
 
     Token token;
     if(isIn(getCurTok().getType(), {IToken::LESS, IToken::LESS_EQ, IToken::NEQ, IToken::EQ, IToken::MORE, IToken::MORE_EQ})){
         token = getCurTok();
         eat(token.getType());
-        return new BinOp(node, token, syntaxSimpleExpr());
+        return new BinOp(simpleExprPTR, token, syntaxSimpleExpr());
     } else{
-        return node;
+        return simpleExprPTR;
     }
 //    else 
 //        throw std::invalid_argument(fmt::format("Ожидалась операция отношения, а получен токен типа {}", magic_enum::enum_name(getCurTok().getType())));
 }
 
 AST *SyntaxAnalyzer::syntaxSimpleExpr(void){
-    AST *node = syntaxTerm();
+    AST *termPTR = syntaxTerm();
 
     while(isIn(getCurTok().getType(), {IToken::PLUS, IToken::MINUS, IToken::OR})){
         Token token = getCurTok();
         eat(token.getType());
 
-        node = new BinOp(node, token, syntaxTerm());
+        termPTR = new BinOp(termPTR, token, syntaxTerm());
     }
 
-    return node;
+    return termPTR;
 }
 
 AST *SyntaxAnalyzer::parseTokens(void){
@@ -241,82 +241,82 @@ void SyntaxAnalyzer::eat(IToken::Type type){
 }
 
 ASTptr SyntaxAnalyzer::syntaxBlock(void){
-    std::vector<ASTptr> consts = syntaxConsts();
-    std::vector<ASTptr> decls = syntaxVars();
-    ASTptr compound = syntaxCompoundSt();
-    return new BlockAST(consts, decls, compound);
+    std::vector<ASTptr> constsList = syntaxConsts();
+    std::vector<ASTptr> declsList = syntaxVars();
+    ASTptr compoundPTR = syntaxCompoundSt();
+    return new BlockAST(constsList, declsList, compoundPTR);
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxConsts(void){
-    std::vector<ASTptr> consts;
+    std::vector<ASTptr> constsList;
     if(getCurTok().getType() == IToken::CONST){
         eat(IToken::CONST);
         while(getCurTok().getType() == IToken::ID){
-            consts.push_back(syntaxConstDecl());
+            constsList.push_back(syntaxConstDecl());
             eat(IToken::SEMI);
         }
     }
-    return consts;
+    return constsList;
 
 }
 
 ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
-    ASTptr constName = new Var(getCurTok());
+    ASTptr constNamePTR = new Var(getCurTok());
     eat(IToken::ID);
 
     eat(IToken::EQ);
 
-    Token constValue = getCurTok();
-    ASTptr ptr;
+    ASTptr constValPTR;
+    Token constValTok = getCurTok();
     if(isIn(getCurTok().getType(), {IToken::INTEGER_CONST, IToken::REAL_CONST, IToken::STRING_CONST})){
         if(isIn(getCurTok().getType(), {IToken::INTEGER_CONST, IToken::REAL_CONST})){
-            ptr = new Number(constValue);
+            constValPTR = new Number(constValTok);
         } else{
-            ptr = new StringAST(constValue);
+            constValPTR = new StringAST(constValTok);
         }
         eat(getCurTok().getType());
     }
 
-    return new ConstAST(constName, ptr);
+    return new ConstAST(constNamePTR, constValPTR);
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxVars(void){
-    std::vector<ASTptr> decls;
+    std::vector<ASTptr> declsList;
     if(getCurTok().getType() == IToken::VAR){
         eat(IToken::VAR);
         while(getCurTok().getType() == IToken::ID){
-            std::vector<ASTptr> varDecl = syntaxVarDecl();
-            for(auto ptr : varDecl)
-                decls.push_back(ptr);
+            std::vector<ASTptr> varDeclList = syntaxVarDecl();
+            for(auto varDeclPTR : varDeclList)
+                declsList.push_back(varDeclPTR);
             eat(IToken::SEMI);
         }
     }
-    return decls;
+    return declsList;
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxVarDecl(void){
-    std::vector<ASTptr> vars;
-    vars.push_back(new Var(getCurTok()));
+    std::vector<ASTptr> varsList;
+    varsList.push_back(new Var(getCurTok()));
     eat(IToken::ID);
 
     while(getCurTok().getType() == IToken::COMMA){
         eat(IToken::COMMA);
-        vars.push_back(new Var(getCurTok()));
+        varsList.push_back(new Var(getCurTok()));
         eat(IToken::ID);
     }
 
     eat(IToken::COLON);
 
-    ASTptr typeNode = syntaxTypeSpec();
-    std::vector<ASTptr> varDecls;
-    for(auto var : vars){
-        varDecls.push_back(new VarDeclaration(var, typeNode));
+    ASTptr typeNodePTR = syntaxTypeSpec();
+    std::vector<ASTptr> varDeclsList;
+    for(auto var : varsList){
+        varDeclsList.push_back(new VarDeclaration(var, typeNodePTR));
     }
-    return varDecls;
+    return varDeclsList;
 }
 
 ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
-    Token token = getCurTok();
+    Token typeTok = getCurTok();
     switch (getCurTok().getType()){
         case IToken::INTEGER:
             eat(IToken::INTEGER);
@@ -328,5 +328,5 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
             throw std::invalid_argument(fmt::format("Ожидалось объявление типа, а получен токен типа \033[31m {}\033[0m", getCurTok().getInfo()));
             break;
     }
-    return new Type(token);
+    return new Type(typeTok);
 }
