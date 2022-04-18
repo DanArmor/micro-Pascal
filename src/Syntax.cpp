@@ -4,6 +4,7 @@
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
 AST *SyntaxAnalyzer::syntaxProgram(void){
+    /* syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'  */
     eat(IToken::PROGRAM);
     Token nameTok;
     eat(IToken::ID);
