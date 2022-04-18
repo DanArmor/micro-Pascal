@@ -66,6 +66,8 @@ END.
 * plantUML - для написания объектной схемы и схемы классов (https://github.com/plantuml/plantuml)
 * Doxygen - документация (https://github.com/doxygen/doxygen)
 * Doxygen Awesome - стиль для документации (https://jothepro.github.io/doxygen-awesome-css/)
+* https://bottlecaps.de/rr/ui - для написания схем синтаксиса
+* https://products.aspose.app/words/conversion/xhtml-to-svg - превращать выходные .xhtml от синт.схем по ссылке выше в .svg
 
 ### Синтаксические диаграммы:
 ![Изображение схемы синтаксиса](schemes/diagram.svg)
