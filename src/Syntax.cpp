@@ -15,6 +15,7 @@ AST *SyntaxAnalyzer::syntaxProgram(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxBlock(void){
+    /* syntaxBlock ::= syntaxConsts* syntaxVars* syntaxCompoundSt */
     std::vector<ASTptr> constsList = syntaxConsts();
     std::vector<ASTptr> declsList = syntaxVars();
     ASTptr compoundPTR = syntaxCompoundSt();
@@ -22,6 +23,7 @@ ASTptr SyntaxAnalyzer::syntaxBlock(void){
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxConsts(void){
+    /* syntaxConsts ::= 'CONST' (syntaxConstDecl ';')+ */
     std::vector<ASTptr> constsList;
     if(getCurTok().getType() == IToken::CONST){
         eat(IToken::CONST);
@@ -35,6 +37,7 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxConsts(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
+    /* syntaxConstDecl ::= '<ID>' '=' ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>') */
     ASTptr constNamePTR = new VarAST(getCurTok());
     eat(IToken::ID);
 
@@ -55,6 +58,7 @@ ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxVars(void){
+    /* syntaxVars ::= 'VAR' (syntaxVarDecl ';')+ */
     std::vector<ASTptr> declsList;
     if(getCurTok().getType() == IToken::VAR){
         eat(IToken::VAR);
@@ -69,6 +73,7 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxVars(void){
 }
 
 std::vector<ASTptr> SyntaxAnalyzer::syntaxVarDecl(void){
+    /* syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec */
     std::vector<ASTptr> varsList;
     varsList.push_back(new VarAST(getCurTok()));
     eat(IToken::ID);
@@ -90,6 +95,7 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxVarDecl(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
+    /* syntaxTypeSpec ::= ('INTEGER'|'REAL') */
     Token typeTok = getCurTok();
     switch (getCurTok().getType()){
         case IToken::INTEGER:
@@ -106,6 +112,7 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
 }
 
 AST *SyntaxAnalyzer::syntaxCompoundSt(void){
+    /* syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END' */
     eat(IToken::BEGIN);
     std::vector<ASTptr> stList = syntaxStList();
     eat(IToken::END);
@@ -134,6 +141,7 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxStList(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxSt(void){
+    /* syntaxSt ::= (syntaxCompoundSt|'<ID>'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt) */
     switch(getCurTok().getType()) {
         case IToken::BEGIN :
             return syntaxCompoundSt();
@@ -158,6 +166,7 @@ ASTptr SyntaxAnalyzer::syntaxSt(void){
 }
 
 AST *SyntaxAnalyzer::syntaxIfSt(void){
+    /* syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)? */
     eat(IToken::IF);
     ASTptr conditionPTR = syntaxExpr();
     eat(IToken::THEN);
@@ -171,6 +180,7 @@ AST *SyntaxAnalyzer::syntaxIfSt(void){
 }
 
 AST *SyntaxAnalyzer::syntaxWhileSt(void){
+    /* syntaxWhileSt ::= 'WHILE' syntaxExpr 'DO' syntaxExpr */
     eat(IToken::WHILE);
     ASTptr conditionPTR = syntaxExpr();
     eat(IToken::DO);
@@ -179,6 +189,7 @@ AST *SyntaxAnalyzer::syntaxWhileSt(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxCallSt(void){
+    /* syntaxCallSt ::= '<ID>' '(' (syntaxExpr ','*)* ')' */
     Token nameTok = getCurTok();
     eat(IToken::ID);
     eat(IToken::LPAREN);
@@ -198,6 +209,7 @@ ASTptr SyntaxAnalyzer::syntaxCallSt(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxAssignSt(void){
+    /* syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr */
     ASTptr lValue = syntaxVariable();
     Token assignTok = getCurTok();
 
@@ -208,16 +220,19 @@ ASTptr SyntaxAnalyzer::syntaxAssignSt(void){
 }
 
 ASTptr SyntaxAnalyzer::syntaxVariable(void){
+    /* syntaxVariable ::= '<ID>' */
     ASTptr varPTR = new VarAST(getCurTok());
     eat(IToken::ID);
     return varPTR;
 }
 
 ASTptr SyntaxAnalyzer::syntaxEmptySt(void){
+    /* syntaxEmptySt ::= '$NONE$' */
     return new NoOpAST({"$", IToken::EMPTY});
 }
 
 AST *SyntaxAnalyzer::syntaxExpr(void){
+    /* syntaxExpr ::= syntaxSimpleExpr (('<'|'<='|'<>'|'='|'>'|'>=') syntaxSimpleExr)? */
     AST *simpleExprPTR = syntaxSimpleExpr();
 
     Token token;
@@ -233,6 +248,7 @@ AST *SyntaxAnalyzer::syntaxExpr(void){
 }
 
 AST *SyntaxAnalyzer::syntaxSimpleExpr(void){
+    /* syntaxSimpleExpr ::= syntaxTerm (('+'|'-'|'OR') syntaxTerm)? */
     AST *termPTR = syntaxTerm();
 
     while(isIn(getCurTok().getType(), {IToken::PLUS, IToken::MINUS, IToken::OR})){
@@ -246,6 +262,7 @@ AST *SyntaxAnalyzer::syntaxSimpleExpr(void){
 }
 
 AST *SyntaxAnalyzer::syntaxTerm(void){
+    /* syntaxTerm ::= syntaxFactor (('/'|'*'|'DIV'|'MOD'|'AND') syntaxFactor)? */
     AST *factorPTR = syntaxFactor();
 
     while(isIn(getCurTok().getType(), {IToken::FLOAT_DIV, IToken::MUL, IToken::INTEGER_DIV, IToken::MOD, IToken::AND})){
@@ -258,6 +275,11 @@ AST *SyntaxAnalyzer::syntaxTerm(void){
 }
 
 AST *SyntaxAnalyzer::syntaxFactor(){
+    /* syntaxFactor ::= ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>'
+        |'(' syntaxExpr ')'
+        |'+' syntaxFactor| '-' syntaxFactor
+        |'NOT' syntaxFactor
+        |syntaxCallSt| syntaxVariable) */
     Token token = getCurTok();
     switch(token.getType()) {
         case IToken::INTEGER_CONST :{
