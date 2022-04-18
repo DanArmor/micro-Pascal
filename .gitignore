@@ -23,6 +23,7 @@
 !*.png
 !*.svg
 !*.dot
+!*.xhtml
 
 !*/
 !/libs
