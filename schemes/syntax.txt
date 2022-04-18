@@ -16,9 +16,9 @@ syntaxTypeSpec ::= ('INTEGER'|'REAL')
 
 /* Описания всего остального */
 
-syntaxCompoundSt ::= (syntaxSt ';')*
+syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END'
 
-syntaxSt ::= (syntaxCompoundSt|'ID'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt|syntaxEmptySt)
+syntaxSt ::= (syntaxCompoundSt|'ID'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt)
 
 syntaxCallSt ::= 'ID' '(' (syntaxExpr ','*)* ')'
 
