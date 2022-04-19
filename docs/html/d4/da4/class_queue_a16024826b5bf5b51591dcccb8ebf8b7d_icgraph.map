@@ -1,0 +1,4 @@
+<map id="Queue::pop" name="Queue::pop">
+<area shape="rect" id="node1" title="Удаляет значение из головы очереди" alt="" coords="108,5,204,32"/>
+<area shape="rect" id="node2" href="$d1/ddc/test_queue_8cpp.html#a9293560276e10e858d147f776c97f6f4" title="Тест исключения элементов" alt="" coords="5,5,60,32"/>
+</map>

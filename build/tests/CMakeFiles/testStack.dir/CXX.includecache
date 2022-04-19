@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/List.cpp
+cstddef
+-
+vector
+-
+stdexcept
+-
+iterator
+-
+
+../include/Stack.cpp
+List.cpp
+../include/List.cpp
+
+/home/dan/micro-Pascal/tests/structures/testStack.cpp
+gtest/gtest.h
+-
+Stack.cpp
+/home/dan/micro-Pascal/tests/structures/Stack.cpp
+

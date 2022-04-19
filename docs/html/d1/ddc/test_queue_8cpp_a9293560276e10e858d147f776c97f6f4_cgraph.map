@@ -1,0 +1,10 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест исключения элементов" alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a16024826b5bf5b51591dcccb8ebf8b7d" title="Удаляет значение из головы очереди" alt="" coords="111,5,207,32"/>
+<area shape="rect" id="node4" href="$d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257" title="Вставляет значение в хвост очереди" alt="" coords="108,56,211,83"/>
+<area shape="rect" id="node7" href="$d4/da4/class_queue.html#a913c31fd96f7e1e4a607c2b884b7b236" title="Возвращает размер очереди" alt="" coords="110,107,209,133"/>
+<area shape="rect" id="node3" href="$d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad" title="Удаление из начала списка" alt="" coords="261,5,372,32"/>
+<area shape="rect" id="node5" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="259,56,375,83"/>
+<area shape="rect" id="node6" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="423,56,585,83"/>
+<area shape="rect" id="node8" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="277,107,356,133"/>
+</map>

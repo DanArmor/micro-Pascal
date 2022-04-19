@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/testSyntax.dir/syntax/testSyntax.cpp.o -o testSyntax  -lgtest ../libLexer.a -lfmt ../libSyntax.a ../libAST.a ../libVisitor.a ../libAST.a ../libVisitor.a ../libToken.a -lfmt 

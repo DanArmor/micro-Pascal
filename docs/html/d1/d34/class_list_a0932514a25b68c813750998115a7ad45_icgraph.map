@@ -1,0 +1,4 @@
+<map id="List::removeAt" name="List::removeAt">
+<area shape="rect" id="node1" title="Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка" alt="" coords="108,5,225,32"/>
+<area shape="rect" id="node2" href="$d9/d2f/test_list_8cpp.html#afbc53743ea2ceea766182ca473dde64b" title="Тест размера списка после удаления" alt="" coords="5,5,60,32"/>
+</map>

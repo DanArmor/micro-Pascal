@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Исходный файл tests/structures/testStack.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Синтаксический анализатор
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/df1/test_stack_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">testStack.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/df1/test_stack_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d0d/_stack_8cpp.html">Stack.cpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">   13</a></span>&#160;<a class="code" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a>(STACK_SIMPLE, push){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../d0/d14/class_stack.html">Stack&lt;int&gt;</a> s;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(1);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(2);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(3);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#afd897bd6ebbb129691666d7c33e7ea09">size</a>(), 3);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#a5e92d128118fb607e99ff151306dfaa3">   22</a></span>&#160;<a class="code" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a>(STACK_SIMPLE, push_pop){</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../d0/d14/class_stack.html">Stack&lt;int&gt;</a> s;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(2);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(3);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#afd897bd6ebbb129691666d7c33e7ea09">size</a>(), 0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#aedf1705910ebac83375f579e9e810fcf">   34</a></span>&#160;<a class="code" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a>(STACK_SIMPLE, push_pick){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d0/d14/class_stack.html">Stack&lt;int&gt;</a> s;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(2);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(3);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 3);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#a7407eb0d25c0eedb1c5a83380188e860">   44</a></span>&#160;<a class="code" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a>(STACK_SIMPLE, push_pop_pick){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../d0/d14/class_stack.html">Stack&lt;int&gt;</a> s;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(1);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(2);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(3);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 3);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 2);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 1);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#a48c0cb21e3d2a51781c2777320a00383">   58</a></span>&#160;<a class="code" href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a>(STACK_SIMPLE, push_pop_pick_throw){</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d0/d14/class_stack.html">Stack&lt;int&gt;</a> s;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(2);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    s.<a class="code" href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">push</a>(3);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 3);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 2);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   EXPECT_EQ(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>(), 1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   s.<a class="code" href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">pop</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   EXPECT_ANY_THROW(s.<a class="code" href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">pick</a>());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d9/df1/test_stack_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">   73</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d9/df1/test_stack_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    testing::InitGoogleTest();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    return ::RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="ttc" id="a_stack_8cpp_html"><div class="ttname"><a href="../../d6/d0d/_stack_8cpp.html">Stack.cpp</a></div></div>
+<div class="ttc" id="aclass_stack_html"><div class="ttname"><a href="../../d0/d14/class_stack.html">Stack</a></div><div class="ttdoc">Класс стека</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/_stack_8cpp_source.html#l00009">Stack.cpp:9</a></div></div>
+<div class="ttc" id="aclass_stack_html_a06ea1d35753b65398e380fbad3a961fe"><div class="ttname"><a href="../../d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe">Stack::pick</a></div><div class="ttdeci">T &amp; pick(void)</div><div class="ttdoc">Возвращает ссылку на значение на вершине стека</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/_stack_8cpp_source.html#l00028">Stack.cpp:28</a></div></div>
+<div class="ttc" id="aclass_stack_html_a430417da7ea691a55ba46526425d6778"><div class="ttname"><a href="../../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778">Stack::pop</a></div><div class="ttdeci">void pop(void)</div><div class="ttdoc">Удаляет значение с вершины стека</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/_stack_8cpp_source.html#l00023">Stack.cpp:23</a></div></div>
+<div class="ttc" id="aclass_stack_html_afd897bd6ebbb129691666d7c33e7ea09"><div class="ttname"><a href="../../d0/d14/class_stack.html#afd897bd6ebbb129691666d7c33e7ea09">Stack::size</a></div><div class="ttdeci">std::size_t size(void)</div><div class="ttdoc">Возвращает размер стека</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/_stack_8cpp_source.html#l00033">Stack.cpp:33</a></div></div>
+<div class="ttc" id="aclass_stack_html_afe9c04792cf96ebfd021c14e9114b42e"><div class="ttname"><a href="../../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e">Stack::push</a></div><div class="ttdeci">void push(T const &amp;value)</div><div class="ttdoc">Кладет значение на вершину стека</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0d/_stack_8cpp_source.html#l00018">Stack.cpp:18</a></div></div>
+<div class="ttc" id="atest_stack_8cpp_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="../../d9/df1/test_stack_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df1/test_stack_8cpp_source.html#l00073">testStack.cpp:73</a></div></div>
+<div class="ttc" id="atest_stack_8cpp_html_ae47a79e650f9708a927b0cf6e480cfe2"><div class="ttname"><a href="../../d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2">TEST</a></div><div class="ttdeci">TEST(STACK_SIMPLE, push)</div><div class="ttdoc">Тест вставки</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df1/test_stack_8cpp_source.html#l00013">testStack.cpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="../../dir_1cf0343446ecc9c1285d6594d51075d7.html">structures</a></li><li class="navelem"><a class="el" href="../../d9/df1/test_stack_8cpp.html">testStack.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

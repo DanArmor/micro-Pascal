@@ -1,0 +1,6 @@
+<map id="VarAST" name="VarAST">
+<area shape="rect" id="node1" title="Узел, содержащий переменную" alt="" coords="5,247,73,273"/>
+<area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="16,171,63,197"/>
+<area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="10,81,69,108"/>
+<area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="8,5,71,32"/>
+</map>

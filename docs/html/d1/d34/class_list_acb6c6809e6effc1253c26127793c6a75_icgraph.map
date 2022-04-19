@@ -1,0 +1,6 @@
+<map id="List::pushFront" name="List::pushFront">
+<area shape="rect" id="node1" title="Вставка в начало списка" alt="" coords="253,31,371,57"/>
+<area shape="rect" id="node2" href="$d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e" title="Кладет значение на вершину стека" alt="" coords="108,5,205,32"/>
+<area shape="rect" id="node4" href="$d9/d2f/test_list_8cpp.html#a4938ee6237f7cba8d51cf0eb85fffa24" title="Тест значений после вставки в конец" alt="" coords="129,56,184,83"/>
+<area shape="rect" id="node3" href="$d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2" title="Тест вставки" alt="" coords="5,5,60,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="IToken" name="IToken">
+<area shape="rect" id="node1" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="59,5,122,32"/>
+<area shape="rect" id="node2" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="5,80,64,107"/>
+<area shape="rect" id="node3" href="$dc/dca/class_token_template.html" title="Класс, представляющий шаблон токена" alt="" coords="89,80,207,107"/>
+</map>

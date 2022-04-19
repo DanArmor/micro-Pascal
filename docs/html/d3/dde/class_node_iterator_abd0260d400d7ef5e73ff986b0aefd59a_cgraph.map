@@ -1,0 +1,4 @@
+<map id="NodeIterator::operator*" name="NodeIterator::operator*">
+<area shape="rect" id="node1" title="Получение данных итератора" alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387" title="Возвращает ссылку на данные узла" alt="" coords="228,5,321,32"/>
+</map>

@@ -1,0 +1,10 @@
+PROGRAM TEST;
+VAR {comment}
+    x, y : INTEGER;
+    z : REAL;
+BEGIN
+    x := 1 + 2;
+    y := 4*4;
+    z := 3.14;
+    func(x, y, z);
+END.

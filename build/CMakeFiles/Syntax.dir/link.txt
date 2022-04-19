@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSyntax.a CMakeFiles/Syntax.dir/src/Syntax.cpp.o
+/usr/bin/ranlib libSyntax.a

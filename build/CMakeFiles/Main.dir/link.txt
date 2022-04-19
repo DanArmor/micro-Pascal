@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Main.dir/main.cpp.o -o Main  libVisitor.a libToken.a libAST.a libSyntax.a libLexer.a libVisitor.a libAST.a libVisitor.a libAST.a libToken.a -lfmt 

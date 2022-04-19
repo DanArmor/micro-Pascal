@@ -1,0 +1,7 @@
+<map id="List::operator[]" name="List::operator[]">
+<area shape="rect" id="node1" title=" " alt="" coords="255,31,373,57"/>
+<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a1a8201d5c79c02060a886f7932310235" title="Возвращает ссылку на значение в главе очереди" alt="" coords="108,5,207,32"/>
+<area shape="rect" id="node4" href="$d0/d14/class_stack.html#a06ea1d35753b65398e380fbad3a961fe" title="Возвращает ссылку на значение на вершине стека" alt="" coords="111,56,204,83"/>
+<area shape="rect" id="node3" href="$d1/ddc/test_queue_8cpp.html#aeca6e5d9af6c9e307055a404d678da45" title="Тест взятия первого элемента" alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node5" href="$d9/df1/test_stack_8cpp.html#aedf1705910ebac83375f579e9e810fcf" title="Тест взятия первого элемента" alt="" coords="5,56,60,83"/>
+</map>

@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Исходный файл include/List.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Синтаксический анализатор
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/df9/_list_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">List.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/df9/_list_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#ac7a3f85b675ac34566f0d5e35fc49c45">    1</a></span>&#160;<span class="preprocessor">#ifndef _INC_LIST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="../../d5/df9/_list_8cpp.html#aeadf7987f315e6349d2a64d432341b96">    2</a></span>&#160;<span class="preprocessor">#define _INC_LIST_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d34/class_list.html">List</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d8f/class_node.html">Node</a>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d1/d34/class_list.html">List</a>&lt;U&gt;;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>&lt;U&gt;;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#ac5b43f9e99dcd2273d0c6c0851251231">   39</a></span>&#160;    <a class="code" href="../../dc/d8f/class_node.html#ac5b43f9e99dcd2273d0c6c0851251231">Node</a>() : <a class="code" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a>(nullptr), <a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>(nullptr), <a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>(nullptr){};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563">   42</a></span>&#160;    <a class="code" href="../../dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563">Node</a>(U <span class="keyword">const</span> value) : <a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>(nullptr), <a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>(nullptr){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a> = value;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387">   50</a></span>&#160;    U&amp; <a class="code" href="../../dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387">data</a>(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a>; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(<a class="code" href="../../dc/d8f/class_node.html">Node</a> *pNext) noexcept{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a> = pNext;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        pNext-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">   61</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(<a class="code" href="../../dc/d8f/class_node.html">Node</a> *pPrev) noexcept{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a> = pPrev;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        pPrev-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#a74fc31aee03a749d0c1a59260695d39c">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a74fc31aee03a749d0c1a59260695d39c">connectAsNext</a>(U <span class="keyword">const</span> &amp;value) noexcept{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(<span class="keyword">new</span> <a class="code" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(value));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#ae134cf81f361013712098991e97de25c">   72</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#ae134cf81f361013712098991e97de25c">connectAsPrev</a>(U <span class="keyword">const</span> &amp;value) noexcept{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(<span class="keyword">new</span> <a class="code" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(value));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#a96b8fbfe0192c0d8a0d76abc78470b22">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d8f/class_node.html#a96b8fbfe0192c0d8a0d76abc78470b22">exclude</a>(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a> = <a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a> = <a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#afb99ffb3bb458ab2de8b719218264959">   94</a></span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node</a> *<a class="code" href="../../dc/d8f/class_node.html#afb99ffb3bb458ab2de8b719218264959">excludeAndReturn</a>(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html#a96b8fbfe0192c0d8a0d76abc78470b22">exclude</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">  101</a></span>&#160;    U <a class="code" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">  103</a></span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node</a> *<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">  105</a></span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node</a> *<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html">  110</a></span>&#160;<span class="keyword">struct </span><a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#ad18e6b2db7e7e7ef63728e1ea19424eb">  114</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d3/dde/class_node_iterator.html#ad18e6b2db7e7e7ef63728e1ea19424eb">difference_type</a> = std::ptrdiff_t;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#ac7c563ab9312af9ff52b1e1e7eb30994">  115</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d3/dde/class_node_iterator.html#ac7c563ab9312af9ff52b1e1e7eb30994">value_type</a> = T;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a333820833a4a4cfe0407461eac7adff5">  116</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d3/dde/class_node_iterator.html#a333820833a4a4cfe0407461eac7adff5">pointer</a> = T*;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#ae76974257caee541bdd1deafbaf069ab">  117</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d3/dde/class_node_iterator.html#ae76974257caee541bdd1deafbaf069ab">reference</a> = T&amp;;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b">  118</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b">iterator_category</a> = std::bidirectional_iterator_tag;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#abfe3e1e58b9609be1273a650913e73a6">  121</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html#abfe3e1e58b9609be1273a650913e73a6">NodeIterator</a>(<a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *inPtr) : ptr(inPtr){};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a3f94d25a54367487ef817f5b2168ef45">  124</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html#a3f94d25a54367487ef817f5b2168ef45">NodeIterator</a>(<a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *inPtr, <span class="keywordtype">bool</span> isEnd) : ptr(inPtr){</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">if</span>(isEnd &amp;&amp; inPtr != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            ptr = inPtr-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            innerEnd = inPtr;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        } <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            ptr = inPtr;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    };</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#ae0114da67c257d826a7cafbacf18486c">  134</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> &amp;<a class="code" href="../../d3/dde/class_node_iterator.html#ae0114da67c257d826a7cafbacf18486c">operator++</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        ptr = ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a708f98945140473918b10bab7c62ba8d">  140</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> &amp;<a class="code" href="../../d3/dde/class_node_iterator.html#a708f98945140473918b10bab7c62ba8d">operator--</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span>(ptr == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            ptr = innerEnd;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">else</span> [[likely]]</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            ptr = ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#abd0260d400d7ef5e73ff986b0aefd59a">  149</a></span>&#160;    T &amp;<a class="code" href="../../d3/dde/class_node_iterator.html#abd0260d400d7ef5e73ff986b0aefd59a">operator*</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387">data</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a4ce629aed5a7590aeae108b67275e221">  154</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/dde/class_node_iterator.html#a4ce629aed5a7590aeae108b67275e221">operator!=</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span> &amp;lhs, <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span> &amp;rhs){</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span> lhs.ptr != rhs.ptr;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#ade39cf9cbbae1c80c20f3326af01bdf9">  159</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/dde/class_node_iterator.html#ade39cf9cbbae1c80c20f3326af01bdf9">operator==</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span> &amp;lhs, <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span> &amp;rhs){</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> lhs.ptr == rhs.ptr;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a8a07423df95e0f016dcada52b264818f">  164</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html#a8a07423df95e0f016dcada52b264818f">NodeIterator</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a9937bb06905e4fff1c952631c285b97e">  165</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html#a9937bb06905e4fff1c952631c285b97e">NodeIterator</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a3ee689aa01b2f773e82b4d6f6e366f0c">  166</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>&amp; <a class="code" href="../../d3/dde/class_node_iterator.html#a3ee689aa01b2f773e82b4d6f6e366f0c">operator=</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>&amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a09c133fc138404ab41b57f405f70d260">  167</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a>&amp; <a class="code" href="../../d3/dde/class_node_iterator.html#a09c133fc138404ab41b57f405f70d260">operator=</a>(<a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator</a> <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="../../d3/dde/class_node_iterator.html#a7badeb26e853a0f2445a0626ba77a792">  168</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html#a7badeb26e853a0f2445a0626ba77a792">NodeIterator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *ptr;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *innerEnd;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;};</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html">  180</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d34/class_list.html">List</a>{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a5c5e27671b21b3815d4e25b953c69454">  184</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html#a5c5e27671b21b3815d4e25b953c69454">List</a>() : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#abd67e40b26c56704a82f993e073b1113">  187</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html#abd67e40b26c56704a82f993e073b1113">List</a>(std::vector&lt;T&gt; <span class="keyword">const</span> &amp;initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> value : initData)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(value);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        sizeOfList = initData.size();</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a82f96d81a5f8c7f785714fb823a5f6db">  194</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html#a82f96d81a5f8c7f785714fb823a5f6db">List</a>(std::size_t n) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; n; i++)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(T{});</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        sizeOfList = n;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a18f2ee8a1d7f0e262070efc561a81bfb">  201</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html#a18f2ee8a1d7f0e262070efc561a81bfb">List</a>(<a class="code" href="../../d1/d34/class_list.html">List&lt;T&gt;</a> <span class="keyword">const</span> &amp;list): sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0){</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">clear</a>();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a2b58189090f6e5ce52939c9195e59e85">  208</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html#a2b58189090f6e5ce52939c9195e59e85">~List</a>(){</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">clear</a>();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">  213</a></span>&#160;    std::size_t <a class="code" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">return</span> sizeOfList;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">  221</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(T <span class="keyword">const</span> &amp;value){</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        sizeOfList++;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        goToEnd();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            getWorkPtr() = <span class="keyword">new</span> <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            startPtr = getWorkPtr();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            endPtr = getWorkPtr();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        } <span class="keywordflow">else</span>  [[likely]]{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(value);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            endPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            workPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">  239</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">pushFront</a>(T <span class="keyword">const</span> &amp;value){</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        sizeOfList++;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        goToBegin();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            getWorkPtr() = <span class="keyword">new</span> <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            startPtr = getWorkPtr();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            endPtr = getWorkPtr();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        } <span class="keywordflow">else</span> [[likely]]{</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(value);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            startPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            workPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#ae17b3793de9d52045759f4164d00e8b9">  257</a></span>&#160;    T&amp; <a class="code" href="../../d1/d34/class_list.html#ae17b3793de9d52045759f4164d00e8b9">operator[]</a>(std::size_t <span class="keyword">const</span> index){</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span>(index &gt; sizeOfList)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Выход за пределы списка!&quot;</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Попытка получения значения из пустого списка!&quot;</span>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        goToIndex(index);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387">data</a>();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">  271</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">removeAt</a>(std::size_t <span class="keyword">const</span> i){</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i &gt;= sizeOfList)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Индекс элемента для удаления лежит за пределами списка!&quot;</span>));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span>(i == <a class="code" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i == 0)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">popFront</a>();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            removeAt_inner(i);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">  285</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveEnd = endPtr-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        removeAt_inner(<a class="code" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        endPtr = reserveEnd;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">  294</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">popFront</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveStart = startPtr-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        removeAt_inner(0);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        startPtr = reserveStart;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">  303</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">clear</a>(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        std::size_t toClear = sizeOfList;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; toClear; i++)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#aa67498499814224ddd1fd95039beaa6f">  310</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a> <a class="code" href="../../d1/d34/class_list.html#aa67498499814224ddd1fd95039beaa6f">begin</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(startPtr, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">  315</a></span>&#160;    <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a> <a class="code" href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">end</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(endPtr, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="../../d1/d34/class_list.html#a4d009406c9248e7060e5cc7621f80e32">  319</a></span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;T&gt;</a> &amp;<a class="code" href="../../d1/d34/class_list.html#a4d009406c9248e7060e5cc7621f80e32">operator=</a>(<a class="code" href="../../d1/d34/class_list.html">List&lt;T&gt;</a> <span class="keyword">const</span> &amp;list){</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">this</span> == &amp;list)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">clear</a>();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">void</span> removeAt_inner(std::size_t i){</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        goToIndex(i);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *ptr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#afb99ffb3bb458ab2de8b719218264959">excludeAndReturn</a>();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span>(ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a> != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            workPtr = ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            currIndex = i - 1;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a> != <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            workPtr = ptr-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            currIndex = i;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            goToBegin();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            currIndex = 0;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keyword">delete</span> ptr;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        sizeOfList--;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *&amp;getWorkPtr(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">return</span> workPtr;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">void</span> goToBegin(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        workPtr = startPtr;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        currIndex = 0;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">void</span> goToEnd(<span class="keywordtype">void</span>) noexcept{</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        workPtr = endPtr;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        currIndex = sizeOfList ? sizeOfList - 1 : 0;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">void</span> moveWorkPtrNext(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка перемещения по рабочему указателю, когда он равен nullptr&quot;</span>));</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        workPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        currIndex++;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordtype">void</span> moveWorkPtrBack(<span class="keywordtype">void</span>){</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка перемещения по рабочему указателю, когда он равен nullptr&quot;</span>));</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        workPtr = getWorkPtr()-&gt;<a class="code" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        currIndex--;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">void</span> moveFowardUntil(std::size_t <span class="keyword">const</span> index){</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">while</span>(currIndex &lt; index)</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            moveWorkPtrNext();</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">void</span> moveBackUntil(std::size_t <span class="keyword">const</span> index){</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">while</span>(currIndex &gt; index)</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            moveWorkPtrBack();</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordtype">void</span> goToIndex(std::size_t <span class="keyword">const</span> index){</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keyword">enum</span> positionToStart : std::size_t {start, <a class="code" href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">end</a>, current};</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        std::size_t searchFrom = <a class="code" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>() - 1 - index &lt; index ? <a class="code" href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">end</a> : start; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        std::size_t dist = searchFrom ? <a class="code" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>() - 1 - index : index;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">if</span>(currIndex &lt; index)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">if</span>(dist &gt;= index - currIndex)</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                searchFrom = current;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <span class="keywordflow">if</span>(dist &gt;= currIndex - index)</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                searchFrom = current;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">switch</span>(searchFrom){</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            <span class="keywordflow">case</span> start:     goToBegin(); moveFowardUntil(index); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">end</a>:       goToEnd(); moveBackUntil(index); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">case</span> current:   <span class="keywordflow">if</span>(currIndex &lt; index)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                                moveFowardUntil(index);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                                moveBackUntil(index);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    std::size_t sizeOfList;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *startPtr;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *endPtr;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *workPtr;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    std::size_t currIndex; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;};</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_list_html"><div class="ttname"><a href="../../d1/d34/class_list.html">List</a></div><div class="ttdoc">Предварительное объявление для списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00180">List.cpp:180</a></div></div>
+<div class="ttc" id="aclass_list_html_a0932514a25b68c813750998115a7ad45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">List::removeAt</a></div><div class="ttdeci">void removeAt(std::size_t const i)</div><div class="ttdoc">Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00271">List.cpp:271</a></div></div>
+<div class="ttc" id="aclass_list_html_a0c471cf5c09edf2dcbdf1f37cac53e45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">List::pushBack</a></div><div class="ttdeci">virtual void pushBack(T const &amp;value)</div><div class="ttdoc">Вставка в конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00221">List.cpp:221</a></div></div>
+<div class="ttc" id="aclass_list_html_a18f2ee8a1d7f0e262070efc561a81bfb"><div class="ttname"><a href="../../d1/d34/class_list.html#a18f2ee8a1d7f0e262070efc561a81bfb">List::List</a></div><div class="ttdeci">List(List&lt; T &gt; const &amp;list)</div><div class="ttdoc">Конструктор из другого списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00201">List.cpp:201</a></div></div>
+<div class="ttc" id="aclass_list_html_a2b58189090f6e5ce52939c9195e59e85"><div class="ttname"><a href="../../d1/d34/class_list.html#a2b58189090f6e5ce52939c9195e59e85">List::~List</a></div><div class="ttdeci">~List()</div><div class="ttdoc">Деструктор</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00208">List.cpp:208</a></div></div>
+<div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00213">List.cpp:213</a></div></div>
+<div class="ttc" id="aclass_list_html_a4d009406c9248e7060e5cc7621f80e32"><div class="ttname"><a href="../../d1/d34/class_list.html#a4d009406c9248e7060e5cc7621f80e32">List::operator=</a></div><div class="ttdeci">List&lt; T &gt; &amp; operator=(List&lt; T &gt; const &amp;list)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00319">List.cpp:319</a></div></div>
+<div class="ttc" id="aclass_list_html_a5c5e27671b21b3815d4e25b953c69454"><div class="ttname"><a href="../../d1/d34/class_list.html#a5c5e27671b21b3815d4e25b953c69454">List::List</a></div><div class="ttdeci">List()</div><div class="ttdoc">Конструктор по-умолчанию</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00184">List.cpp:184</a></div></div>
+<div class="ttc" id="aclass_list_html_a6f540f75810e3bff0b3dfa17176d1b44"><div class="ttname"><a href="../../d1/d34/class_list.html#a6f540f75810e3bff0b3dfa17176d1b44">List::end</a></div><div class="ttdeci">NodeIterator&lt; T &gt; end() const</div><div class="ttdoc">Конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00315">List.cpp:315</a></div></div>
+<div class="ttc" id="aclass_list_html_a82f96d81a5f8c7f785714fb823a5f6db"><div class="ttname"><a href="../../d1/d34/class_list.html#a82f96d81a5f8c7f785714fb823a5f6db">List::List</a></div><div class="ttdeci">List(std::size_t n)</div><div class="ttdoc">Конструктор из размера</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00194">List.cpp:194</a></div></div>
+<div class="ttc" id="aclass_list_html_aa67498499814224ddd1fd95039beaa6f"><div class="ttname"><a href="../../d1/d34/class_list.html#aa67498499814224ddd1fd95039beaa6f">List::begin</a></div><div class="ttdeci">NodeIterator&lt; T &gt; begin(void) const</div><div class="ttdoc">Итератор для начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00310">List.cpp:310</a></div></div>
+<div class="ttc" id="aclass_list_html_ab130f4e1fe1c3fee570cf06f144d4154"><div class="ttname"><a href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154">List::clear</a></div><div class="ttdeci">void clear(void) noexcept</div><div class="ttdoc">очищает память, выделенную под узлы списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00303">List.cpp:303</a></div></div>
+<div class="ttc" id="aclass_list_html_abd67e40b26c56704a82f993e073b1113"><div class="ttname"><a href="../../d1/d34/class_list.html#abd67e40b26c56704a82f993e073b1113">List::List</a></div><div class="ttdeci">List(std::vector&lt; T &gt; const &amp;initData)</div><div class="ttdoc">Конструктор из вектора</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00187">List.cpp:187</a></div></div>
+<div class="ttc" id="aclass_list_html_acb6c6809e6effc1253c26127793c6a75"><div class="ttname"><a href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">List::pushFront</a></div><div class="ttdeci">virtual void pushFront(T const &amp;value)</div><div class="ttdoc">Вставка в начало списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00239">List.cpp:239</a></div></div>
+<div class="ttc" id="aclass_list_html_ae17b3793de9d52045759f4164d00e8b9"><div class="ttname"><a href="../../d1/d34/class_list.html#ae17b3793de9d52045759f4164d00e8b9">List::operator[]</a></div><div class="ttdeci">T &amp; operator[](std::size_t const index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00257">List.cpp:257</a></div></div>
+<div class="ttc" id="aclass_list_html_ae5f1e232204f37788c3490cefe3be4ad"><div class="ttname"><a href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">List::popFront</a></div><div class="ttdeci">void popFront(void)</div><div class="ttdoc">Удаление из начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00294">List.cpp:294</a></div></div>
+<div class="ttc" id="aclass_list_html_afde529b40dee618ee58faf1414b7be8c"><div class="ttname"><a href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">List::popBack</a></div><div class="ttdeci">void popBack(void)</div><div class="ttdoc">Удаление из конца списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00285">List.cpp:285</a></div></div>
+<div class="ttc" id="aclass_node_html"><div class="ttname"><a href="../../dc/d8f/class_node.html">Node</a></div><div class="ttdoc">Узел с одним указателм на данные и одним указателем на следующий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00030">List.cpp:30</a></div></div>
+<div class="ttc" id="aclass_node_html_a2027c1eba197700b80f76d3ee960b269"><div class="ttname"><a href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">Node::innerData</a></div><div class="ttdeci">U innerData</div><div class="ttdoc">Данные</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00101">List.cpp:101</a></div></div>
+<div class="ttc" id="aclass_node_html_a52ba4354582488265677fa2b9eec32ec"><div class="ttname"><a href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">Node::nextPtr</a></div><div class="ttdeci">Node * nextPtr</div><div class="ttdoc">Указатель на следующий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00103">List.cpp:103</a></div></div>
+<div class="ttc" id="aclass_node_html_a5f29dc4844746c7e7780933173d31a4a"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">Node::connectAsNext</a></div><div class="ttdeci">void connectAsNext(Node *pNext) noexcept</div><div class="ttdoc">Присоединяет узел pNext в качестве следующего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00055">List.cpp:55</a></div></div>
+<div class="ttc" id="aclass_node_html_a74fc31aee03a749d0c1a59260695d39c"><div class="ttname"><a href="../../dc/d8f/class_node.html#a74fc31aee03a749d0c1a59260695d39c">Node::connectAsNext</a></div><div class="ttdeci">void connectAsNext(U const &amp;value) noexcept</div><div class="ttdoc">Создает узел из value и присоединяет в качестве следующего узла к вызывающему</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00067">List.cpp:67</a></div></div>
+<div class="ttc" id="aclass_node_html_a96b8fbfe0192c0d8a0d76abc78470b22"><div class="ttname"><a href="../../dc/d8f/class_node.html#a96b8fbfe0192c0d8a0d76abc78470b22">Node::exclude</a></div><div class="ttdeci">void exclude(void) noexcept</div><div class="ttdoc">Исключает узел из цепи, в которой находится. Пример, y - узел. к которому вызван метод: x &lt;-&gt; y &lt;-&gt; z...</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00081">List.cpp:81</a></div></div>
+<div class="ttc" id="aclass_node_html_aa8d23f895123945ad5b92793a1477c07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">Node::connectAsPrev</a></div><div class="ttdeci">void connectAsPrev(Node *pPrev) noexcept</div><div class="ttdoc">Присоединяет узел pPrev в качестве предыдущего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00061">List.cpp:61</a></div></div>
+<div class="ttc" id="aclass_node_html_ab2279adf13028ad5082155feabf08387"><div class="ttname"><a href="../../dc/d8f/class_node.html#ab2279adf13028ad5082155feabf08387">Node::data</a></div><div class="ttdeci">U &amp; data(void) noexcept</div><div class="ttdoc">Возвращает ссылку на данные узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00050">List.cpp:50</a></div></div>
+<div class="ttc" id="aclass_node_html_aba90dd45645dcb21fa58d1742471ee07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">Node::prevPtr</a></div><div class="ttdeci">Node * prevPtr</div><div class="ttdoc">Указатель на предыдущий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00105">List.cpp:105</a></div></div>
+<div class="ttc" id="aclass_node_html_ac5b43f9e99dcd2273d0c6c0851251231"><div class="ttname"><a href="../../dc/d8f/class_node.html#ac5b43f9e99dcd2273d0c6c0851251231">Node::Node</a></div><div class="ttdeci">Node()</div><div class="ttdoc">Конструктор по-умолчанию</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00039">List.cpp:39</a></div></div>
+<div class="ttc" id="aclass_node_html_ac61530da000a6b84ec4e91b8d77a8563"><div class="ttname"><a href="../../dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563">Node::Node</a></div><div class="ttdeci">Node(U const value)</div><div class="ttdoc">Конструктор из значения</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00042">List.cpp:42</a></div></div>
+<div class="ttc" id="aclass_node_html_ae134cf81f361013712098991e97de25c"><div class="ttname"><a href="../../dc/d8f/class_node.html#ae134cf81f361013712098991e97de25c">Node::connectAsPrev</a></div><div class="ttdeci">void connectAsPrev(U const &amp;value) noexcept</div><div class="ttdoc">Создает узел из value и присоединяет в качестве предыдущего узла к вызывающему</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00072">List.cpp:72</a></div></div>
+<div class="ttc" id="aclass_node_html_afb99ffb3bb458ab2de8b719218264959"><div class="ttname"><a href="../../dc/d8f/class_node.html#afb99ffb3bb458ab2de8b719218264959">Node::excludeAndReturn</a></div><div class="ttdeci">Node * excludeAndReturn(void) noexcept</div><div class="ttdoc">Исключает узел из цепи, в которой находится. Пример, y - узел. к которому вызван метод: x &lt;-&gt; y &lt;-&gt; z...</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00094">List.cpp:94</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html">NodeIterator</a></div><div class="ttdoc">Предварительное объявление для итератора узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00110">List.cpp:110</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a09c133fc138404ab41b57f405f70d260"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a09c133fc138404ab41b57f405f70d260">NodeIterator::operator=</a></div><div class="ttdeci">NodeIterator &amp; operator=(NodeIterator const &amp;)=default</div></div>
+<div class="ttc" id="aclass_node_iterator_html_a333820833a4a4cfe0407461eac7adff5"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a333820833a4a4cfe0407461eac7adff5">NodeIterator::pointer</a></div><div class="ttdeci">T * pointer</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00116">List.cpp:116</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a3ee689aa01b2f773e82b4d6f6e366f0c"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a3ee689aa01b2f773e82b4d6f6e366f0c">NodeIterator::operator=</a></div><div class="ttdeci">NodeIterator &amp; operator=(NodeIterator &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclass_node_iterator_html_a3f94d25a54367487ef817f5b2168ef45"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a3f94d25a54367487ef817f5b2168ef45">NodeIterator::NodeIterator</a></div><div class="ttdeci">NodeIterator(Node&lt; T &gt; *inPtr, bool isEnd)</div><div class="ttdoc">Конструктор для двунаправленного узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00124">List.cpp:124</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a4ce629aed5a7590aeae108b67275e221"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a4ce629aed5a7590aeae108b67275e221">NodeIterator::operator!=</a></div><div class="ttdeci">friend bool operator!=(NodeIterator const &amp;lhs, NodeIterator const &amp;rhs)</div><div class="ttdoc">Не указывают ли итераторы на один и тот же узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00154">List.cpp:154</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a608609270f5e8a99d0e58fcd7b54a75b"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b">NodeIterator::iterator_category</a></div><div class="ttdeci">std::bidirectional_iterator_tag iterator_category</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00118">List.cpp:118</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a708f98945140473918b10bab7c62ba8d"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a708f98945140473918b10bab7c62ba8d">NodeIterator::operator--</a></div><div class="ttdeci">NodeIterator &amp; operator--(void)</div><div class="ttdoc">Перемещение назад на одну позицию</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00140">List.cpp:140</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_a7badeb26e853a0f2445a0626ba77a792"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a7badeb26e853a0f2445a0626ba77a792">NodeIterator::NodeIterator</a></div><div class="ttdeci">NodeIterator()=default</div></div>
+<div class="ttc" id="aclass_node_iterator_html_a8a07423df95e0f016dcada52b264818f"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a8a07423df95e0f016dcada52b264818f">NodeIterator::NodeIterator</a></div><div class="ttdeci">NodeIterator(NodeIterator &amp;&amp;)=default</div><div class="ttdoc">Дефолтные операторы и т п</div></div>
+<div class="ttc" id="aclass_node_iterator_html_a9937bb06905e4fff1c952631c285b97e"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#a9937bb06905e4fff1c952631c285b97e">NodeIterator::NodeIterator</a></div><div class="ttdeci">NodeIterator(NodeIterator const &amp;)=default</div></div>
+<div class="ttc" id="aclass_node_iterator_html_abd0260d400d7ef5e73ff986b0aefd59a"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#abd0260d400d7ef5e73ff986b0aefd59a">NodeIterator::operator*</a></div><div class="ttdeci">T &amp; operator*(void)</div><div class="ttdoc">Получение данных итератора</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00149">List.cpp:149</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_abfe3e1e58b9609be1273a650913e73a6"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#abfe3e1e58b9609be1273a650913e73a6">NodeIterator::NodeIterator</a></div><div class="ttdeci">NodeIterator(Node&lt; T &gt; *inPtr)</div><div class="ttdoc">Конструктор из указателя</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00121">List.cpp:121</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_ac7c563ab9312af9ff52b1e1e7eb30994"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#ac7c563ab9312af9ff52b1e1e7eb30994">NodeIterator::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00115">List.cpp:115</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_ad18e6b2db7e7e7ef63728e1ea19424eb"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#ad18e6b2db7e7e7ef63728e1ea19424eb">NodeIterator::difference_type</a></div><div class="ttdeci">std::ptrdiff_t difference_type</div><div class="ttdoc">аллаисы, требуемые для итераторов</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00114">List.cpp:114</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_ade39cf9cbbae1c80c20f3326af01bdf9"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#ade39cf9cbbae1c80c20f3326af01bdf9">NodeIterator::operator==</a></div><div class="ttdeci">friend bool operator==(NodeIterator const &amp;lhs, NodeIterator const &amp;rhs)</div><div class="ttdoc">Указывают ли итераторы на один и тот же узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00159">List.cpp:159</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_ae0114da67c257d826a7cafbacf18486c"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#ae0114da67c257d826a7cafbacf18486c">NodeIterator::operator++</a></div><div class="ttdeci">NodeIterator &amp; operator++(void)</div><div class="ttdoc">Перемещение вперед на одну позицию</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00134">List.cpp:134</a></div></div>
+<div class="ttc" id="aclass_node_iterator_html_ae76974257caee541bdd1deafbaf069ab"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html#ae76974257caee541bdd1deafbaf069ab">NodeIterator::reference</a></div><div class="ttdeci">T &amp; reference</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00117">List.cpp:117</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d5/df9/_list_8cpp.html">List.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Файл tests/structures/testList.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Синтаксический анализатор
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/d2f/test_list_8cpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл testList.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Тесты для двусвязного списка  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для testList.cpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d7e/test_list_8cpp__incl.svg" width="731" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<p><a href="../../d9/d2f/test_list_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afe941e8a6e7d255b8920950403f51237"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#afe941e8a6e7d255b8920950403f51237">TEST</a> (LIST_SIMPLE_TESTS, Create_default)</td></tr>
+<tr class="memdesc:afe941e8a6e7d255b8920950403f51237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест стандартного конструктора  <a href="../../d9/d2f/test_list_8cpp.html#afe941e8a6e7d255b8920950403f51237">Подробнее...</a><br /></td></tr>
+<tr class="separator:afe941e8a6e7d255b8920950403f51237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ab1bd51163103ef7b4ccd47e17c82f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a73ab1bd51163103ef7b4ccd47e17c82f">TEST</a> (LIST_SIMPLE_TESTS, Create_vector)</td></tr>
+<tr class="memdesc:a73ab1bd51163103ef7b4ccd47e17c82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест конструктора из вектора  <a href="../../d9/d2f/test_list_8cpp.html#a73ab1bd51163103ef7b4ccd47e17c82f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73ab1bd51163103ef7b4ccd47e17c82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bef7feb593d8ada25ee0edf4a816e8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a9bef7feb593d8ada25ee0edf4a816e8b">TEST</a> (LIST_SIMPLE_TESTS, Create_vector_values)</td></tr>
+<tr class="memdesc:a9bef7feb593d8ada25ee0edf4a816e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест конструктора из вектора значений  <a href="../../d9/d2f/test_list_8cpp.html#a9bef7feb593d8ada25ee0edf4a816e8b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9bef7feb593d8ada25ee0edf4a816e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53592e7d9a334ad86b210e95da1b63cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a53592e7d9a334ad86b210e95da1b63cf">TEST</a> (LIST_SIMPLE_TESTS, Create_size)</td></tr>
+<tr class="memdesc:a53592e7d9a334ad86b210e95da1b63cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест конструктора из размера  <a href="../../d9/d2f/test_list_8cpp.html#a53592e7d9a334ad86b210e95da1b63cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a53592e7d9a334ad86b210e95da1b63cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16978ac7ae1f94296e2bf0b88ff9870"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ac16978ac7ae1f94296e2bf0b88ff9870">TEST</a> (LIST_SIMPLE_TESTS, Create_size_values)</td></tr>
+<tr class="memdesc:ac16978ac7ae1f94296e2bf0b88ff9870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест конструктора из размера значений  <a href="../../d9/d2f/test_list_8cpp.html#ac16978ac7ae1f94296e2bf0b88ff9870">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac16978ac7ae1f94296e2bf0b88ff9870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9868a4affe76653eda15b1612168b5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#aa9868a4affe76653eda15b1612168b5e">TEST</a> (LIST_SIMPLE_TESTS, Walk_vector_foward)</td></tr>
+<tr class="memdesc:aa9868a4affe76653eda15b1612168b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">сравнение значений с вектором, из которого создан список  <a href="../../d9/d2f/test_list_8cpp.html#aa9868a4affe76653eda15b1612168b5e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa9868a4affe76653eda15b1612168b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e818df880e763e595d75e143bf739c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a41e818df880e763e595d75e143bf739c">TEST</a> (LIST_SIMPLE_TESTS, Walk_vector_back)</td></tr>
+<tr class="memdesc:a41e818df880e763e595d75e143bf739c"><td class="mdescLeft">&#160;</td><td class="mdescRight">сравнение значений с вектором, из которого создан список  <a href="../../d9/d2f/test_list_8cpp.html#a41e818df880e763e595d75e143bf739c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a41e818df880e763e595d75e143bf739c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4805a1e3f6ca047fadd7bee9b85cd684"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a4805a1e3f6ca047fadd7bee9b85cd684">TEST</a> (LIST_SIMPLE_TESTS, Walk_vector_foward_and_back)</td></tr>
+<tr class="memdesc:a4805a1e3f6ca047fadd7bee9b85cd684"><td class="mdescLeft">&#160;</td><td class="mdescRight">сравнение значений с вектором, из которого создан список  <a href="../../d9/d2f/test_list_8cpp.html#a4805a1e3f6ca047fadd7bee9b85cd684">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4805a1e3f6ca047fadd7bee9b85cd684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f60f28a842f3b90e02e86c026421ff7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a8f60f28a842f3b90e02e86c026421ff7">TEST</a> (LIST_SIMPLE_TESTS, PushBack_size)</td></tr>
+<tr class="memdesc:a8f60f28a842f3b90e02e86c026421ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера после вставки в конец  <a href="../../d9/d2f/test_list_8cpp.html#a8f60f28a842f3b90e02e86c026421ff7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f60f28a842f3b90e02e86c026421ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcaed528069c9e8f8ceb55891e5077f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#abcaed528069c9e8f8ceb55891e5077f4">TEST</a> (LIST_SIMPLE_TESTS, PushBack_eq_elements)</td></tr>
+<tr class="memdesc:abcaed528069c9e8f8ceb55891e5077f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера после вставки в начало  <a href="../../d9/d2f/test_list_8cpp.html#abcaed528069c9e8f8ceb55891e5077f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:abcaed528069c9e8f8ceb55891e5077f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4938ee6237f7cba8d51cf0eb85fffa24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a4938ee6237f7cba8d51cf0eb85fffa24">TEST</a> (LIST_SIMPLE_TESTS, PushFront_size)</td></tr>
+<tr class="memdesc:a4938ee6237f7cba8d51cf0eb85fffa24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест значений после вставки в конец  <a href="../../d9/d2f/test_list_8cpp.html#a4938ee6237f7cba8d51cf0eb85fffa24">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4938ee6237f7cba8d51cf0eb85fffa24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac221d51dcc1732645fe406c870297535"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ac221d51dcc1732645fe406c870297535">TEST</a> (LIST_SIMPLE_TESTS, PushFront_eq_elements)</td></tr>
+<tr class="memdesc:ac221d51dcc1732645fe406c870297535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест значений после вставки в начало  <a href="../../d9/d2f/test_list_8cpp.html#ac221d51dcc1732645fe406c870297535">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac221d51dcc1732645fe406c870297535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744706668fa4ed42a12207ac119c3965"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a744706668fa4ed42a12207ac119c3965">TEST</a> (LIST_SIMPLE_TESTS, PopBack_size)</td></tr>
+<tr class="memdesc:a744706668fa4ed42a12207ac119c3965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера после удаления из конца  <a href="../../d9/d2f/test_list_8cpp.html#a744706668fa4ed42a12207ac119c3965">Подробнее...</a><br /></td></tr>
+<tr class="separator:a744706668fa4ed42a12207ac119c3965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc6c9cb81eca56349198a642f7b46ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a3bc6c9cb81eca56349198a642f7b46ed">TEST</a> (LIST_SIMPLE_TESTS, PopFront_size)</td></tr>
+<tr class="memdesc:a3bc6c9cb81eca56349198a642f7b46ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера после удаления из начала  <a href="../../d9/d2f/test_list_8cpp.html#a3bc6c9cb81eca56349198a642f7b46ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3bc6c9cb81eca56349198a642f7b46ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5847d100a90b9fa7f49845f07b806ca4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a5847d100a90b9fa7f49845f07b806ca4">TEST</a> (LIST_SIMPLE_TESTS, PopBack_values)</td></tr>
+<tr class="memdesc:a5847d100a90b9fa7f49845f07b806ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест значений после удаления из конца  <a href="../../d9/d2f/test_list_8cpp.html#a5847d100a90b9fa7f49845f07b806ca4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5847d100a90b9fa7f49845f07b806ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c6b31d08f73d59d808e4e45c9895a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ae8c6b31d08f73d59d808e4e45c9895a4">TEST</a> (LIST_SIMPLE_TESTS, PopFront_values)</td></tr>
+<tr class="memdesc:ae8c6b31d08f73d59d808e4e45c9895a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест значений после удаления из начала  <a href="../../d9/d2f/test_list_8cpp.html#ae8c6b31d08f73d59d808e4e45c9895a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae8c6b31d08f73d59d808e4e45c9895a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc53743ea2ceea766182ca473dde64b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#afbc53743ea2ceea766182ca473dde64b">TEST</a> (LIST_SIMPLE_TESTS, removeAt_size_1)</td></tr>
+<tr class="memdesc:afbc53743ea2ceea766182ca473dde64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера списка после удаления  <a href="../../d9/d2f/test_list_8cpp.html#afbc53743ea2ceea766182ca473dde64b">Подробнее...</a><br /></td></tr>
+<tr class="separator:afbc53743ea2ceea766182ca473dde64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ecb907645fbd633d0ff79afbb68845d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a9ecb907645fbd633d0ff79afbb68845d">TEST</a> (LIST_SIMPLE_TESTS, removeAt_size_2)</td></tr>
+<tr class="memdesc:a9ecb907645fbd633d0ff79afbb68845d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера списка после удаления  <a href="../../d9/d2f/test_list_8cpp.html#a9ecb907645fbd633d0ff79afbb68845d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9ecb907645fbd633d0ff79afbb68845d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf8975a8d722b611867b3dd6d61729ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#aaf8975a8d722b611867b3dd6d61729ce">TEST</a> (LIST_SIMPLE_TESTS, removeAt_size_3)</td></tr>
+<tr class="memdesc:aaf8975a8d722b611867b3dd6d61729ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест размера списка после удаления  <a href="../../d9/d2f/test_list_8cpp.html#aaf8975a8d722b611867b3dd6d61729ce">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaf8975a8d722b611867b3dd6d61729ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f13b389665e80133aa79219a8d31f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ae7f13b389665e80133aa79219a8d31f0">TEST</a> (LIST_SIMPLE_TESTS, removeAt_values)</td></tr>
+<tr class="memdesc:ae7f13b389665e80133aa79219a8d31f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест значений списка после удаления  <a href="../../d9/d2f/test_list_8cpp.html#ae7f13b389665e80133aa79219a8d31f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae7f13b389665e80133aa79219a8d31f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1e433767d08ce525c0a01e6cb57da8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#adc1e433767d08ce525c0a01e6cb57da8">TEST</a> (LIST_ITERATORS, for_based_loop)</td></tr>
+<tr class="separator:adc1e433767d08ce525c0a01e6cb57da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad7e43bbdf467811ae80cae4226f93f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#aad7e43bbdf467811ae80cae4226f93f6">TEST</a> (LIST_ITERATORS, for_iterator_based)</td></tr>
+<tr class="separator:aad7e43bbdf467811ae80cae4226f93f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf1e42066f80ff59dd08de6bd37a846"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a2cf1e42066f80ff59dd08de6bd37a846">TEST</a> (LIST_AND_STL, numeric_accumulate)</td></tr>
+<tr class="memdesc:a2cf1e42066f80ff59dd08de6bd37a846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тесты LIST_AND_STL - на совместимость со стандартными алгоритмами  <a href="../../d9/d2f/test_list_8cpp.html#a2cf1e42066f80ff59dd08de6bd37a846">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cf1e42066f80ff59dd08de6bd37a846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d5c1a625aa935f035fd1bbeb614742"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a65d5c1a625aa935f035fd1bbeb614742">TEST</a> (LIST_AND_STL, algorithm_transform)</td></tr>
+<tr class="separator:a65d5c1a625aa935f035fd1bbeb614742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879383ad05d7f79b86d5dd35040e8448"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a879383ad05d7f79b86d5dd35040e8448">TEST</a> (LIST_AND_STL, algorithm_generate)</td></tr>
+<tr class="separator:a879383ad05d7f79b86d5dd35040e8448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256bae2f0eb49473b98778cf8613ffeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a256bae2f0eb49473b98778cf8613ffeb">TEST</a> (LIST_AND_STL, algorithm_reverse)</td></tr>
+<tr class="separator:a256bae2f0eb49473b98778cf8613ffeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0980b525f2b3feebbd87ed70015b512b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a0980b525f2b3feebbd87ed70015b512b">TEST</a> (LIST_AND_STL, algorithm_iota)</td></tr>
+<tr class="separator:a0980b525f2b3feebbd87ed70015b512b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd24463b9285dfc6a49f4fa93d6a7493"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#acd24463b9285dfc6a49f4fa93d6a7493">TEST</a> (LIST_AND_STL, algorithm_find)</td></tr>
+<tr class="separator:acd24463b9285dfc6a49f4fa93d6a7493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fa3b9b85562e3f92545ee7344dd025"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ad2fa3b9b85562e3f92545ee7344dd025">TEST</a> (LIST_AND_STL, algorithm_find_and_distance)</td></tr>
+<tr class="separator:ad2fa3b9b85562e3f92545ee7344dd025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ab7e081be07698925b7743fadf7473"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a25ab7e081be07698925b7743fadf7473">TEST</a> (LIST_EXCEPTIONS, throw_popBack)</td></tr>
+<tr class="separator:a25ab7e081be07698925b7743fadf7473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f1201a3d09f0df4159bdf30dd840ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ae4f1201a3d09f0df4159bdf30dd840ac">TEST</a> (LIST_EXCEPTIONS, throw_popFront)</td></tr>
+<tr class="separator:ae4f1201a3d09f0df4159bdf30dd840ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b98f47896753483a2e9cd6581e3873"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#aa2b98f47896753483a2e9cd6581e3873">TEST</a> (LIST_EXCEPTIONS, throw_removeAt)</td></tr>
+<tr class="separator:aa2b98f47896753483a2e9cd6581e3873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8309e5a22667b628b3477ec41239c53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#ac8309e5a22667b628b3477ec41239c53">TEST</a> (LIST_EXCEPTIONS, throw_selector_1)</td></tr>
+<tr class="separator:ac8309e5a22667b628b3477ec41239c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206ed21afede7b3276c50908875a086c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a206ed21afede7b3276c50908875a086c">TEST</a> (LIST_EXCEPTIONS, throw_selector_2)</td></tr>
+<tr class="separator:a206ed21afede7b3276c50908875a086c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9863d6f7e2376e8aad38bce5bc712c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a6c9863d6f7e2376e8aad38bce5bc712c">TEST</a> (LIST_EXCEPTIONS, NO_throw_clear)</td></tr>
+<tr class="separator:a6c9863d6f7e2376e8aad38bce5bc712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2f/test_list_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Тесты для двусвязного списка </p>
+<dl class="section author"><dt>Автор</dt><dd>DanArmor (<a href="https://github.com/DanArmor">https://github.com/DanArmor</a>) </dd></dl>
+<dl class="section version"><dt>Версия</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>2022-03-17 </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00318">318</a></p>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;              {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    testing::InitGoogleTest();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    return ::RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acd24463b9285dfc6a49f4fa93d6a7493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd24463b9285dfc6a49f4fa93d6a7493">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_find&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00275">275</a></p>
+<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                  {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{100};</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    std::iota(list.begin(), list.end(), 0);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    EXPECT_NE(std::find(list.begin(), list.end(), 50), list.end());</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html"><div class="ttname"><a href="../../d1/d34/class_list.html">List</a></div><div class="ttdoc">Предварительное объявление для списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00180">List.cpp:180</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad2fa3b9b85562e3f92545ee7344dd025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2fa3b9b85562e3f92545ee7344dd025">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_find_and_distance&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00281">281</a></p>
+<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                               {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{100};</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    std::iota(list.begin(), list.end(), 0);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    std::size_t pos = std::distance(list.begin(), std::find(list.begin(), list.end(), 50));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    EXPECT_EQ(pos, 50);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a879383ad05d7f79b86d5dd35040e8448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879383ad05d7f79b86d5dd35040e8448">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_generate&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00244">244</a></p>
+<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                      {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{5};</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    std::generate(list.begin(), list.end(), [n = 0] () <span class="keyword">mutable</span> {return n++;});</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    std::vector&lt;int&gt; checkData = {0, 1, 2, 3, 4};</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list){</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        EXPECT_EQ(x, checkData[i]);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        i++;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0980b525f2b3feebbd87ed70015b512b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0980b525f2b3feebbd87ed70015b512b">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_iota&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00267">267</a></p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                  {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{5};</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    std::iota(list.begin(), list.end(), 0);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    std::vector&lt;int&gt; checkData = {0, 1, 2, 3, 4};</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; list.size(); i++)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        EXPECT_EQ(list[i], checkData[i]);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a256bae2f0eb49473b98778cf8613ffeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a256bae2f0eb49473b98778cf8613ffeb">&#9670;&nbsp;</a></span>TEST() <span class="overload">[5/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_reverse&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00255">255</a></p>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                     {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{5};</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    std::generate(list.begin(), list.end(), [n = 0] () <span class="keyword">mutable</span> {return n++;});</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    std::vector&lt;int&gt; checkData = {4, 3, 2, 1, 0};</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::reverse(list.begin(), list.end());</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list){</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        EXPECT_EQ(x, checkData[i]);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        i++;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a65d5c1a625aa935f035fd1bbeb614742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d5c1a625aa935f035fd1bbeb614742">&#9670;&nbsp;</a></span>TEST() <span class="overload">[6/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">algorithm_transform&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00231">231</a></p>
+<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                       {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> listR{testData};</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    std::transform(list.begin(), list.end(), listR.begin(), [](<span class="keyword">auto</span> x){return x+5;});</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    std::vector&lt;int&gt; checkData = {6, 7, 8};</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : listR){</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        EXPECT_EQ(x, checkData[i]);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        i++;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2cf1e42066f80ff59dd08de6bd37a846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf1e42066f80ff59dd08de6bd37a846">&#9670;&nbsp;</a></span>TEST() <span class="overload">[7/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_AND_STL&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">numeric_accumulate&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тесты LIST_AND_STL - на совместимость со стандартными алгоритмами </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00223">223</a></p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                      {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordtype">int</span> sumTestData = std::accumulate(testData.begin(), testData.end(), 0);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordtype">int</span> sumList = std::accumulate(list.begin(), list.end(), 0);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    EXPECT_EQ(sumTestData, sumList);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6c9863d6f7e2376e8aad38bce5bc712c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9863d6f7e2376e8aad38bce5bc712c">&#9670;&nbsp;</a></span>TEST() <span class="overload">[8/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NO_throw_clear&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00313">313</a></p>
+<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                     {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    EXPECT_NO_THROW(list.clear());</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a25ab7e081be07698925b7743fadf7473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ab7e081be07698925b7743fadf7473">&#9670;&nbsp;</a></span>TEST() <span class="overload">[9/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">throw_popBack&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00288">288</a></p>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                    {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    EXPECT_THROW(list.popBack(), std::out_of_range);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4f1201a3d09f0df4159bdf30dd840ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4f1201a3d09f0df4159bdf30dd840ac">&#9670;&nbsp;</a></span>TEST() <span class="overload">[10/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">throw_popFront&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00293">293</a></p>
+<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                     {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    EXPECT_THROW(list.popFront(), std::out_of_range);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa2b98f47896753483a2e9cd6581e3873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b98f47896753483a2e9cd6581e3873">&#9670;&nbsp;</a></span>TEST() <span class="overload">[11/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">throw_removeAt&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00298">298</a></p>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                     {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    EXPECT_THROW(list.removeAt(1), std::out_of_range);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac8309e5a22667b628b3477ec41239c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8309e5a22667b628b3477ec41239c53">&#9670;&nbsp;</a></span>TEST() <span class="overload">[12/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">throw_selector_1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00303">303</a></p>
+<div class="fragment"><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                       {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    EXPECT_THROW(list.removeAt(1), std::out_of_range);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a206ed21afede7b3276c50908875a086c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206ed21afede7b3276c50908875a086c">&#9670;&nbsp;</a></span>TEST() <span class="overload">[13/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_EXCEPTIONS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">throw_selector_2&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00308">308</a></p>
+<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                       {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{1};</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    EXPECT_THROW(list.removeAt(1), std::out_of_range);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adc1e433767d08ce525c0a01e6cb57da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1e433767d08ce525c0a01e6cb57da8">&#9670;&nbsp;</a></span>TEST() <span class="overload">[14/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_ITERATORS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">for_based_loop&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00202">202</a></p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                    {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        EXPECT_EQ(x, testData[i]);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        i++;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aad7e43bbdf467811ae80cae4226f93f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7e43bbdf467811ae80cae4226f93f6">&#9670;&nbsp;</a></span>TEST() <span class="overload">[15/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_ITERATORS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">for_iterator_based&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00212">212</a></p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                        {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = list.begin(); it != list.end(); ++it){</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        EXPECT_EQ(*it, testData[i]);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        i++;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afe941e8a6e7d255b8920950403f51237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe941e8a6e7d255b8920950403f51237">&#9670;&nbsp;</a></span>TEST() <span class="overload">[16/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Create_default&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест стандартного конструктора </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00019">19</a></p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                       {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53592e7d9a334ad86b210e95da1b63cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53592e7d9a334ad86b210e95da1b63cf">&#9670;&nbsp;</a></span>TEST() <span class="overload">[17/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Create_size&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест конструктора из размера </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00040">40</a></p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::vector&lt;int&gt; testData = {0, 0, 0};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{3};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EXPECT_EQ(list.size(), testData.size());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac16978ac7ae1f94296e2bf0b88ff9870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16978ac7ae1f94296e2bf0b88ff9870">&#9670;&nbsp;</a></span>TEST() <span class="overload">[18/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Create_size_values&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест конструктора из размера значений </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00047">47</a></p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                           {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::vector&lt;int&gt; testData = {0, 0, 0};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{3};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a73ab1bd51163103ef7b4ccd47e17c82f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ab1bd51163103ef7b4ccd47e17c82f">&#9670;&nbsp;</a></span>TEST() <span class="overload">[19/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Create_vector&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест конструктора из вектора </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00025">25</a></p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                      {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    EXPECT_EQ(list.size(), testData.size());</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9bef7feb593d8ada25ee0edf4a816e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bef7feb593d8ada25ee0edf4a816e8b">&#9670;&nbsp;</a></span>TEST() <span class="overload">[20/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Create_vector_values&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест конструктора из вектора значений </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00032">32</a></p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                             {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a744706668fa4ed42a12207ac119c3965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744706668fa4ed42a12207ac119c3965">&#9670;&nbsp;</a></span>TEST() <span class="overload">[21/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PopBack_size&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера после удаления из конца </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00124">124</a></p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                     {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html_afde529b40dee618ee58faf1414b7be8c"><div class="ttname"><a href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">List::popBack</a></div><div class="ttdeci">void popBack(void)</div><div class="ttdoc">Удаление из конца списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00285">List.cpp:285</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_a744706668fa4ed42a12207ac119c3965_cgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5847d100a90b9fa7f49845f07b806ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5847d100a90b9fa7f49845f07b806ca4">&#9670;&nbsp;</a></span>TEST() <span class="overload">[22/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PopBack_values&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест значений после удаления из конца </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00142">142</a></p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                       {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++){</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        EXPECT_EQ(list[list.size()-1], testData[testData.size()-i-1]);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        list.popBack();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3bc6c9cb81eca56349198a642f7b46ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc6c9cb81eca56349198a642f7b46ed">&#9670;&nbsp;</a></span>TEST() <span class="overload">[23/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PopFront_size&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера после удаления из начала </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00133">133</a></p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                      {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">popFront</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html_ae5f1e232204f37788c3490cefe3be4ad"><div class="ttname"><a href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">List::popFront</a></div><div class="ttdeci">void popFront(void)</div><div class="ttdoc">Удаление из начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00294">List.cpp:294</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_a3bc6c9cb81eca56349198a642f7b46ed_cgraph.svg" width="224" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae8c6b31d08f73d59d808e4e45c9895a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c6b31d08f73d59d808e4e45c9895a4">&#9670;&nbsp;</a></span>TEST() <span class="overload">[24/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PopFront_values&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест значений после удаления из начала </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00152">152</a></p>
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                        {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++){</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        EXPECT_EQ(list[0], testData[i]);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        list.popFront();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcaed528069c9e8f8ceb55891e5077f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcaed528069c9e8f8ceb55891e5077f4">&#9670;&nbsp;</a></span>TEST() <span class="overload">[25/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PushBack_eq_elements&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера после вставки в начало </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00094">94</a></p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                             {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(testData[i]);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html_a0c471cf5c09edf2dcbdf1f37cac53e45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">List::pushBack</a></div><div class="ttdeci">virtual void pushBack(T const &amp;value)</div><div class="ttdoc">Вставка в конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00221">List.cpp:221</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_abcaed528069c9e8f8ceb55891e5077f4_cgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8f60f28a842f3b90e02e86c026421ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f60f28a842f3b90e02e86c026421ff7">&#9670;&nbsp;</a></span>TEST() <span class="overload">[26/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PushBack_size&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера после вставки в конец </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00085">85</a></p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                      {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(testData[i]);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    EXPECT_EQ(list.size(), testData.size());</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_a8f60f28a842f3b90e02e86c026421ff7_cgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac221d51dcc1732645fe406c870297535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac221d51dcc1732645fe406c870297535">&#9670;&nbsp;</a></span>TEST() <span class="overload">[27/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PushFront_eq_elements&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест значений после вставки в начало </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00113">113</a></p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                              {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">pushFront</a>(testData[i]);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// Мы вставляем выше 3 2 1, поэтому testData[size-i-1]</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        EXPECT_EQ(list[i], testData[testData.size()-i-1]);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html_acb6c6809e6effc1253c26127793c6a75"><div class="ttname"><a href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">List::pushFront</a></div><div class="ttdeci">virtual void pushFront(T const &amp;value)</div><div class="ttdoc">Вставка в начало списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00239">List.cpp:239</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_ac221d51dcc1732645fe406c870297535_cgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4938ee6237f7cba8d51cf0eb85fffa24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4938ee6237f7cba8d51cf0eb85fffa24">&#9670;&nbsp;</a></span>TEST() <span class="overload">[28/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PushFront_size&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест значений после вставки в конец </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00104">104</a></p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                       {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        list.<a class="code" href="../../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75">pushFront</a>(testData[i]);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    EXPECT_EQ(list.size(), testData.size());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_a4938ee6237f7cba8d51cf0eb85fffa24_cgraph.svg" width="439" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="afbc53743ea2ceea766182ca473dde64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc53743ea2ceea766182ca473dde64b">&#9670;&nbsp;</a></span>TEST() <span class="overload">[29/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">removeAt_size_1&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера списка после удаления </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00162">162</a></p>
+<div class="fragment"><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                        {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    list.<a class="code" href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">removeAt</a>(0);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    list.removeAt(0);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    list.removeAt(0);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="ttc" id="aclass_list_html_a0932514a25b68c813750998115a7ad45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">List::removeAt</a></div><div class="ttdeci">void removeAt(std::size_t const i)</div><div class="ttdoc">Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00271">List.cpp:271</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_afbc53743ea2ceea766182ca473dde64b_cgraph.svg" width="516" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9ecb907645fbd633d0ff79afbb68845d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ecb907645fbd633d0ff79afbb68845d">&#9670;&nbsp;</a></span>TEST() <span class="overload">[30/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">removeAt_size_2&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера списка после удаления </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00172">172</a></p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                        {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    list.<a class="code" href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">removeAt</a>(1);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    list.removeAt(1);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    list.removeAt(0);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_a9ecb907645fbd633d0ff79afbb68845d_cgraph.svg" width="516" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaf8975a8d722b611867b3dd6d61729ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf8975a8d722b611867b3dd6d61729ce">&#9670;&nbsp;</a></span>TEST() <span class="overload">[31/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">removeAt_size_3&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест размера списка после удаления </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00182">182</a></p>
+<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                        {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    list.<a class="code" href="../../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45">removeAt</a>(0);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    list.removeAt(1);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    list.removeAt(0);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    EXPECT_EQ(list.size(), 0);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d2f/test_list_8cpp_aaf8975a8d722b611867b3dd6d61729ce_cgraph.svg" width="516" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae7f13b389665e80133aa79219a8d31f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f13b389665e80133aa79219a8d31f0">&#9670;&nbsp;</a></span>TEST() <span class="overload">[32/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">removeAt_values&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест значений списка после удаления </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00192">192</a></p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    EXPECT_EQ(list[1], testData[1]);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    list.removeAt(1);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    EXPECT_EQ(list[1], testData[2]);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    list.removeAt(1);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    EXPECT_EQ(list[0], testData[0]);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a41e818df880e763e595d75e143bf739c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e818df880e763e595d75e143bf739c">&#9670;&nbsp;</a></span>TEST() <span class="overload">[33/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Walk_vector_back&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>сравнение значений с вектором, из которого создан список </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00063">63</a></p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                         {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = testData.size()-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa9868a4affe76653eda15b1612168b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9868a4affe76653eda15b1612168b5e">&#9670;&nbsp;</a></span>TEST() <span class="overload">[34/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Walk_vector_foward&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>сравнение значений с вектором, из которого создан список </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00055">55</a></p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                           {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4805a1e3f6ca047fadd7bee9b85cd684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4805a1e3f6ca047fadd7bee9b85cd684">&#9670;&nbsp;</a></span>TEST() <span class="overload">[35/35]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">LIST_SIMPLE_TESTS&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Walk_vector_foward_and_back&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>сравнение значений с вектором, из которого создан список </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d9/d2f/test_list_8cpp_source.html">testList.cpp</a> строка <a class="el" href="../../d9/d2f/test_list_8cpp_source.html#l00071">71</a></p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::vector&lt;int&gt; testData = {1, 2, 3};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../d1/d34/class_list.html">List&lt;int&gt;</a> list{testData};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = testData.size()-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = testData.size()-1; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; testData.size(); i++)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        EXPECT_EQ(list[i], testData[i]);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="../../dir_1cf0343446ecc9c1285d6594d51075d7.html">structures</a></li><li class="navelem"><a class="el" href="../../d9/d2f/test_list_8cpp.html">testList.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

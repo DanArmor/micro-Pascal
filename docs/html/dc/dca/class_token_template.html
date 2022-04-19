@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Класс TokenTemplate</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Синтаксический анализатор
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dc/dca/class_token_template.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="../../d6/d1f/class_token_template-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс TokenTemplate</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс, представляющий шаблон токена  
+ <a href="../../dc/dca/class_token_template.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:TokenTemplate:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/df7/class_token_template__inherit__graph.svg" width="130" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса TokenTemplate:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/db0/class_token_template__coll__graph.svg" width="130" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a706e9ca659161ff0e1b5d3b173cb308b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dca/class_token_template.html#a706e9ca659161ff0e1b5d3b173cb308b">TokenTemplate</a> ()</td></tr>
+<tr class="memdesc:a706e9ca659161ff0e1b5d3b173cb308b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по-умолчанию  <a href="../../dc/dca/class_token_template.html#a706e9ca659161ff0e1b5d3b173cb308b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a706e9ca659161ff0e1b5d3b173cb308b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec14e1da735bd5250f91dec3cfa1e82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dca/class_token_template.html#abec14e1da735bd5250f91dec3cfa1e82">TokenTemplate</a> (std::string str, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a> type, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">AdvType</a> advType)</td></tr>
+<tr class="memdesc:abec14e1da735bd5250f91dec3cfa1e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор из regex-строки и типа токена  <a href="../../dc/dca/class_token_template.html#abec14e1da735bd5250f91dec3cfa1e82">Подробнее...</a><br /></td></tr>
+<tr class="separator:abec14e1da735bd5250f91dec3cfa1e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4639e8bbe50d0d81e4f81d8021e3dbfe"><td class="memItemLeft" align="right" valign="top">std::regex const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dca/class_token_template.html#a4639e8bbe50d0d81e4f81d8021e3dbfe">getRegex</a> (void)</td></tr>
+<tr class="memdesc:a4639e8bbe50d0d81e4f81d8021e3dbfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает константную ссылку на regex-выражение токена  <a href="../../dc/dca/class_token_template.html#a4639e8bbe50d0d81e4f81d8021e3dbfe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4639e8bbe50d0d81e4f81d8021e3dbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_token"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_token')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../d0/d11/class_i_token.html">IToken</a></td></tr>
+<tr class="memitem:a7f8dcff44f39a47c9e92507f91a683af inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af">IToken</a> (void)</td></tr>
+<tr class="memdesc:a7f8dcff44f39a47c9e92507f91a683af inherit pub_methods_class_i_token"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по-умолчанию  <a href="../../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7f8dcff44f39a47c9e92507f91a683af inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901cd3ac25400a1c3c440be68306a3c8 inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a901cd3ac25400a1c3c440be68306a3c8">IToken</a> (<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a> type)</td></tr>
+<tr class="memdesc:a901cd3ac25400a1c3c440be68306a3c8 inherit pub_methods_class_i_token"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор из типа  <a href="../../d0/d11/class_i_token.html#a901cd3ac25400a1c3c440be68306a3c8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a901cd3ac25400a1c3c440be68306a3c8 inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462b374dffdaa22ae134eea2304708ac inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac">IToken</a> (<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a> type, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">AdvType</a> advType)</td></tr>
+<tr class="separator:a462b374dffdaa22ae134eea2304708ac inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568cb9d98839eff3fd758f419a76b092 inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092">getType</a> (void)</td></tr>
+<tr class="memdesc:a568cb9d98839eff3fd758f419a76b092 inherit pub_methods_class_i_token"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение типа токена  <a href="../../d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092">Подробнее...</a><br /></td></tr>
+<tr class="separator:a568cb9d98839eff3fd758f419a76b092 inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ca7f7e601ae49ad573167a4e9429cb inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">AdvType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb">getAdvType</a> (void)</td></tr>
+<tr class="separator:ac8ca7f7e601ae49ad573167a4e9429cb inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa3435db7157ca7316d4e4aee1df4c0 inherit pub_methods_class_i_token"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0">setAdvType</a> (<a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">IToken::AdvType</a> newAdvType)</td></tr>
+<tr class="separator:a4fa3435db7157ca7316d4e4aee1df4c0 inherit pub_methods_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_types_class_i_token"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_token')"><img src="../../closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="../../d0/d11/class_i_token.html">IToken</a></td></tr>
+<tr class="memitem:a84210eb1452d5a97b360c64841a925a3 inherit pub_types_class_i_token"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">AdvType</a> { <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3aea83c4dc301cd699470023acf033e7ed">KEYWORD</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">FUNCTION_NAME</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a49c7843c1ac2d0c780d9ed6d7211708b">VAR_NAME</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">OPERATOR</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3ad2a5a34e6961ce7c9ba32e121a405762">SOME_CONST</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">TYPE_SPEC</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a824a11e013632c4a8ebcdda4238dd7c5">NOTPROCESS</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5">PROGRAM_NAME</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678">UNKNOWN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a84210eb1452d5a97b360c64841a925a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы токенов  <a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a84210eb1452d5a97b360c64841a925a3 inherit pub_types_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa344b0520a49f41cb1e13363c138603a inherit pub_types_class_i_token"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a> { <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1255558c660eec45249d2d3fb9220f84">ERROR</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">ENDOFSTREAM</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017">EMPTY</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b">BLOCK</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2147f02d1f87da6c5c33a9797a8a52ca">VARDECL</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa54ae96197e2c75bd51695d5db21a2b03">PROGSTART</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaaf1ae5512440f4f428cb1553db3d6296">TERMINATE</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">NEWLINE</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">COMMENT</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">ID</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">INTEGER_CONST</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9">REAL_CONST</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103">STRING_CONST</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa66fd257c4c7078a1f5580a6c728ee96d">LPAREN</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa844be0422b59633c7da0d3eb1821754f">RPAREN</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa231814dc9a40b026015d03a2666fddf5">LBRACE</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac31eb5ff1826672e6401341c809c98a4">RBRACE</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf2a454394f784f98309d8c9070495d14">LSQBRACKET</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab73796db691fefc6391f764d47d3d64a">RSQBRACKET</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa82462b1d5a3ab59778ab2019a530f89c">PLUS</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab0b81010f8de0fc08d6cfebfb87dcdf4">MINUS</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa564c9b57284b73c082fe01d66bf120d1">MUL</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aacd2bbed16eee5e1c28e856a71262c773">DIV</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa33fbefe2d6b2e20ed6c207a7cb7efb97">MOD</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa0108ba9beccc2f403f29db1f6e9da95b">INTEGER_DIV</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4a4ca5b38e901ec98a2bfdb6c398c0be">FLOAT_DIV</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac458af35cb84665152a792903129cdf0">AND</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a">NOT</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76">OR</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2d4baebc8efb23e7ae246812c55bbd8a">EQ</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa079f97e085c720fe76fad5d6b25feaa5">NEQ</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa44c902dfbf9234168ae1715dfafc23f5">LESS</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4785b14b88c849bf98576192431675ac">LESS_EQ</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad6e2609bcd9c5a3c86a054a412553a21">MORE</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac00a0f0708ab13993d9c17623ef36833">MORE_EQ</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaeec6dbf5e884ba0096c5420de450c876">STRING_BOUND</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3">ASSIGN</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa3f5273830265629f7cbec96ad330211a">BEGIN</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa685a24d9ce94617a29d5c1cda7e3eb29">END</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5057de577058322f33bc675542aaef50">PROGRAM</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa977759c1b7ab9d7ccd49d5b4fd7c24f5">VAR</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaac163589dcc8d2e463636df526859b1b">CONST</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa04c99d204957dcc6f281d3f8cdd688c5">INTEGER</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1651f94d95583971c358e682b73cd957">REAL</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82">WHILE</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaa19bdc3f26ca60646ef5c25502287a60">DO</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf">IF</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa6e4abd9a687325db7380c68445421eea">THEN</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa42b5f7546c0759d8f715842db2c8b7c7">ELSE</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae96c07341be350fdc64ad96c6d15659e">DOT</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa67db653da579d09e05caf3774df22a0e">SEMI</a>
+, <a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad32e70bb3772513ad3b96c2bf44113de">COLON</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa768c20e9b386717a0f0ed5c1615b1c01">COMMA</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa344b0520a49f41cb1e13363c138603a inherit pub_types_class_i_token"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс, представляющий шаблон токена </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a> строка <a class="el" href="../../de/d32/_token_8hpp_source.html#l00172">172</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a706e9ca659161ff0e1b5d3b173cb308b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706e9ca659161ff0e1b5d3b173cb308b">&#9670;&nbsp;</a></span>TokenTemplate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TokenTemplate::TokenTemplate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по-умолчанию </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/db6/_token_8cpp_source.html">Token.cpp</a> строка <a class="el" href="../../d1/db6/_token_8cpp_source.html#l00061">61</a></p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abec14e1da735bd5250f91dec3cfa1e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec14e1da735bd5250f91dec3cfa1e82">&#9670;&nbsp;</a></span>TokenTemplate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TokenTemplate::TokenTemplate </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">Type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">AdvType</a>&#160;</td>
+          <td class="paramname"><em>advType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор из regex-строки и типа токена </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>regex строка, представляющая шаблон для определения токена </td></tr>
+    <tr><td class="paramname">type</td><td>тип токена </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/db6/_token_8cpp_source.html">Token.cpp</a> строка <a class="el" href="../../d1/db6/_token_8cpp_source.html#l00063">63</a></p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;: <a class="code" href="../../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af">IToken</a>(type, advType), regStr(str), regTemplate(str){};</div>
+<div class="ttc" id="aclass_i_token_html_a7f8dcff44f39a47c9e92507f91a683af"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af">IToken::IToken</a></div><div class="ttdeci">IToken(void)</div><div class="ttdoc">Конструктор по-умолчанию</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00007">Token.cpp:7</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a4639e8bbe50d0d81e4f81d8021e3dbfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4639e8bbe50d0d81e4f81d8021e3dbfe">&#9670;&nbsp;</a></span>getRegex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::regex const  &amp; TokenTemplate::getRegex </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает константную ссылку на regex-выражение токена </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/db6/_token_8cpp_source.html">Token.cpp</a> строка <a class="el" href="../../d1/db6/_token_8cpp_source.html#l00065">65</a></p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                            {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> regTemplate;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/<a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a></li>
+<li>src/<a class="el" href="../../d1/db6/_token_8cpp_source.html">Token.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/dca/class_token_template.html">TokenTemplate</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>
