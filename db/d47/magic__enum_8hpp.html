@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Файл side_include/magic_enum.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('db/d47/magic__enum_8hpp.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл magic_enum.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;iosfwd&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для magic_enum.hpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/d24/magic__enum_8hpp__incl.svg" width="1042" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d9d/magic__enum_8hpp__dep__incl.svg" width="480" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div>
+<p><a href="../../db/d47/magic__enum_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dae/structmagic__enum_1_1customize_1_1enum__range.html">magic_enum::customize::enum_range&lt; E &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db2/structmagic__enum_1_1detail_1_1supported.html">magic_enum::detail::supported&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/structmagic__enum_1_1detail_1_1has__is__flags.html">magic_enum::detail::has_is_flags&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2b/structmagic__enum_1_1detail_1_1has__is__flags_3_01_t_00_01std_1_1void__t_3_01decltype_07customiz5850fc280780eb0d4e359edf8de2e402.html">magic_enum::detail::has_is_flags&lt; T, std::void_t&lt; decltype(customize::enum_range&lt; T &gt;::is_flags)&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/def/structmagic__enum_1_1detail_1_1range__min.html">magic_enum::detail::range_min&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dad/structmagic__enum_1_1detail_1_1range__min_3_01_t_00_01std_1_1void__t_3_01decltype_07customize_1_b5db5546fae27b586c6e1893b42c0f44.html">magic_enum::detail::range_min&lt; T, std::void_t&lt; decltype(customize::enum_range&lt; T &gt;::min)&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1b/structmagic__enum_1_1detail_1_1range__max.html">magic_enum::detail::range_max&lt; T, typename &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbf/structmagic__enum_1_1detail_1_1range__max_3_01_t_00_01std_1_1void__t_3_01decltype_07customize_1_35692f6e889269924f0d80e52c12ef1d.html">magic_enum::detail::range_max&lt; T, std::void_t&lt; decltype(customize::enum_range&lt; T &gt;::max)&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dc9/classmagic__enum_1_1detail_1_1static__string.html">magic_enum::detail::static_string&lt; N &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfa/classmagic__enum_1_1detail_1_1static__string_3_010_01_4.html">magic_enum::detail::static_string&lt; 0 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d83/classmagic__enum_1_1detail_1_1case__insensitive.html">magic_enum::detail::case_insensitive</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/da3/structmagic__enum_1_1detail_1_1enable__if__enum.html">magic_enum::detail::enable_if_enum&lt; bool, T, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de4/structmagic__enum_1_1detail_1_1enable__if__enum_3_01true_00_01_t_00_01_r_01_4.html">magic_enum::detail::enable_if_enum&lt; true, T, R &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3a/structmagic__enum_1_1detail_1_1is__scoped__enum.html">magic_enum::detail::is_scoped_enum&lt; T, bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/structmagic__enum_1_1detail_1_1is__scoped__enum_3_01_t_00_01true_01_4.html">magic_enum::detail::is_scoped_enum&lt; T, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d31/structmagic__enum_1_1detail_1_1is__unscoped__enum.html">magic_enum::detail::is_unscoped_enum&lt; T, bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dad/structmagic__enum_1_1detail_1_1is__unscoped__enum_3_01_t_00_01true_01_4.html">magic_enum::detail::is_unscoped_enum&lt; T, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d95/structmagic__enum_1_1detail_1_1underlying__type.html">magic_enum::detail::underlying_type&lt; T, bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db7/structmagic__enum_1_1detail_1_1underlying__type_3_01_t_00_01true_01_4.html">magic_enum::detail::underlying_type&lt; T, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d86/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01is__e9e2c5e2956f56ac40bc9b9bfd6fddd64.html">magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; is_enum_v&lt; Value &gt; &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d04/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_137d7a367bcc828d5278b8d9f2bcfdbfa.html">magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; std::is_same_v&lt; Value, string_view &gt; &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d29/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_1c37c04ac3cd10ce820474d57e85e9ea8.html">magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; std::is_same_v&lt; Value, string_view &gt; &gt; &gt;::secondary_hash</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dfa/structmagic__enum_1_1is__unscoped__enum.html">magic_enum::is_unscoped_enum&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d84/structmagic__enum_1_1is__scoped__enum.html">magic_enum::is_scoped_enum&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6e/structmagic__enum_1_1underlying__type.html">magic_enum::underlying_type&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:d2/da7/namespacemagic__enum"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html">magic_enum</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d94/namespacemagic__enum_1_1customize"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html">magic_enum::customize</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:de/d78/namespacemagic__enum_1_1customize_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d78/namespacemagic__enum_1_1customize_1_1detail.html">magic_enum::customize::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:dd/d3d/namespacemagic__enum_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html">magic_enum::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/da6/namespacemagic__enum_1_1ostream__operators"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/da6/namespacemagic__enum_1_1ostream__operators.html">magic_enum::ostream_operators</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d4/d5a/namespacemagic__enum_1_1bitwise__operators"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html">magic_enum::bitwise_operators</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a2b1e2194fd5bc90499887460e8318e30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#a2b1e2194fd5bc90499887460e8318e30">MAGIC_ENUM_VERSION_MAJOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a2b1e2194fd5bc90499887460e8318e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60129f9fd71fa854fd4c84803732e14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#ae60129f9fd71fa854fd4c84803732e14">MAGIC_ENUM_VERSION_MINOR</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:ae60129f9fd71fa854fd4c84803732e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a8c0173da51fc4cd6a763ba9be51bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#ab1a8c0173da51fc4cd6a763ba9be51bd">MAGIC_ENUM_VERSION_PATCH</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ab1a8c0173da51fc4cd6a763ba9be51bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04478a8f6e74ba88296c303ca5d9ee29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#a04478a8f6e74ba88296c303ca5d9ee29">MAGIC_ENUM_RANGE_MIN</a>&#160;&#160;&#160;-128</td></tr>
+<tr class="separator:a04478a8f6e74ba88296c303ca5d9ee29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b5d28d5f88bcb69e8f0f868f5d32fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#a60b5d28d5f88bcb69e8f0f868f5d32fb">MAGIC_ENUM_RANGE_MAX</a>&#160;&#160;&#160;128</td></tr>
+<tr class="separator:a60b5d28d5f88bcb69e8f0f868f5d32fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851238e6f0b3143bb4e7651e49a2e829"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#a851238e6f0b3143bb4e7651e49a2e829">MAGIC_ENUM_FOR_EACH_256</a>(T)</td></tr>
+<tr class="separator:a851238e6f0b3143bb4e7651e49a2e829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38a68da6cedb3207fad7f311b150539"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d47/magic__enum_8hpp.html#af38a68da6cedb3207fad7f311b150539">MAGIC_ENUM_CASE</a>(val)</td></tr>
+<tr class="separator:af38a68da6cedb3207fad7f311b150539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a5c1725f18d7509eec4a5bdc862ee6567"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html#a5c1725f18d7509eec4a5bdc862ee6567">magic_enum::customize::customize_t</a> = std::variant&lt; string_view, detail::default_customize_tag, detail::invalid_customize_tag &gt;</td></tr>
+<tr class="separator:a5c1725f18d7509eec4a5bdc862ee6567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09777c0dee782b8bdee5059b716e25e5"><td class="memTemplParams" colspan="2">template&lt;typename E , typename D  = std::decay_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a09777c0dee782b8bdee5059b716e25e5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a09777c0dee782b8bdee5059b716e25e5">magic_enum::detail::values_t</a> = decltype((values_v&lt; D &gt;))</td></tr>
+<tr class="separator:a09777c0dee782b8bdee5059b716e25e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcf60ae2ea2e464380ece0299b5b254"><td class="memTemplParams" colspan="2">template&lt;typename E , typename D  = std::decay_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:aafcf60ae2ea2e464380ece0299b5b254"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aafcf60ae2ea2e464380ece0299b5b254">magic_enum::detail::names_t</a> = decltype((names_v&lt; D &gt;))</td></tr>
+<tr class="separator:aafcf60ae2ea2e464380ece0299b5b254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b194c4cc7aa3ce82fda425ebd5e54e"><td class="memTemplParams" colspan="2">template&lt;typename E , typename D  = std::decay_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a24b194c4cc7aa3ce82fda425ebd5e54e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a24b194c4cc7aa3ce82fda425ebd5e54e">magic_enum::detail::entries_t</a> = decltype((entries_v&lt; D &gt;))</td></tr>
+<tr class="separator:a24b194c4cc7aa3ce82fda425ebd5e54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f6f6f0cbd97eea3d34daa07615e6d6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename R  = void&gt; </td></tr>
+<tr class="memitem:ac3f6f6f0cbd97eea3d34daa07615e6d6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#ac3f6f6f0cbd97eea3d34daa07615e6d6">magic_enum::detail::enable_if_enum_t</a> = std::enable_if_t&lt; std::is_enum_v&lt; std::decay_t&lt; T &gt; &gt;, R &gt;</td></tr>
+<tr class="separator:ac3f6f6f0cbd97eea3d34daa07615e6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b0b5dcd6a1b9e9a3d425d8265f5150"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Enable  = std::enable_if_t&lt;std::is_enum_v&lt;std::decay_t&lt;T&gt;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a54b0b5dcd6a1b9e9a3d425d8265f5150"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a54b0b5dcd6a1b9e9a3d425d8265f5150">magic_enum::detail::enum_concept</a> = T</td></tr>
+<tr class="separator:a54b0b5dcd6a1b9e9a3d425d8265f5150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c1f64071922776c3af446e0e62df59"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa1c1f64071922776c3af446e0e62df59"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#aa1c1f64071922776c3af446e0e62df59">magic_enum::Enum</a> = detail::enum_concept&lt; T &gt;</td></tr>
+<tr class="separator:aa1c1f64071922776c3af446e0e62df59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539397350dc029c25830b622843fd3eb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a539397350dc029c25830b622843fd3eb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a539397350dc029c25830b622843fd3eb">magic_enum::underlying_type_t</a> = typename underlying_type&lt; T &gt;::type</td></tr>
+<tr class="separator:a539397350dc029c25830b622843fd3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a26ff436bad59c192211232cc43985c32"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d78/namespacemagic__enum_1_1customize_1_1detail.html#a26ff436bad59c192211232cc43985c32">magic_enum::customize::detail::default_customize_tag</a> </td></tr>
+<tr class="separator:a26ff436bad59c192211232cc43985c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e6fb42bf78e92fa5f8fb1bc28c8c01"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d78/namespacemagic__enum_1_1customize_1_1detail.html#a22e6fb42bf78e92fa5f8fb1bc28c8c01">magic_enum::customize::detail::invalid_customize_tag</a> </td></tr>
+<tr class="separator:a22e6fb42bf78e92fa5f8fb1bc28c8c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeed97c3e9177e990234f6d898fd6356"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aeeed97c3e9177e990234f6d898fd6356">magic_enum::detail::case_call_t</a> { <a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aeeed97c3e9177e990234f6d898fd6356a6a992d5529f459a44fee58c733255e86">magic_enum::detail::index</a>
+, <a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aeeed97c3e9177e990234f6d898fd6356a2063c1608d6e0baf80249c42e2be5804">magic_enum::detail::value</a>
+ }</td></tr>
+<tr class="separator:aeeed97c3e9177e990234f6d898fd6356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:af4a070d94029eb812fabb8121f8c4fdc"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:af4a070d94029eb812fabb8121f8c4fdc"><td class="memTemplItemLeft" align="right" valign="top">constexpr customize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html#af4a070d94029eb812fabb8121f8c4fdc">magic_enum::customize::enum_name</a> (E) noexcept</td></tr>
+<tr class="separator:af4a070d94029eb812fabb8121f8c4fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e08d964b80b9adf3ef634561ad45f90"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a5e08d964b80b9adf3ef634561ad45f90"><td class="memTemplItemLeft" align="right" valign="top">constexpr customize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html#a5e08d964b80b9adf3ef634561ad45f90">magic_enum::customize::enum_type_name</a> () noexcept</td></tr>
+<tr class="separator:a5e08d964b80b9adf3ef634561ad45f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f28b73844b3bcd5d23f2baf8021592e"><td class="memItemLeft" align="right" valign="top">constexpr string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a6f28b73844b3bcd5d23f2baf8021592e">magic_enum::detail::pretty_name</a> (string_view name) noexcept</td></tr>
+<tr class="separator:a6f28b73844b3bcd5d23f2baf8021592e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e442a24179e53022ac3d2948851a8aa"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a4e442a24179e53022ac3d2948851a8aa">magic_enum::detail::find</a> (string_view str, char c) noexcept</td></tr>
+<tr class="separator:a4e442a24179e53022ac3d2948851a8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf80cb62e79081aa08b426fe582eb6b"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t N, std::size_t... I&gt; </td></tr>
+<tr class="memitem:a3bf80cb62e79081aa08b426fe582eb6b"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&lt; std::remove_cv_t&lt; T &gt;, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3bf80cb62e79081aa08b426fe582eb6b">magic_enum::detail::to_array</a> (T(&amp;a)[N], std::index_sequence&lt; I... &gt;)</td></tr>
+<tr class="separator:a3bf80cb62e79081aa08b426fe582eb6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7a782ca4c30ad574665a745b3b2d44"><td class="memTemplParams" colspan="2">template&lt;typename BinaryPredicate &gt; </td></tr>
+<tr class="memitem:afe7a782ca4c30ad574665a745b3b2d44"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#afe7a782ca4c30ad574665a745b3b2d44">magic_enum::detail::cmp_equal</a> (string_view lhs, string_view rhs, BinaryPredicate &amp;&amp;p) noexcept(std::is_nothrow_invocable_r_v&lt; bool, BinaryPredicate, char, char &gt;)</td></tr>
+<tr class="separator:afe7a782ca4c30ad574665a745b3b2d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39847ec4605b253b3a8de1e73417902d"><td class="memTemplParams" colspan="2">template&lt;typename L , typename R &gt; </td></tr>
+<tr class="memitem:a39847ec4605b253b3a8de1e73417902d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a39847ec4605b253b3a8de1e73417902d">magic_enum::detail::cmp_less</a> (L lhs, R rhs) noexcept</td></tr>
+<tr class="separator:a39847ec4605b253b3a8de1e73417902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f435c2b919eb3622324d94892c8bc0b"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:a1f435c2b919eb3622324d94892c8bc0b"><td class="memTemplItemLeft" align="right" valign="top">constexpr I&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a1f435c2b919eb3622324d94892c8bc0b">magic_enum::detail::log2</a> (I value) noexcept</td></tr>
+<tr class="separator:a1f435c2b919eb3622324d94892c8bc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77aa93178c499e2a34720fc831b99458"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a77aa93178c499e2a34720fc831b99458"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a77aa93178c499e2a34720fc831b99458">magic_enum::detail::n</a> () noexcept</td></tr>
+<tr class="separator:a77aa93178c499e2a34720fc831b99458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24161d1c53317e05976eec1bf57790ef"><td class="memTemplParams" colspan="2">template&lt;typename E , E V&gt; </td></tr>
+<tr class="memitem:a24161d1c53317e05976eec1bf57790ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a24161d1c53317e05976eec1bf57790ef">magic_enum::detail::n</a> () noexcept</td></tr>
+<tr class="separator:a24161d1c53317e05976eec1bf57790ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa20ca51417e4dc6344441ec81efe42d"><td class="memTemplParams" colspan="2">template&lt;typename E , auto V&gt; </td></tr>
+<tr class="memitem:afa20ca51417e4dc6344441ec81efe42d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#afa20ca51417e4dc6344441ec81efe42d">magic_enum::detail::is_valid</a> () noexcept</td></tr>
+<tr class="separator:afa20ca51417e4dc6344441ec81efe42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e06754b490522d8ae02cd8983e3fcbf"><td class="memTemplParams" colspan="2">template&lt;typename E , int O, bool IsFlags, typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a8e06754b490522d8ae02cd8983e3fcbf"><td class="memTemplItemLeft" align="right" valign="top">constexpr E&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">magic_enum::detail::value</a> (std::size_t i) noexcept</td></tr>
+<tr class="separator:a8e06754b490522d8ae02cd8983e3fcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938e048b79f27315a6ccd3b6b2cfd973"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags, typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a938e048b79f27315a6ccd3b6b2cfd973"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a938e048b79f27315a6ccd3b6b2cfd973">magic_enum::detail::reflected_min</a> () noexcept</td></tr>
+<tr class="separator:a938e048b79f27315a6ccd3b6b2cfd973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7ebed238b12ca167ba3dc71cd701a9"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags, typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a5e7ebed238b12ca167ba3dc71cd701a9"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a5e7ebed238b12ca167ba3dc71cd701a9">magic_enum::detail::reflected_max</a> () noexcept</td></tr>
+<tr class="separator:a5e7ebed238b12ca167ba3dc71cd701a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bee2df0066e1c05336b63d693345f8"><td class="memTemplParams" colspan="2">template&lt;std::size_t N&gt; </td></tr>
+<tr class="memitem:a74bee2df0066e1c05336b63d693345f8"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a74bee2df0066e1c05336b63d693345f8">magic_enum::detail::values_count</a> (const bool(&amp;valid)[N]) noexcept</td></tr>
+<tr class="separator:a74bee2df0066e1c05336b63d693345f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc21653fac819e660bbdb1f8555ec32"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags, int Min, std::size_t... I&gt; </td></tr>
+<tr class="memitem:aacc21653fac819e660bbdb1f8555ec32"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aacc21653fac819e660bbdb1f8555ec32">magic_enum::detail::values</a> (std::index_sequence&lt; I... &gt;) noexcept</td></tr>
+<tr class="separator:aacc21653fac819e660bbdb1f8555ec32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce78372d94c1ec26c05a94e972bfdc5"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags, typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a3ce78372d94c1ec26c05a94e972bfdc5"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3ce78372d94c1ec26c05a94e972bfdc5">magic_enum::detail::values</a> () noexcept</td></tr>
+<tr class="separator:a3ce78372d94c1ec26c05a94e972bfdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bf40d20af279ce7bbf00c4b186ee6d"><td class="memTemplParams" colspan="2">template&lt;typename E , typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a30bf40d20af279ce7bbf00c4b186ee6d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a30bf40d20af279ce7bbf00c4b186ee6d">magic_enum::detail::is_flags_enum</a> () noexcept</td></tr>
+<tr class="separator:a30bf40d20af279ce7bbf00c4b186ee6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2facf1397e48d6b32accec64dd97635a"><td class="memTemplParams" colspan="2">template&lt;typename E , std::size_t... I&gt; </td></tr>
+<tr class="memitem:a2facf1397e48d6b32accec64dd97635a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a2facf1397e48d6b32accec64dd97635a">magic_enum::detail::names</a> (std::index_sequence&lt; I... &gt;) noexcept</td></tr>
+<tr class="separator:a2facf1397e48d6b32accec64dd97635a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c18e92c4673b6e25bd2080cf6b84c41"><td class="memTemplParams" colspan="2">template&lt;typename E , std::size_t... I&gt; </td></tr>
+<tr class="memitem:a5c18e92c4673b6e25bd2080cf6b84c41"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a5c18e92c4673b6e25bd2080cf6b84c41">magic_enum::detail::entries</a> (std::index_sequence&lt; I... &gt;) noexcept</td></tr>
+<tr class="separator:a5c18e92c4673b6e25bd2080cf6b84c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678b3b1ee79a8bb50b3e4c94de401a91"><td class="memTemplParams" colspan="2">template&lt;typename E , typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a678b3b1ee79a8bb50b3e4c94de401a91"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a678b3b1ee79a8bb50b3e4c94de401a91">magic_enum::detail::is_sparse</a> () noexcept</td></tr>
+<tr class="separator:a678b3b1ee79a8bb50b3e4c94de401a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f64c5109e103c5f3ee803543cd805e1"><td class="memTemplParams" colspan="2">template&lt;typename E , typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a4f64c5109e103c5f3ee803543cd805e1"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a4f64c5109e103c5f3ee803543cd805e1">magic_enum::detail::values_ors</a> () noexcept</td></tr>
+<tr class="separator:a4f64c5109e103c5f3ee803543cd805e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1789f1940772956d1f3f11dbb2c6df"><td class="memTemplParams" colspan="2">template&lt;auto * globValues, typename Hash &gt; </td></tr>
+<tr class="memitem:a1a1789f1940772956d1f3f11dbb2c6df"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a1a1789f1940772956d1f3f11dbb2c6df">magic_enum::detail::calculate_cases</a> (std::size_t page)</td></tr>
+<tr class="separator:a1a1789f1940772956d1f3f11dbb2c6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bd12be7d0a360309191310316a1c81"><td class="memTemplParams" colspan="2">template&lt;typename R , typename F , typename... Args&gt; </td></tr>
+<tr class="memitem:ab3bd12be7d0a360309191310316a1c81"><td class="memTemplItemLeft" align="right" valign="top">constexpr R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#ab3bd12be7d0a360309191310316a1c81">magic_enum::detail::invoke_r</a> (F &amp;&amp;f, Args &amp;&amp;... args) noexcept(std::is_nothrow_invocable_r_v&lt; R, F, Args... &gt;)</td></tr>
+<tr class="separator:ab3bd12be7d0a360309191310316a1c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f62025f08abec2262ff38ed73cdebc"><td class="memTemplParams" colspan="2">template&lt;auto * Arr, typename Hash &gt; </td></tr>
+<tr class="memitem:a59f62025f08abec2262ff38ed73cdebc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a59f62025f08abec2262ff38ed73cdebc">magic_enum::detail::no_duplicate</a> ()</td></tr>
+<tr class="separator:a59f62025f08abec2262ff38ed73cdebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eddd58e5eefd146d0161f37698c6bf0"><td class="memTemplParams" colspan="2">template&lt;auto * globValues, case_call_t call_v, std::size_t page = 0, typename Hash  = constexpr_hash_t&lt;typename std::decay_t&lt;decltype(*globValues)&gt;::value_type&gt;, typename Lambda , typename ResultGetterType  = decltype(default_result_type_lambda&lt;&gt;), typename BinaryPredicate  = std::equal_to&lt;&gt;&gt; </td></tr>
+<tr class="memitem:a8eddd58e5eefd146d0161f37698c6bf0"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::invoke_result_t&lt; ResultGetterType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8eddd58e5eefd146d0161f37698c6bf0">magic_enum::detail::constexpr_switch</a> (Lambda &amp;&amp;lambda, typename std::decay_t&lt; decltype(*globValues)&gt;::value_type searched, ResultGetterType &amp;&amp;def=default_result_type_lambda&lt;&gt;, BinaryPredicate &amp;&amp;pred={})</td></tr>
+<tr class="separator:a8eddd58e5eefd146d0161f37698c6bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae227f28c8151e0baae48dc8dd695996b"><td class="memTemplParams" colspan="2">template&lt;typename E , typename Lambda , std::size_t ... Ix&gt; </td></tr>
+<tr class="memitem:ae227f28c8151e0baae48dc8dd695996b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#ae227f28c8151e0baae48dc8dd695996b">magic_enum::detail::enum_for_each_impl</a> (Lambda &amp;&amp;lambda, std::index_sequence&lt; Ix... &gt;)</td></tr>
+<tr class="separator:ae227f28c8151e0baae48dc8dd695996b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc030b9a5f0540e11b81db077f6bb6"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a7acc030b9a5f0540e11b81db077f6bb6"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a7acc030b9a5f0540e11b81db077f6bb6">magic_enum::enum_type_name</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, string_view &gt;</td></tr>
+<tr class="separator:a7acc030b9a5f0540e11b81db077f6bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4e725ed8c8b4014032c8feae9b53c8"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:aad4e725ed8c8b4014032c8feae9b53c8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#aad4e725ed8c8b4014032c8feae9b53c8">magic_enum::enum_count</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, std::size_t &gt;</td></tr>
+<tr class="separator:aad4e725ed8c8b4014032c8feae9b53c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10afd249be413488bff44f848e8d6fa2"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a10afd249be413488bff44f848e8d6fa2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a10afd249be413488bff44f848e8d6fa2">magic_enum::enum_value</a> (std::size_t index) noexcept -&gt; detail::enable_if_enum_t&lt; E, std::decay_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:a10afd249be413488bff44f848e8d6fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae7fc48cee53558a72630af3390cb4b"><td class="memTemplParams" colspan="2">template&lt;typename E , std::size_t I&gt; </td></tr>
+<tr class="memitem:afae7fc48cee53558a72630af3390cb4b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#afae7fc48cee53558a72630af3390cb4b">magic_enum::enum_value</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, std::decay_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:afae7fc48cee53558a72630af3390cb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5f16840606a1220cd57ba314f4c148"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a7d5f16840606a1220cd57ba314f4c148"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a7d5f16840606a1220cd57ba314f4c148">magic_enum::enum_values</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, detail::values_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:a7d5f16840606a1220cd57ba314f4c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae450b2d44e94684c2812ead056919d54"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:ae450b2d44e94684c2812ead056919d54"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#ae450b2d44e94684c2812ead056919d54">magic_enum::enum_integer</a> (E value) noexcept -&gt; detail::enable_if_enum_t&lt; E, underlying_type_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:ae450b2d44e94684c2812ead056919d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7a26786c1149f4b264ee7c4b22f809"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:acd7a26786c1149f4b264ee7c4b22f809"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#acd7a26786c1149f4b264ee7c4b22f809">magic_enum::enum_index</a> (E value) noexcept -&gt; detail::enable_if_enum_t&lt; E, optional&lt; std::size_t &gt; &gt;</td></tr>
+<tr class="separator:acd7a26786c1149f4b264ee7c4b22f809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af505522c30c0e3ff627fb3e39b67a6c5"><td class="memTemplParams" colspan="2">template&lt;auto V&gt; </td></tr>
+<tr class="memitem:af505522c30c0e3ff627fb3e39b67a6c5"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#af505522c30c0e3ff627fb3e39b67a6c5">magic_enum::enum_name</a> () noexcept -&gt; detail::enable_if_enum_t&lt; decltype(V), string_view &gt;</td></tr>
+<tr class="separator:af505522c30c0e3ff627fb3e39b67a6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4f32c8e49e4fa4df0fbf762f1bbcad"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:abc4f32c8e49e4fa4df0fbf762f1bbcad"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#abc4f32c8e49e4fa4df0fbf762f1bbcad">magic_enum::enum_name</a> (E value) noexcept -&gt; detail::enable_if_enum_t&lt; E, string_view &gt;</td></tr>
+<tr class="separator:abc4f32c8e49e4fa4df0fbf762f1bbcad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ba1e073eb08051d8147dc7a2eca2db"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a22ba1e073eb08051d8147dc7a2eca2db"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a22ba1e073eb08051d8147dc7a2eca2db">magic_enum::enum_flags_name</a> (E value) -&gt; detail::enable_if_enum_t&lt; E, string &gt;</td></tr>
+<tr class="separator:a22ba1e073eb08051d8147dc7a2eca2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656ffc9bc7c2aa540fb9a1ec635fa64c"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a656ffc9bc7c2aa540fb9a1ec635fa64c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a656ffc9bc7c2aa540fb9a1ec635fa64c">magic_enum::enum_names</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, detail::names_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:a656ffc9bc7c2aa540fb9a1ec635fa64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb498096cde7bf5fa1abe3b03de7494"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:abeb498096cde7bf5fa1abe3b03de7494"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#abeb498096cde7bf5fa1abe3b03de7494">magic_enum::enum_entries</a> () noexcept -&gt; detail::enable_if_enum_t&lt; E, detail::entries_t&lt; E &gt; &gt;</td></tr>
+<tr class="separator:abeb498096cde7bf5fa1abe3b03de7494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57efcd0db9da6c89c2d282de2b3c6a41"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a57efcd0db9da6c89c2d282de2b3c6a41"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a57efcd0db9da6c89c2d282de2b3c6a41">magic_enum::enum_cast</a> (underlying_type_t&lt; E &gt; value) noexcept -&gt; detail::enable_if_enum_t&lt; E, optional&lt; std::decay_t&lt; E &gt; &gt; &gt;</td></tr>
+<tr class="separator:a57efcd0db9da6c89c2d282de2b3c6a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826de5b96ea21f9e5e6f2e0973e0a17e"><td class="memTemplParams" colspan="2">template&lt;typename E , typename BinaryPredicate  = std::equal_to&lt;char&gt;&gt; </td></tr>
+<tr class="memitem:a826de5b96ea21f9e5e6f2e0973e0a17e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a826de5b96ea21f9e5e6f2e0973e0a17e">magic_enum::enum_cast</a> (string_view value, BinaryPredicate p={}) noexcept(std::is_nothrow_invocable_r_v&lt; bool, BinaryPredicate, char, char &gt;) -&gt; detail::enable_if_enum_t&lt; E, optional&lt; std::decay_t&lt; E &gt; &gt; &gt;</td></tr>
+<tr class="separator:a826de5b96ea21f9e5e6f2e0973e0a17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b907592ede8819ee22f67b375c06959"><td class="memTemplParams" colspan="2">template&lt;auto V&gt; </td></tr>
+<tr class="memitem:a9b907592ede8819ee22f67b375c06959"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a9b907592ede8819ee22f67b375c06959">magic_enum::enum_index</a> () noexcept -&gt; detail::enable_if_enum_t&lt; decltype(V), std::size_t &gt;</td></tr>
+<tr class="separator:a9b907592ede8819ee22f67b375c06959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc926ed2ac6b87a209696c600f1e2cfe"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:afc926ed2ac6b87a209696c600f1e2cfe"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#afc926ed2ac6b87a209696c600f1e2cfe">magic_enum::enum_contains</a> (E value) noexcept -&gt; detail::enable_if_enum_t&lt; E, bool &gt;</td></tr>
+<tr class="separator:afc926ed2ac6b87a209696c600f1e2cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1638aa3e1c5774191c4f92ff9ffe502"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:af1638aa3e1c5774191c4f92ff9ffe502"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#af1638aa3e1c5774191c4f92ff9ffe502">magic_enum::enum_contains</a> (underlying_type_t&lt; E &gt; value) noexcept -&gt; detail::enable_if_enum_t&lt; E, bool &gt;</td></tr>
+<tr class="separator:af1638aa3e1c5774191c4f92ff9ffe502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1139975b110887f2f338233cb1ca91"><td class="memTemplParams" colspan="2">template&lt;typename E , typename BinaryPredicate  = std::equal_to&lt;char&gt;&gt; </td></tr>
+<tr class="memitem:a1c1139975b110887f2f338233cb1ca91"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a1c1139975b110887f2f338233cb1ca91">magic_enum::enum_contains</a> (string_view value, BinaryPredicate p={}) noexcept(std::is_nothrow_invocable_r_v&lt; bool, BinaryPredicate, char, char &gt;) -&gt; detail::enable_if_enum_t&lt; E, bool &gt;</td></tr>
+<tr class="separator:a1c1139975b110887f2f338233cb1ca91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86563ac05840485782ca0bfd5eb35432"><td class="memTemplParams" colspan="2">template&lt;typename ResultType  = void, typename Lambda , typename E &gt; </td></tr>
+<tr class="memitem:a86563ac05840485782ca0bfd5eb35432"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a86563ac05840485782ca0bfd5eb35432">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, E value) -&gt; detail::enable_if_enum_t&lt; E, ResultType &gt;</td></tr>
+<tr class="separator:a86563ac05840485782ca0bfd5eb35432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4952726ff13ead5a5abd290c1b61fca1"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename Lambda , typename E &gt; </td></tr>
+<tr class="memitem:a4952726ff13ead5a5abd290c1b61fca1"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a4952726ff13ead5a5abd290c1b61fca1">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, E value, ResultType &amp;&amp;result) -&gt; detail::enable_if_enum_t&lt; E, ResultType &gt;</td></tr>
+<tr class="separator:a4952726ff13ead5a5abd290c1b61fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7215f494b7ec8ef6b55f7fe0a4677290"><td class="memTemplParams" colspan="2">template&lt;typename E , typename ResultType  = void, typename BinaryPredicate  = std::equal_to&lt;char&gt;, typename Lambda &gt; </td></tr>
+<tr class="memitem:a7215f494b7ec8ef6b55f7fe0a4677290"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a7215f494b7ec8ef6b55f7fe0a4677290">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, std::string_view name, BinaryPredicate &amp;&amp;p={}) -&gt; std::enable_if_t&lt; std::is_enum_v&lt; std::decay_t&lt; E &gt; &gt; &amp;&amp;std::is_invocable_r_v&lt; bool, BinaryPredicate, char, char &gt;, ResultType &gt;</td></tr>
+<tr class="separator:a7215f494b7ec8ef6b55f7fe0a4677290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd80d2c55ade0f5652710fee898bdbf"><td class="memTemplParams" colspan="2">template&lt;typename E , typename ResultType , typename BinaryPredicate  = std::equal_to&lt;char&gt;, typename Lambda &gt; </td></tr>
+<tr class="memitem:a1bd80d2c55ade0f5652710fee898bdbf"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a1bd80d2c55ade0f5652710fee898bdbf">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, std::string_view name, ResultType &amp;&amp;result, BinaryPredicate &amp;&amp;p={}) -&gt; std::enable_if_t&lt; std::is_enum_v&lt; std::decay_t&lt; E &gt; &gt; &amp;&amp;std::is_invocable_r_v&lt; bool, BinaryPredicate, char, char &gt;, ResultType &gt;</td></tr>
+<tr class="separator:a1bd80d2c55ade0f5652710fee898bdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae00a61bdcdda7c3b51bea461664182b"><td class="memTemplParams" colspan="2">template&lt;typename E , typename ResultType  = void, typename Lambda &gt; </td></tr>
+<tr class="memitem:aae00a61bdcdda7c3b51bea461664182b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#aae00a61bdcdda7c3b51bea461664182b">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, underlying_type_t&lt; std::decay_t&lt; E &gt; &gt; raw_value) -&gt; detail::enable_if_enum_t&lt; E, ResultType &gt;</td></tr>
+<tr class="separator:aae00a61bdcdda7c3b51bea461664182b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04460775b2099cb08c2041eafcb7ea12"><td class="memTemplParams" colspan="2">template&lt;typename E , typename ResultType , typename Lambda &gt; </td></tr>
+<tr class="memitem:a04460775b2099cb08c2041eafcb7ea12"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a04460775b2099cb08c2041eafcb7ea12">magic_enum::enum_switch</a> (Lambda &amp;&amp;lambda, underlying_type_t&lt; std::decay_t&lt; E &gt; &gt; raw_value, ResultType &amp;&amp;result) -&gt; detail::enable_if_enum_t&lt; E, ResultType &gt;</td></tr>
+<tr class="separator:a04460775b2099cb08c2041eafcb7ea12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5249ce0a75789aa34ce2a6c368e3cf30"><td class="memTemplParams" colspan="2">template&lt;typename E , typename Lambda &gt; </td></tr>
+<tr class="memitem:a5249ce0a75789aa34ce2a6c368e3cf30"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a5249ce0a75789aa34ce2a6c368e3cf30">magic_enum::enum_for_each</a> (Lambda &amp;&amp;lambda) -&gt; detail::enable_if_enum_t&lt; E, decltype(detail::enum_for_each_impl&lt; E &gt;(std::declval&lt; Lambda &gt;(), std::make_index_sequence&lt; detail::count_v&lt; E &gt; &gt;{}))&gt;</td></tr>
+<tr class="separator:a5249ce0a75789aa34ce2a6c368e3cf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ad087c3ddc2f2a03df9e8a262d0f33"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a61ad087c3ddc2f2a03df9e8a262d0f33"><td class="memTemplItemLeft" align="right" valign="top">constexpr optional&lt; std::uintmax_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a61ad087c3ddc2f2a03df9e8a262d0f33">magic_enum::detail::fuse_one_enum</a> (optional&lt; std::uintmax_t &gt; hash, E value) noexcept</td></tr>
+<tr class="separator:a61ad087c3ddc2f2a03df9e8a262d0f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4179723a67a48dd525fc0985356d3ccc"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a4179723a67a48dd525fc0985356d3ccc"><td class="memTemplItemLeft" align="right" valign="top">constexpr optional&lt; std::uintmax_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a4179723a67a48dd525fc0985356d3ccc">magic_enum::detail::fuse_enum</a> (E value) noexcept</td></tr>
+<tr class="separator:a4179723a67a48dd525fc0985356d3ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac517a7398df2a04d6b2a7bc0e83b54e2"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Es&gt; </td></tr>
+<tr class="memitem:ac517a7398df2a04d6b2a7bc0e83b54e2"><td class="memTemplItemLeft" align="right" valign="top">constexpr optional&lt; std::uintmax_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#ac517a7398df2a04d6b2a7bc0e83b54e2">magic_enum::detail::fuse_enum</a> (E head, Es... tail) noexcept</td></tr>
+<tr class="separator:ac517a7398df2a04d6b2a7bc0e83b54e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab384334628d81394ac4ff220b58a7662"><td class="memTemplParams" colspan="2">template&lt;typename... Es&gt; </td></tr>
+<tr class="memitem:ab384334628d81394ac4ff220b58a7662"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#ab384334628d81394ac4ff220b58a7662">magic_enum::detail::typesafe_fuse_enum</a> (Es... values) noexcept</td></tr>
+<tr class="separator:ab384334628d81394ac4ff220b58a7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac742536af999bab8c08c7a6e0e3be00a"><td class="memTemplParams" colspan="2">template&lt;typename... Es&gt; </td></tr>
+<tr class="memitem:ac742536af999bab8c08c7a6e0e3be00a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#ac742536af999bab8c08c7a6e0e3be00a">magic_enum::enum_fuse</a> (Es... values) noexcept</td></tr>
+<tr class="separator:ac742536af999bab8c08c7a6e0e3be00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5726104c1c1de46c91e4040b520217"><td class="memTemplParams" colspan="2">template&lt;typename Char , typename Traits , typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:abc5726104c1c1de46c91e4040b520217"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; Char, Traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/da6/namespacemagic__enum_1_1ostream__operators.html#abc5726104c1c1de46c91e4040b520217">magic_enum::ostream_operators::operator&lt;&lt;</a> (std::basic_ostream&lt; Char, Traits &gt; &amp;os, E value)</td></tr>
+<tr class="separator:abc5726104c1c1de46c91e4040b520217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21baf6599716354db2dbfe18d03d3a8"><td class="memTemplParams" colspan="2">template&lt;typename Char , typename Traits , typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:af21baf6599716354db2dbfe18d03d3a8"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; Char, Traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/da6/namespacemagic__enum_1_1ostream__operators.html#af21baf6599716354db2dbfe18d03d3a8">magic_enum::ostream_operators::operator&lt;&lt;</a> (std::basic_ostream&lt; Char, Traits &gt; &amp;os, optional&lt; E &gt; value)</td></tr>
+<tr class="separator:af21baf6599716354db2dbfe18d03d3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d479f8a4a0616614a6c0ea740a2152"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ab0d479f8a4a0616614a6c0ea740a2152"><td class="memTemplItemLeft" align="right" valign="top">constexpr E&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#ab0d479f8a4a0616614a6c0ea740a2152">magic_enum::bitwise_operators::operator~</a> (E rhs) noexcept</td></tr>
+<tr class="separator:ab0d479f8a4a0616614a6c0ea740a2152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0da0dae14f83eff0a2c14baae58966"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:acf0da0dae14f83eff0a2c14baae58966"><td class="memTemplItemLeft" align="right" valign="top">constexpr E&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#acf0da0dae14f83eff0a2c14baae58966">magic_enum::bitwise_operators::operator|</a> (E lhs, E rhs) noexcept</td></tr>
+<tr class="separator:acf0da0dae14f83eff0a2c14baae58966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ddc576c5ce1bbac2c8a90d33627abe"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:ab7ddc576c5ce1bbac2c8a90d33627abe"><td class="memTemplItemLeft" align="right" valign="top">constexpr E&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#ab7ddc576c5ce1bbac2c8a90d33627abe">magic_enum::bitwise_operators::operator&amp;</a> (E lhs, E rhs) noexcept</td></tr>
+<tr class="separator:ab7ddc576c5ce1bbac2c8a90d33627abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d51cea29c567d4dbc530a4fc6951d07"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a7d51cea29c567d4dbc530a4fc6951d07"><td class="memTemplItemLeft" align="right" valign="top">constexpr E&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a7d51cea29c567d4dbc530a4fc6951d07">magic_enum::bitwise_operators::operator^</a> (E lhs, E rhs) noexcept</td></tr>
+<tr class="separator:a7d51cea29c567d4dbc530a4fc6951d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc180625958ff1f33f10ae0adc7e8fa"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a7cc180625958ff1f33f10ae0adc7e8fa"><td class="memTemplItemLeft" align="right" valign="top">constexpr E &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a7cc180625958ff1f33f10ae0adc7e8fa">magic_enum::bitwise_operators::operator|=</a> (E &amp;lhs, E rhs) noexcept</td></tr>
+<tr class="separator:a7cc180625958ff1f33f10ae0adc7e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0875d8b92483de8dd924f92443022efe"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a0875d8b92483de8dd924f92443022efe"><td class="memTemplItemLeft" align="right" valign="top">constexpr E &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a0875d8b92483de8dd924f92443022efe">magic_enum::bitwise_operators::operator&amp;=</a> (E &amp;lhs, E rhs) noexcept</td></tr>
+<tr class="separator:a0875d8b92483de8dd924f92443022efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bf83313bf0caf7d2a26a9e9f925633"><td class="memTemplParams" colspan="2">template&lt;typename E , detail::enable_if_enum_t&lt; E, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a25bf83313bf0caf7d2a26a9e9f925633"><td class="memTemplItemLeft" align="right" valign="top">constexpr E &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a25bf83313bf0caf7d2a26a9e9f925633">magic_enum::bitwise_operators::operator^=</a> (E &amp;lhs, E rhs) noexcept</td></tr>
+<tr class="separator:a25bf83313bf0caf7d2a26a9e9f925633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:afa0476538dca9966f17c3ae5e299adac"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html#afa0476538dca9966f17c3ae5e299adac">magic_enum::customize::default_tag</a> = detail::default_customize_tag{}</td></tr>
+<tr class="separator:afa0476538dca9966f17c3ae5e299adac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e25984f72f32a129c3e6179458a1e2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d94/namespacemagic__enum_1_1customize.html#a98e25984f72f32a129c3e6179458a1e2">magic_enum::customize::invalid_tag</a> = detail::invalid_customize_tag{}</td></tr>
+<tr class="separator:a98e25984f72f32a129c3e6179458a1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a93ce54069d2492cf7d0a793f46e86"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a42a93ce54069d2492cf7d0a793f46e86"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a42a93ce54069d2492cf7d0a793f46e86">magic_enum::detail::always_false_v</a> = false</td></tr>
+<tr class="separator:a42a93ce54069d2492cf7d0a793f46e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9803e949391b43d87edd554590ebb99d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9803e949391b43d87edd554590ebb99d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a9803e949391b43d87edd554590ebb99d">magic_enum::detail::is_enum_v</a> = std::is_enum_v&lt;T&gt; &amp;&amp; std::is_same_v&lt;T, std::decay_t&lt;T&gt;&gt;</td></tr>
+<tr class="separator:a9803e949391b43d87edd554590ebb99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e83d1fef1b6ac49d06a74d44331345"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a38e83d1fef1b6ac49d06a74d44331345"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a38e83d1fef1b6ac49d06a74d44331345">magic_enum::detail::type_name_v</a> = n&lt;E&gt;()</td></tr>
+<tr class="separator:a38e83d1fef1b6ac49d06a74d44331345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4dda565a034f595ae1640b528b2142"><td class="memTemplParams" colspan="2">template&lt;typename E , E V&gt; </td></tr>
+<tr class="memitem:aad4dda565a034f595ae1640b528b2142"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aad4dda565a034f595ae1640b528b2142">magic_enum::detail::enum_name_v</a> = n&lt;E, V&gt;()</td></tr>
+<tr class="separator:aad4dda565a034f595ae1640b528b2142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f49dc91ff61bc8e9f31d14a8789b0b9"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags&gt; </td></tr>
+<tr class="memitem:a1f49dc91ff61bc8e9f31d14a8789b0b9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a1f49dc91ff61bc8e9f31d14a8789b0b9">magic_enum::detail::reflected_min_v</a> = reflected_min&lt;E, IsFlags&gt;()</td></tr>
+<tr class="separator:a1f49dc91ff61bc8e9f31d14a8789b0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406c2a4ccfc653b3a5648cbb6fd86e0a"><td class="memTemplParams" colspan="2">template&lt;typename E , bool IsFlags&gt; </td></tr>
+<tr class="memitem:a406c2a4ccfc653b3a5648cbb6fd86e0a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a406c2a4ccfc653b3a5648cbb6fd86e0a">magic_enum::detail::reflected_max_v</a> = reflected_max&lt;E, IsFlags&gt;()</td></tr>
+<tr class="separator:a406c2a4ccfc653b3a5648cbb6fd86e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edc1dc96891eb9cfa008f6f4b7935f6"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a7edc1dc96891eb9cfa008f6f4b7935f6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a7edc1dc96891eb9cfa008f6f4b7935f6">magic_enum::detail::is_flags_v</a> = is_flags_enum&lt;E&gt;()</td></tr>
+<tr class="separator:a7edc1dc96891eb9cfa008f6f4b7935f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8e95d13e2ef52cc7f5198c6b4fdce7"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a3f8e95d13e2ef52cc7f5198c6b4fdce7"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3f8e95d13e2ef52cc7f5198c6b4fdce7">magic_enum::detail::values_v</a> = values&lt;E, is_flags_v&lt;E&gt;&gt;()</td></tr>
+<tr class="separator:a3f8e95d13e2ef52cc7f5198c6b4fdce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf80fcf85b0a7e19aaacc52ad4f62d42"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:acf80fcf85b0a7e19aaacc52ad4f62d42"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#acf80fcf85b0a7e19aaacc52ad4f62d42">magic_enum::detail::count_v</a> = values_v&lt;E&gt;.size()</td></tr>
+<tr class="separator:acf80fcf85b0a7e19aaacc52ad4f62d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcf5d87ac7bc844c1141962b77092bd"><td class="memTemplParams" colspan="2">template&lt;typename E , typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:aefcf5d87ac7bc844c1141962b77092bd"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aefcf5d87ac7bc844c1141962b77092bd">magic_enum::detail::min_v</a> = (count_v&lt;E&gt; &gt; 0) ? static_cast&lt;U&gt;(values_v&lt;E&gt;.front()) : U{0}</td></tr>
+<tr class="separator:aefcf5d87ac7bc844c1141962b77092bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b591710a58ce1ac20de965fd54b5b7"><td class="memTemplParams" colspan="2">template&lt;typename E , typename U  = std::underlying_type_t&lt;E&gt;&gt; </td></tr>
+<tr class="memitem:a67b591710a58ce1ac20de965fd54b5b7"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a67b591710a58ce1ac20de965fd54b5b7">magic_enum::detail::max_v</a> = (count_v&lt;E&gt; &gt; 0) ? static_cast&lt;U&gt;(values_v&lt;E&gt;.back()) : U{0}</td></tr>
+<tr class="separator:a67b591710a58ce1ac20de965fd54b5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76fa583ce3ac61e4d2158b08fa0ff6c"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:aa76fa583ce3ac61e4d2158b08fa0ff6c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aa76fa583ce3ac61e4d2158b08fa0ff6c">magic_enum::detail::names_v</a> = names&lt;E&gt;(std::make_index_sequence&lt;count_v&lt;E&gt;&gt;{})</td></tr>
+<tr class="separator:aa76fa583ce3ac61e4d2158b08fa0ff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d9a3b23e97db1eef108da4d42e018d"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a37d9a3b23e97db1eef108da4d42e018d"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a37d9a3b23e97db1eef108da4d42e018d">magic_enum::detail::entries_v</a> = entries&lt;E&gt;(std::make_index_sequence&lt;count_v&lt;E&gt;&gt;{})</td></tr>
+<tr class="separator:a37d9a3b23e97db1eef108da4d42e018d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3372c607cb9859a768889aba44d161fa"><td class="memTemplParams" colspan="2">template&lt;typename E &gt; </td></tr>
+<tr class="memitem:a3372c607cb9859a768889aba44d161fa"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3372c607cb9859a768889aba44d161fa">magic_enum::detail::is_sparse_v</a> = is_sparse&lt;E&gt;()</td></tr>
+<tr class="separator:a3372c607cb9859a768889aba44d161fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaabbb3210d182764f0e9eb698413d1db"><td class="memTemplParams" colspan="2">template&lt;typename DefaultResultType  = void&gt; </td></tr>
+<tr class="memitem:aaabbb3210d182764f0e9eb698413d1db"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#aaabbb3210d182764f0e9eb698413d1db">magic_enum::detail::default_result_type_lambda</a> = [] { return DefaultResultType{}; }</td></tr>
+<tr class="separator:aaabbb3210d182764f0e9eb698413d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12dcae61491645e1d0695d2feb533c9d"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a12dcae61491645e1d0695d2feb533c9d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a12dcae61491645e1d0695d2feb533c9d">magic_enum::detail::default_result_type_lambda&lt; void &gt;</a> = [] {}</td></tr>
+<tr class="separator:a12dcae61491645e1d0695d2feb533c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e44b6fad4c6a28fd82c50412969d280"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a2e44b6fad4c6a28fd82c50412969d280">magic_enum::is_magic_enum_supported</a> = detail::supported&lt;void&gt;::value</td></tr>
+<tr class="separator:a2e44b6fad4c6a28fd82c50412969d280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b55e40b1c82d19265e5215b32ffbbe9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4b55e40b1c82d19265e5215b32ffbbe9"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a4b55e40b1c82d19265e5215b32ffbbe9">magic_enum::is_unscoped_enum_v</a> = is_unscoped_enum&lt;T&gt;::value</td></tr>
+<tr class="separator:a4b55e40b1c82d19265e5215b32ffbbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6348f218a6913007740e2fb12575eee"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac6348f218a6913007740e2fb12575eee"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#ac6348f218a6913007740e2fb12575eee">magic_enum::is_scoped_enum_v</a> = is_scoped_enum&lt;T&gt;::value</td></tr>
+<tr class="separator:ac6348f218a6913007740e2fb12575eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60764fb57150d9f06aae7b90590d6f88"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da7/namespacemagic__enum.html#a60764fb57150d9f06aae7b90590d6f88">magic_enum::case_insensitive</a> = detail::case_insensitive{}</td></tr>
+<tr class="separator:a60764fb57150d9f06aae7b90590d6f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="af38a68da6cedb3207fad7f311b150539" name="af38a68da6cedb3207fad7f311b150539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38a68da6cedb3207fad7f311b150539">&#9670;&nbsp;</a></span>MAGIC_ENUM_CASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_CASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  <span class="keywordflow">case</span> cases[val]:                                                                                                                \</div>
+<div class="line">    if <span class="keyword">constexpr</span> ((val) + page &lt; size) {                                                                                          \</div>
+<div class="line">      if (!pred(<a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3ce78372d94c1ec26c05a94e972bfdc5">values</a>[val + page], searched)) {                                                                                  \</div>
+<div class="line">        break;                                                                                                                    \</div>
+<div class="line">      }                                                                                                                           \</div>
+<div class="line">      if <span class="keyword">constexpr</span> (call_v == case_call_t::index) {                                                                               \</div>
+<div class="line">        if <span class="keyword">constexpr</span> (std::is_invocable_r_v&lt;result_t, Lambda, std::integral_constant&lt;std::size_t, val + page&gt;&gt;) {                 \</div>
+<div class="line">          return detail::invoke_r&lt;result_t&gt;(std::forward&lt;Lambda&gt;(lambda), std::integral_constant&lt;std::size_t, val + page&gt;{});     \</div>
+<div class="line">        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_invocable_v&lt;Lambda, std::integral_constant&lt;std::size_t, val + page&gt;&gt;) {                      \</div>
+<div class="line">          assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;wrong result type&quot;</span>);                                                                                   \</div>
+<div class="line">        }                                                                                                                         \</div>
+<div class="line">      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (call_v == <a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">case_call_t::value</a>) {                                                                        \</div>
+<div class="line">        if <span class="keyword">constexpr</span> (std::is_invocable_r_v&lt;result_t, Lambda, std::integral_constant&lt;value_t, values[val + page]&gt;&gt;) {             \</div>
+<div class="line">          return detail::invoke_r&lt;result_t&gt;(std::forward&lt;Lambda&gt;(lambda), std::integral_constant&lt;value_t, <a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3ce78372d94c1ec26c05a94e972bfdc5">values</a>[val + page]&gt;{}); \</div>
+<div class="line">        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_invocable_r_v&lt;result_t, Lambda, std::integral_constant&lt;value_t, values[val + page]&gt;&gt;) {      \</div>
+<div class="line">          assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;wrong result type&quot;</span>);                                                                                   \</div>
+<div class="line">        }                                                                                                                         \</div>
+<div class="line">      }                                                                                                                           \</div>
+<div class="line">      break;                                                                                                                      \</div>
+<div class="line">    } <span class="keywordflow">else</span> [[fallthrough]];</div>
+<div class="ttc" id="anamespacemagic__enum_1_1detail_html_a3ce78372d94c1ec26c05a94e972bfdc5"><div class="ttname"><a href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a3ce78372d94c1ec26c05a94e972bfdc5">magic_enum::detail::values</a></div><div class="ttdeci">constexpr auto values() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/magic__enum_8hpp_source.html#l00514">magic_enum.hpp:514</a></div></div>
+<div class="ttc" id="anamespacemagic__enum_1_1detail_html_a8e06754b490522d8ae02cd8983e3fcbf"><div class="ttname"><a href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">magic_enum::detail::value</a></div><div class="ttdeci">constexpr E value(std::size_t i) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/magic__enum_8hpp_source.html#l00425">magic_enum.hpp:425</a></div></div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00810">810</a></p>
+
+</div>
+</div>
+<a id="a851238e6f0b3143bb4e7651e49a2e829" name="a851238e6f0b3143bb4e7651e49a2e829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851238e6f0b3143bb4e7651e49a2e829">&#9670;&nbsp;</a></span>MAGIC_ENUM_FOR_EACH_256</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_FOR_EACH_256</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">  T(0)T(1)T(2)T(3)T(4)T(5)T(6)T(7)T(8)T(9)T(10)T(11)T(12)T(13)T(14)T(15)T(16)T(17)T(18)T(19)T(20)T(21)T(22)T(23)T(24)T(25)T(26)T(27)T(28)T(29)T(30)T(31)          \</div>
+<div class="line">  T(32)T(33)T(34)T(35)T(36)T(37)T(38)T(39)T(40)T(41)T(42)T(43)T(44)T(45)T(46)T(47)T(48)T(49)T(50)T(51)T(52)T(53)T(54)T(55)T(56)T(57)T(58)T(59)T(60)T(61)T(62)T(63)                                 \</div>
+<div class="line">  T(64)T(65)T(66)T(67)T(68)T(69)T(70)T(71)T(72)T(73)T(74)T(75)T(76)T(77)T(78)T(79)T(80)T(81)T(82)T(83)T(84)T(85)T(86)T(87)T(88)T(89)T(90)T(91)T(92)T(93)T(94)T(95)                                 \</div>
+<div class="line">  T(96)T(97)T(98)T(99)T(100)T(101)T(102)T(103)T(104)T(105)T(106)T(107)T(108)T(109)T(110)T(111)T(112)T(113)T(114)T(115)T(116)T(117)T(118)T(119)T(120)T(121)T(122)T(123)T(124)T(125)T(126)T(127)     \</div>
+<div class="line">  T(128)T(129)T(130)T(131)T(132)T(133)T(134)T(135)T(136)T(137)T(138)T(139)T(140)T(141)T(142)T(143)T(144)T(145)T(146)T(147)T(148)T(149)T(150)T(151)T(152)T(153)T(154)T(155)T(156)T(157)T(158)T(159) \</div>
+<div class="line">  T(160)T(161)T(162)T(163)T(164)T(165)T(166)T(167)T(168)T(169)T(170)T(171)T(172)T(173)T(174)T(175)T(176)T(177)T(178)T(179)T(180)T(181)T(182)T(183)T(184)T(185)T(186)T(187)T(188)T(189)T(190)T(191) \</div>
+<div class="line">  T(192)T(193)T(194)T(195)T(196)T(197)T(198)T(199)T(200)T(201)T(202)T(203)T(204)T(205)T(206)T(207)T(208)T(209)T(210)T(211)T(212)T(213)T(214)T(215)T(216)T(217)T(218)T(219)T(220)T(221)T(222)T(223) \</div>
+<div class="line">  T(224)T(225)T(226)T(227)T(228)T(229)T(230)T(231)T(232)T(233)T(234)T(235)T(236)T(237)T(238)T(239)T(240)T(241)T(242)T(243)T(244)T(245)T(246)T(247)T(248)T(249)T(250)T(251)T(252)T(253)T(254)T(255)</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00801">801</a></p>
+
+</div>
+</div>
+<a id="a60b5d28d5f88bcb69e8f0f868f5d32fb" name="a60b5d28d5f88bcb69e8f0f868f5d32fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b5d28d5f88bcb69e8f0f868f5d32fb">&#9670;&nbsp;</a></span>MAGIC_ENUM_RANGE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_RANGE_MAX&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00096">96</a></p>
+
+</div>
+</div>
+<a id="a04478a8f6e74ba88296c303ca5d9ee29" name="a04478a8f6e74ba88296c303ca5d9ee29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04478a8f6e74ba88296c303ca5d9ee29">&#9670;&nbsp;</a></span>MAGIC_ENUM_RANGE_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_RANGE_MIN&#160;&#160;&#160;-128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00090">90</a></p>
+
+</div>
+</div>
+<a id="a2b1e2194fd5bc90499887460e8318e30" name="a2b1e2194fd5bc90499887460e8318e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1e2194fd5bc90499887460e8318e30">&#9670;&nbsp;</a></span>MAGIC_ENUM_VERSION_MAJOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_VERSION_MAJOR&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="ae60129f9fd71fa854fd4c84803732e14" name="ae60129f9fd71fa854fd4c84803732e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60129f9fd71fa854fd4c84803732e14">&#9670;&nbsp;</a></span>MAGIC_ENUM_VERSION_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_VERSION_MINOR&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00036">36</a></p>
+
+</div>
+</div>
+<a id="ab1a8c0173da51fc4cd6a763ba9be51bd" name="ab1a8c0173da51fc4cd6a763ba9be51bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a8c0173da51fc4cd6a763ba9be51bd">&#9670;&nbsp;</a></span>MAGIC_ENUM_VERSION_PATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAGIC_ENUM_VERSION_PATCH&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a> строка <a class="el" href="../../db/d47/magic__enum_8hpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_7135f4517031f2515c4c3575e1516340.html">side_include</a></li><li class="navelem"><a class="el" href="../../db/d47/magic__enum_8hpp.html">magic_enum.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -7,5 +7,6 @@
 <area shape="rect" id="node4" href="$dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97" title="Возвращает ссылку на данные узла" alt="" coords="439,5,523,32"/>
 <area shape="rect" id="node6" href="$d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad" title="Удаление из начала списка" alt="" coords="254,56,355,83"/>
 <area shape="rect" id="node8" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="251,107,359,133"/>
-<area shape="rect" id="node9" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="407,107,555,133"/>
+<area shape="rect" id="node10" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf" title=" " alt="" coords="414,150,547,191"/>
+<area shape="rect" id="node9" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="407,99,555,125"/>
 </map>

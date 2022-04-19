@@ -12,12 +12,13 @@ var searchData=
   ['popfront_9',['popFront',['../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad',1,'List']]],
   ['pos_10',['pos',['../db/dc1/class_token.html#a46f08e07453c4ece74d92f8b62778207',1,'Token']]],
   ['posinline_11',['posInLine',['../db/dc1/class_token.html#a47d58f12b73ace117bfa86ca2eb3bbb0',1,'Token']]],
-  ['prevptr_12',['prevPtr',['../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07',1,'Node']]],
-  ['program_13',['PROGRAM',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5057de577058322f33bc675542aaef50',1,'IToken']]],
-  ['program_5fname_14',['PROGRAM_NAME',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5',1,'IToken']]],
-  ['programast_15',['ProgramAST',['../de/db2/class_program_a_s_t.html',1,'ProgramAST'],['../de/db2/class_program_a_s_t.html#a6ba96aee4e2d8a3168d6f2267bb6e7a1',1,'ProgramAST::ProgramAST()']]],
-  ['progstart_16',['PROGSTART',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa54ae96197e2c75bd51695d5db21a2b03',1,'IToken']]],
-  ['push_17',['push',['../d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257',1,'Queue::push()'],['../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e',1,'Stack::push()']]],
-  ['pushback_18',['pushBack',['../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45',1,'List']]],
-  ['pushfront_19',['pushFront',['../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75',1,'List']]]
+  ['pretty_5fname_12',['pretty_name',['../dd/d3d/namespacemagic__enum_1_1detail.html#a6f28b73844b3bcd5d23f2baf8021592e',1,'magic_enum::detail']]],
+  ['prevptr_13',['prevPtr',['../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07',1,'Node']]],
+  ['program_14',['PROGRAM',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5057de577058322f33bc675542aaef50',1,'IToken']]],
+  ['program_5fname_15',['PROGRAM_NAME',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5',1,'IToken']]],
+  ['programast_16',['ProgramAST',['../de/db2/class_program_a_s_t.html',1,'ProgramAST'],['../de/db2/class_program_a_s_t.html#a6ba96aee4e2d8a3168d6f2267bb6e7a1',1,'ProgramAST::ProgramAST()']]],
+  ['progstart_17',['PROGSTART',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa54ae96197e2c75bd51695d5db21a2b03',1,'IToken']]],
+  ['push_18',['push',['../d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257',1,'Queue::push()'],['../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e',1,'Stack::push()']]],
+  ['pushback_19',['pushBack',['../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45',1,'List']]],
+  ['pushfront_20',['pushFront',['../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75',1,'List']]]
 ];

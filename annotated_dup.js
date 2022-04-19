@@ -1,5 +1,40 @@
 var annotated_dup =
 [
+    [ "magic_enum", "d2/da7/namespacemagic__enum.html", [
+      [ "customize", "d4/d94/namespacemagic__enum_1_1customize.html", [
+        [ "enum_range", "d8/dae/structmagic__enum_1_1customize_1_1enum__range.html", null ]
+      ] ],
+      [ "detail", "dd/d3d/namespacemagic__enum_1_1detail.html", [
+        [ "case_insensitive", "dc/d83/classmagic__enum_1_1detail_1_1case__insensitive.html", "dc/d83/classmagic__enum_1_1detail_1_1case__insensitive" ],
+        [ "constexpr_hash_t", "df/d3b/structmagic__enum_1_1detail_1_1constexpr__hash__t.html", null ],
+        [ "constexpr_hash_t< Value, std::enable_if_t< is_enum_v< Value > > >", "dd/d86/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01is__e9e2c5e2956f56ac40bc9b9bfd6fddd64.html", "dd/d86/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01is__e9e2c5e2956f56ac40bc9b9bfd6fddd64" ],
+        [ "constexpr_hash_t< Value, std::enable_if_t< std::is_same_v< Value, string_view > > >", "da/d04/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_137d7a367bcc828d5278b8d9f2bcfdbfa.html", "da/d04/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_137d7a367bcc828d5278b8d9f2bcfdbfa" ],
+        [ "enable_if_enum", "dd/da3/structmagic__enum_1_1detail_1_1enable__if__enum.html", null ],
+        [ "enable_if_enum< true, T, R >", "d3/de4/structmagic__enum_1_1detail_1_1enable__if__enum_3_01true_00_01_t_00_01_r_01_4.html", "d3/de4/structmagic__enum_1_1detail_1_1enable__if__enum_3_01true_00_01_t_00_01_r_01_4" ],
+        [ "has_is_flags", "d6/d6c/structmagic__enum_1_1detail_1_1has__is__flags.html", null ],
+        [ "has_is_flags< T, std::void_t< decltype(customize::enum_range< T >::is_flags)> >", "d9/d2b/structmagic__enum_1_1detail_1_1has__is__flags_3_01_t_00_01std_1_1void__t_3_01decltype_07customiz5850fc280780eb0d4e359edf8de2e402.html", null ],
+        [ "is_scoped_enum", "d8/d3a/structmagic__enum_1_1detail_1_1is__scoped__enum.html", null ],
+        [ "is_scoped_enum< T, true >", "d7/d0e/structmagic__enum_1_1detail_1_1is__scoped__enum_3_01_t_00_01true_01_4.html", null ],
+        [ "is_unscoped_enum", "db/d31/structmagic__enum_1_1detail_1_1is__unscoped__enum.html", null ],
+        [ "is_unscoped_enum< T, true >", "d2/dad/structmagic__enum_1_1detail_1_1is__unscoped__enum_3_01_t_00_01true_01_4.html", null ],
+        [ "range_max", "d5/d1b/structmagic__enum_1_1detail_1_1range__max.html", null ],
+        [ "range_max< T, std::void_t< decltype(customize::enum_range< T >::max)> >", "db/dbf/structmagic__enum_1_1detail_1_1range__max_3_01_t_00_01std_1_1void__t_3_01decltype_07customize_1_35692f6e889269924f0d80e52c12ef1d.html", null ],
+        [ "range_min", "df/def/structmagic__enum_1_1detail_1_1range__min.html", null ],
+        [ "range_min< T, std::void_t< decltype(customize::enum_range< T >::min)> >", "d9/dad/structmagic__enum_1_1detail_1_1range__min_3_01_t_00_01std_1_1void__t_3_01decltype_07customize_1_b5db5546fae27b586c6e1893b42c0f44.html", null ],
+        [ "static_string", "dc/dc9/classmagic__enum_1_1detail_1_1static__string.html", "dc/dc9/classmagic__enum_1_1detail_1_1static__string" ],
+        [ "static_string< 0 >", "d7/dfa/classmagic__enum_1_1detail_1_1static__string_3_010_01_4.html", "d7/dfa/classmagic__enum_1_1detail_1_1static__string_3_010_01_4" ],
+        [ "supported", "de/db2/structmagic__enum_1_1detail_1_1supported.html", null ],
+        [ "underlying_type", "d0/d95/structmagic__enum_1_1detail_1_1underlying__type.html", null ],
+        [ "underlying_type< T, true >", "d2/db7/structmagic__enum_1_1detail_1_1underlying__type_3_01_t_00_01true_01_4.html", null ]
+      ] ],
+      [ "is_scoped_enum", "d5/d84/structmagic__enum_1_1is__scoped__enum.html", null ],
+      [ "is_unscoped_enum", "dd/dfa/structmagic__enum_1_1is__unscoped__enum.html", null ],
+      [ "underlying_type", "d6/d6e/structmagic__enum_1_1underlying__type.html", null ]
+    ] ],
+    [ "MyLibrary", "d5/d34/namespace_my_library.html", [
+      [ "Example", "d4/d17/class_my_library_1_1_example.html", "d4/d17/class_my_library_1_1_example" ],
+      [ "SubclassExample", "d7/d0a/class_my_library_1_1_subclass_example.html", "d7/d0a/class_my_library_1_1_subclass_example" ]
+    ] ],
     [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
     [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ],
     [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", "d2/dc9/class_bin_op_a_s_t" ],

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['синтаксический_20анализатор_0',['Синтаксический анализатор',['../index.html',1,'']]],
-  ['список_20задач_1',['Список задач',['../dd/da0/todo.html',1,'']]]
+  ['extensions_0',['Extensions',['../d7/d7a/md_docs_themes_docs_extensions.html',1,'']]]
 ];

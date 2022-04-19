@@ -1,14 +1,18 @@
 var searchData=
 [
-  ['parsetokens_0',['parseTokens',['../d0/dfe/class_syntax_analyzer.html#a0472b9d7f2855f118acf9cb7c67ab5a7',1,'SyntaxAnalyzer']]],
-  ['pick_1',['pick',['../d4/da4/class_queue.html#a886b09e0d03c7b89f5475e1450a76464',1,'Queue::pick()'],['../d0/d14/class_stack.html#a1a5f5b9d939b621e1c2cf1cdb815f789',1,'Stack::pick()']]],
-  ['pop_2',['pop',['../d4/da4/class_queue.html#a16024826b5bf5b51591dcccb8ebf8b7d',1,'Queue::pop()'],['../d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778',1,'Stack::pop()']]],
-  ['popback_3',['popBack',['../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c',1,'List']]],
-  ['popfront_4',['popFront',['../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad',1,'List']]],
-  ['pos_5',['pos',['../db/dc1/class_token.html#a46f08e07453c4ece74d92f8b62778207',1,'Token']]],
-  ['posinline_6',['posInLine',['../db/dc1/class_token.html#a47d58f12b73ace117bfa86ca2eb3bbb0',1,'Token']]],
-  ['programast_7',['ProgramAST',['../de/db2/class_program_a_s_t.html#a6ba96aee4e2d8a3168d6f2267bb6e7a1',1,'ProgramAST']]],
-  ['push_8',['push',['../d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257',1,'Queue::push()'],['../d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e',1,'Stack::push()']]],
-  ['pushback_9',['pushBack',['../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45',1,'List']]],
-  ['pushfront_10',['pushFront',['../d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75',1,'List']]]
+  ['operator_20string_5fview_0',['operator string_view',['../d7/dfa/classmagic__enum_1_1detail_1_1static__string_3_010_01_4.html#a9b8a175cf4ea212adb9567d3d78fc1c0',1,'magic_enum::detail::static_string&lt; 0 &gt;::operator string_view()'],['../dc/dc9/classmagic__enum_1_1detail_1_1static__string.html#a413dd2e7d5ec7f25c34d4da853eb04a5',1,'magic_enum::detail::static_string::operator string_view()']]],
+  ['operator_26_1',['operator&amp;',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#ab7ddc576c5ce1bbac2c8a90d33627abe',1,'magic_enum::bitwise_operators']]],
+  ['operator_26_3d_2',['operator&amp;=',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a0875d8b92483de8dd924f92443022efe',1,'magic_enum::bitwise_operators']]],
+  ['operator_28_29_3',['operator()',['../dc/d83/classmagic__enum_1_1detail_1_1case__insensitive.html#ac4a4142f1f50d283594806d0df55c0e1',1,'magic_enum::detail::case_insensitive::operator()()'],['../dd/d86/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01is__e9e2c5e2956f56ac40bc9b9bfd6fddd64.html#af454e39b460f5ba1a141e1bd7f361bca',1,'magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; is_enum_v&lt; Value &gt; &gt; &gt;::operator()()'],['../da/d04/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_137d7a367bcc828d5278b8d9f2bcfdbfa.html#a69514b073cb6dd94bee496edd33a0ace',1,'magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; std::is_same_v&lt; Value, string_view &gt; &gt; &gt;::operator()()'],['../d0/d29/structmagic__enum_1_1detail_1_1constexpr__hash__t_3_01_value_00_01std_1_1enable__if__t_3_01std_1c37c04ac3cd10ce820474d57e85e9ea8.html#af246821c7621400ae1af611c93ea6cb8',1,'magic_enum::detail::constexpr_hash_t&lt; Value, std::enable_if_t&lt; std::is_same_v&lt; Value, string_view &gt; &gt; &gt;::secondary_hash::operator()()']]],
+  ['operator_2a_4',['operator*',['../d3/dde/class_node_iterator.html#a1fa97ce2bd84bf8f5955c29a32bb99f0',1,'NodeIterator']]],
+  ['operator_2b_2b_5',['operator++',['../d3/dde/class_node_iterator.html#a07e16ed9fdadf3b7849421e92d425789',1,'NodeIterator']]],
+  ['operator_2d_2d_6',['operator--',['../d3/dde/class_node_iterator.html#a5c656528e49f62440fc288310943058a',1,'NodeIterator']]],
+  ['operator_3c_3c_7',['operator&lt;&lt;',['../d6/da6/namespacemagic__enum_1_1ostream__operators.html#af21baf6599716354db2dbfe18d03d3a8',1,'magic_enum::ostream_operators::operator&lt;&lt;(std::basic_ostream&lt; Char, Traits &gt; &amp;os, optional&lt; E &gt; value)'],['../d6/da6/namespacemagic__enum_1_1ostream__operators.html#abc5726104c1c1de46c91e4040b520217',1,'magic_enum::ostream_operators::operator&lt;&lt;(std::basic_ostream&lt; Char, Traits &gt; &amp;os, E value)']]],
+  ['operator_3d_8',['operator=',['../d1/d34/class_list.html#afb55438b3b6d88e618481384e2bdd40e',1,'List::operator=()'],['../d3/dde/class_node_iterator.html#a59b6061e763a3e8d7eec9630fff19a0c',1,'NodeIterator::operator=(NodeIterator const &amp;)=default'],['../d3/dde/class_node_iterator.html#ac654e073f422393b1cfc42b89feb142e',1,'NodeIterator::operator=(NodeIterator &amp;&amp;)=default']]],
+  ['operator_5b_5d_9',['operator[]',['../d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8',1,'List']]],
+  ['operator_5e_10',['operator^',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a7d51cea29c567d4dbc530a4fc6951d07',1,'magic_enum::bitwise_operators']]],
+  ['operator_5e_3d_11',['operator^=',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a25bf83313bf0caf7d2a26a9e9f925633',1,'magic_enum::bitwise_operators']]],
+  ['operator_7c_12',['operator|',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#acf0da0dae14f83eff0a2c14baae58966',1,'magic_enum::bitwise_operators']]],
+  ['operator_7c_3d_13',['operator|=',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#a7cc180625958ff1f33f10ae0adc7e8fa',1,'magic_enum::bitwise_operators']]],
+  ['operator_7e_14',['operator~',['../d4/d5a/namespacemagic__enum_1_1bitwise__operators.html#ab0d479f8a4a0616614a6c0ea740a2152',1,'magic_enum::bitwise_operators']]]
 ];

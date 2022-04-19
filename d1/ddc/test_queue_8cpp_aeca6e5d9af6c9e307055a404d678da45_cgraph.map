@@ -1,9 +1,10 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест взятия первого элемента" alt="" coords="5,31,60,57"/>
-<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a886b09e0d03c7b89f5475e1450a76464" title="Возвращает ссылку на значение в главе очереди" alt="" coords="110,5,201,32"/>
-<area shape="rect" id="node5" href="$d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257" title="Вставляет значение в хвост очереди" alt="" coords="108,56,203,83"/>
-<area shape="rect" id="node3" href="$d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8" title=" " alt="" coords="252,5,357,32"/>
+<area shape="rect" id="node1" title="Тест взятия первого элемента" alt="" coords="5,35,60,61"/>
+<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a886b09e0d03c7b89f5475e1450a76464" title="Возвращает ссылку на значение в главе очереди" alt="" coords="110,8,201,35"/>
+<area shape="rect" id="node5" href="$d4/da4/class_queue.html#a5922a27c16bc172458703580f8fd3257" title="Вставляет значение в хвост очереди" alt="" coords="108,60,203,87"/>
+<area shape="rect" id="node3" href="$d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8" title=" " alt="" coords="252,7,357,33"/>
 <area shape="rect" id="node4" href="$dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97" title="Возвращает ссылку на данные узла" alt="" coords="439,5,523,32"/>
-<area shape="rect" id="node6" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="251,56,359,83"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="251,60,359,87"/>
+<area shape="rect" id="node8" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf" title=" " alt="" coords="414,107,547,149"/>
 <area shape="rect" id="node7" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="407,56,555,83"/>
 </map>

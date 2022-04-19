@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['syntax_0',['syntax',['../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35',1,'example_visiter.cpp']]]
+  ['params_0',['params',['../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab',1,'CallAST']]],
+  ['prevptr_1',['prevPtr',['../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07',1,'Node']]]
 ];

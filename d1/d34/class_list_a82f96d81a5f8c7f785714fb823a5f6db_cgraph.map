@@ -1,5 +1,9 @@
 <map id="List::List" name="List::List">
-<area shape="rect" id="node1" title="Конструктор из размера" alt="" coords="5,5,77,32"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="125,5,233,32"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="281,5,429,32"/>
+<area shape="rect" id="node1" title="Конструктор из размера" alt="" coords="5,107,77,134"/>
+<area shape="rect" id="node2" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a77aa93178c499e2a34720fc831b99458" title=" " alt="" coords="125,78,272,105"/>
+<area shape="rect" id="node5" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="145,137,253,163"/>
+<area shape="rect" id="node3" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a6f28b73844b3bcd5d23f2baf8021592e" title=" " alt="" coords="327,5,461,47"/>
+<area shape="rect" id="node4" href="$dc/dc9/classmagic__enum_1_1detail_1_1static__string.html#a32db3d397249c365b7fb5c84b2685197" title=" " alt="" coords="327,71,461,112"/>
+<area shape="rect" id="node6" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="320,137,468,163"/>
+<area shape="rect" id="node7" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf" title=" " alt="" coords="327,188,461,229"/>
 </map>

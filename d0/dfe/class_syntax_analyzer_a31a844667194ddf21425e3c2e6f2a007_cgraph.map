@@ -1,8 +1,9 @@
 <map id="SyntaxAnalyzer::syntaxVars" name="SyntaxAnalyzer::syntaxVars">
-<area shape="rect" id="node1" title=" " alt="" coords="5,58,185,85"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a5d17bcae2fd7dc11d0710e046c4c3280" title=" " alt="" coords="739,109,873,135"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="932,33,1108,59"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a3106ad7f9a5cf50b2c277c28401422ec" title=" " alt="" coords="233,58,432,85"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="921,109,1119,135"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a59b8fda4a98347e67033502aec8d2e4f" title=" " alt="" coords="480,58,691,85"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,60,185,87"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a5d17bcae2fd7dc11d0710e046c4c3280" title=" " alt="" coords="739,111,873,137"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="932,21,1108,48"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a3106ad7f9a5cf50b2c277c28401422ec" title=" " alt="" coords="233,60,432,87"/>
+<area shape="rect" id="node3" href="$d2/da7/namespacemagic__enum.html#af505522c30c0e3ff627fb3e39b67a6c5" title=" " alt="" coords="933,85,1107,112"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="921,136,1119,163"/>
+<area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a59b8fda4a98347e67033502aec8d2e4f" title=" " alt="" coords="480,60,691,87"/>
 </map>
