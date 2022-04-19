@@ -446,3 +446,97 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     void CodeGenVisitor::write(void){
 
     }
+
+    HighlightAccurateVisitor::HighlightAccurateVisitor(List<Token> tokens) : tokens(tokens){};
+
+    void HighlightAccurateVisitor::visit(BinOpAST &node){
+        node.left->accept(*this);
+        node.right->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(UnOpAST &node){
+        node.down->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(NumberAST &node){
+        return;
+    }
+
+    void HighlightAccurateVisitor::visit(CompoundAST &node){
+        for(auto &child : node.children)
+            child->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(AssignAST &node){
+        node.var->accept(*this);
+        node.value->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(VarAST &node){
+        for(auto &tok : tokens){
+            if(tok.getStr() == node.token.getStr())
+                tok.setAdvType(IToken::VAR_NAME);
+        }
+    }
+
+    void HighlightAccurateVisitor::visit(NoOpAST &node){
+        return;
+    }
+
+    void HighlightAccurateVisitor::visit(ProgramAST &node){
+        for(auto &tok : tokens){
+            if(tok.getStr() == node.name.getStr()){
+                tok.setAdvType(IToken::PROGRAM_NAME);
+                break;
+            }
+        }
+        node.block->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(BlockAST &node){
+        for(auto &child : node.consts)
+            child->accept(*this);
+        for(auto &child : node.declarations)
+            child->accept(*this);
+        node.compound->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(VarDeclAST &node){
+        node.var->accept(*this);
+        node.type->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(TypeSpecAST &node){
+        return;
+    }
+
+    void HighlightAccurateVisitor::visit(ConstAST &node){
+        return;
+    }
+
+    void HighlightAccurateVisitor::visit(StringAST &node){
+        return;
+    }
+
+    void HighlightAccurateVisitor::visit(CallAST &node){
+        for(auto &tok : tokens){
+            if(tok.getStr() == node.token.getStr())
+                tok.setAdvType(IToken::FUNCTION_NAME);
+        }
+    }
+
+    void HighlightAccurateVisitor::visit(ifAST &node){
+        node.condition->accept(*this);
+        node.body->accept(*this);
+        if(node.elseBody)
+            node.elseBody->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(whileAST &node){
+        node.condition->accept(*this);
+        node.body->accept(*this);
+    }
+
+    List<Token> HighlightAccurateVisitor::getTokens(void){
+        return tokens;
+    }

@@ -1,1 +1,1 @@
-cloc src/ include/ tests/ main.cpp
+cloc src/ include/ tests/ main.cpp CMakeLists.txt *.sh

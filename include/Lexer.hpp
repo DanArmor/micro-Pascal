@@ -27,7 +27,7 @@ class Lexer{
      * @param regStr regex-строка для определения токена 
      * @param type тип токена
      */
-    void addTokenTemp(std::string regStr, IToken::Type type);
+    void addTokenTemp(std::string regStr, IToken::Type type, IToken::AdvType advType);
 
     /**
      * @brief Добавляет в шаблоны для определения токена новый шаблон
@@ -41,24 +41,27 @@ class Lexer{
      */
     void setTemplates(List<TokenTemplate> const &templates);
 
-    std::string getTrimmed(std::string str);
+    std::string getTrimmed(std::string const &str);
+
+    std::string getText(void);
+    
 
     /**
      * @brief Анализирует файл
      * @param fileName имя файла для анализа
      */
-    List<Token> const &analyzeFile(std::string fileName);
+    List<Token> analyzeFile(std::string fileName);
 
     /**
      * @brief Анализирует текст программы
      * @param text строковый поток, представляющий программу
      */
-    List<Token> const &analyzeProgramText(std::string const &text);
+    List<Token> analyzeProgramText(std::string const &text);
 
     private:
     /// @brief Шаблоны токенов, которые может определять лексер
     List<TokenTemplate> tokenTemplates;
-
+    std::string progText;
     List<Token> tokens;
 };
 

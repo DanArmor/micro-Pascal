@@ -10,6 +10,18 @@
 class IToken{
     public:
     /// @brief Типы токенов
+    enum AdvType{
+        KEYWORD,
+        FUNCTION_NAME,
+        VAR_NAME,
+        OPERATOR,
+        SOME_CONST,
+        TYPE_SPEC,
+        NOTPROCESS,
+        PROGRAM_NAME,
+        UNKNOWN
+    };
+
     enum Type{
         ERROR, ///< Ошибка
         ENDOFSTREAM, ///< Конец потока токенов (конец файла)
@@ -86,15 +98,25 @@ class IToken{
      * @param[in] type тип токена
      */
     IToken(Type type);
+    IToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
     virtual Type getType(void){
         return type;
     }
 
+    virtual AdvType getAdvType(void){
+        return advType;
+    }
+
+    virtual void setAdvType(IToken::AdvType newAdvType){
+        advType = newAdvType;
+    }
+
     private:
     /// @brief Тип токена
-    Type type;
+    Type type = ERROR;
+    AdvType advType = UNKNOWN;
 };
 
 /// @brief Класс, представляющий токен
@@ -112,8 +134,21 @@ class Token : public IToken{
     Token(std::string str, Type type);
     Token(std::string str, Type type, std::size_t lineNum);
 
+    Token(std::string str, Type type, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos);
+
+    Token(std::string str, Type type, AdvType advType, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos);
+
+    /// @return номер строки, начиная с 1, в которой находится токен
     std::size_t line(void);
-    std::size_t rowLine(void);
+    /// @return номер строки, начиная с 0, в которой находится токен
+    std::size_t rawLine(void);
+
+    /// @return Позицию в строке, начиная с 1, в которой находится токен
+    std::size_t posInLine(void);
+    /// @return Позицию в строке, начиная с 0, в которой находится токен
+    std::size_t rawPosInLine(void);
+
+    /// @return Абсолютную позицию в файле, начиная с 0
     std::size_t pos(void);
 
     /// @brief Возвращает константную ссылку на строковое представление токена
@@ -121,10 +156,16 @@ class Token : public IToken{
 
     std::string getInfo(void);
 
+    ///@return Длину строкового представления токена
+    std::size_t len(void);
+
+
     private:
     /// @brief Строковое представление токена
     std::string str;
     std::size_t lineNum;
+    std::size_t posInLineNum;
+    std::size_t posNum;
 };
 
 /// @brief Класс, представляющий шаблон токена
@@ -139,7 +180,7 @@ class TokenTemplate : public IToken{
      * @param str regex строка, представляющая шаблон для определения токена
      * @param type тип токена
      */
-    TokenTemplate(std::string str, Type type);
+    TokenTemplate(std::string str, Type type, AdvType advType);
 
     /// @brief Возвращает константную ссылку на regex-выражение токена
     std::regex const & getRegex(void);

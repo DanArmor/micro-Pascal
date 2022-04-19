@@ -6,6 +6,7 @@
 #include <fmt/format.h>
 
 #include "Token.hpp"
+#include "List.cpp"
 #include "AST.hpp"
 
 
@@ -222,6 +223,50 @@ class CodeGenVisitor : public IVisitor{
 
     private:
     std::fstream file;
+};
+
+/// @brief Посетитель-кодовый генератор
+class HighlightAccurateVisitor : public IVisitor{
+    public:
+
+    HighlightAccurateVisitor(List<Token> tokens);
+
+    void visit(BinOpAST &node);
+
+    void visit(UnOpAST &node);
+
+    void visit(NumberAST &node);
+
+    void visit(CompoundAST &node);
+
+    void visit(AssignAST &node);
+
+    void visit(VarAST &node);
+
+    void visit(NoOpAST &node);
+
+    void visit(ProgramAST &node);
+
+    void visit(BlockAST &node);
+
+    void visit(VarDeclAST &node);
+
+    void visit(TypeSpecAST &node);
+
+    void visit(ConstAST &node);
+
+    void visit(StringAST &node);
+
+    void visit(CallAST &node);
+
+    void visit(ifAST &node);
+
+    void visit(whileAST &node);
+
+    List<Token> getTokens(void);
+
+    private:
+    List<Token> tokens;
 };
 
 #endif

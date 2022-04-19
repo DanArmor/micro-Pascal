@@ -6,7 +6,7 @@ SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 AST *SyntaxAnalyzer::syntaxProgram(void){
     /* syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'  */
     eat(IToken::PROGRAM);
-    Token nameTok;
+    Token nameTok = getCurTok();
     eat(IToken::ID);
     eat(IToken::SEMI);
     ASTptr blockPTR = syntaxBlock();
