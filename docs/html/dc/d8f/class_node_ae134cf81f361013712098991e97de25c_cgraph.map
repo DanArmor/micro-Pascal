@@ -1,4 +1,0 @@
-<map id="Node::connectAsPrev" name="Node::connectAsPrev">
-<area shape="rect" id="node1" title="Создает узел из value и присоединяет в качестве предыдущего узла к вызывающему" alt="" coords="5,5,165,32"/>
-<area shape="rect" id="node2" href="$dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07" title="Присоединяет узел pPrev в качестве предыдущего узла" alt="" coords="213,5,373,32"/>
-</map>

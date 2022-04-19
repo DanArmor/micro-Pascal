@@ -1,6 +1,0 @@
-<map id="List::removeAt" name="List::removeAt">
-<area shape="rect" id="node1" title="Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка" alt="" coords="5,56,123,83"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c" title="Удаление из конца списка" alt="" coords="171,5,281,32"/>
-<area shape="rect" id="node3" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="329,31,408,57"/>
-<area shape="rect" id="node4" href="$d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad" title="Удаление из начала списка" alt="" coords="171,107,281,133"/>
-</map>

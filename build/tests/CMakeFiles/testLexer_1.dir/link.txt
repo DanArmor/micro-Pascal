@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/testLexer_1.dir/lexer/testLexer_1.cpp.o -o testLexer_1  -lgtest ../libLexer.a -lfmt ../libToken.a -lfmt 

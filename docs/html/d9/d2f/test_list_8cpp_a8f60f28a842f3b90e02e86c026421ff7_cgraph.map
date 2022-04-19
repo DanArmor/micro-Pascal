@@ -1,5 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест размера после вставки в конец" alt="" coords="5,5,60,32"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="108,5,224,32"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="272,5,435,32"/>
-</map>

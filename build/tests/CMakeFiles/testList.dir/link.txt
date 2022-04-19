@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/testList.dir/structures/testList.cpp.o -o testList  -lgtest 

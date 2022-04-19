@@ -1,5 +1,0 @@
-<map id="Lexer::addTokenTemp" name="Lexer::addTokenTemp">
-<area shape="rect" id="node1" title="Добавляет в шаблоны для определения токена новый шаблон" alt="" coords="5,5,167,32"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="215,5,331,32"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="379,5,541,32"/>
-</map>

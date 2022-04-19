@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/testStack.dir/structures/testStack.cpp.o -o testStack  -lgtest 
