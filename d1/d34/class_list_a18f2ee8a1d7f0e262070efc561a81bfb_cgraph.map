@@ -1,8 +1,0 @@
-<map id="List::List" name="List::List">
-<area shape="rect" id="node1" title="Конструктор из другого списка" alt="" coords="5,31,77,57"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154" title="очищает память, выделенную под узлы списка" alt="" coords="140,5,219,32"/>
-<area shape="rect" id="node5" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="125,56,233,83"/>
-<area shape="rect" id="node3" href="$d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c" title="Удаление из конца списка" alt="" coords="305,5,406,32"/>
-<area shape="rect" id="node4" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="477,5,551,32"/>
-<area shape="rect" id="node6" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="281,56,429,83"/>
-</map>

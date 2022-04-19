@@ -26,36 +26,12 @@ var NAVTREE =
 [
   [ "Синтаксический анализатор", "index.html", [
     [ "micro-Pascal", "d3/dcc/md__r_e_a_d_m_e.html", null ],
-    [ "Список задач", "dd/da0/todo.html", null ],
-    [ "Пространства имен", "namespaces.html", [
-      [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
-      [ "Члены пространств имен", "namespacemembers.html", [
-        [ "Указатель", "namespacemembers.html", null ],
-        [ "Функции", "namespacemembers_func.html", null ]
-      ] ]
-    ] ],
-    [ "Классы", "annotated.html", [
-      [ "Классы", "annotated.html", "annotated_dup" ],
-      [ "Алфавитный указатель классов", "classes.html", null ],
-      [ "Иерархия классов", "hierarchy.html", "hierarchy" ],
-      [ "Члены классов", "functions.html", [
-        [ "Указатель", "functions.html", "functions_dup" ],
-        [ "Функции", "functions_func.html", "functions_func" ],
-        [ "Переменные", "functions_vars.html", null ],
-        [ "Определения типов", "functions_type.html", null ],
-        [ "Перечисления", "functions_enum.html", null ],
-        [ "Элементы перечислений", "functions_eval.html", null ],
-        [ "Относящиеся к классу функции", "functions_rela.html", null ]
-      ] ]
-    ] ],
     [ "Файлы", "files.html", [
       [ "Файлы", "files.html", "files_dup" ],
       [ "Список членов всех файлов", "globals.html", [
         [ "Указатель", "globals.html", null ],
         [ "Функции", "globals_func.html", null ],
-        [ "Переменные", "globals_vars.html", null ],
-        [ "Определения типов", "globals_type.html", null ],
-        [ "Макросы", "globals_defs.html", null ]
+        [ "Переменные", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]
@@ -63,8 +39,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"d4/de5/classif_a_s_t.html#af4bff5501f0e5f6b6de254562e2821f3"
+"d3/dcc/md__r_e_a_d_m_e.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

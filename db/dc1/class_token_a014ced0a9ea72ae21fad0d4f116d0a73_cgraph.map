@@ -1,6 +1,0 @@
-<map id="Token::getInfo" name="Token::getInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,109,83"/>
-<area shape="rect" id="node2" href="$db/dc1/class_token.html#a942fcc40ffdf54c98b7b641c792a26bc" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="165,5,264,32"/>
-<area shape="rect" id="node3" href="$d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" title="Получение типа токена" alt="" coords="157,56,272,83"/>
-<area shape="rect" id="node4" href="$db/dc1/class_token.html#af3b5fdf2261d637af820d4adb62e6109" title=" " alt="" coords="173,107,257,133"/>
-</map>

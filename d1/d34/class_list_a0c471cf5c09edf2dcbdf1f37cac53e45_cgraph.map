@@ -1,4 +1,0 @@
-<map id="List::pushBack" name="List::pushBack">
-<area shape="rect" id="node1" title="Вставка в конец списка" alt="" coords="5,5,113,32"/>
-<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="161,5,309,32"/>
-</map>
