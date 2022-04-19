@@ -25,11 +25,9 @@
 var NAVTREE =
 [
   [ "Синтаксический анализатор", "index.html", [
-    [ "micro-Pascal", "d3/dcc/md__r_e_a_d_m_e.html", null ],
     [ "Диаграмма объектов.", "d2/d22/md_schemes_scheme.html", [
-      [ "Диаграмма классов:", "d2/d22/md_schemes_scheme.html#autotoc_md6", null ]
+      [ "Диаграмма классов:", "d2/d22/md_schemes_scheme.html#autotoc_md1", null ]
     ] ],
-    [ "Список задач", "dd/da0/todo.html", null ],
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
@@ -67,8 +65,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/da4/class_queue.html",
-"df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025"
+"d4/da4/class_queue.html#a16024826b5bf5b51591dcccb8ebf8b7d",
+"df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
