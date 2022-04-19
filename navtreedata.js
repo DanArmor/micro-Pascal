@@ -25,54 +25,16 @@
 var NAVTREE =
 [
   [ "Синтаксический анализатор", "index.html", [
-    [ "Customization", "d4/dd6/md_docs_themes_docs_customization.html", [
-      [ "CSS-Variables", "d4/dd6/md_docs_themes_docs_customization.html#autotoc_md1", [
-        [ "Setup", "d4/dd6/md_docs_themes_docs_customization.html#autotoc_md2", null ],
-        [ "Available variables", "d4/dd6/md_docs_themes_docs_customization.html#autotoc_md3", null ]
-      ] ],
-      [ "Doxygen generator", "d4/dd6/md_docs_themes_docs_customization.html#autotoc_md4", null ],
-      [ "Share your customizations", "d4/dd6/md_docs_themes_docs_customization.html#autotoc_md5", null ]
-    ] ],
-    [ "Extensions", "d7/d7a/md_docs_themes_docs_extensions.html", [
-      [ "Dark Mode Toggle", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md7", [
-        [ "Installation", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md8", null ]
-      ] ],
-      [ "Fragment Copy Button", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md9", [
-        [ "Installation", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md10", null ]
-      ] ],
-      [ "Paragraph Linking", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md11", [
-        [ "Installation", "d7/d7a/md_docs_themes_docs_extensions.html#autotoc_md12", null ]
-      ] ]
-    ] ],
-    [ "Tips & Tricks", "d8/db2/md_docs_themes_docs_tricks.html", [
-      [ "Class Diagrams with Graphviz", "d8/db2/md_docs_themes_docs_tricks.html#autotoc_md14", null ],
-      [ "Disable Dark Mode", "d8/db2/md_docs_themes_docs_tricks.html#autotoc_md15", null ],
-      [ "Choosing Sidebar Width", "d8/db2/md_docs_themes_docs_tricks.html#autotoc_md16", null ]
-    ] ],
-    [ "Doxygen Awesome", "d7/daf/md_docs_themes__r_e_a_d_m_e.html", [
-      [ "Motivation", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md24", null ],
-      [ "Features", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md25", null ],
-      [ "Examples", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md26", null ],
-      [ "Installation", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md27", null ],
-      [ "Browser support", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md28", null ],
-      [ "Credits", "d7/daf/md_docs_themes__r_e_a_d_m_e.html#autotoc_md29", null ]
-    ] ],
     [ "micro-Pascal", "d3/dcc/md__r_e_a_d_m_e.html", null ],
     [ "Диаграмма объектов.", "d2/d22/md_schemes_scheme.html", [
-      [ "Диаграмма классов:", "d2/d22/md_schemes_scheme.html#autotoc_md36", null ]
+      [ "Диаграмма классов:", "d2/d22/md_schemes_scheme.html#autotoc_md6", null ]
     ] ],
-    [ "Ошибки", "de/da5/bug.html", null ],
-    [ "Список устаревших определений и описаний", "da/d58/deprecated.html", null ],
     [ "Список задач", "dd/da0/todo.html", null ],
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
         [ "Указатель", "namespacemembers.html", null ],
-        [ "Функции", "namespacemembers_func.html", null ],
-        [ "Переменные", "namespacemembers_vars.html", null ],
-        [ "Определения типов", "namespacemembers_type.html", null ],
-        [ "Перечисления", "namespacemembers_enum.html", null ],
-        [ "Элементы перечислений", "namespacemembers_eval.html", null ]
+        [ "Функции", "namespacemembers_func.html", null ]
       ] ]
     ] ],
     [ "Классы", "annotated.html", [
@@ -105,9 +67,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/dc9/class_bin_op_a_s_t.html#a9321762e5ec275c07f7481b4efd7dc61",
-"d9/df1/test_stack_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe",
-"dd/d3d/namespacemagic__enum_1_1detail.html#a3f8e95d13e2ef52cc7f5198c6b4fdce7"
+"d4/da4/class_queue.html",
+"df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

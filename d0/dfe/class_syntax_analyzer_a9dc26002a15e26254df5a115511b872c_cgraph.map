@@ -1,11 +1,8 @@
 <map id="SyntaxAnalyzer::syntaxConsts" name="SyntaxAnalyzer::syntaxConsts">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,200,133"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a5d17bcae2fd7dc11d0710e046c4c3280" title=" " alt="" coords="509,56,644,83"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="703,107,879,133"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a3fd39f49d75b604d41e41f86b22cdca3" title=" " alt="" coords="248,157,461,184"/>
-<area shape="rect" id="node3" href="$d2/da7/namespacemagic__enum.html#af505522c30c0e3ff627fb3e39b67a6c5" title=" " alt="" coords="704,56,877,83"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="692,5,889,32"/>
-<area shape="rect" id="node7" href="$df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="555,208,598,235"/>
-<area shape="rect" id="node8" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a4e442a24179e53022ac3d2948851a8aa" title=" " alt="" coords="724,245,857,286"/>
-<area shape="rect" id="node9" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf" title=" " alt="" coords="724,179,857,221"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,200,83"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a5d17bcae2fd7dc11d0710e046c4c3280" title=" " alt="" coords="509,107,644,133"/>
+<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="703,5,879,32"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a3fd39f49d75b604d41e41f86b22cdca3" title=" " alt="" coords="248,56,461,83"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="692,107,889,133"/>
+<area shape="rect" id="node6" href="$df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="555,56,598,83"/>
 </map>

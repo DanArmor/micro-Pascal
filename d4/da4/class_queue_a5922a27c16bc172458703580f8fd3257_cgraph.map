@@ -1,6 +1,5 @@
 <map id="Queue::push" name="Queue::push">
-<area shape="rect" id="node1" title="Вставляет значение в хвост очереди" alt="" coords="5,39,100,65"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="148,13,256,40"/>
-<area shape="rect" id="node4" href="$dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf" title=" " alt="" coords="311,57,445,98"/>
+<area shape="rect" id="node1" title="Вставляет значение в хвост очереди" alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="148,5,256,32"/>
 <area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="304,5,452,32"/>
 </map>

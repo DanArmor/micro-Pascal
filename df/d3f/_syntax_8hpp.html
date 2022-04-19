@@ -94,14 +94,14 @@ $(document).ready(function(){initNavTree('df/d3f/_syntax_8hpp.html','../../'); i
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;initializer_list&gt;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d47/magic__enum_8hpp_source.html">magic_enum.hpp</a>&quot;</code><br />
+<code>#include &quot;magic_enum.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Граф включаемых заголовочных файлов для Syntax.hpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d19/_syntax_8hpp__incl.svg" width="1392" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d19/_syntax_8hpp__incl.svg" width="822" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -175,17 +175,9 @@ false Если value отсутствует среди cont </dd></dl>
 
 <p class="definition">См. определение в файле <a class="el" href="../../df/d3f/_syntax_8hpp_source.html">Syntax.hpp</a> строка <a class="el" href="../../df/d3f/_syntax_8hpp_source.html#l00022">22</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   22</span>                                                             {</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a4e442a24179e53022ac3d2948851a8aa">std::find</a>(cont.begin(), cont.end(), <a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">value</a>) != cont.end();</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> std::find(cont.begin(), cont.end(), value) != cont.end();</div>
 <div class="line"><span class="lineno">   24</span>}</div>
-<div class="ttc" id="anamespacemagic__enum_1_1detail_html_a4e442a24179e53022ac3d2948851a8aa"><div class="ttname"><a href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a4e442a24179e53022ac3d2948851a8aa">magic_enum::detail::find</a></div><div class="ttdeci">constexpr std::size_t find(string_view str, char c) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/magic__enum_8hpp_source.html#l00272">magic_enum.hpp:272</a></div></div>
-<div class="ttc" id="anamespacemagic__enum_1_1detail_html_a8e06754b490522d8ae02cd8983e3fcbf"><div class="ttname"><a href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">magic_enum::detail::value</a></div><div class="ttdeci">constexpr E value(std::size_t i) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/magic__enum_8hpp_source.html#l00425">magic_enum.hpp:425</a></div></div>
 </div><!-- fragment --><div class="dynheader">
-Граф вызовов:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d3f/_syntax_8hpp_ae7d62ca130413d4c96863327c1af81a4_cgraph.svg" width="235" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
 Граф вызова функции:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d3f/_syntax_8hpp_ae7d62ca130413d4c96863327c1af81a4_icgraph.svg" width="2162" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>

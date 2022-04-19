@@ -231,16 +231,9 @@ template&lt;typename U &gt; </div>
 
 <p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00042">42</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   42</span>                        : <a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>(<span class="keyword">nullptr</span>), <a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>(<span class="keyword">nullptr</span>){</div>
-<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a> = <a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">value</a>;</div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_variable" href="../../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269">innerData</a> = value;</div>
 <div class="line"><span class="lineno">   44</span>    }</div>
-<div class="ttc" id="anamespacemagic__enum_1_1detail_html_a8e06754b490522d8ae02cd8983e3fcbf"><div class="ttname"><a href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">magic_enum::detail::value</a></div><div class="ttdeci">constexpr E value(std::size_t i) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d47/magic__enum_8hpp_source.html#l00425">magic_enum.hpp:425</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Граф вызовов:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d8f/class_node_ac61530da000a6b84ec4e91b8d77a8563_cgraph.svg" width="283" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
@@ -316,14 +309,14 @@ template&lt;typename U &gt; </div>
 
 <p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00067">67</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   67</span>                                               {</div>
-<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(<a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">value</a>));</div>
+<div class="line"><span class="lineno">   68</span>        <a class="code hl_function" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(value));</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="../../dc/d8f/class_node.html">Node</a></div><div class="ttdoc">Узел с одним указателм на данные и одним указателем на следующий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00030">List.cpp:30</a></div></div>
 <div class="ttc" id="aclass_node_html_a5f29dc4844746c7e7780933173d31a4a"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">Node::connectAsNext</a></div><div class="ttdeci">void connectAsNext(Node *pNext) noexcept</div><div class="ttdoc">Присоединяет узел pNext в качестве следующего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00055">List.cpp:55</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d8f/class_node_a74fc31aee03a749d0c1a59260695d39c_cgraph.svg" width="355" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d8f/class_node_a74fc31aee03a749d0c1a59260695d39c_cgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -401,13 +394,13 @@ template&lt;typename U &gt; </div>
 
 <p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00072">72</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   72</span>                                               {</div>
-<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(<a class="code hl_function" href="../../dd/d3d/namespacemagic__enum_1_1detail.html#a8e06754b490522d8ae02cd8983e3fcbf">value</a>));</div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;U&gt;</a>(value));</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 <div class="ttc" id="aclass_node_html_aa8d23f895123945ad5b92793a1477c07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">Node::connectAsPrev</a></div><div class="ttdeci">void connectAsPrev(Node *pPrev) noexcept</div><div class="ttdoc">Присоединяет узел pPrev в качестве предыдущего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00061">List.cpp:61</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d8f/class_node_ae134cf81f361013712098991e97de25c_cgraph.svg" width="355" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d8f/class_node_ae134cf81f361013712098991e97de25c_cgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

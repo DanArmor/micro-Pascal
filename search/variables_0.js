@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['always_5ffalse_5fv_0',['always_false_v',['../dd/d3d/namespacemagic__enum_1_1detail.html#a42a93ce54069d2492cf7d0a793f46e86',1,'magic_enum::detail']]]
+  ['block_0',['block',['../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a',1,'ProgramAST']]],
+  ['body_1',['body',['../d4/de5/classif_a_s_t.html#ad53f5175880acad1746dfbefbc6802b8',1,'ifAST::body()'],['../d4/dae/classwhile_a_s_t.html#a123dcc7f109362d2576a10deaabe9800',1,'whileAST::body()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterator_5fcategory_0',['iterator_category',['../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b',1,'NodeIterator']]]
+  ['reference_0',['reference',['../d3/dde/class_node_iterator.html#ae76974257caee541bdd1deafbaf069ab',1,'NodeIterator']]]
 ];

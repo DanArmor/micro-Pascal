@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['block_0',['block',['../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a',1,'ProgramAST']]],
-  ['body_1',['body',['../d4/de5/classif_a_s_t.html#ad53f5175880acad1746dfbefbc6802b8',1,'ifAST::body()'],['../d4/dae/classwhile_a_s_t.html#a123dcc7f109362d2576a10deaabe9800',1,'whileAST::body()']]]
+  ['children_0',['children',['../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4',1,'CompoundAST']]],
+  ['compound_1',['compound',['../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454',1,'BlockAST']]],
+  ['condition_2',['condition',['../d4/de5/classif_a_s_t.html#ac8b505d728cd53c6f51a4e8b3cc8bbd8',1,'ifAST::condition()'],['../d4/dae/classwhile_a_s_t.html#a8ad6c0e7c255baf56183fc3d1cb94d56',1,'whileAST::condition()']]],
+  ['constname_3',['constName',['../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3',1,'ConstAST']]],
+  ['consts_4',['consts',['../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db',1,'BlockAST']]],
+  ['constvalue_5',['constValue',['../d6/d94/class_const_a_s_t.html#aaf6711aa7a963aa243af7309701acd85',1,'ConstAST']]]
 ];

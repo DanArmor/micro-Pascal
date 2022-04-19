@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['semi_0',['SEMI',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa67db653da579d09e05caf3774df22a0e',1,'IToken']]],
-  ['some_5fconst_1',['SOME_CONST',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3ad2a5a34e6961ce7c9ba32e121a405762',1,'IToken']]],
-  ['string_5fbound_2',['STRING_BOUND',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaeec6dbf5e884ba0096c5420de450c876',1,'IToken']]],
-  ['string_5fconst_3',['STRING_CONST',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103',1,'IToken']]]
+  ['terminate_0',['TERMINATE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaaf1ae5512440f4f428cb1553db3d6296',1,'IToken']]],
+  ['then_1',['THEN',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa6e4abd9a687325db7380c68445421eea',1,'IToken']]],
+  ['type_5fspec_2',['TYPE_SPEC',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757',1,'IToken']]]
 ];
