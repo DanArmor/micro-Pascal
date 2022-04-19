@@ -98,8 +98,6 @@ class NoOpAST : public AST{
     void accept(IVisitor &visitor);
 };
 
-/// @todo Вырезать из AST наследников лишние конструкторы
-
 /// @brief Узел, отображающий начало программы
 class ProgramAST : public AST{
     public:

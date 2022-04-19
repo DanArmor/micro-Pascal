@@ -7,9 +7,6 @@
 #include "Token.hpp"
 #include "List.cpp"
 
-/// @todo Изменить комментарии некоторых методов, где появились возвращаемые значения (в лексере)
-/// @todo уборка, комментарии
-
 /**
  * @file Lexer.cpp
  * @author DanArmor (https://github.com/DanArmor)

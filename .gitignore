@@ -15,6 +15,9 @@
 
 !Doxyfile
 !*.dox
+!*.html
+!*.css
+!*.js
 
 !*.md
 
@@ -25,9 +28,10 @@
 !*.dot
 !*.xhtml
 
+!*.yaml
+
 !*/
 !/libs
 
 **/CMakeFiles
 **/build
-**/docs

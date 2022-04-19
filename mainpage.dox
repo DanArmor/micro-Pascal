@@ -3,23 +3,4 @@
 
 Синтаксический анализатор.
 
-Полезные ссылки:
-- Паттерн visitor
-  - https://habr.com/ru/post/133183/
-  - https://www.codeproject.com/Tips/1018315/Visitor-with-the-Return-Value
-  .
-- Интересные паттерны:
-  - https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern
-  - https://www.oodesign.com/interpreter-pattern.html
-  - https://en.wikipedia.org/wiki/Template_method_pattern
-  .
-- Интересные фитчи:
-  - https://habr.com/ru/company/otus/blog/546158/
-  - https://en.cppreference.com/w/cpp/utility/variant
-  - https://stackoverflow.com/questions/55187548/may-i-change-the-held-type-in-a-stdvariant-from-within-a-call-to-stdvisit
-  .
-.
-
-@todo std::variant для хранения типов переменных
-
 */

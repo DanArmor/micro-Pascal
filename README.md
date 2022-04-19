@@ -1,4 +1,7 @@
 # micro-Pascal
+[![Статус документации](https://github.com/DanArmor/micro-Pascal/actions/workflows/main.yaml/badge.svg)](https://github.com/DanArmor/micro-Pascal/actions/workflows/main.yaml)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/530fd16dd67b4fd991f94483a8347503)](https://www.codacy.com/gh/DanArmor/micro-Pascal/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DanArmor/micro-Pascal&amp;utm_campaign=Badge_Grade)
 
 Синт. анализатор, который формирует абстрактное дерево синтаксиса по коду на языке Pascal (пока что?)
 
@@ -48,6 +51,11 @@ END.
 Если убрать точку в конце программы, то анализатор сообщит об этом:
 ![Изображение с сообщением об ошибке](forReadme/exmp1Error.png)
 
+Так же, добавляя новых посетителей можно расширять функционал. Например, добавить подсветку:
+![Изображение с подсветкой синтаксиса](forReadme/exmp2HL.png)
+
+И так далее. 
+
 ### Структура
 
 
@@ -61,6 +69,8 @@ END.
 
 К большей части кода есть doxy комменты, поэтому подкорректировав Doxyfile можно собрать документацию к проекту. (А так же в VSCode и других редакторах за счет этого более хорошие подсказки по параметрам и т. п.)
 
+https://danarmor.github.io/micro-Pascal/ - ссылка на актуальную документацию - собирается при каждом пуше.
+
 ### Что используется из стороннего?
 * magic_enum.hpp - для получения имен энамов в рантайме (https://github.com/Neargye/magic_enum)
 * plantUML - для написания объектной схемы и схемы классов (https://github.com/plantuml/plantuml)
@@ -70,6 +80,7 @@ END.
 * https://bottlecaps.de/rr/ui - для написания схем синтаксиса ([Форма Бэкуса-Наура](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%91%D1%8D%D0%BA%D1%83%D1%81%D0%B0_%E2%80%94_%D0%9D%D0%B0%D1%83%D1%80%D0%B0))
 * https://products.aspose.app/words/conversion/xhtml-to-svg - превращать выходные .xhtml от синт.схем по ссылке выше в .svg
 * https://valgrind.org/ - для проверок на утечки памяти
+* https://codacy.com/ - анализ кода
 
 ### Синтаксические диаграммы:
 ![Изображение схемы синтаксиса](schemes/diagram.svg)
