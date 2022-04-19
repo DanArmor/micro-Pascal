@@ -35,7 +35,7 @@ int main(int argc, char** argv){
 //    }
 
     SyntaxAnalyzer syntax(tokens);
-    AST *root = syntax.parseTokens();
+    std::unique_ptr<AST>root(syntax.parseTokens());
 
     GraphvizVisitor graph("out.dot");
     root->accept(graph);

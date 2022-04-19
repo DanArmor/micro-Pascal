@@ -15,5 +15,5 @@ do
 done
 
 cd build
-./Main prog1.txt
+valgrind --leak-check=full ./Main prog1.txt
 dot out.dot -Tsvg > output.svg

@@ -2,6 +2,7 @@
 #define __INC_AST_H
 
 #include <vector>
+#include <memory>
 
 #include "Token.hpp"
 
@@ -17,8 +18,8 @@ class BinOpAST : public AST{
 
     void accept(IVisitor &visitor);
 
-    AST *left;
-    AST *right;
+    std::unique_ptr<AST> left;
+    std::unique_ptr<AST> right;
 };
 
 /// @brief Узел, содержащий унарную операцию
@@ -30,7 +31,7 @@ class UnOpAST : public AST{
 
     void accept(IVisitor &visitor);
 
-    AST *down;
+    std::unique_ptr<AST> down;
 };
 
 /// @brief Узел, содержащий целое число
@@ -65,8 +66,8 @@ class AssignAST : public AST{
 
     void accept(IVisitor &visitor);
 
-    AST *var;
-    AST *value;
+    std::unique_ptr<AST> var;
+    std::unique_ptr<AST> value;
 };
 
 /// @brief Узел, содержащий переменную
@@ -100,7 +101,7 @@ class ProgramAST : public AST{
     void accept(IVisitor &visitor);
 
     Token name;
-    AST *block;
+    std::unique_ptr<AST> block;
 };
 
 class BlockAST : public AST{
@@ -110,7 +111,7 @@ class BlockAST : public AST{
 
     std::vector<ASTptr> consts;
     std::vector<ASTptr> declarations;
-    ASTptr compound;
+    std::unique_ptr<AST> compound;
 };
 
 class VarDeclAST : public AST{
@@ -118,8 +119,8 @@ class VarDeclAST : public AST{
     VarDeclAST(ASTptr var, ASTptr type);
     void accept(IVisitor &visitor);
 
-    ASTptr var;
-    ASTptr type;
+    std::unique_ptr<AST> var;
+    std::unique_ptr<AST> type;
 };
 
 class TypeSpecAST : public AST{
@@ -133,8 +134,8 @@ class ConstAST : public AST{
     ConstAST(ASTptr constName, ASTptr constValue);
     void accept(IVisitor &visitor);
 
-    ASTptr constName;
-    ASTptr constValue;
+    std::unique_ptr<AST> constName;
+    std::unique_ptr<AST> constValue;
 };
 
 class StringAST : public AST{
@@ -156,9 +157,9 @@ class ifAST : public AST{
     ifAST(ASTptr condition, ASTptr body, ASTptr elseBody);
     void accept(IVisitor &visitor);
 
-    ASTptr condition;
-    ASTptr body;
-    ASTptr elseBody;
+    std::unique_ptr<AST> condition;
+    std::unique_ptr<AST> body;
+    std::unique_ptr<AST> elseBody;
 };
 
 class whileAST : public AST{
@@ -166,8 +167,8 @@ class whileAST : public AST{
     whileAST(ASTptr condition, ASTptr body);
     void accept(IVisitor &visitor);
 
-    ASTptr condition;
-    ASTptr body;
+    std::unique_ptr<AST> condition;
+    std::unique_ptr<AST> body;
 };
 
 
