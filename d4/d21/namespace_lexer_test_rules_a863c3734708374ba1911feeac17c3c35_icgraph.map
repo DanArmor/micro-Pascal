@@ -1,0 +1,4 @@
+<map id="LexerTestRules::getMathRules" name="LexerTestRules::getMathRules">
+<area shape="rect" id="node1" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,5,307,32"/>
+<area shape="rect" id="node2" href="$d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" title="Тест разбора простых математических выражений" alt="" coords="5,5,60,32"/>
+</map>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Исходный файл include/ASTclasses.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d8/de6/_a_s_tclasses_8hpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ASTclasses.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/de6/_a_s_tclasses_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __INC_ASTCLASSES_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __INC_ASTCLASSES_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Предварительные объявления</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="../../dc/dff/class_var_a_s_t.html">VarAST</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="../../de/db2/class_program_a_s_t.html">ProgramAST</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="../../d0/de0/class_block_a_s_t.html">BlockAST</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d94/class_const_a_s_t.html">ConstAST</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="../../d0/d21/class_string_a_s_t.html">StringAST</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span><a class="code hl_class" href="../../da/dd1/class_call_a_s_t.html">CallAST</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="../../d4/de5/classif_a_s_t.html">ifAST</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span><a class="code hl_class" href="../../d4/dae/classwhile_a_s_t.html">whileAST</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="../../df/db7/class_i_visitor.html">IVisitor</a>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">   30</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">visit</a>(<a class="code hl_class" href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914">visit</a>(<a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda">   32</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda">visit</a>(<a class="code hl_class" href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a61877193fd55d2f97b7fc12465b7a3ce">   33</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a61877193fd55d2f97b7fc12465b7a3ce">visit</a>(<a class="code hl_class" href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025">   34</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025">visit</a>(<a class="code hl_class" href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876">   35</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876">visit</a>(<a class="code hl_class" href="../../dc/dff/class_var_a_s_t.html">VarAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a1c34e8c02a76a644a08ec7138ed07d42">   36</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a1c34e8c02a76a644a08ec7138ed07d42">visit</a>(<a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b">   37</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b">visit</a>(<a class="code hl_class" href="../../de/db2/class_program_a_s_t.html">ProgramAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2">   38</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2">visit</a>(<a class="code hl_class" href="../../d0/de0/class_block_a_s_t.html">BlockAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a36a7a5238714bb444a24a8576e50704c">   39</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a36a7a5238714bb444a24a8576e50704c">visit</a>(<a class="code hl_class" href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c">   40</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c">visit</a>(<a class="code hl_class" href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a2e1b667be6c9402438d287173ba04997">   41</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a2e1b667be6c9402438d287173ba04997">visit</a>(<a class="code hl_class" href="../../d6/d94/class_const_a_s_t.html">ConstAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268">   42</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268">visit</a>(<a class="code hl_class" href="../../d0/d21/class_string_a_s_t.html">StringAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">   43</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">visit</a>(<a class="code hl_class" href="../../da/dd1/class_call_a_s_t.html">CallAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#a5bfad00fc604262eef8c8423e2265274">   44</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#a5bfad00fc604262eef8c8423e2265274">visit</a>(<a class="code hl_class" href="../../d4/de5/classif_a_s_t.html">ifAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../df/db7/class_i_visitor.html#aeb4aeadce800d9d6cf69d4f9c274691c">   45</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db7/class_i_visitor.html#aeb4aeadce800d9d6cf69d4f9c274691c">visit</a>(<a class="code hl_class" href="../../d4/dae/classwhile_a_s_t.html">whileAST</a> &amp;node) = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../da/dc8/class_a_s_t.html">   49</a></span><span class="keyword">class </span><a class="code hl_class" href="../../da/dc8/class_a_s_t.html">AST</a>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//AST();</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afadc392162238eca31cbafd953eff717">AST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> <a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../da/dc8/class_a_s_t.html#a7b984d974da0bc25c78d9205b8011f67">   54</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a7b984d974da0bc25c78d9205b8011f67">~AST</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">   56</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(<a class="code hl_class" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;visitor) = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">   58</a></span>    <a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> <a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d8/de6/_a_s_tclasses_8hpp.html#a5aee032794f7cc618c0961f44907c19a">   62</a></span><span class="keyword">typedef</span> <a class="code hl_class" href="../../da/dc8/class_a_s_t.html">AST</a>* <a class="code hl_typedef" href="../../d8/de6/_a_s_tclasses_8hpp.html#a5aee032794f7cc618c0961f44907c19a">ASTptr</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_a_s_tclasses_8hpp_html_a5aee032794f7cc618c0961f44907c19a"><div class="ttname"><a href="../../d8/de6/_a_s_tclasses_8hpp.html#a5aee032794f7cc618c0961f44907c19a">ASTptr</a></div><div class="ttdeci">AST * ASTptr</div><div class="ttdoc">Тип указателя на узел АСД</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00062">ASTclasses.hpp:62</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00049">ASTclasses.hpp:49</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html_a2be6b7f1a62e69bf7c408a314cd09a87"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST::accept</a></div><div class="ttdeci">virtual void accept(IVisitor &amp;visitor)=0</div></div>
+<div class="ttc" id="aclass_a_s_t_html_a7b984d974da0bc25c78d9205b8011f67"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a7b984d974da0bc25c78d9205b8011f67">AST::~AST</a></div><div class="ttdeci">virtual ~AST()=default</div></div>
+<div class="ttc" id="aclass_a_s_t_html_acd50071d5e3ece75e4e5c4b7808d3c5e"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">AST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00058">ASTclasses.hpp:58</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html_afadc392162238eca31cbafd953eff717"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#afadc392162238eca31cbafd953eff717">AST::AST</a></div><div class="ttdeci">AST(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d91/_a_s_t_8cpp_source.html#l00006">AST.cpp:6</a></div></div>
+<div class="ttc" id="aclass_assign_a_s_t_html"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00065">AST.hpp:65</a></div></div>
+<div class="ttc" id="aclass_bin_op_a_s_t_html"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00013">AST.hpp:13</a></div></div>
+<div class="ttc" id="aclass_block_a_s_t_html"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html">BlockAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00115">AST.hpp:115</a></div></div>
+<div class="ttc" id="aclass_call_a_s_t_html"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html">CallAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00160">AST.hpp:160</a></div></div>
+<div class="ttc" id="aclass_compound_a_s_t_html"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a></div><div class="ttdoc">BEGIN END блоки</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00050">AST.hpp:50</a></div></div>
+<div class="ttc" id="aclass_const_a_s_t_html"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html">ConstAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00143">AST.hpp:143</a></div></div>
+<div class="ttc" id="aclass_i_visitor_html"><div class="ttname"><a href="../../df/db7/class_i_visitor.html">IVisitor</a></div><div class="ttdoc">Интерфейс &quot;посетителя&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00028">ASTclasses.hpp:28</a></div></div>
+<div class="ttc" id="aclass_i_visitor_html_a182fd51025832787190bf67799cdbd3b"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(CallAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a1c34e8c02a76a644a08ec7138ed07d42"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a1c34e8c02a76a644a08ec7138ed07d42">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(NoOpAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a2e1b667be6c9402438d287173ba04997"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a2e1b667be6c9402438d287173ba04997">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(ConstAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a36a7a5238714bb444a24a8576e50704c"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a36a7a5238714bb444a24a8576e50704c">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(VarDeclAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a4c1cf68f8a99b1e88dcc33dfa4f5709b"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(ProgramAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a5b1f67b770cdf5b7f44a22bcf81e42e6"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(BinOpAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a5bfad00fc604262eef8c8423e2265274"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a5bfad00fc604262eef8c8423e2265274">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(ifAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a61877193fd55d2f97b7fc12465b7a3ce"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a61877193fd55d2f97b7fc12465b7a3ce">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(CompoundAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a83611ea7b4dde8db8d15e5702951f025"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(AssignAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a8a8b3567dd0b69c5c05c351f8537c7c2"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(BlockAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_a8b3e94b2c729724d3508cb5b30dd0876"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(VarAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_aa9c149efcd1c2fa057ae713290f1b268"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(StringAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_ac1382c24e52b9673204d4667dbb97f4c"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(TypeSpecAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_ad75b65bd8e866dbc3a75cc1c97297fda"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(UnOpAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_aeb4aeadce800d9d6cf69d4f9c274691c"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#aeb4aeadce800d9d6cf69d4f9c274691c">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(whileAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_i_visitor_html_aed3edb6efa2ac3247bf8a1596673c914"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(NumberAST &amp;node)=0</div></div>
+<div class="ttc" id="aclass_no_op_a_s_t_html"><div class="ttname"><a href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a></div><div class="ttdoc">Узел, отображающий пустовые выражение, отсутствие операций</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00092">AST.hpp:92</a></div></div>
+<div class="ttc" id="aclass_number_a_s_t_html"><div class="ttname"><a href="../../d8/d90/class_number_a_s_t.html">NumberAST</a></div><div class="ttdoc">Узел, содержащий целое число</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00040">AST.hpp:40</a></div></div>
+<div class="ttc" id="aclass_program_a_s_t_html"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html">ProgramAST</a></div><div class="ttdoc">Узел, отображающий начало программы</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00104">AST.hpp:104</a></div></div>
+<div class="ttc" id="aclass_string_a_s_t_html"><div class="ttname"><a href="../../d0/d21/class_string_a_s_t.html">StringAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00153">AST.hpp:153</a></div></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00123">Token.hpp:123</a></div></div>
+<div class="ttc" id="aclass_type_spec_a_s_t_html"><div class="ttname"><a href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00136">AST.hpp:136</a></div></div>
+<div class="ttc" id="aclass_un_op_a_s_t_html"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a></div><div class="ttdoc">Узел, содержащий унарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00027">AST.hpp:27</a></div></div>
+<div class="ttc" id="aclass_var_a_s_t_html"><div class="ttname"><a href="../../dc/dff/class_var_a_s_t.html">VarAST</a></div><div class="ttdoc">Узел, содержащий переменную</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00079">AST.hpp:79</a></div></div>
+<div class="ttc" id="aclass_var_decl_a_s_t_html"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00126">AST.hpp:126</a></div></div>
+<div class="ttc" id="aclassif_a_s_t_html"><div class="ttname"><a href="../../d4/de5/classif_a_s_t.html">ifAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00169">AST.hpp:169</a></div></div>
+<div class="ttc" id="aclasswhile_a_s_t_html"><div class="ttname"><a href="../../d4/dae/classwhile_a_s_t.html">whileAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00180">AST.hpp:180</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d8/de6/_a_s_tclasses_8hpp.html">ASTclasses.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

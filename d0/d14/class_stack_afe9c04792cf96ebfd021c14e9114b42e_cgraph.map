@@ -1,0 +1,5 @@
+<map id="Stack::push" name="Stack::push">
+<area shape="rect" id="node1" title="Кладет значение на вершину стека" alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75" title="Вставка в начало списка" alt="" coords="144,5,252,32"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07" title="Присоединяет узел pPrev в качестве предыдущего узла" alt="" coords="300,5,448,32"/>
+</map>

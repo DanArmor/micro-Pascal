@@ -1,0 +1,4 @@
+<map id="Node::connectAsNext" name="Node::connectAsNext">
+<area shape="rect" id="node1" title="Создает узел из value и присоединяет в качестве следующего узла к вызывающему" alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="201,5,349,32"/>
+</map>

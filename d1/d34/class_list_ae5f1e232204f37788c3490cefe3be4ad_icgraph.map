@@ -1,0 +1,10 @@
+<map id="List::popFront" name="List::popFront">
+<area shape="rect" id="node1" title="Удаление из начала списка" alt="" coords="263,81,364,108"/>
+<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a16024826b5bf5b51591dcccb8ebf8b7d" title="Удаляет значение из головы очереди" alt="" coords="118,5,205,32"/>
+<area shape="rect" id="node4" href="$d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778" title="Удаляет значение с вершины стека" alt="" coords="120,56,203,83"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45" title="Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка" alt="" coords="108,107,215,133"/>
+<area shape="rect" id="node8" href="$d9/d2f/test_list_8cpp.html#a3bc6c9cb81eca56349198a642f7b46ed" title="Тест размера после удаления из начала" alt="" coords="134,157,189,184"/>
+<area shape="rect" id="node3" href="$d1/ddc/test_queue_8cpp.html#a9293560276e10e858d147f776c97f6f4" title="Тест исключения элементов" alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node5" href="$d9/df1/test_stack_8cpp.html#a5e92d128118fb607e99ff151306dfaa3" title="Тест исключения элементов" alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node7" href="$d9/d2f/test_list_8cpp.html#afbc53743ea2ceea766182ca473dde64b" title="Тест размера списка после удаления" alt="" coords="5,107,60,133"/>
+</map>

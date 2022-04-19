@@ -1,0 +1,4 @@
+<map id="Node::exclude" name="Node::exclude">
+<area shape="rect" id="node1" title="Исключает узел из цепи, в которой находится. Пример, y &#45; узел. к которому вызван метод: x &lt;&#45;&gt; y &lt;&#45;&gt; z..." alt="" coords="217,5,320,32"/>
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#a2a7dbf4677beebdc5b08698b0db49f16" title="Исключает узел из цепи, в которой находится. Пример, y &#45; узел. к которому вызван метод: x &lt;&#45;&gt; y &lt;&#45;&gt; z..." alt="" coords="5,5,169,32"/>
+</map>

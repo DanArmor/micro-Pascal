@@ -1,0 +1,16 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест разбора средней программы на Pascal." alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#afcb6ff36e1b746fec7df3a9ea7f63fff" title="Анализирует файл" alt="" coords="156,157,280,184"/>
+<area shape="rect" id="node12" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,208,328,235"/>
+<area shape="rect" id="node13" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="149,259,287,285"/>
+<area shape="rect" id="node14" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="181,309,255,336"/>
+<area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="376,157,553,184"/>
+<area shape="rect" id="node4" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="625,5,707,32"/>
+<area shape="rect" id="node5" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="607,56,725,83"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="631,107,701,133"/>
+<area shape="rect" id="node7" href="$db/dc1/class_token.html#a942fcc40ffdf54c98b7b641c792a26bc" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="617,157,715,184"/>
+<area shape="rect" id="node8" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title=" " alt="" coords="601,208,731,235"/>
+<area shape="rect" id="node9" href="$d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" title="Получение типа токена" alt="" coords="609,259,723,285"/>
+<area shape="rect" id="node10" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="612,309,720,336"/>
+<area shape="rect" id="node11" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="779,309,927,336"/>
+</map>

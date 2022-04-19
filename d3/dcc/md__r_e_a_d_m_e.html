@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('d3/dcc/md__r_e_a_d_m_e.html','../../')
 <p >Состоит из:</p><ul>
 <li>Лексера - разбивате на токены полученную программу</li>
 <li>Синтаксического анализатора - из токенов формирует дерево программы</li>
-<li>Различные посетители (наследники IVisitor) - обходят дерево, выполняя какую-то задачу (Например, GraphizVisitor формирует изображения деревьев, как ниже)</li>
+<li>Различные посетители (наследники <a class="el" href="../../df/db7/class_i_visitor.html" title="Интерфейс &quot;посетителя&quot;.">IVisitor</a>) - обходят дерево, выполняя какую-то задачу (Например, GraphizVisitor формирует изображения деревьев, как ниже)</li>
 </ul>
 <p ><img src="../../forReadme/exmp1.svg" alt="Изображение дерева, если вы видите этот текст - у вас не прогрузилось" style="pointer-events: none;" class="inline"/></p>
 <p >Текст программы, по которому построено дерево: </p><div class="fragment"><div class="line">PROGRAM test;</div>
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('d3/dcc/md__r_e_a_d_m_e.html','../../')
 </div><!-- fragment --><p >Если убрать точку в конце программы, то анализатор сообщит об этом: <img src="../../forReadme/exmp1Error.png" alt="Изображение с сообщением об ошибке" class="inline"/></p>
 <p >Так же, добавляя новых посетителей можно расширять функционал. Например, добавить подсветку: <img src="../../forReadme/exmp2HL.png" alt="Изображение с подсветкой синтаксиса" class="inline"/></p>
 <p >И так далее.</p>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Структура</h2>
 <ul>
 <li>side_include - различные сторонние библиотеки</li>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('d3/dcc/md__r_e_a_d_m_e.html','../../')
 <li>examples - для Doxygen, попытка добавить примеры кода для документации</li>
 </ul>
 <p >К большей части кода есть doxy комменты, поэтому подкорректировав Doxyfile можно собрать документацию к проекту. (А так же в VSCode и других редакторах за счет этого более хорошие подсказки по параметрам и т. п.)</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Что используется из стороннего?</h2>
 <ul>
 <li>magic_enum.hpp - для получения имен энамов в рантайме (<a href="https://github.com/Neargye/magic_enum">https://github.com/Neargye/magic_enum</a>)</li>
@@ -155,10 +155,10 @@ $(document).ready(function(){initNavTree('d3/dcc/md__r_e_a_d_m_e.html','../../')
 <li><a href="https://products.aspose.app/words/conversion/xhtml-to-svg">https://products.aspose.app/words/conversion/xhtml-to-svg</a> - превращать выходные .xhtml от синт.схем по ссылке выше в .svg</li>
 <li><a href="https://valgrind.org/">https://valgrind.org/</a> - для проверок на утечки памяти</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Синтаксические диаграммы:</h2>
 <p ><img src="../../schemes/diagram.svg" alt="Изображение схемы синтаксиса" style="pointer-events: none;" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 Диаграмма объектов и диаграмма классов:</h2>
 <p ><img src="../../schemes/scheme.jpeg" alt="Диаграмма объектов и диаграмма классов" class="inline"/> </p>
 </div></div><!-- contents -->

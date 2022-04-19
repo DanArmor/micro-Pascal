@@ -1,0 +1,4 @@
+<map id="Stack::pop" name="Stack::pop">
+<area shape="rect" id="node1" title="Удаляет значение с вершины стека" alt="" coords="108,5,191,32"/>
+<area shape="rect" id="node2" href="$d9/df1/test_stack_8cpp.html#a5e92d128118fb607e99ff151306dfaa3" title="Тест исключения элементов" alt="" coords="5,5,60,32"/>
+</map>

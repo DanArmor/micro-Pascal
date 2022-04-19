@@ -1,0 +1,9 @@
+<map id="Node::data" name="Node::data">
+<area shape="rect" id="node1" title="Возвращает ссылку на данные узла" alt="" coords="447,31,531,57"/>
+<area shape="rect" id="node2" href="$d3/dde/class_node_iterator.html#a1fa97ce2bd84bf8f5955c29a32bb99f0" title="Получение данных итератора" alt="" coords="247,5,399,32"/>
+<area shape="rect" id="node3" href="$d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8" title=" " alt="" coords="270,56,375,83"/>
+<area shape="rect" id="node4" href="$d4/da4/class_queue.html#a886b09e0d03c7b89f5475e1450a76464" title="Возвращает ссылку на значение в главе очереди" alt="" coords="108,31,199,57"/>
+<area shape="rect" id="node6" href="$d0/d14/class_stack.html#a1a5f5b9d939b621e1c2cf1cdb815f789" title="Возвращает ссылку на значение на вершине стека" alt="" coords="110,81,197,108"/>
+<area shape="rect" id="node5" href="$d1/ddc/test_queue_8cpp.html#aeca6e5d9af6c9e307055a404d678da45" title="Тест взятия первого элемента" alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node7" href="$d9/df1/test_stack_8cpp.html#aedf1705910ebac83375f579e9e810fcf" title="Тест взятия первого элемента" alt="" coords="5,81,60,108"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="List::pushFront" name="List::pushFront">
+<area shape="rect" id="node1" title="Вставка в начало списка" alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07" title="Присоединяет узел pPrev в качестве предыдущего узла" alt="" coords="161,5,309,32"/>
+</map>
