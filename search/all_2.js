@@ -6,6 +6,5 @@ var searchData=
   ['block_3',['block',['../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a',1,'ProgramAST']]],
   ['block_4',['BLOCK',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b',1,'IToken']]],
   ['blockast_5',['BlockAST',['../d0/de0/class_block_a_s_t.html',1,'BlockAST'],['../d0/de0/class_block_a_s_t.html#acd103364781c915030bf566a54d12301',1,'BlockAST::BlockAST()']]],
-  ['blue_6',['blue',['../d5/d34/namespace_my_library.html#a79a9f4bbb675f6c082b09249c5a95ceda3d4a113e58853e5d81725d92fbfceb4d',1,'MyLibrary']]],
-  ['body_7',['body',['../d4/de5/classif_a_s_t.html#ad53f5175880acad1746dfbefbc6802b8',1,'ifAST::body()'],['../d4/dae/classwhile_a_s_t.html#a123dcc7f109362d2576a10deaabe9800',1,'whileAST::body()']]]
+  ['body_6',['body',['../d4/de5/classif_a_s_t.html#ad53f5175880acad1746dfbefbc6802b8',1,'ifAST::body()'],['../d4/dae/classwhile_a_s_t.html#a123dcc7f109362d2576a10deaabe9800',1,'whileAST::body()']]]
 ];
