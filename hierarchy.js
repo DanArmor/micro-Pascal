@@ -18,9 +18,6 @@ var hierarchy =
       [ "ifAST", "d4/de5/classif_a_s_t.html", null ],
       [ "whileAST", "d4/dae/classwhile_a_s_t.html", null ]
     ] ],
-    [ "MyLibrary::Example", "d4/d17/class_my_library_1_1_example.html", [
-      [ "MyLibrary::SubclassExample", "d7/d0a/class_my_library_1_1_subclass_example.html", null ]
-    ] ],
     [ "IToken", "d0/d11/class_i_token.html", [
       [ "Token", "db/dc1/class_token.html", null ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]

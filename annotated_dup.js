@@ -1,9 +1,5 @@
 var annotated_dup =
 [
-    [ "MyLibrary", "d5/d34/namespace_my_library.html", [
-      [ "Example", "d4/d17/class_my_library_1_1_example.html", "d4/d17/class_my_library_1_1_example" ],
-      [ "SubclassExample", "d7/d0a/class_my_library_1_1_subclass_example.html", "d7/d0a/class_my_library_1_1_subclass_example" ]
-    ] ],
     [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
     [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ],
     [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", "d2/dc9/class_bin_op_a_s_t" ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['doxygen_20awesome_0',['Doxygen Awesome',['../d7/daf/md_docs_themes__r_e_a_d_m_e.html',1,'']]]
+  ['диаграмма_20объектов_2e_0',['Диаграмма объектов.',['../d2/d22/md_schemes_scheme.html',1,'']]]
 ];
