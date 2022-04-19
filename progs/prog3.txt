@@ -1,0 +1,5 @@
+PROGRAM TEST;
+VAR
+    x, y : INTEGER;
+BEGIN
+END.

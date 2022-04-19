@@ -101,7 +101,7 @@ void GraphvizVisitor::visit(CompoundAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
-    for(auto child : node.children){
+    for(auto &child : node.children){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
@@ -151,11 +151,11 @@ void GraphvizVisitor::visit(BlockAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
-    for(auto child : node.declarations){
+    for(auto &child : node.declarations){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
-    for(auto child : node.consts){
+    for(auto &child : node.consts){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
@@ -200,7 +200,7 @@ void GraphvizVisitor::visit(CallAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
-    for(auto child : node.params){
+    for(auto &child : node.params){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
@@ -251,7 +251,7 @@ void TypeViewVisitor::visit(NumberAST &node){
 
 void TypeViewVisitor::visit(CompoundAST &node){
     typesStrings.push_back(node.token.getStr());
-    for(auto child : node.children){
+    for(auto &child : node.children){
         child->accept(*this);
     }
 }
@@ -277,10 +277,10 @@ void TypeViewVisitor::visit(ProgramAST &node){
 
 void TypeViewVisitor::visit(BlockAST &node){
     typesStrings.push_back(node.token.getStr());
-    for(auto child : node.consts){
+    for(auto &child : node.consts){
         child->accept(*this);
     }
-    for(auto child : node.declarations){
+    for(auto &child : node.declarations){
         child->accept(*this);
     }
     node.compound->accept(*this);
@@ -308,7 +308,7 @@ void TypeViewVisitor::visit(StringAST &node){
 
 void TypeViewVisitor::visit(CallAST &node){
     typesStrings.push_back(node.token.getStr());
-    for(auto child : node.params){
+    for(auto &child : node.params){
         child->accept(*this);
     }
 }
@@ -366,7 +366,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void CodeGenVisitor::visit(CompoundAST &node){
-        for(auto child : node.children){
+        for(auto &child : node.children){
             child->accept(*this);
         }
     }
@@ -398,7 +398,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         file << "\n";
         if(node.consts.size() != 0){
             file << ".data" << "\n";
-            for(auto child : node.consts){
+            for(auto &child : node.consts){
                 child->accept(*this);
             }
         }

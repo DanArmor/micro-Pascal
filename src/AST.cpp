@@ -35,8 +35,8 @@ void NumberAST::accept(IVisitor &visitor){
 ==================*/
 CompoundAST::CompoundAST() : AST({"COMPOUND", IToken::EMPTY}) {};
 
-void CompoundAST::addChild(ASTptr child){
-    children.push_back(child);
+void CompoundAST::addChild(AST *child){
+    children.push_back(std::unique_ptr<AST>(child));
 }
 
 void CompoundAST::accept(IVisitor &visitor){
@@ -83,11 +83,16 @@ void BlockAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-BlockAST::BlockAST(std::vector<ASTptr> consts, std::vector<ASTptr> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), consts(consts), declarations(declarations), compound(compound) {};
+BlockAST::BlockAST(std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), compound(compound) {
+    for(std::size_t i = 0; i < consts.size(); i++)
+        this->consts.push_back(std::unique_ptr<AST>(consts[i]));
+    for(std::size_t i = 0; i < declarations.size(); i++)
+        this->declarations.push_back(std::unique_ptr<AST>(declarations[i]));
+};
 
 /*Определения VarDeclAST
 ==================*/
-VarDeclAST::VarDeclAST(ASTptr var, ASTptr type) : AST({"DEFINITION", IToken::VARDECL}), var(var), type(type) {};
+VarDeclAST::VarDeclAST(ASTptr var, std::shared_ptr<AST> type) : AST({"DEFINITION", IToken::VARDECL}), var(var), type(type) {};
 
 void VarDeclAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -119,7 +124,10 @@ void StringAST::accept(IVisitor &visitor){
 
 /*Определения CallAST
 ==================*/
-CallAST::CallAST(Token token, std::vector<ASTptr> params) : AST(token), params(params){};
+CallAST::CallAST(Token token, std::vector<AST*> params) : AST(token){
+    for(std::size_t i = 0; i < params.size(); i++)
+        this->params.push_back(std::unique_ptr<AST>(params[i]));
+};
 
 void CallAST::accept(IVisitor &visitor){
     visitor.visit(*this);

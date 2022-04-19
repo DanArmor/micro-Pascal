@@ -33,7 +33,7 @@ class SyntaxAnalyzer{
 
     AST *syntaxCompoundSt(void);
 
-    std::vector<ASTptr> syntaxStList(void);
+    std::vector<AST*> syntaxStList(void);
 
     ASTptr syntaxSt(void);
 
@@ -45,9 +45,9 @@ class SyntaxAnalyzer{
 
     ASTptr syntaxBlock(void);
 
-    std::vector<ASTptr> syntaxVars(void);
+    std::vector<AST*> syntaxVars(void);
 
-    std::vector<ASTptr> syntaxVarDecl(void);
+    std::vector<AST*> syntaxVarDecl(void);
 
     ASTptr syntaxTypeSpec(void);
 
@@ -73,7 +73,7 @@ class SyntaxAnalyzer{
 
     Token &lookFoward(void);
 
-    std::vector<ASTptr> syntaxConsts(void);
+    std::vector<AST*> syntaxConsts(void);
     ASTptr syntaxConstDecl(void);
 
     void eat(IToken::Type type);

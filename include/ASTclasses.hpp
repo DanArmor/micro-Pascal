@@ -51,6 +51,7 @@ class AST{
 
     //AST();
     AST(Token token);
+    virtual ~AST() = default;
 
     virtual void accept(IVisitor &visitor) = 0;
 

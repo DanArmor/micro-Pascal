@@ -16,15 +16,15 @@ AST *SyntaxAnalyzer::syntaxProgram(void){
 
 ASTptr SyntaxAnalyzer::syntaxBlock(void){
     /* syntaxBlock ::= syntaxConsts* syntaxVars* syntaxCompoundSt */
-    std::vector<ASTptr> constsList = syntaxConsts();
-    std::vector<ASTptr> declsList = syntaxVars();
+    std::vector<AST*> constsList = syntaxConsts();
+    std::vector<AST*> declsList = syntaxVars();
     ASTptr compoundPTR = syntaxCompoundSt();
     return new BlockAST(constsList, declsList, compoundPTR);
 }
 
-std::vector<ASTptr> SyntaxAnalyzer::syntaxConsts(void){
+std::vector<AST*> SyntaxAnalyzer::syntaxConsts(void){
     /* syntaxConsts ::= 'CONST' (syntaxConstDecl ';')+ */
-    std::vector<ASTptr> constsList;
+    std::vector<AST*> constsList;
     if(getCurTok().getType() == IToken::CONST){
         eat(IToken::CONST);
         while(getCurTok().getType() == IToken::ID){
@@ -33,7 +33,6 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxConsts(void){
         }
     }
     return constsList;
-
 }
 
 ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
@@ -57,13 +56,13 @@ ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
     return new ConstAST(constNamePTR, constValPTR);
 }
 
-std::vector<ASTptr> SyntaxAnalyzer::syntaxVars(void){
+std::vector<AST*> SyntaxAnalyzer::syntaxVars(void){
     /* syntaxVars ::= 'VAR' (syntaxVarDecl ';')+ */
-    std::vector<ASTptr> declsList;
+    std::vector<AST*> declsList;
     if(getCurTok().getType() == IToken::VAR){
         eat(IToken::VAR);
         while(getCurTok().getType() == IToken::ID){
-            std::vector<ASTptr> varDeclList = syntaxVarDecl();
+            std::vector<AST*> varDeclList = syntaxVarDecl();
             for(auto varDeclPTR : varDeclList)
                 declsList.push_back(varDeclPTR);
             eat(IToken::SEMI);
@@ -72,9 +71,9 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxVars(void){
     return declsList;
 }
 
-std::vector<ASTptr> SyntaxAnalyzer::syntaxVarDecl(void){
+std::vector<AST*> SyntaxAnalyzer::syntaxVarDecl(void){
     /* syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec */
-    std::vector<ASTptr> varsList;
+    std::vector<AST*> varsList;
     varsList.push_back(new VarAST(getCurTok()));
     eat(IToken::ID);
 
@@ -86,8 +85,8 @@ std::vector<ASTptr> SyntaxAnalyzer::syntaxVarDecl(void){
 
     eat(IToken::COLON);
 
-    ASTptr typeNodePTR = syntaxTypeSpec();
-    std::vector<ASTptr> varDeclsList;
+    std::shared_ptr<AST> typeNodePTR = std::shared_ptr<AST>(syntaxTypeSpec());
+    std::vector<AST*> varDeclsList;
     for(auto var : varsList){
         varDeclsList.push_back(new VarDeclAST(var, typeNodePTR));
     }
@@ -114,7 +113,7 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
 AST *SyntaxAnalyzer::syntaxCompoundSt(void){
     /* syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END' */
     eat(IToken::BEGIN);
-    std::vector<ASTptr> stList = syntaxStList();
+    std::vector<AST*> stList = syntaxStList();
     eat(IToken::END);
 
     CompoundAST *compoundPTR = new CompoundAST();
@@ -124,10 +123,11 @@ AST *SyntaxAnalyzer::syntaxCompoundSt(void){
     return compoundPTR;
 }
 
-std::vector<ASTptr> SyntaxAnalyzer::syntaxStList(void){
+std::vector<AST*> SyntaxAnalyzer::syntaxStList(void){
     AST *stPTR = syntaxSt();
 
-    std::vector<ASTptr> stList = {stPTR};
+    std::vector<AST*> stList;
+    stList.push_back(stPTR);
 
     while(getCurTok().getType() == IToken::SEMI){
         eat(getCurTok().getType());
@@ -193,7 +193,7 @@ ASTptr SyntaxAnalyzer::syntaxCallSt(void){
     Token nameTok = getCurTok();
     eat(IToken::ID);
     eat(IToken::LPAREN);
-    std::vector<ASTptr> paramsList;
+    std::vector<AST*> paramsList;
     if(getCurTok().getType() != IToken::RPAREN){
         ASTptr paramPTR = syntaxExpr();
         paramsList.push_back(paramPTR);

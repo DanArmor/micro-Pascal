@@ -14,13 +14,6 @@ std::map<std::string, int> globalVariables;
 
 #include "PascalTokens.hpp"
 
-class Variable{
-    public:
-
-    private:
-    std::variant<int, double, char, bool> value;
-};
-
 int main(int argc, char** argv){
     if(argc != 2){
         std::cout << "Пожалуйста, введите только\033[31m название исходного файла\33[0m для разбора после названия программы\n";
@@ -33,7 +26,7 @@ int main(int argc, char** argv){
 //    for(auto tok : tokens){
 //        std::cout << fmt::format("{}     {}\n", tok.getStr(), magic_enum::enum_name(tok.getType()));
 //    }
-
+    //List<Token>  tokens{{Token("PROGRAM", IToken::PROGRAM), Token("NAME", IToken::ID), Token(";", IToken::SEMI), Token("BEGIN", IToken::BEGIN), Token("END", IToken::END), Token(".", IToken::DOT), Token("$", IToken::ENDOFSTREAM)}};
     SyntaxAnalyzer syntax(tokens);
     std::unique_ptr<AST>root(syntax.parseTokens());
 
