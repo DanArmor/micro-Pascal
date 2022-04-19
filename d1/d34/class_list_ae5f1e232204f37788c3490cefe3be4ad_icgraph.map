@@ -1,0 +1,6 @@
+<map id="List::popFront" name="List::popFront">
+<area shape="rect" id="node1" title="Удаление из начала списка" alt="" coords="160,56,261,83"/>
+<area shape="rect" id="node2" href="$d4/da4/class_queue.html#a16024826b5bf5b51591dcccb8ebf8b7d" title="Удаляет значение из головы очереди" alt="" coords="15,5,102,32"/>
+<area shape="rect" id="node3" href="$d0/d14/class_stack.html#a430417da7ea691a55ba46526425d6778" title="Удаляет значение с вершины стека" alt="" coords="17,56,100,83"/>
+<area shape="rect" id="node4" href="$d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45" title="Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка" alt="" coords="5,107,112,133"/>
+</map>

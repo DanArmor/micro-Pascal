@@ -1,0 +1,5 @@
+<map id="Stack::pick" name="Stack::pick">
+<area shape="rect" id="node1" title="Возвращает ссылку на значение на вершине стека" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8" title=" " alt="" coords="140,5,245,32"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97" title="Возвращает ссылку на данные узла" alt="" coords="293,5,377,32"/>
+</map>

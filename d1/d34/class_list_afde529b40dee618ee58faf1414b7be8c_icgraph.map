@@ -1,0 +1,8 @@
+<map id="List::popBack" name="List::popBack">
+<area shape="rect" id="node1" title="Удаление из конца списка" alt="" coords="313,81,415,108"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154" title="очищает память, выделенную под узлы списка" alt="" coords="173,56,251,83"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45" title="Безопасная функция для удаления, т.к. учитывается изменение указателя на начало и конец списка" alt="" coords="159,107,265,133"/>
+<area shape="rect" id="node3" href="$d1/d34/class_list.html#a18f2ee8a1d7f0e262070efc561a81bfb" title="Конструктор из другого списка" alt="" coords="22,5,94,32"/>
+<area shape="rect" id="node4" href="$d1/d34/class_list.html#afb55438b3b6d88e618481384e2bdd40e" title=" " alt="" coords="5,56,111,83"/>
+<area shape="rect" id="node5" href="$d1/d34/class_list.html#a2b58189090f6e5ce52939c9195e59e85" title="Деструктор" alt="" coords="19,107,97,133"/>
+</map>

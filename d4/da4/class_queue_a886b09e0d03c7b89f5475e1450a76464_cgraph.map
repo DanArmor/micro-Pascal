@@ -1,0 +1,5 @@
+<map id="Queue::pick" name="Queue::pick">
+<area shape="rect" id="node1" title="Возвращает ссылку на значение в главе очереди" alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8" title=" " alt="" coords="144,5,249,32"/>
+<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97" title="Возвращает ссылку на данные узла" alt="" coords="297,5,381,32"/>
+</map>

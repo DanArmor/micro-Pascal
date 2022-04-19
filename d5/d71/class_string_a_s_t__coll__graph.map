@@ -1,0 +1,6 @@
+<map id="StringAST" name="StringAST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,247,88,273"/>
+<area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="23,171,71,197"/>
+<area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="17,81,76,108"/>
+<area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="15,5,78,32"/>
+</map>

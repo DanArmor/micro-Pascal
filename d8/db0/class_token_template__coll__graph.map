@@ -1,0 +1,4 @@
+<map id="TokenTemplate" name="TokenTemplate">
+<area shape="rect" id="node1" title="Класс, представляющий шаблон токена" alt="" coords="5,80,117,107"/>
+<area shape="rect" id="node2" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="30,5,93,32"/>
+</map>

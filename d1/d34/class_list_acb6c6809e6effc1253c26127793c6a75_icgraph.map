@@ -1,0 +1,4 @@
+<map id="List::pushFront" name="List::pushFront">
+<area shape="rect" id="node1" title="Вставка в начало списка" alt="" coords="144,5,252,32"/>
+<area shape="rect" id="node2" href="$d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e" title="Кладет значение на вершину стека" alt="" coords="5,5,96,32"/>
+</map>
