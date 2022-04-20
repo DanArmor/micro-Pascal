@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('dd/d5d/_lexer_8cpp.html','../../'); in
 
 <p class="definition">См. определение в файле <a class="el" href="../../dd/d5d/_lexer_8cpp_source.html">Lexer.cpp</a> строка <a class="el" href="../../dd/d5d/_lexer_8cpp_source.html#l00060">60</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>                                              {</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">int</span> s = str.find_first_not_of(<span class="stringliteral">&quot; \t\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>    std::size_t <span class="keyword">const</span> s = str.find_first_not_of(<span class="stringliteral">&quot; \t\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> s;</div>
 <div class="line"><span class="lineno">   63</span>}</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

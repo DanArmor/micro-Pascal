@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../da/d5a/class_lexer.html#ad7f60235e0e2ceb2a4536237e0a07830" target="_top" xlink:title="Добавляет в шаблоны для определения токена новый шаблон">
+<g id="a_node2"><a xlink:href="../../da/d5a/class_lexer.html#a631e3b1ed369600a9c0b05fe568255f1" target="_top" xlink:title="Добавляет в шаблоны для определения токена новый шаблон">
 <polygon fill="none" stroke="black" points="216,-190.5 216,-209.5 329,-209.5 329,-190.5 216,-190.5"/>
 <text text-anchor="middle" x="272.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::addTokenTemp</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../da/d5a/class_lexer.html#afcb6ff36e1b746fec7df3a9ea7f63fff" target="_top" xlink:title="Анализирует файл">
+<g id="a_node4"><a xlink:href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" target="_top" xlink:title="Анализирует файл">
 <polygon fill="none" stroke="black" points="77,-152.5 77,-171.5 170,-171.5 170,-152.5 77,-152.5"/>
 <text text-anchor="middle" x="123.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::analyzeFile</text>
 </a>

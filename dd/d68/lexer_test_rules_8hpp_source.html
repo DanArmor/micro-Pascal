@@ -98,18 +98,18 @@ $(document).ready(function(){initNavTree('dd/d68/lexer_test_rules_8hpp_source.ht
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>         <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;TokenTemplate&gt;</a> templates = {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                std::vector&lt;TokenTemplate&gt;{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                {<span class="stringliteral">&quot;^\\s*\\+&quot;</span>, IToken::Type::PLUS},</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                {<span class="stringliteral">&quot;^\\s*\\-&quot;</span>, IToken::Type::MINUS},</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                {<span class="stringliteral">&quot;^\\s*\\*&quot;</span>, IToken::Type::MUL},</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                {<span class="stringliteral">&quot;^\\s*\\/&quot;</span>, IToken::Type::FLOAT_DIV},</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                {<span class="stringliteral">&quot;^\\s*\\+&quot;</span>, IToken::Type::PLUS, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                {<span class="stringliteral">&quot;^\\s*\\-&quot;</span>, IToken::Type::MINUS, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                {<span class="stringliteral">&quot;^\\s*\\*&quot;</span>, IToken::Type::MUL, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                {<span class="stringliteral">&quot;^\\s*\\/&quot;</span>, IToken::Type::FLOAT_DIV, IToken::AdvType::OPERATOR},</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                {<span class="stringliteral">&quot;^\\s*\\(&quot;</span>, IToken::Type::LPAREN},</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                {<span class="stringliteral">&quot;^\\s*\\)&quot;</span>, IToken::Type::RPAREN},</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                {<span class="stringliteral">&quot;^\\s*\\(&quot;</span>, IToken::Type::LPAREN, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                {<span class="stringliteral">&quot;^\\s*\\)&quot;</span>, IToken::Type::RPAREN, IToken::AdvType::OPERATOR},</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                {<span class="stringliteral">&quot;^\\s*\\=&quot;</span>, IToken::Type::EQ},</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                {<span class="stringliteral">&quot;^\\s*\\=&quot;</span>, IToken::Type::EQ, IToken::AdvType::OPERATOR},</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+&quot;</span>, IToken::Type::INTEGER_CONST},</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+\\.[0-9]*&quot;</span>, IToken::Type::REAL_CONST},</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+&quot;</span>, IToken::Type::INTEGER_CONST, IToken::AdvType::SOME_CONST},</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+\\.[0-9]*&quot;</span>, IToken::Type::REAL_CONST, IToken::AdvType::SOME_CONST},</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        };</div>

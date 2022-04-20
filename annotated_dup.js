@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
     [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ],
+    [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
     [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", "d2/dc9/class_bin_op_a_s_t" ],
     [ "BlockAST", "d0/de0/class_block_a_s_t.html", "d0/de0/class_block_a_s_t" ],
     [ "CallAST", "da/dd1/class_call_a_s_t.html", "da/dd1/class_call_a_s_t" ],

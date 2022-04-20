@@ -1,6 +1,6 @@
 <map id="TEST" name="TEST">
 <area shape="rect" id="node1" title="Тест разбора средней программы на Pascal." alt="" coords="5,233,60,260"/>
-<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#afcb6ff36e1b746fec7df3a9ea7f63fff" title="Анализирует файл" alt="" coords="156,157,280,184"/>
+<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="156,157,280,184"/>
 <area shape="rect" id="node12" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,208,328,235"/>
 <area shape="rect" id="node13" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="149,259,287,285"/>
 <area shape="rect" id="node14" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="181,309,255,336"/>

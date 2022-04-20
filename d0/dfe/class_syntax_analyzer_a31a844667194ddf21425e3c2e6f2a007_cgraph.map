@@ -1,8 +1,12 @@
 <map id="SyntaxAnalyzer::syntaxVars" name="SyntaxAnalyzer::syntaxVars">
-<area shape="rect" id="node1" title=" " alt="" coords="5,58,185,85"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a5d17bcae2fd7dc11d0710e046c4c3280" title=" " alt="" coords="739,109,873,135"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="932,33,1108,59"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a3106ad7f9a5cf50b2c277c28401422ec" title=" " alt="" coords="233,58,432,85"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="921,109,1119,135"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a59b8fda4a98347e67033502aec8d2e4f" title=" " alt="" coords="480,58,691,85"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,41,185,68"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="751,92,885,118"/>
+<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="956,142,1132,169"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a3106ad7f9a5cf50b2c277c28401422ec" title=" " alt="" coords="233,168,432,194"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="945,92,1143,118"/>
+<area shape="rect" id="node6" href="$d7/d7c/class_a_s_t_factory.html#a64619ed3c409fbb187debf67bc39d484" title=" " alt="" coords="739,244,897,270"/>
+<area shape="rect" id="node9" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title=" " alt="" coords="517,294,654,321"/>
+<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a59b8fda4a98347e67033502aec8d2e4f" title=" " alt="" coords="480,193,691,220"/>
+<area shape="rect" id="node7" href="$d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb" title=" " alt="" coords="975,218,1113,245"/>
+<area shape="rect" id="node8" href="$d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" title="Получение типа токена" alt="" coords="987,269,1101,296"/>
 </map>

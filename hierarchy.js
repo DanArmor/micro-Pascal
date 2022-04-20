@@ -18,6 +18,7 @@ var hierarchy =
       [ "ifAST", "d4/de5/classif_a_s_t.html", null ],
       [ "whileAST", "d4/dae/classwhile_a_s_t.html", null ]
     ] ],
+    [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
     [ "IToken", "d0/d11/class_i_token.html", [
       [ "Token", "db/dc1/class_token.html", null ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]

@@ -19,6 +19,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "whileAST", "d4/dae/classwhile_a_s_t.html", "d4/dae/classwhile_a_s_t" ]
     ] ],
     [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", "d8/de6/_a_s_tclasses_8hpp" ],
+    [ "ASTFactory.hpp", "d4/d0d/_a_s_t_factory_8hpp.html", [
+      [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ]
+    ] ],
     [ "Lexer.hpp", "d5/d24/_lexer_8hpp.html", [
       [ "Lexer", "da/d5a/class_lexer.html", "da/d5a/class_lexer" ]
     ] ],

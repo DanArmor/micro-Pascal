@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../da/d5a/class_lexer.html#afcb6ff36e1b746fec7df3a9ea7f63fff" target="_top" xlink:title="Анализирует файл">
+<g id="a_node2"><a xlink:href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" target="_top" xlink:title="Анализирует файл">
 <polygon fill="none" stroke="black" points="77,-19.5 77,-38.5 170,-38.5 170,-19.5 77,-19.5"/>
 <text text-anchor="middle" x="123.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::analyzeFile</text>
 </a>

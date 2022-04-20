@@ -1,6 +1,6 @@
 <map id="Lexer::analyzeProgramText" name="Lexer::analyzeProgramText">
 <area shape="rect" id="node1" title="Анализирует текст программы" alt="" coords="280,31,457,57"/>
-<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#afcb6ff36e1b746fec7df3a9ea7f63fff" title="Анализирует файл" alt="" coords="108,31,232,57"/>
+<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="108,31,232,57"/>
 <area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="7,5,58,32"/>
 <area shape="rect" id="node4" href="$d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" title="Тест разбора простых математических выражений" alt="" coords="5,56,60,83"/>
 </map>

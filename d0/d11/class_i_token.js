@@ -9,6 +9,8 @@ var class_i_token =
       [ "TYPE_SPEC", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757", null ],
       [ "NOTPROCESS", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a824a11e013632c4a8ebcdda4238dd7c5", null ],
       [ "PROGRAM_NAME", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5", null ],
+      [ "VARDECL", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca", null ],
+      [ "CONSTDECL", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20", null ],
       [ "UNKNOWN", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678", null ]
     ] ],
     [ "Type", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a", [
@@ -16,7 +18,6 @@ var class_i_token =
       [ "ENDOFSTREAM", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599", null ],
       [ "EMPTY", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017", null ],
       [ "BLOCK", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b", null ],
-      [ "VARDECL", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2147f02d1f87da6c5c33a9797a8a52ca", null ],
       [ "PROGSTART", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa54ae96197e2c75bd51695d5db21a2b03", null ],
       [ "TERMINATE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaaf1ae5512440f4f428cb1553db3d6296", null ],
       [ "NEWLINE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833", null ],
