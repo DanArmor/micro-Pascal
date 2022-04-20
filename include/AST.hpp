@@ -58,7 +58,6 @@ class CompoundAST : public AST{
     void accept(IVisitor &visitor);
 
     std::vector<std::unique_ptr<AST>> children;
-
 };
 
 /// @brief Узел, содержащий бинарную операцию

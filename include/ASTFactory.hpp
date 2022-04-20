@@ -15,13 +15,15 @@ class ASTFactory{
             case IToken::INTEGER_CONST: return new NumberAST(token);
             case IToken::REAL_CONST: return new NumberAST(token);
             case IToken::ID: return new VarAST(token);
+            case IToken::EMPTY: return new NoOpAST(token);
         }
     }
 
     static AST *createAST(Token token, AST *first){
-        switch (token.getType()){
-            case IToken::PROGRAM : return new ProgramAST(token, first);
-        }
+        if(token.getAdvType() == IToken::OPERATOR)
+            return new UnOpAST(token, first);
+        else if(token.getAdvType() == IToken::PROGSTART)
+            return new ProgramAST(token, first);
     }
 
     static AST *createAST(Token token, AST *first, AST *second){
@@ -36,11 +38,25 @@ class ASTFactory{
         }
     }
 
+    static AST *createAST(Token token, AST *first, AST *second, AST *third){
+        switch(token.getType()){
+            case IToken::IF : return new ifAST(first, second, third);
+        }
+    }
+
     static AST *createAST(Token token, std::vector<AST*> params){
+        switch (token.getAdvType()){
+            case IToken::AdvType::COMPOUND : {
+                CompoundAST *compound = new CompoundAST();
+                for(auto &ptr : params)
+                    compound->addChild(ptr);
+                return compound;
+            }
+        }
         return new CallAST(token, params);
     }
 
-    static AST *createAST(Token token, std::vector<AST*> constsDecls, std::vector<AST*> varDecls, AST *compound){
+    static AST *createAST(std::vector<AST*> constsDecls, std::vector<AST*> varDecls, AST *compound){
         return new BlockAST(constsDecls, varDecls, compound);
     }
 

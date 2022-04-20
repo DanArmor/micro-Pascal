@@ -21,6 +21,8 @@ class IToken{
         PROGRAM_NAME,
         VARDECL, ///< Объявление переменной
         CONSTDECL, ///< Объявление константы
+        COMPOUND,
+        PROGSTART, ///< Старт программы
         UNKNOWN
     };
 
@@ -29,7 +31,6 @@ class IToken{
         ENDOFSTREAM, ///< Конец потока токенов (конец файла)
         EMPTY, ///< Пустое выражение
         BLOCK, ///< Блок
-        PROGSTART, ///< Старт программы
         TERMINATE, ///< Неявная замена SEMI
         NEWLINE,
         COMMENT,
@@ -99,6 +100,7 @@ class IToken{
      * @param[in] type тип токена
      */
     IToken(Type type);
+    IToken(AdvType type) : advType(type){};
     IToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
@@ -132,8 +134,11 @@ class Token : public IToken{
      * @param[in] str строка, представляющая токен
      * @param[in] type тип токена
      */
+    Token(IToken::AdvType type) : IToken(type){};
+    Token(IToken::Type type) : IToken(type){};
     Token(std::string str) : str(str){};
     Token(std::string str, Type type);
+    Token(std::string str, AdvType type) : str(str), IToken(type){};
     Token(std::string str, Type type, std::size_t lineNum);
 
     Token(std::string str, Type type, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos);

@@ -77,6 +77,7 @@ class SyntaxAnalyzer{
     ASTptr syntaxConstDecl(void);
 
     void eat(IToken::Type const type);
+    void eatAdv(IToken::AdvType const type);
 
     private:
     List<Token> tokens;
