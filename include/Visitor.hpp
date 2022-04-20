@@ -225,7 +225,7 @@ class CodeGenVisitor : public IVisitor{
     std::fstream file;
 };
 
-/// @brief Посетитель-кодовый генератор
+/// @brief Посетитель подсветки синтаксиса
 class HighlightAccurateVisitor : public IVisitor{
     public:
 

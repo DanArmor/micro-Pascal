@@ -1,4 +1,7 @@
 PROGRAM TEST;
+CONST
+    a = 10;
+    str = 'hello world';
 VAR {comment}
     x, y : INTEGER;
     z : REAL;

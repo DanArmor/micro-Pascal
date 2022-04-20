@@ -19,6 +19,8 @@ class IToken{
         TYPE_SPEC,
         NOTPROCESS,
         PROGRAM_NAME,
+        VARDECL, ///< Объявление переменной
+        CONSTDECL, ///< Объявление константы
         UNKNOWN
     };
 
@@ -27,7 +29,6 @@ class IToken{
         ENDOFSTREAM, ///< Конец потока токенов (конец файла)
         EMPTY, ///< Пустое выражение
         BLOCK, ///< Блок
-        VARDECL, ///< Объявление переменной
         PROGSTART, ///< Старт программы
         TERMINATE, ///< Неявная замена SEMI
         NEWLINE,
@@ -131,6 +132,7 @@ class Token : public IToken{
      * @param[in] str строка, представляющая токен
      * @param[in] type тип токена
      */
+    Token(std::string str) : str(str){};
     Token(std::string str, Type type);
     Token(std::string str, Type type, std::size_t lineNum);
 

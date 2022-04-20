@@ -76,7 +76,7 @@ class SyntaxAnalyzer{
     std::vector<AST*> syntaxConsts(void);
     ASTptr syntaxConstDecl(void);
 
-    void eat(IToken::Type type);
+    void eat(IToken::Type const type);
 
     private:
     List<Token> tokens;

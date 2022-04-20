@@ -123,12 +123,12 @@ class BlockAST : public AST{
 
 class VarDeclAST : public AST{
     public:
-    VarDeclAST(ASTptr var, std::shared_ptr<AST> type);
+    VarDeclAST(AST *var, AST *type);
     ~VarDeclAST() = default;
     void accept(IVisitor &visitor);
 
     std::unique_ptr<AST> var;
-    std::shared_ptr<AST> type;
+    std::unique_ptr<AST> type;
 };
 
 class TypeSpecAST : public AST{

@@ -38,18 +38,22 @@ void highlight(std::string text, List<Token> tokens){
         }
         std::cout << text[i];
     }
-    std::cout << "\n";
+    std::cout << "\033[0m\n";
 
 }
 
 int main(int argc, char** argv){
+
     if(argc != 2){
         std::cout << "Пожалуйста, введите только\033[31m название исходного файла\33[0m для разбора после названия программы\n";
         exit(1);
     }
+
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile(argv[1]);
+
+
 //    for(auto tok : tokens){
 //        std::cout << fmt::format("Str:{} Type:{}\nLine:{} InLinePos:{} Absolute:{}\n\n", tok.getStr(), magic_enum::enum_name(tok.getType()), std::to_string(tok.line()), std::to_string(tok.posInLine()), std::to_string(tok.pos()));
 //    }
@@ -59,6 +63,7 @@ int main(int argc, char** argv){
 //    }
     //List<Token>  tokens{{Token("PROGRAM", IToken::PROGRAM), Token("NAME", IToken::ID), Token(";", IToken::SEMI), Token("BEGIN", IToken::BEGIN), Token("END", IToken::END), Token(".", IToken::DOT), Token("$", IToken::ENDOFSTREAM)}};
     
+    
     SyntaxAnalyzer syntax(tokens);
     std::unique_ptr<AST>root(syntax.parseTokens());
 
@@ -66,10 +71,12 @@ int main(int argc, char** argv){
     root->accept(hl);
 
     highlight(lexer.getText(), hl.getTokens());
+
+
 //
-//    GraphvizVisitor graph("out.dot");
-//    root->accept(graph);
-//    graph.write();
+    GraphvizVisitor graph("out.dot");
+    root->accept(graph);
+    graph.write();
 
 //    CodeGenVisitor code("test.s");
 //    root->accept(code);

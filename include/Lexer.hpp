@@ -24,13 +24,13 @@ class Lexer{
      * @param regStr regex-строка для определения токена 
      * @param type тип токена
      */
-    void addTokenTemp(std::string regStr, IToken::Type type, IToken::AdvType advType);
+    void addTokenTemp(std::string const &regStr, IToken::Type const type, IToken::AdvType const advType);
 
     /**
      * @brief Добавляет в шаблоны для определения токена новый шаблон
      * @param tokenTemp шаблон токена
      */
-    void addTokenTemp(TokenTemplate tokenTemp);
+    void addTokenTemp(TokenTemplate const &tokenTemp);
 
     /**
      * @brief Устанавливает шаблоны токенов для разбора лексером
@@ -47,7 +47,7 @@ class Lexer{
      * @brief Анализирует файл
      * @param fileName имя файла для анализа
      */
-    List<Token> analyzeFile(std::string fileName);
+    List<Token> analyzeFile(std::string const &fileName);
 
     /**
      * @brief Анализирует текст программы

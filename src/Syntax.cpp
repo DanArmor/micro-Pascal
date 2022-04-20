@@ -1,5 +1,5 @@
 #include "Syntax.hpp"
-
+#include "ASTFactory.hpp"
 
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
@@ -39,11 +39,12 @@ ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
     /* syntaxConstDecl ::= '<ID>' '=' ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>') */
     ASTptr constNamePTR = new VarAST(getCurTok());
     eat(IToken::ID);
-
     eat(IToken::EQ);
 
-    ASTptr constValPTR;
     Token constValTok = getCurTok();
+    constValTok.setAdvType(IToken::AdvType::CONSTDECL);
+
+    ASTptr constValPTR;
     if(isIn(getCurTok().getType(), {IToken::INTEGER_CONST, IToken::REAL_CONST, IToken::STRING_CONST})){
         if(isIn(getCurTok().getType(), {IToken::INTEGER_CONST, IToken::REAL_CONST})){
             constValPTR = new NumberAST(constValTok);
@@ -53,7 +54,7 @@ ASTptr SyntaxAnalyzer::syntaxConstDecl(void){
         eat(getCurTok().getType());
     }
 
-    return new ConstAST(constNamePTR, constValPTR);
+    return ASTFactory::createAST(constValTok, constNamePTR, constValPTR);
 }
 
 std::vector<AST*> SyntaxAnalyzer::syntaxVars(void){
@@ -74,21 +75,23 @@ std::vector<AST*> SyntaxAnalyzer::syntaxVars(void){
 std::vector<AST*> SyntaxAnalyzer::syntaxVarDecl(void){
     /* syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec */
     std::vector<AST*> varsList;
-    varsList.push_back(new VarAST(getCurTok()));
+    varsList.push_back(ASTFactory::createAST(getCurTok()));
     eat(IToken::ID);
 
     while(getCurTok().getType() == IToken::COMMA){
         eat(IToken::COMMA);
-        varsList.push_back(new VarAST(getCurTok()));
+        varsList.push_back(ASTFactory::createAST(getCurTok()));
         eat(IToken::ID);
     }
-
     eat(IToken::COLON);
 
-    std::shared_ptr<AST> typeNodePTR = std::shared_ptr<AST>(syntaxTypeSpec());
+    std::unique_ptr<AST> typeNodePTR(syntaxTypeSpec());
+    Token varDeclTok = typeNodePTR->token;
+    varDeclTok.setAdvType(IToken::AdvType::VARDECL);
+
     std::vector<AST*> varDeclsList;
     for(auto var : varsList){
-        varDeclsList.push_back(new VarDeclAST(var, typeNodePTR));
+        varDeclsList.push_back(ASTFactory::createAST(varDeclTok, var, ASTFactory::createAST(typeNodePTR->token)));
     }
     return varDeclsList;
 }
@@ -107,7 +110,7 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
             throw std::invalid_argument(fmt::format("Ожидалось объявление типа, а получен токен типа \033[31m {}\033[0m", getCurTok().getInfo()));
             break;
     }
-    return new TypeSpecAST(typeTok);
+    return ASTFactory::createAST(typeTok);
 }
 
 AST *SyntaxAnalyzer::syntaxCompoundSt(void){
@@ -345,7 +348,7 @@ Token &SyntaxAnalyzer::lookFoward(void){
     return tokens[currentIndex + 1];
 }
 
-void SyntaxAnalyzer::eat(IToken::Type type){
+void SyntaxAnalyzer::eat(IToken::Type const type){
     if(getCurTok().getType() == type){
         getNextToken();
     } else{

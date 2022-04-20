@@ -92,7 +92,7 @@ BlockAST::BlockAST(std::vector<AST*> consts, std::vector<AST*> declarations, AST
 
 /*Определения VarDeclAST
 ==================*/
-VarDeclAST::VarDeclAST(ASTptr var, std::shared_ptr<AST> type) : AST({"DEFINITION", IToken::VARDECL}), var(var), type(type) {};
+VarDeclAST::VarDeclAST(AST *var, AST *type) : AST({"DEFINITION"}), var(var), type(type) {};
 
 void VarDeclAST::accept(IVisitor &visitor){
     visitor.visit(*this);
