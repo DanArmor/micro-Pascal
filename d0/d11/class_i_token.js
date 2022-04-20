@@ -11,6 +11,8 @@ var class_i_token =
       [ "PROGRAM_NAME", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5", null ],
       [ "VARDECL", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca", null ],
       [ "CONSTDECL", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20", null ],
+      [ "COMPOUND", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3abc1ad0cad7d13bba1722e76b7b2a28c4", null ],
+      [ "PROGSTART", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a54ae96197e2c75bd51695d5db21a2b03", null ],
       [ "UNKNOWN", "d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678", null ]
     ] ],
     [ "Type", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a", [
@@ -18,7 +20,6 @@ var class_i_token =
       [ "ENDOFSTREAM", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599", null ],
       [ "EMPTY", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017", null ],
       [ "BLOCK", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b", null ],
-      [ "PROGSTART", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa54ae96197e2c75bd51695d5db21a2b03", null ],
       [ "TERMINATE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaaf1ae5512440f4f428cb1553db3d6296", null ],
       [ "NEWLINE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833", null ],
       [ "COMMENT", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304", null ],
@@ -69,6 +70,7 @@ var class_i_token =
     ] ],
     [ "IToken", "d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af", null ],
     [ "IToken", "d0/d11/class_i_token.html#a901cd3ac25400a1c3c440be68306a3c8", null ],
+    [ "IToken", "d0/d11/class_i_token.html#a03960116e3308c12cf7eb8cd4de4b4da", null ],
     [ "IToken", "d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac", null ],
     [ "getAdvType", "d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb", null ],
     [ "getType", "d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092", null ],

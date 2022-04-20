@@ -2,6 +2,7 @@ var class_syntax_analyzer =
 [
     [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html#af6b77f480424fc5b2db7f5ab761709c6", null ],
     [ "eat", "d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0", null ],
+    [ "eatAdv", "d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae", null ],
     [ "getCurTok", "d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374", null ],
     [ "getNextToken", "d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe", null ],
     [ "lookFoward", "d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa", null ],

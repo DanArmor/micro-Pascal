@@ -1,7 +1,7 @@
 <map id="SyntaxAnalyzer::syntaxTypeSpec" name="SyntaxAnalyzer::syntaxTypeSpec">
 <area shape="rect" id="node1" title=" " alt="" coords="5,107,216,133"/>
 <area shape="rect" id="node2" href="$d7/d7c/class_a_s_t_factory.html#a64619ed3c409fbb187debf67bc39d484" title=" " alt="" coords="264,56,423,83"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="276,157,411,184"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="265,157,422,184"/>
 <area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="481,107,657,133"/>
 <area shape="rect" id="node3" href="$d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb" title=" " alt="" coords="501,5,638,32"/>
 <area shape="rect" id="node4" href="$d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" title="Получение типа токена" alt="" coords="512,56,627,83"/>

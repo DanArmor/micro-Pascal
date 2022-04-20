@@ -35,9 +35,9 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="203,-0.5 203,-19.5 304,-19.5 304,-0.5 203,-0.5"/>
-<text text-anchor="middle" x="253.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eat</text>
+<g id="a_node5"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="194.5,-0.5 194.5,-19.5 312.5,-19.5 312.5,-0.5 194.5,-0.5"/>
+<text text-anchor="middle" x="253.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eatAdv</text>
 </a>
 </g>
 </g>
@@ -110,8 +110,8 @@
 <!-- Node5&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node5&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M304.3,-10C315.12,-10 326.84,-10 338.56,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="338.83,-13.5 348.83,-10 338.83,-6.5 338.83,-13.5"/>
+<path fill="none" stroke="midnightblue" d="M312.61,-10C321.13,-10 330.03,-10 338.92,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="338.94,-13.5 348.94,-10 338.94,-6.5 338.94,-13.5"/>
 </g>
 </g>
 </svg>
