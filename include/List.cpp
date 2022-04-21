@@ -10,6 +10,7 @@
  */
 
 #include <cstddef>
+#include <initializer_list>
 #include <vector>
 #include <stdexcept>
 #include <iterator>
@@ -39,7 +40,7 @@ class Node{
     Node() : innerData(nullptr), nextPtr(nullptr), prevPtr(nullptr){};
 
     /// @brief Конструктор из значения
-    Node(U const value) : nextPtr(nullptr), prevPtr(nullptr){
+    explicit Node(U const value) : nextPtr(nullptr), prevPtr(nullptr){
         innerData = value;
     }
 
@@ -118,7 +119,7 @@ struct NodeIterator{
     using iterator_category = std::bidirectional_iterator_tag;
 
     /// @brief Конструктор из указателя 
-    NodeIterator(Node<T> *inPtr) : ptr(inPtr){};
+    explicit NodeIterator(Node<T> *inPtr) : ptr(inPtr){};
 
     /// @brief Конструктор для двунаправленного узла
     NodeIterator(Node<T> *inPtr, bool isEnd) : ptr(inPtr){
@@ -183,15 +184,22 @@ class List{
     /// @brief Конструктор по-умолчанию
     List() : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {};
 
-    /// @brief Конструктор из вектора
-    List(std::vector<T> const &initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
+    /// @brief Конструктор из initializer_list
+    List(std::initializer_list<T> const &initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
+        for(auto value : initData)
+            pushBack(value);
+        sizeOfList = initData.size();
+    }
+
+    /// @brief Конструктор из initializer_list
+    explicit List(std::vector<T> const &initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
         for(auto value : initData)
             pushBack(value);
         sizeOfList = initData.size();
     }
 
     /// @brief Конструктор из размера
-    List(std::size_t n) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
+    explicit List(std::size_t n) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
         for(std::size_t i = 0; i < n; i++)
             pushBack(T{});
         sizeOfList = n;
@@ -300,7 +308,7 @@ class List{
     }
 
     /// @brief очищает память, выделенную под узлы списка
-    void clear(void) noexcept{
+    void clear(void){
         std::size_t toClear = sizeOfList;
         for(std::size_t i = 0; i < toClear; i++)
             popBack();
@@ -323,6 +331,7 @@ class List{
         clear();
         for(auto x : list)
             pushBack(x);
+        sizeOfList = list.sizeOfList;
 
         return *this;
     }

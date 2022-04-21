@@ -39,14 +39,14 @@ TEST(LIST_SIMPLE_TESTS, Create_vector_values){
 /// @brief Тест конструктора из размера
 TEST(LIST_SIMPLE_TESTS, Create_size){
     std::vector<int> testData = {0, 0, 0};
-    List<int> list{3};
+    List<int> list(3);
     EXPECT_EQ(list.size(), testData.size());
 }
 
 /// @brief Тест конструктора из размера значений
 TEST(LIST_SIMPLE_TESTS, Create_size_values){
     std::vector<int> testData = {0, 0, 0};
-    List<int> list{3};
+    List<int> list(3);
     for(std::size_t i = 0; i < testData.size(); i++)
         EXPECT_EQ(list[i], testData[i]);
 }
@@ -253,7 +253,7 @@ TEST(LIST_AND_STL, algorithm_generate){
 }
 
 TEST(LIST_AND_STL, algorithm_reverse){
-    List<int> list{5};
+    List<int> list(5);
     std::generate(list.begin(), list.end(), [n = 0] () mutable {return n++;});
     std::vector<int> checkData = {4, 3, 2, 1, 0};
     std::reverse(list.begin(), list.end());
@@ -265,7 +265,7 @@ TEST(LIST_AND_STL, algorithm_reverse){
 }
 
 TEST(LIST_AND_STL, algorithm_iota){
-    List<int> list{5};
+    List<int> list(5);
     std::iota(list.begin(), list.end(), 0);
     std::vector<int> checkData = {0, 1, 2, 3, 4};
     for(std::size_t i = 0; i < list.size(); i++)
@@ -273,13 +273,13 @@ TEST(LIST_AND_STL, algorithm_iota){
 }
 
 TEST(LIST_AND_STL, algorithm_find){
-    List<int> list{100};
+    List<int> list(100);
     std::iota(list.begin(), list.end(), 0);
     EXPECT_NE(std::find(list.begin(), list.end(), 50), list.end());
 }
 
 TEST(LIST_AND_STL, algorithm_find_and_distance){
-    List<int> list{100};
+    List<int> list(100);
     std::iota(list.begin(), list.end(), 0);
     std::size_t pos = std::distance(list.begin(), std::find(list.begin(), list.end(), 50));
     EXPECT_EQ(pos, 50);
@@ -306,7 +306,7 @@ TEST(LIST_EXCEPTIONS, throw_selector_1){
 }
 
 TEST(LIST_EXCEPTIONS, throw_selector_2){
-    List<int> list{1};
+    List<int> list(1);
     EXPECT_THROW(list.removeAt(1), std::out_of_range);
 }
 

@@ -27,7 +27,7 @@ bool isIn(T const &value, std::initializer_list<T> const &cont){
 class SyntaxAnalyzer{
 
     public:
-    SyntaxAnalyzer(List<Token> const &tokens);
+    explicit SyntaxAnalyzer(List<Token> const &tokens);
 
     AST *syntaxProgram(void);
 

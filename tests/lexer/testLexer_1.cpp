@@ -18,7 +18,7 @@
 TEST(PARSE, MATH){
     Lexer lexer;
     lexer.setTemplates(LexerTestRules::getMathRules());
-    List<Token> checkData{std::vector<Token>{
+    List<Token> checkData{
         {"1", IToken::INTEGER_CONST},
         {"+", IToken::PLUS},
         {"1", IToken::INTEGER_CONST},
@@ -40,7 +40,7 @@ TEST(PARSE, MATH){
         {"2", IToken::INTEGER_CONST},
         {")", IToken::RPAREN},
         {"$", IToken::ENDOFSTREAM},
-    }};
+    };
     List<Token> result = lexer.analyzeFile("./build/tests/text1.txt");
     EXPECT_EQ(result.size(), checkData.size());
     for(int i = 0; i < result.size(); i++){
@@ -53,7 +53,7 @@ TEST(PARSE, MATH){
 TEST(PARSE, PASCAL_SIMPLE){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> checkData{std::vector<Token>{
+    List<Token> checkData{
         {"PROGRAM", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
@@ -61,7 +61,7 @@ TEST(PARSE, PASCAL_SIMPLE){
         {"END", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
-    }};
+    };
     List<Token> result = lexer.analyzeFile("./build/tests/text2.txt");
     EXPECT_EQ(result.size(), checkData.size());
     for(int i = 0; i < result.size(); i++){
@@ -74,7 +74,7 @@ TEST(PARSE, PASCAL_SIMPLE){
 TEST(PARSE, PASCAL_MEDIUM){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> checkData{std::vector<Token>{
+    List<Token> checkData{
         {"PROGRAM", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
@@ -118,7 +118,7 @@ TEST(PARSE, PASCAL_MEDIUM){
         {"END", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
-    }};
+    };
     List<Token> result = lexer.analyzeFile("./build/tests/text3.txt");
     EXPECT_EQ(result.size(), checkData.size());
     for(int i = 0; i < result.size(); i++){
@@ -131,7 +131,7 @@ TEST(PARSE, PASCAL_MEDIUM){
 TEST(PARSE, PASCAL_HARD){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> checkData{std::vector<Token>{
+    List<Token> checkData{
         {"PROGRAM", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
@@ -172,7 +172,7 @@ TEST(PARSE, PASCAL_HARD){
         {"END", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
-    }};
+    };
     List<Token> result = lexer.analyzeFile("./build/tests/text4.txt");
     EXPECT_EQ(result.size(), checkData.size());
     for(int i = 0; i < result.size(); i++){

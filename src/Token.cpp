@@ -16,15 +16,15 @@ IToken::IToken(Type type, AdvType advType) : type(type), advType(advType){};
 
 /*Определения Token
 ==================*/
-Token::Token(){};
+Token::Token() : IToken(IToken::ERROR, IToken::UNKNOWN), str(""){};
 
-Token::Token(std::string str, Type type) : IToken(type), str(str){};
+Token::Token(IToken::AdvType const type) : IToken(type){};
+Token::Token(IToken::Type const type) : IToken(type){};
 
-Token::Token(std::string str, Type type, std::size_t lineNum) : IToken(type), str(str), lineNum(lineNum){};
+Token::Token(std::string const &str, Type const type) : IToken(type), str(str){};
+Token::Token(std::string const &str, AdvType const type) : str(str), IToken(type){};
 
-Token::Token(std::string str, Type type, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos) : IToken(type), str(str), lineNum(lineNum), posInLineNum(inLinePosNum), posNum(inFilePos){};
-
-Token::Token(std::string str, Type type, AdvType advType, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos) : IToken(type, advType), str(str), lineNum(lineNum), posInLineNum(inLinePosNum), posNum(inFilePos){};
+Token::Token(std::string const &str, Type const type, AdvType const advType, std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos) : IToken(type, advType), str(str), lineNum(lineNum), posInLineNum(inLinePosNum), posNum(inFilePos){};
 
 std::string const & Token::getStr(void){
     return str;

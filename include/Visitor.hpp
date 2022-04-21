@@ -87,7 +87,7 @@ class VisitorValue{
 class GraphvizVisitor : public IVisitor{
     public:
 
-    GraphvizVisitor(std::string filename);
+    explicit GraphvizVisitor(std::string filename);
 
     void done(void);
 
@@ -180,7 +180,7 @@ class TypeViewVisitor : public IVisitor{
 class CodeGenVisitor : public IVisitor{
     public:
 
-    CodeGenVisitor(std::string filename);
+    explicit CodeGenVisitor(std::string filename);
 
     void done(void);
 

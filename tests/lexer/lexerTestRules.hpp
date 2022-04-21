@@ -7,8 +7,6 @@ namespace LexerTestRules{
     /// @brief Возвращает шаблоны токинов языка Pascal
     List<TokenTemplate> getMathRules(void){
          List<TokenTemplate> templates = {
-                std::vector<TokenTemplate>{
-
                 {"^\\s*\\+", IToken::Type::PLUS, IToken::AdvType::OPERATOR},
                 {"^\\s*\\-", IToken::Type::MINUS, IToken::AdvType::OPERATOR},
                 {"^\\s*\\*", IToken::Type::MUL, IToken::AdvType::OPERATOR},
@@ -21,8 +19,6 @@ namespace LexerTestRules{
 
                 {"^\\s*[0-9]+", IToken::Type::INTEGER_CONST, IToken::AdvType::SOME_CONST},
                 {"^\\s*[0-9]+\\.[0-9]*", IToken::Type::REAL_CONST, IToken::AdvType::SOME_CONST},
-
-            }
         };
         return templates;
     }

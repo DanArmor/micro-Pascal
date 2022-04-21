@@ -108,10 +108,12 @@ class IToken{
         return type;
     }
 
+    /// @return Дополнительный тип токена
     virtual AdvType getAdvType(void){
         return advType;
     }
 
+    /// @brief Устанавливает дополнительный тип токена
     virtual void setAdvType(IToken::AdvType newAdvType){
         advType = newAdvType;
     }
@@ -129,21 +131,33 @@ class Token : public IToken{
     /// @brief Конструктор по-умолчанию
     Token();
 
+    Token(IToken::AdvType const type);
+    Token(IToken::Type const type);
+
     /**
      * @brief Конструктор из строки токена и типа
      * @param[in] str строка, представляющая токен
      * @param[in] type тип токена
      */
-    Token(IToken::AdvType type) : IToken(type){};
-    Token(IToken::Type type) : IToken(type){};
-    Token(std::string str) : str(str){};
-    Token(std::string str, Type type);
-    Token(std::string str, AdvType type) : str(str), IToken(type){};
-    Token(std::string str, Type type, std::size_t lineNum);
+    Token(std::string const &str, Type const type);
+    /**
+     * @brief Конструктор из строки токена и дополнительного типа
+     * @param[in] str строка, представляющая токен
+     * @param[in] type дополнительный тип токена
+     */
+    Token(std::string const &str, AdvType const type);
 
-    Token(std::string str, Type type, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos);
-
-    Token(std::string str, Type type, AdvType advType, std::size_t lineNum, std::size_t inLinePosNum, std::size_t inFilePos);
+    /**
+     * @brief Конструктор из строки токена и всех его аттрибутов
+     * @param[in] str строка, представляющая токен
+     * @param[in] type тип токена
+     * @param[in] advType дополнительный тип токена
+     * @param[in] lineNum номер строки
+     * @param[in] inLinePosNum позиция в строке
+     * @param[in] inFilePos позиция в файле
+     */
+    Token(std::string const &str, Type const type, AdvType const advType, 
+    std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos);
 
     /// @return номер строки, начиная с 1, в которой находится токен
     std::size_t line(void);
@@ -172,9 +186,9 @@ class Token : public IToken{
     private:
     /// @brief Строковое представление токена
     std::string str;
-    std::size_t lineNum;
-    std::size_t posInLineNum;
-    std::size_t posNum;
+    std::size_t lineNum = std::string::npos;
+    std::size_t posInLineNum = std::string::npos;
+    std::size_t posNum = std::string::npos;
 };
 
 /// @brief Класс, представляющий шаблон токена

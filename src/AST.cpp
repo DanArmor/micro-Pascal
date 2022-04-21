@@ -7,7 +7,6 @@ AST::AST(Token token) : token(token){};
 
 /*Определения BinOpAST
 ==================*/
-BinOpAST::BinOpAST(Token token) : AST(token) {};
 BinOpAST::BinOpAST(Token token, AST *left, AST *right) : AST(token), left(left), right(right) {};
 
 void BinOpAST::accept(IVisitor &visitor){
@@ -16,7 +15,6 @@ void BinOpAST::accept(IVisitor &visitor){
 
 /*Определения UnOpAST
 ==================*/
-UnOpAST::UnOpAST(Token token) : AST(token), down(nullptr){};
 UnOpAST::UnOpAST(Token token, AST *down) : AST(token), down(down){};
 
 void UnOpAST::accept(IVisitor &visitor){
@@ -45,7 +43,6 @@ void CompoundAST::accept(IVisitor &visitor){
 
 /*Определения AssignAST
 ==================*/
-AssignAST::AssignAST(Token token) : AST(token) {};
 AssignAST::AssignAST(Token token, AST *var, AST *value) : AST(token), var(var), value(value) {};
 
 void AssignAST::accept(IVisitor &visitor){
@@ -55,7 +52,6 @@ void AssignAST::accept(IVisitor &visitor){
 /*Определения VarAST
 ==================*/
 VarAST::VarAST(Token token) : AST(token) {};
-VarAST::VarAST(Token token, int value) : AST(token), value(value) {};
 
 void VarAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -83,7 +79,7 @@ void BlockAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-BlockAST::BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), compound(compound) {
+BlockAST::BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST(token), compound(compound) {
     for(std::size_t i = 0; i < consts.size(); i++)
         this->consts.push_back(std::unique_ptr<AST>(consts[i]));
     for(std::size_t i = 0; i < declarations.size(); i++)

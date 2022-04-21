@@ -13,7 +13,6 @@
 class BinOpAST : public AST{
     public:
 
-    BinOpAST(Token token);
     BinOpAST(Token token, AST *left, AST *right);
     ~BinOpAST() = default;
 
@@ -27,7 +26,6 @@ class BinOpAST : public AST{
 class UnOpAST : public AST{
     public:
 
-    UnOpAST(Token token);
     UnOpAST(Token token, AST *down);
     ~UnOpAST() = default;
 
@@ -40,7 +38,7 @@ class UnOpAST : public AST{
 class NumberAST : public AST{
     public:
 
-    NumberAST(Token token);
+    explicit NumberAST(Token token);
     ~NumberAST() = default;
 
     void accept(IVisitor &visitor);
@@ -50,7 +48,7 @@ class NumberAST : public AST{
 class CompoundAST : public AST{
     public:
 
-    CompoundAST(Token token);
+    explicit CompoundAST(Token token);
     ~CompoundAST() = default;
 
     void addChild(AST *child);
@@ -64,7 +62,6 @@ class CompoundAST : public AST{
 class AssignAST : public AST{
     public:
 
-    AssignAST(Token token);
     AssignAST(Token token, AST *var, AST *value);
     ~AssignAST() = default;
 
@@ -78,20 +75,17 @@ class AssignAST : public AST{
 class VarAST : public AST{
     public:
 
-    VarAST(Token token);
-    VarAST(Token token, int value);
+    explicit VarAST(Token token);
     ~VarAST() = default;
 
     void accept(IVisitor &visitor);
-
-    int value;
 };
 
 /// @brief Узел, отображающий пустовые выражение, отсутствие операций
 class NoOpAST : public AST{
     public:
 
-    NoOpAST(Token token);
+    explicit NoOpAST(Token token);
     ~NoOpAST() = default;
 
     void accept(IVisitor &visitor);
@@ -111,6 +105,7 @@ class ProgramAST : public AST{
 
 class BlockAST : public AST{
     public:
+
     BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound);
     ~BlockAST() = default;
     void accept(IVisitor &visitor);
@@ -122,6 +117,7 @@ class BlockAST : public AST{
 
 class VarDeclAST : public AST{
     public:
+
     VarDeclAST(Token token, AST *var, AST *type);
     ~VarDeclAST() = default;
     void accept(IVisitor &visitor);
@@ -132,13 +128,15 @@ class VarDeclAST : public AST{
 
 class TypeSpecAST : public AST{
     public:
-    TypeSpecAST(Token token);
+
+    explicit TypeSpecAST(Token token);
     ~TypeSpecAST() = default;
     void accept(IVisitor &visitor);
 };
 
 class ConstAST : public AST{
     public:
+
     ConstAST(Token token, ASTptr constName, ASTptr constValue);
     ~ConstAST() = default;
     void accept(IVisitor &visitor);
@@ -149,13 +147,15 @@ class ConstAST : public AST{
 
 class StringAST : public AST{
     public:
-    StringAST(Token token);
+
+    explicit StringAST(Token token);
     ~StringAST() = default;
     void accept(IVisitor &visitor);
 };
 
 class CallAST : public AST{
     public:
+
     CallAST(Token token, std::vector<AST*> params);
     ~CallAST() = default;
     void accept(IVisitor &visitor);
@@ -165,6 +165,7 @@ class CallAST : public AST{
 
 class IfAST : public AST{
     public:
+
     IfAST(Token token, ASTptr condition, ASTptr body, ASTptr elseBody);
     ~IfAST() = default;
     void accept(IVisitor &visitor);
@@ -176,6 +177,7 @@ class IfAST : public AST{
 
 class WhileAST : public AST{
     public:
+
     WhileAST(Token token, ASTptr condition, ASTptr body);
     ~WhileAST() = default;
     void accept(IVisitor &visitor);
