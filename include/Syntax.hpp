@@ -29,43 +29,43 @@ class SyntaxAnalyzer{
     public:
     explicit SyntaxAnalyzer(List<Token> const &tokens);
 
-    AST *syntaxProgram(void);
+    std::unique_ptr<AST> syntaxProgram(void);
 
-    AST *syntaxCompoundSt(void);
+    std::unique_ptr<AST> syntaxCompoundSt(void);
 
-    std::vector<AST*> syntaxStList(void);
+    std::vector<std::unique_ptr<AST>> syntaxStList(void);
 
-    ASTptr syntaxSt(void);
+    std::unique_ptr<AST> syntaxSt(void);
 
-    ASTptr syntaxAssignSt(void);
+    std::unique_ptr<AST> syntaxAssignSt(void);
 
-    ASTptr syntaxVariable(void);
+    std::unique_ptr<AST> syntaxVariable(void);
 
-    ASTptr syntaxEmptySt(void);
+    std::unique_ptr<AST> syntaxEmptySt(void);
 
-    ASTptr syntaxBlock(void);
+    std::unique_ptr<AST> syntaxBlock(void);
 
-    std::vector<AST*> syntaxVars(void);
+    std::vector<std::unique_ptr<AST>> syntaxVars(void);
 
-    std::vector<AST*> syntaxVarDecl(void);
+    std::vector<std::unique_ptr<AST>> syntaxVarDecl(void);
 
-    ASTptr syntaxTypeSpec(void);
+    std::unique_ptr<AST> syntaxTypeSpec(void);
 
-    AST *syntaxFactor();
+    std::unique_ptr<AST> syntaxFactor();
 
-    AST *syntaxTerm(void);
+    std::unique_ptr<AST> syntaxTerm(void);
 
-    AST *syntaxExpr(void);
+    std::unique_ptr<AST> syntaxExpr(void);
 
-    AST *syntaxSimpleExpr(void);
+    std::unique_ptr<AST> syntaxSimpleExpr(void);
 
-    AST *parseTokens(void);
+    std::unique_ptr<AST> parseTokens(void);
 
-    AST *syntaxCallSt(void);
+    std::unique_ptr<AST> syntaxCallSt(void);
 
-    AST *syntaxIfSt(void);
+    std::unique_ptr<AST> syntaxIfSt(void);
 
-    AST *syntaxWhileSt(void);
+    std::unique_ptr<AST> syntaxWhileSt(void);
 
     void getNextToken(void);
 
@@ -73,8 +73,8 @@ class SyntaxAnalyzer{
 
     Token &lookFoward(void);
 
-    std::vector<AST*> syntaxConsts(void);
-    ASTptr syntaxConstDecl(void);
+    std::vector<std::unique_ptr<AST>> syntaxConsts(void);
+    std::unique_ptr<AST> syntaxConstDecl(void);
 
     void eat(IToken::Type const type);
     void eatAdv(IToken::AdvType const type);

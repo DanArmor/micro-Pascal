@@ -7,7 +7,7 @@ AST::AST(Token token) : token(token){};
 
 /*Определения BinOpAST
 ==================*/
-BinOpAST::BinOpAST(Token token, AST *left, AST *right) : AST(token), left(left), right(right) {};
+BinOpAST::BinOpAST(Token token, std::unique_ptr<AST> left, std::unique_ptr<AST> right) : AST(token), left(std::move(left)), right(std::move(right)) {};
 
 void BinOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -15,7 +15,7 @@ void BinOpAST::accept(IVisitor &visitor){
 
 /*Определения UnOpAST
 ==================*/
-UnOpAST::UnOpAST(Token token, AST *down) : AST(token), down(down){};
+UnOpAST::UnOpAST(Token token, std::unique_ptr<AST> down) : AST(token), down(std::move(down)){};
 
 void UnOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -33,8 +33,8 @@ void NumberAST::accept(IVisitor &visitor){
 ==================*/
 CompoundAST::CompoundAST(Token token) : AST(token) {};
 
-void CompoundAST::addChild(AST *child){
-    children.push_back(std::unique_ptr<AST>(child));
+void CompoundAST::addChild(std::unique_ptr<AST> child){
+    children.emplace_back(std::move(child));
 }
 
 void CompoundAST::accept(IVisitor &visitor){
@@ -43,7 +43,7 @@ void CompoundAST::accept(IVisitor &visitor){
 
 /*Определения AssignAST
 ==================*/
-AssignAST::AssignAST(Token token, AST *var, AST *value) : AST(token), var(var), value(value) {};
+AssignAST::AssignAST(Token token, std::unique_ptr<AST> var, std::unique_ptr<AST> value) : AST(token), var(std::move(var)), value(std::move(value)) {};
 
 void AssignAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -67,7 +67,7 @@ void NoOpAST::accept(IVisitor &visitor){
 
 /*Определения ProgramAST
 ==================*/
-ProgramAST::ProgramAST(Token name, AST *block) : AST(name), name(name), block(block){};
+ProgramAST::ProgramAST(Token name, std::unique_ptr<AST> block) : AST(name), name(name), block(std::move(block)){};
 
 void ProgramAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -79,16 +79,16 @@ void BlockAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-BlockAST::BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST(token), compound(compound) {
+BlockAST::BlockAST(Token token, std::vector<std::unique_ptr<AST>> consts, std::vector<std::unique_ptr<AST>> declarations, std::unique_ptr<AST> compound) : AST(token), compound(std::move(compound)) {
     for(std::size_t i = 0; i < consts.size(); i++)
-        this->consts.push_back(std::unique_ptr<AST>(consts[i]));
+        this->consts.emplace_back(std::move(consts[i]));
     for(std::size_t i = 0; i < declarations.size(); i++)
-        this->declarations.push_back(std::unique_ptr<AST>(declarations[i]));
+        this->declarations.emplace_back(std::move(declarations[i]));
 };
 
 /*Определения VarDeclAST
 ==================*/
-VarDeclAST::VarDeclAST(Token token, AST *var, AST *type) : AST(token), var(var), type(type) {};
+VarDeclAST::VarDeclAST(Token token, std::unique_ptr<AST> var, std::unique_ptr<AST> type) : AST(token), var(std::move(var)), type(std::move(type)) {};
 
 void VarDeclAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -104,7 +104,7 @@ void TypeSpecAST::accept(IVisitor &visitor){
 
 /*Определения ConstAST
 ==================*/
-ConstAST::ConstAST(Token token, ASTptr constName, ASTptr constValue) : AST(token), constName(constName), constValue(constValue){};
+ConstAST::ConstAST(Token token, std::unique_ptr<AST> constName, std::unique_ptr<AST> constValue) : AST(token), constName(std::move(constName)), constValue(std::move(constValue)){};
 
 void ConstAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -120,9 +120,9 @@ void StringAST::accept(IVisitor &visitor){
 
 /*Определения CallAST
 ==================*/
-CallAST::CallAST(Token token, std::vector<AST*> params) : AST(token){
+CallAST::CallAST(Token token, std::vector<std::unique_ptr<AST>> params) : AST(token){
     for(std::size_t i = 0; i < params.size(); i++)
-        this->params.push_back(std::unique_ptr<AST>(params[i]));
+        this->params.emplace_back(std::move(params[i]));
 };
 
 void CallAST::accept(IVisitor &visitor){
@@ -131,7 +131,7 @@ void CallAST::accept(IVisitor &visitor){
 
 /*Определения IfAST
 ==================*/
-IfAST::IfAST(Token token, ASTptr condition, ASTptr body, ASTptr elseBody) : AST(token), condition(condition), body(body), elseBody(elseBody){};
+IfAST::IfAST(Token token, std::unique_ptr<AST> condition, std::unique_ptr<AST> body, std::unique_ptr<AST> elseBody) : AST(token), condition(std::move(condition)), body(std::move(body)), elseBody(std::move(elseBody)){};
 
 void IfAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -139,7 +139,7 @@ void IfAST::accept(IVisitor &visitor){
 
 /*Определения WhileAST
 ==================*/
-WhileAST::WhileAST(Token token, ASTptr condition, ASTptr body) : AST(token), condition(condition), body(body){};
+WhileAST::WhileAST(Token token, std::unique_ptr<AST> condition, std::unique_ptr<AST> body) : AST(token), condition(std::move(condition)), body(std::move(body)){};
 
 void WhileAST::accept(IVisitor &visitor){
     visitor.visit(*this);

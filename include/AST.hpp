@@ -13,7 +13,7 @@
 class BinOpAST : public AST{
     public:
 
-    BinOpAST(Token token, AST *left, AST *right);
+    BinOpAST(Token token, std::unique_ptr<AST> left, std::unique_ptr<AST> right);
     ~BinOpAST() = default;
 
     void accept(IVisitor &visitor);
@@ -26,7 +26,7 @@ class BinOpAST : public AST{
 class UnOpAST : public AST{
     public:
 
-    UnOpAST(Token token, AST *down);
+    UnOpAST(Token token, std::unique_ptr<AST> down);
     ~UnOpAST() = default;
 
     void accept(IVisitor &visitor);
@@ -51,7 +51,7 @@ class CompoundAST : public AST{
     explicit CompoundAST(Token token);
     ~CompoundAST() = default;
 
-    void addChild(AST *child);
+    void addChild(std::unique_ptr<AST> child);
 
     void accept(IVisitor &visitor);
 
@@ -62,7 +62,7 @@ class CompoundAST : public AST{
 class AssignAST : public AST{
     public:
 
-    AssignAST(Token token, AST *var, AST *value);
+    AssignAST(Token token, std::unique_ptr<AST> var, std::unique_ptr<AST> value);
     ~AssignAST() = default;
 
     void accept(IVisitor &visitor);
@@ -95,7 +95,7 @@ class NoOpAST : public AST{
 class ProgramAST : public AST{
     public:
 
-    ProgramAST(Token name, ASTptr block);
+    ProgramAST(Token name, std::unique_ptr<AST> block);
     ~ProgramAST() = default;
     void accept(IVisitor &visitor);
 
@@ -106,7 +106,7 @@ class ProgramAST : public AST{
 class BlockAST : public AST{
     public:
 
-    BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound);
+    BlockAST(Token token, std::vector<std::unique_ptr<AST>> consts, std::vector<std::unique_ptr<AST>> declarations, std::unique_ptr<AST> compound);
     ~BlockAST() = default;
     void accept(IVisitor &visitor);
 
@@ -118,7 +118,7 @@ class BlockAST : public AST{
 class VarDeclAST : public AST{
     public:
 
-    VarDeclAST(Token token, AST *var, AST *type);
+    VarDeclAST(Token token, std::unique_ptr<AST> var, std::unique_ptr<AST> type);
     ~VarDeclAST() = default;
     void accept(IVisitor &visitor);
 
@@ -137,7 +137,7 @@ class TypeSpecAST : public AST{
 class ConstAST : public AST{
     public:
 
-    ConstAST(Token token, ASTptr constName, ASTptr constValue);
+    ConstAST(Token token, std::unique_ptr<AST> constName, std::unique_ptr<AST> constValue);
     ~ConstAST() = default;
     void accept(IVisitor &visitor);
 
@@ -156,7 +156,7 @@ class StringAST : public AST{
 class CallAST : public AST{
     public:
 
-    CallAST(Token token, std::vector<AST*> params);
+    CallAST(Token token, std::vector<std::unique_ptr<AST>> params);
     ~CallAST() = default;
     void accept(IVisitor &visitor);
 
@@ -166,7 +166,7 @@ class CallAST : public AST{
 class IfAST : public AST{
     public:
 
-    IfAST(Token token, ASTptr condition, ASTptr body, ASTptr elseBody);
+    IfAST(Token token, std::unique_ptr<AST> condition, std::unique_ptr<AST> body, std::unique_ptr<AST> elseBody);
     ~IfAST() = default;
     void accept(IVisitor &visitor);
 
@@ -178,7 +178,7 @@ class IfAST : public AST{
 class WhileAST : public AST{
     public:
 
-    WhileAST(Token token, ASTptr condition, ASTptr body);
+    WhileAST(Token token, std::unique_ptr<AST> condition, std::unique_ptr<AST> body);
     ~WhileAST() = default;
     void accept(IVisitor &visitor);
 

@@ -28,7 +28,7 @@ TEST(SYNTAX, PASCAL_SIMPLE){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS1.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    ASTptr root = syntax.parseTokens();
+    std::unique_ptr<AST> root(syntax.parseTokens());
 
     TypeViewVisitor typeView;
     root->accept(typeView);
@@ -89,7 +89,7 @@ TEST(SYNTAX, PASCAL_MEDIUM){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS2.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    ASTptr root = syntax.parseTokens();
+    std::unique_ptr<AST> root(syntax.parseTokens());
 
     TypeViewVisitor typeView;
     root->accept(typeView);

@@ -6,72 +6,73 @@
 #include "AST.hpp"
 #include "Token.hpp"
 
-    AST *ASTFactory::createAST(Token token){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token){
         switch (token.getAdvType()){
-            case IToken::TYPE_SPEC: return new TypeSpecAST(token);
+            case IToken::TYPE_SPEC: return std::unique_ptr<AST>(new TypeSpecAST(token));
         }
         switch (token.getType()){
-            case IToken::STRING_CONST: return new StringAST(token);
-            case IToken::INTEGER_CONST: return new NumberAST(token);
-            case IToken::REAL_CONST: return new NumberAST(token);
-            case IToken::ID: return new VarAST(token);
+            case IToken::STRING_CONST: return std::unique_ptr<AST>(new StringAST(token));
+            case IToken::INTEGER_CONST: return std::unique_ptr<AST>(new NumberAST(token));
+            case IToken::REAL_CONST: return std::unique_ptr<AST>(new NumberAST(token));
+            case IToken::ID: return std::unique_ptr<AST>(new VarAST(token));
             case IToken::EMPTY: {
                 token.setStr("$");
-                return new NoOpAST(token);
+                return std::unique_ptr<AST>(new NoOpAST(token));
             }
         }
     }
 
-    AST *ASTFactory::createAST(Token token, AST *first){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first){
         if(token.getAdvType() == IToken::OPERATOR)
-            return new UnOpAST(token, first);
+            return std::unique_ptr<AST>(new UnOpAST(token, std::move(first)));
         else if(token.getAdvType() == IToken::PROGSTART){
-            ProgramAST *programPTR = new ProgramAST(token, first);
+            std::unique_ptr<ProgramAST> programPTR(new ProgramAST(token, std::move(first)));
             programPTR->token.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
             return programPTR;
         }
     }
 
-    AST *ASTFactory::createAST(Token token, AST *first, AST *second){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
         switch(token.getType()){
-            case IToken::ASSIGN : return new AssignAST(token, first, second);
-            case IToken::WHILE : return new WhileAST(token, first, second);
+            case IToken::ASSIGN : return std::unique_ptr<AST>(new AssignAST(token, std::move(first), std::move(second)));
+            case IToken::WHILE : return std::unique_ptr<AST>(new WhileAST(token, std::move(first), std::move(second)));
         }
         switch (token.getAdvType()){
-            case IToken::OPERATOR : return new BinOpAST(token, first, second);
+            case IToken::OPERATOR : return std::unique_ptr<AST>(new BinOpAST(token, std::move(first), std::move(second)));
             case IToken::VARDECL:{
                 token.setStr("VARDECL");
-                return new VarDeclAST(token, first, second);
+                return std::unique_ptr<AST>(new VarDeclAST(token, std::move(first), std::move(second)));
             }
             case IToken::CONSTDECL:{
                 token.setStr("CONSTDECL");
-                return new ConstAST(token, first, second);
+                return std::unique_ptr<AST>(new ConstAST(token, std::move(first), std::move(second)));
             }
         }
     }
 
-    AST *ASTFactory::createAST(Token token, AST *first, AST *second, AST *third){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second, std::unique_ptr<AST> third){
         switch(token.getType()){
-            case IToken::IF : return new IfAST(token, first, second, third);
+            case IToken::IF : return std::unique_ptr<AST>(new IfAST(token, std::move(first), std::move(second), std::move(third)));
         }
     }
 
-    AST *ASTFactory::createAST(Token token, std::vector<AST*> params){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params){
         switch (token.getAdvType()){
             case IToken::AdvType::COMPOUND : {
                 token.setStr("COMPOUND");
-                CompoundAST *compound = new CompoundAST(token);
+                std::unique_ptr<CompoundAST> compound(new CompoundAST(token));
                 for(auto &ptr : params)
-                    compound->addChild(ptr);
-                return compound;
+                    compound->addChild(std::move(ptr));
+                return std::move(compound);
             }
         }
-        return new CallAST(token, params);
+        return std::unique_ptr<AST>(new CallAST(token, std::move(params)));
     }
 
-    AST *ASTFactory::createAST(Token token, std::vector<AST*> constsDecls, std::vector<AST*> varDecls, AST *compound){
+    std::unique_ptr<AST> ASTFactory::createAST(Token token,
+        std::vector<std::unique_ptr<AST>> constsDecls, std::vector<std::unique_ptr<AST>> varDecls, std::unique_ptr<AST> compound){
         if(token.getType() == IToken::BLOCK){
             token.setStr("BLOCK");
-            return new BlockAST(token, constsDecls, varDecls, compound);
+            return std::unique_ptr<AST>(new BlockAST(token, std::move(constsDecls), std::move(varDecls), std::move(compound)));
         }
     }
