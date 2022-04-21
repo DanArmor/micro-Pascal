@@ -1,6 +1,9 @@
 #include "Token.hpp"
-#include "magic_enum.hpp"
+
 #include <fmt/format.h>
+
+#include "magic_enum.hpp"
+
 
 /*Определения IToken
 ==================*/
@@ -25,6 +28,10 @@ Token::Token(std::string str, Type type, AdvType advType, std::size_t lineNum, s
 
 std::string const & Token::getStr(void){
     return str;
+}
+
+void Token::setStr(std::string const &toSet){
+    str = toSet;
 }
 
 std::size_t Token::line(void){

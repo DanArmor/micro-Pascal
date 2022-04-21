@@ -1,7 +1,6 @@
 #ifndef __INC_ASTCLASSES_H
 #define __INC_ASTCLASSES_H
 
-
 // Предварительные объявления
 class BinOpAST;
 class NumberAST;
@@ -17,8 +16,8 @@ class TypeSpecAST;
 class ConstAST;
 class StringAST;
 class CallAST;
-class ifAST;
-class whileAST;
+class IfAST;
+class WhileAST;
 
 /**
  * @brief Интерфейс "посетителя"
@@ -41,8 +40,8 @@ class IVisitor{
     virtual void visit(ConstAST &node) = 0;
     virtual void visit(StringAST &node) = 0;
     virtual void visit(CallAST &node) = 0;
-    virtual void visit(ifAST &node) = 0;
-    virtual void visit(whileAST &node) = 0;
+    virtual void visit(IfAST &node) = 0;
+    virtual void visit(WhileAST &node) = 0;
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева
@@ -50,6 +49,7 @@ class AST{
     public:
 
     //AST();
+    AST();
     AST(Token token);
     virtual ~AST() = default;
 

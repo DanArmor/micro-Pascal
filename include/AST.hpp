@@ -14,7 +14,7 @@ class BinOpAST : public AST{
     public:
 
     BinOpAST(Token token);
-    BinOpAST(AST *left, Token token, AST *right);
+    BinOpAST(Token token, AST *left, AST *right);
     ~BinOpAST() = default;
 
     void accept(IVisitor &visitor);
@@ -50,7 +50,7 @@ class NumberAST : public AST{
 class CompoundAST : public AST{
     public:
 
-    CompoundAST();
+    CompoundAST(Token token);
     ~CompoundAST() = default;
 
     void addChild(AST *child);
@@ -65,7 +65,7 @@ class AssignAST : public AST{
     public:
 
     AssignAST(Token token);
-    AssignAST(AST *var, Token token, AST *value);
+    AssignAST(Token token, AST *var, AST *value);
     ~AssignAST() = default;
 
     void accept(IVisitor &visitor);
@@ -111,7 +111,7 @@ class ProgramAST : public AST{
 
 class BlockAST : public AST{
     public:
-    BlockAST(std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound);
+    BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound);
     ~BlockAST() = default;
     void accept(IVisitor &visitor);
 
@@ -122,7 +122,7 @@ class BlockAST : public AST{
 
 class VarDeclAST : public AST{
     public:
-    VarDeclAST(AST *var, AST *type);
+    VarDeclAST(Token token, AST *var, AST *type);
     ~VarDeclAST() = default;
     void accept(IVisitor &visitor);
 
@@ -139,7 +139,7 @@ class TypeSpecAST : public AST{
 
 class ConstAST : public AST{
     public:
-    ConstAST(ASTptr constName, ASTptr constValue);
+    ConstAST(Token token, ASTptr constName, ASTptr constValue);
     ~ConstAST() = default;
     void accept(IVisitor &visitor);
 
@@ -163,10 +163,10 @@ class CallAST : public AST{
     std::vector<std::unique_ptr<AST>> params;
 };
 
-class ifAST : public AST{
+class IfAST : public AST{
     public:
-    ifAST(ASTptr condition, ASTptr body, ASTptr elseBody);
-    ~ifAST() = default;
+    IfAST(Token token, ASTptr condition, ASTptr body, ASTptr elseBody);
+    ~IfAST() = default;
     void accept(IVisitor &visitor);
 
     std::unique_ptr<AST> condition;
@@ -174,10 +174,10 @@ class ifAST : public AST{
     std::unique_ptr<AST> elseBody;
 };
 
-class whileAST : public AST{
+class WhileAST : public AST{
     public:
-    whileAST(ASTptr condition, ASTptr body);
-    ~whileAST() = default;
+    WhileAST(Token token, ASTptr condition, ASTptr body);
+    ~WhileAST() = default;
     void accept(IVisitor &visitor);
 
     std::unique_ptr<AST> condition;

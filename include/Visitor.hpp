@@ -3,12 +3,9 @@
 
 #include <fstream>
 #include <string>
-#include <fmt/format.h>
 
 #include "Token.hpp"
 #include "List.cpp"
-#include "AST.hpp"
-
 
 #include "ASTclasses.hpp"
 
@@ -122,9 +119,9 @@ class GraphvizVisitor : public IVisitor{
 
     void visit(CallAST &node);
 
-    void visit(ifAST &node);
+    void visit(IfAST &node);
 
-    void visit(whileAST &node);
+    void visit(WhileAST &node);
 
     void write(void);
 
@@ -169,9 +166,9 @@ class TypeViewVisitor : public IVisitor{
 
     void visit(CallAST &node);
 
-    void visit(ifAST &node);
+    void visit(IfAST &node);
 
-    void visit(whileAST &node);
+    void visit(WhileAST &node);
 
     std::vector<std::string> getData(void);
 
@@ -215,9 +212,9 @@ class CodeGenVisitor : public IVisitor{
 
     void visit(CallAST &node);
 
-    void visit(ifAST &node);
+    void visit(IfAST &node);
 
-    void visit(whileAST &node);
+    void visit(WhileAST &node);
 
     void write(void);
 
@@ -259,9 +256,9 @@ class HighlightAccurateVisitor : public IVisitor{
 
     void visit(CallAST &node);
 
-    void visit(ifAST &node);
+    void visit(IfAST &node);
 
-    void visit(whileAST &node);
+    void visit(WhileAST &node);
 
     List<Token> getTokens(void);
 

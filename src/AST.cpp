@@ -2,13 +2,13 @@
 
 /*Определения AST
 ==================*/
-//AST::AST() {};
+AST::AST() {};
 AST::AST(Token token) : token(token){};
 
 /*Определения BinOpAST
 ==================*/
 BinOpAST::BinOpAST(Token token) : AST(token) {};
-BinOpAST::BinOpAST(AST *left, Token token, AST *right) : AST(token), left(left), right(right) {};
+BinOpAST::BinOpAST(Token token, AST *left, AST *right) : AST(token), left(left), right(right) {};
 
 void BinOpAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -33,7 +33,7 @@ void NumberAST::accept(IVisitor &visitor){
 
 /*Определения CompoundAST
 ==================*/
-CompoundAST::CompoundAST() : AST({"COMPOUND", IToken::EMPTY}) {};
+CompoundAST::CompoundAST(Token token) : AST(token) {};
 
 void CompoundAST::addChild(AST *child){
     children.push_back(std::unique_ptr<AST>(child));
@@ -46,7 +46,7 @@ void CompoundAST::accept(IVisitor &visitor){
 /*Определения AssignAST
 ==================*/
 AssignAST::AssignAST(Token token) : AST(token) {};
-AssignAST::AssignAST(AST *var, Token token, AST *value) : AST(token), var(var), value(value) {};
+AssignAST::AssignAST(Token token, AST *var, AST *value) : AST(token), var(var), value(value) {};
 
 void AssignAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -71,7 +71,7 @@ void NoOpAST::accept(IVisitor &visitor){
 
 /*Определения ProgramAST
 ==================*/
-ProgramAST::ProgramAST(Token name, AST *block) : AST({"__START__", IToken::PROGSTART}), name(name), block(block){};
+ProgramAST::ProgramAST(Token name, AST *block) : AST(name), name(name), block(block){};
 
 void ProgramAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -83,7 +83,7 @@ void BlockAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-BlockAST::BlockAST(std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), compound(compound) {
+BlockAST::BlockAST(Token token, std::vector<AST*> consts, std::vector<AST*> declarations, ASTptr compound) : AST({"BLOCK", IToken::Type::BLOCK}), compound(compound) {
     for(std::size_t i = 0; i < consts.size(); i++)
         this->consts.push_back(std::unique_ptr<AST>(consts[i]));
     for(std::size_t i = 0; i < declarations.size(); i++)
@@ -92,7 +92,7 @@ BlockAST::BlockAST(std::vector<AST*> consts, std::vector<AST*> declarations, AST
 
 /*Определения VarDeclAST
 ==================*/
-VarDeclAST::VarDeclAST(AST *var, AST *type) : AST({"DEFINITION"}), var(var), type(type) {};
+VarDeclAST::VarDeclAST(Token token, AST *var, AST *type) : AST(token), var(var), type(type) {};
 
 void VarDeclAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -108,7 +108,7 @@ void TypeSpecAST::accept(IVisitor &visitor){
 
 /*Определения ConstAST
 ==================*/
-ConstAST::ConstAST(ASTptr constName, ASTptr constValue) : AST({"=", IToken::CONST}), constName(constName), constValue(constValue){};
+ConstAST::ConstAST(Token token, ASTptr constName, ASTptr constValue) : AST(token), constName(constName), constValue(constValue){};
 
 void ConstAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -133,18 +133,18 @@ void CallAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения ifAST
+/*Определения IfAST
 ==================*/
-ifAST::ifAST(ASTptr condition, ASTptr body, ASTptr elseBody) : AST({"IF", IToken::EMPTY}), condition(condition), body(body), elseBody(elseBody){};
+IfAST::IfAST(Token token, ASTptr condition, ASTptr body, ASTptr elseBody) : AST(token), condition(condition), body(body), elseBody(elseBody){};
 
-void ifAST::accept(IVisitor &visitor){
+void IfAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
-/*Определения whileAST
+/*Определения WhileAST
 ==================*/
-whileAST::whileAST(ASTptr condition, ASTptr body) : AST({"WHILE", IToken::EMPTY}), condition(condition), body(body){};
+WhileAST::WhileAST(Token token, ASTptr condition, ASTptr body) : AST(token), condition(condition), body(body){};
 
-void whileAST::accept(IVisitor &visitor){
+void WhileAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }

@@ -6,9 +6,9 @@
 
 #include "magic_enum.hpp"
 
-#include "Token.hpp"
-#include "AST.hpp"
 #include "List.cpp"
+#include "Token.hpp"
+#include "ASTclasses.hpp"
 
 /**
  * @brief Возвращает истину, если value находится среди значений cont

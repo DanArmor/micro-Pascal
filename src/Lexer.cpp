@@ -1,11 +1,13 @@
+#include "Lexer.hpp"
+
 #include <map>
 #include <string>
-#include <fmt/format.h>
 #include <iostream>
-#include "magic_enum.hpp"
 #include <algorithm>
+#include <fmt/format.h>
 
-#include "Lexer.hpp"
+#include "magic_enum.hpp"
+
 
 
 /**

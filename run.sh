@@ -16,5 +16,5 @@ done
 
 cd build
 #valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=val-ouput.txt 
-./Main prog3.txt
+valgrind ./Main prog3.txt
 dot out.dot -Tsvg > output.svg

@@ -4,13 +4,12 @@
 #include <variant>
 #include <any>
 
-std::map<std::string, int> globalVariables;
-
 #include "List.cpp"
 
 #include "Token.hpp"
 #include "Lexer.hpp"
 #include "Syntax.hpp"
+#include "Visitor.hpp"
 
 #include "PascalTokens.hpp"
 

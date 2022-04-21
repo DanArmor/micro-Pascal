@@ -1,5 +1,8 @@
 #include "Visitor.hpp"
 
+#include <fmt/format.h>
+
+#include "AST.hpp"
 
 /*Определения CalcVisitor
 ==================*/
@@ -206,7 +209,7 @@ void GraphvizVisitor::visit(CallAST &node){
     }
 }
 
-void GraphvizVisitor::visit(ifAST &node){
+void GraphvizVisitor::visit(IfAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -220,7 +223,7 @@ void GraphvizVisitor::visit(ifAST &node){
     }
 }
 
-void GraphvizVisitor::visit(whileAST &node){
+void GraphvizVisitor::visit(WhileAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
@@ -313,7 +316,7 @@ void TypeViewVisitor::visit(CallAST &node){
     }
 }
 
-void TypeViewVisitor::visit(ifAST &node){
+void TypeViewVisitor::visit(IfAST &node){
     typesStrings.push_back(node.token.getStr());
     node.body->accept(*this);
     node.condition->accept(*this);
@@ -321,7 +324,7 @@ void TypeViewVisitor::visit(ifAST &node){
         node.elseBody->accept(*this);
 }
 
-void TypeViewVisitor::visit(whileAST &node){
+void TypeViewVisitor::visit(WhileAST &node){
     typesStrings.push_back(node.token.getStr());
     node.body->accept(*this);
     node.condition->accept(*this);
@@ -435,11 +438,11 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     }
 
-    void CodeGenVisitor::visit(ifAST &node){
+    void CodeGenVisitor::visit(IfAST &node){
 
     }
 
-    void CodeGenVisitor::visit(whileAST &node){
+    void CodeGenVisitor::visit(WhileAST &node){
 
     }
 
@@ -525,14 +528,14 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         }
     }
 
-    void HighlightAccurateVisitor::visit(ifAST &node){
+    void HighlightAccurateVisitor::visit(IfAST &node){
         node.condition->accept(*this);
         node.body->accept(*this);
         if(node.elseBody)
             node.elseBody->accept(*this);
     }
 
-    void HighlightAccurateVisitor::visit(whileAST &node){
+    void HighlightAccurateVisitor::visit(WhileAST &node){
         node.condition->accept(*this);
         node.body->accept(*this);
     }

@@ -1,4 +1,8 @@
 #include "Syntax.hpp"
+
+#include <fmt/format.h>
+
+#include "AST.hpp"
 #include "ASTFactory.hpp"
 
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
@@ -20,7 +24,7 @@ ASTptr SyntaxAnalyzer::syntaxBlock(void){
     std::vector<AST*> constsList = syntaxConsts();
     std::vector<AST*> declsList = syntaxVars();
     ASTptr compoundPTR = syntaxCompoundSt();
-    return ASTFactory::createAST(constsList, declsList, compoundPTR);
+    return ASTFactory::createAST(IToken::Type::BLOCK, constsList, declsList, compoundPTR);
 }
 
 std::vector<AST*> SyntaxAnalyzer::syntaxConsts(void){
@@ -80,12 +84,10 @@ std::vector<AST*> SyntaxAnalyzer::syntaxVarDecl(void){
     eat(IToken::COLON);
 
     std::unique_ptr<AST> typeNodePTR(syntaxTypeSpec());
-    Token varDeclTok = typeNodePTR->token;
-    varDeclTok.setAdvType(IToken::AdvType::VARDECL);
 
     std::vector<AST*> varDeclsList;
     for(auto var : varsList){
-        varDeclsList.push_back(ASTFactory::createAST(varDeclTok, var, ASTFactory::createAST(typeNodePTR->token)));
+        varDeclsList.push_back(ASTFactory::createAST(IToken::VARDECL, var, ASTFactory::createAST(typeNodePTR->token)));
     }
     return varDeclsList;
 }
@@ -99,11 +101,13 @@ ASTptr SyntaxAnalyzer::syntaxTypeSpec(void){
 
 AST *SyntaxAnalyzer::syntaxCompoundSt(void){
     /* syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END' */
+    Token beginTok = getCurTok();
+    beginTok.setAdvType(IToken::AdvType::COMPOUND);
     eat(IToken::BEGIN);
     std::vector<AST*> stList = syntaxStList();
     eat(IToken::END);
 
-    return ASTFactory::createAST(Token(IToken::AdvType::COMPOUND), stList);
+    return ASTFactory::createAST(beginTok, stList);
 }
 
 std::vector<AST*> SyntaxAnalyzer::syntaxStList(void){
@@ -150,25 +154,29 @@ ASTptr SyntaxAnalyzer::syntaxSt(void){
 
 AST *SyntaxAnalyzer::syntaxIfSt(void){
     /* syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)? */
+    Token ifTok = getCurTok();
     eat(IToken::IF);
     ASTptr conditionPTR = syntaxExpr();
+
     eat(IToken::THEN);
     ASTptr bodyPTR = syntaxSt();
+
     ASTptr elseBodyPTR = nullptr;
     if(getCurTok().getType() == IToken::ELSE){
         eat(IToken::ELSE);
         elseBodyPTR = syntaxSt();
     }
-    return ASTFactory::createAST(Token(IToken::IF), conditionPTR, bodyPTR, elseBodyPTR);
+    return ASTFactory::createAST(ifTok, conditionPTR, bodyPTR, elseBodyPTR);
 }
 
 AST *SyntaxAnalyzer::syntaxWhileSt(void){
     /* syntaxWhileSt ::= 'WHILE' syntaxExpr 'DO' syntaxExpr */
+    Token whileTok = getCurTok();
     eat(IToken::WHILE);
     ASTptr conditionPTR = syntaxExpr();
     eat(IToken::DO);
     ASTptr bodyPTR = syntaxSt();
-    return ASTFactory::createAST(Token(IToken::WHILE), conditionPTR, bodyPTR);
+    return ASTFactory::createAST(whileTok, conditionPTR, bodyPTR);
 }
 
 ASTptr SyntaxAnalyzer::syntaxCallSt(void){
@@ -211,7 +219,7 @@ ASTptr SyntaxAnalyzer::syntaxVariable(void){
 
 ASTptr SyntaxAnalyzer::syntaxEmptySt(void){
     /* syntaxEmptySt ::= '$NONE$' */
-    return ASTFactory::createAST({"$", IToken::EMPTY});
+    return ASTFactory::createAST(IToken::EMPTY);
 }
 
 AST *SyntaxAnalyzer::syntaxExpr(void){

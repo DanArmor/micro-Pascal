@@ -20,12 +20,14 @@ add_library(Token src/Token.cpp)
 add_library(AST src/AST.cpp)
 add_library(Syntax src/Syntax.cpp)
 add_library(Lexer src/Lexer.cpp)
+add_library(ASTFactory src/ASTFactory.cpp)
 
 target_link_libraries(Token fmt)
 target_link_libraries(Visitor fmt AST Token)
 target_link_libraries(AST Visitor Token)
 target_link_libraries(Lexer Token)
-target_link_libraries(Syntax AST Token)
+target_link_libraries(Syntax AST Token ASTFactory)
+target_link_libraries(ASTFactory AST Token fmt)
 
 # Программа
 add_executable(Main main.cpp)

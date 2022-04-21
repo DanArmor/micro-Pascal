@@ -161,6 +161,8 @@ class Token : public IToken{
     /// @brief Возвращает константную ссылку на строковое представление токена
     std::string const & getStr(void);
 
+    void setStr(std::string const &toSet);
+
     std::string getInfo(void);
 
     ///@return Длину строкового представления токена
