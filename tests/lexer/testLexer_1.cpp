@@ -14,6 +14,16 @@
  * @date 2022-03-31
  */
 
+void checkEqualLex(List<Token> checkData, Lexer lexer, std::string const &fname){
+    List<Token> result = lexer.analyzeFile(fname);
+    EXPECT_EQ(result.size(), checkData.size());
+    for(int i = 0; i < result.size(); i++){
+        EXPECT_EQ(result[i].getStr(), checkData[i].getStr());
+        EXPECT_EQ(result[i].getType(), checkData[i].getType());
+    }
+
+}
+
 /// @brief Тест разбора простых математических выражений
 TEST(PARSE, MATH){
     Lexer lexer;
@@ -41,12 +51,7 @@ TEST(PARSE, MATH){
         {")", IToken::RPAREN},
         {"$", IToken::ENDOFSTREAM},
     };
-    List<Token> result = lexer.analyzeFile("./build/tests/text1.txt");
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++){
-        EXPECT_EQ(result[i].getStr(), checkData[i].getStr());
-        EXPECT_EQ(result[i].getType(), checkData[i].getType());
-    }
+    checkEqualLex(checkData, lexer, "./build/tests/text1.txt");
 }
 
 /// @brief Тест разбора простейшей программы на Pascal
@@ -62,12 +67,7 @@ TEST(PARSE, PASCAL_SIMPLE){
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };
-    List<Token> result = lexer.analyzeFile("./build/tests/text2.txt");
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++){
-        EXPECT_EQ(result[i].getStr(), checkData[i].getStr());
-        EXPECT_EQ(result[i].getType(), checkData[i].getType());
-    }
+    checkEqualLex(checkData, lexer, "./build/tests/text2.txt");
 }
 
 /// @brief Тест разбора средней программы на Pascal
@@ -119,12 +119,7 @@ TEST(PARSE, PASCAL_MEDIUM){
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };
-    List<Token> result = lexer.analyzeFile("./build/tests/text3.txt");
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++){
-        EXPECT_EQ(result[i].getStr(), checkData[i].getStr());
-        EXPECT_EQ(result[i].getType(), checkData[i].getType());
-    }
+    checkEqualLex(checkData, lexer, "./build/tests/text3.txt");
 }
 
 /// @brief Тест разбора сложной программы на Pascal
@@ -173,12 +168,7 @@ TEST(PARSE, PASCAL_HARD){
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };
-    List<Token> result = lexer.analyzeFile("./build/tests/text4.txt");
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++){
-        EXPECT_EQ(result[i].getStr(), checkData[i].getStr());
-        EXPECT_EQ(result[i].getType(), checkData[i].getType());
-    }
+    checkEqualLex(checkData, lexer, "./build/tests/text4.txt");
 }
 
 /// @brief Тест разбора сложной программы на Pascal

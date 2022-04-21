@@ -226,7 +226,7 @@ class CodeGenVisitor : public IVisitor{
 class HighlightAccurateVisitor : public IVisitor{
     public:
 
-    HighlightAccurateVisitor(List<Token> tokens);
+    explicit HighlightAccurateVisitor(List<Token> tokens);
 
     void visit(BinOpAST &node);
 

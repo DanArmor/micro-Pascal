@@ -40,9 +40,7 @@ class Node{
     Node() : innerData(nullptr), nextPtr(nullptr), prevPtr(nullptr){};
 
     /// @brief Конструктор из значения
-    explicit Node(U const value) : nextPtr(nullptr), prevPtr(nullptr){
-        innerData = value;
-    }
+    explicit Node(U const value) : nextPtr(nullptr), prevPtr(nullptr), innerData(value){};
 
     /**
      * @brief Возвращает ссылку на данные узла

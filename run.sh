@@ -8,7 +8,7 @@ cd ..
 
 for file in ./progs/prog*
 do
-    cp $file "./build/"
+    cp "$file" "./build/"
     if [[ $? -ne 0 ]] ; then
         printf "Error during coping pascal programs!\n"
         exit 1
