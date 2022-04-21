@@ -410,7 +410,7 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="../../d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154" target="_top" xlink:title="очищает память, выделенную под узлы списка">
+<g id="a_node20"><a xlink:href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd" target="_top" xlink:title="очищает память, выделенную под узлы списка">
 <polygon fill="none" stroke="black" points="1949,-152.5 1949,-171.5 2008,-171.5 2008,-152.5 1949,-152.5"/>
 <text text-anchor="middle" x="1978.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">List::clear</text>
 </a>

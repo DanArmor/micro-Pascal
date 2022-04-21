@@ -311,7 +311,7 @@
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" target="_top" xlink:title="Устанавливает дополнительный тип токена">
 <polygon fill="none" stroke="black" points="2328,-113.88 2328,-132.88 2431,-132.88 2431,-113.88 2328,-113.88"/>
 <text text-anchor="middle" x="2379.5" y="-120.88" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::setAdvType</text>
 </a>

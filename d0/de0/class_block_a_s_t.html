@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00112">112</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00106">106</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a84a7b715c52e503f17f3c416f07b5ec4" name="a84a7b715c52e503f17f3c416f07b5ec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84a7b715c52e503f17f3c416f07b5ec4">&#9670;&nbsp;</a></span>BlockAST()</h2>
@@ -183,17 +183,18 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00086">86</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>                                                                                                     : <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a>({<span class="stringliteral">&quot;BLOCK&quot;</span>, IToken::Type::BLOCK}), <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>) {</div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>.size(); i++)</div>
-<div class="line"><span class="lineno">   88</span>        this-&gt;<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>.push_back(std::unique_ptr&lt;AST&gt;(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>[i]));</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>.size(); i++)</div>
-<div class="line"><span class="lineno">   90</span>        this-&gt;<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>.push_back(std::unique_ptr&lt;AST&gt;(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>[i]));</div>
-<div class="line"><span class="lineno">   91</span>};</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00082">82</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                                                     : <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a>(<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>), <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>) {</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>.size(); i++)</div>
+<div class="line"><span class="lineno">   84</span>        this-&gt;<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>.push_back(std::unique_ptr&lt;AST&gt;(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>[i]));</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>.size(); i++)</div>
+<div class="line"><span class="lineno">   86</span>        this-&gt;<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>.push_back(std::unique_ptr&lt;AST&gt;(<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>[i]));</div>
+<div class="line"><span class="lineno">   87</span>};</div>
+<div class="ttc" id="aclass_a_s_t_html_acd50071d5e3ece75e4e5c4b7808d3c5e"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">AST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00058">ASTclasses.hpp:58</a></div></div>
 <div class="ttc" id="aclass_a_s_t_html_afd378ca7cb3049d6293e8597d31d758d"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST::AST</a></div><div class="ttdeci">AST()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d91/_a_s_t_8cpp_source.html#l00005">AST.cpp:5</a></div></div>
-<div class="ttc" id="aclass_block_a_s_t_html_a6cef35125c6bc4d14e810c2d46989454"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">BlockAST::compound</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; compound</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00120">AST.hpp:120</a></div></div>
-<div class="ttc" id="aclass_block_a_s_t_html_ac2ff986a43fdb2f3cd0b98a8c974e8db"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">BlockAST::consts</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; consts</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00118">AST.hpp:118</a></div></div>
-<div class="ttc" id="aclass_block_a_s_t_html_afc78ee33f69546c77765ed9dfac5f430"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">BlockAST::declarations</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; declarations</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00119">AST.hpp:119</a></div></div>
+<div class="ttc" id="aclass_block_a_s_t_html_a6cef35125c6bc4d14e810c2d46989454"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">BlockAST::compound</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; compound</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00115">AST.hpp:115</a></div></div>
+<div class="ttc" id="aclass_block_a_s_t_html_ac2ff986a43fdb2f3cd0b98a8c974e8db"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">BlockAST::consts</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; consts</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00113">AST.hpp:113</a></div></div>
+<div class="ttc" id="aclass_block_a_s_t_html_afc78ee33f69546c77765ed9dfac5f430"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">BlockAST::declarations</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; declarations</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00114">AST.hpp:114</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -249,10 +250,10 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
 
 <p>Замещает <a class="el" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00082">82</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                      {</div>
-<div class="line"><span class="lineno">   83</span>    visitor.<a class="code hl_function" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">visit</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   84</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00078">78</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                      {</div>
+<div class="line"><span class="lineno">   79</span>    visitor.<a class="code hl_function" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">visit</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   80</span>}</div>
 <div class="ttc" id="aclass_i_visitor_html_a5b1f67b770cdf5b7f44a22bcf81e42e6"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(BinOpAST &amp;node)=0</div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -278,7 +279,7 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00120">120</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00115">115</a></p>
 
 </div>
 </div>
@@ -294,7 +295,7 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00118">118</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00113">113</a></p>
 
 </div>
 </div>
@@ -310,7 +311,7 @@ $(document).ready(function(){initNavTree('d0/de0/class_block_a_s_t.html','../../
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00119">119</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00114">114</a></p>
 
 </div>
 </div>

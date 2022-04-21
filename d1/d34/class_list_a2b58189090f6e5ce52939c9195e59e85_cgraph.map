@@ -1,6 +1,6 @@
 <map id="List::~List" name="List::~List">
 <area shape="rect" id="node1" title="Деструктор" alt="" coords="5,5,84,32"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#ab130f4e1fe1c3fee570cf06f144d4154" title="очищает память, выделенную под узлы списка" alt="" coords="132,5,211,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd" title="очищает память, выделенную под узлы списка" alt="" coords="132,5,211,32"/>
 <area shape="rect" id="node3" href="$d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c" title="Удаление из конца списка" alt="" coords="259,5,360,32"/>
 <area shape="rect" id="node4" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="408,5,481,32"/>
 </map>

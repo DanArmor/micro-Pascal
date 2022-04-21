@@ -164,6 +164,9 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SyntaxAnalyzer::SyntaxAnalyzer </td>
@@ -173,6 +176,11 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../d1/daa/_syntax_8cpp_source.html">Syntax.cpp</a> строка <a class="el" href="../../d1/daa/_syntax_8cpp_source.html#l00008">8</a></p>
@@ -353,7 +361,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="line"><span class="lineno">  323</span>        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Неожиданный конец файла!&quot;</span>);</div>
 <div class="line"><span class="lineno">  324</span>    <span class="keywordflow">return</span> tokens[currentIndex + 1];</div>
 <div class="line"><span class="lineno">  325</span>}</div>
-<div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00213">List.cpp:213</a></div></div>
+<div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00221">List.cpp:221</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -451,7 +459,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="ttc" id="aclass_syntax_analyzer_html_a53b0048490647d82a92a77ed1ffb013d"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a53b0048490647d82a92a77ed1ffb013d">SyntaxAnalyzer::syntaxExpr</a></div><div class="ttdeci">AST * syntaxExpr(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00225">Syntax.cpp:225</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_a8d3dc6feefe1957f1c81cbc7b8318559"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a8d3dc6feefe1957f1c81cbc7b8318559">SyntaxAnalyzer::syntaxVariable</a></div><div class="ttdeci">ASTptr syntaxVariable(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00213">Syntax.cpp:213</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_ae1d3434e5cc4b4bcd5a3a245814a44f0"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0">SyntaxAnalyzer::eat</a></div><div class="ttdeci">void eat(IToken::Type const type)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00327">Syntax.cpp:327</a></div></div>
-<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00126">Token.hpp:126</a></div></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00128">Token.hpp:128</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -603,7 +611,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="line"><span class="lineno">  109</span> </div>
 <div class="line"><span class="lineno">  110</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#ad7de68f7aba03e4ca3fc96efb743aa38">ASTFactory::createAST</a>(beginTok, stList);</div>
 <div class="line"><span class="lineno">  111</span>}</div>
-<div class="ttc" id="aclass_i_token_html_a4fa3435db7157ca7316d4e4aee1df4c0"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0">IToken::setAdvType</a></div><div class="ttdeci">virtual void setAdvType(IToken::AdvType newAdvType)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00115">Token.hpp:115</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a4fa3435db7157ca7316d4e4aee1df4c0"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0">IToken::setAdvType</a></div><div class="ttdeci">virtual void setAdvType(IToken::AdvType newAdvType)</div><div class="ttdoc">Устанавливает дополнительный тип токена</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00117">Token.hpp:117</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa3f5273830265629f7cbec96ad330211a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa3f5273830265629f7cbec96ad330211a">IToken::BEGIN</a></div><div class="ttdeci">@ BEGIN</div><div class="ttdoc">Начало блока</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00073">Token.hpp:73</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa685a24d9ce94617a29d5c1cda7e3eb29"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa685a24d9ce94617a29d5c1cda7e3eb29">IToken::END</a></div><div class="ttdeci">@ END</div><div class="ttdoc">Конец блока</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00074">Token.hpp:74</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_a79a0e444afd499634f445f0b8919dd0f"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a79a0e444afd499634f445f0b8919dd0f">SyntaxAnalyzer::syntaxStList</a></div><div class="ttdeci">std::vector&lt; AST * &gt; syntaxStList(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00113">Syntax.cpp:113</a></div></div>
@@ -887,7 +895,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa82462b1d5a3ab59778ab2019a530f89c"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa82462b1d5a3ab59778ab2019a530f89c">IToken::PLUS</a></div><div class="ttdeci">@ PLUS</div><div class="ttdoc">Плюс</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00051">Token.hpp:51</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aab0b81010f8de0fc08d6cfebfb87dcdf4"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab0b81010f8de0fc08d6cfebfb87dcdf4">IToken::MINUS</a></div><div class="ttdeci">@ MINUS</div><div class="ttdoc">Минус</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00052">Token.hpp:52</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a">IToken::NOT</a></div><div class="ttdeci">@ NOT</div><div class="ttdoc">Логическое отрицание</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00060">Token.hpp:60</a></div></div>
-<div class="ttc" id="aclass_i_token_html_ac8ca7f7e601ae49ad573167a4e9429cb"><div class="ttname"><a href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb">IToken::getAdvType</a></div><div class="ttdeci">virtual AdvType getAdvType(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00111">Token.hpp:111</a></div></div>
+<div class="ttc" id="aclass_i_token_html_ac8ca7f7e601ae49ad573167a4e9429cb"><div class="ttname"><a href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb">IToken::getAdvType</a></div><div class="ttdeci">virtual AdvType getAdvType(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00112">Token.hpp:112</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_a9321de68e44f3918a71256a3c1cd481b"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a9321de68e44f3918a71256a3c1cd481b">SyntaxAnalyzer::syntaxCallSt</a></div><div class="ttdeci">AST * syntaxCallSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00182">Syntax.cpp:182</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_ab9b415ddd671b4884ab31cdf194f6c64"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#ab9b415ddd671b4884ab31cdf194f6c64">SyntaxAnalyzer::syntaxFactor</a></div><div class="ttdeci">AST * syntaxFactor()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00268">Syntax.cpp:268</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_af0905389742c4f842207bb2c073afbfa"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa">SyntaxAnalyzer::lookFoward</a></div><div class="ttdeci">Token &amp; lookFoward(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00321">Syntax.cpp:321</a></div></div>
