@@ -113,8 +113,8 @@ $(document).ready(function(){initNavTree('da/dd1/class_call_a_s_t.html','../../'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:aa167557a24868c130372bd7c7020401d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd1/class_call_a_s_t.html#aa167557a24868c130372bd7c7020401d">CallAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> <a class="el" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, std::vector&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> * &gt; <a class="el" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>)</td></tr>
-<tr class="separator:aa167557a24868c130372bd7c7020401d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514735b78906b143a313466d4899dbe3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd1/class_call_a_s_t.html#a514735b78906b143a313466d4899dbe3">CallAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> <a class="el" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; <a class="el" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>)</td></tr>
+<tr class="separator:a514735b78906b143a313466d4899dbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98baa90ba75abe64d11c5035a292055d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd1/class_call_a_s_t.html#a98baa90ba75abe64d11c5035a292055d">~CallAST</a> ()=default</td></tr>
 <tr class="separator:a98baa90ba75abe64d11c5035a292055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4260777496618a9e74cb016c836460c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd1/class_call_a_s_t.html#aa4260777496618a9e74cb016c836460c">accept</a> (<a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;visitor)</td></tr>
@@ -141,8 +141,8 @@ $(document).ready(function(){initNavTree('da/dd1/class_call_a_s_t.html','../../'
 <div class="textblock">
 <p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00156">156</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="aa167557a24868c130372bd7c7020401d" name="aa167557a24868c130372bd7c7020401d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa167557a24868c130372bd7c7020401d">&#9670;&nbsp;</a></span>CallAST()</h2>
+<a id="a514735b78906b143a313466d4899dbe3" name="a514735b78906b143a313466d4899dbe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514735b78906b143a313466d4899dbe3">&#9670;&nbsp;</a></span>CallAST()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('da/dd1/class_call_a_s_t.html','../../'
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> * &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -168,9 +168,9 @@ $(document).ready(function(){initNavTree('da/dd1/class_call_a_s_t.html','../../'
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00123">123</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                    : <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a>(<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>){</div>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                                  : <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a>(<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>){</div>
 <div class="line"><span class="lineno">  124</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.size(); i++)</div>
-<div class="line"><span class="lineno">  125</span>        this-&gt;<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.push_back(std::unique_ptr&lt;AST&gt;(<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i]));</div>
+<div class="line"><span class="lineno">  125</span>        this-&gt;<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.emplace_back(std::move(<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i]));</div>
 <div class="line"><span class="lineno">  126</span>};</div>
 <div class="ttc" id="aclass_a_s_t_html_acd50071d5e3ece75e4e5c4b7808d3c5e"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">AST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00058">ASTclasses.hpp:58</a></div></div>
 <div class="ttc" id="aclass_a_s_t_html_afd378ca7cb3049d6293e8597d31d758d"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST::AST</a></div><div class="ttdeci">AST()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d91/_a_s_t_8cpp_source.html#l00005">AST.cpp:5</a></div></div>

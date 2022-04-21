@@ -120,8 +120,8 @@ $(document).ready(function(){initNavTree('da/dbb/class_compound_a_s_t.html','../
 <tr class="separator:a7fc0ba1eb870db22483e1f51529de214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2b918b203a75ae6d327265e5ea680c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbb/class_compound_a_s_t.html#a5a2b918b203a75ae6d327265e5ea680c">~CompoundAST</a> ()=default</td></tr>
 <tr class="separator:a5a2b918b203a75ae6d327265e5ea680c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a596c1d112edc624fe50ed8a261ffd532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbb/class_compound_a_s_t.html#a596c1d112edc624fe50ed8a261ffd532">addChild</a> (<a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> *child)</td></tr>
-<tr class="separator:a596c1d112edc624fe50ed8a261ffd532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5ba3d881a46b20bfc9d3ae9282187f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbb/class_compound_a_s_t.html#a2b5ba3d881a46b20bfc9d3ae9282187f">addChild</a> (std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; child)</td></tr>
+<tr class="separator:a2b5ba3d881a46b20bfc9d3ae9282187f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3df246f456db171a6c152567cfa1582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbb/class_compound_a_s_t.html#af3df246f456db171a6c152567cfa1582">accept</a> (<a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;visitor)</td></tr>
 <tr class="separator:af3df246f456db171a6c152567cfa1582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_a_s_t"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_s_t')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a></td></tr>
@@ -246,8 +246,8 @@ $(document).ready(function(){initNavTree('da/dbb/class_compound_a_s_t.html','../
 
 </div>
 </div>
-<a id="a596c1d112edc624fe50ed8a261ffd532" name="a596c1d112edc624fe50ed8a261ffd532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a596c1d112edc624fe50ed8a261ffd532">&#9670;&nbsp;</a></span>addChild()</h2>
+<a id="a2b5ba3d881a46b20bfc9d3ae9282187f" name="a2b5ba3d881a46b20bfc9d3ae9282187f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5ba3d881a46b20bfc9d3ae9282187f">&#9670;&nbsp;</a></span>addChild()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('da/dbb/class_compound_a_s_t.html','../
         <tr>
           <td class="memname">void CompoundAST::addChild </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
           <td class="paramname"><em>child</em></td><td>)</td>
           <td></td>
         </tr>
@@ -263,19 +263,11 @@ $(document).ready(function(){initNavTree('da/dbb/class_compound_a_s_t.html','../
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00036">36</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                    {</div>
-<div class="line"><span class="lineno">   37</span>    <a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">children</a>.push_back(std::unique_ptr&lt;AST&gt;(child));</div>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                  {</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">children</a>.emplace_back(std::move(child));</div>
 <div class="line"><span class="lineno">   38</span>}</div>
 <div class="ttc" id="aclass_compound_a_s_t_html_a297d710431a528b853d61f89b93bebd4"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">CompoundAST::children</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00058">AST.hpp:58</a></div></div>
-</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dbb/class_compound_a_s_t_a596c1d112edc624fe50ed8a261ffd532_icgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Данные класса</h2>
