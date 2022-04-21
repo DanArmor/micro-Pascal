@@ -36,4 +36,7 @@ target_link_libraries(ASTFactory AST Token fmt)
 add_executable(Main main.cpp)
 target_link_libraries(Main Visitor Token AST Syntax Lexer)
 
+add_executable(graphDraw graphDraw.cpp)
+target_link_libraries(graphDraw Visitor Token AST Syntax Lexer)
+
 add_subdirectory(tests)

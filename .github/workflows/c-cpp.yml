@@ -1,5 +1,4 @@
-name: C/C++ CI
-
+name: C/C++ Build & Test & Memory Test
 on:
   push:
     branches: [ main ]
@@ -7,26 +6,21 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+      
+  test:
+    name: Test
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure.sh
+      - uses: actions/checkout@v3
       
-    - name: switch to gcc-10 on linux
-      run: |
-        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100 --slave /usr/bin/g++ g++ /usr/bin/g++-11 --slave /usr/bin/gcov gcov /usr/bin/gcov-11
-        sudo update-alternatives --set gcc /usr/bin/gcc-11
-      
-    - name: make
-      run: ./allBuild.sh
-    
-    - name: simpleTest
-      run: ./testAll.sh
-
-    - name: memoryTest
-      run: ./valgrindTest.sh
-  
+      - name: configure
+        run: ./configure.sh
+        
+      - name: build
+        run: ./allBuild.sh
+        
+      - name: simpleTest
+        run: ./testAll.sh
+        
+      - name: memoryTest
+        run: ./valgrindTest.sh
