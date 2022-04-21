@@ -165,7 +165,7 @@ class List&lt; T &gt;</div><p >Предварительное объявлени
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00181">181</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00179">179</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a5c5e27671b21b3815d4e25b953c69454" name="a5c5e27671b21b3815d4e25b953c69454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c5e27671b21b3815d4e25b953c69454">&#9670;&nbsp;</a></span>List() <span class="overload">[1/5]</span></h2>
@@ -194,8 +194,8 @@ template&lt;typename T &gt; </div>
 
 <p>Конструктор по-умолчанию </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00185">185</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>: sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {};</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00183">183</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>: sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -227,13 +227,13 @@ template&lt;typename T &gt; </div>
 
 <p>Конструктор из initializer_list. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00188">188</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                 : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> value : initData)</div>
-<div class="line"><span class="lineno">  190</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(value);</div>
-<div class="line"><span class="lineno">  191</span>        sizeOfList = initData.size();</div>
-<div class="line"><span class="lineno">  192</span>    }</div>
-<div class="ttc" id="aclass_list_html_a0c471cf5c09edf2dcbdf1f37cac53e45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">List::pushBack</a></div><div class="ttdeci">virtual void pushBack(T const &amp;value)</div><div class="ttdoc">Вставка в конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00229">List.cpp:229</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00186">186</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>                                                 : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> value : initData)</div>
+<div class="line"><span class="lineno">  188</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(value);</div>
+<div class="line"><span class="lineno">  189</span>        sizeOfList = initData.size();</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="ttc" id="aclass_list_html_a0c471cf5c09edf2dcbdf1f37cac53e45"><div class="ttname"><a href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">List::pushBack</a></div><div class="ttdeci">virtual void pushBack(T const &amp;value)</div><div class="ttdoc">Вставка в конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00227">List.cpp:227</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -273,12 +273,12 @@ template&lt;typename T &gt; </div>
 
 <p>Конструктор из initializer_list. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00195">195</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  195</span>                                                : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
-<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> value : initData)</div>
-<div class="line"><span class="lineno">  197</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(value);</div>
-<div class="line"><span class="lineno">  198</span>        sizeOfList = initData.size();</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00193">193</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>                                                : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> value : initData)</div>
+<div class="line"><span class="lineno">  195</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(value);</div>
+<div class="line"><span class="lineno">  196</span>        sizeOfList = initData.size();</div>
+<div class="line"><span class="lineno">  197</span>    }</div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -318,12 +318,12 @@ template&lt;typename T &gt; </div>
 
 <p>Конструктор из размера </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00202">202</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  202</span>                               : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; n; i++)</div>
-<div class="line"><span class="lineno">  204</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(T{});</div>
-<div class="line"><span class="lineno">  205</span>        sizeOfList = n;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00200">200</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>                               : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0) {</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; n; i++)</div>
+<div class="line"><span class="lineno">  202</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(T{});</div>
+<div class="line"><span class="lineno">  203</span>        sizeOfList = n;</div>
+<div class="line"><span class="lineno">  204</span>    }</div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -363,13 +363,13 @@ template&lt;typename T &gt; </div>
 
 <p>Конструктор из другого списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00209">209</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                             : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0){</div>
-<div class="line"><span class="lineno">  210</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
-<div class="line"><span class="lineno">  212</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
-<div class="ttc" id="aclass_list_html_a4d4612ce942a94cf46978587fc7943dd"><div class="ttname"><a href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">List::clear</a></div><div class="ttdeci">void clear(void)</div><div class="ttdoc">очищает память, выделенную под узлы списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00311">List.cpp:311</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00207">207</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>                             : sizeOfList(0), startPtr(<span class="keyword">nullptr</span>), endPtr(<span class="keyword">nullptr</span>), workPtr(<span class="keyword">nullptr</span>), currIndex(0){</div>
+<div class="line"><span class="lineno">  208</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
+<div class="line"><span class="lineno">  210</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="ttc" id="aclass_list_html_a4d4612ce942a94cf46978587fc7943dd"><div class="ttname"><a href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">List::clear</a></div><div class="ttdeci">void clear(void)</div><div class="ttdoc">очищает память, выделенную под узлы списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00309">List.cpp:309</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -408,10 +408,10 @@ template&lt;typename T &gt; </div>
 
 <p>Деструктор </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00216">216</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>           {</div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
-<div class="line"><span class="lineno">  218</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00214">214</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>           {</div>
+<div class="line"><span class="lineno">  215</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -452,17 +452,17 @@ template&lt;typename T &gt; </div>
 
 <p>Итератор для начала списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00318">318</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>                                     {</div>
-<div class="line"><span class="lineno">  319</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(startPtr, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  320</span>    }</div>
-<div class="ttc" id="aclass_node_iterator_html"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html">NodeIterator</a></div><div class="ttdoc">Предварительное объявление для итератора узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00111">List.cpp:111</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00316">316</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  316</span>                                     {</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(startPtr, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="ttc" id="aclass_node_iterator_html"><div class="ttname"><a href="../../d3/dde/class_node_iterator.html">NodeIterator</a></div><div class="ttdoc">Предварительное объявление для итератора узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00109">List.cpp:109</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_ab62bcc4a78278e99a01cacea8ee22423_icgraph.svg" width="592" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_ab62bcc4a78278e99a01cacea8ee22423_icgraph.svg" width="751" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -496,13 +496,13 @@ template&lt;typename T &gt; </div>
 
 <p>очищает память, выделенную под узлы списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00311">311</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>                    {</div>
-<div class="line"><span class="lineno">  312</span>        std::size_t toClear = sizeOfList;</div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; toClear; i++)</div>
-<div class="line"><span class="lineno">  314</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
-<div class="line"><span class="lineno">  315</span>    }</div>
-<div class="ttc" id="aclass_list_html_afde529b40dee618ee58faf1414b7be8c"><div class="ttname"><a href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">List::popBack</a></div><div class="ttdeci">void popBack(void)</div><div class="ttdoc">Удаление из конца списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00293">List.cpp:293</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00309">309</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>                    {</div>
+<div class="line"><span class="lineno">  310</span>        std::size_t toClear = sizeOfList;</div>
+<div class="line"><span class="lineno">  311</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; toClear; i++)</div>
+<div class="line"><span class="lineno">  312</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
+<div class="line"><span class="lineno">  313</span>    }</div>
+<div class="ttc" id="aclass_list_html_afde529b40dee618ee58faf1414b7be8c"><div class="ttname"><a href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">List::popBack</a></div><div class="ttdeci">void popBack(void)</div><div class="ttdoc">Удаление из конца списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00291">List.cpp:291</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -549,16 +549,16 @@ template&lt;typename T &gt; </div>
 
 <p>Конец списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00323">323</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  323</span>                               {</div>
-<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(endPtr, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  325</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00321">321</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>                               {</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="../../d3/dde/class_node_iterator.html">NodeIterator&lt;T&gt;</a>(endPtr, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  323</span>    }</div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a56026b900ba2e5a6c894797b57e9bdf1_icgraph.svg" width="582" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a56026b900ba2e5a6c894797b57e9bdf1_icgraph.svg" width="740" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -590,18 +590,18 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00327">327</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  327</span>                                           {</div>
-<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">if</span>(<span class="keyword">this</span> == &amp;list)</div>
-<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  330</span>        </div>
-<div class="line"><span class="lineno">  331</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
-<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
-<div class="line"><span class="lineno">  333</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
-<div class="line"><span class="lineno">  334</span>        sizeOfList = list.sizeOfList;</div>
-<div class="line"><span class="lineno">  335</span> </div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  337</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00325">325</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>                                           {</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span>(<span class="keyword">this</span> == &amp;list)</div>
+<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  328</span>        </div>
+<div class="line"><span class="lineno">  329</span>        <a class="code hl_function" href="../../d1/d34/class_list.html#a4d4612ce942a94cf46978587fc7943dd">clear</a>();</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> x : list)</div>
+<div class="line"><span class="lineno">  331</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(x);</div>
+<div class="line"><span class="lineno">  332</span>        sizeOfList = list.sizeOfList;</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -646,16 +646,16 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>T&amp; - ссылку на элемент с номером index. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00265">265</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  265</span>                                        {</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">if</span>(index &gt; sizeOfList)</div>
-<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Выход за пределы списка!&quot;</span>);</div>
-<div class="line"><span class="lineno">  268</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(sizeOfList == 0)</div>
-<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Попытка получения значения из пустого списка!&quot;</span>);</div>
-<div class="line"><span class="lineno">  270</span>        goToIndex(index);</div>
-<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97">data</a>();</div>
-<div class="line"><span class="lineno">  272</span>    }</div>
-<div class="ttc" id="aclass_node_html_a185e16bf8f647324ddd84295a868ee97"><div class="ttname"><a href="../../dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97">Node::data</a></div><div class="ttdeci">U &amp; data(void) noexcept</div><div class="ttdoc">Возвращает ссылку на данные узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00051">List.cpp:51</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00263">263</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>                                        {</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span>(index &gt; sizeOfList)</div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Выход за пределы списка!&quot;</span>);</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Попытка получения значения из пустого списка!&quot;</span>);</div>
+<div class="line"><span class="lineno">  268</span>        goToIndex(index);</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97">data</a>();</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+<div class="ttc" id="aclass_node_html_a185e16bf8f647324ddd84295a868ee97"><div class="ttname"><a href="../../dc/d8f/class_node.html#a185e16bf8f647324ddd84295a868ee97">Node::data</a></div><div class="ttdeci">U &amp; data(void) noexcept</div><div class="ttdoc">Возвращает ссылку на данные узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00049">List.cpp:49</a></div></div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -703,17 +703,17 @@ template&lt;typename T &gt; </div>
 
 <p>Удаление из конца списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00293">293</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  293</span>                      {</div>
-<div class="line"><span class="lineno">  294</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
-<div class="line"><span class="lineno">  296</span>        <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveEnd = endPtr-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
-<div class="line"><span class="lineno">  297</span>        removeAt_inner(<a class="code hl_function" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1);</div>
-<div class="line"><span class="lineno">  298</span>        endPtr = reserveEnd;</div>
-<div class="line"><span class="lineno">  299</span>    }</div>
-<div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00221">List.cpp:221</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00291">291</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>                      {</div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><span class="lineno">  294</span>        <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveEnd = endPtr-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><span class="lineno">  295</span>        removeAt_inner(<a class="code hl_function" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1);</div>
+<div class="line"><span class="lineno">  296</span>        endPtr = reserveEnd;</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00219">List.cpp:219</a></div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="../../dc/d8f/class_node.html">Node&lt; T &gt;</a></div></div>
-<div class="ttc" id="aclass_node_html_aba90dd45645dcb21fa58d1742471ee07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">Node::prevPtr</a></div><div class="ttdeci">Node * prevPtr</div><div class="ttdoc">Указатель на предыдущий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00106">List.cpp:106</a></div></div>
+<div class="ttc" id="aclass_node_html_aba90dd45645dcb21fa58d1742471ee07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">Node::prevPtr</a></div><div class="ttdeci">Node * prevPtr</div><div class="ttdoc">Указатель на предыдущий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00104">List.cpp:104</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -761,15 +761,15 @@ template&lt;typename T &gt; </div>
 
 <p>Удаление из начала списка </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00302">302</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  302</span>                       {</div>
-<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
-<div class="line"><span class="lineno">  305</span>        <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveStart = startPtr-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
-<div class="line"><span class="lineno">  306</span>        removeAt_inner(0);</div>
-<div class="line"><span class="lineno">  307</span>        startPtr = reserveStart;</div>
-<div class="line"><span class="lineno">  308</span>    }</div>
-<div class="ttc" id="aclass_node_html_a52ba4354582488265677fa2b9eec32ec"><div class="ttname"><a href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">Node::nextPtr</a></div><div class="ttdeci">Node * nextPtr</div><div class="ttdoc">Указатель на следующий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00104">List.cpp:104</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00300">300</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>                       {</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a> *reserveStart = startPtr-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><span class="lineno">  304</span>        removeAt_inner(0);</div>
+<div class="line"><span class="lineno">  305</span>        startPtr = reserveStart;</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+<div class="ttc" id="aclass_node_html_a52ba4354582488265677fa2b9eec32ec"><div class="ttname"><a href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">Node::nextPtr</a></div><div class="ttdeci">Node * nextPtr</div><div class="ttdoc">Указатель на следующий узел</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00102">List.cpp:102</a></div></div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -815,21 +815,21 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00229">229</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  229</span>                                         {</div>
-<div class="line"><span class="lineno">  230</span>        sizeOfList++;</div>
-<div class="line"><span class="lineno">  231</span>        goToEnd();</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
-<div class="line"><span class="lineno">  233</span>            getWorkPtr() = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
-<div class="line"><span class="lineno">  234</span>            startPtr = getWorkPtr();</div>
-<div class="line"><span class="lineno">  235</span>            endPtr = getWorkPtr();</div>
-<div class="line"><span class="lineno">  236</span>        } <span class="keywordflow">else</span>  [[likely]]{</div>
-<div class="line"><span class="lineno">  237</span>            getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(value);</div>
-<div class="line"><span class="lineno">  238</span>            endPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
-<div class="line"><span class="lineno">  239</span>            workPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
-<div class="line"><span class="lineno">  240</span>        }</div>
-<div class="line"><span class="lineno">  241</span>    }</div>
-<div class="ttc" id="aclass_node_html_a5f29dc4844746c7e7780933173d31a4a"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">Node::connectAsNext</a></div><div class="ttdeci">void connectAsNext(Node *pNext) noexcept</div><div class="ttdoc">Присоединяет узел pNext в качестве следующего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00056">List.cpp:56</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00227">227</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                         {</div>
+<div class="line"><span class="lineno">  228</span>        sizeOfList++;</div>
+<div class="line"><span class="lineno">  229</span>        goToEnd();</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
+<div class="line"><span class="lineno">  231</span>            getWorkPtr() = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
+<div class="line"><span class="lineno">  232</span>            startPtr = getWorkPtr();</div>
+<div class="line"><span class="lineno">  233</span>            endPtr = getWorkPtr();</div>
+<div class="line"><span class="lineno">  234</span>        } <span class="keywordflow">else</span>  [[likely]]{</div>
+<div class="line"><span class="lineno">  235</span>            getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">connectAsNext</a>(value);</div>
+<div class="line"><span class="lineno">  236</span>            endPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><span class="lineno">  237</span>            workPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec">nextPtr</a>;</div>
+<div class="line"><span class="lineno">  238</span>        }</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
+<div class="ttc" id="aclass_node_html_a5f29dc4844746c7e7780933173d31a4a"><div class="ttname"><a href="../../dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a">Node::connectAsNext</a></div><div class="ttdeci">void connectAsNext(Node *pNext) noexcept</div><div class="ttdoc">Присоединяет узел pNext в качестве следующего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00054">List.cpp:54</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -843,7 +843,7 @@ template&lt;typename T &gt; </div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a0c471cf5c09edf2dcbdf1f37cac53e45_icgraph.svg" width="619" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a0c471cf5c09edf2dcbdf1f37cac53e45_icgraph.svg" width="778" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -883,21 +883,21 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00247">247</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                          {</div>
-<div class="line"><span class="lineno">  248</span>        sizeOfList++;</div>
-<div class="line"><span class="lineno">  249</span>        goToBegin();</div>
-<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
-<div class="line"><span class="lineno">  251</span>            getWorkPtr() = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
-<div class="line"><span class="lineno">  252</span>            startPtr = getWorkPtr();</div>
-<div class="line"><span class="lineno">  253</span>            endPtr = getWorkPtr();</div>
-<div class="line"><span class="lineno">  254</span>        } <span class="keywordflow">else</span> [[likely]]{</div>
-<div class="line"><span class="lineno">  255</span>            getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(value);</div>
-<div class="line"><span class="lineno">  256</span>            startPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
-<div class="line"><span class="lineno">  257</span>            workPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
-<div class="line"><span class="lineno">  258</span>        }</div>
-<div class="line"><span class="lineno">  259</span>    }</div>
-<div class="ttc" id="aclass_node_html_aa8d23f895123945ad5b92793a1477c07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">Node::connectAsPrev</a></div><div class="ttdeci">void connectAsPrev(Node *pPrev) noexcept</div><div class="ttdoc">Присоединяет узел pPrev в качестве предыдущего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00062">List.cpp:62</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00245">245</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>                                          {</div>
+<div class="line"><span class="lineno">  246</span>        sizeOfList++;</div>
+<div class="line"><span class="lineno">  247</span>        goToBegin();</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span>(getWorkPtr() == <span class="keyword">nullptr</span>){</div>
+<div class="line"><span class="lineno">  249</span>            getWorkPtr() = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d8f/class_node.html">Node&lt;T&gt;</a>(value);</div>
+<div class="line"><span class="lineno">  250</span>            startPtr = getWorkPtr();</div>
+<div class="line"><span class="lineno">  251</span>            endPtr = getWorkPtr();</div>
+<div class="line"><span class="lineno">  252</span>        } <span class="keywordflow">else</span> [[likely]]{</div>
+<div class="line"><span class="lineno">  253</span>            getWorkPtr()-&gt;<a class="code hl_function" href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">connectAsPrev</a>(value);</div>
+<div class="line"><span class="lineno">  254</span>            startPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><span class="lineno">  255</span>            workPtr = getWorkPtr()-&gt;<a class="code hl_variable" href="../../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07">prevPtr</a>;</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
+<div class="ttc" id="aclass_node_html_aa8d23f895123945ad5b92793a1477c07"><div class="ttname"><a href="../../dc/d8f/class_node.html#aa8d23f895123945ad5b92793a1477c07">Node::connectAsPrev</a></div><div class="ttdeci">void connectAsPrev(Node *pPrev) noexcept</div><div class="ttdoc">Присоединяет узел pPrev в качестве предыдущего узла</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00060">List.cpp:60</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -951,20 +951,20 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00279">279</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>                                    {</div>
-<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
-<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
-<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i &gt;= sizeOfList)</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Индекс элемента для удаления лежит за пределами списка!&quot;</span>));</div>
-<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">if</span>(i == <a class="code hl_function" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1)</div>
-<div class="line"><span class="lineno">  285</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
-<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i == 0)</div>
-<div class="line"><span class="lineno">  287</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">popFront</a>();</div>
-<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  289</span>            removeAt_inner(i);</div>
-<div class="line"><span class="lineno">  290</span>    }</div>
-<div class="ttc" id="aclass_list_html_ae5f1e232204f37788c3490cefe3be4ad"><div class="ttname"><a href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">List::popFront</a></div><div class="ttdeci">void popFront(void)</div><div class="ttdoc">Удаление из начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00302">List.cpp:302</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00277">277</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>                                    {</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">if</span>(sizeOfList == 0)</div>
+<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Попытка удаления элемента из пустого списка!&quot;</span>));</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i &gt;= sizeOfList)</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">throw</span>(std::out_of_range(<span class="stringliteral">&quot;Индекс элемента для удаления лежит за пределами списка!&quot;</span>));</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">if</span>(i == <a class="code hl_function" href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">size</a>()-1)</div>
+<div class="line"><span class="lineno">  283</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#afde529b40dee618ee58faf1414b7be8c">popBack</a>();</div>
+<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(i == 0)</div>
+<div class="line"><span class="lineno">  285</span>            <a class="code hl_function" href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">popFront</a>();</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  287</span>            removeAt_inner(i);</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
+<div class="ttc" id="aclass_list_html_ae5f1e232204f37788c3490cefe3be4ad"><div class="ttname"><a href="../../d1/d34/class_list.html#ae5f1e232204f37788c3490cefe3be4ad">List::popFront</a></div><div class="ttdeci">void popFront(void)</div><div class="ttdoc">Удаление из начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00300">List.cpp:300</a></div></div>
 </div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1011,16 +1011,16 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Возвращает</dt><dd>std::size_t - размер списка </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00221">221</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                 {</div>
-<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">return</span> sizeOfList;</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a> строка <a class="el" href="../../d5/df9/_list_8cpp_source.html#l00219">219</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>                                 {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span> sizeOfList;</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
 </div><!-- fragment --><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-22-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a49c179636e084dfbf7a52acd46acaf01_icgraph.svg" width="3096" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d34/class_list_a49c179636e084dfbf7a52acd46acaf01_icgraph.svg" width="3096" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
