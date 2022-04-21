@@ -11,7 +11,7 @@ var annotated_dup =
     [ "ConstAST", "d6/d94/class_const_a_s_t.html", "d6/d94/class_const_a_s_t" ],
     [ "GraphvizVisitor", "d0/dc3/class_graphviz_visitor.html", "d0/dc3/class_graphviz_visitor" ],
     [ "HighlightAccurateVisitor", "d2/dd3/class_highlight_accurate_visitor.html", "d2/dd3/class_highlight_accurate_visitor" ],
-    [ "ifAST", "d4/de5/classif_a_s_t.html", "d4/de5/classif_a_s_t" ],
+    [ "IfAST", "d7/d6b/class_if_a_s_t.html", "d7/d6b/class_if_a_s_t" ],
     [ "IToken", "d0/d11/class_i_token.html", "d0/d11/class_i_token" ],
     [ "IVisitor", "df/db7/class_i_visitor.html", "df/db7/class_i_visitor" ],
     [ "Lexer", "da/d5a/class_lexer.html", "da/d5a/class_lexer" ],
@@ -33,5 +33,5 @@ var annotated_dup =
     [ "VarAST", "dc/dff/class_var_a_s_t.html", "dc/dff/class_var_a_s_t" ],
     [ "VarDeclAST", "d6/d7c/class_var_decl_a_s_t.html", "d6/d7c/class_var_decl_a_s_t" ],
     [ "VisitorValue", "d6/df2/class_visitor_value.html", "d6/df2/class_visitor_value" ],
-    [ "whileAST", "d4/dae/classwhile_a_s_t.html", "d4/dae/classwhile_a_s_t" ]
+    [ "WhileAST", "dc/da0/class_while_a_s_t.html", "dc/da0/class_while_a_s_t" ]
 ];

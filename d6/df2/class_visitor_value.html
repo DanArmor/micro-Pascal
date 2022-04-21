@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('d6/df2/class_visitor_value.html','../.
 class VisitorValue&lt; VisitorImpl, VisitablePtr, ResultType &gt;</div><p >Посетитель для вывода узлов АСД </p>
 <p >Класс-шаблон для получения посетителей, способных хранить в себе значения </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00035">35</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00032">32</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="aa4d86b1d82a7ff5f9e0ff73239cff627" name="aa4d86b1d82a7ff5f9e0ff73239cff627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4d86b1d82a7ff5f9e0ff73239cff627">&#9670;&nbsp;</a></span>getValue()</h2>
@@ -155,12 +155,12 @@ template&lt;typename VisitorImpl , typename VisitablePtr , typename ResultType &
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>ResultType Значение, сохранившееся в VisitorImpl после обхода </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00043">43</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                {</div>
-<div class="line"><span class="lineno">   44</span>        VisitorImpl vis;</div>
-<div class="line"><span class="lineno">   45</span>        ptr-&gt;accept(vis);</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">return</span> vis.value;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00040">40</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                {</div>
+<div class="line"><span class="lineno">   41</span>        VisitorImpl vis;</div>
+<div class="line"><span class="lineno">   42</span>        ptr-&gt;accept(vis);</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">return</span> vis.value;</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -198,10 +198,10 @@ template&lt;typename VisitorImpl , typename VisitablePtr , typename ResultType &
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00053">53</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                   {</div>
-<div class="line"><span class="lineno">   54</span>        value = inValue;</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00050">50</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                   {</div>
+<div class="line"><span class="lineno">   51</span>        value = inValue;</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -233,10 +233,10 @@ template&lt;typename VisitorImpl , typename VisitablePtr , typename ResultType &
 
 <p>Показывает хранимое внутри посетителя значение </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00058">58</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                              {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> value;</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00055">55</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                              {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">return</span> value;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>

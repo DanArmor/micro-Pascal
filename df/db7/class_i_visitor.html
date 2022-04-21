@@ -135,10 +135,10 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 <tr class="separator:aa9c149efcd1c2fa057ae713290f1b268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a182fd51025832787190bf67799cdbd3b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">visit</a> (<a class="el" href="../../da/dd1/class_call_a_s_t.html">CallAST</a> &amp;node)=0</td></tr>
 <tr class="separator:a182fd51025832787190bf67799cdbd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfad00fc604262eef8c8423e2265274"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a5bfad00fc604262eef8c8423e2265274">visit</a> (<a class="el" href="../../d4/de5/classif_a_s_t.html">ifAST</a> &amp;node)=0</td></tr>
-<tr class="separator:a5bfad00fc604262eef8c8423e2265274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4aeadce800d9d6cf69d4f9c274691c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#aeb4aeadce800d9d6cf69d4f9c274691c">visit</a> (<a class="el" href="../../d4/dae/classwhile_a_s_t.html">whileAST</a> &amp;node)=0</td></tr>
-<tr class="separator:aeb4aeadce800d9d6cf69d4f9c274691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ad7a121d846dd882c6fe9f316af66a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a03ad7a121d846dd882c6fe9f316af66a">visit</a> (<a class="el" href="../../d7/d6b/class_if_a_s_t.html">IfAST</a> &amp;node)=0</td></tr>
+<tr class="separator:a03ad7a121d846dd882c6fe9f316af66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3c4c3332757f51ed80fd23ec2a0995"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a5b3c4c3332757f51ed80fd23ec2a0995">visit</a> (<a class="el" href="../../dc/da0/class_while_a_s_t.html">WhileAST</a> &amp;node)=0</td></tr>
+<tr class="separator:a5b3c4c3332757f51ed80fd23ec2a0995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Интерфейс "посетителя". </p>
@@ -152,17 +152,17 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 <div class="line"> </div>
 <div class="line"><a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a>); <span class="comment">// Просим корень принять посетителя</span></div>
 <div class="line"><a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a>.<a class="code hl_function" href="../../d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9">write</a>(); <span class="comment">// Посетитель закончил работу</span></div>
-<div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00049">ASTclasses.hpp:49</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00048">ASTclasses.hpp:48</a></div></div>
 <div class="ttc" id="aclass_a_s_t_html_a2be6b7f1a62e69bf7c408a314cd09a87"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST::accept</a></div><div class="ttdeci">virtual void accept(IVisitor &amp;visitor)=0</div></div>
-<div class="ttc" id="aclass_graphviz_visitor_html"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html">GraphvizVisitor</a></div><div class="ttdoc">Посетитель для расчета по дереву выражения</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00090">Visitor.hpp:90</a></div></div>
-<div class="ttc" id="aclass_graphviz_visitor_html_a11a48d0833e5c502ffa019419cfe1fa9"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9">GraphvizVisitor::write</a></div><div class="ttdeci">void write(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00132">Visitor.cpp:132</a></div></div>
+<div class="ttc" id="aclass_graphviz_visitor_html"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html">GraphvizVisitor</a></div><div class="ttdoc">Посетитель для расчета по дереву выражения</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00087">Visitor.hpp:87</a></div></div>
+<div class="ttc" id="aclass_graphviz_visitor_html_a11a48d0833e5c502ffa019419cfe1fa9"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9">GraphvizVisitor::write</a></div><div class="ttdeci">void write(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00135">Visitor.cpp:135</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a></div><div class="ttdoc">Класс синтаксического анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3f/_syntax_8hpp_source.html#l00027">Syntax.hpp:27</a></div></div>
-<div class="ttc" id="aclass_syntax_analyzer_html_a0472b9d7f2855f118acf9cb7c67ab5a7"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a0472b9d7f2855f118acf9cb7c67ab5a7">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">AST * parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00298">Syntax.cpp:298</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html_a0472b9d7f2855f118acf9cb7c67ab5a7"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a0472b9d7f2855f118acf9cb7c67ab5a7">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">AST * parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00306">Syntax.cpp:306</a></div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_a631b1e0bdcaca1e7209427a4fdc07a35"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a></div><div class="ttdeci">SyntaxAnalyzer syntax(tokens)</div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_ab6504bac8bdc1c4fb18bd62ee830f2c2"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a></div><div class="ttdeci">GraphvizVisitor graph(&quot;out.dot&quot;)</div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_ad72cd6d23ee19818be64711919a62994"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a></div><div class="ttdeci">AST * root</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d17/example__visiter_8cpp_source.html#l00003">example_visiter.cpp:3</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html">ASTclasses.hpp</a> строка <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00028">28</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html">ASTclasses.hpp</a> строка <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00027">27</a></p>
 </div><h2 class="groupheader">Методы</h2>
 <a id="a83611ea7b4dde8db8d15e5702951f025" name="a83611ea7b4dde8db8d15e5702951f025"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83611ea7b4dde8db8d15e5702951f025">&#9670;&nbsp;</a></span>visit() <span class="overload">[1/16]</span></h2>
@@ -340,8 +340,8 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 
 </div>
 </div>
-<a id="a5bfad00fc604262eef8c8423e2265274" name="a5bfad00fc604262eef8c8423e2265274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bfad00fc604262eef8c8423e2265274">&#9670;&nbsp;</a></span>visit() <span class="overload">[7/16]</span></h2>
+<a id="a03ad7a121d846dd882c6fe9f316af66a" name="a03ad7a121d846dd882c6fe9f316af66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ad7a121d846dd882c6fe9f316af66a">&#9670;&nbsp;</a></span>visit() <span class="overload">[7/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +352,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
         <tr>
           <td class="memname">virtual void IVisitor::visit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/de5/classif_a_s_t.html">ifAST</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d7/d6b/class_if_a_s_t.html">IfAST</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -364,7 +364,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </table>
 </div><div class="memdoc">
 
-<p>Замещается в <a class="el" href="../../d0/dc3/class_graphviz_visitor.html#a378ed83873abf507138c9ca4212e4e33">GraphvizVisitor</a>, <a class="el" href="../../d1/d49/class_type_view_visitor.html#ab948d92b3c8285b3d78a1943165cc0b1">TypeViewVisitor</a>, <a class="el" href="../../da/d38/class_code_gen_visitor.html#a6aab070cbdfd199aaef93a374307af7f">CodeGenVisitor</a> и <a class="el" href="../../d2/dd3/class_highlight_accurate_visitor.html#a77aba03e3570e55dfc49976e5d14e2a8">HighlightAccurateVisitor</a>.</p>
+<p>Замещается в <a class="el" href="../../d0/dc3/class_graphviz_visitor.html#aeadd2080c53fe06696029d0c3fdaed38">GraphvizVisitor</a>, <a class="el" href="../../d1/d49/class_type_view_visitor.html#a7a7345ada447625d738d0177702fa292">TypeViewVisitor</a>, <a class="el" href="../../da/d38/class_code_gen_visitor.html#abc850afeae1a13015dfcb6599dca697a">CodeGenVisitor</a> и <a class="el" href="../../d2/dd3/class_highlight_accurate_visitor.html#a97a3937331721d7f8b8ddbe3204ce29e">HighlightAccurateVisitor</a>.</p>
 
 </div>
 </div>
@@ -592,8 +592,8 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 
 </div>
 </div>
-<a id="aeb4aeadce800d9d6cf69d4f9c274691c" name="aeb4aeadce800d9d6cf69d4f9c274691c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb4aeadce800d9d6cf69d4f9c274691c">&#9670;&nbsp;</a></span>visit() <span class="overload">[16/16]</span></h2>
+<a id="a5b3c4c3332757f51ed80fd23ec2a0995" name="a5b3c4c3332757f51ed80fd23ec2a0995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3c4c3332757f51ed80fd23ec2a0995">&#9670;&nbsp;</a></span>visit() <span class="overload">[16/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -604,7 +604,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
         <tr>
           <td class="memname">virtual void IVisitor::visit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/dae/classwhile_a_s_t.html">whileAST</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dc/da0/class_while_a_s_t.html">WhileAST</a> &amp;&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -616,7 +616,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </table>
 </div><div class="memdoc">
 
-<p>Замещается в <a class="el" href="../../d0/dc3/class_graphviz_visitor.html#ac80511fb34d09c140e20e2a4027ac768">GraphvizVisitor</a>, <a class="el" href="../../d1/d49/class_type_view_visitor.html#ae0de34fb842aa6180230c8225759e21d">TypeViewVisitor</a>, <a class="el" href="../../da/d38/class_code_gen_visitor.html#a6d992cdab19038dc630ed01c7de3abfd">CodeGenVisitor</a> и <a class="el" href="../../d2/dd3/class_highlight_accurate_visitor.html#a7bb8e1379f306a06c4d7407ad45e9c13">HighlightAccurateVisitor</a>.</p>
+<p>Замещается в <a class="el" href="../../d0/dc3/class_graphviz_visitor.html#a0281ca3d3679ade0d89cced520514782">GraphvizVisitor</a>, <a class="el" href="../../d1/d49/class_type_view_visitor.html#aae7c8e076018e2d7a472805efb45e6c8">TypeViewVisitor</a>, <a class="el" href="../../da/d38/class_code_gen_visitor.html#ac37ef4d990e4f4c3e94dd9ca6ff8ce19">CodeGenVisitor</a> и <a class="el" href="../../d2/dd3/class_highlight_accurate_visitor.html#af9ee8d31df5a8adde258b59c0e3e7d07">HighlightAccurateVisitor</a>.</p>
 
 </div>
 </div>

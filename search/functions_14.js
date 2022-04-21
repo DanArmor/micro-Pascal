@@ -7,7 +7,7 @@ var searchData=
   ['_7ecallast_4',['~CallAST',['../da/dd1/class_call_a_s_t.html#a98baa90ba75abe64d11c5035a292055d',1,'CallAST']]],
   ['_7ecompoundast_5',['~CompoundAST',['../da/dbb/class_compound_a_s_t.html#a5a2b918b203a75ae6d327265e5ea680c',1,'CompoundAST']]],
   ['_7econstast_6',['~ConstAST',['../d6/d94/class_const_a_s_t.html#a6dbc6c1b2b23ae22d5fe5178735f394c',1,'ConstAST']]],
-  ['_7eifast_7',['~ifAST',['../d4/de5/classif_a_s_t.html#af4bff5501f0e5f6b6de254562e2821f3',1,'ifAST']]],
+  ['_7eifast_7',['~IfAST',['../d7/d6b/class_if_a_s_t.html#af028972cdb104f79a84fd8332949369e',1,'IfAST']]],
   ['_7elist_8',['~List',['../d1/d34/class_list.html#a2b58189090f6e5ce52939c9195e59e85',1,'List']]],
   ['_7enoopast_9',['~NoOpAST',['../db/db7/class_no_op_a_s_t.html#adc607e1f1b84cc3e598b1f3dba7aa9a9',1,'NoOpAST']]],
   ['_7enumberast_10',['~NumberAST',['../d8/d90/class_number_a_s_t.html#aa9f84126430501c797eb4c310d3babdb',1,'NumberAST']]],
@@ -17,5 +17,5 @@ var searchData=
   ['_7eunopast_14',['~UnOpAST',['../dc/de8/class_un_op_a_s_t.html#a9a9633cd05e29e78e5487de7bd5d3802',1,'UnOpAST']]],
   ['_7evarast_15',['~VarAST',['../dc/dff/class_var_a_s_t.html#aa498ce82f7f39d4126bc6efcd12a8b2b',1,'VarAST']]],
   ['_7evardeclast_16',['~VarDeclAST',['../d6/d7c/class_var_decl_a_s_t.html#ac1d96f006d191a8ea10f6e7b10c7a43a',1,'VarDeclAST']]],
-  ['_7ewhileast_17',['~whileAST',['../d4/dae/classwhile_a_s_t.html#a83eca59983fbb70a7f3f6eea5f7a1fda',1,'whileAST']]]
+  ['_7ewhileast_17',['~WhileAST',['../dc/da0/class_while_a_s_t.html#a8c8b3542fac934c3f648a7c4363a91c7',1,'WhileAST']]]
 ];

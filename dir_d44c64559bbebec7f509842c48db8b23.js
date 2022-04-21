@@ -15,8 +15,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "ConstAST", "d6/d94/class_const_a_s_t.html", "d6/d94/class_const_a_s_t" ],
       [ "StringAST", "d0/d21/class_string_a_s_t.html", "d0/d21/class_string_a_s_t" ],
       [ "CallAST", "da/dd1/class_call_a_s_t.html", "da/dd1/class_call_a_s_t" ],
-      [ "ifAST", "d4/de5/classif_a_s_t.html", "d4/de5/classif_a_s_t" ],
-      [ "whileAST", "d4/dae/classwhile_a_s_t.html", "d4/dae/classwhile_a_s_t" ]
+      [ "IfAST", "d7/d6b/class_if_a_s_t.html", "d7/d6b/class_if_a_s_t" ],
+      [ "WhileAST", "dc/da0/class_while_a_s_t.html", "dc/da0/class_while_a_s_t" ]
     ] ],
     [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", "d8/de6/_a_s_tclasses_8hpp" ],
     [ "ASTFactory.hpp", "d4/d0d/_a_s_t_factory_8hpp.html", [

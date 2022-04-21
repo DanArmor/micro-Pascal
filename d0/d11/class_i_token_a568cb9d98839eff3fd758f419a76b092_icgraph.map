@@ -1,7 +1,7 @@
 <map id="IToken::getType" name="IToken::getType">
 <area shape="rect" id="node1" title="Получение типа токена" alt="" coords="3297,841,3412,868"/>
 <area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="3072,259,3249,285"/>
-<area shape="rect" id="node6" href="$d7/d7c/class_a_s_t_factory.html#a64619ed3c409fbb187debf67bc39d484" title=" " alt="" coords="3081,512,3240,539"/>
+<area shape="rect" id="node6" href="$d7/d7c/class_a_s_t_factory.html#ad7de68f7aba03e4ca3fc96efb743aa38" title=" " alt="" coords="3081,512,3240,539"/>
 <area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#ab9b415ddd671b4884ab31cdf194f6c64" title=" " alt="" coords="2568,688,2759,715"/>
 <area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a7721cf7d36d549f81fd05c40dba02f67" title=" " alt="" coords="2333,764,2516,791"/>
 <area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a920d9565d4aa2e3815ff9e7146f45a0b" title=" " alt="" coords="2067,801,2285,828"/>

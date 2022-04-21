@@ -16,5 +16,6 @@ var class_token =
     [ "pos", "db/dc1/class_token.html#a46f08e07453c4ece74d92f8b62778207", null ],
     [ "posInLine", "db/dc1/class_token.html#a47d58f12b73ace117bfa86ca2eb3bbb0", null ],
     [ "rawLine", "db/dc1/class_token.html#a0a848fb47b79b2a6258e9e5a845c74f7", null ],
-    [ "rawPosInLine", "db/dc1/class_token.html#aaa820f326e327befc18202cdd63c9132", null ]
+    [ "rawPosInLine", "db/dc1/class_token.html#aaa820f326e327befc18202cdd63c9132", null ],
+    [ "setStr", "db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a", null ]
 ];

@@ -14,8 +14,8 @@ var searchData=
   ['token_2ecpp_11',['Token.cpp',['../d1/db6/_token_8cpp.html',1,'']]],
   ['token_2ehpp_12',['Token.hpp',['../de/d32/_token_8hpp.html',1,'']]],
   ['tokentemplate_13',['TokenTemplate',['../dc/dca/class_token_template.html',1,'TokenTemplate'],['../dc/dca/class_token_template.html#abec14e1da735bd5250f91dec3cfa1e82',1,'TokenTemplate::TokenTemplate(std::string str, Type type, AdvType advType)'],['../dc/dca/class_token_template.html#a706e9ca659161ff0e1b5d3b173cb308b',1,'TokenTemplate::TokenTemplate()']]],
-  ['type_14',['type',['../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670',1,'VarDeclAST']]],
-  ['type_15',['Type',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a',1,'IToken']]],
+  ['type_14',['Type',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a',1,'IToken']]],
+  ['type_15',['type',['../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670',1,'VarDeclAST']]],
   ['type_5fspec_16',['TYPE_SPEC',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757',1,'IToken']]],
   ['typespecast_17',['TypeSpecAST',['../d2/db9/class_type_spec_a_s_t.html#a855390ed83163170b196e98221ca2312',1,'TypeSpecAST::TypeSpecAST()'],['../d2/db9/class_type_spec_a_s_t.html',1,'TypeSpecAST']]],
   ['typeviewvisitor_18',['TypeViewVisitor',['../d1/d49/class_type_view_visitor.html#ab68d7e2e4fd797b72b32538ccc379775',1,'TypeViewVisitor::TypeViewVisitor()'],['../d1/d49/class_type_view_visitor.html',1,'TypeViewVisitor']]]

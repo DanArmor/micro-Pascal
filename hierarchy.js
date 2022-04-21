@@ -7,6 +7,7 @@ var hierarchy =
       [ "CallAST", "da/dd1/class_call_a_s_t.html", null ],
       [ "CompoundAST", "da/dbb/class_compound_a_s_t.html", null ],
       [ "ConstAST", "d6/d94/class_const_a_s_t.html", null ],
+      [ "IfAST", "d7/d6b/class_if_a_s_t.html", null ],
       [ "NoOpAST", "db/db7/class_no_op_a_s_t.html", null ],
       [ "NumberAST", "d8/d90/class_number_a_s_t.html", null ],
       [ "ProgramAST", "de/db2/class_program_a_s_t.html", null ],
@@ -15,8 +16,7 @@ var hierarchy =
       [ "UnOpAST", "dc/de8/class_un_op_a_s_t.html", null ],
       [ "VarAST", "dc/dff/class_var_a_s_t.html", null ],
       [ "VarDeclAST", "d6/d7c/class_var_decl_a_s_t.html", null ],
-      [ "ifAST", "d4/de5/classif_a_s_t.html", null ],
-      [ "whileAST", "d4/dae/classwhile_a_s_t.html", null ]
+      [ "WhileAST", "dc/da0/class_while_a_s_t.html", null ]
     ] ],
     [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
     [ "IToken", "d0/d11/class_i_token.html", [

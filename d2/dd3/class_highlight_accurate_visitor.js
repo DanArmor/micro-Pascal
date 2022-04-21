@@ -8,7 +8,7 @@ var class_highlight_accurate_visitor =
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a5dde75aeae0713f4e8fe296ba7741caa", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a98b0b02bab3ce1461003b4e0b68c510e", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a4bfd1e3686324ee2aff30d436edb60ea", null ],
-    [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a77aba03e3570e55dfc49976e5d14e2a8", null ],
+    [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a97a3937331721d7f8b8ddbe3204ce29e", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a3edcc58d4d42ba58152601f5c1c70866", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a9f9763382817ece73403a6a2a6f3bb48", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#adc620938c14540f3eefd72006501cbb8", null ],
@@ -17,5 +17,5 @@ var class_highlight_accurate_visitor =
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a759a906710e9dce56d3ad1b4f2588096", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a075625f62b0e5cd03ed68126820839ff", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a6bfd8b5338e3c5b1c1561efaf65a9820", null ],
-    [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a7bb8e1379f306a06c4d7407ad45e9c13", null ]
+    [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#af9ee8d31df5a8adde258b59c0e3e7d07", null ]
 ];

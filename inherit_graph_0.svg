@@ -110,54 +110,54 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="db/db7/class_no_op_a_s_t.html" target="_top" xlink:title="Узел, отображающий пустовые выражение, отсутствие операций">
-<polygon fill="none" stroke="black" points="82.5,-342.5 82.5,-361.5 144.5,-361.5 144.5,-342.5 82.5,-342.5"/>
-<text text-anchor="middle" x="113.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">NoOpAST</text>
+<g id="a_node8"><a xlink:href="d7/d6b/class_if_a_s_t.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="92.5,-342.5 92.5,-361.5 134.5,-361.5 134.5,-342.5 92.5,-342.5"/>
+<text text-anchor="middle" x="113.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">IfAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M39.34,-310.92C48.96,-318.1 60.78,-326.42 72,-333 77.76,-336.38 84.22,-339.63 90.26,-342.46"/>
+<path fill="none" stroke="midnightblue" d="M39.34,-310.92C48.96,-318.1 60.78,-326.42 72,-333 78.43,-336.77 85.73,-340.39 92.35,-343.43"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="41.28,-308 31.2,-304.73 37.04,-313.57 41.28,-308"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="d8/d90/class_number_a_s_t.html" target="_top" xlink:title="Узел, содержащий целое число">
-<polygon fill="none" stroke="black" points="78,-304.5 78,-323.5 149,-323.5 149,-304.5 78,-304.5"/>
-<text text-anchor="middle" x="113.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">NumberAST</text>
+<g id="a_node9"><a xlink:href="db/db7/class_no_op_a_s_t.html" target="_top" xlink:title="Узел, отображающий пустовые выражение, отсутствие операций">
+<polygon fill="none" stroke="black" points="82.5,-304.5 82.5,-323.5 144.5,-323.5 144.5,-304.5 82.5,-304.5"/>
+<text text-anchor="middle" x="113.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">NoOpAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node0&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M46.16,-300.52C55.99,-302.52 67.24,-304.8 77.64,-306.92"/>
+<path fill="none" stroke="midnightblue" d="M46.28,-300.54C57.55,-302.83 70.65,-305.5 82.22,-307.85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="46.65,-297.05 36.15,-298.48 45.25,-303.91 46.65,-297.05"/>
 </g>
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="de/db2/class_program_a_s_t.html" target="_top" xlink:title="Узел, отображающий начало программы">
-<polygon fill="none" stroke="black" points="77,-266.5 77,-285.5 150,-285.5 150,-266.5 77,-266.5"/>
-<text text-anchor="middle" x="113.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProgramAST</text>
+<g id="a_node10"><a xlink:href="d8/d90/class_number_a_s_t.html" target="_top" xlink:title="Узел, содержащий целое число">
+<polygon fill="none" stroke="black" points="78,-266.5 78,-285.5 149,-285.5 149,-266.5 78,-266.5"/>
+<text text-anchor="middle" x="113.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">NumberAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node0&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M45.97,-289.52C55.6,-287.56 66.61,-285.32 76.87,-283.24"/>
+<path fill="none" stroke="midnightblue" d="M46.16,-289.48C55.99,-287.48 67.24,-285.2 77.64,-283.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="45.25,-286.09 36.15,-291.52 46.65,-292.95 45.25,-286.09"/>
 </g>
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="d0/d21/class_string_a_s_t.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="82.5,-228.5 82.5,-247.5 144.5,-247.5 144.5,-228.5 82.5,-228.5"/>
-<text text-anchor="middle" x="113.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">StringAST</text>
+<g id="a_node11"><a xlink:href="de/db2/class_program_a_s_t.html" target="_top" xlink:title="Узел, отображающий начало программы">
+<polygon fill="none" stroke="black" points="77,-228.5 77,-247.5 150,-247.5 150,-228.5 77,-228.5"/>
+<text text-anchor="middle" x="113.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProgramAST</text>
 </a>
 </g>
 </g>
@@ -170,9 +170,9 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="d2/db9/class_type_spec_a_s_t.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="73.5,-190.5 73.5,-209.5 153.5,-209.5 153.5,-190.5 73.5,-190.5"/>
-<text text-anchor="middle" x="113.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeSpecAST</text>
+<g id="a_node12"><a xlink:href="d0/d21/class_string_a_s_t.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="82.5,-190.5 82.5,-209.5 144.5,-209.5 144.5,-190.5 82.5,-190.5"/>
+<text text-anchor="middle" x="113.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">StringAST</text>
 </a>
 </g>
 </g>
@@ -185,9 +185,9 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="dc/de8/class_un_op_a_s_t.html" target="_top" xlink:title="Узел, содержащий унарную операцию">
-<polygon fill="none" stroke="black" points="82.5,-152.5 82.5,-171.5 144.5,-171.5 144.5,-152.5 82.5,-152.5"/>
-<text text-anchor="middle" x="113.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">UnOpAST</text>
+<g id="a_node13"><a xlink:href="d2/db9/class_type_spec_a_s_t.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="73.5,-152.5 73.5,-171.5 153.5,-171.5 153.5,-152.5 73.5,-152.5"/>
+<text text-anchor="middle" x="113.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeSpecAST</text>
 </a>
 </g>
 </g>
@@ -200,61 +200,61 @@
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="dc/dff/class_var_a_s_t.html" target="_top" xlink:title="Узел, содержащий переменную">
-<polygon fill="none" stroke="black" points="88,-114.5 88,-133.5 139,-133.5 139,-114.5 88,-114.5"/>
-<text text-anchor="middle" x="113.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">VarAST</text>
+<g id="a_node14"><a xlink:href="dc/de8/class_un_op_a_s_t.html" target="_top" xlink:title="Узел, содержащий унарную операцию">
+<polygon fill="none" stroke="black" points="82.5,-114.5 82.5,-133.5 144.5,-133.5 144.5,-114.5 82.5,-114.5"/>
+<text text-anchor="middle" x="113.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">UnOpAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node13 -->
 <g id="edge13" class="edge">
 <title>Node0&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M21.02,-274.94C25.2,-243.25 37.49,-181.26 72,-143 76.27,-138.27 81.95,-134.62 87.72,-131.85"/>
+<path fill="none" stroke="midnightblue" d="M21.02,-274.94C25.2,-243.25 37.49,-181.26 72,-143 75.43,-139.19 79.79,-136.09 84.36,-133.57"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="17.51,-274.81 19.82,-285.15 24.47,-275.62 17.51,-274.81"/>
 </g>
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="d6/d7c/class_var_decl_a_s_t.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="78,-76.5 78,-95.5 149,-95.5 149,-76.5 78,-76.5"/>
-<text text-anchor="middle" x="113.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">VarDeclAST</text>
+<g id="a_node15"><a xlink:href="dc/dff/class_var_a_s_t.html" target="_top" xlink:title="Узел, содержащий переменную">
+<polygon fill="none" stroke="black" points="88,-76.5 88,-95.5 139,-95.5 139,-76.5 88,-76.5"/>
+<text text-anchor="middle" x="113.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">VarAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node14 -->
 <g id="edge14" class="edge">
 <title>Node0&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M19.29,-275.33C20.86,-237.85 29.31,-155.47 72,-105 75.21,-101.2 79.35,-98.12 83.75,-95.63"/>
+<path fill="none" stroke="midnightblue" d="M19.29,-275.33C20.86,-237.85 29.31,-155.47 72,-105 76.21,-100.02 82.02,-96.26 87.93,-93.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="15.79,-275.33 19,-285.43 22.79,-275.54 15.79,-275.33"/>
 </g>
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="d4/de5/classif_a_s_t.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="93,-38.5 93,-57.5 134,-57.5 134,-38.5 93,-38.5"/>
-<text text-anchor="middle" x="113.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifAST</text>
+<g id="a_node16"><a xlink:href="d6/d7c/class_var_decl_a_s_t.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="78,-38.5 78,-57.5 149,-57.5 149,-38.5 78,-38.5"/>
+<text text-anchor="middle" x="113.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">VarDeclAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node15 -->
 <g id="edge15" class="edge">
 <title>Node0&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M18.14,-275.01C17.35,-232.03 21.32,-129.64 72,-67 77.28,-60.48 85.31,-56.08 92.83,-53.17"/>
+<path fill="none" stroke="midnightblue" d="M18.14,-275.01C17.35,-232.03 21.32,-129.64 72,-67 75.13,-63.14 79.22,-60.02 83.6,-57.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="14.64,-275.15 18.43,-285.04 21.64,-274.94 14.64,-275.15"/>
 </g>
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="d4/dae/classwhile_a_s_t.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="84,-0.5 84,-19.5 143,-19.5 143,-0.5 84,-0.5"/>
-<text text-anchor="middle" x="113.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">whileAST</text>
+<g id="a_node17"><a xlink:href="dc/da0/class_while_a_s_t.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="83.5,-0.5 83.5,-19.5 143.5,-19.5 143.5,-0.5 83.5,-0.5"/>
+<text text-anchor="middle" x="113.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WhileAST</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node16 -->
 <g id="edge16" class="edge">
 <title>Node0&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M20.66,-275.04C25.59,-220.02 41.71,-67.68 72,-29 75.16,-24.96 79.38,-21.75 83.91,-19.19"/>
+<path fill="none" stroke="midnightblue" d="M20.66,-275.04C25.59,-220.02 41.71,-67.68 72,-29 74.97,-25.21 78.88,-22.14 83.09,-19.67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="17.15,-274.97 19.78,-285.23 24.13,-275.57 17.15,-274.97"/>
 </g>
 </g>

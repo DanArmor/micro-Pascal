@@ -2,7 +2,7 @@ var searchData=
 [
   ['id_0',['ID',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47',1,'IToken']]],
   ['if_1',['IF',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf',1,'IToken']]],
-  ['ifast_2',['ifAST',['../d4/de5/classif_a_s_t.html',1,'ifAST'],['../d4/de5/classif_a_s_t.html#a9432d54a93eee833b705476d5b39bdd1',1,'ifAST::ifAST()']]],
+  ['ifast_2',['IfAST',['../d7/d6b/class_if_a_s_t.html',1,'IfAST'],['../d7/d6b/class_if_a_s_t.html#aa47b0bbf7343fe70ae2fdbe000200623',1,'IfAST::IfAST()']]],
   ['innerdata_3',['innerData',['../dc/d8f/class_node.html#a2027c1eba197700b80f76d3ee960b269',1,'Node']]],
   ['integer_4',['INTEGER',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa04c99d204957dcc6f281d3f8cdd688c5',1,'IToken']]],
   ['integer_5fconst_5',['INTEGER_CONST',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc',1,'IToken']]],
