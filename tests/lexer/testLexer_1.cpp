@@ -60,11 +60,11 @@ TEST(PARSE, PASCAL_SIMPLE){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"PROGRAM", IToken::PROGRAM},
+        {"program", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
-        {"BEGIN", IToken::BEGIN},
-        {"END", IToken::END},
+        {"begin", IToken::BEGIN},
+        {"end", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };
@@ -76,27 +76,27 @@ TEST(PARSE, PASCAL_MEDIUM){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"PROGRAM", IToken::PROGRAM},
+        {"program", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
 
-        {"CONST", IToken::CONST},
+        {"const", IToken::CONST},
         {"x", IToken::ID},
         {"=", IToken::EQ},
         {"10", IToken::INTEGER_CONST},
         {";", IToken::SEMI},
 
-        {"VAR", IToken::VAR},
+        {"var", IToken::VAR},
         {"a", IToken::ID},
         {",", IToken::COMMA},
         {"b", IToken::ID},
         {",", IToken::COMMA},
         {"c", IToken::ID},
         {":", IToken::COLON},
-        {"INTEGER", IToken::INTEGER},
+        {"integer", IToken::INTEGER},
         {";", IToken::SEMI},
 
-        {"BEGIN", IToken::BEGIN},
+        {"begin", IToken::BEGIN},
 
         {"a", IToken::ID},
         {":=", IToken::ASSIGN},
@@ -116,7 +116,7 @@ TEST(PARSE, PASCAL_MEDIUM){
         {")", IToken::RPAREN},
         {";", IToken::SEMI},
 
-        {"END", IToken::END},
+        {"end", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };
@@ -128,29 +128,29 @@ TEST(PARSE, PASCAL_HARD){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"PROGRAM", IToken::PROGRAM},
+        {"program", IToken::PROGRAM},
         {"test", IToken::ID},
         {";", IToken::SEMI},
 
-        {"CONST", IToken::CONST},
+        {"const", IToken::CONST},
         {"x", IToken::ID},
         {"=", IToken::EQ},
         {"10", IToken::INTEGER_CONST},
         {";", IToken::SEMI},
 
-        {"VAR", IToken::VAR},
+        {"var", IToken::VAR},
         {"a", IToken::ID},
         {",", IToken::COMMA},
         {"b", IToken::ID},
         {",", IToken::COMMA},
         {"c", IToken::ID},
         {":", IToken::COLON},
-        {"INTEGER", IToken::INTEGER},
+        {"integer", IToken::INTEGER},
         {";", IToken::SEMI},
 
-        {"BEGIN", IToken::BEGIN},
+        {"begin", IToken::BEGIN},
 
-        {"IF", IToken::IF},
+        {"if", IToken::IF},
         {"a", IToken::ID},
         {">", IToken::MORE},
         {"b", IToken::ID},
@@ -165,7 +165,7 @@ TEST(PARSE, PASCAL_HARD){
         {")", IToken::RPAREN},
         {";", IToken::SEMI},
 
-        {"END", IToken::END},
+        {"end", IToken::END},
         {".", IToken::DOT},
         {"$", IToken::ENDOFSTREAM},
     };

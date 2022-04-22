@@ -1,11 +1,11 @@
-PROGRAM test;
-CONST
+program test;
+const
     x=10;
-VAR
-    a,b,c:INTEGER;
-BEGIN
+var
+    a,b,c:integer;
+begin
     a:=0;
     b:=0;
     c:=x;
     writeln('TEST STRING;1+1<>!=@@@###!!');
-END.
+end.

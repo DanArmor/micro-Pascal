@@ -1,15 +1,15 @@
-PROGRAM test;
-CONST
+program test;
+const
     x=10;
-VAR 
-    a,b,c:INTEGER;
-BEGIN
+var 
+    a,b,c:integer;
+begin
     {
         multi string comment
         lmao
         !@#^($@!+%_@*$__~@*!~_*_VHAWFHVAWHF\LAWPWAVUP)P!BPp8 (*J174402u489021u3)
     }
-    IF a > b:
+    if a > b:
         throw 'hi';
     writeln('TEST STRING;1+1<>!=@@@###!!');
-END.
+end.

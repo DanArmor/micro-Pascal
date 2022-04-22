@@ -26,19 +26,26 @@ void highlight(std::string text, List<Token> tokens){
         {IToken::AdvType::NOTPROCESS, "\033[37m"},
     };
     int tokenI = 0;
-    for(int i = 0; i < text.size(); i++){
-        if(isIn(text[i], {'\n', ' ', '\t'})){
-            std::cout << "\033[0m";
+    int i = 0;
+    while(i < text.size()){
+        if(i == tokens[tokenI].pos()){
+            std::cout << "\033[0m" << colors[tokens[tokenI].getAdvType()];
+            std::size_t len = tokens[tokenI].len();
+            while(len != 0){
+                std::cout << text[i];
+                i++;
+                len--;
+            }
+            tokenI++;
         } else{
-            if(i == tokens[tokenI].pos()){
-                std::cout << "\033[0m" << colors[tokens[tokenI].getAdvType()];
-                tokenI++;
+            std::cout << "\033[0m\033[30;1m";
+            while(i != tokens[tokenI].pos()){
+                std::cout << text[i];
+                i++;
             }
         }
-        std::cout << text[i];
     }
     std::cout << "\033[0m\n";
-
 }
 
 int main(int argc, char** argv){
@@ -70,6 +77,10 @@ int main(int argc, char** argv){
     root->accept(hl);
 
     highlight(lexer.getText(), hl.getTokens());
+
+    for(auto tt : hl.getTokens()){
+        std::cout << tt.getInfo() << "\n";
+    }
 
 
 //

@@ -1,13 +1,13 @@
-PROGRAM test;
-CONST
+program test;
+const
     mes = 'Hello world!';
-BEGIN
+begin
     a := 1;
     writeln(mes);
-    RETURN(0);
+    return(0);
     {
         multi string comment
         lmao
         !@#^($@!+%_@*$__~@*!~_*_VHAWFHVAWHF\LAWPWAVUP)P!BPp8 (*J174402u489021u3)
     }
-END.
+end.

@@ -109,7 +109,7 @@ class IToken{
     }
 
     /// @return Дополнительный тип токена
-    virtual AdvType getAdvType(void){
+    virtual AdvType getAdvType(void) const{
         return advType;
     }
 

@@ -1,18 +1,18 @@
-PROGRAM test;
-CONST
+program test;
+const
     a = 10;
     str = 'hello there';
 
-VAR
-    x,y : INTEGER;
-    z : INTEGER;
-BEGIN
-    IF y > x THEN
+var
+    x,y : integer;
+    z : integer;
+begin
+    if y > x then
         z := x
-    ELSE
+    else
         z := y;
     
-    WHILE z < y DO
+    while z < y do
         z := z + 1;
     
-END.
+end.

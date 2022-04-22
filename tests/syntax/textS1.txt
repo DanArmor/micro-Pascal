@@ -1,7 +1,7 @@
-PROGRAM test;
+program test;
 
-VAR
-    x : INTEGER;
-BEGIN
+var
+    x : integer;
+begin
     x := 1;
-END.
+end.

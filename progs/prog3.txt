@@ -1,13 +1,13 @@
-PROGRAM TEST;
-CONST
+program TEST;
+const
     a = 10;
     str = 'hello world';
-VAR {comment}
-    x, y : INTEGER;
-    z : REAL;
-BEGIN
+var {comment}
+    x, y : integer;
+    z : real;
+begin
     x := 1 + 2;
     y := 4*4;
     z := 3.14;
     func(x, y, z);
-END.
+end.
