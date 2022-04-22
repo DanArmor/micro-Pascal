@@ -25,18 +25,21 @@ add_library(Syntax src/Syntax.cpp)
 add_library(Lexer src/Lexer.cpp)
 add_library(ASTFactory src/ASTFactory.cpp)
 
+add_library(SyntExp include/SyntExp.cpp)
+
 target_link_libraries(Token fmt)
 target_link_libraries(Visitor fmt AST Token)
 target_link_libraries(AST Visitor Token)
 target_link_libraries(Lexer Token)
-target_link_libraries(Syntax AST Token ASTFactory)
+target_link_libraries(Syntax AST Token ASTFactory fmt SyntExp)
 target_link_libraries(ASTFactory AST Token fmt)
+target_link_libraries(SyntExp Token fmt)
 
 # Программа
 add_executable(Main main.cpp)
 target_link_libraries(Main Visitor Token AST Syntax Lexer)
 
 add_executable(graphDraw graphDraw.cpp)
-target_link_libraries(graphDraw Visitor Token AST Syntax Lexer)
+target_link_libraries(graphDraw Visitor Token AST Syntax Lexer SyntExp)
 
 add_subdirectory(tests)

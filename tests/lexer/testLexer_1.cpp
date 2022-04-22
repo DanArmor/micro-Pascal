@@ -3,6 +3,7 @@
 
 #include "List.cpp"
 #include "Lexer.hpp"
+#include "SyntExp.cpp"
 #include "PascalTokens.hpp"
 #include "lexerTestRules.hpp"
 
@@ -175,7 +176,7 @@ TEST(PARSE, PASCAL_HARD){
 TEST(PARSE, PASCAL_HARD_THROW){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
-    EXPECT_THROW(lexer.analyzeFile("./build/tests/text5.txt"), std::invalid_argument);
+    EXPECT_THROW(lexer.analyzeFile("./build/tests/text5.txt"), LexerException);
 }
 
 int main(void){

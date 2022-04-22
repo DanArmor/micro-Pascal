@@ -5,6 +5,7 @@
 #include "List.cpp"
 #include "Lexer.hpp"
 #include "Syntax.hpp"
+#include "SyntExp.cpp"
 #include "AST.hpp"
 #include "PascalTokens.hpp"
 
@@ -106,7 +107,7 @@ TEST(SYNTAX, PASCAL_MEDIUM_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS3.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    EXPECT_THROW(syntax.parseTokens(), std::invalid_argument);
+    EXPECT_THROW(syntax.parseTokens(), SyntaxException);
 }
 
 int main(void){

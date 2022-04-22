@@ -26,7 +26,7 @@ Token::Token(std::string const &str, AdvType const type) : str(str), IToken(type
 
 Token::Token(std::string const &str, Type const type, AdvType const advType, std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos) : IToken(type, advType), str(str), lineNum(lineNum), posInLineNum(inLinePosNum), posNum(inFilePos){};
 
-std::string const & Token::getStr(void){
+std::string const & Token::getStr(void) const{
     return str;
 }
 
@@ -34,23 +34,23 @@ void Token::setStr(std::string const &toSet){
     str = toSet;
 }
 
-std::size_t Token::line(void){
+std::size_t Token::line(void) const{
     return lineNum+1;
 }
 
-std::size_t Token::rawLine(void){
+std::size_t Token::rawLine(void) const{
     return lineNum;
 }
 
-std::size_t Token::posInLine(void){
+std::size_t Token::posInLine(void) const{
     return posInLineNum + 1;
 }
 
-std::size_t Token::rawPosInLine(void){
+std::size_t Token::rawPosInLine(void) const{
     return posInLineNum;
 }
 
-std::size_t Token::pos(void){
+std::size_t Token::pos(void) const{
     return posNum;
 }
 
@@ -58,8 +58,9 @@ std::size_t Token::len(void){
     return getStr().size();
 }
 
-std::string Token::getInfo(void){
-    return fmt::format("::TOKEN_INFO::\nTYPE: {}  \nSTR: {} \nLINE: {}", magic_enum::enum_name(getType()), getStr(), line());
+std::string Token::getInfo(void) const{
+    return fmt::format("Token {0}{2}{1} of type {0}{3}{1} on {0}line {4} : {5}{1}", 
+    "\033[31m", "\033[0m", getStr(), magic_enum::enum_name(getType()), line(), posInLine());
 }
 
 /* Определения TokenTemplate

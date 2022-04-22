@@ -8,6 +8,8 @@
 
 #include "magic_enum.hpp"
 
+#include "SyntExp.cpp"
+
 
 
 /**
@@ -96,7 +98,7 @@ List<Token> Lexer::analyzeProgramText(std::string const &text){
         }
         //std::cout << position << " " << len << " " << offset << " ||| " << text.size() << "\n";
         if(matched.getType() != IToken::NEWLINE && matched.getStr().size() == 0)
-            throw std::invalid_argument("Неизвестный токен");
+            throw LexerException(matched, "Неизвестный токен!");
         position = position + len;
         inLineNum += len;
         //std::cout << matched.getInfo() << "\n\n";

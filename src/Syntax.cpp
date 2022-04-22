@@ -4,6 +4,7 @@
 
 #include "AST.hpp"
 #include "ASTFactory.hpp"
+#include "SyntExp.cpp"
 
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
@@ -122,7 +123,7 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxStList(void){
     }
 
     if(getCurTok().getType() == IToken::ID)
-        throw std::invalid_argument(fmt::format("Неожиданный индентификатор: {}", getCurTok().getInfo()));
+        throw SyntaxException(getCurTok(), "Неожиданный индентификатор:");
 
     return stList;
 }
@@ -298,7 +299,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFactor(){
                 return syntaxVariable();
         }
         default:
-            throw std::invalid_argument(fmt::format("В syntaxFactor попал лишний токен: {}", token.getInfo()));
+            throw SyntaxException(token, "Во время обработки выражения syntaxFactor встречен неожиданный токен");
     }
     return nullptr;
 }
@@ -306,7 +307,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFactor(){
 std::unique_ptr<AST> SyntaxAnalyzer::parseTokens(void){
     std::unique_ptr<AST> root = std::move(syntaxProgram());
     if(getCurTok().getType() != IToken::ENDOFSTREAM)
-        throw std::invalid_argument(fmt::format("Не вся программа просканированна: ", getCurTok().getInfo()));
+        throw SyntaxException(getCurTok(), "Анализ программы завершился до встречи специального символа <конца потока токенов>!");
     return root;
 }
 
@@ -328,7 +329,7 @@ void SyntaxAnalyzer::eat(IToken::Type const type){
     if(getCurTok().getType() == type){
         getNextToken();
     } else{
-        throw std::invalid_argument(fmt::format("Ошибка при обработке синтаксиса! Ожидался {}, а получен {}", magic_enum::enum_name(type), getCurTok().getInfo()));
+        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! ", magic_enum::enum_name(type)));
     }
 }
 
@@ -336,6 +337,6 @@ void SyntaxAnalyzer::eatAdv(IToken::AdvType const type){
     if(getCurTok().getAdvType() == type){
         getNextToken();
     } else{
-        throw std::invalid_argument(fmt::format("Ошибка при обработке синтаксиса! Ожидался {}, а получен {}", magic_enum::enum_name(type), getCurTok().getInfo()));
+        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! ", magic_enum::enum_name(type)));
     }
 }

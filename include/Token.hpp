@@ -104,7 +104,7 @@ class IToken{
     IToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
-    virtual Type getType(void){
+    virtual Type getType(void) const{
         return type;
     }
 
@@ -160,24 +160,24 @@ class Token : public IToken{
     std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos);
 
     /// @return номер строки, начиная с 1, в которой находится токен
-    std::size_t line(void);
+    std::size_t line(void) const;
     /// @return номер строки, начиная с 0, в которой находится токен
-    std::size_t rawLine(void);
+    std::size_t rawLine(void) const;
 
     /// @return Позицию в строке, начиная с 1, в которой находится токен
-    std::size_t posInLine(void);
+    std::size_t posInLine(void) const;
     /// @return Позицию в строке, начиная с 0, в которой находится токен
-    std::size_t rawPosInLine(void);
+    std::size_t rawPosInLine(void) const;
 
     /// @return Абсолютную позицию в файле, начиная с 0
-    std::size_t pos(void);
+    std::size_t pos(void) const;
 
     /// @brief Возвращает константную ссылку на строковое представление токена
-    std::string const & getStr(void);
+    std::string const & getStr(void) const;
 
     void setStr(std::string const &toSet);
 
-    std::string getInfo(void);
+    std::string getInfo(void) const;
 
     ///@return Длину строкового представления токена
     std::size_t len(void);
