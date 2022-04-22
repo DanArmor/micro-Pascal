@@ -3,9 +3,9 @@
 
 #include "List.cpp"
 #include "Lexer.hpp"
-#include "SyntExp.cpp"
 #include "PascalTokens.hpp"
 #include "lexerTestRules.hpp"
+#include "SyntExp.hpp"
 
 /**
  * @file testLexer_1.cpp

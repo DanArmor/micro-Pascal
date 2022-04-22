@@ -5,7 +5,7 @@
 #include "List.cpp"
 #include "Lexer.hpp"
 #include "Syntax.hpp"
-#include "SyntExp.cpp"
+#include "SyntExp.hpp"
 #include "AST.hpp"
 #include "PascalTokens.hpp"
 

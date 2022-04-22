@@ -4,7 +4,7 @@
 
 #include "AST.hpp"
 #include "ASTFactory.hpp"
-#include "SyntExp.cpp"
+#include "SyntExp.hpp"
 
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 

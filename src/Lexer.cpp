@@ -8,7 +8,7 @@
 
 #include "magic_enum.hpp"
 
-#include "SyntExp.cpp"
+#include "SyntExp.hpp"
 
 
 
