@@ -143,7 +143,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" target="_top" xlink:title="Получение типа токена">
+<g id="a_node8"><a xlink:href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" target="_top" xlink:title="Получение типа токена">
 <polygon fill="none" stroke="black" points="736,-76.5 736,-95.5 822,-95.5 822,-76.5 736,-76.5"/>
 <text text-anchor="middle" x="779" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getType</text>
 </a>

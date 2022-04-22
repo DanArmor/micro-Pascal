@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['params_0',['params',['../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab',1,'CallAST']]],
-  ['prevptr_1',['prevPtr',['../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07',1,'Node']]]
+  ['name_0',['name',['../de/db2/class_program_a_s_t.html#ac51476a6a2adf7ed55d8df8c2423de32',1,'ProgramAST']]],
+  ['nextptr_1',['nextPtr',['../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec',1,'Node']]]
 ];

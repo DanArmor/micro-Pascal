@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['rawline_0',['rawLine',['../db/dc1/class_token.html#a0a848fb47b79b2a6258e9e5a845c74f7',1,'Token']]],
-  ['rawposinline_1',['rawPosInLine',['../db/dc1/class_token.html#aaa820f326e327befc18202cdd63c9132',1,'Token']]],
+  ['rawline_0',['rawLine',['../db/dc1/class_token.html#a3c71657da7d2a9f7cd6bec8fd7e69100',1,'Token']]],
+  ['rawposinline_1',['rawPosInLine',['../db/dc1/class_token.html#ae013a27300b9c0547061284a26a3abf3',1,'Token']]],
   ['rbrace_2',['RBRACE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac31eb5ff1826672e6401341c809c98a4',1,'IToken']]],
   ['real_3',['REAL',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1651f94d95583971c358e682b73cd957',1,'IToken']]],
   ['real_5fconst_4',['REAL_CONST',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9',1,'IToken']]],

@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 <code>#include &quot;<a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d24/_lexer_8hpp_source.html">Lexer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/d3f/_syntax_8hpp_source.html">Syntax.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/d69/_pascal_tokens_8hpp_source.html">PascalTokens.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -103,7 +104,7 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d09/test_syntax_8cpp__incl.svg" width="848" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d09/test_syntax_8cpp__incl.svg" width="1139" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -140,12 +141,12 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00112">112</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>              {</div>
-<div class="line"><span class="lineno">  113</span>    testing::InitGoogleTest();</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>    return ::RUN_ALL_TESTS();</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00113">113</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>              {</div>
+<div class="line"><span class="lineno">  114</span>    testing::InitGoogleTest();</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    return ::RUN_ALL_TESTS();</div>
+<div class="line"><span class="lineno">  117</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -177,73 +178,73 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 
 <p>Тест синтаксического анализа Паскаля, средний текст </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00042">42</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                           {</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
-<div class="line"><span class="lineno">   44</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
-<div class="line"><span class="lineno">   45</span>    std::vector&lt;std::string&gt; checkData = {</div>
-<div class="line"><span class="lineno">   46</span>        <span class="stringliteral">&quot;PROGRAM:\ntest&quot;</span>,</div>
-<div class="line"><span class="lineno">   47</span>        <span class="stringliteral">&quot;BLOCK&quot;</span>,</div>
-<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">&quot;CONSTDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   49</span>        <span class="stringliteral">&quot;a&quot;</span>,</div>
-<div class="line"><span class="lineno">   50</span>        <span class="stringliteral">&quot;10&quot;</span>,</div>
-<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">&quot;CONSTDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&quot;str&quot;</span>,</div>
-<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&quot;&#39;hello there&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   56</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
-<div class="line"><span class="lineno">   57</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   60</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
-<div class="line"><span class="lineno">   61</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   64</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   65</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>        <span class="stringliteral">&quot;COMPOUND&quot;</span>,</div>
-<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&quot;IF&quot;</span>,</div>
-<div class="line"><span class="lineno">   69</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
-<div class="line"><span class="lineno">   70</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   71</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
-<div class="line"><span class="lineno">   72</span>        <span class="stringliteral">&quot;&gt;&quot;</span>,</div>
-<div class="line"><span class="lineno">   73</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
-<div class="line"><span class="lineno">   74</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
-<div class="line"><span class="lineno">   75</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
-<div class="line"><span class="lineno">   76</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   77</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
-<div class="line"><span class="lineno">   78</span>        <span class="stringliteral">&quot;WHILE&quot;</span>,</div>
-<div class="line"><span class="lineno">   79</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
-<div class="line"><span class="lineno">   80</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   81</span>        <span class="stringliteral">&quot;+&quot;</span>,</div>
-<div class="line"><span class="lineno">   82</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   83</span>        <span class="stringliteral">&quot;1&quot;</span>,</div>
-<div class="line"><span class="lineno">   84</span>        <span class="stringliteral">&quot;&lt;&quot;</span>,</div>
-<div class="line"><span class="lineno">   85</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
-<div class="line"><span class="lineno">   86</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
-<div class="line"><span class="lineno">   87</span>        <span class="stringliteral">&quot;$&quot;</span></div>
-<div class="line"><span class="lineno">   88</span>    };</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS2.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
-<div class="line"><span class="lineno">   92</span>    std::unique_ptr&lt;AST&gt; <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>());</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_class" href="../../d1/d49/class_type_view_visitor.html">TypeViewVisitor</a> typeView;</div>
-<div class="line"><span class="lineno">   95</span>    <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(typeView);</div>
-<div class="line"><span class="lineno">   96</span>    std::vector&lt;std::string&gt; result = typeView.<a class="code hl_function" href="../../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96">getData</a>();</div>
-<div class="line"><span class="lineno">   97</span>    EXPECT_EQ(result.size(), checkData.size());</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; result.size(); i++)</div>
-<div class="line"><span class="lineno">   99</span>        EXPECT_EQ(result[i], checkData[i]);</div>
-<div class="line"><span class="lineno">  100</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00043">43</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                           {</div>
+<div class="line"><span class="lineno">   44</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
+<div class="line"><span class="lineno">   45</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
+<div class="line"><span class="lineno">   46</span>    std::vector&lt;std::string&gt; checkData = {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="stringliteral">&quot;PROGRAM:\ntest&quot;</span>,</div>
+<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">&quot;BLOCK&quot;</span>,</div>
+<div class="line"><span class="lineno">   49</span>        <span class="stringliteral">&quot;CONSTDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   50</span>        <span class="stringliteral">&quot;a&quot;</span>,</div>
+<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">&quot;10&quot;</span>,</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&quot;CONSTDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&quot;str&quot;</span>,</div>
+<div class="line"><span class="lineno">   54</span>        <span class="stringliteral">&quot;&#39;hello there&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   57</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
+<div class="line"><span class="lineno">   58</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   61</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
+<div class="line"><span class="lineno">   62</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   65</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   66</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&quot;COMPOUND&quot;</span>,</div>
+<div class="line"><span class="lineno">   69</span>        <span class="stringliteral">&quot;IF&quot;</span>,</div>
+<div class="line"><span class="lineno">   70</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
+<div class="line"><span class="lineno">   71</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   72</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
+<div class="line"><span class="lineno">   73</span>        <span class="stringliteral">&quot;&gt;&quot;</span>,</div>
+<div class="line"><span class="lineno">   74</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
+<div class="line"><span class="lineno">   75</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
+<div class="line"><span class="lineno">   76</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
+<div class="line"><span class="lineno">   77</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   78</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
+<div class="line"><span class="lineno">   79</span>        <span class="stringliteral">&quot;WHILE&quot;</span>,</div>
+<div class="line"><span class="lineno">   80</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
+<div class="line"><span class="lineno">   81</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   82</span>        <span class="stringliteral">&quot;+&quot;</span>,</div>
+<div class="line"><span class="lineno">   83</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   84</span>        <span class="stringliteral">&quot;1&quot;</span>,</div>
+<div class="line"><span class="lineno">   85</span>        <span class="stringliteral">&quot;&lt;&quot;</span>,</div>
+<div class="line"><span class="lineno">   86</span>        <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line"><span class="lineno">   87</span>        <span class="stringliteral">&quot;y&quot;</span>,</div>
+<div class="line"><span class="lineno">   88</span>        <span class="stringliteral">&quot;$&quot;</span></div>
+<div class="line"><span class="lineno">   89</span>    };</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS2.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
+<div class="line"><span class="lineno">   93</span>    std::unique_ptr&lt;AST&gt; <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>());</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_class" href="../../d1/d49/class_type_view_visitor.html">TypeViewVisitor</a> typeView;</div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(typeView);</div>
+<div class="line"><span class="lineno">   97</span>    std::vector&lt;std::string&gt; result = typeView.<a class="code hl_function" href="../../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96">getData</a>();</div>
+<div class="line"><span class="lineno">   98</span>    EXPECT_EQ(result.size(), checkData.size());</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; result.size(); i++)</div>
+<div class="line"><span class="lineno">  100</span>        EXPECT_EQ(result[i], checkData[i]);</div>
+<div class="line"><span class="lineno">  101</span>}</div>
 <div class="ttc" id="aclass_a_s_t_html_a2be6b7f1a62e69bf7c408a314cd09a87"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST::accept</a></div><div class="ttdeci">virtual void accept(IVisitor &amp;visitor)=0</div></div>
 <div class="ttc" id="aclass_lexer_html"><div class="ttname"><a href="../../da/d5a/class_lexer.html">Lexer</a></div><div class="ttdoc">Класс Лексер, разбивающий текст программы на токены</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d24/_lexer_8hpp_source.html#l00019">Lexer.hpp:19</a></div></div>
-<div class="ttc" id="aclass_lexer_html_a240680b247c9b95a1bbd802716b20f39"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">Lexer::analyzeFile</a></div><div class="ttdeci">List&lt; Token &gt; analyzeFile(std::string const &amp;fileName)</div><div class="ttdoc">Анализирует файл</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00038">Lexer.cpp:38</a></div></div>
-<div class="ttc" id="aclass_lexer_html_a9d8216e3fe926123c3cdbbf9c87b614a"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">Lexer::setTemplates</a></div><div class="ttdeci">void setTemplates(List&lt; TokenTemplate &gt; const &amp;templates)</div><div class="ttdoc">Устанавливает шаблоны токенов для разбора лексером</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00030">Lexer.cpp:30</a></div></div>
+<div class="ttc" id="aclass_lexer_html_a240680b247c9b95a1bbd802716b20f39"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">Lexer::analyzeFile</a></div><div class="ttdeci">List&lt; Token &gt; analyzeFile(std::string const &amp;fileName)</div><div class="ttdoc">Анализирует файл</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00040">Lexer.cpp:40</a></div></div>
+<div class="ttc" id="aclass_lexer_html_a9d8216e3fe926123c3cdbbf9c87b614a"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">Lexer::setTemplates</a></div><div class="ttdeci">void setTemplates(List&lt; TokenTemplate &gt; const &amp;templates)</div><div class="ttdoc">Устанавливает шаблоны токенов для разбора лексером</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00032">Lexer.cpp:32</a></div></div>
 <div class="ttc" id="aclass_list_html"><div class="ttname"><a href="../../d1/d34/class_list.html">List&lt; Token &gt;</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a></div><div class="ttdoc">Класс синтаксического анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3f/_syntax_8hpp_source.html#l00027">Syntax.hpp:27</a></div></div>
-<div class="ttc" id="aclass_syntax_analyzer_html_a96cd5f6a041dae613d1c75175e26592e"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00306">Syntax.cpp:306</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html_a96cd5f6a041dae613d1c75175e26592e"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00307">Syntax.cpp:307</a></div></div>
 <div class="ttc" id="aclass_type_view_visitor_html"><div class="ttname"><a href="../../d1/d49/class_type_view_visitor.html">TypeViewVisitor</a></div><div class="ttdoc">Посетителя для вывода сведений о типах в прямом порядке по АДС</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00136">Visitor.hpp:136</a></div></div>
 <div class="ttc" id="aclass_type_view_visitor_html_a02d309072827f3e9c1c513e9632cfd96"><div class="ttname"><a href="../../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96">TypeViewVisitor::getData</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getData(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00333">Visitor.cpp:333</a></div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_a631b1e0bdcaca1e7209427a4fdc07a35"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a></div><div class="ttdeci">SyntaxAnalyzer syntax(tokens)</div></div>
@@ -254,7 +255,7 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_adaccd1923ea3a248c803e43f5a0cd17e_cgraph.svg" width="3508" height="2924"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_adaccd1923ea3a248c803e43f5a0cd17e_cgraph.svg" width="3508" height="3095"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -288,21 +289,22 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 
 <p>Тест синтаксического анализа Паскаля, средний текст с ошибкой </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00103">103</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                 {</div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
-<div class="line"><span class="lineno">  105</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS3.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
-<div class="line"><span class="lineno">  109</span>    EXPECT_THROW(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>(), std::invalid_argument);</div>
-<div class="line"><span class="lineno">  110</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00104">104</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                 {</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
+<div class="line"><span class="lineno">  106</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS3.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
+<div class="line"><span class="lineno">  110</span>    EXPECT_THROW(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>(), <a class="code hl_class" href="../../d7/d27/class_syntax_exception.html">SyntaxException</a>);</div>
+<div class="line"><span class="lineno">  111</span>}</div>
+<div class="ttc" id="aclass_syntax_exception_html"><div class="ttname"><a href="../../d7/d27/class_syntax_exception.html">SyntaxException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00031">SyntExp.hpp:31</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_a667574745477167efce8ec7c88c384d8_cgraph.svg" width="3508" height="2924"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_a667574745477167efce8ec7c88c384d8_cgraph.svg" width="3508" height="3095"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -336,40 +338,40 @@ $(document).ready(function(){initNavTree('dd/de9/test_syntax_8cpp.html','../../'
 
 <p>Тест синтаксического анализа Паскаля, простой тест </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00013">13</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                           {</div>
-<div class="line"><span class="lineno">   14</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
-<div class="line"><span class="lineno">   15</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
-<div class="line"><span class="lineno">   16</span>    std::vector&lt;std::string&gt; checkData = {</div>
-<div class="line"><span class="lineno">   17</span>        <span class="stringliteral">&quot;PROGRAM:\ntest&quot;</span>,</div>
-<div class="line"><span class="lineno">   18</span>        <span class="stringliteral">&quot;BLOCK&quot;</span>,</div>
-<div class="line"><span class="lineno">   19</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
-<div class="line"><span class="lineno">   20</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
-<div class="line"><span class="lineno">   21</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
-<div class="line"><span class="lineno">   22</span>        <span class="stringliteral">&quot;COMPOUND&quot;</span>,</div>
-<div class="line"><span class="lineno">   23</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
-<div class="line"><span class="lineno">   24</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
-<div class="line"><span class="lineno">   25</span>        <span class="stringliteral">&quot;1&quot;</span>,</div>
-<div class="line"><span class="lineno">   26</span>        <span class="stringliteral">&quot;$&quot;</span></div>
-<div class="line"><span class="lineno">   27</span>    };</div>
-<div class="line"><span class="lineno">   28</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
-<div class="line"><span class="lineno">   31</span>    std::unique_ptr&lt;AST&gt; <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>());</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>    <a class="code hl_class" href="../../d1/d49/class_type_view_visitor.html">TypeViewVisitor</a> typeView;</div>
-<div class="line"><span class="lineno">   34</span>    <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(typeView);</div>
-<div class="line"><span class="lineno">   35</span>    std::vector&lt;std::string&gt; result = typeView.<a class="code hl_function" href="../../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96">getData</a>();</div>
-<div class="line"><span class="lineno">   36</span>    EXPECT_EQ(result.size(), checkData.size());</div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; result.size(); i++)</div>
-<div class="line"><span class="lineno">   38</span>        EXPECT_EQ(result[i], checkData[i]);</div>
-<div class="line"><span class="lineno">   39</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html">testSyntax.cpp</a> строка <a class="el" href="../../dd/de9/test_syntax_8cpp_source.html#l00014">14</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                           {</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_class" href="../../da/d5a/class_lexer.html">Lexer</a> lexer;</div>
+<div class="line"><span class="lineno">   16</span>    lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(<a class="code hl_function" href="../../d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e">PascalRules::getPascalTemplates</a>());</div>
+<div class="line"><span class="lineno">   17</span>    std::vector&lt;std::string&gt; checkData = {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="stringliteral">&quot;PROGRAM:\ntest&quot;</span>,</div>
+<div class="line"><span class="lineno">   19</span>        <span class="stringliteral">&quot;BLOCK&quot;</span>,</div>
+<div class="line"><span class="lineno">   20</span>        <span class="stringliteral">&quot;VARDECL&quot;</span>,</div>
+<div class="line"><span class="lineno">   21</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
+<div class="line"><span class="lineno">   22</span>        <span class="stringliteral">&quot;INTEGER&quot;</span>,</div>
+<div class="line"><span class="lineno">   23</span>        <span class="stringliteral">&quot;COMPOUND&quot;</span>,</div>
+<div class="line"><span class="lineno">   24</span>        <span class="stringliteral">&quot;:=&quot;</span>,</div>
+<div class="line"><span class="lineno">   25</span>        <span class="stringliteral">&quot;x&quot;</span>,</div>
+<div class="line"><span class="lineno">   26</span>        <span class="stringliteral">&quot;1&quot;</span>,</div>
+<div class="line"><span class="lineno">   27</span>        <span class="stringliteral">&quot;$&quot;</span></div>
+<div class="line"><span class="lineno">   28</span>    };</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textS1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>(tokens);</div>
+<div class="line"><span class="lineno">   32</span>    std::unique_ptr&lt;AST&gt; <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a>.<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">parseTokens</a>());</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_class" href="../../d1/d49/class_type_view_visitor.html">TypeViewVisitor</a> typeView;</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(typeView);</div>
+<div class="line"><span class="lineno">   36</span>    std::vector&lt;std::string&gt; result = typeView.<a class="code hl_function" href="../../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96">getData</a>();</div>
+<div class="line"><span class="lineno">   37</span>    EXPECT_EQ(result.size(), checkData.size());</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; result.size(); i++)</div>
+<div class="line"><span class="lineno">   39</span>        EXPECT_EQ(result[i], checkData[i]);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_ac491df98e51a6bba8b808af414b6614f_cgraph.svg" width="3508" height="2924"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/de9/test_syntax_8cpp_ac491df98e51a6bba8b808af414b6614f_cgraph.svg" width="3508" height="3095"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

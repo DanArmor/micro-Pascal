@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../de/db2/class_program_a_s_t.html#ac51476a6a2adf7ed55d8df8c2423de32',1,'ProgramAST']]],
-  ['nextptr_1',['nextPtr',['../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec',1,'Node']]]
+  ['msg_0',['msg',['../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa',1,'AnalyzeException']]]
 ];

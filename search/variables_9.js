@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['right_0',['right',['../d2/dc9/class_bin_op_a_s_t.html#ac16cb4b6a833b3ae1a7ebb362f35bbab',1,'BinOpAST']]],
-  ['root_1',['root',['../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994',1,'example_visiter.cpp']]]
+  ['params_0',['params',['../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab',1,'CallAST']]],
+  ['prevptr_1',['prevPtr',['../dc/d8f/class_node.html#aba90dd45645dcb21fa58d1742471ee07',1,'Node']]]
 ];

@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "AnalyzeException", "df/d7c/class_analyze_exception.html", "df/d7c/class_analyze_exception" ],
     [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
     [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ],
     [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
@@ -15,6 +16,7 @@ var annotated_dup =
     [ "IToken", "d0/d11/class_i_token.html", "d0/d11/class_i_token" ],
     [ "IVisitor", "df/db7/class_i_visitor.html", "df/db7/class_i_visitor" ],
     [ "Lexer", "da/d5a/class_lexer.html", "da/d5a/class_lexer" ],
+    [ "LexerException", "d4/d3a/class_lexer_exception.html", "d4/d3a/class_lexer_exception" ],
     [ "List", "d1/d34/class_list.html", "d1/d34/class_list" ],
     [ "Node", "dc/d8f/class_node.html", "dc/d8f/class_node" ],
     [ "NodeIterator", "d3/dde/class_node_iterator.html", "d3/dde/class_node_iterator" ],
@@ -22,9 +24,11 @@ var annotated_dup =
     [ "NumberAST", "d8/d90/class_number_a_s_t.html", "d8/d90/class_number_a_s_t" ],
     [ "ProgramAST", "de/db2/class_program_a_s_t.html", "de/db2/class_program_a_s_t" ],
     [ "Queue", "d4/da4/class_queue.html", "d4/da4/class_queue" ],
+    [ "SemanticException", "d6/d2c/class_semantic_exception.html", "d6/d2c/class_semantic_exception" ],
     [ "Stack", "d0/d14/class_stack.html", "d0/d14/class_stack" ],
     [ "StringAST", "d0/d21/class_string_a_s_t.html", "d0/d21/class_string_a_s_t" ],
     [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", "d0/dfe/class_syntax_analyzer" ],
+    [ "SyntaxException", "d7/d27/class_syntax_exception.html", "d7/d27/class_syntax_exception" ],
     [ "Token", "db/dc1/class_token.html", "db/dc1/class_token" ],
     [ "TokenTemplate", "dc/dca/class_token_template.html", "dc/dca/class_token_template" ],
     [ "TypeSpecAST", "d2/db9/class_type_spec_a_s_t.html", "d2/db9/class_type_spec_a_s_t" ],

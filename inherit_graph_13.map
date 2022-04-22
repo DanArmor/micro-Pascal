@@ -1,3 +1,7 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$d0/dfe/class_syntax_analyzer.html" title="Класс синтаксического анализатора" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,107,83"/>
+<area shape="rect" id="node2" href="$df/d7c/class_analyze_exception.html" title=" " alt="" coords="155,56,277,83"/>
+<area shape="rect" id="node3" href="$d4/d3a/class_lexer_exception.html" title=" " alt="" coords="337,5,447,32"/>
+<area shape="rect" id="node4" href="$d6/d2c/class_semantic_exception.html" title=" " alt="" coords="325,56,459,83"/>
+<area shape="rect" id="node5" href="$d7/d27/class_syntax_exception.html" title=" " alt="" coords="333,107,451,133"/>
 </map>

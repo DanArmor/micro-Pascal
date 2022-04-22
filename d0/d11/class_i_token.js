@@ -73,6 +73,6 @@ var class_i_token =
     [ "IToken", "d0/d11/class_i_token.html#a03960116e3308c12cf7eb8cd4de4b4da", null ],
     [ "IToken", "d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac", null ],
     [ "getAdvType", "d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb", null ],
-    [ "getType", "d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092", null ],
+    [ "getType", "d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a", null ],
     [ "setAdvType", "d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0", null ]
 ];

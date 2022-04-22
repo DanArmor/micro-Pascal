@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../db/dc1/class_token.html#a942fcc40ffdf54c98b7b641c792a26bc" target="_top" xlink:title="Возвращает константную ссылку на строковое представление токена">
+<g id="a_node2"><a xlink:href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" target="_top" xlink:title="Возвращает константную ссылку на строковое представление токена">
 <polygon fill="none" stroke="black" points="97,-0.5 97,-19.5 171,-19.5 171,-0.5 97,-0.5"/>
 <text text-anchor="middle" x="134" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Token::getStr</text>
 </a>

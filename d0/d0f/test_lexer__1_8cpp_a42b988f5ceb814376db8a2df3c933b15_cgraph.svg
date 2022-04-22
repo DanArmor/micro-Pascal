@@ -155,7 +155,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../db/dc1/class_token.html#a942fcc40ffdf54c98b7b641c792a26bc" target="_top" xlink:title="Возвращает константную ссылку на строковое представление токена">
+<g id="a_node8"><a xlink:href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" target="_top" xlink:title="Возвращает константную ссылку на строковое представление токена">
 <polygon fill="none" stroke="black" points="571.5,-114.5 571.5,-133.5 645.5,-133.5 645.5,-114.5 571.5,-114.5"/>
 <text text-anchor="middle" x="608.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">Token::getStr</text>
 </a>
@@ -185,7 +185,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d0/d11/class_i_token.html#a568cb9d98839eff3fd758f419a76b092" target="_top" xlink:title="Получение типа токена">
+<g id="a_node10"><a xlink:href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" target="_top" xlink:title="Получение типа токена">
 <polygon fill="none" stroke="black" points="565.5,-38.5 565.5,-57.5 651.5,-57.5 651.5,-38.5 565.5,-38.5"/>
 <text text-anchor="middle" x="608.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getType</text>
 </a>

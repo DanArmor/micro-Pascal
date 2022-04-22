@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['syntax_0',['syntax',['../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35',1,'example_visiter.cpp']]]
+  ['right_0',['right',['../d2/dc9/class_bin_op_a_s_t.html#ac16cb4b6a833b3ae1a7ebb362f35bbab',1,'BinOpAST']]],
+  ['root_1',['root',['../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994',1,'example_visiter.cpp']]]
 ];
