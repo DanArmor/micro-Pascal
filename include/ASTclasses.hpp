@@ -20,6 +20,8 @@ class IfAST;
 class WhileAST;
 class ForAST;
 class IterationAST;
+class FunctionAST;
+class ReturnAST;
 
 /**
  * @brief Интерфейс "посетителя"
@@ -46,6 +48,8 @@ class IVisitor{
     virtual void visit(WhileAST &node) = 0;
     virtual void visit(IterationAST &node) = 0;
     virtual void visit(ForAST &node) = 0;
+    virtual void visit(FunctionAST &node) = 0;
+    virtual void visit(ReturnAST &node) = 0;
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева

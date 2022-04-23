@@ -41,8 +41,6 @@ namespace PascalRules{
         {"^[\t ]*end", IToken::Type::END, IToken::AdvType::KEYWORD},
         {"^[\t ]*program", IToken::Type::PROGRAM, IToken::AdvType::KEYWORD},
         {"^[\t ]*var", IToken::Type::VAR, IToken::AdvType::KEYWORD},
-        {"^[\t ]*integer", IToken::Type::INTEGER, IToken::AdvType::TYPE_SPEC},
-        {"^[\t ]*real", IToken::Type::REAL, IToken::AdvType::TYPE_SPEC},
         {"^[\t ]*const", IToken::Type::CONST, IToken::AdvType::KEYWORD},
         {"^[\t ]*while", IToken::Type::WHILE, IToken::AdvType::KEYWORD},
         {"^[\t ]*for", IToken::Type::FOR, IToken::AdvType::KEYWORD},
@@ -53,6 +51,13 @@ namespace PascalRules{
         {"^[\t ]*if", IToken::Type::IF, IToken::AdvType::KEYWORD},
         {"^[\t ]*then", IToken::Type::THEN, IToken::AdvType::KEYWORD},
         {"^[\t ]*else", IToken::Type::ELSE, IToken::AdvType::KEYWORD},
+        {"^[\t ]*function", IToken::Type::FUNCTION, IToken::AdvType::KEYWORD},
+        {"^[\t ]*procedure", IToken::Type::PROCEDURE, IToken::AdvType::KEYWORD},
+        {"^[\t ]*return", IToken::Type::RETURN, IToken::AdvType::KEYWORD},
+
+        {"^[\t ]*integer", IToken::Type::INTEGER, IToken::AdvType::TYPE_SPEC},
+        {"^[\t ]*real", IToken::Type::REAL, IToken::AdvType::TYPE_SPEC},
+        {"^[\t ]*void", IToken::Type::VOID, IToken::AdvType::TYPE_SPEC},
 
         {"^[\t ]*not", IToken::Type::NOT, IToken::AdvType::OPERATOR},
         {"^[\t ]*and", IToken::Type::AND, IToken::AdvType::OPERATOR},

@@ -5,6 +5,7 @@
 #include "ASTclasses.hpp"
 #include "AST.hpp"
 #include "Token.hpp"
+#include "sup.hpp"
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token){
         switch (token.getAdvType()){
@@ -25,11 +26,8 @@
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first){
         if(token.getAdvType() == IToken::OPERATOR)
             return std::unique_ptr<AST>(new UnOpAST(token, std::move(first)));
-        else if(token.getAdvType() == IToken::PROGSTART){
-            std::unique_ptr<ProgramAST> programPTR(new ProgramAST(token, std::move(first)));
-            programPTR->token.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
-            return programPTR;
-        }
+        else if(token.getType() == IToken::RETURN)
+            return std::unique_ptr<AST>(new ReturnAST(token, std::move(first)));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
@@ -73,6 +71,19 @@
             }
         }
         return std::unique_ptr<AST>(new CallAST(token, std::move(params)));
+    }
+
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first){
+        if(token.getAdvType() == IToken::PROGSTART){
+            std::unique_ptr<ProgramAST> programPTR(new ProgramAST(token, std::move(params), std::move(first)));
+            programPTR->token.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
+            return programPTR;
+        }
+    }
+
+    std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
+        if(isIn(token.getType(), {IToken::PROCEDURE, IToken::FUNCTION}))
+            return std::unique_ptr<AST>(new FunctionAST(token, std::move(params), std::move(first), std::move(second)));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token,

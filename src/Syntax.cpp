@@ -7,7 +7,6 @@
 #include "SyntExp.hpp"
 
 #include <iostream>
-
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
@@ -17,9 +16,16 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
     nameTok.setAdvType(IToken::PROGSTART);
     eat(IToken::ID);
     eat(IToken::SEMI);
+    std::vector<std::unique_ptr<AST>> functions;
+
+    while(isIn(getCurTok().getType(), {IToken::PROCEDURE, IToken::FUNCTION})){
+        functions.emplace_back(std::move(syntaxFuncDef()));
+        eat(IToken::SEMI);
+    }
+
     std::unique_ptr<AST> blockPTR = syntaxBlock();
     eat(IToken::DOT);
-    return ASTFactory::createAST(nameTok, std::move(blockPTR));
+    return ASTFactory::createAST(nameTok, std::move(functions), std::move(blockPTR));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxBlock(void){
@@ -120,7 +126,7 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxStList(void){
     stList.emplace_back(std::move(stPTR));
 
     while(getCurTok().getType() == IToken::SEMI){
-        eat(getCurTok().getType());
+        eat(IToken::SEMI);
         stList.emplace_back(syntaxSt());
     }
 
@@ -152,6 +158,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxSt(void){
             return syntaxIfSt();
         case IToken::FOR :
             return syntaxForSt();
+        case IToken::RETURN :
+            return syntaxReturnSt();
         default:
             return syntaxEmptySt();
     }
@@ -224,6 +232,39 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxIterSt(void){
     std::unique_ptr<AST> postAction = ASTFactory::createAST(postOp, std::move(varPtr_postOp), std::move(finPtr_postOp));
 
     return ASTFactory::createAST(toTok, std::move(initSt), std::move(condition), std::move(postAction)); 
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
+    Token funcTok = getCurTok();
+    if(funcTok.getType() == IToken::FUNCTION)
+        eat(IToken::FUNCTION);
+    else
+        eat(IToken::PROCEDURE);
+    
+    Token name = getCurTok();
+    eat(IToken::ID);
+    eat(IToken::LPAREN);
+    std::vector<std::unique_ptr<AST>> params = std::move(syntaxVarDecl());
+    eat(IToken::RPAREN);
+
+    std::unique_ptr<AST> returnType;
+    if(funcTok.getType() == IToken::FUNCTION){
+        eat(IToken::COLON);
+        returnType = syntaxTypeSpec();
+    } else{
+        Token typeTok = {"VOID", IToken::VOID, IToken::TYPE_SPEC};
+        returnType = ASTFactory::createAST(typeTok);
+    }
+    eat(IToken::SEMI);
+    std::unique_ptr<AST> body = std::move(syntaxBlock());
+    return ASTFactory::createAST(funcTok, std::move(params), std::move(returnType), std::move(body));
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
+    Token retTok = getCurTok();
+    eat(IToken::RETURN);
+    std::unique_ptr<AST> toReturn = std::move(syntaxExpr());
+    return ASTFactory::createAST(retTok, std::move(toReturn));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){

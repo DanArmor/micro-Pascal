@@ -1,0 +1,13 @@
+program TEST;
+    
+function add(x, y : integer) : integer;
+begin
+    return x + y;
+end;
+
+var
+    a, b : integer;
+begin
+    for i:=1 to 5 do
+        a := add(a, b);
+end.

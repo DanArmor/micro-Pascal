@@ -95,11 +95,12 @@ class NoOpAST : public AST{
 class ProgramAST : public AST{
     public:
 
-    ProgramAST(Token name, std::unique_ptr<AST> block);
+    ProgramAST(Token name, std::vector<std::unique_ptr<AST>> functions, std::unique_ptr<AST> block);
     ~ProgramAST() = default;
     void accept(IVisitor &visitor);
 
     Token name;
+    std::vector<std::unique_ptr<AST>> functions;
     std::unique_ptr<AST> block;
 };
 
@@ -209,5 +210,28 @@ class ForAST : public AST{
     std::unique_ptr<AST> body;
 };
 
+class FunctionAST : public AST{
+    public:
+
+    FunctionAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> returnType, std::unique_ptr<AST> body);
+    ~FunctionAST() = default;
+    void accept(IVisitor &visitor);
+
+    std::vector<std::unique_ptr<AST>> params;
+    std::unique_ptr<AST> returnType;
+    std::unique_ptr<AST> body;
+};
+
+/// @brief Узел, содержащий унарную операцию
+class ReturnAST : public AST{
+    public:
+
+    ReturnAST(Token token, std::unique_ptr<AST> toReturn);
+    ~ReturnAST() = default;
+
+    void accept(IVisitor &visitor);
+
+    std::unique_ptr<AST> toReturn;
+};
 
 #endif

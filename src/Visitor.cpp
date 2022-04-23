@@ -146,6 +146,10 @@ void GraphvizVisitor::visit(ProgramAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
+    for(auto &child : node.functions){
+        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+        child->accept(*this);
+    }
     links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
     node.block->accept(*this);
 }
@@ -255,6 +259,28 @@ void GraphvizVisitor::visit(IterationAST &node){
     node.postAction->accept(*this);
 }
 
+void GraphvizVisitor::visit(FunctionAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    for(auto &child : node.params){
+        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+        child->accept(*this);
+    }
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.returnType->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.body->accept(*this);
+}
+
+void GraphvizVisitor::visit(ReturnAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.toReturn->accept(*this);
+}
+
 /*Определения TypeViewVisitor
 ==================*/
 TypeViewVisitor::TypeViewVisitor(){};
@@ -297,6 +323,8 @@ void TypeViewVisitor::visit(NoOpAST &node){
 
 void TypeViewVisitor::visit(ProgramAST &node){
     typesStrings.push_back(node.token.getStr());
+    for(auto &child : node.functions)
+        child->accept(*this);
     node.block->accept(*this);
 }
 
@@ -363,6 +391,18 @@ void TypeViewVisitor::visit(IterationAST &node){
     node.assign->accept(*this);
     node.condition->accept(*this);
     node.postAction->accept(*this);
+}
+
+void TypeViewVisitor::visit(FunctionAST &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto &child : node.params)
+        child->accept(*this);
+    node.returnType->accept(*this);
+    node.body->accept(*this);
+}
+void TypeViewVisitor::visit(ReturnAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.toReturn->accept(*this);
 }
 
 std::vector<std::string> TypeViewVisitor::getData(void){
@@ -528,6 +568,8 @@ std::vector<std::string> TypeViewVisitor::getData(void){
                 break;
             }
         }
+        for(auto &child : node.functions)
+            child->accept(*this);
         node.block->accept(*this);
     }
 
@@ -584,6 +626,17 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         node.assign->accept(*this);
         node.condition->accept(*this);
         node.postAction->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(FunctionAST &node){
+        for(auto &child : node.params)
+            child->accept(*this);
+        node.returnType->accept(*this);
+        node.body->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(ReturnAST &node){
+        node.toReturn->accept(*this);
     }
 
     List<Token> HighlightAccurateVisitor::getTokens(void){

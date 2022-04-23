@@ -78,9 +78,9 @@ int main(int argc, char** argv){
 
     highlight(lexer.getText(), hl.getTokens());
 
-    for(auto tt : hl.getTokens()){
-        std::cout << tt.getInfo() << "\n";
-    }
+//    for(auto tt : hl.getTokens()){
+//        std::cout << tt.getInfo() << "\n";
+//    }
 
 
 //

@@ -75,8 +75,6 @@ class IToken{
         PROGRAM,  ///<Начало программы
         VAR, ///< Ключевое слово VAR
         CONST, ///< Ключевое слово CONST
-        INTEGER, ///< Целый тип
-        REAL, ///< Вещественный тип
         WHILE, ///< WHILE
         FOR,
         DO, ///< DO
@@ -86,11 +84,18 @@ class IToken{
         DOWN,
         TO,
         DOWNTO,
+        RETURN,
+
+        INTEGER, ///< Целый тип
+        REAL, ///< Вещественный тип
+        VOID,
 
         DOT, ///< Точка
         SEMI, ///< Точка с запятой
         COLON, ///< Двоеточие
         COMMA, ///< Запятая
+        FUNCTION,
+        PROCEDURE
 
         // Дополнительные ключевые слова ?
 

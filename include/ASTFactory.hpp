@@ -19,6 +19,10 @@ class ASTFactory{
 
     static std::unique_ptr<AST> createAST(Token token, std::vector<std::unique_ptr<AST>> params);
 
+    static std::unique_ptr<AST> createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first);
+
+    static std::unique_ptr<AST> createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first, std::unique_ptr<AST> second);
+
     static std::unique_ptr<AST> createAST(Token token, 
     std::vector<std::unique_ptr<AST>> constsDecls, std::vector<std::unique_ptr<AST>> varDecls, std::unique_ptr<AST> compound);
 

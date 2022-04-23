@@ -127,6 +127,10 @@ class GraphvizVisitor : public IVisitor{
 
     void visit(IterationAST &node);
 
+    void visit(FunctionAST &node);
+
+    void visit(ReturnAST &node);
+
     void write(void);
 
     private:
@@ -177,6 +181,10 @@ class TypeViewVisitor : public IVisitor{
     void visit(ForAST &node);
 
     void visit(IterationAST &node);
+
+    void visit(FunctionAST &node);
+
+    void visit(ReturnAST &node);
 
     std::vector<std::string> getData(void);
 
@@ -273,6 +281,10 @@ class HighlightAccurateVisitor : public IVisitor{
     void visit(ForAST &node);
 
     void visit(IterationAST &node);
+
+    void visit(FunctionAST &node);
+
+    void visit(ReturnAST &node);
 
     List<Token> getTokens(void);
 

@@ -2,7 +2,6 @@
 #define __INC_SYNTAX_H
 
 #include <vector>
-#include <initializer_list>
 
 #include "magic_enum.hpp"
 
@@ -10,19 +9,7 @@
 #include "Token.hpp"
 #include "ASTclasses.hpp"
 
-/**
- * @brief Возвращает истину, если value находится среди значений cont
- * @tparam T тип значений
- * @param value значение для поиска
- * @param cont среди каких значений искать
- * @return true Если value имеется среди cont
- * @return false Если value отсутствует среди cont
- */
-template<typename T>
-bool isIn(T const &value, std::initializer_list<T> const &cont){
-    return std::find(cont.begin(), cont.end(), value) != cont.end();
-}
-
+#include "sup.hpp"
 /// @brief Класс синтаксического анализатора
 class SyntaxAnalyzer{
 
@@ -70,6 +57,10 @@ class SyntaxAnalyzer{
     std::unique_ptr<AST> syntaxForSt(void);
 
     std::unique_ptr<AST> syntaxIterSt(void);
+
+    std::unique_ptr<AST> syntaxFuncDef(void);
+
+    std::unique_ptr<AST> syntaxReturnSt(void);
 
     void getNextToken(void);
 

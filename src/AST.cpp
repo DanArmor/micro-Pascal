@@ -67,7 +67,7 @@ void NoOpAST::accept(IVisitor &visitor){
 
 /*Определения ProgramAST
 ==================*/
-ProgramAST::ProgramAST(Token name, std::unique_ptr<AST> block) : AST(name), name(name), block(std::move(block)){};
+ProgramAST::ProgramAST(Token name, std::vector<std::unique_ptr<AST>> functions, std::unique_ptr<AST> block) : AST(name), name(name), functions(std::move(functions)), block(std::move(block)){};
 
 void ProgramAST::accept(IVisitor &visitor){
     visitor.visit(*this);
@@ -156,5 +156,22 @@ void ForAST::accept(IVisitor &visitor){
 ==================*/
 IterationAST::IterationAST(Token token, std::unique_ptr<AST> assign, std::unique_ptr<AST> condition, std::unique_ptr<AST> postAction) : AST(token), assign(std::move(assign)), condition(std::move(condition)), postAction(std::move(postAction)){};
 void IterationAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}
+
+/*Определения FunctionAST
+==================*/
+FunctionAST::FunctionAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> returnType, std::unique_ptr<AST> body) : 
+    AST(token), params(std::move(params)), returnType(std::move(returnType)), body(std::move(body)){};
+
+void FunctionAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}
+
+/*Определения ReturnAST
+==================*/
+ReturnAST::ReturnAST(Token token, std::unique_ptr<AST> toReturn) : AST(token), toReturn(std::move(toReturn)){};
+
+void ReturnAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
