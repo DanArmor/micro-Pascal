@@ -143,5 +143,4 @@ var menudata={children:[
 {text:"t",url:"globals_func.html#index_t"},
 {text:"w",url:"globals_func.html#index_w"}]},
 {text:"Переменные",url:"globals_vars.html"},
-{text:"Определения типов",url:"globals_type.html"},
 {text:"Макросы",url:"globals_defs.html"}]}]}]}

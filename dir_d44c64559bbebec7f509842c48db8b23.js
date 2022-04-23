@@ -1,6 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "AST.hpp", "d4/dcb/_a_s_t_8hpp.html", [
+      [ "ProgramAST", "de/db2/class_program_a_s_t.html", "de/db2/class_program_a_s_t" ],
+      [ "BlockAST", "d0/de0/class_block_a_s_t.html", "d0/de0/class_block_a_s_t" ],
       [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", "d2/dc9/class_bin_op_a_s_t" ],
       [ "UnOpAST", "dc/de8/class_un_op_a_s_t.html", "dc/de8/class_un_op_a_s_t" ],
       [ "NumberAST", "d8/d90/class_number_a_s_t.html", "d8/d90/class_number_a_s_t" ],
@@ -8,8 +10,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
       [ "VarAST", "dc/dff/class_var_a_s_t.html", "dc/dff/class_var_a_s_t" ],
       [ "NoOpAST", "db/db7/class_no_op_a_s_t.html", "db/db7/class_no_op_a_s_t" ],
-      [ "ProgramAST", "de/db2/class_program_a_s_t.html", "de/db2/class_program_a_s_t" ],
-      [ "BlockAST", "d0/de0/class_block_a_s_t.html", "d0/de0/class_block_a_s_t" ],
       [ "VarDeclAST", "d6/d7c/class_var_decl_a_s_t.html", "d6/d7c/class_var_decl_a_s_t" ],
       [ "TypeSpecAST", "d2/db9/class_type_spec_a_s_t.html", "d2/db9/class_type_spec_a_s_t" ],
       [ "ConstAST", "d6/d94/class_const_a_s_t.html", "d6/d94/class_const_a_s_t" ],
@@ -22,7 +22,10 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "FunctionAST", "dc/d19/class_function_a_s_t.html", "dc/d19/class_function_a_s_t" ],
       [ "ReturnAST", "d8/de5/class_return_a_s_t.html", "d8/de5/class_return_a_s_t" ]
     ] ],
-    [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", "d8/de6/_a_s_tclasses_8hpp" ],
+    [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", [
+      [ "IVisitor", "df/db7/class_i_visitor.html", "df/db7/class_i_visitor" ],
+      [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ]
+    ] ],
     [ "ASTFactory.hpp", "d4/d0d/_a_s_t_factory_8hpp.html", [
       [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ]
     ] ],

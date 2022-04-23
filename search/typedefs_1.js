@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['difference_5ftype_0',['difference_type',['../d3/dde/class_node_iterator.html#ad18e6b2db7e7e7ef63728e1ea19424eb',1,'NodeIterator']]]
+  ['iterator_5fcategory_0',['iterator_category',['../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b',1,'NodeIterator']]]
 ];

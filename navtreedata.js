@@ -55,7 +55,6 @@ var NAVTREE =
         [ "Указатель", "globals.html", null ],
         [ "Функции", "globals_func.html", null ],
         [ "Переменные", "globals_vars.html", null ],
-        [ "Определения типов", "globals_type.html", null ],
         [ "Макросы", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -66,7 +65,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d2/dd3/class_highlight_accurate_visitor.html#a843be89a024a23d7f85c8cccb5b97570",
-"dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563"
+"dc/d8f/class_node.html#ac7a3f85b675ac34566f0d5e35fc49c45"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

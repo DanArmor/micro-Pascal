@@ -50,7 +50,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/de0/class_block_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../d0/de0/class_block_a_s_t.html" target="_top" xlink:title="Узел, отображающий блок (константы, переменные, инструкции)">
 <polygon fill="none" stroke="black" points="83,-646.5 83,-665.5 144,-665.5 144,-646.5 83,-646.5"/>
 <text text-anchor="middle" x="113.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00">BlockAST</text>
 </a>

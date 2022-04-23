@@ -1,5 +1,5 @@
 <map id="BlockAST" name="BlockAST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,247,87,273"/>
+<area shape="rect" id="node1" title="Узел, отображающий блок (константы, переменные, инструкции)" alt="" coords="5,247,87,273"/>
 <area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="22,171,70,197"/>
 <area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="17,81,75,108"/>
 <area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="15,5,77,32"/>

@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563":[2,0,20,1],
 "dc/d8f/class_node.html#ac7a3f85b675ac34566f0d5e35fc49c45":[2,0,20,9],
 "dc/d8f/class_node.html#ae134cf81f361013712098991e97de25c":[2,0,20,5],
 "dc/da0/class_while_a_s_t.html":[2,0,40],
@@ -137,9 +136,8 @@ var NAVTREEINDEX2 =
 "functions_w.html":[2,3,0,21],
 "functions_~.html":[2,3,0,22],
 "globals.html":[3,1,0],
-"globals_defs.html":[3,1,4],
+"globals_defs.html":[3,1,3],
 "globals_func.html":[3,1,1],
-"globals_type.html":[3,1,3],
 "globals_vars.html":[3,1,2],
 "hierarchy.html":[2,2],
 "index.html":[],
