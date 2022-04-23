@@ -67,6 +67,10 @@ class SyntaxAnalyzer{
 
     std::unique_ptr<AST> syntaxWhileSt(void);
 
+    std::unique_ptr<AST> syntaxForSt(void);
+
+    std::unique_ptr<AST> syntaxIterSt(void);
+
     void getNextToken(void);
 
     Token &getCurTok(void);

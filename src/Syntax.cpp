@@ -6,6 +6,8 @@
 #include "ASTFactory.hpp"
 #include "SyntExp.hpp"
 
+#include <iostream>
+
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
@@ -148,6 +150,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxSt(void){
             return syntaxWhileSt();
         case IToken::IF :
             return syntaxIfSt();
+        case IToken::FOR :
+            return syntaxForSt();
         default:
             return syntaxEmptySt();
     }
@@ -178,6 +182,48 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxWhileSt(void){
     eat(IToken::DO);
     std::unique_ptr<AST> bodyPTR = syntaxSt();
     return ASTFactory::createAST(whileTok, std::move(conditionPTR), std::move(bodyPTR));
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxForSt(void){
+    /* syntaxForSt ::= 'for' syntaxIterSt 'do' syntaxSt */
+    Token token = getCurTok();
+    eat(IToken::FOR);
+    std::unique_ptr<AST> iterSt = syntaxIterSt();
+    eat(IToken::DO);
+    std::unique_ptr<AST> body = syntaxSt();
+    return ASTFactory::createAST(token, std::move(iterSt), std::move(body));
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxIterSt(void){
+    /* syntaxIterSt ::= syntaxAssignSt ('to'|'down to') ('<INTEGER_CONST>'|syntaxVariable) */
+    Token varTok = getCurTok();
+    std::unique_ptr<AST> initSt = syntaxAssignSt();
+
+    Token toTok = getCurTok();
+    if(toTok.getType() == IToken::DOWNTO)
+        eat(IToken::DOWNTO);
+    else
+        eat(IToken::TO);
+
+    Token finTok = getCurTok();
+    if(finTok.getAdvType() != IToken::SOME_CONST and finTok.getType() != IToken::ID)
+        throw AnalyzeException(finTok, "Конечным значением цикла for должна быть целая константа или переменная!");
+    std::unique_ptr<AST> finPtr = syntaxFactor();
+
+    Token condOp = {"<=", IToken::LESS_EQ, IToken::OPERATOR};
+    std::unique_ptr<AST> varPtr_condition = ASTFactory::createAST(varTok);
+    std::unique_ptr<AST> finPtr_condition = ASTFactory::createAST(finTok);
+    std::unique_ptr<AST> condition = ASTFactory::createAST(condOp, std::move(varPtr_condition), std::move(finPtr_condition));
+
+    Token postOp = {"+", IToken::PLUS, IToken::OPERATOR};
+    if(toTok.getType() == IToken::DOWNTO)
+        postOp = {"-", IToken::MINUS, IToken::OPERATOR};
+    Token forOp = {"1", IToken::INTEGER_CONST, IToken::SOME_CONST};
+    std::unique_ptr<AST> varPtr_postOp = ASTFactory::createAST(varTok);
+    std::unique_ptr<AST> finPtr_postOp = ASTFactory::createAST(forOp);
+    std::unique_ptr<AST> postAction = ASTFactory::createAST(postOp, std::move(varPtr_postOp), std::move(finPtr_postOp));
+
+    return ASTFactory::createAST(toTok, std::move(initSt), std::move(condition), std::move(postAction)); 
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){

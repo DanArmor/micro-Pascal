@@ -186,5 +186,28 @@ class WhileAST : public AST{
     std::unique_ptr<AST> body;
 };
 
+class IterationAST : public AST{
+    public:
+
+    IterationAST(Token token, std::unique_ptr<AST> assign, std::unique_ptr<AST> condition, std::unique_ptr<AST> postAction);
+    ~IterationAST() = default;
+    void accept(IVisitor &visitor);
+
+    std::unique_ptr<AST> assign;
+    std::unique_ptr<AST> condition;
+    std::unique_ptr<AST> postAction;
+};
+
+class ForAST : public AST{
+    public:
+
+    ForAST(Token token, std::unique_ptr<AST> iterSt, std::unique_ptr<AST> body);
+    ~ForAST() = default;
+    void accept(IVisitor &visitor);
+
+    std::unique_ptr<AST> iterSt;
+    std::unique_ptr<AST> body;
+};
+
 
 #endif

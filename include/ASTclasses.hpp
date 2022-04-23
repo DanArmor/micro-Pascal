@@ -18,6 +18,8 @@ class StringAST;
 class CallAST;
 class IfAST;
 class WhileAST;
+class ForAST;
+class IterationAST;
 
 /**
  * @brief Интерфейс "посетителя"
@@ -42,6 +44,8 @@ class IVisitor{
     virtual void visit(CallAST &node) = 0;
     virtual void visit(IfAST &node) = 0;
     virtual void visit(WhileAST &node) = 0;
+    virtual void visit(IterationAST &node) = 0;
+    virtual void visit(ForAST &node) = 0;
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева

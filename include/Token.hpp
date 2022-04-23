@@ -78,10 +78,14 @@ class IToken{
         INTEGER, ///< Целый тип
         REAL, ///< Вещественный тип
         WHILE, ///< WHILE
+        FOR,
         DO, ///< DO
         IF, ///< IF
         THEN, ///< THEN
         ELSE, ///< ELSE
+        DOWN,
+        TO,
+        DOWNTO,
 
         DOT, ///< Точка
         SEMI, ///< Точка с запятой
@@ -146,6 +150,8 @@ class Token : public IToken{
      * @param[in] type дополнительный тип токена
      */
     Token(std::string const &str, AdvType const type);
+
+    Token(std::string const &str, Type const type, AdvType const advType);
 
     /**
      * @brief Конструктор из строки токена и всех его аттрибутов

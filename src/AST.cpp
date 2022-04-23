@@ -144,3 +144,17 @@ WhileAST::WhileAST(Token token, std::unique_ptr<AST> condition, std::unique_ptr<
 void WhileAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
+
+/*Определения ForAST
+==================*/
+ForAST::ForAST(Token token, std::unique_ptr<AST> iterSt, std::unique_ptr<AST> body) : AST(token), iterSt(std::move(iterSt)), body(std::move(body)){};
+void ForAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}
+
+/*Определения IterationAST
+==================*/
+IterationAST::IterationAST(Token token, std::unique_ptr<AST> assign, std::unique_ptr<AST> condition, std::unique_ptr<AST> postAction) : AST(token), assign(std::move(assign)), condition(std::move(condition)), postAction(std::move(postAction)){};
+void IterationAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}

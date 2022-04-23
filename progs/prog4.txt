@@ -1,0 +1,5 @@
+program TEST;
+begin
+    for i:=1 to 5 do
+        x := 1;
+end.

@@ -233,6 +233,28 @@ void GraphvizVisitor::visit(WhileAST &node){
     node.condition->accept(*this);
 }
 
+void GraphvizVisitor::visit(ForAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.iterSt->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.body->accept(*this);
+}
+
+void GraphvizVisitor::visit(IterationAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.assign->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.condition->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.postAction->accept(*this);
+}
+
 /*Определения TypeViewVisitor
 ==================*/
 TypeViewVisitor::TypeViewVisitor(){};
@@ -330,125 +352,138 @@ void TypeViewVisitor::visit(WhileAST &node){
     node.condition->accept(*this);
 }
 
+void TypeViewVisitor::visit(ForAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.body->accept(*this);
+    node.iterSt->accept(*this);
+}
+
+void TypeViewVisitor::visit(IterationAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.assign->accept(*this);
+    node.condition->accept(*this);
+    node.postAction->accept(*this);
+}
+
 std::vector<std::string> TypeViewVisitor::getData(void){
     return typesStrings;
 }
 
 
 
-    CodeGenVisitor::CodeGenVisitor(std::string filename){
-        file.open(filename, std::ios::out);
-    }
-
-    void CodeGenVisitor::done(void){
-        file.close();
-    }
-
-    void CodeGenVisitor::visit(BinOpAST &node){
-        node.left->accept(*this);
-        node.right->accept(*this);
-        file << "pop \%ecx" << "\n";
-        file << "pop \%eax" << "\n";
-        switch (node.token.getType()){
-            case IToken::PLUS : 
-                file << "addl \%ecx, \%eax" << "\n";
-                break;
-            case IToken::MUL : 
-                file << "imul \%ecx, \%eax" << "\n";
-                break;
-        }
-        file << "push \%eax" << "\n";
-    }
-
-    void CodeGenVisitor::visit(UnOpAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(NumberAST &node){
-        file << "push $" << node.token.getStr() << "\n";
-    }
-
-    void CodeGenVisitor::visit(CompoundAST &node){
-        for(auto &child : node.children){
-            child->accept(*this);
-        }
-    }
-
-    void CodeGenVisitor::visit(AssignAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(VarAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(NoOpAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(ProgramAST &node){
-        file << ".file \"main.pas\"" << "\n";
-        file << ".text" << "\n";
-        file << ".globl main" << "\n";
-        file << ".type main, @function" << "\n";
-        file << "main:\n";
-        node.block->accept(*this);
-    }
-
-    void CodeGenVisitor::visit(BlockAST &node){
-        node.compound->accept(*this);
-        file << "ret";
-        file << "\n";
-        if(node.consts.size() != 0){
-            file << ".data" << "\n";
-            for(auto &child : node.consts){
-                child->accept(*this);
-            }
-        }
-        file << "\n";
-    }
-
-    void CodeGenVisitor::visit(VarDeclAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(TypeSpecAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(ConstAST &node){
-        file << node.constName->token.getStr() << ":\n";
-        node.constValue->accept(*this);
-    }
-
-    void CodeGenVisitor::visit(StringAST &node){
-        file << ".string " << "\""  << node.token.getStr().substr(1, node.token.getStr().size()-2) << "\"" << "\n";
-    }
-
-    void CodeGenVisitor::visit(CallAST &node){
-        if(node.token.getStr() == "RETURN"){
-            node.params[0]->accept(*this);
-            file << "pop \%eax" << "\n";
-        } else if(node.token.getStr() == "writeln"){
-            file << "movl " << "$" << node.params[0]->token.getStr() << ", " << "\%ebx" << "\n";
-            file << "push \%ebx" << "\n";
-            file << "call puts" << "\n";
-            file << "add $4, \%esp" << "\n";
-        }
-
-    }
-
-    void CodeGenVisitor::visit(IfAST &node){
-
-    }
-
-    void CodeGenVisitor::visit(WhileAST &node){
-
-    }
-
-    void CodeGenVisitor::write(void){
-
-    }
+//    CodeGenVisitor::CodeGenVisitor(std::string filename){
+//        file.open(filename, std::ios::out);
+//    }
+//
+//    void CodeGenVisitor::done(void){
+//        file.close();
+//    }
+//
+//    void CodeGenVisitor::visit(BinOpAST &node){
+//        node.left->accept(*this);
+//        node.right->accept(*this);
+//        file << "pop \%ecx" << "\n";
+//        file << "pop \%eax" << "\n";
+//        switch (node.token.getType()){
+//            case IToken::PLUS : 
+//                file << "addl \%ecx, \%eax" << "\n";
+//                break;
+//            case IToken::MUL : 
+//                file << "imul \%ecx, \%eax" << "\n";
+//                break;
+//        }
+//        file << "push \%eax" << "\n";
+//    }
+//
+//    void CodeGenVisitor::visit(UnOpAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(NumberAST &node){
+//        file << "push $" << node.token.getStr() << "\n";
+//    }
+//
+//    void CodeGenVisitor::visit(CompoundAST &node){
+//        for(auto &child : node.children){
+//            child->accept(*this);
+//        }
+//    }
+//
+//    void CodeGenVisitor::visit(AssignAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(VarAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(NoOpAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(ProgramAST &node){
+//        file << ".file \"main.pas\"" << "\n";
+//        file << ".text" << "\n";
+//        file << ".globl main" << "\n";
+//        file << ".type main, @function" << "\n";
+//        file << "main:\n";
+//        node.block->accept(*this);
+//    }
+//
+//    void CodeGenVisitor::visit(BlockAST &node){
+//        node.compound->accept(*this);
+//        file << "ret";
+//        file << "\n";
+//        if(node.consts.size() != 0){
+//            file << ".data" << "\n";
+//            for(auto &child : node.consts){
+//                child->accept(*this);
+//            }
+//        }
+//        file << "\n";
+//    }
+//
+//    void CodeGenVisitor::visit(VarDeclAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(TypeSpecAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(ConstAST &node){
+//        file << node.constName->token.getStr() << ":\n";
+//        node.constValue->accept(*this);
+//    }
+//
+//    void CodeGenVisitor::visit(StringAST &node){
+//        file << ".string " << "\""  << node.token.getStr().substr(1, node.token.getStr().size()-2) << "\"" << "\n";
+//    }
+//
+//    void CodeGenVisitor::visit(CallAST &node){
+//        if(node.token.getStr() == "RETURN"){
+//            node.params[0]->accept(*this);
+//            file << "pop \%eax" << "\n";
+//        } else if(node.token.getStr() == "writeln"){
+//            file << "movl " << "$" << node.params[0]->token.getStr() << ", " << "\%ebx" << "\n";
+//            file << "push \%ebx" << "\n";
+//            file << "call puts" << "\n";
+//            file << "add $4, \%esp" << "\n";
+//        }
+//
+//    }
+//
+//    void CodeGenVisitor::visit(IfAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::visit(WhileAST &node){
+//
+//    }
+//
+//    void CodeGenVisitor::write(void){
+//
+//    }
 
     HighlightAccurateVisitor::HighlightAccurateVisitor(List<Token> tokens) : tokens(tokens){};
 
@@ -538,6 +573,17 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     void HighlightAccurateVisitor::visit(WhileAST &node){
         node.condition->accept(*this);
         node.body->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(ForAST &node){
+        node.iterSt->accept(*this);
+        node.body->accept(*this);
+    }
+
+    void HighlightAccurateVisitor::visit(IterationAST &node){
+        node.assign->accept(*this);
+        node.condition->accept(*this);
+        node.postAction->accept(*this);
     }
 
     List<Token> HighlightAccurateVisitor::getTokens(void){

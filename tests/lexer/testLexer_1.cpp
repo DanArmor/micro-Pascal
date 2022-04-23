@@ -179,6 +179,71 @@ TEST(PARSE, PASCAL_HARD_THROW){
     EXPECT_THROW(lexer.analyzeFile("./build/tests/text5.txt"), LexerException);
 }
 
+/// @brief Тест разбора простой программы на Pascal
+TEST(PARSE, PASCAL_FOR_TO_LOOP){
+    Lexer lexer;
+    lexer.setTemplates(PascalRules::getPascalTemplates());
+    List<Token> checkData{
+        {"program", IToken::PROGRAM},
+        {"name", IToken::ID},
+        {";", IToken::SEMI},
+
+
+        {"begin", IToken::BEGIN},
+
+        {"for", IToken::FOR},
+        {"i", IToken::ID},
+        {":=", IToken::ASSIGN},
+        {"10", IToken::INTEGER_CONST},
+        {"to", IToken::TO},
+        {"20", IToken::INTEGER_CONST},
+        {"do", IToken::DO},
+        {"println", IToken::ID},
+        {"(", IToken::LPAREN},
+        {"'hi'", IToken::STRING_CONST},
+        {")", IToken::RPAREN},
+        {";", IToken::SEMI},
+
+
+        {"end", IToken::END},
+        {".", IToken::DOT},
+        {"$", IToken::ENDOFSTREAM},
+    };
+    checkEqualLex(checkData, lexer, "./build/tests/text6.txt");
+}
+
+TEST(PARSE, PASCAL_FOR_DOWN_TO_LOOP){
+    Lexer lexer;
+    lexer.setTemplates(PascalRules::getPascalTemplates());
+    List<Token> checkData{
+        {"program", IToken::PROGRAM},
+        {"name", IToken::ID},
+        {";", IToken::SEMI},
+
+
+        {"begin", IToken::BEGIN},
+
+        {"for", IToken::FOR},
+        {"i", IToken::ID},
+        {":=", IToken::ASSIGN},
+        {"10", IToken::INTEGER_CONST},
+        {"down to", IToken::DOWNTO},
+        {"20", IToken::INTEGER_CONST},
+        {"do", IToken::DO},
+        {"println", IToken::ID},
+        {"(", IToken::LPAREN},
+        {"'hi'", IToken::STRING_CONST},
+        {")", IToken::RPAREN},
+        {";", IToken::SEMI},
+
+
+        {"end", IToken::END},
+        {".", IToken::DOT},
+        {"$", IToken::ENDOFSTREAM},
+    };
+    checkEqualLex(checkData, lexer, "./build/tests/text7.txt");
+}
+
 int main(void){
     testing::InitGoogleTest();
 

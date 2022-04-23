@@ -123,6 +123,10 @@ class GraphvizVisitor : public IVisitor{
 
     void visit(WhileAST &node);
 
+    void visit(ForAST &node);
+
+    void visit(IterationAST &node);
+
     void write(void);
 
     private:
@@ -170,6 +174,10 @@ class TypeViewVisitor : public IVisitor{
 
     void visit(WhileAST &node);
 
+    void visit(ForAST &node);
+
+    void visit(IterationAST &node);
+
     std::vector<std::string> getData(void);
 
     private:
@@ -177,50 +185,52 @@ class TypeViewVisitor : public IVisitor{
 };
 
 /// @brief Посетитель-кодовый генератор
-class CodeGenVisitor : public IVisitor{
-    public:
-
-    explicit CodeGenVisitor(std::string filename);
-
-    void done(void);
-
-    void visit(BinOpAST &node);
-
-    void visit(UnOpAST &node);
-
-    void visit(NumberAST &node);
-
-    void visit(CompoundAST &node);
-
-    void visit(AssignAST &node);
-
-    void visit(VarAST &node);
-
-    void visit(NoOpAST &node);
-
-    void visit(ProgramAST &node);
-
-    void visit(BlockAST &node);
-
-    void visit(VarDeclAST &node);
-
-    void visit(TypeSpecAST &node);
-
-    void visit(ConstAST &node);
-
-    void visit(StringAST &node);
-
-    void visit(CallAST &node);
-
-    void visit(IfAST &node);
-
-    void visit(WhileAST &node);
-
-    void write(void);
-
-    private:
-    std::fstream file;
-};
+//class CodeGenVisitor : public IVisitor{
+//    public:
+//
+//    explicit CodeGenVisitor(std::string filename);
+//
+//    void done(void);
+//
+//    void visit(BinOpAST &node);
+//
+//    void visit(UnOpAST &node);
+//
+//    void visit(NumberAST &node);
+//
+//    void visit(CompoundAST &node);
+//
+//    void visit(AssignAST &node);
+//
+//    void visit(VarAST &node);
+//
+//    void visit(NoOpAST &node);
+//
+//    void visit(ProgramAST &node);
+//
+//    void visit(BlockAST &node);
+//
+//    void visit(VarDeclAST &node);
+//
+//    void visit(TypeSpecAST &node);
+//
+//    void visit(ConstAST &node);
+//
+//    void visit(StringAST &node);
+//
+//    void visit(CallAST &node);
+//
+//    void visit(IfAST &node);
+//
+//    void visit(WhileAST &node);
+//
+//    void visit(ForAST &node);
+//
+//    void write(void);
+//
+//    private:
+//    std::fstream file;
+//};
 
 /// @brief Посетитель подсветки синтаксиса
 class HighlightAccurateVisitor : public IVisitor{
@@ -259,6 +269,10 @@ class HighlightAccurateVisitor : public IVisitor{
     void visit(IfAST &node);
 
     void visit(WhileAST &node);
+
+    void visit(ForAST &node);
+
+    void visit(IterationAST &node);
 
     List<Token> getTokens(void);
 

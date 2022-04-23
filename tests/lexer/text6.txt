@@ -1,0 +1,6 @@
+program name;
+
+begin
+    for i:=10 to 20 do
+        println('hi');
+end.

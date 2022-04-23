@@ -36,6 +36,7 @@
         switch(token.getType()){
             case IToken::ASSIGN : return std::unique_ptr<AST>(new AssignAST(token, std::move(first), std::move(second)));
             case IToken::WHILE : return std::unique_ptr<AST>(new WhileAST(token, std::move(first), std::move(second)));
+            case IToken::FOR : return std::unique_ptr<AST>(new ForAST(token, std::move(first), std::move(second)));
         }
         switch (token.getAdvType()){
             case IToken::OPERATOR : return std::unique_ptr<AST>(new BinOpAST(token, std::move(first), std::move(second)));
@@ -53,6 +54,11 @@
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second, std::unique_ptr<AST> third){
         switch(token.getType()){
             case IToken::IF : return std::unique_ptr<AST>(new IfAST(token, std::move(first), std::move(second), std::move(third)));
+            case IToken::TO : return std::unique_ptr<AST>(new IterationAST(token, std::move(first), std::move(second), std::move(third)));
+            case IToken::DOWNTO :{
+                token.setStr("down to");
+                return std::unique_ptr<AST>(new IterationAST(token, std::move(first), std::move(second), std::move(third)));
+            } 
         }
     }
 
