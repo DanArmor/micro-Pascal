@@ -61,8 +61,8 @@ std::size_t Token::len(void){
 }
 
 std::string Token::getInfo(void) const{
-    return fmt::format("Token {0}{2}{1} of type {0}{3}{1} and advType {0}{4}{1} on {0}line {5} : {6}{1}", 
-    "\033[31m", "\033[0m", getStr(), magic_enum::enum_name(getType()), magic_enum::enum_name(getAdvType()), line(), posInLine());
+    return fmt::format("Токен {0}{2}{1} типа {0}{3}{1} и доп. типа {0}{4}{1} на {0}строке {5} : {6}{1}. Абсолютная позиция: {0}{7}{1}", 
+    "\033[31m", "\033[0m", getStr(), magic_enum::enum_name(getType()), magic_enum::enum_name(getAdvType()), line(), posInLine(), pos());
 }
 
 /* Определения TokenTemplate

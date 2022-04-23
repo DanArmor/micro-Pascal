@@ -9,6 +9,33 @@
 #include "Visitor.hpp"
 #include "ASTclasses.hpp"
 
+/// @brief Узел, отображающий начало программы
+class ProgramAST : public AST{
+    public:
+
+    ProgramAST(Token name, std::vector<std::unique_ptr<AST>> functions, std::unique_ptr<AST> block);
+    ~ProgramAST() = default;
+    void accept(IVisitor &visitor);
+
+    Token name;
+    std::vector<std::unique_ptr<AST>> functions;
+    std::unique_ptr<AST> block;
+};
+
+/// @brief Узел, отображающий блок (константы, переменные, инструкции)
+class BlockAST : public AST{
+    public:
+
+    BlockAST(Token token, std::vector<std::unique_ptr<AST>> consts, std::vector<std::unique_ptr<AST>> declarations, std::unique_ptr<AST> compound);
+    ~BlockAST() = default;
+    void accept(IVisitor &visitor);
+
+    std::vector<std::unique_ptr<AST>> consts;
+    std::vector<std::unique_ptr<AST>> declarations;
+    std::unique_ptr<AST> compound;
+};
+
+
 /// @brief Узел, содержащий бинарную операцию
 class BinOpAST : public AST{
     public:
@@ -91,30 +118,6 @@ class NoOpAST : public AST{
     void accept(IVisitor &visitor);
 };
 
-/// @brief Узел, отображающий начало программы
-class ProgramAST : public AST{
-    public:
-
-    ProgramAST(Token name, std::vector<std::unique_ptr<AST>> functions, std::unique_ptr<AST> block);
-    ~ProgramAST() = default;
-    void accept(IVisitor &visitor);
-
-    Token name;
-    std::vector<std::unique_ptr<AST>> functions;
-    std::unique_ptr<AST> block;
-};
-
-class BlockAST : public AST{
-    public:
-
-    BlockAST(Token token, std::vector<std::unique_ptr<AST>> consts, std::vector<std::unique_ptr<AST>> declarations, std::unique_ptr<AST> compound);
-    ~BlockAST() = default;
-    void accept(IVisitor &visitor);
-
-    std::vector<std::unique_ptr<AST>> consts;
-    std::vector<std::unique_ptr<AST>> declarations;
-    std::unique_ptr<AST> compound;
-};
 
 class VarDeclAST : public AST{
     public:
@@ -217,6 +220,7 @@ class FunctionAST : public AST{
     ~FunctionAST() = default;
     void accept(IVisitor &visitor);
 
+    std::string name;
     std::vector<std::unique_ptr<AST>> params;
     std::unique_ptr<AST> returnType;
     std::unique_ptr<AST> body;

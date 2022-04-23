@@ -76,13 +76,13 @@
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first){
         if(token.getAdvType() == IToken::PROGSTART){
             std::unique_ptr<ProgramAST> programPTR(new ProgramAST(token, std::move(params), std::move(first)));
-            programPTR->token.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
+            programPTR->name.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
             return programPTR;
         }
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
-        if(isIn(token.getType(), {IToken::PROCEDURE, IToken::FUNCTION}))
+        if(token.getAdvType() == IToken::FUNCTION_NAME)
             return std::unique_ptr<AST>(new FunctionAST(token, std::move(params), std::move(first), std::move(second)));
     }
 

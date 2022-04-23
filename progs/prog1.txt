@@ -2,7 +2,7 @@ program test;
 
 const eps = 0.0001;
 
-var a, b, fa, fb, x, fx : REAL;
+var a, b, fa, fb, x, fx : real;
 begin
   write('Inter numbers a and b (a<b): ');
   readln(a,b);

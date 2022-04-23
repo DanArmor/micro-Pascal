@@ -32,14 +32,14 @@ class IToken{
         EMPTY, ///< Пустое выражение
         BLOCK, ///< Блок
         TERMINATE, ///< Неявная замена SEMI
-        NEWLINE,
-        COMMENT,
+        NEWLINE, ///< Символ новой строки
+        COMMENT, ///< Комментарий
 
         ID, ///< Индентификатор
 
         INTEGER_CONST, ///< Целая константа
         REAL_CONST, ///< Вещественная константа
-        STRING_CONST,
+        STRING_CONST, ///< Строковая константа
 
         LPAREN, ///< Левая скобка
         RPAREN, ///< Правая скобка
@@ -81,21 +81,25 @@ class IToken{
         IF, ///< IF
         THEN, ///< THEN
         ELSE, ///< ELSE
-        DOWN,
-        TO,
-        DOWNTO,
-        RETURN,
+        DOWN, //< down
+        TO, ///< to
+        DOWNTO, ///< down to
+        RETURN, ///< return
+        ARRAY, ///< array
+        OF, ///< of
+        FUNCTION, ///< Функция
+        PROCEDURE, ///< Процедура
 
         INTEGER, ///< Целый тип
         REAL, ///< Вещественный тип
-        VOID,
+        STRING, ///< Тип строки
+        VOID, ///< "Пустой тип"
+        ARRAY_TYPE, ///< Тип массив
 
         DOT, ///< Точка
         SEMI, ///< Точка с запятой
         COLON, ///< Двоеточие
         COMMA, ///< Запятая
-        FUNCTION,
-        PROCEDURE
 
         // Дополнительные ключевые слова ?
 

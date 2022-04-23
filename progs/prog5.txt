@@ -1,13 +1,31 @@
 program TEST;
     
 function add(x, y : integer) : integer;
-begin
-    return x + y;
-end;
+    begin
+        return x + y;
+    end;
+
+procedure sayHello();
+    const
+        msg = 'Hello, world!';
+    begin
+        print(msg);
+    end;
 
 var
-    a, b : integer;
+    a, b, c : integer;
 begin
+    a := 1;
+    b := 100;
+    c := 1;
     for i:=1 to 5 do
-        a := add(a, b);
+        begin
+            while a < b do
+                a := add(a, c);
+            c := c + 1;
+        end;
+    if a < b then
+        sayHello()
+    else
+        a := 999;
 end.

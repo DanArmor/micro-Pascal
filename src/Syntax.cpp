@@ -102,10 +102,16 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxVarDecl(void){
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxTypeSpec(void){
-    /* syntaxTypeSpec ::= ('INTEGER'|'REAL') */
+    /* syntaxTypeSpec ::= ('integer'|'real'|'string'|'array' '[' '<INTEGER_CONST>' '..' '<INTEGER_CONST>' ']' of syntaxTypeSpec) */
     Token typeTok = getCurTok();
-    eatAdv(IToken::TYPE_SPEC);
-    return ASTFactory::createAST(typeTok);
+
+    if(typeTok.getAdvType() != IToken::ARRAY){
+        eatAdv(IToken::TYPE_SPEC);
+        return ASTFactory::createAST(typeTok);
+    }else{
+        eat(IToken::ARRAY);
+    }
+
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCompoundSt(void){
@@ -242,9 +248,12 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
         eat(IToken::PROCEDURE);
     
     Token name = getCurTok();
+    name.setAdvType(IToken::FUNCTION_NAME);
     eat(IToken::ID);
     eat(IToken::LPAREN);
-    std::vector<std::unique_ptr<AST>> params = std::move(syntaxVarDecl());
+    std::vector<std::unique_ptr<AST>> params;
+    if(getCurTok().getType() != IToken::RPAREN)
+        params = std::move(syntaxVarDecl());
     eat(IToken::RPAREN);
 
     std::unique_ptr<AST> returnType;
@@ -257,7 +266,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
     }
     eat(IToken::SEMI);
     std::unique_ptr<AST> body = std::move(syntaxBlock());
-    return ASTFactory::createAST(funcTok, std::move(params), std::move(returnType), std::move(body));
+    return ASTFactory::createAST(name, std::move(params), std::move(returnType), std::move(body));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
@@ -386,7 +395,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFactor(){
                 return syntaxVariable();
         }
         default:
-            throw SyntaxException(token, "Во время обработки выражения syntaxFactor встречен неожиданный токен");
+            throw SyntaxException(token, "Во время обработки выражения syntaxFactor встречен неожиданный токен. ");
     }
     return nullptr;
 }
@@ -416,7 +425,7 @@ void SyntaxAnalyzer::eat(IToken::Type const type){
     if(getCurTok().getType() == type){
         getNextToken();
     } else{
-        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! ", magic_enum::enum_name(type)));
+        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! Встречен ", magic_enum::enum_name(type)));
     }
 }
 
@@ -424,6 +433,6 @@ void SyntaxAnalyzer::eatAdv(IToken::AdvType const type){
     if(getCurTok().getAdvType() == type){
         getNextToken();
     } else{
-        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! ", magic_enum::enum_name(type)));
+        throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! Встречен ", magic_enum::enum_name(type)));
     }
 }

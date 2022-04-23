@@ -66,7 +66,4 @@ class AST{
     Token token;
 };
 
-/// @brief Тип указателя на узел АСД
-typedef AST* ASTptr;
-
 #endif

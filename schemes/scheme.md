@@ -19,6 +19,8 @@
     object "Токен" as Token
     object "Шаблон Токена" as TokenTemp
 
+    object "Фабрика AST узлов" as ASTFactory
+
     Lexer --> TokenTemp : "Добавить\n шаблон"
     Lexer --> TokenTemp : "Удалить\n шаблон"
     Lexer --> Text : "Разбить\nна токены"
@@ -26,7 +28,9 @@
     Lexer --> Token : "Создать"
 
     Syntax --> List : "Обработать"
-    Syntax --> AST : "Сформировать узел"
+    Syntax --> ASTFactory : "Попросить сформировать узел"
+    ASTFactory --> AST : "Создать узел"
+    ASTFactory --> Syntax : "Вернуть узел"
 
     Visitor --> AST : "Посетить \nузел"
     Visitor <-- AST : "Принять \nпосетителя"
@@ -40,15 +44,38 @@
     skinparam backgroundColor #EEEBDC
     skinparam handwritten false
     skinparam arrowFontColor black
-    skinparam groupInheritance 3
+    skinparam groupInheritance 9
+    skinparam linetype ortho
     left to right direction
+    
 
     abstract "IToken" as IToken {
         -{static}Type : enum
+        -{static}AdvType : enum
         -type : Type
+        -advType : AdvType
         + IToken()
         + IToken(type : Type)
+        + IToken(type : AdvType)
+        + IToken(type : Type, advType : AdvType)
         + {abstract} getType() : Type
+        + {abstract} getAdvType() : AdvType
+        + {abstract} setAdvType(type : AdvType)
+    }
+    enum "IToken::AdvType" as TokenAdvType{
+        KEYWORD,
+        FUNCTION_NAME,
+        VAR_NAME,
+        OPERATOR,
+        SOME_CONST,
+        TYPE_SPEC,
+        NOTPROCESS,
+        PROGRAM_NAME,
+        VARDECL,
+        CONSTDECL,
+        COMPOUND,
+        PROGSTART, 
+        UNKNOWN
     }
 
     enum "IToken::Type" as TokenType{
@@ -56,13 +83,11 @@
         ENDOFSTREAM,
         EMPTY,
         BLOCK,
-        VARDECL,
-        PROGSTART,
+        TERMINATE,
         NEWLINE,
         COMMENT,
-        STRING_BOUND,
 
-        ID,
+        ID, 
 
         INTEGER_CONST,
         REAL_CONST,
@@ -78,6 +103,7 @@
         PLUS,
         MINUS,
         MUL,
+        DIV,
         MOD,
         INTEGER_DIV,
         FLOAT_DIV,
@@ -92,6 +118,8 @@
         MORE,
         MORE_EQ,
 
+        STRING_BOUND,
+
         ASSIGN,
 
         BEGIN,
@@ -99,173 +127,256 @@
         PROGRAM,
         VAR,
         CONST,
-        INTEGER,
-        REAL,
         WHILE,
+        FOR,
         DO,
         IF,
         THEN,
         ELSE,
+        DOWN,
+        TO,
+        DOWNTO,
+        RETURN,
+
+        INTEGER,
+        REAL,
+        VOID,
 
         DOT,
-        SEMI,
+        SEMI, 
         COLON,
-        COMMA
+        COMMA, 
+        FUNCTION,
+        PROCEDURE
     }
 
     class "Token" as Token{
         +Token()
+        +Token(type : Type)
+        +Token(type : AdvType)
         +Token(str : std::string, type : Type)
-        +Token(str : std::string, type : Type, lineNum : std::size_t)
+        +Token(str : std::string, type : AdvType)
+        +Token(str : std::string, type : Type, advType : AdvType)
+        +Token(str : std::string, type : Type, lineNum : std::size_t, inLinePosNum : std::size_t, inFilePos : std::size_t)
+
         +line() : std::size_t
-        + rowLine() : std::size_t
+        +rawLine() : std::size_t
+        +posInLine() : std::size_t
+        +rawPosInLine() : std::size_t
+        +pos() : std::size_t
+        +len() : std::size_t
         + getStr() : std::string const &
         + getInfo() : std::string
         -str : std::string
         -lineNum : std::size_t
+        -posInLineNum : std::size_t
+        -posNum : std::size_t
     }
 
     class "TokenTemplate" as TokenTemp{
         +TokenTemplate()
-        +TokenTemplate(str : std::string, type : Type)
+        +TokenTemplate(str : std::string, type : Type, advType : AdvType)
         + getRegex() : std::regex const &
         -regStr : std::string
         -regTemplate : std::regex
     }
 
     class "Lexer" as Lexer {
-        +addTokenTemp(regStr : std::string, type : IToken::Type)
-        +addTokenTemp(tokenTemp : TokenTemplate)
+        +addTokenTemp(regStr : std::string const &, type : IToken::Type, advType : IToken::AdvType)
+        +addTokenTemp(tokenTemp : TokenTemplate const &)
+
         +setTemplates(templates : List<TokenTemplate> const &)
-        +getTrimmed(str : std::string) : std::string
-        +analyzeFile(fileName : std::string) : List<Token> const &
-        +analyzeProgramText(text : std::string const &) : List<Token> const &
+        +getTrimmed(str : std::string const &) : std::string
+        +getText() : std::string
+
+        +analyzeFile(fileName : std::string const &) : List<Token>
+        +analyzeProgramText(text : std::string const &) : List<Token>
         -tokenTemplates : List<TokenTemplate>
         -tokens : List<Token>
+        -progText : std::string
     }
 
     abstract "AST" as AST {
         +AST(token : Token)
+        +{abstract}~AST()
         +{abstract}accept(IVisitor &)
         +token : Token
     }
 
     abstract "IVisitor" as IVisitor {
-        +{abstract} visit(BinOp &)
-        +{abstract} visit(Number &)
-        +{abstract} visit(UnOp &)
-        +{abstract} visit(Compound &)
-        +{abstract} visit(Assign &)
-        +{abstract} visit(Var &)
-        +{abstract} visit(NoOp &)
+        +{abstract} visit(BinOpAST &)
+        +{abstract} visit(NumberAST &)
+        +{abstract} visit(UnOpAST &)
+        +{abstract} visit(CompoundAST &)
+        +{abstract} visit(AssignAST &)
+        +{abstract} visit(VarAST &)
+        +{abstract} visit(NoOpAST &)
         +{abstract} visit(ProgramAST &)
         +{abstract} visit(BlockAST &)
-        +{abstract} visit(VarDeclaration &)
-        +{abstract} visit(Type &)
+        +{abstract} visit(VarDeclAST &)
+        +{abstract} visit(TypeSpecAST &)
         +{abstract} visit(ConstAST &)
         +{abstract} visit(StringAST &)
-        +{abstract} visit(ProcedureCall &)
-        +{abstract} visit(ifAST &)
-        +{abstract} visit(whileAST &)
+        +{abstract} visit(CallAST &)
+        +{abstract} visit(IfAST &)
+        +{abstract} visit(WhileAST &)
+        +{abstract} visit(IterationAST &)
+        +{abstract} visit(ForAST &)
+        +{abstract} visit(FunctionAST &)
+        +{abstract} visit(ReturnAST &)
     }
 
     class "SyntaxAnalyzer" as Syntax {
         +SyntaxAnalyzer(tokens : List<Token> const &)
-        +program() : AST*
-        +compoundStatement() : AST*
-        +statementList() : std::vector<AST*>
-        +statement() : AST*
-        +assignmentStatement() : AST*
-        +variable() : AST*
-        +emptyStatement() : AST*
-        +block() : AST*
-        +declarations() : std::vector<AST*>
-        +varDeclaration() : std::vector<AST*>
-        +typeSpec() : AST*
-        +factor() : AST*
-        +term() : AST*
-        +expr() : AST*
-        +simpleExpr() : AST*
-        +parseTokens() : AST*
-        +procCallStatement() : AST*
-        +ifStatement() : AST*
-        +whileStatement() : AST*
+        +parseTokens() : std::unique_ptr<AST>
+        +syntaxProgram() : std::unique_ptr<AST>
+        +syntaxCompoundSt() : std::unique_ptr<AST>
+        +syntaxStList() : std::vector<std::unique_ptr<AST>>
+        +syntaxSt() : std::unique_ptr<AST>
+        +syntaxAssignSt() : std::unique_ptr<AST>
+        +syntaxVariable() : std::unique_ptr<AST>
+        +syntaxEmptySt() : std::unique_ptr<AST>
+        +syntaxBlock() : std::unique_ptr<AST>
+        +syntaxVars() : std::vector<std::unique_ptr<AST>>
+        +syntaxVarDecl() : std::vector<std::unique_ptr<AST>>
+        +syntaxConsts() : std::vector<std::unique_ptr<AST>>
+        +syntaxConstDecl() : std::unique_ptr<AST>
+        +syntaxTypeSpec() : std::unique_ptr<AST>
+        +syntaxFactor() : std::unique_ptr<AST>
+        +syntaxTerm() : std::unique_ptr<AST>
+        +syntaxExpr() : std::unique_ptr<AST>
+        +syntaxSimpleExpr() : std::unique_ptr<AST>
+        +syntaxCallSt() : std::unique_ptr<AST>
+        +syntaxIfSt() : std::unique_ptr<AST>
+        +syntaxWhileSt() : std::unique_ptr<AST>
+        +syntaxForSt() : std::unique_ptr<AST>
+        +syntaxIterSt() : std::unique_ptr<AST>
+        +syntaxFuncDef() : std::unique_ptr<AST>
+        +syntaxReturnSt() : std::unique_ptr<AST>
+
         +getNextToken()
         +getCurTok() : Token &
         +lookFoward() : Token &
-        +constants() : std::vector<AST*>
-        +constDeclaration() : AST*
-        +eat(type : IToken::Type)
+        +eat(type : IToken::Type const)
+        +eat(type : IToken::AdvType const)
 
         -tokens : List<Token>
         -currentIndex : std::size_t
     }
 
     class ProgramAST{
-        +ProgramAST(name : Token, block : AST *)
+        +ProgramAST(name : Token, functions : std::vector<std::unique_ptr<AST>>, block : std::unique_ptr<AST>)
+        +~ProgramAST()
         +accept(visitor : IVisitor &)
 
         +name : Token
-        +block : AST*
+        +std::vector<std::unique_ptr<AST>> functions;
+        +block : std::unique_ptr<AST>
     }
 
     class BlockAST{
-        +BlockAST(consts : std::vector<AST*>, declarations : std::vector<AST*>, compound : AST*)
+        +BlockAST(token : Token, consts : std::vector<std::unique_ptr<AST>>, declarations : std::vector<std::unique_ptr<AST>>, compound : std::unique_ptr<AST>)
+        +~BlockAST()
         +accept(visitor : IVisitor &)
 
-        +consts : std::vector<AST*>
-        +declarations : std::vector<AST*>
-        +compound : AST*
+        +consts : std::vector<std::unique_ptr<AST>>
+        +declarations : std::vector<std::unique_ptr<AST>>
+        +compound : std::unique_ptr<AST>
     }
 
-    class VarDeclaration{
-        +VarDeclaration(var : AST*, type : AST*)
+    class VarDeclAST{
+        +VarDeclAST(token : Token, var : std::unique_ptr<AST>, type : std::unique_ptr<AST>)
+        +~VarDeclAST()
         +accept(visitor : IVisitor &)
 
-        +var : AST*
-        +type : AST*
+        +var : std::unique_ptr<AST>
+        +type : std::unique_ptr<AST>
     }
 
-    class Type{
-        +Type(token : Token)
+    class TypeSpecAST{
+        +TypeSpecAST(token : Token)
+        +~TypeSpecAST(
         +accept(visitor : IVisitor &)
     }
 
     class ConstAST{
-        +ConstAST(constName : AST*, constValue : AST*)
+        +ConstAST(token : Token, constName : std::unique_ptr<AST>, constValue : std::unique_ptr<AST>)
+        +~ConstAST()
         +accept(visitor : IVisitor &)
 
-        +constName : AST*
-        +constValue : AST*
+        +constName : std::unique_ptr<AST>
+        +constValue : std::unique_ptr<AST>
     }
 
     class StringAST{
         +StringAST(token : Token)
+        +~StringAST()
         +accept(visitor : IVisitor &)
     }
 
-    class ProcedureCall{
-        +ProcedureCall(token : Token, params : std::vector<AST*>)
+    class CallAST{
+        +CallAST(token : Token, params : std::vector<std::unique_ptr<AST>>)
+        +~CallAST()
         +accept(visitor : IVisitor &)
 
-        +params : std::vector<AST*>
+        +params : std::vector<std::unique_ptr<AST>>
     }
 
-    class ifAST{
-        +ifAST(condition : AST*, body : AST*, elseBody : AST*)
+    class IfAST{
+        +IfAST(token : Token, condition : std::unique_ptr<AST>, body : std::unique_ptr<AST>, elseBody : std::unique_ptr<AST>)
+        +~IfAST()
         +accept(visitor : IVisitor &)
 
-        +condition : AST*
-        +body : AST*
-        +elseBody : AST*
+        +condition : std::unique_ptr<AST>
+        +body : std::unique_ptr<AST>
+        +elseBody : std::unique_ptr<AST>
     }
 
-    class whileAST{
-        +whileAST(condition : AST*, body : AST*)
+    class WhileAST{
+        +WhileAST(token : Token, condition : std::unique_ptr<AST>, body : std::unique_ptr<AST>)
+        +~WhileAST()
         +accept(visitor : IVisitor &)
 
-        +condition : AST*
-        +body : AST*
+        +condition : std::unique_ptr<AST>
+        +body : std::unique_ptr<AST>
+    }
+
+    class IterationAST{
+        +IterationAST(token : Token, assign : std::unique_ptr<AST>, condition : std::unique_ptr<AST>, postAction : std::unique_ptr<AST>)
+        +~IterationAST()
+        +accept(visitor : IVisitor &)
+
+        +assign : std::unique_ptr<AST>
+        +condition : std::unique_ptr<AST>
+        +postAction : std::unique_ptr<AST>
+    }
+
+    class ForAST{
+        +ForAST(token : Token, iterSt : std::unique_ptr<AST>, body : std::unique_ptr<AST>)
+        +~ForAST()
+        +accept(visitor : IVisitor &)
+
+        +iterSt : std::unique_ptr<AST>
+        +body : std::unique_ptr<AST>
+    }
+
+    class FunctionAST{
+        +FunctionAST(token : Token, params : std::vector<std::unique_ptr<AST>>, returnType : std::unique_ptr<AST>, body : std::unique_ptr<AST>)
+        +~FunctionAST()
+        +accept(visitor : IVisitor &)
+        
+        +name : std::string
+        +params : std::vector<std::unique_ptr<AST>>
+        +returnType : std::unique_ptr<AST>
+        +body : std::unique_ptr<AST>
+    }
+
+    class ReturnAST{
+        +ReturnAST(token : Token, toReturn : std::unique_ptr<AST>)
+        +~ReturnAST()
+        +accept(visitor : IVisitor &)
+
+        +toReturn : std::unique_ptr<AST>
     }
 
     class GraphizVisitor{
@@ -286,6 +397,10 @@
         +visit(node : ProcedureCall &)
         +visit(node : ifAST &)
         +visit(node : whileAST &)
+        +visit(node : IterationAST &)
+        +visit(node : ForAST &)
+        +visit(node : FunctionAST &)
+        +visit(node : ReturnAST &)
 
         +write()
         -done()
@@ -313,46 +428,132 @@
         +visit(node : ProcedureCall &)
         +visit(node : ifAST &)
         +visit(node : whileAST &)
+        +visit(node : IterationAST &)
+        +visit(node : ForAST &)
+        +visit(node : FunctionAST &)
+        +visit(node : ReturnAST &)
         +getData() : std::vector<std::string>
 
         -typesStrings : std::vector<std::string>
     }
 
+    class HighlightAccurateVisitor{
+        +visit(node : BinOp &)
+        +visit(node : Number &)
+        +visit(node : UnOp &)
+        +visit(node : Compound &)
+        +visit(node : Assign &)
+        +visit(node : Var &)
+        +visit(node : NoOp &)
+        +visit(node : ProgramAST &)
+        +visit(node : BlockAST &)
+        +visit(node : VarDeclaration &)
+        +visit(node : Type &)
+        +visit(node : ConstAST &)
+        +visit(node : StringAST &)
+        +visit(node : ProcedureCall &)
+        +visit(node : ifAST &)
+        +visit(node : whileAST &)
+        +visit(node : IterationAST &)
+        +visit(node : ForAST &)
+        +visit(node : FunctionAST &)
+        +visit(node : ReturnAST &)
+        +getTokens() : List<Token>
+
+        -tokens : List<Token>
+    }
+
+    class ASTFactory{
+        +{static} createAST(token : Token) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, first : std::unique_ptr<AST>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, first : std::unique_ptr<AST>, second : std::unique_ptr<AST>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, first : std::unique_ptr<AST>, second : std::unique_ptr<AST>, third : std::unique_ptr<AST>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, params : std::vector<std::unique_ptr<AST>>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, params : std::vector<std::unique_ptr<AST>>, first : std::unique_ptr<AST>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, params : std::vector<std::unique_ptr<AST>>, first : std::unique_ptr<AST>, second : std::unique_ptr<AST>) : std::unique_ptr<AST>
+        +{static} createAST(token : Token, constsDecls : std::vector<std::unique_ptr<AST>>, varDecls : std::vector<std::unique_ptr<AST>>, compound : std::unique_ptr<AST>) : std::unique_ptr<AST>
+    }
+
+    class AnalyzeException{
+        +AnalyzeException(errorTok : Token, msg : std::string)
+        +~AnalyzeException()
+        +what() : char const *
+        #msg : std::string
+        #errorTok : Token
+    }
+
+    class LexerException{
+        +LexerException(errorTok : Token, msg : std::string)
+        +~LexerException()
+    }
+
+    class SyntaxException{
+        +SyntaxException(errorTok : Token, msg : std::string)
+        +~SyntaxException()
+    }
+
+    class SemanticException{
+        +SemanticException(errorTok : Token, msg : std::string)
+        +~SemanticException()
+    }
+
+    std::exception <|-- AnalyzeException
+    AnalyzeException <|-- LexerException
+    AnalyzeException <|-- SyntaxException
+    AnalyzeException <|-- SemanticException
+
+    LexerException <.. Lexer
+    SyntaxException <.. Syntax
+
     IToken <|-- Token
     IToken <|-- TokenTemp
     IToken *-- TokenType
+    IToken *-- TokenAdvType
 
     TokenTemp "*" --- "1" Lexer
     Token "*" --- "1" Lexer
 
-    AST <|.. ProgramAST
-    AST <|.. BlockAST
-    AST <|.. VarDeclaration
-    AST <|.. Type
-    AST <|.. ConstAST
-    AST <|.. StringAST
-    AST <|.. ProcedureCall
-    AST <|.. ifAST
-    AST <|.. whileAST
+    AST <.. ASTFactory
+    Token <.. ASTFactory
+    ASTFactory <.. Syntax
 
-    AST o-up- Token
+    AST <|.left.. ProgramAST
+    AST <|.left.. BlockAST
+    AST <|.left.. VarDeclAST
+    AST <|.left.. TypeSpecAST
+    AST <|.left.. ConstAST
+    AST <|.left.. StringAST
+    AST <|.left.. CallAST
+    AST <|.left.. IfAST
+    AST <|.left.. WhileAST
+    AST <|.left.. ForAST
+    AST <|.left.. IterationAST
+    AST <|.left.. FunctionAST
+    AST <|.left.. ReturnAST
+
+    AST o-- Token
 
     IVisitor <.. AST
 
     ProgramAST <.. IVisitor
     BlockAST <.. IVisitor
-    VarDeclaration <.. IVisitor
-    Type <.. IVisitor
+    VarDeclAST <.. IVisitor
+    TypeSpecAST <.. IVisitor
     ConstAST <.. IVisitor
     StringAST <.. IVisitor
-    ProcedureCall <.. IVisitor
-    ifAST <.. IVisitor
-    whileAST <.. IVisitor
+    CallAST <.. IVisitor
+    IfAST <.. IVisitor
+    WhileAST <.. IVisitor
+    ForAST <.. IVisitor
+    IterationAST <.. IVisitor
+    FunctionAST <.. IVisitor
+    ReturnAST <.. IVisitor
 
     AST <.. Syntax
     Token "*" --- "1" Syntax
 
     IVisitor <|-- GraphizVisitor
     IVisitor <|-- TypeViewVisitor
+    IVisitor <|-- HighlightAccurateVisitor
 @enduml
 ```

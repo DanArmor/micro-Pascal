@@ -54,9 +54,12 @@ namespace PascalRules{
         {"^[\t ]*function", IToken::Type::FUNCTION, IToken::AdvType::KEYWORD},
         {"^[\t ]*procedure", IToken::Type::PROCEDURE, IToken::AdvType::KEYWORD},
         {"^[\t ]*return", IToken::Type::RETURN, IToken::AdvType::KEYWORD},
+        {"^[\t ]*array", IToken::Type::ARRAY, IToken::AdvType::KEYWORD},
+        {"^[\t ]*of", IToken::Type::OF, IToken::AdvType::KEYWORD},
 
         {"^[\t ]*integer", IToken::Type::INTEGER, IToken::AdvType::TYPE_SPEC},
         {"^[\t ]*real", IToken::Type::REAL, IToken::AdvType::TYPE_SPEC},
+        {"^[\t ]*string", IToken::Type::STRING, IToken::AdvType::TYPE_SPEC},
         {"^[\t ]*void", IToken::Type::VOID, IToken::AdvType::TYPE_SPEC},
 
         {"^[\t ]*not", IToken::Type::NOT, IToken::AdvType::OPERATOR},

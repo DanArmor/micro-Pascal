@@ -16,6 +16,8 @@ class SyntaxAnalyzer{
     public:
     explicit SyntaxAnalyzer(List<Token> const &tokens);
 
+    std::unique_ptr<AST> parseTokens(void);
+
     std::unique_ptr<AST> syntaxProgram(void);
 
     std::unique_ptr<AST> syntaxCompoundSt(void);
@@ -36,6 +38,10 @@ class SyntaxAnalyzer{
 
     std::vector<std::unique_ptr<AST>> syntaxVarDecl(void);
 
+    std::vector<std::unique_ptr<AST>> syntaxConsts(void);
+
+    std::unique_ptr<AST> syntaxConstDecl(void);
+
     std::unique_ptr<AST> syntaxTypeSpec(void);
 
     std::unique_ptr<AST> syntaxFactor();
@@ -45,8 +51,6 @@ class SyntaxAnalyzer{
     std::unique_ptr<AST> syntaxExpr(void);
 
     std::unique_ptr<AST> syntaxSimpleExpr(void);
-
-    std::unique_ptr<AST> parseTokens(void);
 
     std::unique_ptr<AST> syntaxCallSt(void);
 
@@ -62,14 +66,13 @@ class SyntaxAnalyzer{
 
     std::unique_ptr<AST> syntaxReturnSt(void);
 
+
+
     void getNextToken(void);
 
     Token &getCurTok(void);
 
     Token &lookFoward(void);
-
-    std::vector<std::unique_ptr<AST>> syntaxConsts(void);
-    std::unique_ptr<AST> syntaxConstDecl(void);
 
     void eat(IToken::Type const type);
     void eatAdv(IToken::AdvType const type);

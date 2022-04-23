@@ -144,7 +144,7 @@ void GraphvizVisitor::write(void){
 
 void GraphvizVisitor::visit(ProgramAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    declarations.push_back(std::make_pair(std::to_string(backup), node.name.getStr()));
     nodeIndex++;
     for(auto &child : node.functions){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
@@ -261,7 +261,7 @@ void GraphvizVisitor::visit(IterationAST &node){
 
 void GraphvizVisitor::visit(FunctionAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    declarations.push_back(std::make_pair(std::to_string(backup), node.name));
     nodeIndex++;
     for(auto &child : node.params){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
@@ -563,7 +563,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void HighlightAccurateVisitor::visit(ProgramAST &node){
         for(auto &tok : tokens){
-            if(tok.getStr() == node.name.getStr()){
+            if(tok.getStr() == node.token.getStr()){
                 tok.setAdvType(IToken::PROGRAM_NAME);
                 break;
             }
@@ -591,6 +591,8 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void HighlightAccurateVisitor::visit(ConstAST &node){
+        node.constName->accept(*this);
+        node.constValue->accept(*this);
         return;
     }
 

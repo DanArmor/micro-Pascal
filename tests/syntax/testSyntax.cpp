@@ -15,7 +15,7 @@ TEST(SYNTAX, PASCAL_SIMPLE){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     std::vector<std::string> checkData = {
-        "PROGRAM:\ntest",
+        "test",
         "BLOCK",
         "VARDECL",
         "x",
@@ -44,7 +44,7 @@ TEST(SYNTAX, PASCAL_MEDIUM){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     std::vector<std::string> checkData = {
-        "PROGRAM:\ntest",
+        "test",
         "BLOCK",
         "CONSTDECL",
         "a",

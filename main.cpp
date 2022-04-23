@@ -28,7 +28,7 @@ void highlight(std::string text, List<Token> tokens){
     int tokenI = 0;
     int i = 0;
     while(i < text.size()){
-        if(i == tokens[tokenI].pos()){
+        if(tokenI < tokens.size()-1 && i == tokens[tokenI].pos()){
             std::cout << "\033[0m" << colors[tokens[tokenI].getAdvType()];
             std::size_t len = tokens[tokenI].len();
             while(len != 0){
@@ -39,9 +39,17 @@ void highlight(std::string text, List<Token> tokens){
             tokenI++;
         } else{
             std::cout << "\033[0m\033[30;1m";
-            while(i != tokens[tokenI].pos()){
-                std::cout << text[i];
-                i++;
+            if(tokenI < tokens.size() - 1){
+                while(i != tokens[tokenI].pos()){
+                    std::cout << text[i];
+                    i++;
+                }
+            }
+            else{
+                while(i < text.size()){
+                    std::cout << text[i];
+                    i++;
+                }
             }
         }
     }
@@ -72,15 +80,15 @@ int main(int argc, char** argv){
     
     SyntaxAnalyzer syntax(tokens);
     std::unique_ptr<AST>root(syntax.parseTokens());
-
+//
     HighlightAccurateVisitor hl(tokens);
     root->accept(hl);
 
     highlight(lexer.getText(), hl.getTokens());
 
-//    for(auto tt : hl.getTokens()){
-//        std::cout << tt.getInfo() << "\n";
-//    }
+    //for(auto tt : hl.getTokens()){
+        //std::cout << tt.getInfo() << "\n";
+    //}
 
 
 //
