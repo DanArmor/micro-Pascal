@@ -41,7 +41,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1089.5,-731.5 1089.5,-750.5 1192.5,-750.5 1192.5,-731.5 1089.5,-731.5"/>
 <text text-anchor="middle" x="1141" y="-738.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getAdvType</text>
 </a>
@@ -299,7 +299,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" target="_top" xlink:title="Возвращает истину, если value находится среди значений cont.">
+<g id="a_node14"><a xlink:href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" target="_top" xlink:title="Возвращает истину, если value находится среди значений cont.">
 <polygon fill="none" stroke="black" points="955.5,-418.5 955.5,-437.5 987.5,-437.5 987.5,-418.5 955.5,-418.5"/>
 <text text-anchor="middle" x="971.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">isIn</text>
 </a>

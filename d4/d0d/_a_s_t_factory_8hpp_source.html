@@ -107,18 +107,22 @@ $(document).ready(function(){initNavTree('d4/d0d/_a_s_t_factory_8hpp_source.html
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> std::unique_ptr&lt;AST&gt; <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; params);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">static</span> std::unique_ptr&lt;AST&gt; <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> token, </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; constsDecls, std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; varDecls, std::unique_ptr&lt;AST&gt; compound);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">static</span> std::unique_ptr&lt;AST&gt; <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; params, std::unique_ptr&lt;AST&gt; first);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> std::unique_ptr&lt;AST&gt; <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; params, std::unique_ptr&lt;AST&gt; first, std::unique_ptr&lt;AST&gt; second);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> std::unique_ptr&lt;AST&gt; <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a>(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> token, </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; constsDecls, std::vector&lt;std::unique_ptr&lt;AST&gt;&gt; varDecls, std::unique_ptr&lt;AST&gt; compound);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_a_s_t_8hpp_html"><div class="ttname"><a href="../../d4/dcb/_a_s_t_8hpp.html">AST.hpp</a></div></div>
 <div class="ttc" id="a_token_8hpp_html"><div class="ttname"><a href="../../de/d32/_token_8hpp.html">Token.hpp</a></div></div>
 <div class="ttc" id="aclass_a_s_t_factory_html"><div class="ttname"><a href="../../d7/d7c/class_a_s_t_factory.html">ASTFactory</a></div><div class="ttdoc">Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным слева-направо,...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d0d/_a_s_t_factory_8hpp_source.html#l00009">ASTFactory.hpp:9</a></div></div>
-<div class="ttc" id="aclass_a_s_t_factory_html_a8d1d4c9d01ab2e366d1af6bbaeaf7bef"><div class="ttname"><a href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">ASTFactory::createAST</a></div><div class="ttdeci">static std::unique_ptr&lt; AST &gt; createAST(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00009">ASTFactory.cpp:9</a></div></div>
-<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00128">Token.hpp:128</a></div></div>
+<div class="ttc" id="aclass_a_s_t_factory_html_a8d1d4c9d01ab2e366d1af6bbaeaf7bef"><div class="ttname"><a href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">ASTFactory::createAST</a></div><div class="ttdeci">static std::unique_ptr&lt; AST &gt; createAST(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00010">ASTFactory.cpp:10</a></div></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00137">Token.hpp:137</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

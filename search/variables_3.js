@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['elsebody_0',['elseBody',['../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2',1,'IfAST']]],
-  ['errortok_1',['errorTok',['../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11',1,'AnalyzeException']]]
+  ['declarations_0',['declarations',['../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430',1,'BlockAST']]],
+  ['down_1',['down',['../dc/de8/class_un_op_a_s_t.html#a3fd207523d72af9e767cccffca0a2ddd',1,'UnOpAST']]]
 ];

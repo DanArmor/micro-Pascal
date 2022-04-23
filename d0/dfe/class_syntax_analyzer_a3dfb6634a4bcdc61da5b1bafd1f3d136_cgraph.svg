@@ -80,7 +80,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" target="_top" xlink:title="Возвращает истину, если value находится среди значений cont.">
+<g id="a_node9"><a xlink:href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" target="_top" xlink:title="Возвращает истину, если value находится среди значений cont.">
 <polygon fill="none" stroke="black" points="958.5,-684.5 958.5,-703.5 990.5,-703.5 990.5,-684.5 958.5,-684.5"/>
 <text text-anchor="middle" x="974.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">isIn</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1092.5,-484.5 1092.5,-503.5 1195.5,-503.5 1195.5,-484.5 1092.5,-484.5"/>
 <text text-anchor="middle" x="1144" y="-491.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getAdvType</text>
 </a>

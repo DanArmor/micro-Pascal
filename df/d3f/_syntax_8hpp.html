@@ -86,23 +86,22 @@ $(document).ready(function(){initNavTree('df/d3f/_syntax_8hpp.html','../../'); i
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Классы</a> &#124;
-<a href="#func-members">Функции</a>  </div>
+<a href="#nested-classes">Классы</a>  </div>
   <div class="headertitle"><div class="title">Файл Syntax.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;initializer_list&gt;</code><br />
 <code>#include &quot;magic_enum.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/df9/_list_8cpp_source.html">List.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html">ASTclasses.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d0e/sup_8hpp_source.html">sup.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф включаемых заголовочных файлов для Syntax.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d19/_syntax_8hpp__incl.svg" width="688" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d19/_syntax_8hpp__incl.svg" width="740" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -121,76 +120,7 @@ $(document).ready(function(){initNavTree('df/d3f/_syntax_8hpp.html','../../'); i
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс синтаксического анализатора  <a href="../../d0/dfe/class_syntax_analyzer.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Функции</h2></td></tr>
-<tr class="memitem:ae7d62ca130413d4c96863327c1af81a4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae7d62ca130413d4c96863327c1af81a4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a> (T const &amp;value, std::initializer_list&lt; T &gt; const &amp;cont)</td></tr>
-<tr class="memdesc:ae7d62ca130413d4c96863327c1af81a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает истину, если value находится среди значений cont.  <a href="../../df/d3f/_syntax_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">Подробнее...</a><br /></td></tr>
-<tr class="separator:ae7d62ca130413d4c96863327c1af81a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Функции</h2>
-<a id="ae7d62ca130413d4c96863327c1af81a4" name="ae7d62ca130413d4c96863327c1af81a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7d62ca130413d4c96863327c1af81a4">&#9670;&nbsp;</a></span>isIn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isIn </td>
-          <td>(</td>
-          <td class="paramtype">T const &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::initializer_list&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>cont</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Возвращает истину, если value находится среди значений cont. </p>
-<dl class="tparams"><dt>Параметры шаблона</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>тип значений </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>значение для поиска </td></tr>
-    <tr><td class="paramname">cont</td><td>среди каких значений искать </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true Если value имеется среди cont </dd>
-<dd>
-false Если value отсутствует среди cont </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="../../df/d3f/_syntax_8hpp_source.html">Syntax.hpp</a> строка <a class="el" href="../../df/d3f/_syntax_8hpp_source.html#l00022">22</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                             {</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> std::find(cont.begin(), cont.end(), value) != cont.end();</div>
-<div class="line"><span class="lineno">   24</span>}</div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d3f/_syntax_8hpp_ae7d62ca130413d4c96863327c1af81a4_icgraph.svg" width="2123" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

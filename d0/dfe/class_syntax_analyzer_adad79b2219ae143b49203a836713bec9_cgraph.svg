@@ -95,7 +95,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="373.5,-190.5 373.5,-209.5 476.5,-209.5 476.5,-190.5 373.5,-190.5"/>
 <text text-anchor="middle" x="425" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getAdvType</text>
 </a>

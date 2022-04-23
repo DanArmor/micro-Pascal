@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getadvtype_0',['getAdvType',['../d0/d11/class_i_token.html#ac8ca7f7e601ae49ad573167a4e9429cb',1,'IToken']]],
+  ['getadvtype_0',['getAdvType',['../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24',1,'IToken']]],
   ['getcurtok_1',['getCurTok',['../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374',1,'SyntaxAnalyzer']]],
   ['getdata_2',['getData',['../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96',1,'TypeViewVisitor']]],
   ['getinfo_3',['getInfo',['../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de',1,'Token']]],

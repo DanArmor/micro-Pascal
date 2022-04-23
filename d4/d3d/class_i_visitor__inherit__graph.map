@@ -1,7 +1,6 @@
 <map id="IVisitor" name="IVisitor">
-<area shape="rect" id="node1" title="Интерфейс &quot;посетителя&quot;." alt="" coords="247,5,309,32"/>
-<area shape="rect" id="node2" href="$da/d38/class_code_gen_visitor.html" title="Посетитель&#45;кодовый генератор" alt="" coords="5,80,119,107"/>
-<area shape="rect" id="node3" href="$d0/dc3/class_graphviz_visitor.html" title="Посетитель для расчета по дереву выражения" alt="" coords="143,80,253,107"/>
-<area shape="rect" id="node4" href="$d2/dd3/class_highlight_accurate_visitor.html" title="Посетитель подсветки синтаксиса" alt="" coords="278,80,441,107"/>
-<area shape="rect" id="node5" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по АДС" alt="" coords="465,80,581,107"/>
+<area shape="rect" id="node1" title="Интерфейс &quot;посетителя&quot;." alt="" coords="191,5,253,32"/>
+<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html" title="Посетитель для расчета по дереву выражения" alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$d2/dd3/class_highlight_accurate_visitor.html" title="Посетитель&#45;кодовый генератор" alt="" coords="141,80,303,107"/>
+<area shape="rect" id="node4" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по АДС" alt="" coords="328,80,444,107"/>
 </map>

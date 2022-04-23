@@ -7,10 +7,14 @@ var hierarchy =
       [ "CallAST", "da/dd1/class_call_a_s_t.html", null ],
       [ "CompoundAST", "da/dbb/class_compound_a_s_t.html", null ],
       [ "ConstAST", "d6/d94/class_const_a_s_t.html", null ],
+      [ "ForAST", "d4/d3f/class_for_a_s_t.html", null ],
+      [ "FunctionAST", "dc/d19/class_function_a_s_t.html", null ],
       [ "IfAST", "d7/d6b/class_if_a_s_t.html", null ],
+      [ "IterationAST", "d6/dbc/class_iteration_a_s_t.html", null ],
       [ "NoOpAST", "db/db7/class_no_op_a_s_t.html", null ],
       [ "NumberAST", "d8/d90/class_number_a_s_t.html", null ],
       [ "ProgramAST", "de/db2/class_program_a_s_t.html", null ],
+      [ "ReturnAST", "d8/de5/class_return_a_s_t.html", null ],
       [ "StringAST", "d0/d21/class_string_a_s_t.html", null ],
       [ "TypeSpecAST", "d2/db9/class_type_spec_a_s_t.html", null ],
       [ "UnOpAST", "dc/de8/class_un_op_a_s_t.html", null ],
@@ -31,7 +35,6 @@ var hierarchy =
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]
     ] ],
     [ "IVisitor", "df/db7/class_i_visitor.html", [
-      [ "CodeGenVisitor", "da/d38/class_code_gen_visitor.html", null ],
       [ "GraphvizVisitor", "d0/dc3/class_graphviz_visitor.html", null ],
       [ "HighlightAccurateVisitor", "d2/dd3/class_highlight_accurate_visitor.html", null ],
       [ "TypeViewVisitor", "d1/d49/class_type_view_visitor.html", null ]

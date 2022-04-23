@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Синтаксический анализатор: Класс IterationAST</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d6/dbc/class_iteration_a_s_t.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="../../dc/d78/class_iteration_a_s_t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс IterationAST</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф наследования:IterationAST:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d04/class_iteration_a_s_t__inherit__graph.svg" width="106" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф связей класса IterationAST:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/da9/class_iteration_a_s_t__coll__graph.svg" width="106" height="279"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac2b5d69be2923a02fdf86323c9a7666e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#ac2b5d69be2923a02fdf86323c9a7666e">IterationAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> <a class="el" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; <a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a>, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; <a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a>, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; <a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a>)</td></tr>
+<tr class="separator:ac2b5d69be2923a02fdf86323c9a7666e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c129e7cf7ef1d01e5f6f5133167a396"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a4c129e7cf7ef1d01e5f6f5133167a396">~IterationAST</a> ()=default</td></tr>
+<tr class="separator:a4c129e7cf7ef1d01e5f6f5133167a396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6f4a1de33e80eb8900a58e24b65753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a1f6f4a1de33e80eb8900a58e24b65753">accept</a> (<a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;visitor)</td></tr>
+<tr class="separator:a1f6f4a1de33e80eb8900a58e24b65753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_a_s_t"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_s_t')"><img src="../../closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a></td></tr>
+<tr class="memitem:afd378ca7cb3049d6293e8597d31d758d inherit pub_methods_class_a_s_t"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a> ()</td></tr>
+<tr class="separator:afd378ca7cb3049d6293e8597d31d758d inherit pub_methods_class_a_s_t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afadc392162238eca31cbafd953eff717 inherit pub_methods_class_a_s_t"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_a_s_t.html#afadc392162238eca31cbafd953eff717">AST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> <a class="el" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>)</td></tr>
+<tr class="separator:afadc392162238eca31cbafd953eff717 inherit pub_methods_class_a_s_t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b984d974da0bc25c78d9205b8011f67 inherit pub_methods_class_a_s_t"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_a_s_t.html#a7b984d974da0bc25c78d9205b8011f67">~AST</a> ()=default</td></tr>
+<tr class="separator:a7b984d974da0bc25c78d9205b8011f67 inherit pub_methods_class_a_s_t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be6b7f1a62e69bf7c408a314cd09a87 inherit pub_methods_class_a_s_t"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a> (<a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;visitor)=0</td></tr>
+<tr class="separator:a2be6b7f1a62e69bf7c408a314cd09a87 inherit pub_methods_class_a_s_t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:afec7dbd81fb77ad80fe3c0d0e72384e4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a></td></tr>
+<tr class="separator:afec7dbd81fb77ad80fe3c0d0e72384e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f6a0a2f6dc1cd7158ee7c016eefe73"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a></td></tr>
+<tr class="separator:a08f6a0a2f6dc1cd7158ee7c016eefe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1599e365ba748e4eb29999cab19e5b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a></td></tr>
+<tr class="separator:a9e1599e365ba748e4eb29999cab19e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_a_s_t"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_a_s_t')"><img src="../../closed.png" alt="-"/>&#160;Открытые атрибуты унаследованные от <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a></td></tr>
+<tr class="memitem:acd50071d5e3ece75e4e5c4b7808d3c5e inherit pub_attribs_class_a_s_t"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a></td></tr>
+<tr class="separator:acd50071d5e3ece75e4e5c4b7808d3c5e inherit pub_attribs_class_a_s_t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock">
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00190">190</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac2b5d69be2923a02fdf86323c9a7666e" name="ac2b5d69be2923a02fdf86323c9a7666e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b5d69be2923a02fdf86323c9a7666e">&#9670;&nbsp;</a></span>IterationAST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IterationAST::IterationAST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
+          <td class="paramname"><em>token</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramname"><em>assign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramname"><em>condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramname"><em>postAction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00157">157</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>: <a class="code hl_function" href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST</a>(<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>), <a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a>(std::move(<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a>)), <a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a>(std::move(<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a>)), <a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a>(std::move(<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a>)){};</div>
+<div class="ttc" id="aclass_a_s_t_html_acd50071d5e3ece75e4e5c4b7808d3c5e"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">AST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00066">ASTclasses.hpp:66</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html_afd378ca7cb3049d6293e8597d31d758d"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#afd378ca7cb3049d6293e8597d31d758d">AST::AST</a></div><div class="ttdeci">AST()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d91/_a_s_t_8cpp_source.html#l00005">AST.cpp:5</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_a08f6a0a2f6dc1cd7158ee7c016eefe73"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">IterationAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00198">AST.hpp:198</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_a9e1599e365ba748e4eb29999cab19e5b"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">IterationAST::postAction</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; postAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00199">AST.hpp:199</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_afec7dbd81fb77ad80fe3c0d0e72384e4"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">IterationAST::assign</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; assign</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00197">AST.hpp:197</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c129e7cf7ef1d01e5f6f5133167a396" name="a4c129e7cf7ef1d01e5f6f5133167a396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c129e7cf7ef1d01e5f6f5133167a396">&#9670;&nbsp;</a></span>~IterationAST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IterationAST::~IterationAST </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1f6f4a1de33e80eb8900a58e24b65753" name="a1f6f4a1de33e80eb8900a58e24b65753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6f4a1de33e80eb8900a58e24b65753">&#9670;&nbsp;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IterationAST::accept </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &amp;&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a> строка <a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html#l00158">158</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>                                          {</div>
+<div class="line"><span class="lineno">  159</span>    visitor.<a class="code hl_function" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">visit</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  160</span>}</div>
+<div class="ttc" id="aclass_i_visitor_html_a5b1f67b770cdf5b7f44a22bcf81e42e6"><div class="ttname"><a href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">IVisitor::visit</a></div><div class="ttdeci">virtual void visit(BinOpAST &amp;node)=0</div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/dbc/class_iteration_a_s_t_a1f6f4a1de33e80eb8900a58e24b65753_cgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="afec7dbd81fb77ad80fe3c0d0e72384e4" name="afec7dbd81fb77ad80fe3c0d0e72384e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec7dbd81fb77ad80fe3c0d0e72384e4">&#9670;&nbsp;</a></span>assign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../da/dc8/class_a_s_t.html">AST</a>&gt; IterationAST::assign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00197">197</a></p>
+
+</div>
+</div>
+<a id="a08f6a0a2f6dc1cd7158ee7c016eefe73" name="a08f6a0a2f6dc1cd7158ee7c016eefe73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f6a0a2f6dc1cd7158ee7c016eefe73">&#9670;&nbsp;</a></span>condition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../da/dc8/class_a_s_t.html">AST</a>&gt; IterationAST::condition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00198">198</a></p>
+
+</div>
+</div>
+<a id="a9e1599e365ba748e4eb29999cab19e5b" name="a9e1599e365ba748e4eb29999cab19e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1599e365ba748e4eb29999cab19e5b">&#9670;&nbsp;</a></span>postAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../da/dc8/class_a_s_t.html">AST</a>&gt; IterationAST::postAction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a> строка <a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html#l00199">199</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>include/<a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a></li>
+<li>src/<a class="el" href="../../d0/d91/_a_s_t_8cpp_source.html">AST.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
