@@ -35,6 +35,7 @@ namespace PascalRules{
         {"^[\t ]*\\}", IToken::Type::RBRACE, IToken::AdvType::OPERATOR},
         {"^[\t ]*\\[", IToken::Type::LSQBRACKET, IToken::AdvType::OPERATOR},
         {"^[\t ]*\\]", IToken::Type::RSQBRACKET, IToken::AdvType::OPERATOR},
+        {"^[\t ]*\\.\\.", IToken::Type::RANGE, IToken::AdvType::OPERATOR},
 
 
         {"^[\t ]*begin", IToken::Type::BEGIN, IToken::AdvType::KEYWORD},

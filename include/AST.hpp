@@ -138,6 +138,18 @@ class TypeSpecAST : public AST{
     void accept(IVisitor &visitor);
 };
 
+class ArrSpecAST : public AST{
+    public:
+
+    ArrSpecAST(Token arrTok, Token lHandTok, Token rHandTok, std::unique_ptr<AST> subType);
+    ~ArrSpecAST() = default;
+    void accept(IVisitor &visitor);
+
+    Token lHandTok;
+    Token rHandTok;
+    std::unique_ptr<AST> subType;
+};
+
 class ConstAST : public AST{
     public:
 

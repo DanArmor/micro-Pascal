@@ -89,6 +89,7 @@ class IToken{
         OF, ///< of
         FUNCTION, ///< Функция
         PROCEDURE, ///< Процедура
+        RANGE,
 
         INTEGER, ///< Целый тип
         REAL, ///< Вещественный тип

@@ -102,6 +102,12 @@ void TypeSpecAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
 
+ArrSpecAST::ArrSpecAST(Token arrTok, Token lHandTok, Token rHandTok, std::unique_ptr<AST> subType) : AST(arrTok), lHandTok(lHandTok), rHandTok(rHandTok), subType(std::move(subType)){}
+
+void ArrSpecAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}
+
 /*Определения ConstAST
 ==================*/
 ConstAST::ConstAST(Token token, std::unique_ptr<AST> constName, std::unique_ptr<AST> constValue) : AST(token), constName(std::move(constName)), constValue(std::move(constValue)){};

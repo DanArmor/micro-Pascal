@@ -26,6 +26,8 @@ class ASTFactory{
     static std::unique_ptr<AST> createAST(Token token, 
     std::vector<std::unique_ptr<AST>> constsDecls, std::vector<std::unique_ptr<AST>> varDecls, std::unique_ptr<AST> compound);
 
+    static std::unique_ptr<AST> createAST(Token firstTok, Token secondTok, Token thirdTok, std::unique_ptr<AST> first);
+
 };
 
 

@@ -86,6 +86,11 @@
             return std::unique_ptr<AST>(new FunctionAST(token, std::move(params), std::move(first), std::move(second)));
     }
 
+    std::unique_ptr<AST> ASTFactory::createAST(Token firstTok, Token secondTok, Token thirdTok, std::unique_ptr<AST> first){ 
+        if(firstTok.getType() == IToken::ARRAY)
+            return std::unique_ptr<AST>(new ArrSpecAST(firstTok, secondTok, thirdTok, std::move(first)));
+    }
+
     std::unique_ptr<AST> ASTFactory::createAST(Token token,
         std::vector<std::unique_ptr<AST>> constsDecls, std::vector<std::unique_ptr<AST>> varDecls, std::unique_ptr<AST> compound){
         if(token.getType() == IToken::BLOCK){

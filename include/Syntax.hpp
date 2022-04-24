@@ -78,6 +78,7 @@ class SyntaxAnalyzer{
     void eatAdv(IToken::AdvType const type);
 
     private:
+    std::unique_ptr<AST> createCopyOfType(AST *ptr);
     List<Token> tokens;
     std::size_t currentIndex = 0;
 };  

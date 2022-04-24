@@ -96,7 +96,7 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxVarDecl(void){
 
     std::vector<std::unique_ptr<AST>> varDeclsList;
     for(auto &var : varsList){
-        varDeclsList.emplace_back(ASTFactory::createAST(IToken::VARDECL, std::move(var), ASTFactory::createAST(typeNodePTR->token)));
+        varDeclsList.emplace_back(ASTFactory::createAST(IToken::VARDECL, std::move(var), createCopyOfType(typeNodePTR.get())));
     }
     return varDeclsList;
 }
@@ -105,11 +105,22 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxTypeSpec(void){
     /* syntaxTypeSpec ::= ('integer'|'real'|'string'|'array' '[' '<INTEGER_CONST>' '..' '<INTEGER_CONST>' ']' of syntaxTypeSpec) */
     Token typeTok = getCurTok();
 
-    if(typeTok.getAdvType() != IToken::ARRAY){
+    if(typeTok.getType() != IToken::ARRAY){
         eatAdv(IToken::TYPE_SPEC);
         return ASTFactory::createAST(typeTok);
     }else{
+        Token arrTok = getCurTok();
         eat(IToken::ARRAY);
+        eat(IToken::LSQBRACKET);
+        Token lHandTok = getCurTok();
+        eat(IToken::INTEGER_CONST);
+        eat(IToken::RANGE);
+        Token rHandTok = getCurTok();
+        eat(IToken::INTEGER_CONST);
+        eat(IToken::RSQBRACKET);
+        eat(IToken::OF);
+        std::unique_ptr<AST> subType = syntaxTypeSpec();
+        return ASTFactory::createAST(arrTok, lHandTok, rHandTok, std::move(subType));
     }
 
 }
@@ -434,5 +445,19 @@ void SyntaxAnalyzer::eatAdv(IToken::AdvType const type){
         getNextToken();
     } else{
         throw SyntaxException(getCurTok(), fmt::format("Ошибка при обработке синтаксиса! Ожидался тип {}! Встречен ", magic_enum::enum_name(type)));
+    }
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::createCopyOfType(AST *ptr){
+    if(ptr->token.getAdvType() == IToken::TYPE_SPEC || ptr->token.getType() == IToken::ARRAY){
+        if(ptr->token.getType() == IToken::ARRAY){
+            ArrSpecAST *rawPtr = static_cast<ArrSpecAST*>(ptr);
+            std::unique_ptr<AST> arrPtr = ASTFactory::createAST(rawPtr->token, rawPtr->lHandTok, rawPtr->rHandTok, createCopyOfType(rawPtr->subType.get()));
+            return arrPtr;
+        } else{
+            return ASTFactory::createAST(ptr->token);
+        }
+    } else{
+        throw std::logic_error("Применение createCopyOfType к узлу, не являющемуся типом! " + ptr->token.getInfo());
     }
 }
