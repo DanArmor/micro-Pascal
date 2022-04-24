@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "AST", "da/dc8/class_a_s_t.html", [
+      [ "ArrSpecAST", "d8/d88/class_arr_spec_a_s_t.html", null ],
       [ "AssignAST", "d7/db1/class_assign_a_s_t.html", null ],
       [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", null ],
       [ "BlockAST", "d0/de0/class_block_a_s_t.html", null ],

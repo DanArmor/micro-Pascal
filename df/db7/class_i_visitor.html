@@ -147,6 +147,8 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 <tr class="separator:a90a5478ca69b33e9683dccf2a0f8ed71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44aea13582365aa466c079e6b42f5e00"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a44aea13582365aa466c079e6b42f5e00">visit</a> (<a class="el" href="../../d8/de5/class_return_a_s_t.html">ReturnAST</a> &amp;node)=0</td></tr>
 <tr class="separator:a44aea13582365aa466c079e6b42f5e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807ad7f66e9f3f95c7833a4b8aeab8fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/class_i_visitor.html#a807ad7f66e9f3f95c7833a4b8aeab8fc">visit</a> (<a class="el" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a> &amp;node)=0</td></tr>
+<tr class="separator:a807ad7f66e9f3f95c7833a4b8aeab8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Интерфейс "посетителя". </p>
@@ -160,20 +162,48 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 <div class="line"> </div>
 <div class="line"><a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a>-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(<a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a>); <span class="comment">// Просим корень принять посетителя</span></div>
 <div class="line"><a class="code hl_variable" href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a>.<a class="code hl_function" href="../../d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9">write</a>(); <span class="comment">// Посетитель закончил работу</span></div>
-<div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00056">ASTclasses.hpp:56</a></div></div>
+<div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00058">ASTclasses.hpp:58</a></div></div>
 <div class="ttc" id="aclass_a_s_t_html_a2be6b7f1a62e69bf7c408a314cd09a87"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST::accept</a></div><div class="ttdeci">virtual void accept(IVisitor &amp;visitor)=0</div></div>
 <div class="ttc" id="aclass_graphviz_visitor_html"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html">GraphvizVisitor</a></div><div class="ttdoc">Посетитель для расчета по дереву выражения</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00087">Visitor.hpp:87</a></div></div>
 <div class="ttc" id="aclass_graphviz_visitor_html_a11a48d0833e5c502ffa019419cfe1fa9"><div class="ttname"><a href="../../d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9">GraphvizVisitor::write</a></div><div class="ttdeci">void write(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00135">Visitor.cpp:135</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a></div><div class="ttdoc">Класс синтаксического анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3f/_syntax_8hpp_source.html#l00014">Syntax.hpp:14</a></div></div>
-<div class="ttc" id="aclass_syntax_analyzer_html_a96cd5f6a041dae613d1c75175e26592e"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00403">Syntax.cpp:403</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html_a96cd5f6a041dae613d1c75175e26592e"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e">SyntaxAnalyzer::parseTokens</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; parseTokens(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00414">Syntax.cpp:414</a></div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_a631b1e0bdcaca1e7209427a4fdc07a35"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#a631b1e0bdcaca1e7209427a4fdc07a35">syntax</a></div><div class="ttdeci">SyntaxAnalyzer syntax(tokens)</div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_ab6504bac8bdc1c4fb18bd62ee830f2c2"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#ab6504bac8bdc1c4fb18bd62ee830f2c2">graph</a></div><div class="ttdeci">GraphvizVisitor graph(&quot;out.dot&quot;)</div></div>
 <div class="ttc" id="aexample__visiter_8cpp_html_ad72cd6d23ee19818be64711919a62994"><div class="ttname"><a href="../../d5/d17/example__visiter_8cpp.html#ad72cd6d23ee19818be64711919a62994">root</a></div><div class="ttdeci">AST * root</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d17/example__visiter_8cpp_source.html#l00003">example_visiter.cpp:3</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html">ASTclasses.hpp</a> строка <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00031">31</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html">ASTclasses.hpp</a> строка <a class="el" href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00032">32</a></p>
 </div><h2 class="groupheader">Методы</h2>
+<a id="a807ad7f66e9f3f95c7833a4b8aeab8fc" name="a807ad7f66e9f3f95c7833a4b8aeab8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807ad7f66e9f3f95c7833a4b8aeab8fc">&#9670;&nbsp;</a></span>visit() <span class="overload">[1/21]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IVisitor::visit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a> &amp;&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещается в <a class="el" href="../../d0/dc3/class_graphviz_visitor.html#a99be034b1a084df4e1baf6c01a6eb6f7">GraphvizVisitor</a>, <a class="el" href="../../d1/d49/class_type_view_visitor.html#a05cbd544ac044d58c94d0f8539b9cbd0">TypeViewVisitor</a> и <a class="el" href="../../d2/dd3/class_highlight_accurate_visitor.html#ac583e836827e459c5afe62ef7f4dbd35">HighlightAccurateVisitor</a>.</p>
+
+</div>
+</div>
 <a id="a83611ea7b4dde8db8d15e5702951f025" name="a83611ea7b4dde8db8d15e5702951f025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83611ea7b4dde8db8d15e5702951f025">&#9670;&nbsp;</a></span>visit() <span class="overload">[1/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83611ea7b4dde8db8d15e5702951f025">&#9670;&nbsp;</a></span>visit() <span class="overload">[2/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +231,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a5b1f67b770cdf5b7f44a22bcf81e42e6" name="a5b1f67b770cdf5b7f44a22bcf81e42e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b1f67b770cdf5b7f44a22bcf81e42e6">&#9670;&nbsp;</a></span>visit() <span class="overload">[2/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1f67b770cdf5b7f44a22bcf81e42e6">&#9670;&nbsp;</a></span>visit() <span class="overload">[3/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,14 +260,14 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/db7/class_i_visitor_a5b1f67b770cdf5b7f44a22bcf81e42e6_icgraph.svg" width="307" height="1000"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/db7/class_i_visitor_a5b1f67b770cdf5b7f44a22bcf81e42e6_icgraph.svg" width="307" height="1051"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
 <a id="a8a8b3567dd0b69c5c05c351f8537c7c2" name="a8a8b3567dd0b69c5c05c351f8537c7c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a8b3567dd0b69c5c05c351f8537c7c2">&#9670;&nbsp;</a></span>visit() <span class="overload">[3/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8b3567dd0b69c5c05c351f8537c7c2">&#9670;&nbsp;</a></span>visit() <span class="overload">[4/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +295,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a182fd51025832787190bf67799cdbd3b" name="a182fd51025832787190bf67799cdbd3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a182fd51025832787190bf67799cdbd3b">&#9670;&nbsp;</a></span>visit() <span class="overload">[4/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a182fd51025832787190bf67799cdbd3b">&#9670;&nbsp;</a></span>visit() <span class="overload">[5/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,7 +323,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a61877193fd55d2f97b7fc12465b7a3ce" name="a61877193fd55d2f97b7fc12465b7a3ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61877193fd55d2f97b7fc12465b7a3ce">&#9670;&nbsp;</a></span>visit() <span class="overload">[5/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a61877193fd55d2f97b7fc12465b7a3ce">&#9670;&nbsp;</a></span>visit() <span class="overload">[6/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +351,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a2e1b667be6c9402438d287173ba04997" name="a2e1b667be6c9402438d287173ba04997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1b667be6c9402438d287173ba04997">&#9670;&nbsp;</a></span>visit() <span class="overload">[6/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1b667be6c9402438d287173ba04997">&#9670;&nbsp;</a></span>visit() <span class="overload">[7/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +379,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a86be47c16993c817b6e8b4055edb15f6" name="a86be47c16993c817b6e8b4055edb15f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86be47c16993c817b6e8b4055edb15f6">&#9670;&nbsp;</a></span>visit() <span class="overload">[7/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a86be47c16993c817b6e8b4055edb15f6">&#9670;&nbsp;</a></span>visit() <span class="overload">[8/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,7 +407,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a90a5478ca69b33e9683dccf2a0f8ed71" name="a90a5478ca69b33e9683dccf2a0f8ed71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90a5478ca69b33e9683dccf2a0f8ed71">&#9670;&nbsp;</a></span>visit() <span class="overload">[8/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a5478ca69b33e9683dccf2a0f8ed71">&#9670;&nbsp;</a></span>visit() <span class="overload">[9/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +435,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a03ad7a121d846dd882c6fe9f316af66a" name="a03ad7a121d846dd882c6fe9f316af66a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03ad7a121d846dd882c6fe9f316af66a">&#9670;&nbsp;</a></span>visit() <span class="overload">[9/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ad7a121d846dd882c6fe9f316af66a">&#9670;&nbsp;</a></span>visit() <span class="overload">[10/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +463,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="aa09fedaa5d35191b58aab8845b391366" name="aa09fedaa5d35191b58aab8845b391366"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa09fedaa5d35191b58aab8845b391366">&#9670;&nbsp;</a></span>visit() <span class="overload">[10/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09fedaa5d35191b58aab8845b391366">&#9670;&nbsp;</a></span>visit() <span class="overload">[11/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,7 +491,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a1c34e8c02a76a644a08ec7138ed07d42" name="a1c34e8c02a76a644a08ec7138ed07d42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c34e8c02a76a644a08ec7138ed07d42">&#9670;&nbsp;</a></span>visit() <span class="overload">[11/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c34e8c02a76a644a08ec7138ed07d42">&#9670;&nbsp;</a></span>visit() <span class="overload">[12/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +519,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="aed3edb6efa2ac3247bf8a1596673c914" name="aed3edb6efa2ac3247bf8a1596673c914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed3edb6efa2ac3247bf8a1596673c914">&#9670;&nbsp;</a></span>visit() <span class="overload">[12/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3edb6efa2ac3247bf8a1596673c914">&#9670;&nbsp;</a></span>visit() <span class="overload">[13/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +547,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a4c1cf68f8a99b1e88dcc33dfa4f5709b" name="a4c1cf68f8a99b1e88dcc33dfa4f5709b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c1cf68f8a99b1e88dcc33dfa4f5709b">&#9670;&nbsp;</a></span>visit() <span class="overload">[13/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1cf68f8a99b1e88dcc33dfa4f5709b">&#9670;&nbsp;</a></span>visit() <span class="overload">[14/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -545,7 +575,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a44aea13582365aa466c079e6b42f5e00" name="a44aea13582365aa466c079e6b42f5e00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44aea13582365aa466c079e6b42f5e00">&#9670;&nbsp;</a></span>visit() <span class="overload">[14/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a44aea13582365aa466c079e6b42f5e00">&#9670;&nbsp;</a></span>visit() <span class="overload">[15/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -573,7 +603,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="aa9c149efcd1c2fa057ae713290f1b268" name="aa9c149efcd1c2fa057ae713290f1b268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9c149efcd1c2fa057ae713290f1b268">&#9670;&nbsp;</a></span>visit() <span class="overload">[15/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c149efcd1c2fa057ae713290f1b268">&#9670;&nbsp;</a></span>visit() <span class="overload">[16/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -601,7 +631,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="ac1382c24e52b9673204d4667dbb97f4c" name="ac1382c24e52b9673204d4667dbb97f4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1382c24e52b9673204d4667dbb97f4c">&#9670;&nbsp;</a></span>visit() <span class="overload">[16/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1382c24e52b9673204d4667dbb97f4c">&#9670;&nbsp;</a></span>visit() <span class="overload">[17/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,7 +659,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="ad75b65bd8e866dbc3a75cc1c97297fda" name="ad75b65bd8e866dbc3a75cc1c97297fda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad75b65bd8e866dbc3a75cc1c97297fda">&#9670;&nbsp;</a></span>visit() <span class="overload">[17/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75b65bd8e866dbc3a75cc1c97297fda">&#9670;&nbsp;</a></span>visit() <span class="overload">[18/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -657,7 +687,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a8b3e94b2c729724d3508cb5b30dd0876" name="a8b3e94b2c729724d3508cb5b30dd0876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b3e94b2c729724d3508cb5b30dd0876">&#9670;&nbsp;</a></span>visit() <span class="overload">[18/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3e94b2c729724d3508cb5b30dd0876">&#9670;&nbsp;</a></span>visit() <span class="overload">[19/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +715,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a36a7a5238714bb444a24a8576e50704c" name="a36a7a5238714bb444a24a8576e50704c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36a7a5238714bb444a24a8576e50704c">&#9670;&nbsp;</a></span>visit() <span class="overload">[19/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a7a5238714bb444a24a8576e50704c">&#9670;&nbsp;</a></span>visit() <span class="overload">[20/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -713,7 +743,7 @@ $(document).ready(function(){initNavTree('df/db7/class_i_visitor.html','../../')
 </div>
 </div>
 <a id="a5b3c4c3332757f51ed80fd23ec2a0995" name="a5b3c4c3332757f51ed80fd23ec2a0995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b3c4c3332757f51ed80fd23ec2a0995">&#9670;&nbsp;</a></span>visit() <span class="overload">[20/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3c4c3332757f51ed80fd23ec2a0995">&#9670;&nbsp;</a></span>visit() <span class="overload">[21/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

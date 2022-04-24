@@ -2,6 +2,7 @@ var class_type_view_visitor =
 [
     [ "TypeViewVisitor", "d1/d49/class_type_view_visitor.html#ab68d7e2e4fd797b72b32538ccc379775", null ],
     [ "getData", "d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96", null ],
+    [ "visit", "d1/d49/class_type_view_visitor.html#a05cbd544ac044d58c94d0f8539b9cbd0", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#ae5cc2d81aa424abc66bcebe20c81290a", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#a70c3aa3f18827e5f47348038cd1e1e7d", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#a4b8e52d0f79601d6df88422e5d468b89", null ],

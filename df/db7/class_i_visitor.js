@@ -1,5 +1,6 @@
 var class_i_visitor =
 [
+    [ "visit", "df/db7/class_i_visitor.html#a807ad7f66e9f3f95c7833a4b8aeab8fc", null ],
     [ "visit", "df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025", null ],
     [ "visit", "df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6", null ],
     [ "visit", "df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2", null ],

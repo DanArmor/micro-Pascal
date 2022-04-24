@@ -1,52 +1,52 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,301,56,328"/>
-<area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87" title=" " alt="" coords="167,90,261,117"/>
-<area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="152,141,276,168"/>
-<area shape="rect" id="node13" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="104,192,324,218"/>
-<area shape="rect" id="node14" href="$da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30" title=" " alt="" coords="163,242,265,269"/>
-<area shape="rect" id="node15" href="$d2/dd3/class_highlight_accurate_visitor.html#acd8c633a21e1c2a4c78195eeec16c4a5" title=" " alt="" coords="133,294,295,335"/>
-<area shape="rect" id="node16" href="$df/d0a/main_8cpp.html#af50a7ab232af26f0f371f58cd3b3441f" title=" " alt="" coords="1187,360,1257,386"/>
-<area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title=" " alt="" coords="119,410,309,437"/>
-<area shape="rect" id="node48" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="145,461,283,488"/>
-<area shape="rect" id="node49" href="$d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9" title=" " alt="" coords="142,1297,286,1324"/>
-<area shape="rect" id="node4" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="385,149,562,176"/>
-<area shape="rect" id="node5" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="683,102,765,129"/>
-<area shape="rect" id="node6" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="665,153,783,180"/>
-<area shape="rect" id="node7" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="689,204,759,230"/>
-<area shape="rect" id="node8" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="675,254,773,281"/>
-<area shape="rect" id="node9" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title=" " alt="" coords="659,305,789,332"/>
-<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="2612,613,2727,640"/>
-<area shape="rect" id="node11" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="670,52,778,78"/>
-<area shape="rect" id="node12" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="893,52,1041,78"/>
-<area shape="rect" id="node17" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="2173,562,2246,589"/>
-<area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="2581,1702,2757,1729"/>
-<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="372,2032,575,2058"/>
-<area shape="rect" id="node21" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="2364,942,2523,969"/>
-<area shape="rect" id="node24" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="2376,1930,2511,1957"/>
-<area shape="rect" id="node26" href="$db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="2422,765,2465,792"/>
-<area shape="rect" id="node27" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="2375,2665,2512,2692"/>
-<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" title=" " alt="" coords="873,2082,1060,2109"/>
-<area shape="rect" id="node47" href="$d0/dfe/class_syntax_analyzer.html#ae04232a95c6423677e600927c82851e4" title=" " alt="" coords="623,2133,825,2160"/>
-<area shape="rect" id="node22" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="2601,1322,2738,1349"/>
-<area shape="rect" id="node23" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="2620,942,2719,969"/>
-<area shape="rect" id="node25" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="2571,2234,2768,2261"/>
-<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#a5770afdc4d32d2c38550f27f9ffd949a" title=" " alt="" coords="1108,1728,1336,1754"/>
-<area shape="rect" id="node41" href="$d0/dfe/class_syntax_analyzer.html#a58a0f927ad0a45e4ce837a98e98330aa" title=" " alt="" coords="1854,2437,2049,2464"/>
-<area shape="rect" id="node44" href="$d0/dfe/class_syntax_analyzer.html#a738f9b4cb7edf93c56af1b6974caad1a" title=" " alt="" coords="1620,2120,1800,2146"/>
-<area shape="rect" id="node30" href="$d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" title=" " alt="" coords="1384,1728,1572,1754"/>
-<area shape="rect" id="node31" href="$d0/dfe/class_syntax_analyzer.html#a7f54bde730006b1b863290415809ab4e" title=" " alt="" coords="1627,1322,1793,1349"/>
-<area shape="rect" id="node32" href="$d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa" title=" " alt="" coords="1860,765,2043,792"/>
-<area shape="rect" id="node33" href="$d0/dfe/class_syntax_analyzer.html#a31fc5887c158652feb946f89270b4b36" title=" " alt="" coords="1848,1322,2055,1349"/>
-<area shape="rect" id="node35" href="$d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" title=" " alt="" coords="1857,1373,2045,1400"/>
-<area shape="rect" id="node36" href="$d0/dfe/class_syntax_analyzer.html#a67bc7e3cfb57c9d4d25d60913aef3a87" title=" " alt="" coords="2108,816,2311,842"/>
-<area shape="rect" id="node37" href="$d0/dfe/class_syntax_analyzer.html#a82e8472ea6d1064871de0d05eaa8b374" title=" " alt="" coords="2117,1626,2302,1653"/>
-<area shape="rect" id="node38" href="$d0/dfe/class_syntax_analyzer.html#a779e006875d35926152773989f4b1e5a" title=" " alt="" coords="1864,1094,2039,1121"/>
-<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#a55e935b2aa7f20b66e9228e977582fcd" title=" " alt="" coords="1849,1221,2053,1248"/>
-<area shape="rect" id="node40" href="$d0/dfe/class_syntax_analyzer.html#a64dad7f0b22b08d182483469d3a1aa79" title=" " alt="" coords="1852,1272,2051,1298"/>
-<area shape="rect" id="node34" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="2120,1069,2299,1096"/>
-<area shape="rect" id="node42" href="$d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" title=" " alt="" coords="2103,2538,2316,2565"/>
-<area shape="rect" id="node43" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="2365,2538,2522,2565"/>
-<area shape="rect" id="node45" href="$d0/dfe/class_syntax_analyzer.html#a8f6dda26a96ec0e5e75bea5eed577856" title=" " alt="" coords="1852,2184,2051,2210"/>
-<area shape="rect" id="node46" href="$d0/dfe/class_syntax_analyzer.html#a5d262eb9e2236dde3bd043eea0b0e957" title=" " alt="" coords="2104,2285,2315,2312"/>
-<area shape="rect" id="node50" href="$d0/dc3/class_graphviz_visitor.html#aee357a5bb30083f42fbf1213c9af8d3c" title=" " alt="" coords="401,2082,545,2109"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,835,56,861"/>
+<area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87" title=" " alt="" coords="167,309,261,336"/>
+<area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="152,360,276,387"/>
+<area shape="rect" id="node13" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="104,835,324,861"/>
+<area shape="rect" id="node14" href="$da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30" title=" " alt="" coords="163,885,265,912"/>
+<area shape="rect" id="node15" href="$d2/dd3/class_highlight_accurate_visitor.html#acd8c633a21e1c2a4c78195eeec16c4a5" title=" " alt="" coords="133,937,295,978"/>
+<area shape="rect" id="node16" href="$df/d0a/main_8cpp.html#af50a7ab232af26f0f371f58cd3b3441f" title=" " alt="" coords="1187,411,1257,437"/>
+<area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title=" " alt="" coords="119,784,309,811"/>
+<area shape="rect" id="node48" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="145,1003,283,1029"/>
+<area shape="rect" id="node49" href="$d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9" title=" " alt="" coords="142,1729,286,1756"/>
+<area shape="rect" id="node4" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="385,183,562,209"/>
+<area shape="rect" id="node5" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="683,56,765,83"/>
+<area shape="rect" id="node6" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="665,107,783,133"/>
+<area shape="rect" id="node7" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="689,157,759,184"/>
+<area shape="rect" id="node8" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="675,208,773,235"/>
+<area shape="rect" id="node9" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title=" " alt="" coords="659,259,789,285"/>
+<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="2612,867,2727,893"/>
+<area shape="rect" id="node11" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="670,5,778,32"/>
+<area shape="rect" id="node12" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="893,5,1041,32"/>
+<area shape="rect" id="node17" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="2173,411,2246,437"/>
+<area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="2581,2031,2757,2057"/>
+<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="372,1151,575,1177"/>
+<area shape="rect" id="node21" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="2364,816,2523,843"/>
+<area shape="rect" id="node24" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="2376,1549,2511,1576"/>
+<area shape="rect" id="node26" href="$db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="2422,2563,2465,2589"/>
+<area shape="rect" id="node27" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="2375,2487,2512,2513"/>
+<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" title=" " alt="" coords="873,1201,1060,1228"/>
+<area shape="rect" id="node47" href="$d0/dfe/class_syntax_analyzer.html#ae04232a95c6423677e600927c82851e4" title=" " alt="" coords="623,1125,825,1152"/>
+<area shape="rect" id="node22" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="2601,765,2738,792"/>
+<area shape="rect" id="node23" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="2620,816,2719,843"/>
+<area shape="rect" id="node25" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="2571,1296,2768,1323"/>
+<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#a5770afdc4d32d2c38550f27f9ffd949a" title=" " alt="" coords="1108,1675,1336,1701"/>
+<area shape="rect" id="node41" href="$d0/dfe/class_syntax_analyzer.html#a58a0f927ad0a45e4ce837a98e98330aa" title=" " alt="" coords="1854,1200,2049,1227"/>
+<area shape="rect" id="node44" href="$d0/dfe/class_syntax_analyzer.html#a738f9b4cb7edf93c56af1b6974caad1a" title=" " alt="" coords="1620,1447,1800,1473"/>
+<area shape="rect" id="node30" href="$d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" title=" " alt="" coords="1384,1725,1572,1752"/>
+<area shape="rect" id="node31" href="$d0/dfe/class_syntax_analyzer.html#a7f54bde730006b1b863290415809ab4e" title=" " alt="" coords="1627,1725,1793,1752"/>
+<area shape="rect" id="node32" href="$d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa" title=" " alt="" coords="1860,821,2043,848"/>
+<area shape="rect" id="node33" href="$d0/dfe/class_syntax_analyzer.html#a31fc5887c158652feb946f89270b4b36" title=" " alt="" coords="1848,1904,2055,1931"/>
+<area shape="rect" id="node35" href="$d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" title=" " alt="" coords="1857,1955,2045,1981"/>
+<area shape="rect" id="node36" href="$d0/dfe/class_syntax_analyzer.html#a67bc7e3cfb57c9d4d25d60913aef3a87" title=" " alt="" coords="2108,664,2311,691"/>
+<area shape="rect" id="node37" href="$d0/dfe/class_syntax_analyzer.html#a82e8472ea6d1064871de0d05eaa8b374" title=" " alt="" coords="2117,1651,2302,1677"/>
+<area shape="rect" id="node38" href="$d0/dfe/class_syntax_analyzer.html#a779e006875d35926152773989f4b1e5a" title=" " alt="" coords="1864,1776,2039,1803"/>
+<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#a55e935b2aa7f20b66e9228e977582fcd" title=" " alt="" coords="1849,1853,2053,1880"/>
+<area shape="rect" id="node40" href="$d0/dfe/class_syntax_analyzer.html#a64dad7f0b22b08d182483469d3a1aa79" title=" " alt="" coords="1852,1725,2051,1752"/>
+<area shape="rect" id="node34" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="2120,1955,2299,1981"/>
+<area shape="rect" id="node42" href="$d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" title=" " alt="" coords="2103,1144,2316,1171"/>
+<area shape="rect" id="node43" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="2365,1043,2522,1069"/>
+<area shape="rect" id="node45" href="$d0/dfe/class_syntax_analyzer.html#a8f6dda26a96ec0e5e75bea5eed577856" title=" " alt="" coords="1852,1089,2051,1116"/>
+<area shape="rect" id="node46" href="$d0/dfe/class_syntax_analyzer.html#a5d262eb9e2236dde3bd043eea0b0e957" title=" " alt="" coords="2104,1043,2315,1069"/>
+<area shape="rect" id="node50" href="$d0/dc3/class_graphviz_visitor.html#aee357a5bb30083f42fbf1213c9af8d3c" title=" " alt="" coords="401,2816,545,2843"/>
 </map>

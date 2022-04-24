@@ -70,6 +70,7 @@ var class_i_token =
       [ "OF", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa28892e3ebb59b3db02a99d278bd9484a", null ],
       [ "FUNCTION", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad792924741cf0793d9a8eceb7df41b11", null ],
       [ "PROCEDURE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5ac3cd82189b6506354642bc4115f58c", null ],
+      [ "RANGE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa7d0856f1cc1d4f4c84d6a7c8bde15ea3", null ],
       [ "INTEGER", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa04c99d204957dcc6f281d3f8cdd688c5", null ],
       [ "REAL", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1651f94d95583971c358e682b73cd957", null ],
       [ "STRING", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae893f4c13aeec8e8baa58c487321c635", null ],

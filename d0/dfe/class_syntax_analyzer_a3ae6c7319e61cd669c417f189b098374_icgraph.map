@@ -1,31 +1,31 @@
 <map id="SyntaxAnalyzer::getCurTok" name="SyntaxAnalyzer::getCurTok">
-<area shape="rect" id="node1" title=" " alt="" coords="3979,804,4155,831"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="3785,1058,3919,1084"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a31fc5887c158652feb946f89270b4b36" title=" " alt="" coords="2287,1463,2493,1490"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" title=" " alt="" coords="2053,1412,2239,1439"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a82e8472ea6d1064871de0d05eaa8b374" title=" " alt="" coords="1820,1362,2005,1388"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a7f54bde730006b1b863290415809ab4e" title=" " alt="" coords="1605,1260,1772,1287"/>
-<area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a779e006875d35926152773989f4b1e5a" title=" " alt="" coords="1371,956,1545,983"/>
-<area shape="rect" id="node8" href="$d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" title=" " alt="" coords="1364,1615,1552,1642"/>
-<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a5770afdc4d32d2c38550f27f9ffd949a" title=" " alt="" coords="1083,1286,1311,1312"/>
-<area shape="rect" id="node11" href="$d0/dfe/class_syntax_analyzer.html#ae04232a95c6423677e600927c82851e4" title=" " alt="" coords="597,450,800,476"/>
-<area shape="rect" id="node12" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="347,728,549,755"/>
-<area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title=" " alt="" coords="108,1412,299,1439"/>
-<area shape="rect" id="node16" href="$d0/dfe/class_syntax_analyzer.html#a64dad7f0b22b08d182483469d3a1aa79" title=" " alt="" coords="1359,1235,1557,1262"/>
-<area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" title=" " alt="" coords="3525,804,3713,831"/>
-<area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#a3af9b5161a2cef6fdd26b0bb60334ac4" title=" " alt="" coords="3269,703,3460,730"/>
-<area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" title=" " alt="" coords="3035,602,3217,628"/>
-<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" title=" " alt="" coords="2768,627,2987,654"/>
-<area shape="rect" id="node21" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="2541,754,2720,780"/>
-<area shape="rect" id="node22" href="$d0/dfe/class_syntax_analyzer.html#a55e935b2aa7f20b66e9228e977582fcd" title=" " alt="" coords="2288,855,2492,882"/>
-<area shape="rect" id="node23" href="$d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" title=" " alt="" coords="3512,1514,3725,1540"/>
-<area shape="rect" id="node24" href="$d0/dfe/class_syntax_analyzer.html#a58a0f927ad0a45e4ce837a98e98330aa" title=" " alt="" coords="3267,1619,3462,1646"/>
-<area shape="rect" id="node25" href="$d0/dfe/class_syntax_analyzer.html#a5d262eb9e2236dde3bd043eea0b0e957" title=" " alt="" coords="3513,399,3724,426"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3979,828,4155,855"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="3785,1082,3919,1108"/>
+<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a31fc5887c158652feb946f89270b4b36" title=" " alt="" coords="2287,1487,2493,1514"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" title=" " alt="" coords="2053,1436,2239,1463"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a82e8472ea6d1064871de0d05eaa8b374" title=" " alt="" coords="1820,1386,2005,1412"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a7f54bde730006b1b863290415809ab4e" title=" " alt="" coords="1605,1284,1772,1311"/>
+<area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a779e006875d35926152773989f4b1e5a" title=" " alt="" coords="1371,980,1545,1007"/>
+<area shape="rect" id="node8" href="$d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" title=" " alt="" coords="1364,1614,1552,1640"/>
+<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a5770afdc4d32d2c38550f27f9ffd949a" title=" " alt="" coords="1083,1310,1311,1336"/>
+<area shape="rect" id="node11" href="$d0/dfe/class_syntax_analyzer.html#ae04232a95c6423677e600927c82851e4" title=" " alt="" coords="597,462,800,488"/>
+<area shape="rect" id="node12" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="347,752,549,779"/>
+<area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title=" " alt="" coords="108,1436,299,1463"/>
+<area shape="rect" id="node16" href="$d0/dfe/class_syntax_analyzer.html#a64dad7f0b22b08d182483469d3a1aa79" title=" " alt="" coords="1359,1259,1557,1286"/>
+<area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" title=" " alt="" coords="3525,828,3713,855"/>
+<area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#a3af9b5161a2cef6fdd26b0bb60334ac4" title=" " alt="" coords="3269,727,3460,754"/>
+<area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" title=" " alt="" coords="3035,626,3217,652"/>
+<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" title=" " alt="" coords="2768,651,2987,678"/>
+<area shape="rect" id="node21" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="2541,778,2720,804"/>
+<area shape="rect" id="node22" href="$d0/dfe/class_syntax_analyzer.html#a55e935b2aa7f20b66e9228e977582fcd" title=" " alt="" coords="2288,879,2492,906"/>
+<area shape="rect" id="node23" href="$d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" title=" " alt="" coords="3512,1538,3725,1564"/>
+<area shape="rect" id="node24" href="$d0/dfe/class_syntax_analyzer.html#a58a0f927ad0a45e4ce837a98e98330aa" title=" " alt="" coords="3267,1643,3462,1670"/>
+<area shape="rect" id="node25" href="$d0/dfe/class_syntax_analyzer.html#a5d262eb9e2236dde3bd043eea0b0e957" title=" " alt="" coords="3513,423,3724,450"/>
 <area shape="rect" id="node26" href="$d0/dfe/class_syntax_analyzer.html#a8f6dda26a96ec0e5e75bea5eed577856" title=" " alt="" coords="3265,399,3464,426"/>
 <area shape="rect" id="node27" href="$d0/dfe/class_syntax_analyzer.html#a738f9b4cb7edf93c56af1b6974caad1a" title=" " alt="" coords="3036,399,3216,426"/>
-<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#a94c8a6ab5c0e53cae22edb1a840a27ce" title=" " alt="" coords="3519,1564,3719,1591"/>
-<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="3773,551,3931,578"/>
-<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" title=" " alt="" coords="848,779,1035,806"/>
-<area shape="rect" id="node14" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="7,1387,58,1414"/>
-<area shape="rect" id="node15" href="$dd/de9/test_syntax_8cpp.html#ac491df98e51a6bba8b808af414b6614f" title="Тест синтаксического анализа Паскаля, простой тест" alt="" coords="5,1438,60,1464"/>
+<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#a94c8a6ab5c0e53cae22edb1a840a27ce" title=" " alt="" coords="3519,1588,3719,1615"/>
+<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="3773,575,3931,602"/>
+<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" title=" " alt="" coords="848,803,1035,830"/>
+<area shape="rect" id="node14" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="7,1411,58,1438"/>
+<area shape="rect" id="node15" href="$dd/de9/test_syntax_8cpp.html#ac491df98e51a6bba8b808af414b6614f" title="Тест синтаксического анализа Паскаля, простой тест" alt="" coords="5,1462,60,1488"/>
 </map>

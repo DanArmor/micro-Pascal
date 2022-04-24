@@ -2,6 +2,7 @@ var class_highlight_accurate_visitor =
 [
     [ "HighlightAccurateVisitor", "d2/dd3/class_highlight_accurate_visitor.html#ace11f66ed403ac16a4b32aa32abba920", null ],
     [ "getTokens", "d2/dd3/class_highlight_accurate_visitor.html#acd8c633a21e1c2a4c78195eeec16c4a5", null ],
+    [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#ac583e836827e459c5afe62ef7f4dbd35", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#ac2e1b96fb83e5571024cb57bd2ab85dd", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#ac6c16582233ee238416d3a97b1c147be", null ],
     [ "visit", "d2/dd3/class_highlight_accurate_visitor.html#a050875af2eecee4ee98992523ec841eb", null ],
