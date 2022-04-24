@@ -77,19 +77,19 @@ end.
 https://danarmor.github.io/micro-Pascal/ - ссылка на актуальную документацию - собирается при каждом пуше.
 
 ### Что используется из стороннего?
-* magic_enum.hpp - для получения имен энамов в рантайме (https://github.com/Neargye/magic_enum)
-* plantUML - для написания объектной схемы и схемы классов (https://github.com/plantuml/plantuml)
-* https://gitlab.com/graphviz/graphviz - для отрисовски дерева синтаксиса
-* Doxygen - документация (https://github.com/doxygen/doxygen)
-* Doxygen Awesome - стиль для документации (https://jothepro.github.io/doxygen-awesome-css/)
+* [magic_enum.hpp](https://github.com/Neargye/magic_enum) - для получения имен энамов в рантайме 
+* [plantUML](https://github.com/plantuml/plantuml) - для написания объектной схемы и схемы классов 
+* [Graphviz](https://gitlab.com/graphviz/graphviz) - для отрисовски дерева синтаксиса
+* [Doxygen](https://github.com/doxygen/doxygen) - документация 
+* [Doxygen Awesome](https://jothepro.github.io/doxygen-awesome-css/) - стиль для документации 
 * https://bottlecaps.de/rr/ui - для написания схем синтаксиса ([Форма Бэкуса-Наура](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%91%D1%8D%D0%BA%D1%83%D1%81%D0%B0_%E2%80%94_%D0%9D%D0%B0%D1%83%D1%80%D0%B0))
 * https://products.aspose.app/words/conversion/xhtml-to-svg - превращать выходные .xhtml от синт.схем по ссылке выше в .svg
-* https://valgrind.org/ - для проверок на утечки памяти
-* Google tests - тестирование (https://github.com/google/googletest)
-* https://codacy.com/ - анализ кода
+* [Valgrind](https://valgrind.org/) - для проверок на утечки памяти
+* [Google tests](https://github.com/google/googletest) - тестирование
+* [Codacy](https://codacy.com/) - анализ кода
 
 ### Синтаксические диаграммы:
-![Изображение схемы синтаксиса](forReadme/diagra.svg)
+![Изображение схемы синтаксиса](forReadme/diagram.svg)
 
 ### Диаграмма объектов и диаграмма классов:
 ![Диаграмма объектов и диаграмма классов](schemes/scheme.png)
