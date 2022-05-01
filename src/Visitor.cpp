@@ -384,7 +384,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void SemanticVisitor::visit(BinOpAST &node){
         std::string lHand = getValue(node.left.get());
-        std::string rHand = getValue(node.left.get());
+        std::string rHand = getValue(node.right.get());
         if(!isIn(lHand, {std::string("integer"), std::string("real")})){
             throw TypeException(node.token, fmt::format("Ожидался числовой тип, а получен {}. ", lHand));
         }
@@ -394,7 +394,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         switch(node.token.getType()){
             case IToken::MOD:
                 if(lHand != "integer" || rHand != "integer"){
-                    throw TypeException(node.token, fmt::format("MOD определен только над целыми операндами, а получены {} и {}", lHand, rHand));
+                    throw TypeException(node.token, fmt::format("MOD определен только над целыми операндами, а получены {} и {}. ", lHand, rHand));
                 }
             case IToken::LESS:
             case IToken::LESS_EQ:
@@ -423,7 +423,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void SemanticVisitor::visit(NumberAST &node){
-        if(node.token.getType() == IToken::INTEGER)
+        if(node.token.getType() == IToken::INTEGER_CONST)
             Return("integer");
         else
             Return("real");
@@ -435,7 +435,8 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void SemanticVisitor::visit(AssignAST &node){
-        compareTypes(getValue(node.var.get()), getValue(node.value.get()));
+        if(!compareTypes(getValue(node.var.get()), getValue(node.value.get())))
+            throw TypeException(node.token, fmt::format("Присваивание несовместимых типов {} = {}. ", getValue(node.var.get()), getValue(node.value.get())));
     }
 
     void SemanticVisitor::visit(VarAST &node){
@@ -471,6 +472,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         if(! isIn(getDefined(node.var->token).type, {std::string("integer"), std::string("real"), std::string("string")})){
             getDefined(node.var->token).subType = getSubType(static_cast<ArrSpecAST*>(node.type.get()));
         }
+        Return(getDefined(node.var->token).type);
     }
 
     void SemanticVisitor::visit(TypeSpecAST &node){
@@ -491,9 +493,11 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         checkFunc(node.token);
         std::vector<std::string> check = getFunc(node.token).params;
         if(check.size() != node.params.size())
-            throw SemanticException(node.token, fmt::format("Ожидалось {} аргументов, а получено {}", check.size(), node.params.size()));
+            throw SemanticException(node.token, fmt::format("Ожидалось {} аргументов, а получено {}. ", check.size(), node.params.size()));
         for(std::size_t i = 0; i < check.size(); i++)
-            compareTypes(check[i], getValue(node.params[i].get()));
+            if(!compareTypes(check[i], getValue(node.params[i].get()))){
+                throw TypeException(node.token, fmt::format("{} из {} аргументов функции {} имеет неверный тип. Ожидался {}, а получен {}. ", i+1, check.size(), node.token.getStr(), check[i], getValue(node.params[i].get())));
+            }
     }
 
     void SemanticVisitor::visit(IfAST &node){
@@ -524,9 +528,8 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         currCheckFunc = node.token.getStr();
         for(auto &ptr : node.params)
             getFunc(node.token).params.push_back(getValue(ptr.get()));
-        for(auto &ptr : node.params){
+        for(auto &ptr : node.params)
             ptr->accept(*this);
-        }
         getFunc(node.token).returnType = getValue(node.returnType.get());
         node.body->accept(*this);
         currCheckFunc = "";
@@ -535,7 +538,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     void SemanticVisitor::visit(ReturnAST &node){
         std::string returnType = getValue(node.toReturn.get());
         std::string expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME}).returnType;
-        if(expected != returnType){
+        if(!compareTypes(expected, returnType)){
             throw TypeException(node.token, fmt::format("Ожидался {}, а получен {}. ", expected, returnType));
         }
         Return(returnType);
