@@ -133,6 +133,8 @@ class GraphvizVisitor : public IVisitor{
 
     void visit(ArrSpecAST &node);
 
+    void visit(SelectAST &node);
+
     void write(void);
 
     private:
@@ -189,6 +191,8 @@ class TypeViewVisitor : public IVisitor{
     void visit(ReturnAST &node);
 
     void visit(ArrSpecAST &node);
+
+    void visit(SelectAST &node);
 
     std::vector<std::string> getData(void);
 

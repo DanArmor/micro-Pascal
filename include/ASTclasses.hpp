@@ -23,6 +23,7 @@ class IterationAST;
 class FunctionAST;
 class ReturnAST;
 class ArrSpecAST;
+class SelectAST;
 
 /**
  * @brief Интерфейс "посетителя"
@@ -52,6 +53,7 @@ class IVisitor{
     virtual void visit(FunctionAST &node) = 0;
     virtual void visit(ReturnAST &node) = 0;
     virtual void visit(ArrSpecAST &node) = 0;
+    virtual void visit(SelectAST &node) = 0;
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева

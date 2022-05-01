@@ -290,6 +290,16 @@ void GraphvizVisitor::visit(ArrSpecAST &node){
     node.subType->accept(*this);
 }
 
+void GraphvizVisitor::visit(SelectAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.from->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.index->accept(*this);
+}
+
 /*Определения TypeViewVisitor
 ==================*/
 TypeViewVisitor::TypeViewVisitor(){};
@@ -418,6 +428,12 @@ void TypeViewVisitor::visit(ArrSpecAST &node){
     std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
     typesStrings.push_back(arrStr);
     node.subType->accept(*this);
+}
+
+void TypeViewVisitor::visit(SelectAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.from->accept(*this);
+    node.index->accept(*this);
 }
 
 std::vector<std::string> TypeViewVisitor::getData(void){

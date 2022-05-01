@@ -42,6 +42,10 @@
                 token.setStr("VARDECL");
                 return std::unique_ptr<AST>(new VarDeclAST(token, std::move(first), std::move(second)));
             }
+            case IToken::SELECT:{
+                token.setStr("SELECT");
+                return std::unique_ptr<AST>(new SelectAST(token, std::move(first), std::move(second)));
+            }
             case IToken::CONSTDECL:{
                 token.setStr("CONSTDECL");
                 return std::unique_ptr<AST>(new ConstAST(token, std::move(first), std::move(second)));

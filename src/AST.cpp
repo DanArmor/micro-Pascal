@@ -183,3 +183,9 @@ ReturnAST::ReturnAST(Token token, std::unique_ptr<AST> toReturn) : AST(token), t
 void ReturnAST::accept(IVisitor &visitor){
     visitor.visit(*this);
 }
+
+SelectAST::SelectAST(Token token, std::unique_ptr<AST> from, std::unique_ptr<AST> index) : AST(token), from(std::move(from)), index(std::move(index)) {};
+
+void SelectAST::accept(IVisitor &visitor){
+    visitor.visit(*this);
+}

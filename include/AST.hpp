@@ -238,7 +238,7 @@ class FunctionAST : public AST{
     std::unique_ptr<AST> body;
 };
 
-/// @brief Узел, содержащий унарную операцию
+/// @brief Узел, содержащий return statement
 class ReturnAST : public AST{
     public:
 
@@ -248,6 +248,19 @@ class ReturnAST : public AST{
     void accept(IVisitor &visitor);
 
     std::unique_ptr<AST> toReturn;
+};
+
+/// @brief Узел, преставляющий выбор элемента в массиве
+class SelectAST : public AST{
+    public:
+
+    SelectAST(Token token, std::unique_ptr<AST> from, std::unique_ptr<AST> index);
+    ~SelectAST() = default;
+
+    void accept(IVisitor &visitor);
+
+    std::unique_ptr<AST> from;
+    std::unique_ptr<AST> index;
 };
 
 #endif

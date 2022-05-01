@@ -166,7 +166,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxSt(void){
         case IToken::BEGIN :
             return syntaxCompoundSt();
         case IToken::ID :{
-            if(lookFoward().getType() == IToken::ASSIGN)
+            if(lookFoward().getType() == IToken::ASSIGN || lookFoward().getType() == IToken::LSQBRACKET)
                 return syntaxAssignSt();
             else if(lookFoward().getType() == IToken::LPAREN)
                 return syntaxCallSt();
@@ -298,11 +298,11 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxSelect(void){
     Token tok = getCurTok();
     tok.setAdvType(IToken::SELECT);
-    eat(IToken::ID);
+    std::unique_ptr<AST> var = std::move(syntaxVariable());
     eat(IToken::LSQBRACKET);
     std::unique_ptr<AST> index = std::move(syntaxExpr());
     eat(IToken::RSQBRACKET);
-    return ASTFactory::createAST(tok, std::move(index));
+    return ASTFactory::createAST(tok, std::move(var), std::move(index));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){
@@ -328,9 +328,12 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxAssignSt(void){
     /* syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr */
-    std::unique_ptr<AST> lValue = std::move(syntaxVariable());
+    std::unique_ptr<AST> lValue;
+    if(lookFoward().getType() == IToken::LSQBRACKET)
+        lValue = std::move(syntaxSelect());
+    else
+        lValue = std::move(syntaxVariable());
     Token assignTok = getCurTok();
-
     eat(IToken::ASSIGN);
 
     std::unique_ptr<AST> toAssign = std::move(syntaxExpr());
