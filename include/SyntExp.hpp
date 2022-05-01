@@ -40,4 +40,10 @@ class SemanticException : public AnalyzeException{
     ~SemanticException();
 };
 
+class TypeException : public SemanticException{
+    public:
+    TypeException(Token errorTok, std::string msg);
+    ~TypeException();
+};
+
 #endif

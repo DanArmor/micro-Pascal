@@ -8,7 +8,6 @@
 #include "List.cpp"
 #include "Token.hpp"
 #include "ASTclasses.hpp"
-#include "ProgramData.hpp"
 
 #include "sup.hpp"
 /// @brief Класс синтаксического анализатора

@@ -6,7 +6,6 @@
 #include "ASTFactory.hpp"
 #include "SyntExp.hpp"
 
-#include <iostream>
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
@@ -271,8 +270,13 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
     eat(IToken::ID);
     eat(IToken::LPAREN);
     std::vector<std::unique_ptr<AST>> params;
-    if(getCurTok().getType() != IToken::RPAREN)
-        params = std::move(syntaxVarDecl());
+    while(getCurTok().getType() != IToken::RPAREN){
+        std::vector<std::unique_ptr<AST>> sup = std::move(syntaxVarDecl());
+        for(auto &ptr : sup)
+            params.emplace_back(std::move(ptr));
+        if(getCurTok().getType() == IToken::COMMA)
+            eat(IToken::COMMA);
+    }
     eat(IToken::RPAREN);
 
     std::unique_ptr<AST> returnType;

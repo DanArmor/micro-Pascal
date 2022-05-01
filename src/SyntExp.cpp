@@ -26,3 +26,6 @@ SyntaxException::~SyntaxException(){};
 
 SemanticException::SemanticException(Token errorTok, std::string msg = "Analyze Error!") : AnalyzeException(errorTok, msg){};
 SemanticException::~SemanticException(){};
+
+TypeException::TypeException(Token errorTok, std::string msg = "Analyze Error!") : SemanticException(errorTok, msg){};
+TypeException::~TypeException(){};

@@ -1,4 +1,12 @@
 program test;
+
+function add(x : integer, y : real) : integer;
+    begin
+        return x + y;
+    end;
+
+const
+    a = 1;
 var
     x : array [1 .. 5] of integer;
 begin

@@ -93,6 +93,9 @@ int main(int argc, char** argv){
     root->accept(graph);
     graph.write();
 
+    SemanticVisitor semantic;
+    root->accept(semantic);
+
 //    CodeGenVisitor code("test.s");
 //    root->accept(code);
 //    code.done();
