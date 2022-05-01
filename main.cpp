@@ -80,11 +80,8 @@ int main(int argc, char** argv){
     
     SyntaxAnalyzer syntax(tokens);
     std::unique_ptr<AST>root(syntax.parseTokens());
-//
-    HighlightAccurateVisitor hl(tokens);
-    root->accept(hl);
 
-    highlight(lexer.getText(), hl.getTokens());
+    highlight(lexer.getText(), syntax.getTokens());
 
     //for(auto tt : hl.getTokens()){
         //std::cout << tt.getInfo() << "\n";

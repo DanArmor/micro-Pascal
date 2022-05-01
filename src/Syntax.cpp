@@ -12,8 +12,9 @@ SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
     /* syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'  */
     eat(IToken::PROGRAM);
-    Token nameTok = getCurTok();
-    nameTok.setAdvType(IToken::PROGSTART);
+    Token &nameTok = getCurTok();
+    nameTok.setAdvType(IToken::PROGRAM_NAME);
+
     eat(IToken::ID);
     eat(IToken::SEMI);
     std::vector<std::unique_ptr<AST>> functions;
@@ -51,6 +52,8 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxConsts(void){
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxConstDecl(void){
     /* syntaxConstDecl ::= '<ID>' '=' ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>') */
+    Token &tok = getCurTok();
+    tok.setAdvType(IToken::VAR_NAME);
     std::unique_ptr<AST> constNamePTR = ASTFactory::createAST(getCurTok());
     eat(IToken::ID);
     eat(IToken::EQ);
@@ -82,12 +85,16 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxVars(void){
 std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxVarDecl(void){
     /* syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec */
     std::vector<std::unique_ptr<AST>> varsList;
-    varsList.emplace_back(ASTFactory::createAST(getCurTok()));
+    Token &tok = getCurTok();
+    tok.setAdvType(IToken::VAR_NAME);
+    varsList.emplace_back(ASTFactory::createAST(tok));
     eat(IToken::ID);
 
     while(getCurTok().getType() == IToken::COMMA){
         eat(IToken::COMMA);
-        varsList.emplace_back(ASTFactory::createAST(getCurTok()));
+        Token &tok = getCurTok();
+        tok.setAdvType(IToken::VAR_NAME);
+        varsList.emplace_back(ASTFactory::createAST(tok));
         eat(IToken::ID);
     }
     eat(IToken::COLON);
@@ -258,7 +265,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
     else
         eat(IToken::PROCEDURE);
     
-    Token name = getCurTok();
+    Token &name = getCurTok();
+
     name.setAdvType(IToken::FUNCTION_NAME);
     eat(IToken::ID);
     eat(IToken::LPAREN);
@@ -287,9 +295,20 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
     return ASTFactory::createAST(retTok, std::move(toReturn));
 }
 
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxSelect(void){
+    Token tok = getCurTok();
+    tok.setAdvType(IToken::SELECT);
+    eat(IToken::ID);
+    eat(IToken::LSQBRACKET);
+    std::unique_ptr<AST> index = std::move(syntaxExpr());
+    eat(IToken::RSQBRACKET);
+    return ASTFactory::createAST(tok, std::move(index));
+}
+
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){
     /* syntaxCallSt ::= '<ID>' '(' (syntaxExpr ','*)* ')' */
-    Token nameTok = getCurTok();
+    Token &nameTok = getCurTok();
+    nameTok.setAdvType(IToken::FUNCTION_NAME);
     eat(IToken::ID);
     eat(IToken::LPAREN);
     std::vector<std::unique_ptr<AST>> paramsList;
@@ -320,6 +339,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxAssignSt(void){
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxVariable(void){
     /* syntaxVariable ::= '<ID>' */
+    getCurTok().setAdvType(IToken::VAR_NAME);
     std::unique_ptr<AST> varPTR = ASTFactory::createAST(getCurTok());
     eat(IToken::ID);
     return varPTR;
@@ -402,6 +422,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFactor(){
         case IToken::ID :{
             if(lookFoward().getType() == IToken::LPAREN)
                 return syntaxCallSt();
+            else if (lookFoward().getType() == IToken::LSQBRACKET)
+                return syntaxSelect();
             else
                 return syntaxVariable();
         }
@@ -460,4 +482,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::createCopyOfType(AST *ptr){
     } else{
         throw std::logic_error("Применение createCopyOfType к узлу, не являющемуся типом! " + ptr->token.getInfo());
     }
+}
+
+List<Token> SyntaxAnalyzer::getTokens(void){
+    return tokens;
 }

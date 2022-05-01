@@ -19,10 +19,10 @@ class IToken{
         TYPE_SPEC,
         NOTPROCESS,
         PROGRAM_NAME,
+        SELECT,
         VARDECL, ///< Объявление переменной
         CONSTDECL, ///< Объявление константы
         COMPOUND,
-        PROGSTART, ///< Старт программы
         UNKNOWN
     };
 

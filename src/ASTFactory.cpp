@@ -74,7 +74,7 @@
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first){
-        if(token.getAdvType() == IToken::PROGSTART){
+        if(token.getAdvType() == IToken::PROGRAM_NAME){
             std::unique_ptr<ProgramAST> programPTR(new ProgramAST(token, std::move(params), std::move(first)));
             programPTR->name.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
             return programPTR;

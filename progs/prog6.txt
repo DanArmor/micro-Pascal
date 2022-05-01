@@ -1,5 +1,4 @@
 program test;
-
 var
     x : array [1 .. 5] of integer;
 begin

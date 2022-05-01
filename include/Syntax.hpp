@@ -8,6 +8,7 @@
 #include "List.cpp"
 #include "Token.hpp"
 #include "ASTclasses.hpp"
+#include "ProgramData.hpp"
 
 #include "sup.hpp"
 /// @brief Класс синтаксического анализатора
@@ -66,7 +67,10 @@ class SyntaxAnalyzer{
 
     std::unique_ptr<AST> syntaxReturnSt(void);
 
+    std::unique_ptr<AST> syntaxSelect(void);
 
+
+    List<Token> getTokens(void);
 
     void getNextToken(void);
 
@@ -79,6 +83,7 @@ class SyntaxAnalyzer{
 
     private:
     std::unique_ptr<AST> createCopyOfType(AST *ptr);
+
     List<Token> tokens;
     std::size_t currentIndex = 0;
 };  
