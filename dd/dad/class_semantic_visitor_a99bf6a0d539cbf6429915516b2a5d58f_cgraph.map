@@ -1,0 +1,9 @@
+<map id="SemanticVisitor::visit" name="SemanticVisitor::visit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,149,133"/>
+<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#ae5a2583ca3d8f7b290d590a80a176877" title=" " alt="" coords="199,56,366,83"/>
+<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title=" " alt="" coords="197,107,368,133"/>
+<area shape="rect" id="node7" href="$dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" title="Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void." alt="" coords="203,157,362,184"/>
+<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0" title=" " alt="" coords="416,5,600,32"/>
+<area shape="rect" id="node4" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="648,31,747,57"/>
+<area shape="rect" id="node6" href="$da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87" title=" " alt="" coords="461,107,555,133"/>
+</map>

@@ -1,4 +1,4 @@
 <map id="GraphvizVisitor" name="GraphvizVisitor">
-<area shape="rect" id="node1" title="Посетитель для расчета по дереву выражения" alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node1" title="Посетителя для построения графического отображения АДС" alt="" coords="5,80,116,107"/>
 <area shape="rect" id="node2" href="$df/db7/class_i_visitor.html" title="Интерфейс &quot;посетителя&quot;." alt="" coords="29,5,92,32"/>
 </map>

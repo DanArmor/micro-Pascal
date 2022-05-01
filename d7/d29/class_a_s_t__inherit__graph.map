@@ -1,5 +1,5 @@
 <map id="AST" name="AST">
-<area shape="rect" id="node1" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="5,512,53,539"/>
+<area shape="rect" id="node1" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="5,537,53,564"/>
 <area shape="rect" id="node2" href="$d8/d88/class_arr_spec_a_s_t.html" title=" " alt="" coords="109,5,204,32"/>
 <area shape="rect" id="node3" href="$d7/db1/class_assign_a_s_t.html" title="Узел, содержащий бинарную операцию" alt="" coords="113,56,201,83"/>
 <area shape="rect" id="node4" href="$d2/dc9/class_bin_op_a_s_t.html" title="Узел, содержащий бинарную операцию" alt="" coords="115,107,199,133"/>
@@ -14,11 +14,12 @@
 <area shape="rect" id="node13" href="$db/db7/class_no_op_a_s_t.html" title="Узел, отображающий пустовые выражение, отсутствие операций" alt="" coords="115,563,198,589"/>
 <area shape="rect" id="node14" href="$d8/d90/class_number_a_s_t.html" title="Узел, содержащий целое число" alt="" coords="109,613,204,640"/>
 <area shape="rect" id="node15" href="$de/db2/class_program_a_s_t.html" title="Узел, отображающий начало программы" alt="" coords="108,664,205,691"/>
-<area shape="rect" id="node16" href="$d8/de5/class_return_a_s_t.html" title="Узел, содержащий унарную операцию" alt="" coords="113,715,200,741"/>
-<area shape="rect" id="node17" href="$d0/d21/class_string_a_s_t.html" title=" " alt="" coords="115,765,198,792"/>
-<area shape="rect" id="node18" href="$d2/db9/class_type_spec_a_s_t.html" title=" " alt="" coords="103,816,210,843"/>
-<area shape="rect" id="node19" href="$dc/de8/class_un_op_a_s_t.html" title="Узел, содержащий унарную операцию" alt="" coords="115,867,198,893"/>
-<area shape="rect" id="node20" href="$dc/dff/class_var_a_s_t.html" title="Узел, содержащий переменную" alt="" coords="123,917,191,944"/>
-<area shape="rect" id="node21" href="$d6/d7c/class_var_decl_a_s_t.html" title=" " alt="" coords="109,968,204,995"/>
-<area shape="rect" id="node22" href="$dc/da0/class_while_a_s_t.html" title=" " alt="" coords="117,1019,197,1045"/>
+<area shape="rect" id="node16" href="$d8/de5/class_return_a_s_t.html" title="Узел, содержащий return statement." alt="" coords="113,715,200,741"/>
+<area shape="rect" id="node17" href="$d5/df8/class_select_a_s_t.html" title="Узел, преставляющий выбор элемента в массиве" alt="" coords="114,765,199,792"/>
+<area shape="rect" id="node18" href="$d0/d21/class_string_a_s_t.html" title=" " alt="" coords="115,816,198,843"/>
+<area shape="rect" id="node19" href="$d2/db9/class_type_spec_a_s_t.html" title=" " alt="" coords="103,867,210,893"/>
+<area shape="rect" id="node20" href="$dc/de8/class_un_op_a_s_t.html" title="Узел, содержащий унарную операцию" alt="" coords="115,917,198,944"/>
+<area shape="rect" id="node21" href="$dc/dff/class_var_a_s_t.html" title="Узел, содержащий переменную" alt="" coords="123,968,191,995"/>
+<area shape="rect" id="node22" href="$d6/d7c/class_var_decl_a_s_t.html" title=" " alt="" coords="109,1019,204,1045"/>
+<area shape="rect" id="node23" href="$dc/da0/class_while_a_s_t.html" title=" " alt="" coords="117,1069,197,1096"/>
 </map>

@@ -21,7 +21,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "IterationAST", "d6/dbc/class_iteration_a_s_t.html", "d6/dbc/class_iteration_a_s_t" ],
       [ "ForAST", "d4/d3f/class_for_a_s_t.html", "d4/d3f/class_for_a_s_t" ],
       [ "FunctionAST", "dc/d19/class_function_a_s_t.html", "dc/d19/class_function_a_s_t" ],
-      [ "ReturnAST", "d8/de5/class_return_a_s_t.html", "d8/de5/class_return_a_s_t" ]
+      [ "ReturnAST", "d8/de5/class_return_a_s_t.html", "d8/de5/class_return_a_s_t" ],
+      [ "SelectAST", "d5/df8/class_select_a_s_t.html", "d5/df8/class_select_a_s_t" ]
     ] ],
     [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", [
       [ "IVisitor", "df/db7/class_i_visitor.html", "df/db7/class_i_visitor" ],
@@ -49,7 +50,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "AnalyzeException", "df/d7c/class_analyze_exception.html", "df/d7c/class_analyze_exception" ],
       [ "LexerException", "d4/d3a/class_lexer_exception.html", "d4/d3a/class_lexer_exception" ],
       [ "SyntaxException", "d7/d27/class_syntax_exception.html", "d7/d27/class_syntax_exception" ],
-      [ "SemanticException", "d6/d2c/class_semantic_exception.html", "d6/d2c/class_semantic_exception" ]
+      [ "SemanticException", "d6/d2c/class_semantic_exception.html", "d6/d2c/class_semantic_exception" ],
+      [ "TypeException", "da/da3/class_type_exception.html", "da/da3/class_type_exception" ]
     ] ],
     [ "Token.hpp", "de/d32/_token_8hpp.html", [
       [ "IToken", "d0/d11/class_i_token.html", "d0/d11/class_i_token" ],
@@ -57,9 +59,10 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "TokenTemplate", "dc/dca/class_token_template.html", "dc/dca/class_token_template" ]
     ] ],
     [ "Visitor.hpp", "db/d42/_visitor_8hpp.html", [
-      [ "VisitorValue< VisitorImpl, VisitablePtr, ResultType >", "d6/df2/class_visitor_value.html", "d6/df2/class_visitor_value" ],
       [ "GraphvizVisitor", "d0/dc3/class_graphviz_visitor.html", "d0/dc3/class_graphviz_visitor" ],
       [ "TypeViewVisitor", "d1/d49/class_type_view_visitor.html", "d1/d49/class_type_view_visitor" ],
-      [ "HighlightAccurateVisitor", "d2/dd3/class_highlight_accurate_visitor.html", "d2/dd3/class_highlight_accurate_visitor" ]
+      [ "SemanticVisitor", "dd/dad/class_semantic_visitor.html", "dd/dad/class_semantic_visitor" ],
+      [ "SemanticVisitor::FunctionData", "d5/d3a/struct_semantic_visitor_1_1_function_data.html", "d5/d3a/struct_semantic_visitor_1_1_function_data" ],
+      [ "SemanticVisitor::VarData", "d6/d93/struct_semantic_visitor_1_1_var_data.html", "d6/d93/struct_semantic_visitor_1_1_var_data" ]
     ] ]
 ];

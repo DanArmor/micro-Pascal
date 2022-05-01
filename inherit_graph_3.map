@@ -1,6 +1,6 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
 <area shape="rect" id="node1" href="$df/db7/class_i_visitor.html" title="Интерфейс &quot;посетителя&quot;." alt="" coords="5,56,68,83"/>
-<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html" title="Посетитель для расчета по дереву выражения" alt="" coords="142,5,253,32"/>
-<area shape="rect" id="node3" href="$d2/dd3/class_highlight_accurate_visitor.html" title="Посетитель&#45;кодовый генератор" alt="" coords="116,56,279,83"/>
-<area shape="rect" id="node4" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по АДС" alt="" coords="139,107,255,133"/>
+<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html" title="Посетителя для построения графического отображения АДС" alt="" coords="119,5,229,32"/>
+<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html" title=" " alt="" coords="117,56,231,83"/>
+<area shape="rect" id="node4" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по АДС" alt="" coords="116,107,232,133"/>
 </map>

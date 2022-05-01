@@ -17,6 +17,7 @@ var class_type_view_visitor =
     [ "visit", "d1/d49/class_type_view_visitor.html#ac87b5f540639daee68f170e009109e7d", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#a5387c5d6dec8f472cd425d7d66bd446c", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#ac077e5ed195e017aa56424d3bc5e5b70", null ],
+    [ "visit", "d1/d49/class_type_view_visitor.html#af1b8575bf25a5a1c7c04a6a84e323179", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#a035be3cde4d33c72cd788b55c69adafc", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#aeb954fd3ac9f032687ad08532fef12e8", null ],
     [ "visit", "d1/d49/class_type_view_visitor.html#ad87d29e4036ff59015d60fdd24952144", null ],

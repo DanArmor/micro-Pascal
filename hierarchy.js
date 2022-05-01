@@ -16,6 +16,7 @@ var hierarchy =
       [ "NumberAST", "d8/d90/class_number_a_s_t.html", null ],
       [ "ProgramAST", "de/db2/class_program_a_s_t.html", null ],
       [ "ReturnAST", "d8/de5/class_return_a_s_t.html", null ],
+      [ "SelectAST", "d5/df8/class_select_a_s_t.html", null ],
       [ "StringAST", "d0/d21/class_string_a_s_t.html", null ],
       [ "TypeSpecAST", "d2/db9/class_type_spec_a_s_t.html", null ],
       [ "UnOpAST", "dc/de8/class_un_op_a_s_t.html", null ],
@@ -27,17 +28,20 @@ var hierarchy =
     [ "std::exception", null, [
       [ "AnalyzeException", "df/d7c/class_analyze_exception.html", [
         [ "LexerException", "d4/d3a/class_lexer_exception.html", null ],
-        [ "SemanticException", "d6/d2c/class_semantic_exception.html", null ],
+        [ "SemanticException", "d6/d2c/class_semantic_exception.html", [
+          [ "TypeException", "da/da3/class_type_exception.html", null ]
+        ] ],
         [ "SyntaxException", "d7/d27/class_syntax_exception.html", null ]
       ] ]
     ] ],
+    [ "SemanticVisitor::FunctionData", "d5/d3a/struct_semantic_visitor_1_1_function_data.html", null ],
     [ "IToken", "d0/d11/class_i_token.html", [
       [ "Token", "db/dc1/class_token.html", null ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]
     ] ],
     [ "IVisitor", "df/db7/class_i_visitor.html", [
       [ "GraphvizVisitor", "d0/dc3/class_graphviz_visitor.html", null ],
-      [ "HighlightAccurateVisitor", "d2/dd3/class_highlight_accurate_visitor.html", null ],
+      [ "SemanticVisitor", "dd/dad/class_semantic_visitor.html", null ],
       [ "TypeViewVisitor", "d1/d49/class_type_view_visitor.html", null ]
     ] ],
     [ "Lexer", "da/d5a/class_lexer.html", null ],
@@ -53,5 +57,5 @@ var hierarchy =
     [ "Node< TokenTemplate >", "dc/d8f/class_node.html", null ],
     [ "NodeIterator< T >", "d3/dde/class_node_iterator.html", null ],
     [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", null ],
-    [ "VisitorValue< VisitorImpl, VisitablePtr, ResultType >", "d6/df2/class_visitor_value.html", null ]
+    [ "SemanticVisitor::VarData", "d6/d93/struct_semantic_visitor_1_1_var_data.html", null ]
 ];

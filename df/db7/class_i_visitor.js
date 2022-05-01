@@ -15,6 +15,7 @@ var class_i_visitor =
     [ "visit", "df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914", null ],
     [ "visit", "df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b", null ],
     [ "visit", "df/db7/class_i_visitor.html#a44aea13582365aa466c079e6b42f5e00", null ],
+    [ "visit", "df/db7/class_i_visitor.html#a93fc8b873f10a161e3f53697f054de70", null ],
     [ "visit", "df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268", null ],
     [ "visit", "df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c", null ],
     [ "visit", "df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda", null ],
