@@ -58,10 +58,9 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxConstDecl(void){
     eat(IToken::EQ);
 
     Token constValTok = getCurTok();
-    std::unique_ptr<AST> constValPTR = ASTFactory::createAST(constValTok);
+    std::unique_ptr<AST> constValPTR = syntaxExpr();
 
     constValTok.setAdvType(IToken::AdvType::CONSTDECL);
-    eatAdv(IToken::SOME_CONST);
 
     return ASTFactory::createAST(constValTok, std::move(constNamePTR), std::move(constValPTR));
 }

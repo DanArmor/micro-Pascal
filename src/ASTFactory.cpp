@@ -21,6 +21,7 @@
                 return std::unique_ptr<AST>(new NoOpAST(token));
             }
         }
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first){
@@ -28,6 +29,7 @@
             return std::unique_ptr<AST>(new UnOpAST(token, std::move(first)));
         else if(token.getType() == IToken::RETURN)
             return std::unique_ptr<AST>(new ReturnAST(token, std::move(first)));
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
@@ -51,6 +53,7 @@
                 return std::unique_ptr<AST>(new ConstAST(token, std::move(first), std::move(second)));
             }
         }
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::unique_ptr<AST> first, std::unique_ptr<AST> second, std::unique_ptr<AST> third){
@@ -62,6 +65,7 @@
                 return std::unique_ptr<AST>(new IterationAST(token, std::move(first), std::move(second), std::move(third)));
             } 
         }
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params){
@@ -83,16 +87,19 @@
             programPTR->name.setStr(fmt::format("PROGRAM:\n{}", programPTR->token.getStr()));
             return programPTR;
         }
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> first, std::unique_ptr<AST> second){
         if(token.getAdvType() == IToken::FUNCTION_NAME)
             return std::unique_ptr<AST>(new FunctionAST(token, std::move(params), std::move(first), std::move(second)));
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token firstTok, Token secondTok, Token thirdTok, std::unique_ptr<AST> first){ 
         if(firstTok.getType() == IToken::ARRAY)
             return std::unique_ptr<AST>(new ArrSpecAST(firstTok, secondTok, thirdTok, std::move(first)));
+        return std::unique_ptr<AST>(new NoOpAST(firstTok));
     }
 
     std::unique_ptr<AST> ASTFactory::createAST(Token token,
@@ -101,4 +108,5 @@
             token.setStr("BLOCK");
             return std::unique_ptr<AST>(new BlockAST(token, std::move(constsDecls), std::move(varDecls), std::move(compound)));
         }
+        return std::unique_ptr<AST>(new NoOpAST(token));
     }

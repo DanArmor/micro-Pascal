@@ -197,115 +197,51 @@ public:
 
     void visit(SelectAST &node);
 
-    void addProgName(std::string name) {
-        programName = name;
-    }
+    void addProgName(std::string name);
 
-    void addVar(Token token) {
-        if (vars.count(token.getStr()) != 0)
-            throw SemanticException(token, "Повторное объявление! ");
-        vars[token.getStr()] = VarData(token, false);
-    }
+    void addVar(Token token);
 
-    void addConst(Token token) {
-        if (consts.count(token.getStr()) != 0)
-            throw SemanticException(token, "Повторное объявление! ");
-        consts[token.getStr()] = VarData(token, true);
-    }
+    void addConst(Token token);
 
-    VarData &getVar(Token name) {
-        checkVar(name);
-        return vars[name.getStr()];
-    }
+    VarData &getVar(Token name);
 
-    VarData &getConst(Token name) {
-        checkConst(name);
-        return consts[name.getStr()];
-    }
+    VarData &getConst(Token name);
 
-    VarData &getDefined(Token name) {
-        checkDefined(name);
-        if (checkVar(name))
-            return vars[name.getStr()];
-        else
-            return consts[name.getStr()];
-    }
+    VarData &getDefined(Token name);
 
-    void checkDefined(Token name) {
-        if (!checkVar(name) && !checkConst(name))
-            throw SyntaxException(name, "Использование до объявления! ");
-    }
+    void checkDefined(Token name);
 
-    void addFunc(Token token) {
-        if (functions.count(token.getStr()) != 0)
-            throw SyntaxException(token, "Повторное объявление подпрограммы! ");
-        functions[token.getStr()] = FunctionData(token);
-    }
+    void addFunc(Token token);
 
-    void prebuildFunction(std::string name, std::vector<std::string> params, std::string returnType){
-        functions[name] = FunctionData(Token(name, IToken::ID, IToken::FUNCTION_NAME), params, returnType);
-    }
+    void prebuildFunction(std::string name, std::vector<std::string> params, std::string returnType);
 
-    FunctionData &getFunc(Token name) {
-        checkFunc(name);
-        return functions[name.getStr()];
-    }
+    FunctionData &getFunc(Token name);
 
-    bool checkVar(Token name) {
-        return vars.count(name.getStr()) != 0;
-    }
+    bool checkVar(Token name);
 
-    bool checkConst(Token name) {
-        return consts.count(name.getStr()) != 0;
-    }
+    bool checkConst(Token name);
 
-    void checkFunc(Token token) {
-        if (functions.count(token.getStr()) == 0)
-            throw SyntaxException(token, "Использование до объявления! ");
-    }
+    void checkFunc(Token token);
 
-    bool compareTypes(std::string A, std::string B, bool strict = false) {
-        if (strict)
-        {
-            return A == B;
-        }
-        else
-        {
-            if (isIn(A, {std::string("integer"), std::string("real")}) && isIn(B, {std::string("integer"), std::string("real")}))
-            {
-                return true;
-            }
-            return A == B;
-        }
-    }
+    bool compareTypes(std::string A, std::string B, bool strict = false);
 
     std::string getSubType(ArrSpecAST *node);
 
-    void clearBlock(void) {
-        vars.clear();
-        consts.clear();
-    }
+    void clearBlock(void);
 
-    std::string getValue(AST *ptr) {
-        auto vis = *this;
-        ptr->accept(vis);
-        return vis.value;
-    }
+    std::string getValue(AST *ptr);
 
     /**
      * @brief Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void
      * @param inValue Значение, которое сохранится внутри посетителя
      */
-    void Return(std::string inValue) {
-        value = inValue;
-    }
+    void Return(std::string inValue);
 
     /// @brief Показывает хранимое внутри посетителя значение
-    std::string showValue(void) {
-        return value;
-    }
+    std::string showValue(void);
 
 private:
+    bool isConst = false;
     std::string value;
     std::string programName;
     std::string currCheckFunc;

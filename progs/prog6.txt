@@ -6,9 +6,10 @@ function add(x, y : integer) : integer;
     end;
 
 const
-    a = 1;
+    a = 1 + 1;
+    b = a;
 var
     x : integer;
 begin
-    x := 5 mod 2.0;
+    x := 5 mod 2;
 end.

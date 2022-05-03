@@ -98,11 +98,11 @@ void GraphvizVisitor::visit(BlockAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
-    for(auto &child : node.declarations){
+    for(auto &child : node.consts){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
-    for(auto &child : node.consts){
+    for(auto &child : node.declarations){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
@@ -419,7 +419,11 @@ std::vector<std::string> TypeViewVisitor::getData(void){
         if(!isIn(valType, {std::string("integer"), std::string("real")})){
             throw TypeException(node.token, fmt::format("Ожидался числовой тип, а получен {}. ", valType));
         }
-        Return(valType);
+        if(isIn(node.token.getType(), {IToken::NOT})){
+            Return("integer");
+        } else{
+            Return(valType);
+        }
     }
 
     void SemanticVisitor::visit(NumberAST &node){
@@ -476,13 +480,14 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void SemanticVisitor::visit(TypeSpecAST &node){
-        //std::cout << node.token.getStr() << "WARNING \n\n\n";
         Return(node.token.getStr());
     }
 
     void SemanticVisitor::visit(ConstAST &node){
         addConst(node.constName->token);
+        isConst = true;
         getDefined(node.constName->token).type = getValue(node.constValue.get());
+        isConst = false;
     }
 
     void SemanticVisitor::visit(StringAST &node){
@@ -554,6 +559,120 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void SemanticVisitor::visit(SelectAST &node){
         Return(getDefined(node.from->token).subType);
+    }
+
+    void SemanticVisitor::addProgName(std::string name) {
+        programName = name;
+    }
+
+    void SemanticVisitor::addVar(Token token) {
+        if (vars.count(token.getStr()) != 0)
+            throw SemanticException(token, "Повторное объявление! ");
+        vars[token.getStr()] = VarData(token, false);
+    }
+
+    void SemanticVisitor::addConst(Token token) {
+        if (consts.count(token.getStr()) != 0)
+            throw SemanticException(token, "Повторное объявление! ");
+        consts[token.getStr()] = VarData(token, true);
+    }
+
+    SemanticVisitor::VarData &SemanticVisitor::getVar(Token name) {
+        if(!checkVar(name)){
+            throw SemanticException(name, "Использование до объявления! ");
+        }
+        return vars[name.getStr()];
+    }
+
+    SemanticVisitor::VarData &SemanticVisitor::getConst(Token name) {
+        if(!checkConst(name)){
+            throw SemanticException(name, "Использование до объявления! ");
+        }
+        return consts[name.getStr()];
+    }
+
+    SemanticVisitor::VarData &SemanticVisitor::getDefined(Token name) {
+        if(isConst){
+            return getConst(name);
+        }
+
+        checkDefined(name);
+        if(checkVar(name))
+            return vars[name.getStr()];
+        else
+            return consts[name.getStr()];
+    }
+
+    void SemanticVisitor::checkDefined(Token name) {
+        if (!checkVar(name) && !checkConst(name))
+            throw SyntaxException(name, "Использование до объявления! ");
+    }
+
+    void SemanticVisitor::addFunc(Token token) {
+        if (functions.count(token.getStr()) != 0)
+            throw SyntaxException(token, "Повторное объявление подпрограммы! ");
+        functions[token.getStr()] = FunctionData(token);
+    }
+
+    void SemanticVisitor::prebuildFunction(std::string name, std::vector<std::string> params, std::string returnType){
+        functions[name] = FunctionData(Token(name, IToken::ID, IToken::FUNCTION_NAME), params, returnType);
+    }
+
+    SemanticVisitor::FunctionData &SemanticVisitor::getFunc(Token name) {
+        if(isConst){
+            throw SemanticException(name, "Попытка вызова функции в константном выражении! ");
+        }
+        checkFunc(name);
+        return functions[name.getStr()];
+    }
+
+    bool SemanticVisitor::checkVar(Token name) {
+        return vars.count(name.getStr()) != 0;
+    }
+
+    bool SemanticVisitor::checkConst(Token name) {
+        return consts.count(name.getStr()) != 0;
+    }
+
+    void SemanticVisitor::checkFunc(Token token) {
+        if (functions.count(token.getStr()) == 0)
+            throw SyntaxException(token, "Использование до объявления! ");
+    }
+
+    bool SemanticVisitor::compareTypes(std::string A, std::string B, bool strict) {
+        if (strict) {
+            return A == B;
+        }
+        else {
+            if (isIn(A, {std::string("integer"), std::string("real")}) && isIn(B, {std::string("integer"), std::string("real")})) {
+                return true;
+            }
+            return A == B;
+        }
+    }
+
+    void SemanticVisitor::clearBlock(void) {
+        vars.clear();
+        consts.clear();
+    }
+
+    std::string SemanticVisitor::getValue(AST *ptr) {
+        auto vis = *this;
+        ptr->accept(vis);
+        return vis.value;
+    }
+
+    /**
+     * @brief Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void
+     * @param inValue Значение, которое сохранится внутри посетителя
+     */
+    void SemanticVisitor::Return(std::string inValue) {
+        value = inValue;
+    }
+
+    /// @brief Показывает хранимое внутри посетителя значение
+    std::string SemanticVisitor::showValue(void) {
+        return value;
     }
 
     SemanticVisitor::FunctionData::FunctionData(Token token, std::vector<std::string> params, std::string returnType) : token(token), params(params), returnType(returnType){};

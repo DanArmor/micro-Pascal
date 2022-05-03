@@ -46,7 +46,7 @@ namespace PascalRules{
         {"^[\t ]*while", IToken::Type::WHILE, IToken::AdvType::KEYWORD},
         {"^[\t ]*for", IToken::Type::FOR, IToken::AdvType::KEYWORD},
         {"^[\t ]*down", IToken::Type::DOWN, IToken::AdvType::KEYWORD},
-        {"^[\t ]*down[\t ]*to", IToken::Type::DOWNTO, IToken::AdvType::KEYWORD},
+        {"^[\t ]*down to", IToken::Type::DOWNTO, IToken::AdvType::KEYWORD},
         {"^[\t ]*to", IToken::Type::TO, IToken::AdvType::KEYWORD},
         {"^[\t ]*do", IToken::Type::DO, IToken::AdvType::KEYWORD},
         {"^[\t ]*if", IToken::Type::IF, IToken::AdvType::KEYWORD},
