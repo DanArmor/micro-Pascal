@@ -81,7 +81,7 @@ List<Token> Lexer::analyzeProgramText(std::string const &text){
         std::size_t spacesFromBegin = 0;
         std::size_t len = 0;
 
-        Token matched;
+        Token matched("", IToken::ERROR, IToken::UNKNOWN, lineNum, inLineNum, position);
         for(auto pattern = tokenTemplates.begin(); pattern != tokenTemplates.end(); ++pattern){
             std::regex const r((*pattern).getRegex());
             auto wordsBegin = std::sregex_iterator(text.begin()+position, text.end(), r);
