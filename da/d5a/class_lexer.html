@@ -272,7 +272,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a240680b247c9b95a1bbd802716b20f39_icgraph.svg" width="396" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a240680b247c9b95a1bbd802716b20f39_icgraph.svg" width="423" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -314,7 +314,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div class="line"><span class="lineno">   81</span>        std::size_t spacesFromBegin = 0;</div>
 <div class="line"><span class="lineno">   82</span>        std::size_t len = 0;</div>
 <div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> matched;</div>
+<div class="line"><span class="lineno">   84</span>        <a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> matched(<span class="stringliteral">&quot;&quot;</span>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1255558c660eec45249d2d3fb9220f84">IToken::ERROR</a>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678">IToken::UNKNOWN</a>, lineNum, inLineNum, position);</div>
 <div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> pattern = tokenTemplates.<a class="code hl_function" href="../../d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423">begin</a>(); pattern != tokenTemplates.<a class="code hl_function" href="../../d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1">end</a>(); ++pattern){</div>
 <div class="line"><span class="lineno">   86</span>            std::regex <span class="keyword">const</span> r((*pattern).getRegex());</div>
 <div class="line"><span class="lineno">   87</span>            <span class="keyword">auto</span> wordsBegin = std::sregex_iterator(text.begin()+position, text.end(), r);</div>
@@ -325,29 +325,29 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div class="line"><span class="lineno">   92</span>                <span class="keywordflow">if</span>(wordsBegin-&gt;str().size() &gt; len){</div>
 <div class="line"><span class="lineno">   93</span>                    len = wordsBegin-&gt;str().size();</div>
 <div class="line"><span class="lineno">   94</span>                    spacesFromBegin = <a class="code hl_function" href="../../dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07">countFromBegin</a>(wordsBegin-&gt;str());</div>
-<div class="line"><span class="lineno">   95</span>                    matched = {word, (*pattern).<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>(), (*pattern).getAdvType(), lineNum, inLineNum + spacesFromBegin, position + spacesFromBegin};</div>
+<div class="line"><span class="lineno">   95</span>                    matched = {word, (*pattern).getType(), (*pattern).getAdvType(), lineNum, inLineNum + spacesFromBegin, position + spacesFromBegin};</div>
 <div class="line"><span class="lineno">   96</span>                }</div>
 <div class="line"><span class="lineno">   97</span>            }</div>
 <div class="line"><span class="lineno">   98</span>        }</div>
 <div class="line"><span class="lineno">   99</span>        <span class="comment">//std::cout &lt;&lt; position &lt;&lt; &quot; &quot; &lt;&lt; len &lt;&lt; &quot; &quot; &lt;&lt; offset &lt;&lt; &quot; ||| &quot; &lt;&lt; text.size() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span>(matched.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a> &amp;&amp; matched.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>().size() == 0)</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">if</span>(matched.getType() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a> &amp;&amp; matched.getStr().size() == 0)</div>
 <div class="line"><span class="lineno">  101</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d4/d3a/class_lexer_exception.html">LexerException</a>(matched, <span class="stringliteral">&quot;Неизвестный токен!&quot;</span>);</div>
 <div class="line"><span class="lineno">  102</span>        position = position + len;</div>
 <div class="line"><span class="lineno">  103</span>        inLineNum += len;</div>
 <div class="line"><span class="lineno">  104</span>        <span class="comment">//std::cout &lt;&lt; matched.getInfo() &lt;&lt; &quot;\n\n&quot;;</span></div>
-<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span>(matched.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a> &amp;&amp; matched.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">IToken::COMMENT</a>)</div>
+<div class="line"><span class="lineno">  105</span>        <span class="keywordflow">if</span>(matched.getType() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a> &amp;&amp; matched.getType() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">IToken::COMMENT</a>)</div>
 <div class="line"><span class="lineno">  106</span>            tokens.<a class="code hl_function" href="../../d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45">pushBack</a>(matched);</div>
 <div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span>(position &gt;= text.size())</div>
 <div class="line"><span class="lineno">  108</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span>(matched.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a>){</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">if</span>(matched.getType() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a>){</div>
 <div class="line"><span class="lineno">  111</span>            lineNum++;</div>
 <div class="line"><span class="lineno">  112</span>            inLineNum = 0;</div>
-<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(matched.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">IToken::COMMENT</a>){</div>
-<div class="line"><span class="lineno">  114</span>            std::size_t <span class="keyword">const</span> linesInComment =  std::count(matched.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>().begin(), matched.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>().end(), <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno">  113</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(matched.getType() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">IToken::COMMENT</a>){</div>
+<div class="line"><span class="lineno">  114</span>            std::size_t <span class="keyword">const</span> linesInComment =  std::count(matched.getStr().begin(), matched.getStr().end(), <span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line"><span class="lineno">  115</span>            lineNum += linesInComment;</div>
 <div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span>(linesInComment != 0){</div>
-<div class="line"><span class="lineno">  117</span>                inLineNum = matched.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>().size() - matched.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>().find_last_of(<span class="charliteral">&#39;\n&#39;</span>) - 1;</div>
+<div class="line"><span class="lineno">  117</span>                inLineNum = matched.getStr().size() - matched.getStr().find_last_of(<span class="charliteral">&#39;\n&#39;</span>) - 1;</div>
 <div class="line"><span class="lineno">  118</span>            }</div>
 <div class="line"><span class="lineno">  119</span>        }</div>
 <div class="line"><span class="lineno">  120</span>    }</div>
@@ -356,16 +356,16 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> tokens;</div>
 <div class="line"><span class="lineno">  124</span>}</div>
 <div class="ttc" id="a_lexer_8cpp_html_a0f45215a7e2c46f1cfbaf626be68fe07"><div class="ttname"><a href="../../dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07">countFromBegin</a></div><div class="ttdeci">std::size_t countFromBegin(std::string const &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00064">Lexer.cpp:64</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a9c6307e02c647d2e664192f00c4e1678">IToken::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00027">Token.hpp:26</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa1255558c660eec45249d2d3fb9220f84"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1255558c660eec45249d2d3fb9220f84">IToken::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdoc">Ошибка</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00030">Token.hpp:30</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">IToken::ENDOFSTREAM</a></div><div class="ttdeci">@ ENDOFSTREAM</div><div class="ttdoc">Конец потока токенов (конец файла)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00031">Token.hpp:31</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833">IToken::NEWLINE</a></div><div class="ttdeci">@ NEWLINE</div><div class="ttdoc">Символ новой строки</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00035">Token.hpp:35</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad5d2618e25e524350a045dcca9483304">IToken::COMMENT</a></div><div class="ttdeci">@ COMMENT</div><div class="ttdoc">Комментарий</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00036">Token.hpp:36</a></div></div>
-<div class="ttc" id="aclass_i_token_html_ac7f0a800d7a9e8608bab0360c76d735a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">IToken::getType</a></div><div class="ttdeci">virtual Type getType(void) const</div><div class="ttdoc">Получение типа токена</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00121">Token.hpp:121</a></div></div>
 <div class="ttc" id="aclass_lexer_exception_html"><div class="ttname"><a href="../../d4/d3a/class_lexer_exception.html">LexerException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00025">SyntExp.hpp:25</a></div></div>
 <div class="ttc" id="aclass_lexer_html_a50d38d21286cb6b84e9a24d267b3b6e0"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0">Lexer::getTrimmed</a></div><div class="ttdeci">std::string getTrimmed(std::string const &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00053">Lexer.cpp:53</a></div></div>
 <div class="ttc" id="aclass_list_html_a56026b900ba2e5a6c894797b57e9bdf1"><div class="ttname"><a href="../../d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1">List::end</a></div><div class="ttdeci">NodeIterator&lt; T &gt; end() const</div><div class="ttdoc">Конец списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00321">List.cpp:321</a></div></div>
 <div class="ttc" id="aclass_list_html_ab62bcc4a78278e99a01cacea8ee22423"><div class="ttname"><a href="../../d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423">List::begin</a></div><div class="ttdeci">NodeIterator&lt; T &gt; begin(void) const</div><div class="ttdoc">Итератор для начала списка</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/_list_8cpp_source.html#l00316">List.cpp:316</a></div></div>
 <div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00142">Token.hpp:142</a></div></div>
-<div class="ttc" id="aclass_token_html_aa5d6826fae7d616e2cfe3e27b5dd594a"><div class="ttname"><a href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">Token::getStr</a></div><div class="ttdeci">std::string const &amp; getStr(void) const</div><div class="ttdoc">Возвращает константную ссылку на строковое представление токена</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00031">Token.cpp:31</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -379,7 +379,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a473a8abf892384a3e2769651318d7ab1_icgraph.svg" width="622" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a473a8abf892384a3e2769651318d7ab1_icgraph.svg" width="648" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -410,7 +410,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_adbeec9404aa60bf4320f23e4b90bfc30_icgraph.svg" width="212" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_adbeec9404aa60bf4320f23e4b90bfc30_icgraph.svg" width="398" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -448,7 +448,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a50d38d21286cb6b84e9a24d267b3b6e0_icgraph.svg" width="799" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a50d38d21286cb6b84e9a24d267b3b6e0_icgraph.svg" width="826" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -487,7 +487,7 @@ $(document).ready(function(){initNavTree('da/d5a/class_lexer.html','../../'); in
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a9d8216e3fe926123c3cdbbf9c87b614a_icgraph.svg" width="252" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d5a/class_lexer_a9d8216e3fe926123c3cdbbf9c87b614a_icgraph.svg" width="434" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

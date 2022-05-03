@@ -62,18 +62,18 @@
 <path fill="none" stroke="midnightblue" d="M714.11,-333.68C711.14,-375 698.34,-471.24 643,-523 638.86,-526.87 634.02,-529.97 628.84,-532.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="717.61,-333.76 714.71,-323.57 710.62,-333.34 717.61,-333.76"/>
 </g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="../../da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" target="_top" xlink:title="Анализирует текст программы">
+<!-- Node7 -->
+<g id="node7" class="node">
+<title>Node7</title>
+<g id="a_node7"><a xlink:href="../../da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" target="_top" xlink:title="Анализирует текст программы">
 <polygon fill="none" stroke="black" points="505.5,-494.5 505.5,-513.5 638.5,-513.5 638.5,-494.5 505.5,-494.5"/>
 <text text-anchor="middle" x="572" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::analyzeProgramText</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
-<title>Node1&#45;&gt;Node8</title>
+<!-- Node1&#45;&gt;Node7 -->
+<g id="edge6" class="edge">
+<title>Node1&#45;&gt;Node7</title>
 <path fill="none" stroke="midnightblue" d="M711.71,-334.06C705.01,-368.68 686.53,-439.78 643,-480 636.11,-486.36 627.46,-491.05 618.61,-494.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="715.23,-334.28 713.55,-323.82 708.34,-333.04 715.23,-334.28"/>
 </g>
@@ -81,106 +81,106 @@
 <g id="node14" class="node">
 <title>Node14</title>
 <g id="a_node14"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="501,-342.5 501,-361.5 643,-361.5 643,-342.5 501,-342.5"/>
-<text text-anchor="middle" x="572" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkConst</text>
+<polygon fill="none" stroke="black" points="501,-380.5 501,-399.5 643,-399.5 643,-380.5 501,-380.5"/>
+<text text-anchor="middle" x="572" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkConst</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node14 -->
 <g id="edge13" class="edge">
 <title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M669.51,-326.17C649.87,-331.43 627.23,-337.49 608.82,-342.41"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="670.41,-329.56 679.17,-323.59 668.6,-322.79 670.41,-329.56"/>
+<path fill="none" stroke="midnightblue" d="M698.37,-330.43C684.59,-343.19 663.94,-360.43 643,-371 635.47,-374.8 627.08,-377.91 618.81,-380.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="700.8,-332.94 705.64,-323.52 695.98,-327.87 700.8,-332.94"/>
 </g>
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a8848ce67a8deaeeb3a83a14bc13fe67d" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="144,-380.5 144,-399.5 280,-399.5 280,-380.5 144,-380.5"/>
-<text text-anchor="middle" x="212" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getDefined</text>
+<g id="a_node16"><a xlink:href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="144,-399.5 144,-418.5 280,-418.5 280,-399.5 144,-399.5"/>
+<text text-anchor="middle" x="212" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getDefined</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node16 -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>Node1&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M709.92,-333.48C701.38,-361.84 681.21,-413.64 643,-437 518.94,-512.83 456.78,-483.36 316,-447 280.38,-437.8 243.93,-413.36 225.43,-399.66"/>
+<path fill="none" stroke="midnightblue" d="M709.92,-333.48C701.38,-361.84 681.21,-413.64 643,-437 507.68,-519.72 301.59,-446.23 234.75,-418.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="713.37,-334.12 712.72,-323.55 706.64,-332.22 713.37,-334.12"/>
 </g>
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="../../dd/dad/class_semantic_visitor.html#af65cef3bd35d38f1b2dc0ef951839af9" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="326,-304.5 326,-323.5 455,-323.5 455,-304.5 326,-304.5"/>
-<text text-anchor="middle" x="390.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getConst</text>
+<g id="a_node18"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="326,-418.5 326,-437.5 455,-437.5 455,-418.5 326,-418.5"/>
+<text text-anchor="middle" x="390.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getConst</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node18 -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>Node1&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M668.49,-314C612.45,-314 517.99,-314 455.2,-314"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="668.83,-317.5 678.83,-314 668.83,-310.5 668.83,-317.5"/>
+<path fill="none" stroke="midnightblue" d="M706.7,-332.93C695.72,-355.44 674.05,-392.09 643,-409 585.23,-440.47 508.64,-441.55 455.22,-437.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="709.95,-334.25 710.99,-323.7 703.6,-331.3 709.95,-334.25"/>
 </g>
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
 <g id="a_node19"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="503,-266.5 503,-285.5 641,-285.5 641,-266.5 503,-266.5"/>
-<text text-anchor="middle" x="572" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkFunc</text>
+<polygon fill="none" stroke="black" points="503,-228.5 503,-247.5 641,-247.5 641,-228.5 503,-228.5"/>
+<text text-anchor="middle" x="572" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkFunc</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node19 -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>Node1&#45;&gt;Node19</title>
-<path fill="none" stroke="midnightblue" d="M669.51,-301.83C649.87,-296.57 627.23,-290.51 608.82,-285.59"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="668.6,-305.21 679.17,-304.41 670.41,-298.44 668.6,-305.21"/>
+<path fill="none" stroke="midnightblue" d="M696.09,-297.95C682.12,-286.71 662.28,-271.98 643,-262 631.82,-256.21 618.94,-251.34 607.3,-247.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="694.01,-300.77 703.96,-304.42 698.46,-295.37 694.01,-300.77"/>
 </g>
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="../../dd/dad/class_semantic_visitor.html#ae5a2583ca3d8f7b290d590a80a176877" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="328,-228.5 328,-247.5 453,-247.5 453,-228.5 328,-228.5"/>
-<text text-anchor="middle" x="390.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getFunc</text>
+<g id="a_node20"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="328,-266.5 328,-285.5 453,-285.5 453,-266.5 328,-266.5"/>
+<text text-anchor="middle" x="390.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getFunc</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node20 -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>Node1&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M699.32,-296.93C685.83,-283.49 665.1,-265.63 643,-257 581.62,-233.01 505.49,-230.66 453.16,-232.8"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="696.91,-299.47 706.38,-304.23 701.94,-294.61 696.91,-299.47"/>
+<path fill="none" stroke="midnightblue" d="M668.73,-308.56C612.08,-301.91 515.93,-290.62 453.07,-283.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="668.49,-312.06 678.83,-309.75 669.31,-305.11 668.49,-312.06"/>
 </g>
 <!-- Node22 -->
 <g id="node22" class="node">
 <title>Node22</title>
 <g id="a_node22"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="506.5,-380.5 506.5,-399.5 637.5,-399.5 637.5,-380.5 506.5,-380.5"/>
-<text text-anchor="middle" x="572" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkVar</text>
+<polygon fill="none" stroke="black" points="506.5,-342.5 506.5,-361.5 637.5,-361.5 637.5,-342.5 506.5,-342.5"/>
+<text text-anchor="middle" x="572" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkVar</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node22 -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>Node1&#45;&gt;Node22</title>
-<path fill="none" stroke="midnightblue" d="M698.37,-330.43C684.59,-343.19 663.94,-360.43 643,-371 635.47,-374.8 627.08,-377.91 618.81,-380.44"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="700.8,-332.94 705.64,-323.52 695.98,-327.87 700.8,-332.94"/>
+<path fill="none" stroke="midnightblue" d="M669.51,-326.17C649.87,-331.43 627.23,-337.49 608.82,-342.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="670.41,-329.56 679.17,-323.59 668.6,-322.79 670.41,-329.56"/>
 </g>
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="../../dd/dad/class_semantic_visitor.html#aea963a7a3088a38f24aa28aad85e38fd" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="331,-418.5 331,-437.5 450,-437.5 450,-418.5 331,-418.5"/>
-<text text-anchor="middle" x="390.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getVar</text>
+<g id="a_node23"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a9c6408c4a81900cc78c1e2171d7f1709" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="331,-304.5 331,-323.5 450,-323.5 450,-304.5 331,-304.5"/>
+<text text-anchor="middle" x="390.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getVar</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node23 -->
-<g id="edge32" class="edge">
+<g id="edge33" class="edge">
 <title>Node1&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M706.7,-332.93C695.72,-355.44 674.05,-392.09 643,-409 583.4,-441.47 503.77,-441.59 450.22,-436.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="709.95,-334.25 710.99,-323.7 703.6,-331.3 709.95,-334.25"/>
+<path fill="none" stroke="midnightblue" d="M668.57,-314C610.99,-314 512.78,-314 450.08,-314"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="668.83,-317.5 678.83,-314 668.83,-310.5 668.83,-317.5"/>
 </g>
 <!-- Node24 -->
 <g id="node24" class="node">
@@ -192,10 +192,10 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node24 -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>Node1&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M704.6,-295.49C692.34,-275.23 670.14,-243.1 643,-224 634.17,-217.79 623.6,-213.07 613.38,-209.53"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="701.73,-297.51 709.8,-304.37 707.77,-293.97 701.73,-297.51"/>
+<path fill="none" stroke="midnightblue" d="M705.77,-295.36C694.11,-273.74 672.01,-238.58 643,-219 637.26,-215.13 630.75,-212.04 624.08,-209.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="702.67,-296.97 710.38,-304.23 708.88,-293.75 702.67,-296.97"/>
 </g>
 <!-- Node25 -->
 <g id="node25" class="node">
@@ -207,7 +207,7 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node25 -->
-<g id="edge30" class="edge">
+<g id="edge31" class="edge">
 <title>Node1&#45;&gt;Node25</title>
 <path fill="none" stroke="midnightblue" d="M709.79,-294.42C701,-265.24 680.42,-210.63 643,-181 633.92,-173.81 622.32,-169.33 611.19,-166.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="706.48,-295.59 712.59,-304.25 713.21,-293.67 706.48,-295.59"/>
@@ -222,7 +222,7 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node27 -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>Node1&#45;&gt;Node27</title>
 <path fill="none" stroke="midnightblue" d="M712.33,-294.02C706.49,-258.28 689.16,-183.38 643,-143 631.91,-133.3 616.34,-128.5 602.69,-126.14"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="708.91,-294.78 713.85,-304.15 715.83,-293.75 708.91,-294.78"/>
@@ -237,7 +237,7 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node28 -->
-<g id="edge34" class="edge">
+<g id="edge35" class="edge">
 <title>Node1&#45;&gt;Node28</title>
 <path fill="none" stroke="midnightblue" d="M714.11,-294.32C711.14,-253 698.34,-156.76 643,-105 637.76,-100.1 631.38,-96.43 624.63,-93.7"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="710.62,-294.66 714.71,-304.43 717.61,-294.24 710.62,-294.66"/>
@@ -252,7 +252,7 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node29 -->
-<g id="edge35" class="edge">
+<g id="edge36" class="edge">
 <title>Node1&#45;&gt;Node29</title>
 <path fill="none" stroke="midnightblue" d="M715.34,-294.03C714.99,-247.32 707.36,-130.17 643,-67 638.51,-62.59 633.1,-59.18 627.3,-56.54"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="711.83,-294.29 715.3,-304.31 718.83,-294.32 711.83,-294.29"/>
@@ -267,7 +267,7 @@
 </g>
 </g>
 <!-- Node1&#45;&gt;Node30 -->
-<g id="edge36" class="edge">
+<g id="edge37" class="edge">
 <title>Node1&#45;&gt;Node30</title>
 <path fill="none" stroke="midnightblue" d="M712.6,-294.19C705.16,-236.01 680.72,-67.39 643,-29 638.23,-24.15 632.36,-20.5 626.07,-17.76"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="709.15,-294.79 713.86,-304.28 716.09,-293.92 709.15,-294.79"/>
@@ -302,64 +302,49 @@
 <path fill="none" stroke="midnightblue" d="M497.63,-580C479.86,-580 461.2,-580 444.57,-580"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="497.97,-583.5 507.97,-580 497.97,-576.5 497.97,-583.5"/>
 </g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="336.5,-532.5 336.5,-551.5 444.5,-551.5 444.5,-532.5 336.5,-532.5"/>
-<text text-anchor="middle" x="390.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::visit</text>
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" target="_top" xlink:title="Анализирует файл">
+<polygon fill="none" stroke="black" points="344,-494.5 344,-513.5 437,-513.5 437,-494.5 344,-494.5"/>
+<text text-anchor="middle" x="390.5" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::analyzeFile</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node7 -->
-<g id="edge6" class="edge">
-<title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M500.97,-542C482.25,-542 462.32,-542 444.67,-542"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="501.23,-545.5 511.23,-542 501.23,-538.5 501.23,-545.5"/>
+<!-- Node7&#45;&gt;Node8 -->
+<g id="edge7" class="edge">
+<title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M495.23,-504C475.51,-504 454.88,-504 437.25,-504"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="495.43,-507.5 505.43,-504 495.43,-500.5 495.43,-507.5"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" target="_top" xlink:title="Анализирует файл">
-<polygon fill="none" stroke="black" points="344,-494.5 344,-513.5 437,-513.5 437,-494.5 344,-494.5"/>
-<text text-anchor="middle" x="390.5" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::analyzeFile</text>
+<g id="a_node9"><a xlink:href="../../d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="160.5,-456.5 160.5,-475.5 263.5,-475.5 263.5,-456.5 160.5,-456.5"/>
+<text text-anchor="middle" x="212" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">Analyze::analyzeFile</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M495.23,-504C475.51,-504 454.88,-504 437.25,-504"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="495.43,-507.5 505.43,-504 495.43,-500.5 495.43,-507.5"/>
-</g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="170.5,-456.5 170.5,-475.5 253.5,-475.5 253.5,-456.5 170.5,-456.5"/>
-<text text-anchor="middle" x="212" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">checkEqualLex</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node10 -->
-<g id="edge9" class="edge">
-<title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M335.14,-492.3C308.84,-486.63 277.8,-479.95 253.6,-474.74"/>
+<path fill="none" stroke="midnightblue" d="M334.91,-492.25C309.96,-486.87 280.77,-480.59 257.22,-475.52"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="334.45,-495.73 344.96,-494.41 335.92,-488.88 334.45,-495.73"/>
 </g>
-<!-- Node12 -->
-<g id="node12" class="node">
-<title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="193,-532.5 193,-551.5 231,-551.5 231,-532.5 193,-532.5"/>
-<text text-anchor="middle" x="212" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="170.5,-532.5 170.5,-551.5 253.5,-551.5 253.5,-532.5 170.5,-532.5"/>
+<text text-anchor="middle" x="212" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">checkEqualLex</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node12 -->
-<g id="edge11" class="edge">
-<title>Node9&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M334.75,-515.79C299.35,-523.41 255.5,-532.85 231.27,-538.07"/>
+<!-- Node8&#45;&gt;Node11 -->
+<g id="edge10" class="edge">
+<title>Node8&#45;&gt;Node11</title>
+<path fill="none" stroke="midnightblue" d="M335.14,-515.7C308.84,-521.37 277.8,-528.05 253.6,-533.26"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="335.92,-519.12 344.96,-513.59 334.45,-512.27 335.92,-519.12"/>
 </g>
 <!-- Node13 -->
@@ -371,74 +356,95 @@
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node13 -->
+<!-- Node8&#45;&gt;Node13 -->
 <g id="edge12" class="edge">
-<title>Node9&#45;&gt;Node13</title>
+<title>Node8&#45;&gt;Node13</title>
 <path fill="none" stroke="midnightblue" d="M333.18,-504C298.78,-504 256.9,-504 232.75,-504"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="333.59,-507.5 343.59,-504 333.59,-500.5 333.59,-507.5"/>
 </g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" target="_top" xlink:title="Тест разбора простых математических выражений">
-<polygon fill="none" stroke="black" points="33.5,-456.5 33.5,-475.5 74.5,-475.5 74.5,-456.5 33.5,-456.5"/>
-<text text-anchor="middle" x="54" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">TEST</text>
+<!-- Node10 -->
+<g id="node10" class="node">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="../../d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="35,-456.5 35,-475.5 73,-475.5 73,-456.5 35,-456.5"/>
+<text text-anchor="middle" x="54" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node11 -->
-<g id="edge10" class="edge">
-<title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M160.34,-466C131.06,-466 95.9,-466 74.51,-466"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="160.42,-469.5 170.42,-466 160.42,-462.5 160.42,-469.5"/>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge9" class="edge">
+<title>Node9&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M150.35,-466C122.75,-466 92.11,-466 73.19,-466"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="150.35,-469.5 160.35,-466 150.35,-462.5 150.35,-469.5"/>
+</g>
+<!-- Node12 -->
+<g id="node12" class="node">
+<title>Node12</title>
+<g id="a_node12"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" target="_top" xlink:title="Тест разбора простых математических выражений">
+<polygon fill="none" stroke="black" points="33.5,-532.5 33.5,-551.5 74.5,-551.5 74.5,-532.5 33.5,-532.5"/>
+<text text-anchor="middle" x="54" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">TEST</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node12 -->
+<g id="edge11" class="edge">
+<title>Node11&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M160.34,-542C131.06,-542 95.9,-542 74.51,-542"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="160.42,-545.5 170.42,-542 160.42,-538.5 160.42,-545.5"/>
 </g>
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
 <g id="a_node15"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="316,-342.5 316,-361.5 465,-361.5 465,-342.5 316,-342.5"/>
-<text text-anchor="middle" x="390.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkDefined</text>
+<polygon fill="none" stroke="black" points="316,-380.5 316,-399.5 465,-399.5 465,-380.5 316,-380.5"/>
+<text text-anchor="middle" x="390.5" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::checkDefined</text>
 </a>
 </g>
 </g>
 <!-- Node14&#45;&gt;Node15 -->
 <g id="edge14" class="edge">
 <title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M490.59,-352C482.13,-352 473.55,-352 465.17,-352"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="490.83,-355.5 500.83,-352 490.83,-348.5 490.83,-355.5"/>
+<path fill="none" stroke="midnightblue" d="M490.59,-390C482.13,-390 473.55,-390 465.17,-390"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="490.83,-393.5 500.83,-390 490.83,-386.5 490.83,-393.5"/>
 </g>
 <!-- Node14&#45;&gt;Node18 -->
 <g id="edge17" class="edge">
 <title>Node14&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M515.82,-340.32C490.37,-334.93 460.53,-328.61 436.47,-323.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="515.2,-343.76 525.7,-342.41 516.65,-336.92 515.2,-343.76"/>
+<path fill="none" stroke="midnightblue" d="M515.82,-401.68C490.37,-407.07 460.53,-413.39 436.47,-418.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="516.65,-405.08 525.7,-399.59 515.2,-398.24 516.65,-405.08"/>
 </g>
 <!-- Node15&#45;&gt;Node16 -->
 <g id="edge15" class="edge">
 <title>Node15&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M334.91,-363.75C309.96,-369.13 280.77,-375.41 257.22,-380.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="335.92,-367.12 344.96,-361.59 334.45,-360.27 335.92,-367.12"/>
+<path fill="none" stroke="midnightblue" d="M305.88,-399C297.29,-399.93 288.64,-400.86 280.25,-401.76"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="306.36,-402.47 315.93,-397.92 305.61,-395.51 306.36,-402.47"/>
 </g>
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
 <g id="a_node17"><a xlink:href="../../dd/dad/class_semantic_visitor.html#acd096563bbd342c4c3cc0fa6b81f7c2d" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-380.5 0,-399.5 108,-399.5 108,-380.5 0,-380.5"/>
-<text text-anchor="middle" x="54" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::visit</text>
+<polygon fill="none" stroke="black" points="0,-399.5 0,-418.5 108,-418.5 108,-399.5 0,-399.5"/>
+<text text-anchor="middle" x="54" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::visit</text>
 </a>
 </g>
 </g>
 <!-- Node16&#45;&gt;Node17 -->
 <g id="edge16" class="edge">
 <title>Node16&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M133.85,-390C125.22,-390 116.59,-390 108.36,-390"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="133.94,-393.5 143.94,-390 133.94,-386.5 133.94,-393.5"/>
+<path fill="none" stroke="midnightblue" d="M133.85,-409C125.22,-409 116.59,-409 108.36,-409"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="133.94,-412.5 143.94,-409 133.94,-405.5 133.94,-412.5"/>
+</g>
+<!-- Node18&#45;&gt;Node16 -->
+<g id="edge18" class="edge">
+<title>Node18&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M315.58,-420.04C303.85,-418.78 291.77,-417.48 280.2,-416.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="315.46,-423.55 325.78,-421.14 316.21,-416.59 315.46,-423.55"/>
 </g>
 <!-- Node19&#45;&gt;Node20 -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>Node19&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M515.82,-264.32C490.37,-258.93 460.53,-252.61 436.47,-247.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="515.2,-267.76 525.7,-266.41 516.65,-260.92 515.2,-267.76"/>
+<path fill="none" stroke="midnightblue" d="M515.82,-249.68C490.37,-255.07 460.53,-261.39 436.47,-266.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="516.65,-253.08 525.7,-247.59 515.2,-246.24 516.65,-253.08"/>
 </g>
 <!-- Node21 -->
 <g id="node21" class="node">
@@ -450,34 +456,34 @@
 </g>
 </g>
 <!-- Node19&#45;&gt;Node21 -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>Node19&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M492.48,-271.83C423.8,-268.19 325.91,-262.99 266.07,-259.82"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="492.65,-275.35 502.82,-272.38 493.02,-268.36 492.65,-275.35"/>
+<path fill="none" stroke="midnightblue" d="M492.48,-242.17C423.8,-245.81 325.91,-251.01 266.07,-254.18"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="493.02,-245.64 502.82,-241.62 492.65,-238.65 493.02,-245.64"/>
 </g>
 <!-- Node20&#45;&gt;Node21 -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M317.74,-245.72C300.51,-247.58 282.41,-249.53 266.19,-251.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="318.2,-249.2 327.77,-244.65 317.45,-242.24 318.2,-249.2"/>
+<path fill="none" stroke="midnightblue" d="M317.74,-268.28C300.51,-266.42 282.41,-264.47 266.19,-262.73"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="317.45,-271.76 327.77,-269.35 318.2,-264.8 317.45,-271.76"/>
 </g>
 <!-- Node22&#45;&gt;Node15 -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>Node22&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M515.82,-378.32C490.37,-372.93 460.53,-366.61 436.47,-361.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="515.2,-381.76 525.7,-380.41 516.65,-374.92 515.2,-381.76"/>
+<path fill="none" stroke="midnightblue" d="M515.82,-363.68C490.37,-369.07 460.53,-375.39 436.47,-380.48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="516.65,-367.08 525.7,-361.59 515.2,-360.24 516.65,-367.08"/>
 </g>
 <!-- Node22&#45;&gt;Node16 -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>Node22&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M495.78,-390C432.02,-390 341.41,-390 280.08,-390"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="496.17,-393.5 506.17,-390 496.17,-386.5 496.17,-393.5"/>
+<path fill="none" stroke="midnightblue" d="M496.36,-352.11C445.1,-353.5 375.79,-358.01 316,-371 286.57,-377.39 254.23,-390.37 233.79,-399.37"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="496.45,-355.6 506.36,-351.87 496.28,-348.61 496.45,-355.6"/>
 </g>
 <!-- Node22&#45;&gt;Node23 -->
-<g id="edge25" class="edge">
+<g id="edge26" class="edge">
 <title>Node22&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M515.82,-401.68C490.37,-407.07 460.53,-413.39 436.47,-418.48"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="516.65,-405.08 525.7,-399.59 515.2,-398.24 516.65,-405.08"/>
+<path fill="none" stroke="midnightblue" d="M515.82,-340.32C490.37,-334.93 460.53,-328.61 436.47,-323.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="515.2,-343.76 525.7,-342.41 516.65,-336.92 515.2,-343.76"/>
 </g>
 <!-- Node26 -->
 <g id="node26" class="node">
@@ -490,7 +496,7 @@
 </g>
 </g>
 <!-- Node25&#45;&gt;Node26 -->
-<g id="edge31" class="edge">
+<g id="edge32" class="edge">
 <title>Node25&#45;&gt;Node26</title>
 <path fill="none" stroke="midnightblue" d="M522.87,-162C502.34,-162 478.07,-162 456.01,-162"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="522.93,-165.5 532.93,-162 522.93,-158.5 522.93,-165.5"/>

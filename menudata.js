@@ -126,7 +126,6 @@ var menudata={children:[
 {text:"a",url:"globals.html#index_a"},
 {text:"c",url:"globals.html#index_c"},
 {text:"g",url:"globals.html#index_g"},
-{text:"h",url:"globals.html#index_h"},
 {text:"i",url:"globals.html#index_i"},
 {text:"m",url:"globals.html#index_m"},
 {text:"r",url:"globals.html#index_r"},
@@ -136,7 +135,6 @@ var menudata={children:[
 {text:"Функции",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"c",url:"globals_func.html#index_c"},
-{text:"h",url:"globals_func.html#index_h"},
 {text:"i",url:"globals_func.html#index_i"},
 {text:"m",url:"globals_func.html#index_m"},
 {text:"t",url:"globals_func.html#index_t"},
