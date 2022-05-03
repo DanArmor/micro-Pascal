@@ -1,17 +1,5 @@
-#include <map>
-#include <string>
 #include <iostream>
-#include <variant>
-#include <any>
-
-#include "List.cpp"
-
-#include "Token.hpp"
-#include "Lexer.hpp"
-#include "Syntax.hpp"
-#include "Visitor.hpp"
-
-#include "PascalTokens.hpp"
+#include "Analyze.hpp"
 
 int main(int argc, char** argv){
 
@@ -20,16 +8,7 @@ int main(int argc, char** argv){
         exit(1);
     }
 
-    Lexer lexer;
-    lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> tokens = lexer.analyzeFile(argv[1]);
-
-    SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST>root(syntax.parseTokens());
-
-    GraphvizVisitor graph("out.dot");
-    root->accept(graph);
-    graph.write();
+    Analyze::analyzeFile(argv[1]);
 
     return 0;
 }

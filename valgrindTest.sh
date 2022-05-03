@@ -24,6 +24,15 @@ do
     fi
 done
 
+for file in ./tests/semantic/text*
+do
+    cp "./$file" "./build/tests/"
+    if [[ $? -ne 0 ]] ; then
+        printf "Error during coping test data for syntax!\n"
+        exit 1
+    fi
+done
+
 for file in ./build/tests/test*
 do
     valgrind --leak-check=full --error-exitcode=1 "./$file"

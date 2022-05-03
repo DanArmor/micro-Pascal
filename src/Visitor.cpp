@@ -631,12 +631,12 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void SemanticVisitor::checkDefined(Token name) {
         if (!checkVar(name) && !checkConst(name))
-            throw SyntaxException(name, "Использование до объявления! ");
+            throw SemanticException(name, "Использование до объявления! ");
     }
 
     void SemanticVisitor::addFunc(Token token) {
         if (functions.count(token.getStr()) != 0)
-            throw SyntaxException(token, "Повторное объявление подпрограммы! ");
+            throw SemanticException(token, "Повторное объявление подпрограммы! ");
         functions[token.getStr()] = FunctionData(token);
     }
 
@@ -662,7 +662,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void SemanticVisitor::checkFunc(Token token) {
         if (functions.count(token.getStr()) == 0)
-            throw SyntaxException(token, "Использование до объявления! ");
+            throw SemanticException(token, "Использование до объявления! ");
     }
 
     bool SemanticVisitor::compareTypes(std::string A, std::string B, bool strict) {
