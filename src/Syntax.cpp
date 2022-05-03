@@ -302,10 +302,18 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxSelect(void){
     Token tok = getCurTok();
     tok.setAdvType(IToken::SELECT);
     std::unique_ptr<AST> var = std::move(syntaxVariable());
-    eat(IToken::LSQBRACKET);
-    std::unique_ptr<AST> index = std::move(syntaxExpr());
-    eat(IToken::RSQBRACKET);
-    return ASTFactory::createAST(tok, std::move(var), std::move(index));
+    std::vector<std::unique_ptr<AST>> selections;
+    while(getCurTok().getType() == IToken::LSQBRACKET){
+        eat(IToken::LSQBRACKET);
+        std::unique_ptr<AST> index = std::move(syntaxExpr());
+        eat(IToken::RSQBRACKET);
+        selections.emplace_back(std::move(index));
+    }
+    if(selections.size() != 1)
+        for(std::size_t i = 0; i < selections.size() - 1; i++){
+            var = ASTFactory::createAST(tok, std::move(var), std::move(selections[i]));
+        }
+    return ASTFactory::createAST(tok, std::move(var), std::move(selections[selections.size()-1]));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){

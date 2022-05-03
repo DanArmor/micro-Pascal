@@ -341,8 +341,8 @@ void TypeViewVisitor::visit(WhileAST &node){
 
 void TypeViewVisitor::visit(ForAST &node){
     typesStrings.push_back(node.token.getStr());
-    node.body->accept(*this);
     node.iterSt->accept(*this);
+    node.body->accept(*this);
 }
 
 void TypeViewVisitor::visit(IterationAST &node){
@@ -471,7 +471,7 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void SemanticVisitor::visit(VarDeclAST &node){
-        addVar(node.var->token);
+        addVar(node.var->token, node.type.get());
         getDefined(node.var->token).type = getValue(node.type.get());
         if(! isIn(getDefined(node.var->token).type, {std::string("integer"), std::string("real"), std::string("string")})){
             getDefined(node.var->token).subType = getSubType(static_cast<ArrSpecAST*>(node.type.get()));
@@ -542,7 +542,9 @@ std::vector<std::string> TypeViewVisitor::getData(void){
 
     void SemanticVisitor::visit(ReturnAST &node){
         std::string returnType = getValue(node.toReturn.get());
-        std::string expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME}).returnType;
+        std::string expected = "integer";
+        if(currCheckFunc != "")
+            expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME}).returnType;
         if(!compareTypes(expected, returnType)){
             throw TypeException(node.token, fmt::format("Ожидался {}, а получен {}. ", expected, returnType));
         }
@@ -558,17 +560,41 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     }
 
     void SemanticVisitor::visit(SelectAST &node){
-        Return(getDefined(node.from->token).subType);
+        if(node.from->token.getAdvType() == IToken::AdvType::SELECT){
+            typeIndex++;
+            node.from->accept(*this);
+            typeIndex--;
+        } else{
+            AST *type = getDefined(node.from->token).typePtr;
+            for(std::size_t i = 0; i  < typeIndex + 1; i++){
+                if(!isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
+                    type = static_cast<ArrSpecAST*>(type)->subType.get();
+                }
+            }
+            if(isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
+                Return(type->token.getStr());
+            } else{
+                Return(getValue(static_cast<ArrSpecAST*>(type)));
+            }
+        }
     }
 
     void SemanticVisitor::addProgName(std::string name) {
         programName = name;
     }
 
+    SemanticVisitor::VarData::VarData(Token token, AST *typePtr) : token(token), typePtr(typePtr){};
+
     void SemanticVisitor::addVar(Token token) {
         if (vars.count(token.getStr()) != 0)
             throw SemanticException(token, "Повторное объявление! ");
         vars[token.getStr()] = VarData(token, false);
+    }
+
+    void SemanticVisitor::addVar(Token token, AST *ptr) {
+        if (vars.count(token.getStr()) != 0)
+            throw SemanticException(token, "Повторное объявление! ");
+        vars[token.getStr()] = VarData(token, ptr);
     }
 
     void SemanticVisitor::addConst(Token token) {

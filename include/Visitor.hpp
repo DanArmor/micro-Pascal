@@ -131,8 +131,7 @@ private:
 class SemanticVisitor : public IVisitor
 {
 public:
-    struct FunctionData
-    {
+    struct FunctionData{
         FunctionData(Token token);
         FunctionData(Token token, std::vector<std::string> params, std::string returnType);
         FunctionData();
@@ -141,15 +140,18 @@ public:
         std::string returnType;
     };
 
-    struct VarData
-    {
+    struct VarData{
+        VarData(Token token, AST *typePtr);
         VarData(Token token, bool isConst);
         VarData();
+        AST *typePtr = nullptr;
         Token token;
         bool isConst;
         std::string subType;
         std::string type;
     };
+
+    void addVar(Token token, AST *ptr);
 
     SemanticVisitor();
 
@@ -241,6 +243,7 @@ public:
     std::string showValue(void);
 
 private:
+    std::size_t typeIndex = 0;
     bool isConst = false;
     std::string value;
     std::string programName;

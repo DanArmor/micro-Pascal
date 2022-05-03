@@ -67,28 +67,11 @@ int main(int argc, char** argv){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile(argv[1]);
 
-
-//    for(auto tok : tokens){
-//        std::cout << fmt::format("Str:{} Type:{}\nLine:{} InLinePos:{} Absolute:{}\n\n", tok.getStr(), magic_enum::enum_name(tok.getType()), std::to_string(tok.line()), std::to_string(tok.posInLine()), std::to_string(tok.pos()));
-//    }
-
-//    for(auto tok : tokens){
-//        std::cout << fmt::format("{}     {}\n", tok.getStr(), magic_enum::enum_name(tok.getType()));
-//    }
-    //List<Token>  tokens{{Token("PROGRAM", IToken::PROGRAM), Token("NAME", IToken::ID), Token(";", IToken::SEMI), Token("BEGIN", IToken::BEGIN), Token("END", IToken::END), Token(".", IToken::DOT), Token("$", IToken::ENDOFSTREAM)}};
-    
-    
     SyntaxAnalyzer syntax(tokens);
     std::unique_ptr<AST>root(syntax.parseTokens());
 
     highlight(lexer.getText(), syntax.getTokens());
 
-    //for(auto tt : hl.getTokens()){
-        //std::cout << tt.getInfo() << "\n";
-    //}
-
-
-//
     GraphvizVisitor graph("out.dot");
     root->accept(graph);
     graph.write();
@@ -96,14 +79,5 @@ int main(int argc, char** argv){
     SemanticVisitor semantic;
     root->accept(semantic);
 
-//    CodeGenVisitor code("test.s");
-//    root->accept(code);
-//    code.done();
-
-//    CalcVisitor calc;
-//    root->accept(calc);
-//
-//    for(auto p : globalVariables)
-//        std::cout << fmt::format("{}={}\n", p.first, p.second);
     return 0;
 }

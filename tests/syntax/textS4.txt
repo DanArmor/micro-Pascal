@@ -1,0 +1,7 @@
+function add();
+    begin
+    end;
+    
+program test;
+
+end.

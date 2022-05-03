@@ -1,0 +1,6 @@
+program test;
+
+begin
+    for i := 1 down 5 do
+    ;
+end.
