@@ -294,12 +294,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00600">600</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  600</span>                                              {</div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordflow">if</span> (consts.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
-<div class="line"><span class="lineno">  602</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
-<div class="line"><span class="lineno">  603</span>        consts[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  604</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00601">601</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  601</span>                                          {</div>
+<div class="line"><span class="lineno">  602</span>    <span class="keywordflow">if</span> (consts.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
+<div class="line"><span class="lineno">  603</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
+<div class="line"><span class="lineno">  604</span>    consts[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  605</span>}</div>
 <div class="ttc" id="aclass_semantic_exception_html"><div class="ttname"><a href="../../d6/d2c/class_semantic_exception.html">SemanticException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00037">SyntExp.hpp:37</a></div></div>
 <div class="ttc" id="aclass_token_html_aa5d6826fae7d616e2cfe3e27b5dd594a"><div class="ttname"><a href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">Token::getStr</a></div><div class="ttdeci">std::string const &amp; getStr(void) const</div><div class="ttdoc">Возвращает константную ссылку на строковое представление токена</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00031">Token.cpp:31</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -337,12 +337,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00637">637</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  637</span>                                             {</div>
-<div class="line"><span class="lineno">  638</span>        <span class="keywordflow">if</span> (functions.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
-<div class="line"><span class="lineno">  639</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление подпрограммы! &quot;</span>);</div>
-<div class="line"><span class="lineno">  640</span>        functions[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = FunctionData(token);</div>
-<div class="line"><span class="lineno">  641</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00638">638</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  638</span>                                         {</div>
+<div class="line"><span class="lineno">  639</span>    <span class="keywordflow">if</span> (functions.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
+<div class="line"><span class="lineno">  640</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление подпрограммы! &quot;</span>);</div>
+<div class="line"><span class="lineno">  641</span>    functions[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = FunctionData(token);</div>
+<div class="line"><span class="lineno">  642</span>}</div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -378,10 +378,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00582">582</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  582</span>                                                    {</div>
-<div class="line"><span class="lineno">  583</span>        programName = name;</div>
-<div class="line"><span class="lineno">  584</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00583">583</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  583</span>                                                {</div>
+<div class="line"><span class="lineno">  584</span>    programName = name;</div>
+<div class="line"><span class="lineno">  585</span>}</div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -409,12 +409,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00588">588</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  588</span>                                            {</div>
-<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">if</span> (vars.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
-<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
-<div class="line"><span class="lineno">  591</span>        vars[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  592</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00589">589</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  589</span>                                        {</div>
+<div class="line"><span class="lineno">  590</span>    <span class="keywordflow">if</span> (vars.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
+<div class="line"><span class="lineno">  591</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
+<div class="line"><span class="lineno">  592</span>    vars[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  593</span>}</div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -452,12 +452,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00594">594</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  594</span>                                                      {</div>
-<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span> (vars.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
-<div class="line"><span class="lineno">  596</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
-<div class="line"><span class="lineno">  597</span>        vars[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, ptr);</div>
-<div class="line"><span class="lineno">  598</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00595">595</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  595</span>                                                  {</div>
+<div class="line"><span class="lineno">  596</span>    <span class="keywordflow">if</span> (vars.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0)</div>
+<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Повторное объявление! &quot;</span>);</div>
+<div class="line"><span class="lineno">  598</span>    vars[token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()] = VarData(token, ptr);</div>
+<div class="line"><span class="lineno">  599</span>}</div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -493,10 +493,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00659">659</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  659</span>                                               {</div>
-<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">return</span> consts.count(name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0;</div>
-<div class="line"><span class="lineno">  661</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00660">660</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  660</span>                                           {</div>
+<div class="line"><span class="lineno">  661</span>    <span class="keywordflow">return</span> consts.count(name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0;</div>
+<div class="line"><span class="lineno">  662</span>}</div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -532,13 +532,13 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00632">632</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  632</span>                                                 {</div>
-<div class="line"><span class="lineno">  633</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name) &amp;&amp; !<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">checkConst</a>(name))</div>
-<div class="line"><span class="lineno">  634</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
-<div class="line"><span class="lineno">  635</span>    }</div>
-<div class="ttc" id="aclass_semantic_visitor_html_a2d725cf78ec050f19b089c651ae2eca0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">SemanticVisitor::checkConst</a></div><div class="ttdeci">bool checkConst(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00659">Visitor.cpp:659</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a77366aa5cb857ad347b0e487287f5d99"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">SemanticVisitor::checkVar</a></div><div class="ttdeci">bool checkVar(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00655">Visitor.cpp:655</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00633">633</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  633</span>                                             {</div>
+<div class="line"><span class="lineno">  634</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name) &amp;&amp; !<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">checkConst</a>(name))</div>
+<div class="line"><span class="lineno">  635</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
+<div class="line"><span class="lineno">  636</span>}</div>
+<div class="ttc" id="aclass_semantic_visitor_html_a2d725cf78ec050f19b089c651ae2eca0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">SemanticVisitor::checkConst</a></div><div class="ttdeci">bool checkConst(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00660">Visitor.cpp:660</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a77366aa5cb857ad347b0e487287f5d99"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">SemanticVisitor::checkVar</a></div><div class="ttdeci">bool checkVar(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00656">Visitor.cpp:656</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -574,11 +574,11 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00663">663</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  663</span>                                               {</div>
-<div class="line"><span class="lineno">  664</span>        <span class="keywordflow">if</span> (functions.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) == 0)</div>
-<div class="line"><span class="lineno">  665</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
-<div class="line"><span class="lineno">  666</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00664">664</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  664</span>                                           {</div>
+<div class="line"><span class="lineno">  665</span>    <span class="keywordflow">if</span> (functions.count(token.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) == 0)</div>
+<div class="line"><span class="lineno">  666</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(token, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
+<div class="line"><span class="lineno">  667</span>}</div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -614,10 +614,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00655">655</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  655</span>                                             {</div>
-<div class="line"><span class="lineno">  656</span>        <span class="keywordflow">return</span> vars.count(name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0;</div>
-<div class="line"><span class="lineno">  657</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00656">656</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  656</span>                                         {</div>
+<div class="line"><span class="lineno">  657</span>    <span class="keywordflow">return</span> vars.count(name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) != 0;</div>
+<div class="line"><span class="lineno">  658</span>}</div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -654,10 +654,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00680">680</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  680</span>                                         {</div>
-<div class="line"><span class="lineno">  681</span>        vars.clear();</div>
-<div class="line"><span class="lineno">  682</span>        consts.clear();</div>
-<div class="line"><span class="lineno">  683</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  680</span>                                     {</div>
+<div class="line"><span class="lineno">  681</span>    vars.clear();</div>
+<div class="line"><span class="lineno">  682</span>    consts.clear();</div>
+<div class="line"><span class="lineno">  683</span>}</div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -701,18 +701,17 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00668">668</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  668</span>                                                                            {</div>
-<div class="line"><span class="lineno">  669</span>        <span class="keywordflow">if</span> (strict) {</div>
-<div class="line"><span class="lineno">  670</span>            <span class="keywordflow">return</span> A == B;</div>
-<div class="line"><span class="lineno">  671</span>        }</div>
-<div class="line"><span class="lineno">  672</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  673</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(A, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)}) &amp;&amp; <a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(B, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})) {</div>
-<div class="line"><span class="lineno">  674</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  675</span>            }</div>
-<div class="line"><span class="lineno">  676</span>            <span class="keywordflow">return</span> A == B;</div>
-<div class="line"><span class="lineno">  677</span>        }</div>
-<div class="line"><span class="lineno">  678</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00669">669</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  669</span>                                                                        {</div>
+<div class="line"><span class="lineno">  670</span>    <span class="keywordflow">if</span> (strict) {</div>
+<div class="line"><span class="lineno">  671</span>        <span class="keywordflow">return</span> A == B;</div>
+<div class="line"><span class="lineno">  672</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  673</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(A, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)}) &amp;&amp; <a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(B, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})) {</div>
+<div class="line"><span class="lineno">  674</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  675</span>        }</div>
+<div class="line"><span class="lineno">  676</span>        <span class="keywordflow">return</span> A == B;</div>
+<div class="line"><span class="lineno">  677</span>    }</div>
+<div class="line"><span class="lineno">  678</span>}</div>
 <div class="ttc" id="asup_8hpp_html_ae7d62ca130413d4c96863327c1af81a4"><div class="ttname"><a href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a></div><div class="ttdeci">bool isIn(T const &amp;value, std::initializer_list&lt; T &gt; const &amp;cont)</div><div class="ttdoc">Возвращает истину, если value находится среди значений cont.</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d0e/sup_8hpp_source.html#l00013">sup.hpp:13</a></div></div>
 </div><!-- fragment --><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -749,13 +748,13 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00613">613</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  613</span>                                                                {</div>
-<div class="line"><span class="lineno">  614</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">checkConst</a>(name)){</div>
-<div class="line"><span class="lineno">  615</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
-<div class="line"><span class="lineno">  616</span>        }</div>
-<div class="line"><span class="lineno">  617</span>        <span class="keywordflow">return</span> consts[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
-<div class="line"><span class="lineno">  618</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00614">614</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  614</span>                                                            {</div>
+<div class="line"><span class="lineno">  615</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0">checkConst</a>(name)){</div>
+<div class="line"><span class="lineno">  616</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
+<div class="line"><span class="lineno">  617</span>    }</div>
+<div class="line"><span class="lineno">  618</span>    <span class="keywordflow">return</span> consts[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
+<div class="line"><span class="lineno">  619</span>}</div>
 </div><!-- fragment --><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -791,20 +790,20 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00620">620</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  620</span>                                                                  {</div>
-<div class="line"><span class="lineno">  621</span>        <span class="keywordflow">if</span>(isConst){</div>
-<div class="line"><span class="lineno">  622</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037">getConst</a>(name);</div>
-<div class="line"><span class="lineno">  623</span>        }</div>
-<div class="line"><span class="lineno">  624</span> </div>
-<div class="line"><span class="lineno">  625</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f">checkDefined</a>(name);</div>
-<div class="line"><span class="lineno">  626</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name))</div>
-<div class="line"><span class="lineno">  627</span>            <span class="keywordflow">return</span> vars[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
-<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  629</span>            <span class="keywordflow">return</span> consts[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
-<div class="line"><span class="lineno">  630</span>    }</div>
-<div class="ttc" id="aclass_semantic_visitor_html_a44b32ee220302ba2d55c0c36a191a51f"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f">SemanticVisitor::checkDefined</a></div><div class="ttdeci">void checkDefined(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00632">Visitor.cpp:632</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a57d5d38a8fe988e01d4c51fd06e01037"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037">SemanticVisitor::getConst</a></div><div class="ttdeci">VarData &amp; getConst(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00613">Visitor.cpp:613</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00621">621</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  621</span>                                                              {</div>
+<div class="line"><span class="lineno">  622</span>    <span class="keywordflow">if</span>(isConst){</div>
+<div class="line"><span class="lineno">  623</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037">getConst</a>(name);</div>
+<div class="line"><span class="lineno">  624</span>    }</div>
+<div class="line"><span class="lineno">  625</span> </div>
+<div class="line"><span class="lineno">  626</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f">checkDefined</a>(name);</div>
+<div class="line"><span class="lineno">  627</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name))</div>
+<div class="line"><span class="lineno">  628</span>        <span class="keywordflow">return</span> vars[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
+<div class="line"><span class="lineno">  629</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  630</span>        <span class="keywordflow">return</span> consts[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
+<div class="line"><span class="lineno">  631</span>}</div>
+<div class="ttc" id="aclass_semantic_visitor_html_a44b32ee220302ba2d55c0c36a191a51f"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f">SemanticVisitor::checkDefined</a></div><div class="ttdeci">void checkDefined(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00633">Visitor.cpp:633</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a57d5d38a8fe988e01d4c51fd06e01037"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037">SemanticVisitor::getConst</a></div><div class="ttdeci">VarData &amp; getConst(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00614">Visitor.cpp:614</a></div></div>
 </div><!-- fragment --><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-23-summary" class="dynsummary" style="display:block;">
@@ -840,15 +839,15 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00647">647</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  647</span>                                                                    {</div>
-<div class="line"><span class="lineno">  648</span>        <span class="keywordflow">if</span>(isConst){</div>
-<div class="line"><span class="lineno">  649</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Попытка вызова функции в константном выражении! &quot;</span>);</div>
-<div class="line"><span class="lineno">  650</span>        }</div>
-<div class="line"><span class="lineno">  651</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">checkFunc</a>(name);</div>
-<div class="line"><span class="lineno">  652</span>        <span class="keywordflow">return</span> functions[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
-<div class="line"><span class="lineno">  653</span>    }</div>
-<div class="ttc" id="aclass_semantic_visitor_html_a2a1ffedc7dc1d345d4020cabd39d23e0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">SemanticVisitor::checkFunc</a></div><div class="ttdeci">void checkFunc(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00663">Visitor.cpp:663</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00648">648</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  648</span>                                                                {</div>
+<div class="line"><span class="lineno">  649</span>    <span class="keywordflow">if</span>(isConst){</div>
+<div class="line"><span class="lineno">  650</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Попытка вызова функции в константном выражении! &quot;</span>);</div>
+<div class="line"><span class="lineno">  651</span>    }</div>
+<div class="line"><span class="lineno">  652</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">checkFunc</a>(name);</div>
+<div class="line"><span class="lineno">  653</span>    <span class="keywordflow">return</span> functions[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
+<div class="line"><span class="lineno">  654</span>}</div>
+<div class="ttc" id="aclass_semantic_visitor_html_a2a1ffedc7dc1d345d4020cabd39d23e0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">SemanticVisitor::checkFunc</a></div><div class="ttdeci">void checkFunc(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00664">Visitor.cpp:664</a></div></div>
 </div><!-- fragment --><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-25-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-25-summary" class="dynsummary" style="display:block;">
@@ -884,10 +883,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00558">558</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  558</span>                                                         {</div>
-<div class="line"><span class="lineno">  559</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node-&gt;<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a06db3dec63983536f2d94e8071bb2403">subType</a>.get());</div>
-<div class="line"><span class="lineno">  560</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00559">559</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  559</span>                                                     {</div>
+<div class="line"><span class="lineno">  560</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node-&gt;<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a06db3dec63983536f2d94e8071bb2403">subType</a>.get());</div>
+<div class="line"><span class="lineno">  561</span>}</div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a06db3dec63983536f2d94e8071bb2403"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a06db3dec63983536f2d94e8071bb2403">ArrSpecAST::subType</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; subType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00150">AST.hpp:150</a></div></div>
 <div class="ttc" id="aclass_semantic_visitor_html_a7e2681f9965e7aa34cd55bc5614310d8"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">SemanticVisitor::getValue</a></div><div class="ttdeci">std::string getValue(AST *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00685">Visitor.cpp:685</a></div></div>
 </div><!-- fragment --><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -926,11 +925,11 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00685">685</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  685</span>                                                {</div>
-<div class="line"><span class="lineno">  686</span>        <span class="keyword">auto</span> vis = *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  687</span>        ptr-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(vis);</div>
-<div class="line"><span class="lineno">  688</span>        <span class="keywordflow">return</span> vis.value;</div>
-<div class="line"><span class="lineno">  689</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  685</span>                                            {</div>
+<div class="line"><span class="lineno">  686</span>    <span class="keyword">auto</span> vis = *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  687</span>    ptr-&gt;<a class="code hl_function" href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">accept</a>(vis);</div>
+<div class="line"><span class="lineno">  688</span>    <span class="keywordflow">return</span> vis.value;</div>
+<div class="line"><span class="lineno">  689</span>}</div>
 <div class="ttc" id="aclass_a_s_t_html_a2be6b7f1a62e69bf7c408a314cd09a87"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87">AST::accept</a></div><div class="ttdeci">virtual void accept(IVisitor &amp;visitor)=0</div></div>
 </div><!-- fragment --><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-29-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -967,13 +966,13 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00606">606</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  606</span>                                                              {</div>
-<div class="line"><span class="lineno">  607</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name)){</div>
-<div class="line"><span class="lineno">  608</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
-<div class="line"><span class="lineno">  609</span>        }</div>
-<div class="line"><span class="lineno">  610</span>        <span class="keywordflow">return</span> vars[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
-<div class="line"><span class="lineno">  611</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00607">607</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  607</span>                                                          {</div>
+<div class="line"><span class="lineno">  608</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99">checkVar</a>(name)){</div>
+<div class="line"><span class="lineno">  609</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(name, <span class="stringliteral">&quot;Использование до объявления! &quot;</span>);</div>
+<div class="line"><span class="lineno">  610</span>    }</div>
+<div class="line"><span class="lineno">  611</span>    <span class="keywordflow">return</span> vars[name.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()];</div>
+<div class="line"><span class="lineno">  612</span>}</div>
 </div><!-- fragment --><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -1017,10 +1016,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00643">643</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  643</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  644</span>        functions[name] = FunctionData(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a>(name, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>), params, returnType);</div>
-<div class="line"><span class="lineno">  645</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00644">644</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  644</span>                                                                                                       {</div>
+<div class="line"><span class="lineno">  645</span>    functions[name] = FunctionData(<a class="code hl_class" href="../../db/dc1/class_token.html">Token</a>(name, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>), params, returnType);</div>
+<div class="line"><span class="lineno">  646</span>}</div>
 <div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a></div><div class="ttdeci">@ FUNCTION_NAME</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00015">Token.hpp:15</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a></div><div class="ttdeci">@ ID</div><div class="ttdoc">Индентификатор</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00038">Token.hpp:38</a></div></div>
 <div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00142">Token.hpp:142</a></div></div>
@@ -1052,9 +1051,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 </dl>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00695">695</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  695</span>                                                  {</div>
-<div class="line"><span class="lineno">  696</span>        value = inValue;</div>
-<div class="line"><span class="lineno">  697</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  695</span>                                              {</div>
+<div class="line"><span class="lineno">  696</span>    value = inValue;</div>
+<div class="line"><span class="lineno">  697</span>}</div>
 </div><!-- fragment --><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-32-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-32-summary" class="dynsummary" style="display:block;">
@@ -1085,9 +1084,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Показывает хранимое внутри посетителя значение </p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00700">700</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  700</span>                                             {</div>
-<div class="line"><span class="lineno">  701</span>        <span class="keywordflow">return</span> value;</div>
-<div class="line"><span class="lineno">  702</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  700</span>                                         {</div>
+<div class="line"><span class="lineno">  701</span>    <span class="keywordflow">return</span> value;</div>
+<div class="line"><span class="lineno">  702</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1117,10 +1116,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a807ad7f66e9f3f95c7833a4b8aeab8fc">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00554">554</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  554</span>                                               {</div>
-<div class="line"><span class="lineno">  555</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(fmt::format(<span class="stringliteral">&quot;{}[{} .. {}] of &quot;</span>, node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">lHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">rHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) + <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a06db3dec63983536f2d94e8071bb2403">subType</a>.get()));</div>
-<div class="line"><span class="lineno">  556</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00555">555</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  555</span>                                           {</div>
+<div class="line"><span class="lineno">  556</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(fmt::format(<span class="stringliteral">&quot;{}[{} .. {}] of &quot;</span>, node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">lHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">rHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>()) + <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a06db3dec63983536f2d94e8071bb2403">subType</a>.get()));</div>
+<div class="line"><span class="lineno">  557</span>}</div>
 <div class="ttc" id="aclass_a_s_t_html_acd50071d5e3ece75e4e5c4b7808d3c5e"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">AST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00070">ASTclasses.hpp:70</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a0b509ec69f8ebbde4e4908af836930db"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">ArrSpecAST::lHandTok</a></div><div class="ttdeci">Token lHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00148">AST.hpp:148</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a99a2f241557602ed85177809253da6a3"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">ArrSpecAST::rHandTok</a></div><div class="ttdeci">Token rHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00149">AST.hpp:149</a></div></div>
@@ -1163,13 +1162,13 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00441">441</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>                                              {</div>
-<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a23a4dd5723da9497988f3493d55362d2">var</a>.get()), <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6355823a5d09a2354fb8eb1f7d7754fa">value</a>.get())))</div>
-<div class="line"><span class="lineno">  443</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Присваивание несовместимых типов {} = {}. &quot;</span>, <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a23a4dd5723da9497988f3493d55362d2">var</a>.get()), <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6355823a5d09a2354fb8eb1f7d7754fa">value</a>.get())));</div>
-<div class="line"><span class="lineno">  444</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  441</span>                                          {</div>
+<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a23a4dd5723da9497988f3493d55362d2">var</a>.get()), <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6355823a5d09a2354fb8eb1f7d7754fa">value</a>.get())))</div>
+<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Присваивание несовместимых типов {} = {}. &quot;</span>, <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a23a4dd5723da9497988f3493d55362d2">var</a>.get()), <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6355823a5d09a2354fb8eb1f7d7754fa">value</a>.get())));</div>
+<div class="line"><span class="lineno">  444</span>}</div>
 <div class="ttc" id="aclass_assign_a_s_t_html_a23a4dd5723da9497988f3493d55362d2"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a23a4dd5723da9497988f3493d55362d2">AssignAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00097">AST.hpp:97</a></div></div>
 <div class="ttc" id="aclass_assign_a_s_t_html_a6355823a5d09a2354fb8eb1f7d7754fa"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a6355823a5d09a2354fb8eb1f7d7754fa">AssignAST::value</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00098">AST.hpp:98</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a87acf26a41a709a3faf17b57ad675c2a"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">SemanticVisitor::compareTypes</a></div><div class="ttdeci">bool compareTypes(std::string A, std::string B, bool strict=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00668">Visitor.cpp:668</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a87acf26a41a709a3faf17b57ad675c2a"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">SemanticVisitor::compareTypes</a></div><div class="ttdeci">bool compareTypes(std::string A, std::string B, bool strict=false)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00669">Visitor.cpp:669</a></div></div>
 <div class="ttc" id="aclass_type_exception_html"><div class="ttname"><a href="../../da/da3/class_type_exception.html">TypeException</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00043">SyntExp.hpp:43</a></div></div>
 </div><!-- fragment --><div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-34-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -1209,37 +1208,37 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00385">385</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  385</span>                                             {</div>
-<div class="line"><span class="lineno">  386</span>        std::string lHand = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#a0f751bedb01ec290dc0392bcbf2635fb">left</a>.get());</div>
-<div class="line"><span class="lineno">  387</span>        std::string rHand = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#ac16cb4b6a833b3ae1a7ebb362f35bbab">right</a>.get());</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(lHand, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  389</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, lHand));</div>
-<div class="line"><span class="lineno">  390</span>        }</div>
-<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(rHand, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  392</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, rHand));</div>
-<div class="line"><span class="lineno">  393</span>        }</div>
-<div class="line"><span class="lineno">  394</span>        <span class="keywordflow">switch</span>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
-<div class="line"><span class="lineno">  395</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa33fbefe2d6b2e20ed6c207a7cb7efb97">IToken::MOD</a>:</div>
-<div class="line"><span class="lineno">  396</span>                <span class="keywordflow">if</span>(lHand != <span class="stringliteral">&quot;integer&quot;</span> || rHand != <span class="stringliteral">&quot;integer&quot;</span>){</div>
-<div class="line"><span class="lineno">  397</span>                    <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;MOD определен только над целыми операндами, а получены {} и {}. &quot;</span>, lHand, rHand));</div>
-<div class="line"><span class="lineno">  398</span>                }</div>
-<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa44c902dfbf9234168ae1715dfafc23f5">IToken::LESS</a>:</div>
-<div class="line"><span class="lineno">  400</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4785b14b88c849bf98576192431675ac">IToken::LESS_EQ</a>:</div>
-<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2d4baebc8efb23e7ae246812c55bbd8a">IToken::EQ</a>:</div>
-<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad6e2609bcd9c5a3c86a054a412553a21">IToken::MORE</a>:</div>
-<div class="line"><span class="lineno">  403</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac00a0f0708ab13993d9c17623ef36833">IToken::MORE_EQ</a>:</div>
-<div class="line"><span class="lineno">  404</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76">IToken::OR</a>:</div>
-<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac458af35cb84665152a792903129cdf0">IToken::AND</a>:</div>
-<div class="line"><span class="lineno">  406</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a">IToken::NOT</a>:</div>
-<div class="line"><span class="lineno">  407</span>                <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
-<div class="line"><span class="lineno">  408</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  409</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  410</span>                <span class="keywordflow">if</span>(lHand == <span class="stringliteral">&quot;real&quot;</span> || rHand == <span class="stringliteral">&quot;real&quot;</span>)</div>
-<div class="line"><span class="lineno">  411</span>                    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;real&quot;</span>);</div>
-<div class="line"><span class="lineno">  412</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  413</span>                    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
-<div class="line"><span class="lineno">  414</span>        }</div>
-<div class="line"><span class="lineno">  415</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>                                         {</div>
+<div class="line"><span class="lineno">  386</span>    std::string lHand = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#a0f751bedb01ec290dc0392bcbf2635fb">left</a>.get());</div>
+<div class="line"><span class="lineno">  387</span>    std::string rHand = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#ac16cb4b6a833b3ae1a7ebb362f35bbab">right</a>.get());</div>
+<div class="line"><span class="lineno">  388</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(lHand, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, lHand));</div>
+<div class="line"><span class="lineno">  390</span>    }</div>
+<div class="line"><span class="lineno">  391</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(rHand, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, rHand));</div>
+<div class="line"><span class="lineno">  393</span>    }</div>
+<div class="line"><span class="lineno">  394</span>    <span class="keywordflow">switch</span>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
+<div class="line"><span class="lineno">  395</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa33fbefe2d6b2e20ed6c207a7cb7efb97">IToken::MOD</a>:</div>
+<div class="line"><span class="lineno">  396</span>            <span class="keywordflow">if</span>(lHand != <span class="stringliteral">&quot;integer&quot;</span> || rHand != <span class="stringliteral">&quot;integer&quot;</span>){</div>
+<div class="line"><span class="lineno">  397</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;MOD определен только над целыми операндами, а получены {} и {}. &quot;</span>, lHand, rHand));</div>
+<div class="line"><span class="lineno">  398</span>            }</div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa44c902dfbf9234168ae1715dfafc23f5">IToken::LESS</a>:</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4785b14b88c849bf98576192431675ac">IToken::LESS_EQ</a>:</div>
+<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2d4baebc8efb23e7ae246812c55bbd8a">IToken::EQ</a>:</div>
+<div class="line"><span class="lineno">  402</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad6e2609bcd9c5a3c86a054a412553a21">IToken::MORE</a>:</div>
+<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac00a0f0708ab13993d9c17623ef36833">IToken::MORE_EQ</a>:</div>
+<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76">IToken::OR</a>:</div>
+<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac458af35cb84665152a792903129cdf0">IToken::AND</a>:</div>
+<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a">IToken::NOT</a>:</div>
+<div class="line"><span class="lineno">  407</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
+<div class="line"><span class="lineno">  408</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keywordflow">if</span>(lHand == <span class="stringliteral">&quot;real&quot;</span> || rHand == <span class="stringliteral">&quot;real&quot;</span>)</div>
+<div class="line"><span class="lineno">  411</span>                <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;real&quot;</span>);</div>
+<div class="line"><span class="lineno">  412</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  413</span>                <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
+<div class="line"><span class="lineno">  414</span>    }</div>
+<div class="line"><span class="lineno">  415</span>}</div>
 <div class="ttc" id="aclass_bin_op_a_s_t_html_a0f751bedb01ec290dc0392bcbf2635fb"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#a0f751bedb01ec290dc0392bcbf2635fb">BinOpAST::left</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; left</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00048">AST.hpp:48</a></div></div>
 <div class="ttc" id="aclass_bin_op_a_s_t_html_ac16cb4b6a833b3ae1a7ebb362f35bbab"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#ac16cb4b6a833b3ae1a7ebb362f35bbab">BinOpAST::right</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; right</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00049">AST.hpp:49</a></div></div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76">IToken::OR</a></div><div class="ttdeci">@ OR</div><div class="ttdoc">Логическое ИЛИ</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00061">Token.hpp:61</a></div></div>
@@ -1290,16 +1289,16 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00462">462</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  462</span>                                             {</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>){</div>
-<div class="line"><span class="lineno">  464</span>            child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  465</span>        }</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>){</div>
-<div class="line"><span class="lineno">  467</span>            child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  468</span>        }</div>
-<div class="line"><span class="lineno">  469</span>        node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  470</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a475b6e8a8dfa3d800610b12de2952fa6">clearBlock</a>();</div>
-<div class="line"><span class="lineno">  471</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  462</span>                                         {</div>
+<div class="line"><span class="lineno">  463</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">consts</a>){</div>
+<div class="line"><span class="lineno">  464</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  465</span>    }</div>
+<div class="line"><span class="lineno">  466</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">declarations</a>){</div>
+<div class="line"><span class="lineno">  467</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  468</span>    }</div>
+<div class="line"><span class="lineno">  469</span>    node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">compound</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  470</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a475b6e8a8dfa3d800610b12de2952fa6">clearBlock</a>();</div>
+<div class="line"><span class="lineno">  471</span>}</div>
 <div class="ttc" id="aclass_block_a_s_t_html_a6cef35125c6bc4d14e810c2d46989454"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#a6cef35125c6bc4d14e810c2d46989454">BlockAST::compound</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; compound</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00035">AST.hpp:35</a></div></div>
 <div class="ttc" id="aclass_block_a_s_t_html_ac2ff986a43fdb2f3cd0b98a8c974e8db"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ac2ff986a43fdb2f3cd0b98a8c974e8db">BlockAST::consts</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; consts</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00033">AST.hpp:33</a></div></div>
 <div class="ttc" id="aclass_block_a_s_t_html_afc78ee33f69546c77765ed9dfac5f430"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#afc78ee33f69546c77765ed9dfac5f430">BlockAST::declarations</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; declarations</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00034">AST.hpp:34</a></div></div>
@@ -1342,25 +1341,27 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00497">497</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  497</span>                                            {</div>
-<div class="line"><span class="lineno">  498</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">checkFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>);</div>
-<div class="line"><span class="lineno">  499</span>        std::vector&lt;std::string&gt; check = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a7dc09b1565fd6ed6e899ce6a5f14032b">params</a>;</div>
-<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">if</span>(check.size() != node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.size())</div>
-<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидалось {} аргументов, а получено {}. &quot;</span>, check.size(), node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.size()));</div>
-<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; check.size(); i++)</div>
-<div class="line"><span class="lineno">  503</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(check[i], <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i].get()))){</div>
-<div class="line"><span class="lineno">  504</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;{} из {} аргументов функции {} имеет неверный тип. Ожидался {}, а получен {}. &quot;</span>, i+1, check.size(), node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), check[i], <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i].get())));</div>
-<div class="line"><span class="lineno">  505</span>            }</div>
-<div class="line"><span class="lineno">  506</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>                                        {</div>
+<div class="line"><span class="lineno">  498</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0">checkFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>);</div>
+<div class="line"><span class="lineno">  499</span>    std::vector&lt;std::string&gt; check = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a7dc09b1565fd6ed6e899ce6a5f14032b">params</a>;</div>
+<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">if</span>(check.size() != node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.size())</div>
+<div class="line"><span class="lineno">  501</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидалось {} аргументов, а получено {}. &quot;</span>, check.size(), node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>.size()));</div>
+<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">for</span>(std::size_t i = 0; i &lt; check.size(); i++)</div>
+<div class="line"><span class="lineno">  503</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(check[i], <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i].get()))){</div>
+<div class="line"><span class="lineno">  504</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;{} из {} аргументов функции {} имеет неверный тип. Ожидался {}, а получен {}. &quot;</span>, i+1, check.size(), node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), check[i], <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">params</a>[i].get())));</div>
+<div class="line"><span class="lineno">  505</span>        }</div>
+<div class="line"><span class="lineno">  506</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba">returnType</a>);</div>
+<div class="line"><span class="lineno">  507</span>}</div>
 <div class="ttc" id="aclass_call_a_s_t_html_af364ae1efb7bf6b290a834d2db337bab"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html#af364ae1efb7bf6b290a834d2db337bab">CallAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00179">AST.hpp:179</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a38d36a89c00bd58542c0b06674c04643"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">SemanticVisitor::getFunc</a></div><div class="ttdeci">FunctionData &amp; getFunc(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00647">Visitor.cpp:647</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a38d36a89c00bd58542c0b06674c04643"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">SemanticVisitor::getFunc</a></div><div class="ttdeci">FunctionData &amp; getFunc(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00648">Visitor.cpp:648</a></div></div>
+<div class="ttc" id="astruct_semantic_visitor_1_1_function_data_html_a37cac5a8cf5432ea87a0de5bf898d3ba"><div class="ttname"><a href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba">SemanticVisitor::FunctionData::returnType</a></div><div class="ttdeci">std::string returnType</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00140">Visitor.hpp:140</a></div></div>
 <div class="ttc" id="astruct_semantic_visitor_1_1_function_data_html_a7dc09b1565fd6ed6e899ce6a5f14032b"><div class="ttname"><a href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a7dc09b1565fd6ed6e899ce6a5f14032b">SemanticVisitor::FunctionData::params</a></div><div class="ttdeci">std::vector&lt; std::string &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00139">Visitor.hpp:139</a></div></div>
 </div><!-- fragment --><div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-37-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-37-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-37-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dad/class_semantic_visitor_a42aa0e91b2f4de83d76ef4c2f3b5c95c_cgraph.svg" width="752" height="252"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dad/class_semantic_visitor_a42aa0e91b2f4de83d76ef4c2f3b5c95c_cgraph.svg" width="752" height="303"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1393,10 +1394,10 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a61877193fd55d2f97b7fc12465b7a3ce">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00436">436</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  436</span>                                                {</div>
-<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">children</a>)</div>
-<div class="line"><span class="lineno">  438</span>            child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  439</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>                                            {</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">children</a>)</div>
+<div class="line"><span class="lineno">  438</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  439</span>}</div>
 <div class="ttc" id="aclass_compound_a_s_t_html_a297d710431a528b853d61f89b93bebd4"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html#a297d710431a528b853d61f89b93bebd4">CompoundAST::children</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00085">AST.hpp:85</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1428,16 +1429,16 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a2e1b667be6c9402438d287173ba04997">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00486">486</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  486</span>                                             {</div>
-<div class="line"><span class="lineno">  487</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9">addConst</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3">constName</a>-&gt;token);</div>
-<div class="line"><span class="lineno">  488</span>        isConst = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  489</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3">constName</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#aaf6711aa7a963aa243af7309701acd85">constValue</a>.get());</div>
-<div class="line"><span class="lineno">  490</span>        isConst = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  486</span>                                         {</div>
+<div class="line"><span class="lineno">  487</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9">addConst</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3">constName</a>-&gt;token);</div>
+<div class="line"><span class="lineno">  488</span>    isConst = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  489</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3">constName</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#aaf6711aa7a963aa243af7309701acd85">constValue</a>.get());</div>
+<div class="line"><span class="lineno">  490</span>    isConst = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  491</span>}</div>
 <div class="ttc" id="aclass_const_a_s_t_html_a73ddbfc3a4a290251b96ef2642ff8dc3"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html#a73ddbfc3a4a290251b96ef2642ff8dc3">ConstAST::constName</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; constName</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00160">AST.hpp:160</a></div></div>
 <div class="ttc" id="aclass_const_a_s_t_html_aaf6711aa7a963aa243af7309701acd85"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html#aaf6711aa7a963aa243af7309701acd85">ConstAST::constValue</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; constValue</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00161">AST.hpp:161</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a0e0845cf894c0257901a092c0ec99dc9"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9">SemanticVisitor::addConst</a></div><div class="ttdeci">void addConst(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00600">Visitor.cpp:600</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_aa10747b1413aed0668d09d68cbdb9d5e"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">SemanticVisitor::getDefined</a></div><div class="ttdeci">VarData &amp; getDefined(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00620">Visitor.cpp:620</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a0e0845cf894c0257901a092c0ec99dc9"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9">SemanticVisitor::addConst</a></div><div class="ttdeci">void addConst(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00601">Visitor.cpp:601</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_aa10747b1413aed0668d09d68cbdb9d5e"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">SemanticVisitor::getDefined</a></div><div class="ttdeci">VarData &amp; getDefined(Token name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00621">Visitor.cpp:621</a></div></div>
 <div class="ttc" id="astruct_semantic_visitor_1_1_var_data_html_afbc206e7ebc0958a6d6a035279fec367"><div class="ttname"><a href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">SemanticVisitor::VarData::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00151">Visitor.hpp:151</a></div></div>
 </div><!-- fragment --><div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-38-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -1476,11 +1477,11 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a86be47c16993c817b6e8b4055edb15f6">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00520">520</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  520</span>                                           {</div>
-<div class="line"><span class="lineno">  521</span>        node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#afe1230c5c948a655f09691a11399cf41">iterSt</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  522</span>        node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#a8e6cfbd559307eb766e1728d580e783f">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  523</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00521">521</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  521</span>                                       {</div>
+<div class="line"><span class="lineno">  522</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#afe1230c5c948a655f09691a11399cf41">iterSt</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  523</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#a8e6cfbd559307eb766e1728d580e783f">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  524</span>}</div>
 <div class="ttc" id="aclass_for_a_s_t_html_a8e6cfbd559307eb766e1728d580e783f"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#a8e6cfbd559307eb766e1728d580e783f">ForAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00225">AST.hpp:225</a></div></div>
 <div class="ttc" id="aclass_for_a_s_t_html_afe1230c5c948a655f09691a11399cf41"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#afe1230c5c948a655f09691a11399cf41">ForAST::iterSt</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; iterSt</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00224">AST.hpp:224</a></div></div>
 </div><!-- fragment -->
@@ -1512,23 +1513,22 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a90a5478ca69b33e9683dccf2a0f8ed71">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00531">531</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  531</span>                                                {</div>
-<div class="line"><span class="lineno">  532</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23">addFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>);</div>
-<div class="line"><span class="lineno">  533</span>        currCheckFunc = node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>();</div>
-<div class="line"><span class="lineno">  534</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a1385c31c7ecb705f3249fa557c963b15">params</a>)</div>
-<div class="line"><span class="lineno">  535</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a7dc09b1565fd6ed6e899ce6a5f14032b">params</a>.push_back(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(ptr.get()));</div>
-<div class="line"><span class="lineno">  536</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a1385c31c7ecb705f3249fa557c963b15">params</a>)</div>
-<div class="line"><span class="lineno">  537</span>            ptr-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  538</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba">returnType</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ae2083a2e45d7cac75d633584ed6ff3a8">returnType</a>.get());</div>
-<div class="line"><span class="lineno">  539</span>        node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#adc15d9664958666ec652b238a4fc9243">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  540</span>        currCheckFunc = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  541</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00532">532</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  532</span>                                            {</div>
+<div class="line"><span class="lineno">  533</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23">addFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>);</div>
+<div class="line"><span class="lineno">  534</span>    currCheckFunc = node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>();</div>
+<div class="line"><span class="lineno">  535</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a1385c31c7ecb705f3249fa557c963b15">params</a>)</div>
+<div class="line"><span class="lineno">  536</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a7dc09b1565fd6ed6e899ce6a5f14032b">params</a>.push_back(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(ptr.get()));</div>
+<div class="line"><span class="lineno">  537</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a1385c31c7ecb705f3249fa557c963b15">params</a>)</div>
+<div class="line"><span class="lineno">  538</span>        ptr-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  539</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba">returnType</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ae2083a2e45d7cac75d633584ed6ff3a8">returnType</a>.get());</div>
+<div class="line"><span class="lineno">  540</span>    node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#adc15d9664958666ec652b238a4fc9243">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  541</span>    currCheckFunc = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  542</span>}</div>
 <div class="ttc" id="aclass_function_a_s_t_html_a1385c31c7ecb705f3249fa557c963b15"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#a1385c31c7ecb705f3249fa557c963b15">FunctionAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00236">AST.hpp:236</a></div></div>
 <div class="ttc" id="aclass_function_a_s_t_html_adc15d9664958666ec652b238a4fc9243"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#adc15d9664958666ec652b238a4fc9243">FunctionAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00238">AST.hpp:238</a></div></div>
 <div class="ttc" id="aclass_function_a_s_t_html_ae2083a2e45d7cac75d633584ed6ff3a8"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#ae2083a2e45d7cac75d633584ed6ff3a8">FunctionAST::returnType</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; returnType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00237">AST.hpp:237</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a42ccfc47d8a517399496388a105dcf23"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23">SemanticVisitor::addFunc</a></div><div class="ttdeci">void addFunc(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00637">Visitor.cpp:637</a></div></div>
-<div class="ttc" id="astruct_semantic_visitor_1_1_function_data_html_a37cac5a8cf5432ea87a0de5bf898d3ba"><div class="ttname"><a href="../../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba">SemanticVisitor::FunctionData::returnType</a></div><div class="ttdeci">std::string returnType</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00140">Visitor.hpp:140</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a42ccfc47d8a517399496388a105dcf23"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23">SemanticVisitor::addFunc</a></div><div class="ttdeci">void addFunc(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00638">Visitor.cpp:638</a></div></div>
 </div><!-- fragment --><div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-39-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-39-summary" class="dynsummary" style="display:block;">
@@ -1566,13 +1566,13 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a03ad7a121d846dd882c6fe9f316af66a">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00508">508</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  508</span>                                          {</div>
-<div class="line"><span class="lineno">  509</span>        node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a8e67a9f5e4da4cf3db7c15efcfee8667">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  510</span>        node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a9d41521212e1ff68e9278aa5072f0b6d">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  511</span>        <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2">elseBody</a>)</div>
-<div class="line"><span class="lineno">  512</span>            node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2">elseBody</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  513</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00509">509</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  509</span>                                      {</div>
+<div class="line"><span class="lineno">  510</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a8e67a9f5e4da4cf3db7c15efcfee8667">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  511</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a9d41521212e1ff68e9278aa5072f0b6d">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2">elseBody</a>)</div>
+<div class="line"><span class="lineno">  513</span>        node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2">elseBody</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  514</span>}</div>
 <div class="ttc" id="aclass_if_a_s_t_html_a8e67a9f5e4da4cf3db7c15efcfee8667"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a8e67a9f5e4da4cf3db7c15efcfee8667">IfAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00189">AST.hpp:189</a></div></div>
 <div class="ttc" id="aclass_if_a_s_t_html_a9d41521212e1ff68e9278aa5072f0b6d"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a9d41521212e1ff68e9278aa5072f0b6d">IfAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00190">AST.hpp:190</a></div></div>
 <div class="ttc" id="aclass_if_a_s_t_html_ac8a13e7c14ce38d2f6c59933929711c2"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#ac8a13e7c14ce38d2f6c59933929711c2">IfAST::elseBody</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; elseBody</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00191">AST.hpp:191</a></div></div>
@@ -1605,12 +1605,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aa09fedaa5d35191b58aab8845b391366">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00525">525</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  525</span>                                                 {</div>
-<div class="line"><span class="lineno">  526</span>        node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  527</span>        node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  528</span>        node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  529</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00526">526</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  526</span>                                             {</div>
+<div class="line"><span class="lineno">  527</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  528</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">assign</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  529</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">postAction</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  530</span>}</div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_a08f6a0a2f6dc1cd7158ee7c016eefe73"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a08f6a0a2f6dc1cd7158ee7c016eefe73">IterationAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00213">AST.hpp:213</a></div></div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_a9e1599e365ba748e4eb29999cab19e5b"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a9e1599e365ba748e4eb29999cab19e5b">IterationAST::postAction</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; postAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00214">AST.hpp:214</a></div></div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_afec7dbd81fb77ad80fe3c0d0e72384e4"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#afec7dbd81fb77ad80fe3c0d0e72384e4">IterationAST::assign</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; assign</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00212">AST.hpp:212</a></div></div>
@@ -1644,9 +1644,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a1c34e8c02a76a644a08ec7138ed07d42">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00450">450</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  450</span>                                            {</div>
-<div class="line"><span class="lineno">  451</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;VOID&quot;</span>);</div>
-<div class="line"><span class="lineno">  452</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  450</span>                                        {</div>
+<div class="line"><span class="lineno">  451</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;VOID&quot;</span>);</div>
+<div class="line"><span class="lineno">  452</span>}</div>
 </div><!-- fragment --><div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-40-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-40-summary" class="dynsummary" style="display:block;">
@@ -1685,12 +1685,12 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00429">429</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  429</span>                                              {</div>
-<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a>)</div>
-<div class="line"><span class="lineno">  431</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
-<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  433</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;real&quot;</span>);</div>
-<div class="line"><span class="lineno">  434</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  429</span>                                          {</div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a>)</div>
+<div class="line"><span class="lineno">  431</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  433</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;real&quot;</span>);</div>
+<div class="line"><span class="lineno">  434</span>}</div>
 <div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a></div><div class="ttdeci">@ INTEGER_CONST</div><div class="ttdoc">Целая константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00040">Token.hpp:40</a></div></div>
 </div><!-- fragment --><div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-41-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -1730,16 +1730,16 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00454">454</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  454</span>                                               {</div>
-<div class="line"><span class="lineno">  455</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa5407e0803af63694d54e636113410c0">addProgName</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a18d29cdc75cc8c20265f42087893c0ca">functions</a>){</div>
-<div class="line"><span class="lineno">  457</span>            child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  458</span>        }</div>
-<div class="line"><span class="lineno">  459</span>        node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a">block</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  460</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  454</span>                                           {</div>
+<div class="line"><span class="lineno">  455</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa5407e0803af63694d54e636113410c0">addProgName</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a18d29cdc75cc8c20265f42087893c0ca">functions</a>){</div>
+<div class="line"><span class="lineno">  457</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  458</span>    }</div>
+<div class="line"><span class="lineno">  459</span>    node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a">block</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  460</span>}</div>
 <div class="ttc" id="aclass_program_a_s_t_html_a18d29cdc75cc8c20265f42087893c0ca"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html#a18d29cdc75cc8c20265f42087893c0ca">ProgramAST::functions</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; AST &gt; &gt; functions</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00021">AST.hpp:21</a></div></div>
 <div class="ttc" id="aclass_program_a_s_t_html_a44f003f85ff456380fbfb4825f4eae3a"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html#a44f003f85ff456380fbfb4825f4eae3a">ProgramAST::block</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; block</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00022">AST.hpp:22</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_aa5407e0803af63694d54e636113410c0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#aa5407e0803af63694d54e636113410c0">SemanticVisitor::addProgName</a></div><div class="ttdeci">void addProgName(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00582">Visitor.cpp:582</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_aa5407e0803af63694d54e636113410c0"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#aa5407e0803af63694d54e636113410c0">SemanticVisitor::addProgName</a></div><div class="ttdeci">void addProgName(std::string name)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00583">Visitor.cpp:583</a></div></div>
 </div><!-- fragment --><div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-42-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-42-summary" class="dynsummary" style="display:block;">
@@ -1777,17 +1777,17 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a44aea13582365aa466c079e6b42f5e00">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00543">543</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  543</span>                                              {</div>
-<div class="line"><span class="lineno">  544</span>        std::string returnType = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d8/de5/class_return_a_s_t.html#ad52e9fef93fc0b43517cde660b1fa8db">toReturn</a>.get());</div>
-<div class="line"><span class="lineno">  545</span>        std::string expected = <span class="stringliteral">&quot;integer&quot;</span>;</div>
-<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">if</span>(currCheckFunc != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><span class="lineno">  547</span>            expected = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>({currCheckFunc, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>}).returnType;</div>
-<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(expected, returnType)){</div>
-<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался {}, а получен {}. &quot;</span>, expected, returnType));</div>
-<div class="line"><span class="lineno">  550</span>        }</div>
-<div class="line"><span class="lineno">  551</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(returnType);</div>
-<div class="line"><span class="lineno">  552</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00544">544</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  544</span>                                          {</div>
+<div class="line"><span class="lineno">  545</span>    std::string returnType = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d8/de5/class_return_a_s_t.html#ad52e9fef93fc0b43517cde660b1fa8db">toReturn</a>.get());</div>
+<div class="line"><span class="lineno">  546</span>    std::string expected = <span class="stringliteral">&quot;integer&quot;</span>;</div>
+<div class="line"><span class="lineno">  547</span>    <span class="keywordflow">if</span>(currCheckFunc != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">  548</span>        expected = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643">getFunc</a>({currCheckFunc, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>, <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>}).returnType;</div>
+<div class="line"><span class="lineno">  549</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a">compareTypes</a>(expected, returnType)){</div>
+<div class="line"><span class="lineno">  550</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался {}, а получен {}. &quot;</span>, expected, returnType));</div>
+<div class="line"><span class="lineno">  551</span>    }</div>
+<div class="line"><span class="lineno">  552</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(returnType);</div>
+<div class="line"><span class="lineno">  553</span>}</div>
 <div class="ttc" id="aclass_return_a_s_t_html_ad52e9fef93fc0b43517cde660b1fa8db"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html#ad52e9fef93fc0b43517cde660b1fa8db">ReturnAST::toReturn</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; toReturn</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00250">AST.hpp:250</a></div></div>
 </div><!-- fragment --><div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-43-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -1826,26 +1826,26 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a93fc8b873f10a161e3f53697f054de70">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00562">562</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  562</span>                                              {</div>
-<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;token.getAdvType() == IToken::AdvType::SELECT){</div>
-<div class="line"><span class="lineno">  564</span>            typeIndex++;</div>
-<div class="line"><span class="lineno">  565</span>            node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  566</span>            typeIndex--;</div>
-<div class="line"><span class="lineno">  567</span>        } <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  568</span>            <a class="code hl_class" href="../../da/dc8/class_a_s_t.html">AST</a> *type = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#a3db0116f11cf39d0f1dd067566391133">typePtr</a>;</div>
-<div class="line"><span class="lineno">  569</span>            <span class="keywordflow">for</span>(std::size_t i = 0; i  &lt; typeIndex + 1; i++){</div>
-<div class="line"><span class="lineno">  570</span>                <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  571</span>                    type = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(type)-&gt;subType.get();</div>
-<div class="line"><span class="lineno">  572</span>                }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00563">563</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  563</span>                                          {</div>
+<div class="line"><span class="lineno">  564</span>    <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;token.getAdvType() == IToken::AdvType::SELECT){</div>
+<div class="line"><span class="lineno">  565</span>        typeIndex++;</div>
+<div class="line"><span class="lineno">  566</span>        node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  567</span>        typeIndex--;</div>
+<div class="line"><span class="lineno">  568</span>    } <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  569</span>        <a class="code hl_class" href="../../da/dc8/class_a_s_t.html">AST</a> *type = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">from</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#a3db0116f11cf39d0f1dd067566391133">typePtr</a>;</div>
+<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">for</span>(std::size_t i = 0; i  &lt; typeIndex + 1; i++){</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  572</span>                type = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(type)-&gt;subType.get();</div>
 <div class="line"><span class="lineno">  573</span>            }</div>
-<div class="line"><span class="lineno">  574</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  575</span>                <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  576</span>            } <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  577</span>                <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(type)));</div>
-<div class="line"><span class="lineno">  578</span>            }</div>
+<div class="line"><span class="lineno">  574</span>        }</div>
+<div class="line"><span class="lineno">  575</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  576</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(type-&gt;<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  577</span>        } <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  578</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(type)));</div>
 <div class="line"><span class="lineno">  579</span>        }</div>
 <div class="line"><span class="lineno">  580</span>    }</div>
+<div class="line"><span class="lineno">  581</span>}</div>
 <div class="ttc" id="aclass_a_s_t_html"><div class="ttname"><a href="../../da/dc8/class_a_s_t.html">AST</a></div><div class="ttdoc">Базовый класс узлов абстрактного синтаксического дерева</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00060">ASTclasses.hpp:60</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00141">AST.hpp:141</a></div></div>
 <div class="ttc" id="aclass_select_a_s_t_html_a59e1fac2226ecc19b7e54c34f0ba9a84"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#a59e1fac2226ecc19b7e54c34f0ba9a84">SelectAST::from</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; from</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00262">AST.hpp:262</a></div></div>
@@ -1888,9 +1888,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00493">493</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  493</span>                                              {</div>
-<div class="line"><span class="lineno">  494</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;string&quot;</span>);</div>
-<div class="line"><span class="lineno">  495</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  493</span>                                          {</div>
+<div class="line"><span class="lineno">  494</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;string&quot;</span>);</div>
+<div class="line"><span class="lineno">  495</span>}</div>
 </div><!-- fragment --><div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-45-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-45-summary" class="dynsummary" style="display:block;">
@@ -1929,9 +1929,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00482">482</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  482</span>                                                {</div>
-<div class="line"><span class="lineno">  483</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  482</span>                                            {</div>
+<div class="line"><span class="lineno">  483</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  484</span>}</div>
 </div><!-- fragment --><div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-46-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-46-summary" class="dynsummary" style="display:block;">
@@ -1970,17 +1970,17 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00417">417</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  417</span>                                            {</div>
-<div class="line"><span class="lineno">  418</span>        std::string valType = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../dc/de8/class_un_op_a_s_t.html#a3fd207523d72af9e767cccffca0a2ddd">down</a>.get());</div>
-<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(valType, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, valType));</div>
-<div class="line"><span class="lineno">  421</span>        }</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>(), {IToken::NOT})){</div>
-<div class="line"><span class="lineno">  423</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
-<div class="line"><span class="lineno">  424</span>        } <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  425</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(valType);</div>
-<div class="line"><span class="lineno">  426</span>        }</div>
-<div class="line"><span class="lineno">  427</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>                                        {</div>
+<div class="line"><span class="lineno">  418</span>    std::string valType = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../dc/de8/class_un_op_a_s_t.html#a3fd207523d72af9e767cccffca0a2ddd">down</a>.get());</div>
+<div class="line"><span class="lineno">  419</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(valType, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  420</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>, fmt::format(<span class="stringliteral">&quot;Ожидался числовой тип, а получен {}. &quot;</span>, valType));</div>
+<div class="line"><span class="lineno">  421</span>    }</div>
+<div class="line"><span class="lineno">  422</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>(), {IToken::NOT})){</div>
+<div class="line"><span class="lineno">  423</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<span class="stringliteral">&quot;integer&quot;</span>);</div>
+<div class="line"><span class="lineno">  424</span>    } <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  425</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(valType);</div>
+<div class="line"><span class="lineno">  426</span>    }</div>
+<div class="line"><span class="lineno">  427</span>}</div>
 <div class="ttc" id="aclass_un_op_a_s_t_html_a3fd207523d72af9e767cccffca0a2ddd"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html#a3fd207523d72af9e767cccffca0a2ddd">UnOpAST::down</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; down</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00061">AST.hpp:61</a></div></div>
 </div><!-- fragment --><div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-47-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -2020,9 +2020,9 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00446">446</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  446</span>                                           {</div>
-<div class="line"><span class="lineno">  447</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>);</div>
-<div class="line"><span class="lineno">  448</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>                                       {</div>
+<div class="line"><span class="lineno">  447</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../da/dc8/class_a_s_t.html#acd50071d5e3ece75e4e5c4b7808d3c5e">token</a>).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>);</div>
+<div class="line"><span class="lineno">  448</span>}</div>
 </div><!-- fragment --><div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-48-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-48-summary" class="dynsummary" style="display:block;">
@@ -2061,16 +2061,16 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a36a7a5238714bb444a24a8576e50704c">IVisitor</a>.</p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00473">473</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  473</span>                                               {</div>
-<div class="line"><span class="lineno">  474</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a0f81d779189b317d16bbc28af9759816">addVar</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token, node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get());</div>
-<div class="line"><span class="lineno">  475</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get());</div>
-<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">if</span>(! <a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
-<div class="line"><span class="lineno">  477</span>            <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#a84550f44a95f6719cd40402236695628">subType</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54">getSubType</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get()));</div>
-<div class="line"><span class="lineno">  478</span>        }</div>
-<div class="line"><span class="lineno">  479</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>);</div>
-<div class="line"><span class="lineno">  480</span>    }</div>
-<div class="ttc" id="aclass_semantic_visitor_html_a0f81d779189b317d16bbc28af9759816"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a0f81d779189b317d16bbc28af9759816">SemanticVisitor::addVar</a></div><div class="ttdeci">void addVar(Token token, AST *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00594">Visitor.cpp:594</a></div></div>
-<div class="ttc" id="aclass_semantic_visitor_html_a57140fbe5abb6b09a42abc3994e0fa54"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54">SemanticVisitor::getSubType</a></div><div class="ttdeci">std::string getSubType(ArrSpecAST *node)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00558">Visitor.cpp:558</a></div></div>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>                                           {</div>
+<div class="line"><span class="lineno">  474</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a0f81d779189b317d16bbc28af9759816">addVar</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token, node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get());</div>
+<div class="line"><span class="lineno">  475</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8">getValue</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get());</div>
+<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">if</span>(! <a class="code hl_function" href="../../db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4">isIn</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>, {std::string(<span class="stringliteral">&quot;integer&quot;</span>), std::string(<span class="stringliteral">&quot;real&quot;</span>), std::string(<span class="stringliteral">&quot;string&quot;</span>)})){</div>
+<div class="line"><span class="lineno">  477</span>        <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#a84550f44a95f6719cd40402236695628">subType</a> = <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54">getSubType</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">type</a>.get()));</div>
+<div class="line"><span class="lineno">  478</span>    }</div>
+<div class="line"><span class="lineno">  479</span>    <a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8">Return</a>(<a class="code hl_function" href="../../dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e">getDefined</a>(node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">var</a>-&gt;token).<a class="code hl_variable" href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#afbc206e7ebc0958a6d6a035279fec367">type</a>);</div>
+<div class="line"><span class="lineno">  480</span>}</div>
+<div class="ttc" id="aclass_semantic_visitor_html_a0f81d779189b317d16bbc28af9759816"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a0f81d779189b317d16bbc28af9759816">SemanticVisitor::addVar</a></div><div class="ttdeci">void addVar(Token token, AST *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00595">Visitor.cpp:595</a></div></div>
+<div class="ttc" id="aclass_semantic_visitor_html_a57140fbe5abb6b09a42abc3994e0fa54"><div class="ttname"><a href="../../dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54">SemanticVisitor::getSubType</a></div><div class="ttdeci">std::string getSubType(ArrSpecAST *node)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d65/_visitor_8cpp_source.html#l00559">Visitor.cpp:559</a></div></div>
 <div class="ttc" id="aclass_var_decl_a_s_t_html_a6d6f624688b601c69b021d3c633c6e30"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html#a6d6f624688b601c69b021d3c633c6e30">VarDeclAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00129">AST.hpp:129</a></div></div>
 <div class="ttc" id="aclass_var_decl_a_s_t_html_a7e99d737838066f38cd96794a2aff670"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html#a7e99d737838066f38cd96794a2aff670">VarDeclAST::type</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; type</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00130">AST.hpp:130</a></div></div>
 <div class="ttc" id="astruct_semantic_visitor_1_1_var_data_html_a84550f44a95f6719cd40402236695628"><div class="ttname"><a href="../../d6/d93/struct_semantic_visitor_1_1_var_data.html#a84550f44a95f6719cd40402236695628">SemanticVisitor::VarData::subType</a></div><div class="ttdeci">std::string subType</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d42/_visitor_8hpp_source.html#l00150">Visitor.hpp:150</a></div></div>
@@ -2111,11 +2111,11 @@ $(document).ready(function(){initNavTree('dd/dad/class_semantic_visitor.html','.
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a5b3c4c3332757f51ed80fd23ec2a0995">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00515">515</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  515</span>                                             {</div>
-<div class="line"><span class="lineno">  516</span>        node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#aac6e95ccb8fcbcbd0b31f061e6da85e5">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  517</span>        node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a681a34c4d40e9fb3c052d3c232299e0c">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  518</span>    }</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00516">516</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  516</span>                                         {</div>
+<div class="line"><span class="lineno">  517</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#aac6e95ccb8fcbcbd0b31f061e6da85e5">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  518</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a681a34c4d40e9fb3c052d3c232299e0c">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  519</span>}</div>
 <div class="ttc" id="aclass_while_a_s_t_html_a681a34c4d40e9fb3c052d3c232299e0c"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a681a34c4d40e9fb3c052d3c232299e0c">WhileAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00202">AST.hpp:202</a></div></div>
 <div class="ttc" id="aclass_while_a_s_t_html_aac6e95ccb8fcbcbd0b31f061e6da85e5"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#aac6e95ccb8fcbcbd0b31f061e6da85e5">WhileAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; AST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00201">AST.hpp:201</a></div></div>
 </div><!-- fragment -->
