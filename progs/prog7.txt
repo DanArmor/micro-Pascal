@@ -1,0 +1,15 @@
+program test;
+
+function fib(n : integer) : integer;
+    begin
+        if (n = 1) or (n = 2) then
+            return 1
+        else
+            return fib(n - 1) + fib(n - 2)
+    end;
+
+var
+    x : integer;
+begin
+    x := fib(3);
+end.
