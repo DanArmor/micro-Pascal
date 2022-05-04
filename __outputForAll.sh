@@ -18,7 +18,7 @@ for prog_file in prog*
 do
     ./graphDraw "$prog_file"
     i=$prog_file
-    dot out.dot -Tsvg > public/output$i.svg
+    dot out.dot -Tsvg > "public/output$i.svg"
 done
 
 dot out.dot -Tsvg > output.svg

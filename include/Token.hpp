@@ -93,7 +93,6 @@ class IToken{
         REAL, ///< real
         STRING, ///< string
         VOID, ///< "Пустой тип"
-        ARRAY_TYPE, ///< Тип массив
 
         DOT, ///< Точка
         SEMI, ///< Точка с запятой

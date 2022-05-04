@@ -13,216 +13,159 @@ GraphvizVisitor::GraphvizVisitor(std::string filename){
 
 void GraphvizVisitor::visit(ProgramAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.name.getStr()));
-    nodeIndex++;
-    for(auto &child : node.functions){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.block->accept(*this);
+    addDef(node.name.getStr());
+    for(auto &child : node.functions)
+        connectToNode(backup, child.get());
+    connectToNode(backup, node.block.get());
 }
 
 void GraphvizVisitor::visit(FunctionAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.name));
-    nodeIndex++;
-    for(auto &child : node.params){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.returnType->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.body->accept(*this);
+    addDef(node.name);
+    for(auto &child : node.params)
+        connectToNode(backup, child.get());
+    connectToNode(backup, node.returnType.get());
+    connectToNode(backup, node.body.get());
 }
 
 void GraphvizVisitor::visit(BlockAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    for(auto &child : node.consts){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
-    for(auto &child : node.declarations){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.compound->accept(*this);
+    addDef(node.token.getStr());
+    for(auto &child : node.consts)
+        connectToNode(backup, child.get());
+    for(auto &child : node.declarations)
+        connectToNode(backup, child.get());
+    connectToNode(backup, node.compound.get());
 }
 
 void GraphvizVisitor::visit(VarDeclAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.var->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.type->accept(*this);
-
+    addDef(node.token.getStr());
+    connectToNode(backup, node.var.get());
+    connectToNode(backup, node.type.get());
 }
 
 void GraphvizVisitor::visit(TypeSpecAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
 }
 
 void GraphvizVisitor::visit(ArrSpecAST &node){
     std::size_t backup = nodeIndex;
     std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
-    declarations.push_back(std::make_pair(std::to_string(backup), arrStr));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.subType->accept(*this);
+    addDef(arrStr);
+    connectToNode(backup, node.subType.get());
 }
 
 void GraphvizVisitor::visit(ConstAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.constName->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.constValue->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.constName.get());
+    connectToNode(backup, node.constValue.get());
 }
 
 void GraphvizVisitor::visit(CompoundAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    for(auto &child : node.children){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
+    addDef(node.token.getStr());
+    for(auto &child : node.children)
+        connectToNode(backup, child.get());
 }
 
 void GraphvizVisitor::visit(NumberAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
 }
 
 void GraphvizVisitor::visit(StringAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
 }
 
 void GraphvizVisitor::visit(BinOpAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.left->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.right->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.left.get());
+    connectToNode(backup, node.right.get());
 }
 
 void GraphvizVisitor::visit(UnOpAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.down->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.down.get());
 }
 
 void GraphvizVisitor::visit(NoOpAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
 }
 
 void GraphvizVisitor::visit(AssignAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.var->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.value->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.var.get());
+    connectToNode(backup, node.value.get());
 }
 
 void GraphvizVisitor::visit(VarAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
 }
 
 void GraphvizVisitor::visit(SelectAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.from->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.index->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.from.get());
+    connectToNode(backup, node.index.get());
 }
 
 void GraphvizVisitor::visit(CallAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
+    addDef(node.token.getStr());
     for(auto &child : node.params){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
+        connectToNode(backup, child.get());
     }
 }
 
 void GraphvizVisitor::visit(ReturnAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.toReturn->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.toReturn.get());
 }
 
 void GraphvizVisitor::visit(IfAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.body->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.condition->accept(*this);
-    if(node.elseBody != nullptr){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        node.elseBody->accept(*this);
-    }
+    addDef(node.token.getStr());
+    connectToNode(backup, node.body.get());
+    connectToNode(backup, node.condition.get());
+    if(node.elseBody != nullptr)
+        connectToNode(backup, node.elseBody.get());
 }
 
 void GraphvizVisitor::visit(WhileAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.body->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.condition->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.body.get());
+    connectToNode(backup, node.condition.get());
 }
 
 void GraphvizVisitor::visit(ForAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.iterSt->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.body->accept(*this);
+    addDef(node.token.getStr());
+    connectToNode(backup, node.iterSt.get());
+    connectToNode(backup, node.body.get());
 }
 
 void GraphvizVisitor::visit(IterationAST &node){
     std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    addDef(node.token.getStr());
+    connectToNode(backup, node.assign.get());
+    connectToNode(backup, node.condition.get());
+    connectToNode(backup, node.postAction.get());
+}
+
+void GraphvizVisitor::addDef(std::string const &str){
+    declarations.push_back(std::make_pair(std::to_string(nodeIndex), str));
     nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.assign->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.condition->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.postAction->accept(*this);
+}
+
+void GraphvizVisitor::connectToNode(std::size_t index, AST *ptr){
+    links.push_back(std::make_pair(std::to_string(index), std::to_string(nodeIndex)));
+    ptr->accept(*this);
 }
 
 void GraphvizVisitor::done(void){

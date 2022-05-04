@@ -71,10 +71,10 @@
         TYPE_SPEC,
         NOTPROCESS,
         PROGRAM_NAME,
+        SELECT,
         VARDECL,
         CONSTDECL,
         COMPOUND,
-        PROGSTART, 
         UNKNOWN
     }
 
@@ -83,7 +83,6 @@
         ENDOFSTREAM,
         EMPTY,
         BLOCK,
-        TERMINATE,
         NEWLINE,
         COMMENT,
 
@@ -103,7 +102,6 @@
         PLUS,
         MINUS,
         MUL,
-        DIV,
         MOD,
         INTEGER_DIV,
         FLOAT_DIV,
@@ -137,27 +135,27 @@
         TO,
         DOWNTO,
         RETURN,
+        ARRAY,
+        OF,
+        FUNCTION,
+        PROCEDURE,
+        RANGE,
 
         INTEGER,
         REAL,
+        STRING,
         VOID,
 
         DOT,
         SEMI, 
         COLON,
         COMMA, 
-        FUNCTION,
-        PROCEDURE
     }
 
     class "Token" as Token{
         +Token()
-        +Token(type : Type)
-        +Token(type : AdvType)
-        +Token(str : std::string, type : Type)
-        +Token(str : std::string, type : AdvType)
-        +Token(str : std::string, type : Type, advType : AdvType)
-        +Token(str : std::string, type : Type, lineNum : std::size_t, inLinePosNum : std::size_t, inFilePos : std::size_t)
+        +Token(str : std::string const &, type : Type const, advType : AdvType const)
+        +Token(str : std::string const&, type : Type const, lineNum : std::size_t const, inLinePosNum : std::size_t const, inFilePos : std::size_t const)
 
         +line() : std::size_t
         +rawLine() : std::size_t
@@ -204,26 +202,28 @@
     }
 
     abstract "IVisitor" as IVisitor {
-        +{abstract} visit(BinOpAST &)
-        +{abstract} visit(NumberAST &)
-        +{abstract} visit(UnOpAST &)
-        +{abstract} visit(CompoundAST &)
-        +{abstract} visit(AssignAST &)
-        +{abstract} visit(VarAST &)
-        +{abstract} visit(NoOpAST &)
         +{abstract} visit(ProgramAST &)
+        +{abstract} visit(FunctionAST &)
         +{abstract} visit(BlockAST &)
         +{abstract} visit(VarDeclAST &)
         +{abstract} visit(TypeSpecAST &)
+        +{abstract} visit(ArrSpecAST &)
         +{abstract} visit(ConstAST &)
+        +{abstract} visit(CompoundAST &)
+        +{abstract} visit(NumberAST &)
         +{abstract} visit(StringAST &)
+        +{abstract} visit(BinOpAST &)
+        +{abstract} visit(UnOpAST &)
+        +{abstract} visit(NoOpAST &)
+        +{abstract} visit(AssignAST &)
+        +{abstract} visit(VarAST &)
+        +{abstract} visit(SelectAST &)
         +{abstract} visit(CallAST &)
+        +{abstract} visit(ReturnAST &)
         +{abstract} visit(IfAST &)
         +{abstract} visit(WhileAST &)
-        +{abstract} visit(IterationAST &)
         +{abstract} visit(ForAST &)
-        +{abstract} visit(FunctionAST &)
-        +{abstract} visit(ReturnAST &)
+        +{abstract} visit(IterationAST &)
     }
 
     class "SyntaxAnalyzer" as Syntax {
@@ -381,29 +381,31 @@
 
     class GraphizVisitor{
         +GraphizVisitor(filename : std::string)
-        +visit(node : BinOp &)
-        +visit(node : Number &)
-        +visit(node : UnOp &)
-        +visit(node : Compound &)
-        +visit(node : Assign &)
-        +visit(node : Var &)
-        +visit(node : NoOp &)
         +visit(node : ProgramAST &)
+        +visit(node : FunctionAST &)
         +visit(node : BlockAST &)
-        +visit(node : VarDeclaration &)
-        +visit(node : Type &)
+        +visit(node : VarDeclAST &)
+        +visit(node : TypeSpecAST &)
+        +visit(node : ArrSpecAST &)
         +visit(node : ConstAST &)
+        +visit(node : CompoundAST &)
+        +visit(node : NumberAST &)
         +visit(node : StringAST &)
-        +visit(node : ProcedureCall &)
+        +visit(node : BinOpAST&)
+        +visit(node : UnOpAST &)
+        +visit(node : NoOpAST &)
+        +visit(node : AssignAST &)
+        +visit(node : VarAST &)
+        +visit(node : SelectAST &)
+        +visit(node : CallAST &)
+        +visit(node : ReturnAST &)
         +visit(node : ifAST &)
         +visit(node : whileAST &)
-        +visit(node : IterationAST &)
         +visit(node : ForAST &)
-        +visit(node : FunctionAST &)
-        +visit(node : ReturnAST &)
+        +visit(node : IterationAST &)
 
         +write()
-        -done()
+        +done()
 
         -file : std::fstream
         -nodeIndex : std::size_t
@@ -412,55 +414,31 @@
     }
 
     class TypeViewVisitor{
-        +visit(node : BinOp &)
-        +visit(node : Number &)
-        +visit(node : UnOp &)
-        +visit(node : Compound &)
-        +visit(node : Assign &)
-        +visit(node : Var &)
-        +visit(node : NoOp &)
         +visit(node : ProgramAST &)
+        +visit(node : FunctionAST &)
         +visit(node : BlockAST &)
-        +visit(node : VarDeclaration &)
-        +visit(node : Type &)
+        +visit(node : VarDeclAST &)
+        +visit(node : TypeSpecAST &)
+        +visit(node : ArrSpecAST &)
         +visit(node : ConstAST &)
+        +visit(node : CompoundAST &)
+        +visit(node : NumberAST &)
         +visit(node : StringAST &)
-        +visit(node : ProcedureCall &)
+        +visit(node : BinOpAST&)
+        +visit(node : UnOpAST &)
+        +visit(node : NoOpAST &)
+        +visit(node : AssignAST &)
+        +visit(node : VarAST &)
+        +visit(node : SelectAST &)
+        +visit(node : CallAST &)
+        +visit(node : ReturnAST &)
         +visit(node : ifAST &)
         +visit(node : whileAST &)
-        +visit(node : IterationAST &)
         +visit(node : ForAST &)
-        +visit(node : FunctionAST &)
-        +visit(node : ReturnAST &)
+        +visit(node : IterationAST &)
         +getData() : std::vector<std::string>
 
         -typesStrings : std::vector<std::string>
-    }
-
-    class HighlightAccurateVisitor{
-        +visit(node : BinOp &)
-        +visit(node : Number &)
-        +visit(node : UnOp &)
-        +visit(node : Compound &)
-        +visit(node : Assign &)
-        +visit(node : Var &)
-        +visit(node : NoOp &)
-        +visit(node : ProgramAST &)
-        +visit(node : BlockAST &)
-        +visit(node : VarDeclaration &)
-        +visit(node : Type &)
-        +visit(node : ConstAST &)
-        +visit(node : StringAST &)
-        +visit(node : ProcedureCall &)
-        +visit(node : ifAST &)
-        +visit(node : whileAST &)
-        +visit(node : IterationAST &)
-        +visit(node : ForAST &)
-        +visit(node : FunctionAST &)
-        +visit(node : ReturnAST &)
-        +getTokens() : List<Token>
-
-        -tokens : List<Token>
     }
 
     class ASTFactory{

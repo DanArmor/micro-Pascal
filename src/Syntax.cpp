@@ -435,7 +435,8 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxIter(void){
     Token finTok = getCurTok();
     if(finTok.getAdvType() != IToken::SOME_CONST and finTok.getType() != IToken::ID)
         throw AnalyzeException(finTok, "Конечным значением цикла for должна быть целая константа или переменная!");
-    std::unique_ptr<AST> finPtr = syntaxFactor();
+    // Пропустим константу или переменную вызовом syntaxFactor
+    syntaxFactor();
 
     Token condOp = {"<=", IToken::LESS_EQ, IToken::OPERATOR};
     std::unique_ptr<AST> varPtr_condition = ASTFactory::createAST(varTok);

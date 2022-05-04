@@ -61,11 +61,14 @@ public:
 
     void visit(IterationAST &node);
 
+
     void done(void);
 
     void write(void);
 
 private:
+    void addDef(std::string const &str);
+    void connectToNode(std::size_t index, AST *ptr);
     std::fstream file;
     std::size_t nodeIndex = 0;
     std::vector<std::pair<std::string, std::string>> declarations;
@@ -133,7 +136,7 @@ public:
     
     ///@brief Структура для хранения данных о функции
     struct FunctionData{
-        FunctionData(Token token);
+        explicit FunctionData(Token token);
         FunctionData(Token token, std::vector<std::string> params, std::string returnType);
         FunctionData();
         Token token;
