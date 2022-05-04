@@ -16,72 +16,6 @@ void GraphvizVisitor::done(void){
     file.close();
 }
 
-void GraphvizVisitor::visit(BinOpAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.left->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.right->accept(*this);
-}
-
-void GraphvizVisitor::visit(UnOpAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.down->accept(*this);
-}
-
-void GraphvizVisitor::visit(NumberAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-}
-
-void GraphvizVisitor::visit(CompoundAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    for(auto &child : node.children){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
-    }
-}
-
-void GraphvizVisitor::visit(AssignAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.var->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.value->accept(*this);
-}
-
-void GraphvizVisitor::visit(VarAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-}
-
-void GraphvizVisitor::visit(NoOpAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-}
-
-void GraphvizVisitor::write(void){
-    for(auto p : declarations){
-        file << fmt::format("n{}[label=\"{}\"]\n", p.first, p.second);
-    }
-    for(auto p : links){
-        file << fmt::format("n{}->n{}\n", p.first, p.second);
-    }
-    done();
-}
-
 void GraphvizVisitor::visit(ProgramAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.name.getStr()));
@@ -92,6 +26,20 @@ void GraphvizVisitor::visit(ProgramAST &node){
     }
     links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
     node.block->accept(*this);
+}
+
+void GraphvizVisitor::visit(FunctionAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.name));
+    nodeIndex++;
+    for(auto &child : node.params){
+        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+        child->accept(*this);
+    }
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.returnType->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.body->accept(*this);
 }
 
 void GraphvizVisitor::visit(BlockAST &node){
@@ -127,6 +75,15 @@ void GraphvizVisitor::visit(TypeSpecAST &node){
     nodeIndex++;
 }
 
+void GraphvizVisitor::visit(ArrSpecAST &node){
+    std::size_t backup = nodeIndex;
+    std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
+    declarations.push_back(std::make_pair(std::to_string(backup), arrStr));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.subType->accept(*this);
+}
+
 void GraphvizVisitor::visit(ConstAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
@@ -137,10 +94,76 @@ void GraphvizVisitor::visit(ConstAST &node){
     node.constValue->accept(*this);
 }
 
+void GraphvizVisitor::visit(CompoundAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    for(auto &child : node.children){
+        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+        child->accept(*this);
+    }
+}
+
+void GraphvizVisitor::visit(NumberAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+}
+
 void GraphvizVisitor::visit(StringAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
     nodeIndex++;
+}
+
+void GraphvizVisitor::visit(BinOpAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.left->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.right->accept(*this);
+}
+
+void GraphvizVisitor::visit(UnOpAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.down->accept(*this);
+}
+
+void GraphvizVisitor::visit(NoOpAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+}
+
+void GraphvizVisitor::visit(AssignAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.var->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.value->accept(*this);
+}
+
+void GraphvizVisitor::visit(VarAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+}
+
+void GraphvizVisitor::visit(SelectAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.from->accept(*this);
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.index->accept(*this);
 }
 
 void GraphvizVisitor::visit(CallAST &node){
@@ -151,6 +174,14 @@ void GraphvizVisitor::visit(CallAST &node){
         links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
         child->accept(*this);
     }
+}
+
+void GraphvizVisitor::visit(ReturnAST &node){
+    std::size_t backup = nodeIndex;
+    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
+    nodeIndex++;
+    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
+    node.toReturn->accept(*this);
 }
 
 void GraphvizVisitor::visit(IfAST &node){
@@ -199,92 +230,33 @@ void GraphvizVisitor::visit(IterationAST &node){
     node.postAction->accept(*this);
 }
 
-void GraphvizVisitor::visit(FunctionAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.name));
-    nodeIndex++;
-    for(auto &child : node.params){
-        links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-        child->accept(*this);
+void GraphvizVisitor::write(void){
+    for(auto p : declarations){
+        file << fmt::format("n{}[label=\"{}\"]\n", p.first, p.second);
     }
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.returnType->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.body->accept(*this);
-}
-
-void GraphvizVisitor::visit(ReturnAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.toReturn->accept(*this);
-}
-
-void GraphvizVisitor::visit(ArrSpecAST &node){
-    std::size_t backup = nodeIndex;
-    std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
-    declarations.push_back(std::make_pair(std::to_string(backup), arrStr));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.subType->accept(*this);
-}
-
-void GraphvizVisitor::visit(SelectAST &node){
-    std::size_t backup = nodeIndex;
-    declarations.push_back(std::make_pair(std::to_string(backup), node.token.getStr()));
-    nodeIndex++;
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.from->accept(*this);
-    links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
-    node.index->accept(*this);
+    for(auto p : links){
+        file << fmt::format("n{}->n{}\n", p.first, p.second);
+    }
+    done();
 }
 
 /*Определения TypeViewVisitor
 ==================*/
 TypeViewVisitor::TypeViewVisitor(){};
 
-void TypeViewVisitor::visit(BinOpAST &node){
-    typesStrings.push_back(node.token.getStr());
-    node.left->accept(*this);
-    node.right->accept(*this);
-}
-
-void TypeViewVisitor::visit(UnOpAST &node){
-    typesStrings.push_back(node.token.getStr());
-    node.down->accept(*this);
-}
-
-void TypeViewVisitor::visit(NumberAST &node){
-    typesStrings.push_back(node.token.getStr());
-}
-
-void TypeViewVisitor::visit(CompoundAST &node){
-    typesStrings.push_back(node.token.getStr());
-    for(auto &child : node.children){
-        child->accept(*this);
-    }
-}
-
-void TypeViewVisitor::visit(AssignAST &node){
-    typesStrings.push_back(node.token.getStr());
-    node.var->accept(*this);
-    node.value->accept(*this);
-}
-
-void TypeViewVisitor::visit(VarAST &node){
-    typesStrings.push_back(node.token.getStr());
-}
-
-void TypeViewVisitor::visit(NoOpAST &node){
-    typesStrings.push_back(node.token.getStr());
-}
-
 void TypeViewVisitor::visit(ProgramAST &node){
     typesStrings.push_back(node.token.getStr());
     for(auto &child : node.functions)
         child->accept(*this);
     node.block->accept(*this);
+}
+
+void TypeViewVisitor::visit(FunctionAST &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto &child : node.params)
+        child->accept(*this);
+    node.returnType->accept(*this);
+    node.body->accept(*this);
 }
 
 void TypeViewVisitor::visit(BlockAST &node){
@@ -308,14 +280,62 @@ void TypeViewVisitor::visit(TypeSpecAST &node){
     typesStrings.push_back(node.token.getStr());
 }
 
+void TypeViewVisitor::visit(ArrSpecAST &node){
+    std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
+    typesStrings.push_back(arrStr);
+    node.subType->accept(*this);
+}
+
 void TypeViewVisitor::visit(ConstAST &node){
     typesStrings.push_back(node.token.getStr());
     node.constName->accept(*this);
     node.constValue->accept(*this);
 }
 
+void TypeViewVisitor::visit(CompoundAST &node){
+    typesStrings.push_back(node.token.getStr());
+    for(auto &child : node.children){
+        child->accept(*this);
+    }
+}
+
+void TypeViewVisitor::visit(NumberAST &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
 void TypeViewVisitor::visit(StringAST &node){
     typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(BinOpAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.left->accept(*this);
+    node.right->accept(*this);
+}
+
+void TypeViewVisitor::visit(UnOpAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.down->accept(*this);
+}
+
+void TypeViewVisitor::visit(NoOpAST &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(AssignAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.var->accept(*this);
+    node.value->accept(*this);
+}
+
+void TypeViewVisitor::visit(VarAST &node){
+    typesStrings.push_back(node.token.getStr());
+}
+
+void TypeViewVisitor::visit(SelectAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.from->accept(*this);
+    node.index->accept(*this);
 }
 
 void TypeViewVisitor::visit(CallAST &node){
@@ -323,6 +343,11 @@ void TypeViewVisitor::visit(CallAST &node){
     for(auto &child : node.params){
         child->accept(*this);
     }
+}
+
+void TypeViewVisitor::visit(ReturnAST &node){
+    typesStrings.push_back(node.token.getStr());
+    node.toReturn->accept(*this);
 }
 
 void TypeViewVisitor::visit(IfAST &node){
@@ -352,35 +377,77 @@ void TypeViewVisitor::visit(IterationAST &node){
     node.postAction->accept(*this);
 }
 
-void TypeViewVisitor::visit(FunctionAST &node){
-    typesStrings.push_back(node.token.getStr());
-    for(auto &child : node.params)
-        child->accept(*this);
-    node.returnType->accept(*this);
-    node.body->accept(*this);
-}
-void TypeViewVisitor::visit(ReturnAST &node){
-    typesStrings.push_back(node.token.getStr());
-    node.toReturn->accept(*this);
-}
-
-void TypeViewVisitor::visit(ArrSpecAST &node){
-    std::string arrStr = fmt::format("{}[{} .. {}]", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr());
-    typesStrings.push_back(arrStr);
-    node.subType->accept(*this);
-}
-
-void TypeViewVisitor::visit(SelectAST &node){
-    typesStrings.push_back(node.token.getStr());
-    node.from->accept(*this);
-    node.index->accept(*this);
-}
-
 std::vector<std::string> TypeViewVisitor::getData(void){
     return typesStrings;
 }
 
 SemanticVisitor::SemanticVisitor() : vars(new std::map<std::string, VarData>), consts(new std::map<std::string, VarData>), functions(new std::map<std::string, FunctionData>){};
+
+void SemanticVisitor::visit(ProgramAST &node){
+    addProgName(node.token.getStr());
+    for(auto &child : node.functions){
+        child->accept(*this);
+    }
+    node.block->accept(*this);
+}
+
+void SemanticVisitor::visit(FunctionAST &node){
+    addFunc(node.token);
+    currCheckFunc = node.token.getStr();
+    for(auto &ptr : node.params)
+        getFunc(node.token).params.push_back(getValue(ptr.get()));
+    getFunc(node.token).returnType = getValue(node.returnType.get());
+    node.body->accept(*this);
+    currCheckFunc = "";
+}
+
+void SemanticVisitor::visit(BlockAST &node){
+    for(auto &child : node.consts){
+        child->accept(*this);
+    }
+    for(auto &child : node.declarations){
+        child->accept(*this);
+    }
+    node.compound->accept(*this);
+    clearBlock();
+}
+
+void SemanticVisitor::visit(VarDeclAST &node){
+    addVar(node.var->token, node.type.get());
+    getDefined(node.var->token).type = getValue(node.type.get());
+    Return(getDefined(node.var->token).type);
+}
+
+void SemanticVisitor::visit(TypeSpecAST &node){
+    Return(node.token.getStr());
+}
+
+void SemanticVisitor::visit(ArrSpecAST &node){
+    Return(fmt::format("{}[{} .. {}] of ", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr()) + getValue(node.subType.get()));
+}
+
+void SemanticVisitor::visit(ConstAST &node){
+    addConst(node.constName->token);
+    isConst = true;
+    getDefined(node.constName->token).type = getValue(node.constValue.get());
+    isConst = false;
+}
+
+void SemanticVisitor::visit(CompoundAST &node){
+    for(auto &child : node.children)
+        child->accept(*this);
+}
+
+void SemanticVisitor::visit(NumberAST &node){
+    if(node.token.getType() == IToken::INTEGER_CONST)
+        Return("integer");
+    else
+        Return("real");
+}
+
+void SemanticVisitor::visit(StringAST &node){
+    Return("string");
+}
 
 void SemanticVisitor::visit(BinOpAST &node){
     std::string lHand = getValue(node.left.get());
@@ -426,16 +493,8 @@ void SemanticVisitor::visit(UnOpAST &node){
     }
 }
 
-void SemanticVisitor::visit(NumberAST &node){
-    if(node.token.getType() == IToken::INTEGER_CONST)
-        Return("integer");
-    else
-        Return("real");
-}
-
-void SemanticVisitor::visit(CompoundAST &node){
-    for(auto &child : node.children)
-        child->accept(*this);
+void SemanticVisitor::visit(NoOpAST &node){
+    Return("VOID");
 }
 
 void SemanticVisitor::visit(AssignAST &node){
@@ -447,48 +506,24 @@ void SemanticVisitor::visit(VarAST &node){
     Return(getDefined(node.token).type);
 }
 
-void SemanticVisitor::visit(NoOpAST &node){
-    Return("VOID");
-}
-
-void SemanticVisitor::visit(ProgramAST &node){
-    addProgName(node.token.getStr());
-    for(auto &child : node.functions){
-        child->accept(*this);
+void SemanticVisitor::visit(SelectAST &node){
+    if(node.from->token.getAdvType() == IToken::AdvType::SELECT){
+        typeIndex++;
+        node.from->accept(*this);
+        typeIndex--;
+    } else{
+        AST *type = getDefined(node.from->token).typePtr;
+        for(std::size_t i = 0; i  < typeIndex + 1; i++){
+            if(!isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
+                type = static_cast<ArrSpecAST*>(type)->subType.get();
+            }
+        }
+        if(isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
+            Return(type->token.getStr());
+        } else{
+            Return(getValue(static_cast<ArrSpecAST*>(type)));
+        }
     }
-    node.block->accept(*this);
-}
-
-void SemanticVisitor::visit(BlockAST &node){
-    for(auto &child : node.consts){
-        child->accept(*this);
-    }
-    for(auto &child : node.declarations){
-        child->accept(*this);
-    }
-    node.compound->accept(*this);
-    clearBlock();
-}
-
-void SemanticVisitor::visit(VarDeclAST &node){
-    addVar(node.var->token, node.type.get());
-    getDefined(node.var->token).type = getValue(node.type.get());
-    Return(getDefined(node.var->token).type);
-}
-
-void SemanticVisitor::visit(TypeSpecAST &node){
-    Return(node.token.getStr());
-}
-
-void SemanticVisitor::visit(ConstAST &node){
-    addConst(node.constName->token);
-    isConst = true;
-    getDefined(node.constName->token).type = getValue(node.constValue.get());
-    isConst = false;
-}
-
-void SemanticVisitor::visit(StringAST &node){
-    Return("string");
 }
 
 void SemanticVisitor::visit(CallAST &node){
@@ -501,6 +536,17 @@ void SemanticVisitor::visit(CallAST &node){
             throw TypeException(node.token, fmt::format("{} из {} аргументов функции {} имеет неверный тип. Ожидался {}, а получен {}. ", i+1, check.size(), node.token.getStr(), check[i], getValue(node.params[i].get())));
         }
     Return(getFunc(node.token).returnType);
+}
+
+void SemanticVisitor::visit(ReturnAST &node){
+    std::string returnType = getValue(node.toReturn.get());
+    std::string expected = "integer";
+    if(currCheckFunc != "")
+        expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME}).returnType;
+    if(!compareTypes(expected, returnType)){
+        throw TypeException(node.token, fmt::format("Ожидался {}, а получен {}. ", expected, returnType));
+    }
+    Return(returnType);
 }
 
 void SemanticVisitor::visit(IfAST &node){
@@ -524,51 +570,6 @@ void SemanticVisitor::visit(IterationAST &node){
     node.condition->accept(*this);
     node.assign->accept(*this);
     node.postAction->accept(*this);
-}
-
-void SemanticVisitor::visit(FunctionAST &node){
-    addFunc(node.token);
-    currCheckFunc = node.token.getStr();
-    for(auto &ptr : node.params)
-        getFunc(node.token).params.push_back(getValue(ptr.get()));
-    getFunc(node.token).returnType = getValue(node.returnType.get());
-    node.body->accept(*this);
-    currCheckFunc = "";
-}
-
-void SemanticVisitor::visit(ReturnAST &node){
-    std::string returnType = getValue(node.toReturn.get());
-    std::string expected = "integer";
-    if(currCheckFunc != "")
-        expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME}).returnType;
-    if(!compareTypes(expected, returnType)){
-        throw TypeException(node.token, fmt::format("Ожидался {}, а получен {}. ", expected, returnType));
-    }
-    Return(returnType);
-}
-
-void SemanticVisitor::visit(ArrSpecAST &node){
-    Return(fmt::format("{}[{} .. {}] of ", node.token.getStr(), node.lHandTok.getStr(), node.rHandTok.getStr()) + getValue(node.subType.get()));
-}
-
-void SemanticVisitor::visit(SelectAST &node){
-    if(node.from->token.getAdvType() == IToken::AdvType::SELECT){
-        typeIndex++;
-        node.from->accept(*this);
-        typeIndex--;
-    } else{
-        AST *type = getDefined(node.from->token).typePtr;
-        for(std::size_t i = 0; i  < typeIndex + 1; i++){
-            if(!isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
-                type = static_cast<ArrSpecAST*>(type)->subType.get();
-            }
-        }
-        if(isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
-            Return(type->token.getStr());
-        } else{
-            Return(getValue(static_cast<ArrSpecAST*>(type)));
-        }
-    }
 }
 
 void SemanticVisitor::addProgName(std::string name) {
@@ -685,17 +686,8 @@ std::string SemanticVisitor::getValue(AST *ptr) {
     return vis.value;
 }
 
-/**
- * @brief Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void
- * @param inValue Значение, которое сохранится внутри посетителя
- */
 void SemanticVisitor::Return(std::string inValue) {
     value = inValue;
-}
-
-/// @brief Показывает хранимое внутри посетителя значение
-std::string SemanticVisitor::showValue(void) {
-    return value;
 }
 
 SemanticVisitor::FunctionData::FunctionData(Token token, std::vector<std::string> params, std::string returnType) : token(token), params(params), returnType(returnType){};

@@ -224,14 +224,19 @@ public:
 
     FunctionData &getFunc(Token name);
 
+    /// @brief Добавление стандартной функции
     void prebuildFunction(Token tok, std::vector<std::string> params, std::string returnType);
 
+    /// @brief Добавление стандартных функций
     void prebuildFunctions(List<FunctionData> funcs);
 
+    /// @brief Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать
     bool compareTypes(std::string A, std::string B, bool strict = false);
 
+    /// @brief Очищение списка переменных и констант
     void clearBlock(void);
 
+    /// @brief Создает копию посетителя, которая посещает ptr и возвращает результат
     std::string getValue(AST *ptr);
 
     /**
@@ -239,9 +244,6 @@ public:
      * @param inValue Значение, которое сохранится внутри посетителя
      */
     void Return(std::string inValue);
-
-    /// @brief Показывает хранимое внутри посетителя значение
-    std::string showValue(void);
 
 private:
     std::size_t typeIndex = 0;
