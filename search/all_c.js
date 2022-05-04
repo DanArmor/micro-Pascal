@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../de/db2/class_program_a_s_t.html#ac51476a6a2adf7ed55d8df8c2423de32',1,'ProgramAST::name()'],['../dc/d19/class_function_a_s_t.html#a3ef8295e8ad41a7a9505a91fc3be26dc',1,'FunctionAST::name()']]],
+  ['name_0',['name',['../de/db2/class_program_a_s_t.html#ac51476a6a2adf7ed55d8df8c2423de32',1,'ProgramAST::name()'],['../dc/d19/class_function_a_s_t.html#ac40b9f79437d29a02281f933634115ec',1,'FunctionAST::name()']]],
   ['neq_1',['NEQ',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa079f97e085c720fe76fad5d6b25feaa5',1,'IToken']]],
   ['newline_2',['NEWLINE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833',1,'IToken']]],
   ['nextptr_3',['nextPtr',['../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec',1,'Node']]],

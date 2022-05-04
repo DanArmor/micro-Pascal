@@ -73,7 +73,6 @@ var class_i_token =
       [ "REAL", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1651f94d95583971c358e682b73cd957", null ],
       [ "STRING", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae893f4c13aeec8e8baa58c487321c635", null ],
       [ "VOID", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4d66d3296c4149a042fd857608ff9511", null ],
-      [ "ARRAY_TYPE", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2f858380748d3b3315a644ec05a46d90", null ],
       [ "DOT", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae96c07341be350fdc64ad96c6d15659e", null ],
       [ "SEMI", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa67db653da579d09e05caf3774df22a0e", null ],
       [ "COLON", "d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad32e70bb3772513ad3b96c2bf44113de", null ],
