@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" target="_top" xlink:title="Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void.">
+<g id="a_node3"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" target="_top" xlink:title="Аналог return для посетителя">
 <polygon fill="none" stroke="black" points="144,-0.5 144,-19.5 263,-19.5 263,-0.5 144,-0.5"/>
 <text text-anchor="middle" x="203.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::Return</text>
 </a>

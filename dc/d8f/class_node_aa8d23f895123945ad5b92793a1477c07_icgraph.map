@@ -1,8 +1,5 @@
 <map id="Node::connectAsPrev" name="Node::connectAsPrev">
-<area shape="rect" id="node1" title="Присоединяет узел pPrev в качестве предыдущего узла" alt="" coords="443,31,591,57"/>
-<area shape="rect" id="node2" href="$dc/d8f/class_node.html#ae134cf81f361013712098991e97de25c" title="Создает узел из value и присоединяет в качестве предыдущего узла к вызывающему" alt="" coords="247,5,395,32"/>
-<area shape="rect" id="node3" href="$d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75" title="Вставка в начало списка" alt="" coords="267,56,375,83"/>
-<area shape="rect" id="node4" href="$d0/d14/class_stack.html#afe9c04792cf96ebfd021c14e9114b42e" title="Кладет значение на вершину стека" alt="" coords="108,31,199,57"/>
-<area shape="rect" id="node6" href="$d9/d2f/test_list_8cpp.html#a4938ee6237f7cba8d51cf0eb85fffa24" title="Тест значений после вставки в конец" alt="" coords="126,81,181,108"/>
-<area shape="rect" id="node5" href="$d9/df1/test_stack_8cpp.html#ae47a79e650f9708a927b0cf6e480cfe2" title="Тест вставки" alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="Присоединяет узел pPrev в качестве предыдущего узла" alt="" coords="264,5,412,32"/>
+<area shape="rect" id="node2" href="$d1/d34/class_list.html#acb6c6809e6effc1253c26127793c6a75" title="Вставка в начало списка" alt="" coords="108,5,216,32"/>
+<area shape="rect" id="node3" href="$d9/d2f/test_list_8cpp.html#a4938ee6237f7cba8d51cf0eb85fffa24" title="Тест значений после вставки в конец" alt="" coords="5,5,60,32"/>
 </map>

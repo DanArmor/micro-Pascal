@@ -45,10 +45,7 @@ var hierarchy =
       [ "TypeViewVisitor", "d1/d49/class_type_view_visitor.html", null ]
     ] ],
     [ "Lexer", "da/d5a/class_lexer.html", null ],
-    [ "List< T >", "d1/d34/class_list.html", [
-      [ "Queue< T >", "d4/da4/class_queue.html", null ],
-      [ "Stack< T >", "d0/d14/class_stack.html", null ]
-    ] ],
+    [ "List< T >", "d1/d34/class_list.html", null ],
     [ "List< Token >", "d1/d34/class_list.html", null ],
     [ "List< TokenTemplate >", "d1/d34/class_list.html", null ],
     [ "Node< U >", "dc/d8f/class_node.html", null ],

@@ -1,6 +1,4 @@
 <map id="SemanticVisitor::getValue" name="SemanticVisitor::getValue">
-<area shape="rect" id="node1" title=" " alt="" coords="435,31,605,57"/>
-<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54" title=" " alt="" coords="197,5,387,32"/>
-<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#acec505e2c5fc2f49a80b7a41832fefbf" title=" " alt="" coords="220,56,364,83"/>
-<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node1" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,5,368,32"/>
+<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="5,5,149,32"/>
 </map>

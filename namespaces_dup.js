@@ -8,6 +8,7 @@ var namespaces_dup =
       [ "getMathRules", "d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35", null ]
     ] ],
     [ "PascalRules", "d1/d0c/namespace_pascal_rules.html", [
-      [ "getPascalTemplates", "d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e", null ]
+      [ "getPascalTemplates", "d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e", null ],
+      [ "getStandartFuncs", "d1/d0c/namespace_pascal_rules.html#a5b3c3dcb5bb75fd385bd175120039ea2", null ]
     ] ]
 ];

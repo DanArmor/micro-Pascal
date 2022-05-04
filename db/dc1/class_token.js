@@ -1,10 +1,6 @@
 var class_token =
 [
     [ "Token", "db/dc1/class_token.html#aa3c5868ba4115f3189df6b2ac5b36f39", null ],
-    [ "Token", "db/dc1/class_token.html#ae589aacec580cfab1970ef99f0e0f1f6", null ],
-    [ "Token", "db/dc1/class_token.html#aa0f869b76d63d585c8d1f1b6ac667d21", null ],
-    [ "Token", "db/dc1/class_token.html#ac75edfd6417e58aded99c733303f2a61", null ],
-    [ "Token", "db/dc1/class_token.html#a62fd10b9f7e71829f446c4f52f9a8859", null ],
     [ "Token", "db/dc1/class_token.html#a041e1cc9b5638978a569cb970cf172dc", null ],
     [ "Token", "db/dc1/class_token.html#a945c1c5b1e5b8548a3f4c14d79c3f605", null ],
     [ "getInfo", "db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de", null ],

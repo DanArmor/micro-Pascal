@@ -1,17 +1,13 @@
 var searchData=
 [
-  ['name_0',['name',['../de/db2/class_program_a_s_t.html#ac51476a6a2adf7ed55d8df8c2423de32',1,'ProgramAST::name()'],['../dc/d19/class_function_a_s_t.html#a3ef8295e8ad41a7a9505a91fc3be26dc',1,'FunctionAST::name()']]],
-  ['neq_1',['NEQ',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa079f97e085c720fe76fad5d6b25feaa5',1,'IToken']]],
-  ['newline_2',['NEWLINE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa788621675e1f626d4824c0f18292d833',1,'IToken']]],
-  ['nextptr_3',['nextPtr',['../dc/d8f/class_node.html#a52ba4354582488265677fa2b9eec32ec',1,'Node']]],
-  ['node_4',['Node',['../dc/d8f/class_node.html',1,'Node&lt; U &gt;'],['../dc/d8f/class_node.html#ac61530da000a6b84ec4e91b8d77a8563',1,'Node::Node(U const value)'],['../dc/d8f/class_node.html#ac5b43f9e99dcd2273d0c6c0851251231',1,'Node::Node()']]],
-  ['node_3c_20t_20_3e_5',['Node&lt; T &gt;',['../dc/d8f/class_node.html',1,'']]],
-  ['node_3c_20token_20_3e_6',['Node&lt; Token &gt;',['../dc/d8f/class_node.html',1,'']]],
-  ['node_3c_20tokentemplate_20_3e_7',['Node&lt; TokenTemplate &gt;',['../dc/d8f/class_node.html',1,'']]],
-  ['nodeiterator_8',['NodeIterator',['../d3/dde/class_node_iterator.html',1,'NodeIterator&lt; T &gt;'],['../d3/dde/class_node_iterator.html#abfe3e1e58b9609be1273a650913e73a6',1,'NodeIterator::NodeIterator(Node&lt; T &gt; *inPtr)'],['../d3/dde/class_node_iterator.html#a3f94d25a54367487ef817f5b2168ef45',1,'NodeIterator::NodeIterator(Node&lt; T &gt; *inPtr, bool isEnd)'],['../d3/dde/class_node_iterator.html#a8a07423df95e0f016dcada52b264818f',1,'NodeIterator::NodeIterator(NodeIterator &amp;&amp;)=default'],['../d3/dde/class_node_iterator.html#a9937bb06905e4fff1c952631c285b97e',1,'NodeIterator::NodeIterator(NodeIterator const &amp;)=default'],['../d3/dde/class_node_iterator.html#a7badeb26e853a0f2445a0626ba77a792',1,'NodeIterator::NodeIterator()=default']]],
-  ['nodeiterator_3c_20u_20_3e_9',['NodeIterator&lt; U &gt;',['../dc/d8f/class_node.html#a6a0a2202caf8cab9fc66ee3cd9282b18',1,'Node']]],
-  ['noopast_10',['NoOpAST',['../db/db7/class_no_op_a_s_t.html',1,'NoOpAST'],['../db/db7/class_no_op_a_s_t.html#ac53faaa246072f19447be0d6fd8cd49f',1,'NoOpAST::NoOpAST()']]],
-  ['not_11',['NOT',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf579f82ab291cb5ca7d637b27747b50a',1,'IToken']]],
-  ['notprocess_12',['NOTPROCESS',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a824a11e013632c4a8ebcdda4238dd7c5',1,'IToken']]],
-  ['numberast_13',['NumberAST',['../d8/d90/class_number_a_s_t.html',1,'NumberAST'],['../d8/d90/class_number_a_s_t.html#a304ca2bdd6a912d2ae7e971bd9d48cca',1,'NumberAST::NumberAST()']]]
+  ['of_0',['OF',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa28892e3ebb59b3db02a99d278bd9484a',1,'IToken']]],
+  ['operator_1',['OPERATOR',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa',1,'IToken']]],
+  ['operator_21_3d_2',['operator!=',['../d3/dde/class_node_iterator.html#a4ce629aed5a7590aeae108b67275e221',1,'NodeIterator']]],
+  ['operator_2a_3',['operator*',['../d3/dde/class_node_iterator.html#a1fa97ce2bd84bf8f5955c29a32bb99f0',1,'NodeIterator']]],
+  ['operator_2b_2b_4',['operator++',['../d3/dde/class_node_iterator.html#a07e16ed9fdadf3b7849421e92d425789',1,'NodeIterator']]],
+  ['operator_2d_2d_5',['operator--',['../d3/dde/class_node_iterator.html#a5c656528e49f62440fc288310943058a',1,'NodeIterator']]],
+  ['operator_3d_6',['operator=',['../d3/dde/class_node_iterator.html#ac654e073f422393b1cfc42b89feb142e',1,'NodeIterator::operator=(NodeIterator &amp;&amp;)=default'],['../d3/dde/class_node_iterator.html#a59b6061e763a3e8d7eec9630fff19a0c',1,'NodeIterator::operator=(NodeIterator const &amp;)=default'],['../d1/d34/class_list.html#afb55438b3b6d88e618481384e2bdd40e',1,'List::operator=()']]],
+  ['operator_3d_3d_7',['operator==',['../d3/dde/class_node_iterator.html#ade39cf9cbbae1c80c20f3326af01bdf9',1,'NodeIterator']]],
+  ['operator_5b_5d_8',['operator[]',['../d1/d34/class_list.html#a4596d15f2cba4ff11e29a0909c5dffa8',1,'List']]],
+  ['or_9',['OR',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76',1,'IToken']]]
 ];

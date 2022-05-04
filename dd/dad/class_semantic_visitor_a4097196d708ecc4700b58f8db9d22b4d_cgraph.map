@@ -1,5 +1,5 @@
 <map id="SemanticVisitor::visit" name="SemanticVisitor::visit">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,149,57"/>
 <area shape="rect" id="node2" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="219,5,334,32"/>
-<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" title="Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void." alt="" coords="197,56,356,83"/>
+<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" title="Аналог return для посетителя" alt="" coords="197,56,356,83"/>
 </map>

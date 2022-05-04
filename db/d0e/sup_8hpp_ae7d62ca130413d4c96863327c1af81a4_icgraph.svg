@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a" target="_top" xlink:title="Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать">
 <polygon fill="none" stroke="black" points="2297,-416 2297,-446 2425,-446 2425,-416 2297,-416"/>
 <text text-anchor="start" x="2305" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::compare</text>
 <text text-anchor="middle" x="2361" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00">Types</text>

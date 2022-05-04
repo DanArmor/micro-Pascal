@@ -1,10 +1,8 @@
 <map id="AST::accept" name="AST::accept">
-<area shape="rect" id="node1" title=" " alt="" coords="653,56,747,83"/>
-<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="451,5,589,32"/>
-<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title=" " alt="" coords="435,56,605,83"/>
-<area shape="rect" id="node8" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="493,107,547,133"/>
-<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="267,5,317,32"/>
-<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a57140fbe5abb6b09a42abc3994e0fa54" title=" " alt="" coords="197,56,387,83"/>
-<area shape="rect" id="node7" href="$dd/dad/class_semantic_visitor.html#acec505e2c5fc2f49a80b7a41832fefbf" title=" " alt="" coords="220,107,364,133"/>
-<area shape="rect" id="node6" href="$dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" title=" " alt="" coords="5,56,149,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="416,56,509,83"/>
+<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="214,5,351,32"/>
+<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,56,368,83"/>
+<area shape="rect" id="node6" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="255,107,310,133"/>
+<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="52,5,103,32"/>
+<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="5,56,149,83"/>
 </map>

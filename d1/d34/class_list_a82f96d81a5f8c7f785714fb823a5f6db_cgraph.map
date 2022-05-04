@@ -1,5 +1,0 @@
-<map id="List::List" name="List::List">
-<area shape="rect" id="node1" title="Конструктор из размера" alt="" coords="5,5,77,32"/>
-<area shape="rect" id="node2" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="125,5,233,32"/>
-<area shape="rect" id="node3" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="281,5,429,32"/>
-</map>

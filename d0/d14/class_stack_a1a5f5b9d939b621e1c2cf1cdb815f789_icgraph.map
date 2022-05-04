@@ -1,4 +1,0 @@
-<map id="Stack::pick" name="Stack::pick">
-<area shape="rect" id="node1" title="Возвращает ссылку на значение на вершине стека" alt="" coords="108,5,195,32"/>
-<area shape="rect" id="node2" href="$d9/df1/test_stack_8cpp.html#aedf1705910ebac83375f579e9e810fcf" title="Тест взятия первого элемента" alt="" coords="5,5,60,32"/>
-</map>

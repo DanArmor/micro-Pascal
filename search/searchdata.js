@@ -1,17 +1,16 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghiklmnopqrstuvw~дс",
-  1: "abcfgilnpqrstuvw",
+  0: "abcdefghiklmnoprstuvw~дс",
+  1: "abcfgilnprstuvw",
   2: "alp",
-  3: "aeglmpqstv",
-  4: "abcdefghilmnopqrstuvw~",
+  3: "aeglmpstv",
+  4: "abcdefghilmnoprstuvw~",
   5: "abcdefgilmnprstv",
   6: "diprv",
   7: "at",
   8: "abcdefiklmnoprstuvw",
   9: "lno",
-  10: "_",
-  11: "дс"
+  10: "дс"
 };
 
 var indexSectionNames =
@@ -26,8 +25,7 @@ var indexSectionNames =
   7: "enums",
   8: "enumvalues",
   9: "related",
-  10: "defines",
-  11: "pages"
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -42,7 +40,6 @@ var indexSectionLabels =
   7: "Перечисления",
   8: "Элементы перечислений",
   9: "Друзья",
-  10: "Макросы",
-  11: "Страницы"
+  10: "Страницы"
 };
 

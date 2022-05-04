@@ -35,14 +35,12 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "Lexer.hpp", "d5/d24/_lexer_8hpp.html", [
       [ "Lexer", "da/d5a/class_lexer.html", "da/d5a/class_lexer" ]
     ] ],
-    [ "List.cpp", "d5/df9/_list_8cpp.html", "d5/df9/_list_8cpp" ],
-    [ "PascalTokens.hpp", "d8/d69/_pascal_tokens_8hpp.html", "d8/d69/_pascal_tokens_8hpp" ],
-    [ "Queue.cpp", "d9/dde/_queue_8cpp.html", [
-      [ "Queue< T >", "d4/da4/class_queue.html", "d4/da4/class_queue" ]
+    [ "List.hpp", "dc/d72/_list_8hpp.html", [
+      [ "Node< U >", "dc/d8f/class_node.html", "dc/d8f/class_node" ],
+      [ "NodeIterator< T >", "d3/dde/class_node_iterator.html", "d3/dde/class_node_iterator" ],
+      [ "List< T >", "d1/d34/class_list.html", "d1/d34/class_list" ]
     ] ],
-    [ "Stack.cpp", "d6/d0d/_stack_8cpp.html", [
-      [ "Stack< T >", "d0/d14/class_stack.html", "d0/d14/class_stack" ]
-    ] ],
+    [ "PascalRules.hpp", "db/dfd/_pascal_rules_8hpp.html", "db/dfd/_pascal_rules_8hpp" ],
     [ "sup.hpp", "db/d0e/sup_8hpp.html", "db/d0e/sup_8hpp" ],
     [ "Syntax.hpp", "df/d3f/_syntax_8hpp.html", [
       [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", "d0/dfe/class_syntax_analyzer" ]

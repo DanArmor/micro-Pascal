@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" target="_top" xlink:title="Создает копию посетителя, которая посещает ptr и возвращает результат">
 <polygon fill="none" stroke="black" points="144,-38.5 144,-57.5 272,-57.5 272,-38.5 144,-38.5"/>
 <text text-anchor="middle" x="208" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getValue</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" target="_top" xlink:title="Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void.">
+<g id="a_node5"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" target="_top" xlink:title="Аналог return для посетителя">
 <polygon fill="none" stroke="black" points="148.5,-0.5 148.5,-19.5 267.5,-19.5 267.5,-0.5 148.5,-0.5"/>
 <text text-anchor="middle" x="208" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::Return</text>
 </a>

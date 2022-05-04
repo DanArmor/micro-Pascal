@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Очищение списка переменных и констант">
 <polygon fill="#bfbfbf" stroke="black" points="144,-0.5 144,-19.5 280,-19.5 280,-0.5 144,-0.5"/>
 <text text-anchor="middle" x="212" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::clearBlock</text>
 </a>

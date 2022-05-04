@@ -1,6 +1,6 @@
 <map id="isIn" name="isIn">
 <area shape="rect" id="node1" title="Возвращает истину, если value находится среди значений cont." alt="" coords="3291,537,3333,564"/>
-<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a" title=" " alt="" coords="3068,95,3239,137"/>
+<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a" title="Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать" alt="" coords="3068,95,3239,137"/>
 <area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="3064,284,3243,311"/>
 <area shape="rect" id="node14" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="528,333,731,360"/>
 <area shape="rect" id="node22" href="$d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" title=" " alt="" coords="2307,512,2489,539"/>

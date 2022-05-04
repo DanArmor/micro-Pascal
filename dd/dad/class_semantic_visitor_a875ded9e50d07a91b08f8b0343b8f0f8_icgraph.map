@@ -1,4 +1,4 @@
 <map id="SemanticVisitor::Return" name="SemanticVisitor::Return">
-<area shape="rect" id="node1" title="Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void." alt="" coords="197,5,356,32"/>
-<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#acec505e2c5fc2f49a80b7a41832fefbf" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node1" title="Аналог return для посетителя" alt="" coords="197,5,356,32"/>
+<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" title=" " alt="" coords="5,5,149,32"/>
 </map>

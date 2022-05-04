@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,132,149,159"/>
 <area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9" title=" " alt="" coords="681,5,855,32"/>
 <area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e" title=" " alt="" coords="197,132,379,159"/>
-<area shape="rect" id="node9" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title=" " alt="" coords="203,233,373,260"/>
+<area shape="rect" id="node9" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="203,233,373,260"/>
 <area shape="rect" id="node3" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="911,107,1009,133"/>
 <area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f" title=" " alt="" coords="427,157,625,184"/>
 <area shape="rect" id="node7" href="$dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99" title=" " alt="" coords="681,107,855,133"/>
