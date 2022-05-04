@@ -30,7 +30,7 @@ class FunctionAST : public AST{
     ~FunctionAST() = default;
     void accept(IVisitor &visitor);
 
-    std::string name;
+    Token name;
     std::vector<std::unique_ptr<AST>> params;
     std::unique_ptr<AST> returnType;
     std::unique_ptr<AST> body;

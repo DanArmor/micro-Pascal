@@ -21,7 +21,7 @@ void GraphvizVisitor::visit(ProgramAST &node){
 
 void GraphvizVisitor::visit(FunctionAST &node){
     std::size_t backup = nodeIndex;
-    addDef(node.name);
+    addDef(node.name.getStr());
     for(auto &child : node.params)
         connectToNode(backup, child.get());
     connectToNode(backup, node.returnType.get());

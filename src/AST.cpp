@@ -169,7 +169,8 @@ void IterationAST::accept(IVisitor &visitor){
 ==================*/
 FunctionAST::FunctionAST(Token token, std::vector<std::unique_ptr<AST>> params, std::unique_ptr<AST> returnType, std::unique_ptr<AST> body) : 
     AST(token), params(std::move(params)), returnType(std::move(returnType)), body(std::move(body)){
-        this->name = "function:\n" + token.getStr();
+        this->name = token;
+        this->name.setStr("function:\n" + token.getStr());
     };
 
 void FunctionAST::accept(IVisitor &visitor){
