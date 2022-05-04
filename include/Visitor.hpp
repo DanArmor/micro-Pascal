@@ -3,17 +3,17 @@
 
 #include <fstream>
 #include <string>
+#include <memory>
 
 #include "Token.hpp"
-#include "List.cpp"
+#include "List.hpp"
 
 #include "ASTclasses.hpp"
 #include "SyntExp.hpp"
 #include "sup.hpp"
 
 /// @brief Посетителя для построения графического отображения АДС
-class GraphvizVisitor : public IVisitor
-{
+class GraphvizVisitor : public IVisitor {
 public:
     explicit GraphvizVisitor(std::string filename);
 
@@ -73,8 +73,7 @@ private:
 };
 
 /// @brief Посетителя для вывода сведений о типах в прямом порядке по АДС
-class TypeViewVisitor : public IVisitor
-{
+class TypeViewVisitor : public IVisitor {
 public:
     TypeViewVisitor();
 
@@ -128,9 +127,11 @@ private:
     std::vector<std::string> typesStrings;
 };
 
-class SemanticVisitor : public IVisitor
-{
+/// @brief Посетитель-семантический анализатор
+class SemanticVisitor : public IVisitor {
 public:
+    
+    ///@brief Структура для хранения данных о функции
     struct FunctionData{
         FunctionData(Token token);
         FunctionData(Token token, std::vector<std::string> params, std::string returnType);
@@ -140,6 +141,7 @@ public:
         std::string returnType;
     };
 
+    ///@brief Структура для хранения данных об именованном значении - переменной или константе
     struct VarData{
         VarData(Token token, AST *typePtr);
         VarData(Token token, bool isConst);
@@ -147,11 +149,8 @@ public:
         AST *typePtr = nullptr;
         Token token;
         bool isConst;
-        std::string subType;
         std::string type;
     };
-
-    void addVar(Token token, AST *ptr);
 
     SemanticVisitor();
 
@@ -201,40 +200,42 @@ public:
 
     void addProgName(std::string name);
 
-    void addVar(Token token);
+    void addVar(Token token, AST *ptr);
 
-    void addConst(Token token);
+    void addVar(Token token);
 
     VarData &getVar(Token name);
 
+    void addConst(Token token);
+
     VarData &getConst(Token name);
-
-    VarData &getDefined(Token name);
-
-    void checkDefined(Token name);
-
-    void addFunc(Token token);
-
-    void prebuildFunction(std::string name, std::vector<std::string> params, std::string returnType);
-
-    FunctionData &getFunc(Token name);
 
     bool checkVar(Token name);
 
     bool checkConst(Token name);
 
+    void checkDefined(Token name);
+
+    VarData &getDefined(Token name);
+
+    void addFunc(Token token);
+
     void checkFunc(Token token);
 
-    bool compareTypes(std::string A, std::string B, bool strict = false);
+    FunctionData &getFunc(Token name);
 
-    std::string getSubType(ArrSpecAST *node);
+    void prebuildFunction(Token tok, std::vector<std::string> params, std::string returnType);
+
+    void prebuildFunctions(List<FunctionData> funcs);
+
+    bool compareTypes(std::string A, std::string B, bool strict = false);
 
     void clearBlock(void);
 
     std::string getValue(AST *ptr);
 
     /**
-     * @brief Аналог return для посетителя, т.к. сигнатура функции предполагает возвращение void
+     * @brief Аналог return для посетителя
      * @param inValue Значение, которое сохранится внутри посетителя
      */
     void Return(std::string inValue);
@@ -248,9 +249,9 @@ private:
     std::string value;
     std::string programName;
     std::string currCheckFunc;
-    std::map<std::string, VarData> vars;
-    std::map<std::string, VarData> consts;
-    std::map<std::string, FunctionData> functions;
+    std::shared_ptr<std::map<std::string, VarData>> vars;
+    std::shared_ptr<std::map<std::string, VarData>> consts;
+    std::shared_ptr<std::map<std::string, FunctionData>> functions;
 };
 
 #endif

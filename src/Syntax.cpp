@@ -33,7 +33,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxBlock(void){
     std::vector<std::unique_ptr<AST>> constsList = syntaxConsts();
     std::vector<std::unique_ptr<AST>> declsList = syntaxVars();
     std::unique_ptr<AST> compoundPTR = syntaxCompoundSt();
-    return ASTFactory::createAST(IToken::Type::BLOCK, std::move(constsList), std::move(declsList), std::move(compoundPTR));
+    return ASTFactory::createAST({"", IToken::BLOCK, IToken::UNKNOWN}, std::move(constsList), std::move(declsList), std::move(compoundPTR));
 }
 
 std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxConsts(void){
@@ -101,7 +101,7 @@ std::vector<std::unique_ptr<AST>> SyntaxAnalyzer::syntaxVarDecl(void){
 
     std::vector<std::unique_ptr<AST>> varDeclsList;
     for(auto &var : varsList){
-        varDeclsList.emplace_back(ASTFactory::createAST(IToken::VARDECL, std::move(var), createCopyOfType(typeNodePTR.get())));
+        varDeclsList.emplace_back(ASTFactory::createAST({"", IToken::EMPTY, IToken::VARDECL}, std::move(var), createCopyOfType(typeNodePTR.get())));
     }
     return varDeclsList;
 }
@@ -361,7 +361,7 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxVariable(void){
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxEmptySt(void){
     /* syntaxEmptySt ::= '$NONE$' */
-    return ASTFactory::createAST(IToken::EMPTY);
+    return ASTFactory::createAST({"", IToken::EMPTY, IToken::UNKNOWN});
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxExpr(void){

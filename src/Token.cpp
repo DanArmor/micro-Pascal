@@ -18,12 +18,6 @@ IToken::IToken(Type type, AdvType advType) : type(type), advType(advType){};
 ==================*/
 Token::Token() : IToken(IToken::ERROR, IToken::UNKNOWN), str(""){};
 
-Token::Token(IToken::AdvType const type) : IToken(type){};
-Token::Token(IToken::Type const type) : IToken(type){};
-
-Token::Token(std::string const &str, Type const type) : IToken(type), str(str){};
-Token::Token(std::string const &str, AdvType const type) : str(str), IToken(type){};
-
 Token::Token(std::string const &str, Type const type, AdvType const advType) : IToken(type, advType), str(str){};
 
 Token::Token(std::string const &str, Type const type, AdvType const advType, std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos) : IToken(type, advType), str(str), lineNum(lineNum), posInLineNum(inLinePosNum), posNum(inFilePos){};

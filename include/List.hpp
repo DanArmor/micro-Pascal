@@ -4,9 +4,9 @@
 /**
  * @file List.cpp
  * @author DanArmor (https://github.com/DanArmor)
- * @brief Двусвязный список
- * @version 0.5
- * @date 2022-03-17
+ * @brief Двусвязный список - интерфейс
+ * @version 1.0
+ * @date 2022-05-04
  */
 
 #include <cstddef>
@@ -37,52 +37,35 @@ class Node{
     public:
 
     /// @brief Конструктор по-умолчанию
-    Node() : innerData(nullptr), nextPtr(nullptr), prevPtr(nullptr){};
+    Node();
 
     /// @brief Конструктор из значения
-    explicit Node(U const value) : nextPtr(nullptr), prevPtr(nullptr), innerData(value){};
+    explicit Node(U const value);
 
     /**
      * @brief Возвращает ссылку на данные узла
      * @return U - данные узла
      */
-    U& data(void) noexcept{
-        return innerData; 
-    }
+    U& data(void) noexcept;
 
     /// @brief Присоединяет узел pNext в качестве следующего узла
-    void connectAsNext(Node *pNext) noexcept{
-        nextPtr = pNext;
-        pNext->prevPtr = this;
-    }
+    void connectAsNext(Node *pNext) noexcept;
 
     /// @brief Присоединяет узел pPrev в качестве предыдущего узла
-    void connectAsPrev(Node *pPrev) noexcept{
-        prevPtr = pPrev;
-        pPrev->nextPtr = this;
-    }
+    void connectAsPrev(Node *pPrev) noexcept;
 
     /// @brief Создает узел из value и присоединяет в качестве следующего узла к вызывающему
-    void connectAsNext(U const &value) noexcept{
-        connectAsNext(new Node<U>(value));
-    }
+    void connectAsNext(U const &value) noexcept;
 
     /// @brief Создает узел из value и присоединяет в качестве предыдущего узла к вызывающему
-    void connectAsPrev(U const &value) noexcept{
-        connectAsPrev(new Node<U>(value));
-    }
+    void connectAsPrev(U const &value) noexcept;
 
     /**
      * @brief Исключает узел из цепи, в которой находится.
      * Пример, y - узел. к которому вызван метод: 
      * x <-> y <-> z переходит в x <-> z
      */
-    void exclude(void) noexcept{
-        if(prevPtr != nullptr)
-            prevPtr->nextPtr = nextPtr;
-        if(nextPtr != nullptr)
-            nextPtr->prevPtr = prevPtr;
-    }
+    void exclude(void) noexcept;
 
     /**
      * @brief Исключает узел из цепи, в которой находится.
@@ -90,10 +73,7 @@ class Node{
      * x <-> y <-> z переходит в x <-> z.
      * Возвращает узел y.
      */
-    Node *excludeAndReturn(void) noexcept{
-        exclude();
-        return this;
-    }
+    Node *excludeAndReturn(void) noexcept;
 
     protected:
     /// @brief Данные
@@ -117,37 +97,20 @@ struct NodeIterator{
     using iterator_category = std::bidirectional_iterator_tag;
 
     /// @brief Конструктор из указателя 
-    explicit NodeIterator(Node<T> *inPtr) : ptr(inPtr){};
+    explicit NodeIterator(Node<T> *inPtr);
 
     /// @brief Конструктор для двунаправленного узла
-    NodeIterator(Node<T> *inPtr, bool isEnd) : ptr(inPtr){
-        if(isEnd && inPtr != nullptr){
-            ptr = inPtr->nextPtr;
-            innerEnd = inPtr;
-        } else{
-            ptr = inPtr;
-        }
-    };
+    NodeIterator(Node<T> *inPtr, bool isEnd);
 
     /// @brief Перемещение вперед на одну позицию
-    NodeIterator &operator++(void){
-        ptr = ptr->nextPtr;
-        return *this;
-    }
+    NodeIterator &operator++(void);
 
     /// @brief Перемещение назад на одну позицию
-    NodeIterator &operator--(void){
-        if(ptr == nullptr)
-            ptr = innerEnd;
-        else [[likely]]
-            ptr = ptr->prevPtr;
-        return *this;
-    }
+    NodeIterator &operator--(void);
 
     /// @brief Получение данных итератора
-    T &operator*(void){
-        return ptr->data();
-    }
+    T &operator*(void);
+
 
     /// @brief Не указывают ли итераторы на один и тот же узел
     friend bool operator!=(NodeIterator const &lhs, NodeIterator const &rhs){
@@ -180,45 +143,25 @@ class List{
     public:
 
     /// @brief Конструктор по-умолчанию
-    List() : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {};
+    List();
 
     /// @brief Конструктор из initializer_list
-    List(std::initializer_list<T> const &initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
-        for(auto value : initData)
-            pushBack(value);
-        sizeOfList = initData.size();
-    }
+    List(std::initializer_list<T> const &initData);
 
     /// @brief Конструктор из initializer_list
-    explicit List(std::vector<T> const &initData) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
-        for(auto value : initData)
-            pushBack(value);
-        sizeOfList = initData.size();
-    }
+    explicit List(std::vector<T> const &initData);
 
     /// @brief Конструктор из размера
-    explicit List(std::size_t n) : sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0) {
-        for(std::size_t i = 0; i < n; i++)
-            pushBack(T{});
-        sizeOfList = n;
-    }
+    explicit List(std::size_t n);
     
     /// @brief Конструктор из другого списка
-    List(List<T> const &list): sizeOfList(0), startPtr(nullptr), endPtr(nullptr), workPtr(nullptr), currIndex(0){
-        clear();
-        for(auto x : list)
-            pushBack(x);
-    }
+    List(List<T> const &list);
 
     ///@brief Деструктор
-    ~List(){
-        clear();
-    }
+    ~List();
 
     /// @return std::size_t - размер списка
-    std::size_t size(void) noexcept{
-        return sizeOfList;
-    }
+    std::size_t size(void) noexcept;
 
     /**
      * @brief Вставка в конец списка
@@ -260,80 +203,31 @@ class List{
      * @param[in] index - индекс элемента в списке
      * @return T& - ссылку на элемент с номером index. 
      */
-    T& operator[](std::size_t const index){
-        if(index > sizeOfList)
-            throw std::out_of_range("Выход за пределы списка!");
-        else if(sizeOfList == 0)
-            throw std::out_of_range("Попытка получения значения из пустого списка!");
-        goToIndex(index);
-        return getWorkPtr()->data();
-    }
+    T& operator[](std::size_t const index);
 
     /**
      * @brief Безопасная функция для удаления, т.к.
      * учитывается изменение указателя на начало и конец списка
      * @param i - позиция для удаления
      */
-    void removeAt(std::size_t const i){
-        if(sizeOfList == 0)
-            throw(std::out_of_range("Попытка удаления элемента из пустого списка!"));
-        else if(i >= sizeOfList)
-            throw(std::out_of_range("Индекс элемента для удаления лежит за пределами списка!"));
-        if(i == size()-1)
-            popBack();
-        else if(i == 0)
-            popFront();
-        else
-            removeAt_inner(i);
-    }
+    void removeAt(std::size_t const i);
 
     /// @brief Удаление из конца списка
-    void popBack(void){
-        if(sizeOfList == 0)
-            throw(std::out_of_range("Попытка удаления элемента из пустого списка!"));
-        Node<T> *reserveEnd = endPtr->prevPtr;
-        removeAt_inner(size()-1);
-        endPtr = reserveEnd;
-    }
+    void popBack(void);
 
     /// @brief Удаление из начала списка
-    void popFront(void){
-        if(sizeOfList == 0)
-            throw(std::out_of_range("Попытка удаления элемента из пустого списка!"));
-        Node<T> *reserveStart = startPtr->nextPtr;
-        removeAt_inner(0);
-        startPtr = reserveStart;
-    }
+    void popFront(void);
 
     /// @brief очищает память, выделенную под узлы списка
-    void clear(void){
-        std::size_t toClear = sizeOfList;
-        for(std::size_t i = 0; i < toClear; i++)
-            popBack();
-    }
+    void clear(void);
 
     /// @brief Итератор для начала списка
-    NodeIterator<T> begin(void) const{
-        return NodeIterator<T>(startPtr, false);
-    }
+    NodeIterator<T> begin(void) const;
 
     /// @brief Конец списка
-    NodeIterator<T> end() const{
-        return NodeIterator<T>(endPtr, true);
-    }
+    NodeIterator<T> end() const;
 
-    List<T> &operator=(List<T> const &list){
-        if(this == &list)
-            return *this;
-        
-        clear();
-        for(auto x : list)
-            pushBack(x);
-        sizeOfList = list.sizeOfList;
-
-        return *this;
-    }
-
+    List<T> &operator=(List<T> const &list);
 
     private:
 
@@ -342,94 +236,31 @@ class List{
      * не меняет указатель на начало и конец списка после удаления 
      * @param i - позиция для удаления
      */
-    void removeAt_inner(std::size_t i){
-        goToIndex(i);
-        Node<T> *ptr = getWorkPtr()->excludeAndReturn();
-        /// Если есть предыдущий узел - зацепимся за него
-        if(ptr->prevPtr != nullptr){
-            workPtr = ptr->prevPtr;
-            currIndex = i - 1;
-        }else if(ptr->nextPtr != nullptr){
-            workPtr = ptr->nextPtr;
-            currIndex = i;
-        }else{
-            goToBegin();
-            currIndex = 0;
-        }
-        delete ptr;
-        /// самое важное в ветках выше - не забыть обновить текущий индекс
-        sizeOfList--;
-    }
+    void removeAt_inner(std::size_t i);
 
     /// @brief Возвращает указатель по рабочему указателю
-    Node<T> *&getWorkPtr(void) noexcept{
-        return workPtr;
-    }
+    Node<T> *&getWorkPtr(void) noexcept;
 
     /// @brief Перемещает рабочий указатель в начало списка
-    void goToBegin(void) noexcept{
-        workPtr = startPtr;
-        currIndex = 0;
-    }
+    void goToBegin(void) noexcept;
 
     /// @brief Перемещает рабочий указатель в конец списка
-    void goToEnd(void) noexcept{
-        workPtr = endPtr;
-        currIndex = sizeOfList ? sizeOfList - 1 : 0;
-    }
+    void goToEnd(void) noexcept;
 
     /// @brief перемещает рабочий указатель вперед на один шаг
-    void moveWorkPtrNext(void){
-        if(getWorkPtr() == nullptr)
-            throw(std::out_of_range("Попытка перемещения по рабочему указателю, когда он равен nullptr"));
-        workPtr = getWorkPtr()->nextPtr;
-        currIndex++;
-    }
+    void moveWorkPtrNext(void);
 
     /// @brief перемещает рабочий указатель назад на один шаг
-    void moveWorkPtrBack(void){
-        if(getWorkPtr() == nullptr)
-            throw(std::out_of_range("Попытка перемещения по рабочему указателю, когда он равен nullptr"));
-        workPtr = getWorkPtr()->prevPtr;
-        currIndex--;
-    }
+    void moveWorkPtrBack(void);
 
     /// @brief перемещает рабочий указатель вперед до указанного индекса
-    void moveFowardUntil(std::size_t const index){
-        while(currIndex < index)
-            moveWorkPtrNext();
-    }
+    void moveFowardUntil(std::size_t const index);
 
     /// @brief перемещает рабочий указатель назад до указанного индекса
-    void moveBackUntil(std::size_t const index){
-        while(currIndex > index)
-            moveWorkPtrBack();
-    }
+    void moveBackUntil(std::size_t const index);
 
     /// @param[in] index - индекс необходимого элемента, на которой переместится рабочий указатель
-    void goToIndex(std::size_t const index){
-        /// 0 - start, 1 - end, 2 - current
-        enum positionToStart : std::size_t {start, end, current};
-        std::size_t searchFrom = size() - 1 - index < index ? end : start; /// Выбор между стартом и концом
-        std::size_t dist = searchFrom ? size() - 1 - index : index;
-
-        if(currIndex < index)
-            if(dist >= index - currIndex)
-                searchFrom = current;
-        else
-            if(dist >= currIndex - index)
-                searchFrom = current;
-
-        switch(searchFrom){
-            case start:     goToBegin(); moveFowardUntil(index); break;
-            case end:       goToEnd(); moveBackUntil(index); break;
-            case current:   if(currIndex < index)
-                                moveFowardUntil(index);
-                            else
-                                moveBackUntil(index);
-                            break;
-        }
-    }
+    void goToIndex(std::size_t const index);
 
     /// @brief Размер списка
     std::size_t sizeOfList;
@@ -443,5 +274,7 @@ class List{
     std::size_t currIndex; 
 
 };
+
+#include "List.tpp"
 
 #endif

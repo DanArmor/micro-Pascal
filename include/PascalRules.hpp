@@ -2,20 +2,23 @@
 #define __INC_PASCALTOKENS_H
 
 #include <vector>
+#include <string>
 
 #include "Token.hpp"
-#include "List.cpp"
+#include "List.hpp"
+#include "Visitor.hpp"
+
 
 /// @brief Специальные правила Паскаля
 namespace PascalRules{
 
-//    Token CONST(std::size_t lineNum){
-//        return {"CONST", IToken::CONST, lineNum};
-//    }
-//
-//    Token VAR(std::size_t lineNum){
-//        return {"VAR", IToken::VAR, lineNum};
-//    }
+    List<SemanticVisitor::FunctionData> getStandartFuncs(void){
+         List<SemanticVisitor::FunctionData> functions = {
+             {{"writeln", IToken::ID, IToken::FUNCTION_NAME}, std::vector<std::string>{"string"}, "void"},
+             {{"sin", IToken::ID, IToken::FUNCTION_NAME}, std::vector<std::string>{"real"}, "real"}
+        };
+        return functions;
+    }
 
     /// @brief Возвращает шаблоны токинов языка Pascal
     List<TokenTemplate> getPascalTemplates(void){

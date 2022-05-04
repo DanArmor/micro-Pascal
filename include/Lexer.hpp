@@ -5,7 +5,7 @@
 #include <fstream>
 
 #include "Token.hpp"
-#include "List.cpp"
+#include "List.hpp"
 
 /**
  * @file Lexer.cpp

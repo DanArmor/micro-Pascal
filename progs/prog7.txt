@@ -8,8 +8,21 @@ function fib(n : integer) : integer;
             return fib(n - 1) + fib(n - 2)
     end;
 
+function createArray(n : integer) : array [1 .. 100] of integer;
+    var
+        i : integer;
+        a : array [1 .. 100] of integer;
+    begin
+        for i := 1 to n do
+            a[i] := i;
+        return a; 
+    end;
+
 var
     x : integer;
+    a : array [1 .. 100] of integer;
 begin
     x := fib(3);
+    writeln('hello world');
+    a := createArray(x);
 end.

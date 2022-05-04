@@ -118,7 +118,7 @@ List<Token> Lexer::analyzeProgramText(std::string const &text){
             }
         }
     }
-    Token endOfStream("$", IToken::ENDOFSTREAM);
+    Token endOfStream("$", IToken::ENDOFSTREAM, IToken::UNKNOWN);
     tokens.pushBack(endOfStream);
     return tokens;
 }

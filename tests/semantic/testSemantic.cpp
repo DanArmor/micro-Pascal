@@ -2,12 +2,12 @@
 #include <vector>
 #include <gtest/gtest.h>
 
-#include "List.cpp"
+#include "List.hpp"
 #include "Lexer.hpp"
 #include "Syntax.hpp"
 #include "SyntExp.hpp"
 #include "AST.hpp"
-#include "PascalTokens.hpp"
+#include "PascalRules.hpp"
 #include "Visitor.hpp"
 
 /// @brief Тест семантического анализа Паскаля

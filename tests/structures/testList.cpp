@@ -13,7 +13,7 @@
 #include <numeric>
 
 #include <gtest/gtest.h>
-#include "List.cpp"
+#include "List.hpp"
 
 /// @brief Тест стандартного конструктора
 TEST(LIST_SIMPLE_TESTS, Create_default){

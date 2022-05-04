@@ -1,12 +1,12 @@
 #include <string>
 #include <vector>
 
-#include "List.cpp"
+#include "List.hpp"
 #include "Lexer.hpp"
 #include "Syntax.hpp"
 #include "SyntExp.hpp"
 #include "AST.hpp"
-#include "PascalTokens.hpp"
+#include "PascalRules.hpp"
 #include "Visitor.hpp"
 
 namespace Analyze{
@@ -69,8 +69,8 @@ void analyzeFile(std::string name){
     graph.write();
 
     SemanticVisitor semantic;
+    semantic.prebuildFunctions(PascalRules::getStandartFuncs());
     root->accept(semantic);
-
 }
 
 }

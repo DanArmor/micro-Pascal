@@ -5,7 +5,7 @@
 
 #include "magic_enum.hpp"
 
-#include "List.cpp"
+#include "List.hpp"
 #include "Token.hpp"
 #include "ASTclasses.hpp"
 

@@ -1,6 +1,6 @@
 #ifndef __INC_LEXER_TEST_H
 #define __INC_LEXER_TEST_H
-#include "List.cpp"
+#include "List.hpp"
 #include "Lexer.hpp"
 
 namespace LexerTestRules{

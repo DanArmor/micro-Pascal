@@ -145,22 +145,6 @@ class Token : public IToken{
     /// @brief Конструктор по-умолчанию
     Token();
 
-    Token(IToken::AdvType const type);
-    Token(IToken::Type const type);
-
-    /**
-     * @brief Конструктор из строки токена и типа
-     * @param[in] str строка, представляющая токен
-     * @param[in] type тип токена
-     */
-    Token(std::string const &str, Type const type);
-    /**
-     * @brief Конструктор из строки токена и дополнительного типа
-     * @param[in] str строка, представляющая токен
-     * @param[in] type дополнительный тип токена
-     */
-    Token(std::string const &str, AdvType const type);
-
     Token(std::string const &str, Type const type, AdvType const advType);
 
     /**

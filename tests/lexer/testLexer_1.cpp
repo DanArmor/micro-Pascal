@@ -1,9 +1,9 @@
 #include <vector>
 #include <gtest/gtest.h>
 
-#include "List.cpp"
+#include "List.hpp"
 #include "Lexer.hpp"
-#include "PascalTokens.hpp"
+#include "PascalRules.hpp"
 #include "lexerTestRules.hpp"
 #include "SyntExp.hpp"
 
@@ -30,27 +30,27 @@ TEST(PARSE, MATH){
     Lexer lexer;
     lexer.setTemplates(LexerTestRules::getMathRules());
     List<Token> checkData{
-        {"1", IToken::INTEGER_CONST},
-        {"+", IToken::PLUS},
-        {"1", IToken::INTEGER_CONST},
-        {"=", IToken::EQ},
-        {"2", IToken::INTEGER_CONST},
-        {"3", IToken::INTEGER_CONST},
-        {"+", IToken::PLUS},
-        {"3", IToken::INTEGER_CONST},
-        {"=", IToken::EQ},
-        {"6", IToken::INTEGER_CONST},
-        {"1984", IToken::INTEGER_CONST},
-        {"1", IToken::INTEGER_CONST},
-        {"*", IToken::MUL},
-        {"9", IToken::INTEGER_CONST},
-        {"/", IToken::FLOAT_DIV},
-        {"(", IToken::LPAREN},
-        {"1", IToken::INTEGER_CONST},
-        {"-", IToken::MINUS},
-        {"2", IToken::INTEGER_CONST},
-        {")", IToken::RPAREN},
-        {"$", IToken::ENDOFSTREAM},
+        {"1", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"+", IToken::PLUS, IToken::OPERATOR},
+        {"1", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"=", IToken::EQ, IToken::OPERATOR},
+        {"2", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"3", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"+", IToken::PLUS, IToken::OPERATOR},
+        {"3", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"=", IToken::EQ, IToken::OPERATOR},
+        {"6", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"1984", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"1", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"*", IToken::MUL, IToken::OPERATOR},
+        {"9", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"/", IToken::FLOAT_DIV, IToken::OPERATOR},
+        {"(", IToken::LPAREN, IToken::OPERATOR},
+        {"1", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"-", IToken::MINUS, IToken::OPERATOR},
+        {"2", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {")", IToken::RPAREN, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text1.txt");
 }
@@ -60,13 +60,13 @@ TEST(PARSE, PASCAL_SIMPLE){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"program", IToken::PROGRAM},
-        {"test", IToken::ID},
-        {";", IToken::SEMI},
-        {"begin", IToken::BEGIN},
-        {"end", IToken::END},
-        {".", IToken::DOT},
-        {"$", IToken::ENDOFSTREAM},
+        {"program", IToken::PROGRAM, IToken::KEYWORD},
+        {"test", IToken::ID, IToken::PROGRAM_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
+        {"begin", IToken::BEGIN, IToken::KEYWORD},
+        {"end", IToken::END, IToken::KEYWORD},
+        {".", IToken::DOT, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text2.txt");
 }
@@ -76,49 +76,49 @@ TEST(PARSE, PASCAL_MEDIUM){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"program", IToken::PROGRAM},
-        {"test", IToken::ID},
-        {";", IToken::SEMI},
+        {"program", IToken::PROGRAM, IToken::KEYWORD},
+        {"test", IToken::ID, IToken::PROGRAM_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"const", IToken::CONST},
-        {"x", IToken::ID},
-        {"=", IToken::EQ},
-        {"10", IToken::INTEGER_CONST},
-        {";", IToken::SEMI},
+        {"const", IToken::CONST, IToken::SOME_CONST},
+        {"x", IToken::ID, IToken::VAR_NAME},
+        {"=", IToken::EQ, IToken::OPERATOR},
+        {"10", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"var", IToken::VAR},
-        {"a", IToken::ID},
-        {",", IToken::COMMA},
-        {"b", IToken::ID},
-        {",", IToken::COMMA},
-        {"c", IToken::ID},
-        {":", IToken::COLON},
-        {"integer", IToken::INTEGER},
-        {";", IToken::SEMI},
+        {"var", IToken::VAR, IToken::KEYWORD},
+        {"a", IToken::ID, IToken::VAR_NAME},
+        {",", IToken::COMMA, IToken::OPERATOR},
+        {"b", IToken::ID, IToken::VAR_NAME},
+        {",", IToken::COMMA, IToken::OPERATOR},
+        {"c", IToken::ID, IToken::VAR_NAME},
+        {":", IToken::COLON, IToken::OPERATOR},
+        {"integer", IToken::INTEGER, IToken::TYPE_SPEC},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"begin", IToken::BEGIN},
+        {"begin", IToken::BEGIN, IToken::KEYWORD},
 
-        {"a", IToken::ID},
-        {":=", IToken::ASSIGN},
-        {"0", IToken::INTEGER_CONST},
-        {";", IToken::SEMI},
-        {"b", IToken::ID},
-        {":=", IToken::ASSIGN},
-        {"0", IToken::INTEGER_CONST},
-        {";", IToken::SEMI},
-        {"c", IToken::ID},
-        {":=", IToken::ASSIGN},
-        {"x", IToken::ID},
-        {";", IToken::SEMI},
-        {"writeln", IToken::ID},
-        {"(", IToken::LPAREN},
-        {"'TEST STRING;1+1<>!=@@@###!!'", IToken::STRING_CONST},
-        {")", IToken::RPAREN},
-        {";", IToken::SEMI},
+        {"a", IToken::ID, IToken::VAR_NAME},
+        {":=", IToken::ASSIGN, IToken::OPERATOR},
+        {"0", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {";", IToken::SEMI, IToken::OPERATOR},
+        {"b", IToken::ID, IToken::VAR_NAME},
+        {":=", IToken::ASSIGN, IToken::OPERATOR},
+        {"0", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {";", IToken::SEMI, IToken::OPERATOR},
+        {"c", IToken::ID, IToken::VAR_NAME},
+        {":=", IToken::ASSIGN, IToken::OPERATOR},
+        {"x", IToken::ID, IToken::VAR_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
+        {"writeln", IToken::ID, IToken::FUNCTION_NAME},
+        {"(", IToken::LPAREN, IToken::OPERATOR},
+        {"'TEST STRING;1+1<>!=@@@###!!'", IToken::STRING_CONST, IToken::SOME_CONST},
+        {")", IToken::RPAREN, IToken::OPERATOR},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"end", IToken::END},
-        {".", IToken::DOT},
-        {"$", IToken::ENDOFSTREAM},
+        {"end", IToken::END, IToken::KEYWORD},
+        {".", IToken::DOT, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text3.txt");
 }
@@ -128,46 +128,46 @@ TEST(PARSE, PASCAL_HARD){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"program", IToken::PROGRAM},
-        {"test", IToken::ID},
-        {";", IToken::SEMI},
+        {"program", IToken::PROGRAM, IToken::KEYWORD},
+        {"test", IToken::ID, IToken::PROGRAM_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"const", IToken::CONST},
-        {"x", IToken::ID},
-        {"=", IToken::EQ},
-        {"10", IToken::INTEGER_CONST},
-        {";", IToken::SEMI},
+        {"const", IToken::CONST, IToken::KEYWORD},
+        {"x", IToken::ID, IToken::VAR_NAME},
+        {"=", IToken::EQ, IToken::OPERATOR},
+        {"10", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"var", IToken::VAR},
-        {"a", IToken::ID},
-        {",", IToken::COMMA},
-        {"b", IToken::ID},
-        {",", IToken::COMMA},
-        {"c", IToken::ID},
-        {":", IToken::COLON},
-        {"integer", IToken::INTEGER},
-        {";", IToken::SEMI},
+        {"var", IToken::VAR, IToken::KEYWORD},
+        {"a", IToken::ID, IToken::VAR_NAME},
+        {",", IToken::COMMA, IToken::OPERATOR},
+        {"b", IToken::ID, IToken::VAR_NAME},
+        {",", IToken::COMMA, IToken::OPERATOR},
+        {"c", IToken::ID, IToken::VAR_NAME},
+        {":", IToken::COLON, IToken::OPERATOR},
+        {"integer", IToken::INTEGER, IToken::TYPE_SPEC},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"begin", IToken::BEGIN},
+        {"begin", IToken::BEGIN, IToken::KEYWORD},
 
-        {"if", IToken::IF},
-        {"a", IToken::ID},
-        {">", IToken::MORE},
-        {"b", IToken::ID},
-        {":", IToken::COLON},
-        {"throw", IToken::ID},
-        {"'hi'", IToken::STRING_CONST},
-        {";", IToken::SEMI},
+        {"if", IToken::IF, IToken::KEYWORD},
+        {"a", IToken::ID, IToken::VAR_NAME},
+        {">", IToken::MORE, IToken::OPERATOR},
+        {"b", IToken::ID, IToken::VAR_NAME},
+        {":", IToken::COLON, IToken::OPERATOR},
+        {"throw", IToken::ID, IToken::FUNCTION_NAME},
+        {"'hi'", IToken::STRING_CONST, IToken::SOME_CONST},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"writeln", IToken::ID},
-        {"(", IToken::LPAREN},
-        {"'TEST STRING;1+1<>!=@@@###!!'", IToken::STRING_CONST},
-        {")", IToken::RPAREN},
-        {";", IToken::SEMI},
+        {"writeln", IToken::ID, IToken::FUNCTION_NAME},
+        {"(", IToken::LPAREN, IToken::OPERATOR},
+        {"'TEST STRING;1+1<>!=@@@###!!'", IToken::STRING_CONST, IToken::SOME_CONST},
+        {")", IToken::RPAREN, IToken::OPERATOR},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
-        {"end", IToken::END},
-        {".", IToken::DOT},
-        {"$", IToken::ENDOFSTREAM},
+        {"end", IToken::END, IToken::KEYWORD},
+        {".", IToken::DOT, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text4.txt");
 }
@@ -184,30 +184,30 @@ TEST(PARSE, PASCAL_FOR_TO_LOOP){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"program", IToken::PROGRAM},
-        {"name", IToken::ID},
-        {";", IToken::SEMI},
+        {"program", IToken::PROGRAM, IToken::KEYWORD},
+        {"name", IToken::ID, IToken::PROGRAM_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
 
-        {"begin", IToken::BEGIN},
+        {"begin", IToken::BEGIN, IToken::KEYWORD},
 
-        {"for", IToken::FOR},
-        {"i", IToken::ID},
-        {":=", IToken::ASSIGN},
-        {"10", IToken::INTEGER_CONST},
-        {"to", IToken::TO},
-        {"20", IToken::INTEGER_CONST},
-        {"do", IToken::DO},
-        {"println", IToken::ID},
-        {"(", IToken::LPAREN},
-        {"'hi'", IToken::STRING_CONST},
-        {")", IToken::RPAREN},
-        {";", IToken::SEMI},
+        {"for", IToken::FOR, IToken::KEYWORD},
+        {"i", IToken::ID, IToken::VAR_NAME},
+        {":=", IToken::ASSIGN, IToken::OPERATOR},
+        {"10", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"to", IToken::TO, IToken::KEYWORD},
+        {"20", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"do", IToken::DO, IToken::KEYWORD},
+        {"println", IToken::ID, IToken::FUNCTION_NAME},
+        {"(", IToken::LPAREN, IToken::OPERATOR},
+        {"'hi'", IToken::STRING_CONST, IToken::SOME_CONST},
+        {")", IToken::RPAREN, IToken::OPERATOR},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
 
-        {"end", IToken::END},
-        {".", IToken::DOT},
-        {"$", IToken::ENDOFSTREAM},
+        {"end", IToken::END, IToken::KEYWORD},
+        {".", IToken::DOT, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text6.txt");
 }
@@ -216,30 +216,30 @@ TEST(PARSE, PASCAL_FOR_DOWN_TO_LOOP){
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> checkData{
-        {"program", IToken::PROGRAM},
-        {"name", IToken::ID},
-        {";", IToken::SEMI},
+        {"program", IToken::PROGRAM, IToken::KEYWORD},
+        {"name", IToken::ID, IToken::PROGRAM_NAME},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
 
-        {"begin", IToken::BEGIN},
+        {"begin", IToken::BEGIN, IToken::KEYWORD},
 
-        {"for", IToken::FOR},
-        {"i", IToken::ID},
-        {":=", IToken::ASSIGN},
-        {"10", IToken::INTEGER_CONST},
-        {"down to", IToken::DOWNTO},
-        {"20", IToken::INTEGER_CONST},
-        {"do", IToken::DO},
-        {"println", IToken::ID},
-        {"(", IToken::LPAREN},
-        {"'hi'", IToken::STRING_CONST},
-        {")", IToken::RPAREN},
-        {";", IToken::SEMI},
+        {"for", IToken::FOR, IToken::KEYWORD},
+        {"i", IToken::ID, IToken::VAR_NAME},
+        {":=", IToken::ASSIGN, IToken::OPERATOR},
+        {"10", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"down to", IToken::DOWNTO, IToken::KEYWORD},
+        {"20", IToken::INTEGER_CONST, IToken::SOME_CONST},
+        {"do", IToken::DO, IToken::KEYWORD},
+        {"println", IToken::ID, IToken::FUNCTION_NAME},
+        {"(", IToken::LPAREN, IToken::OPERATOR},
+        {"'hi'", IToken::STRING_CONST, IToken::SOME_CONST},
+        {")", IToken::RPAREN, IToken::OPERATOR},
+        {";", IToken::SEMI, IToken::OPERATOR},
 
 
-        {"end", IToken::END},
-        {".", IToken::DOT},
-        {"$", IToken::ENDOFSTREAM},
+        {"end", IToken::END, IToken::KEYWORD},
+        {".", IToken::DOT, IToken::OPERATOR},
+        {"$", IToken::ENDOFSTREAM, IToken::UNKNOWN},
     };
     checkEqualLex(checkData, lexer, "./build/tests/text7.txt");
 }
