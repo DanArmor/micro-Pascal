@@ -17,23 +17,9 @@ class GraphvizVisitor : public IVisitor {
 public:
     explicit GraphvizVisitor(std::string filename);
 
-    void done(void);
-
-    void visit(BinOpAST &node);
-
-    void visit(UnOpAST &node);
-
-    void visit(NumberAST &node);
-
-    void visit(CompoundAST &node);
-
-    void visit(AssignAST &node);
-
-    void visit(VarAST &node);
-
-    void visit(NoOpAST &node);
-
     void visit(ProgramAST &node);
+
+    void visit(FunctionAST &node);
 
     void visit(BlockAST &node);
 
@@ -41,11 +27,31 @@ public:
 
     void visit(TypeSpecAST &node);
 
+    void visit(ArrSpecAST &node);
+
     void visit(ConstAST &node);
+
+    void visit(CompoundAST &node);
+
+    void visit(NumberAST &node);
 
     void visit(StringAST &node);
 
+    void visit(BinOpAST &node);
+
+    void visit(UnOpAST &node);
+
+    void visit(NoOpAST &node);
+
+    void visit(AssignAST &node);
+
+    void visit(VarAST &node);
+
+    void visit(SelectAST &node);
+
     void visit(CallAST &node);
+
+    void visit(ReturnAST &node);
 
     void visit(IfAST &node);
 
@@ -55,13 +61,7 @@ public:
 
     void visit(IterationAST &node);
 
-    void visit(FunctionAST &node);
-
-    void visit(ReturnAST &node);
-
-    void visit(ArrSpecAST &node);
-
-    void visit(SelectAST &node);
+    void done(void);
 
     void write(void);
 
@@ -77,21 +77,9 @@ class TypeViewVisitor : public IVisitor {
 public:
     TypeViewVisitor();
 
-    void visit(BinOpAST &node);
-
-    void visit(UnOpAST &node);
-
-    void visit(NumberAST &node);
-
-    void visit(CompoundAST &node);
-
-    void visit(AssignAST &node);
-
-    void visit(VarAST &node);
-
-    void visit(NoOpAST &node);
-
     void visit(ProgramAST &node);
+
+    void visit(FunctionAST &node);
 
     void visit(BlockAST &node);
 
@@ -99,11 +87,31 @@ public:
 
     void visit(TypeSpecAST &node);
 
+    void visit(ArrSpecAST &node);
+
     void visit(ConstAST &node);
+
+    void visit(CompoundAST &node);
+
+    void visit(NumberAST &node);
 
     void visit(StringAST &node);
 
+    void visit(BinOpAST &node);
+
+    void visit(UnOpAST &node);
+
+    void visit(NoOpAST &node);
+
+    void visit(AssignAST &node);
+
+    void visit(VarAST &node);
+
+    void visit(SelectAST &node);
+
     void visit(CallAST &node);
+
+    void visit(ReturnAST &node);
 
     void visit(IfAST &node);
 
@@ -112,14 +120,6 @@ public:
     void visit(ForAST &node);
 
     void visit(IterationAST &node);
-
-    void visit(FunctionAST &node);
-
-    void visit(ReturnAST &node);
-
-    void visit(ArrSpecAST &node);
-
-    void visit(SelectAST &node);
 
     std::vector<std::string> getData(void);
 
@@ -154,21 +154,9 @@ public:
 
     SemanticVisitor();
 
-    void visit(BinOpAST &node);
-
-    void visit(UnOpAST &node);
-
-    void visit(NumberAST &node);
-
-    void visit(CompoundAST &node);
-
-    void visit(AssignAST &node);
-
-    void visit(VarAST &node);
-
-    void visit(NoOpAST &node);
-
     void visit(ProgramAST &node);
+
+    void visit(FunctionAST &node);
 
     void visit(BlockAST &node);
 
@@ -176,11 +164,31 @@ public:
 
     void visit(TypeSpecAST &node);
 
+    void visit(ArrSpecAST &node);
+
     void visit(ConstAST &node);
+
+    void visit(CompoundAST &node);
+
+    void visit(NumberAST &node);
 
     void visit(StringAST &node);
 
+    void visit(BinOpAST &node);
+
+    void visit(UnOpAST &node);
+
+    void visit(NoOpAST &node);
+
+    void visit(AssignAST &node);
+
+    void visit(VarAST &node);
+
+    void visit(SelectAST &node);
+
     void visit(CallAST &node);
+
+    void visit(ReturnAST &node);
 
     void visit(IfAST &node);
 
@@ -189,14 +197,6 @@ public:
     void visit(ForAST &node);
 
     void visit(IterationAST &node);
-
-    void visit(FunctionAST &node);
-
-    void visit(ReturnAST &node);
-
-    void visit(ArrSpecAST &node);
-
-    void visit(SelectAST &node);
 
     void addProgName(std::string name);
 

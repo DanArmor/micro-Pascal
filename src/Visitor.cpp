@@ -11,11 +11,6 @@ GraphvizVisitor::GraphvizVisitor(std::string filename){
     file << "digraph name{\n";
 }
 
-void GraphvizVisitor::done(void){
-    file << "}\n";
-    file.close();
-}
-
 void GraphvizVisitor::visit(ProgramAST &node){
     std::size_t backup = nodeIndex;
     declarations.push_back(std::make_pair(std::to_string(backup), node.name.getStr()));
@@ -228,6 +223,11 @@ void GraphvizVisitor::visit(IterationAST &node){
     node.condition->accept(*this);
     links.push_back(std::make_pair(std::to_string(backup), std::to_string(nodeIndex)));
     node.postAction->accept(*this);
+}
+
+void GraphvizVisitor::done(void){
+    file << "}\n";
+    file.close();
 }
 
 void GraphvizVisitor::write(void){
