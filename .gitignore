@@ -5,6 +5,7 @@
 !*.hpp
 !*.c
 !*.cpp
+!*.tpp
 !*.sh
 !*.pas
 !*.py

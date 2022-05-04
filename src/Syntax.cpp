@@ -8,6 +8,13 @@
 
 SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens) {};
 
+std::unique_ptr<AST> SyntaxAnalyzer::parseTokens(void){
+    std::unique_ptr<AST> root = std::move(syntaxProgram());
+    if(getCurTok().getType() != IToken::ENDOFSTREAM)
+        throw SyntaxException(getCurTok(), "Анализ программы завершился до встречи специального символа <конца потока токенов>!");
+    return root;
+}
+
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
     /* syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'  */
     eat(IToken::PROGRAM);
@@ -26,6 +33,41 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxProgram(void){
     std::unique_ptr<AST> blockPTR = syntaxBlock();
     eat(IToken::DOT);
     return ASTFactory::createAST(nameTok, std::move(functions), std::move(blockPTR));
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
+    Token funcTok = getCurTok();
+    if(funcTok.getType() == IToken::FUNCTION)
+        eat(IToken::FUNCTION);
+    else
+        eat(IToken::PROCEDURE);
+    
+    Token &name = getCurTok();
+
+    name.setAdvType(IToken::FUNCTION_NAME);
+    eat(IToken::ID);
+    eat(IToken::LPAREN);
+    std::vector<std::unique_ptr<AST>> params;
+    while(getCurTok().getType() != IToken::RPAREN){
+        std::vector<std::unique_ptr<AST>> sup = std::move(syntaxVarDecl());
+        for(auto &ptr : sup)
+            params.emplace_back(std::move(ptr));
+        if(getCurTok().getType() == IToken::COMMA)
+            eat(IToken::COMMA);
+    }
+    eat(IToken::RPAREN);
+
+    std::unique_ptr<AST> returnType;
+    if(funcTok.getType() == IToken::FUNCTION){
+        eat(IToken::COLON);
+        returnType = syntaxTypeSpec();
+    } else{
+        Token typeTok = {"VOID", IToken::VOID, IToken::TYPE_SPEC};
+        returnType = ASTFactory::createAST(typeTok);
+    }
+    eat(IToken::SEMI);
+    std::unique_ptr<AST> body = std::move(syntaxBlock());
+    return ASTFactory::createAST(name, std::move(params), std::move(returnType), std::move(body));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxBlock(void){
@@ -127,7 +169,6 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxTypeSpec(void){
         std::unique_ptr<AST> subType = syntaxTypeSpec();
         return ASTFactory::createAST(arrTok, lHandTok, rHandTok, std::move(subType));
     }
-
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCompoundSt(void){
@@ -187,6 +228,25 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxSt(void){
     }
 }
 
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxEmptySt(void){
+    /* syntaxEmptySt ::= '$NONE$' */
+    return ASTFactory::createAST({"", IToken::EMPTY, IToken::UNKNOWN});
+}
+
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxAssignSt(void){
+    /* syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr */
+    std::unique_ptr<AST> lValue;
+    if(lookFoward().getType() == IToken::LSQBRACKET)
+        lValue = std::move(syntaxSelect());
+    else
+        lValue = std::move(syntaxVariable());
+    Token assignTok = getCurTok();
+    eat(IToken::ASSIGN);
+
+    std::unique_ptr<AST> toAssign = std::move(syntaxExpr());
+    return ASTFactory::createAST(assignTok, std::move(lValue), std::move(toAssign));
+}
+
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxIfSt(void){
     /* syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)? */
     Token ifTok = getCurTok();
@@ -215,105 +275,13 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxWhileSt(void){
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxForSt(void){
-    /* syntaxForSt ::= 'for' syntaxIterSt 'do' syntaxSt */
+    /* syntaxForSt ::= 'for' syntaxIter 'do' syntaxSt */
     Token token = getCurTok();
     eat(IToken::FOR);
-    std::unique_ptr<AST> iterSt = syntaxIterSt();
+    std::unique_ptr<AST> iterSt = syntaxIter();
     eat(IToken::DO);
     std::unique_ptr<AST> body = syntaxSt();
     return ASTFactory::createAST(token, std::move(iterSt), std::move(body));
-}
-
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxIterSt(void){
-    /* syntaxIterSt ::= syntaxAssignSt ('to'|'down to') ('<INTEGER_CONST>'|syntaxVariable) */
-    Token varTok = getCurTok();
-    std::unique_ptr<AST> initSt = syntaxAssignSt();
-
-    Token toTok = getCurTok();
-    if(toTok.getType() == IToken::DOWNTO)
-        eat(IToken::DOWNTO);
-    else
-        eat(IToken::TO);
-
-    Token finTok = getCurTok();
-    if(finTok.getAdvType() != IToken::SOME_CONST and finTok.getType() != IToken::ID)
-        throw AnalyzeException(finTok, "Конечным значением цикла for должна быть целая константа или переменная!");
-    std::unique_ptr<AST> finPtr = syntaxFactor();
-
-    Token condOp = {"<=", IToken::LESS_EQ, IToken::OPERATOR};
-    std::unique_ptr<AST> varPtr_condition = ASTFactory::createAST(varTok);
-    std::unique_ptr<AST> finPtr_condition = ASTFactory::createAST(finTok);
-    std::unique_ptr<AST> condition = ASTFactory::createAST(condOp, std::move(varPtr_condition), std::move(finPtr_condition));
-
-    Token postOp = {"+", IToken::PLUS, IToken::OPERATOR};
-    if(toTok.getType() == IToken::DOWNTO)
-        postOp = {"-", IToken::MINUS, IToken::OPERATOR};
-    Token forOp = {"1", IToken::INTEGER_CONST, IToken::SOME_CONST};
-    std::unique_ptr<AST> varPtr_postOp = ASTFactory::createAST(varTok);
-    std::unique_ptr<AST> finPtr_postOp = ASTFactory::createAST(forOp);
-    std::unique_ptr<AST> postAction = ASTFactory::createAST(postOp, std::move(varPtr_postOp), std::move(finPtr_postOp));
-
-    return ASTFactory::createAST(toTok, std::move(initSt), std::move(condition), std::move(postAction)); 
-}
-
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxFuncDef(void){
-    Token funcTok = getCurTok();
-    if(funcTok.getType() == IToken::FUNCTION)
-        eat(IToken::FUNCTION);
-    else
-        eat(IToken::PROCEDURE);
-    
-    Token &name = getCurTok();
-
-    name.setAdvType(IToken::FUNCTION_NAME);
-    eat(IToken::ID);
-    eat(IToken::LPAREN);
-    std::vector<std::unique_ptr<AST>> params;
-    while(getCurTok().getType() != IToken::RPAREN){
-        std::vector<std::unique_ptr<AST>> sup = std::move(syntaxVarDecl());
-        for(auto &ptr : sup)
-            params.emplace_back(std::move(ptr));
-        if(getCurTok().getType() == IToken::COMMA)
-            eat(IToken::COMMA);
-    }
-    eat(IToken::RPAREN);
-
-    std::unique_ptr<AST> returnType;
-    if(funcTok.getType() == IToken::FUNCTION){
-        eat(IToken::COLON);
-        returnType = syntaxTypeSpec();
-    } else{
-        Token typeTok = {"VOID", IToken::VOID, IToken::TYPE_SPEC};
-        returnType = ASTFactory::createAST(typeTok);
-    }
-    eat(IToken::SEMI);
-    std::unique_ptr<AST> body = std::move(syntaxBlock());
-    return ASTFactory::createAST(name, std::move(params), std::move(returnType), std::move(body));
-}
-
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
-    Token retTok = getCurTok();
-    eat(IToken::RETURN);
-    std::unique_ptr<AST> toReturn = std::move(syntaxExpr());
-    return ASTFactory::createAST(retTok, std::move(toReturn));
-}
-
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxSelect(void){
-    Token tok = getCurTok();
-    tok.setAdvType(IToken::SELECT);
-    std::unique_ptr<AST> var = std::move(syntaxVariable());
-    std::vector<std::unique_ptr<AST>> selections;
-    while(getCurTok().getType() == IToken::LSQBRACKET){
-        eat(IToken::LSQBRACKET);
-        std::unique_ptr<AST> index = std::move(syntaxExpr());
-        eat(IToken::RSQBRACKET);
-        selections.emplace_back(std::move(index));
-    }
-    if(selections.size() != 1)
-        for(std::size_t i = 0; i < selections.size() - 1; i++){
-            var = ASTFactory::createAST(tok, std::move(var), std::move(selections[i]));
-        }
-    return ASTFactory::createAST(tok, std::move(var), std::move(selections[selections.size()-1]));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){
@@ -337,18 +305,11 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxCallSt(void){
     return ASTFactory::createAST(nameTok, std::move(paramsList));
 }
 
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxAssignSt(void){
-    /* syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr */
-    std::unique_ptr<AST> lValue;
-    if(lookFoward().getType() == IToken::LSQBRACKET)
-        lValue = std::move(syntaxSelect());
-    else
-        lValue = std::move(syntaxVariable());
-    Token assignTok = getCurTok();
-    eat(IToken::ASSIGN);
-
-    std::unique_ptr<AST> toAssign = std::move(syntaxExpr());
-    return ASTFactory::createAST(assignTok, std::move(lValue), std::move(toAssign));
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxReturnSt(void){
+    Token retTok = getCurTok();
+    eat(IToken::RETURN);
+    std::unique_ptr<AST> toReturn = std::move(syntaxExpr());
+    return ASTFactory::createAST(retTok, std::move(toReturn));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxVariable(void){
@@ -359,9 +320,22 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxVariable(void){
     return varPTR;
 }
 
-std::unique_ptr<AST> SyntaxAnalyzer::syntaxEmptySt(void){
-    /* syntaxEmptySt ::= '$NONE$' */
-    return ASTFactory::createAST({"", IToken::EMPTY, IToken::UNKNOWN});
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxSelect(void){
+    Token tok = getCurTok();
+    tok.setAdvType(IToken::SELECT);
+    std::unique_ptr<AST> var = std::move(syntaxVariable());
+    std::vector<std::unique_ptr<AST>> selections;
+    while(getCurTok().getType() == IToken::LSQBRACKET){
+        eat(IToken::LSQBRACKET);
+        std::unique_ptr<AST> index = std::move(syntaxExpr());
+        eat(IToken::RSQBRACKET);
+        selections.emplace_back(std::move(index));
+    }
+    if(selections.size() != 1)
+        for(std::size_t i = 0; i < selections.size() - 1; i++){
+            var = ASTFactory::createAST(tok, std::move(var), std::move(selections[i]));
+        }
+    return ASTFactory::createAST(tok, std::move(var), std::move(selections[selections.size()-1]));
 }
 
 std::unique_ptr<AST> SyntaxAnalyzer::syntaxExpr(void){
@@ -447,11 +421,36 @@ std::unique_ptr<AST> SyntaxAnalyzer::syntaxFactor(){
     return nullptr;
 }
 
-std::unique_ptr<AST> SyntaxAnalyzer::parseTokens(void){
-    std::unique_ptr<AST> root = std::move(syntaxProgram());
-    if(getCurTok().getType() != IToken::ENDOFSTREAM)
-        throw SyntaxException(getCurTok(), "Анализ программы завершился до встречи специального символа <конца потока токенов>!");
-    return root;
+std::unique_ptr<AST> SyntaxAnalyzer::syntaxIter(void){
+    /* syntaxIter ::= syntaxAssignSt ('to'|'down to') ('<INTEGER_CONST>'|syntaxVariable) */
+    Token varTok = getCurTok();
+    std::unique_ptr<AST> initSt = syntaxAssignSt();
+
+    Token toTok = getCurTok();
+    if(toTok.getType() == IToken::DOWNTO)
+        eat(IToken::DOWNTO);
+    else
+        eat(IToken::TO);
+
+    Token finTok = getCurTok();
+    if(finTok.getAdvType() != IToken::SOME_CONST and finTok.getType() != IToken::ID)
+        throw AnalyzeException(finTok, "Конечным значением цикла for должна быть целая константа или переменная!");
+    std::unique_ptr<AST> finPtr = syntaxFactor();
+
+    Token condOp = {"<=", IToken::LESS_EQ, IToken::OPERATOR};
+    std::unique_ptr<AST> varPtr_condition = ASTFactory::createAST(varTok);
+    std::unique_ptr<AST> finPtr_condition = ASTFactory::createAST(finTok);
+    std::unique_ptr<AST> condition = ASTFactory::createAST(condOp, std::move(varPtr_condition), std::move(finPtr_condition));
+
+    Token postOp = {"+", IToken::PLUS, IToken::OPERATOR};
+    if(toTok.getType() == IToken::DOWNTO)
+        postOp = {"-", IToken::MINUS, IToken::OPERATOR};
+    Token forOp = {"1", IToken::INTEGER_CONST, IToken::SOME_CONST};
+    std::unique_ptr<AST> varPtr_postOp = ASTFactory::createAST(varTok);
+    std::unique_ptr<AST> finPtr_postOp = ASTFactory::createAST(forOp);
+    std::unique_ptr<AST> postAction = ASTFactory::createAST(postOp, std::move(varPtr_postOp), std::move(finPtr_postOp));
+
+    return ASTFactory::createAST(toTok, std::move(initSt), std::move(condition), std::move(postAction)); 
 }
 
 void SyntaxAnalyzer::getNextToken(void){
@@ -484,6 +483,10 @@ void SyntaxAnalyzer::eatAdv(IToken::AdvType const type){
     }
 }
 
+List<Token> SyntaxAnalyzer::getTokens(void){
+    return tokens;
+}
+
 std::unique_ptr<AST> SyntaxAnalyzer::createCopyOfType(AST *ptr){
     if(ptr->token.getAdvType() == IToken::TYPE_SPEC || ptr->token.getType() == IToken::ARRAY){
         if(ptr->token.getType() == IToken::ARRAY){
@@ -496,8 +499,4 @@ std::unique_ptr<AST> SyntaxAnalyzer::createCopyOfType(AST *ptr){
     } else{
         throw std::logic_error("Применение createCopyOfType к узлу, не являющемуся типом! " + ptr->token.getInfo());
     }
-}
-
-List<Token> SyntaxAnalyzer::getTokens(void){
-    return tokens;
 }

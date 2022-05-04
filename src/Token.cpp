@@ -9,8 +9,6 @@
 ==================*/
 IToken::IToken(void){};
 
-IToken::IToken(Type type) : type(type){};
-
 IToken::IToken(Type type, AdvType advType) : type(type), advType(advType){};
 
 

@@ -11,19 +11,19 @@ class IToken{
     public:
     /// @brief Типы токенов
     enum AdvType{
-        KEYWORD,
-        FUNCTION_NAME,
-        VAR_NAME,
-        OPERATOR,
-        SOME_CONST,
-        TYPE_SPEC,
-        NOTPROCESS,
-        PROGRAM_NAME,
-        SELECT,
+        KEYWORD, ///< Ключевое слово
+        FUNCTION_NAME, ///< Имя функции
+        VAR_NAME, ///< Имя переменной/константы
+        OPERATOR, ///< Оператор
+        SOME_CONST, ///< Константа
+        TYPE_SPEC, ///< Спецификатор типа
+        NOTPROCESS, ///< Необрабатываемые токены
+        PROGRAM_NAME, ///< Имя программы
+        SELECT, ///< Выбор элемента массива
         VARDECL, ///< Объявление переменной
         CONSTDECL, ///< Объявление константы
-        COMPOUND,
-        UNKNOWN
+        COMPOUND, ///< Составной оператор
+        UNKNOWN ///< Неопределенный тип
     };
 
     enum Type{
@@ -31,7 +31,6 @@ class IToken{
         ENDOFSTREAM, ///< Конец потока токенов (конец файла)
         EMPTY, ///< Пустое выражение
         BLOCK, ///< Блок
-        TERMINATE, ///< Неявная замена SEMI
         NEWLINE, ///< Символ новой строки
         COMMENT, ///< Комментарий
 
@@ -51,7 +50,6 @@ class IToken{
         PLUS, ///< Плюс
         MINUS, ///< Минус
         MUL, ///< Умножение
-        DIV, ///< Depricated!!!!
         MOD, ///< Взятие модуля
         INTEGER_DIV, ///< Целочисленное деление
         FLOAT_DIV, ///< Вещественное деление
@@ -76,7 +74,7 @@ class IToken{
         VAR, ///< Ключевое слово VAR
         CONST, ///< Ключевое слово CONST
         WHILE, ///< WHILE
-        FOR,
+        FOR, ///< for
         DO, ///< DO
         IF, ///< IF
         THEN, ///< THEN
@@ -87,13 +85,13 @@ class IToken{
         RETURN, ///< return
         ARRAY, ///< array
         OF, ///< of
-        FUNCTION, ///< Функция
-        PROCEDURE, ///< Процедура
-        RANGE,
+        FUNCTION, ///< function
+        PROCEDURE, ///< procedure
+        RANGE, ///< ..
 
-        INTEGER, ///< Целый тип
-        REAL, ///< Вещественный тип
-        STRING, ///< Тип строки
+        INTEGER, ///< integer
+        REAL, ///< real
+        STRING, ///< string
         VOID, ///< "Пустой тип"
         ARRAY_TYPE, ///< Тип массив
 
@@ -102,19 +100,11 @@ class IToken{
         COLON, ///< Двоеточие
         COMMA, ///< Запятая
 
-        // Дополнительные ключевые слова ?
-
     };
 
     /// @brief Конструктор по-умолчанию
     IToken(void);
 
-    /**
-     * @brief Конструктор из типа
-     * @param[in] type тип токена
-     */
-    IToken(Type type);
-    IToken(AdvType type) : advType(type){};
     IToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
