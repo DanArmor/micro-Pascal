@@ -176,16 +176,16 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1686,-370.5 1686,-389.5 1825,-389.5 1825,-370.5 1686,-370.5"/>
-<text text-anchor="middle" x="1755.5" y="-377.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node4"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1691,-370.5 1691,-389.5 1820,-389.5 1820,-370.5 1691,-370.5"/>
+<text text-anchor="middle" x="1755.5" y="-377.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M2787.71,-367.7C2714.69,-373.17 2604.22,-380 2508,-380 2508,-380 2508,-380 2138,-380 2028.55,-380 1901.44,-380 1825.07,-380"/>
+<path fill="none" stroke="midnightblue" d="M2787.71,-367.7C2714.69,-373.17 2604.22,-380 2508,-380 2508,-380 2508,-380 2138,-380 2026.23,-380 1896.05,-380 1820.29,-380"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2788.05,-371.18 2797.76,-366.93 2787.52,-364.2 2788.05,-371.18"/>
 </g>
 <!-- Node18 -->
@@ -329,7 +329,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-85.5 213,-104.5 356,-104.5 356,-85.5 213,-85.5"/>
 <text text-anchor="middle" x="284.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>

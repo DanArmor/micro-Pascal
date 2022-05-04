@@ -65,9 +65,9 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1686,-104.5 1686,-123.5 1825,-123.5 1825,-104.5 1686,-104.5"/>
-<text text-anchor="middle" x="1755.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node3"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1691,-104.5 1691,-123.5 1820,-123.5 1820,-104.5 1691,-104.5"/>
+<text text-anchor="middle" x="1755.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
@@ -245,7 +245,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-265.5 213,-284.5 356,-284.5 356,-265.5 213,-265.5"/>
 <text text-anchor="middle" x="284.5" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>
@@ -311,7 +311,7 @@
 <!-- Node17&#45;&gt;Node3 -->
 <g id="edge24" class="edge">
 <title>Node17&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M2787.71,-126.3C2714.69,-120.83 2604.22,-114 2508,-114 2508,-114 2508,-114 2138,-114 2028.55,-114 1901.44,-114 1825.07,-114"/>
+<path fill="none" stroke="midnightblue" d="M2787.71,-126.3C2714.69,-120.83 2604.22,-114 2508,-114 2508,-114 2508,-114 2138,-114 2026.23,-114 1896.05,-114 1820.29,-114"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2787.52,-129.8 2797.76,-127.07 2788.05,-122.82 2787.52,-129.8"/>
 </g>
 <!-- Node17&#45;&gt;Node17 -->

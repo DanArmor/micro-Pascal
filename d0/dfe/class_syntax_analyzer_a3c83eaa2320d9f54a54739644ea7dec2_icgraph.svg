@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Возвращает список токенов анализатора">
 <polygon fill="#bfbfbf" stroke="black" points="213,-0.5 213,-19.5 346,-19.5 346,-0.5 213,-0.5"/>
 <text text-anchor="middle" x="279.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::getTokens</text>
 </a>

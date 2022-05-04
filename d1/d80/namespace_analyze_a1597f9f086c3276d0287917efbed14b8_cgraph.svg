@@ -96,7 +96,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3c83eaa2320d9f54a54739644ea7dec2" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3c83eaa2320d9f54a54739644ea7dec2" target="_top" xlink:title="Возвращает список токенов анализатора">
 <polygon fill="none" stroke="black" points="155,-1281.97 155,-1300.97 288,-1300.97 288,-1281.97 155,-1281.97"/>
 <text text-anchor="middle" x="221.5" y="-1288.97" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::getTokens</text>
 </a>
@@ -126,7 +126,7 @@
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="150,-1445.97 150,-1464.97 293,-1464.97 293,-1445.97 150,-1445.97"/>
 <text text-anchor="middle" x="221.5" y="-1452.97" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>
@@ -388,7 +388,7 @@
 <!-- Node25 -->
 <g id="node25" class="node">
 <title>Node25</title>
-<g id="a_node25"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="1857,-332.97 1857,-351.97 1958,-351.97 1958,-332.97 1857,-332.97"/>
 <text text-anchor="middle" x="1907.5" y="-339.97" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eat</text>
 </a>
@@ -1018,7 +1018,7 @@
 <!-- Node39 -->
 <g id="node44" class="node">
 <title>Node39</title>
-<g id="a_node44"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="1848.5,-502.97 1848.5,-521.97 1966.5,-521.97 1966.5,-502.97 1848.5,-502.97"/>
 <text text-anchor="middle" x="1907.5" y="-509.97" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eatAdv</text>
 </a>

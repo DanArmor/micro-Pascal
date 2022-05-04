@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="156,2919,280,2945"/>
 <area shape="rect" id="node13" href="$d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96" title=" " alt="" coords="135,3020,301,3047"/>
 <area shape="rect" id="node14" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,3071,328,3097"/>
-<area shape="rect" id="node15" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title=" " alt="" coords="123,2969,313,2996"/>
+<area shape="rect" id="node15" href="$d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="123,2969,313,2996"/>
 <area shape="rect" id="node50" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="149,3121,287,3148"/>
 <area shape="rect" id="node4" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="389,183,566,209"/>
 <area shape="rect" id="node5" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="687,56,769,83"/>
@@ -18,7 +18,7 @@
 <area shape="rect" id="node16" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="3571,2108,3747,2135"/>
 <area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" title=" " alt="" coords="376,2969,579,2996"/>
 <area shape="rect" id="node18" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="3353,1044,3512,1071"/>
-<area shape="rect" id="node21" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="3365,2867,3500,2893"/>
+<area shape="rect" id="node21" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="3365,2867,3500,2893"/>
 <area shape="rect" id="node23" href="$db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="3411,1677,3454,1704"/>
 <area shape="rect" id="node24" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="3127,2917,3265,2944"/>
 <area shape="rect" id="node25" href="$d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" title=" " alt="" coords="877,2969,1064,2996"/>
@@ -44,9 +44,9 @@
 <area shape="rect" id="node34" href="$d0/dfe/class_syntax_analyzer.html#a1264dcb50cb09c564a36125c21043298" title=" " alt="" coords="2589,2184,2779,2211"/>
 <area shape="rect" id="node35" href="$d0/dfe/class_syntax_analyzer.html#a94c8a6ab5c0e53cae22edb1a840a27ce" title=" " alt="" coords="2839,2691,3039,2717"/>
 <area shape="rect" id="node33" href="$d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" title=" " alt="" coords="3087,1829,3305,1856"/>
-<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" title=" " alt="" coords="2081,917,2266,944"/>
+<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" title=" " alt="" coords="2087,917,2259,944"/>
 <area shape="rect" id="node44" href="$d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" title=" " alt="" coords="2577,1829,2791,1856"/>
 <area shape="rect" id="node46" href="$d0/dfe/class_syntax_analyzer.html#a8f6dda26a96ec0e5e75bea5eed577856" title=" " alt="" coords="2839,2387,3038,2413"/>
 <area shape="rect" id="node47" href="$d0/dfe/class_syntax_analyzer.html#a5d262eb9e2236dde3bd043eea0b0e957" title=" " alt="" coords="3091,2360,3301,2387"/>
-<area shape="rect" id="node48" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="3354,2512,3511,2539"/>
+<area shape="rect" id="node48" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="3354,2512,3511,2539"/>
 </map>

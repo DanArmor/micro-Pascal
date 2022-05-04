@@ -1,4 +1,4 @@
 <map id="IfAST" name="IfAST">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,61,107"/>
+<area shape="rect" id="node1" title="Узел, преставляющий if statement." alt="" coords="5,80,61,107"/>
 <area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="9,5,57,32"/>
 </map>

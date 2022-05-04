@@ -13,6 +13,6 @@ var searchData=
   ['iterationast_10',['IterationAST',['../d6/dbc/class_iteration_a_s_t.html#ac2b5d69be2923a02fdf86323c9a7666e',1,'IterationAST::IterationAST()'],['../d6/dbc/class_iteration_a_s_t.html',1,'IterationAST']]],
   ['iterator_5fcategory_11',['iterator_category',['../d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b',1,'NodeIterator']]],
   ['iterst_12',['iterSt',['../d4/d3f/class_for_a_s_t.html#afe1230c5c948a655f09691a11399cf41',1,'ForAST']]],
-  ['itoken_13',['IToken',['../d0/d11/class_i_token.html',1,'IToken'],['../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af',1,'IToken::IToken(void)'],['../d0/d11/class_i_token.html#a901cd3ac25400a1c3c440be68306a3c8',1,'IToken::IToken(Type type)'],['../d0/d11/class_i_token.html#a03960116e3308c12cf7eb8cd4de4b4da',1,'IToken::IToken(AdvType type)'],['../d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac',1,'IToken::IToken(Type type, AdvType advType)']]],
+  ['itoken_13',['IToken',['../d0/d11/class_i_token.html',1,'IToken'],['../d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af',1,'IToken::IToken(void)'],['../d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac',1,'IToken::IToken(Type type, AdvType advType)']]],
   ['ivisitor_14',['IVisitor',['../df/db7/class_i_visitor.html',1,'']]]
 ];

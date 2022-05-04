@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 118,-38.5 118,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="59" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eatAdv</text>
 </a>

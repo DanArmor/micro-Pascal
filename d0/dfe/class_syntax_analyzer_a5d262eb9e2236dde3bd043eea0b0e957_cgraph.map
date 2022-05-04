@@ -2,9 +2,9 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,157,216,184"/>
 <area shape="rect" id="node2" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="264,56,423,83"/>
 <area shape="rect" id="node4" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="512,107,627,133"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="276,259,411,285"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="276,259,411,285"/>
 <area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="481,208,657,235"/>
-<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="265,208,422,235"/>
+<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="265,208,422,235"/>
 <area shape="rect" id="node3" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="501,56,638,83"/>
 <area shape="rect" id="node5" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="520,5,619,32"/>
 <area shape="rect" id="node8" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="471,259,668,285"/>

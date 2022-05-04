@@ -1,7 +1,7 @@
 <map id="SyntaxAnalyzer::syntaxAssignSt" name="SyntaxAnalyzer::syntaxAssignSt">
 <area shape="rect" id="node1" title=" " alt="" coords="5,601,212,627"/>
 <area shape="rect" id="node2" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="1709,981,1868,1007"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="1721,449,1856,475"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="1721,449,1856,475"/>
 <area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="1927,423,2103,450"/>
 <area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa" title=" " alt="" coords="1227,195,1409,222"/>
 <area shape="rect" id="node11" href="$d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" title=" " alt="" coords="260,601,439,627"/>
@@ -16,7 +16,7 @@
 <area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" title=" " alt="" coords="487,537,705,563"/>
 <area shape="rect" id="node14" href="$d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" title=" " alt="" coords="753,537,936,563"/>
 <area shape="rect" id="node15" href="$d0/dfe/class_syntax_analyzer.html#a3af9b5161a2cef6fdd26b0bb60334ac4" title=" " alt="" coords="984,601,1175,627"/>
-<area shape="rect" id="node16" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="1710,499,1867,526"/>
+<area shape="rect" id="node16" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="1710,499,1867,526"/>
 <area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" title=" " alt="" coords="1467,753,1655,779"/>
 <area shape="rect" id="node18" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="1720,803,1857,830"/>
 </map>

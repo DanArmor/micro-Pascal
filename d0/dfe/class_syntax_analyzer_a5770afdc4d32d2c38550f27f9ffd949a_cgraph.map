@@ -1,7 +1,7 @@
 <map id="SyntaxAnalyzer::syntaxCompoundSt" name="SyntaxAnalyzer::syntaxCompoundSt">
 <area shape="rect" id="node1" title=" " alt="" coords="5,499,233,526"/>
 <area shape="rect" id="node2" href="$d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef" title=" " alt="" coords="2920,752,3079,779"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title=" " alt="" coords="2932,2247,3067,2274"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2932,2247,3067,2274"/>
 <area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="3137,1538,3313,1564"/>
 <area shape="rect" id="node9" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="2931,1626,3068,1652"/>
 <area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" title=" " alt="" coords="281,854,469,880"/>
@@ -26,6 +26,6 @@
 <area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" title=" " alt="" coords="1697,1614,1916,1640"/>
 <area shape="rect" id="node18" href="$d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" title=" " alt="" coords="1964,1411,2147,1438"/>
 <area shape="rect" id="node19" href="$d0/dfe/class_syntax_analyzer.html#a3af9b5161a2cef6fdd26b0bb60334ac4" title=" " alt="" coords="2195,1360,2385,1387"/>
-<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title=" " alt="" coords="2921,2120,3078,2147"/>
-<area shape="rect" id="node26" href="$d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" title=" " alt="" coords="974,550,1159,576"/>
+<area shape="rect" id="node20" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2921,2120,3078,2147"/>
+<area shape="rect" id="node26" href="$d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" title=" " alt="" coords="981,550,1153,576"/>
 </map>

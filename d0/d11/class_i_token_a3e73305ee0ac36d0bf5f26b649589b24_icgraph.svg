@@ -35,9 +35,9 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1708.5,-468 1708.5,-487 1847.5,-487 1847.5,-468 1708.5,-468"/>
-<text text-anchor="middle" x="1778" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node4"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1713.5,-468 1713.5,-487 1842.5,-487 1842.5,-468 1713.5,-468"/>
+<text text-anchor="middle" x="1778" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
@@ -485,7 +485,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-848 213,-867 356,-867 356,-848 213,-848"/>
 <text text-anchor="middle" x="284.5" y="-855" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>
@@ -563,7 +563,7 @@
 <!-- Node19&#45;&gt;Node4 -->
 <g id="edge27" class="edge">
 <title>Node19&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M2811.09,-451.54C2601.38,-456.81 2043.03,-470.86 1847.66,-475.77"/>
+<path fill="none" stroke="midnightblue" d="M2811,-451.54C2599.45,-456.86 2033.53,-471.1 1842.78,-475.9"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2811.2,-455.03 2821.11,-451.28 2811.02,-448.04 2811.2,-455.03"/>
 </g>
 <!-- Node19&#45;&gt;Node19 -->

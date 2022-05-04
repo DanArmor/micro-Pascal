@@ -131,7 +131,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2402,-508.22 2402,-527.22 2503,-527.22 2503,-508.22 2402,-508.22"/>
 <text text-anchor="middle" x="2452.5" y="-515.22" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eat</text>
 </a>
@@ -653,7 +653,7 @@
 <!-- Node21 -->
 <g id="node21" class="node">
 <title>Node21</title>
-<g id="a_node21"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2393.5,-850.22 2393.5,-869.22 2511.5,-869.22 2511.5,-850.22 2393.5,-850.22"/>
 <text text-anchor="middle" x="2452.5" y="-857.22" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eatAdv</text>
 </a>
@@ -818,9 +818,9 @@
 <!-- Node27 -->
 <g id="node27" class="node">
 <title>Node27</title>
-<g id="a_node27"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="899.5,-2044.22 899.5,-2063.22 1038.5,-2063.22 1038.5,-2044.22 899.5,-2044.22"/>
-<text text-anchor="middle" x="969" y="-2051.22" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node27"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="904.5,-2044.22 904.5,-2063.22 1033.5,-2063.22 1033.5,-2044.22 904.5,-2044.22"/>
+<text text-anchor="middle" x="969" y="-2051.22" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>

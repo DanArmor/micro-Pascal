@@ -170,16 +170,16 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1686,-122 1686,-141 1825,-141 1825,-122 1686,-122"/>
-<text text-anchor="middle" x="1755.5" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node5"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1691,-122 1691,-141 1820,-141 1820,-122 1691,-122"/>
+<text text-anchor="middle" x="1755.5" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1870.45,-148.47C1853.96,-146.02 1836.6,-143.43 1820.55,-141.04"/>
+<path fill="none" stroke="midnightblue" d="M1870.39,-148.46C1853.81,-145.99 1836.36,-143.39 1820.23,-140.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1870.18,-151.97 1880.59,-149.98 1871.21,-145.05 1870.18,-151.97"/>
 </g>
 <!-- Node7 -->
@@ -209,8 +209,8 @@
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M1675.85,-131.5C1663.75,-131.5 1651.35,-131.5 1639.51,-131.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1675.91,-135 1685.91,-131.5 1675.91,-128 1675.91,-135"/>
+<path fill="none" stroke="midnightblue" d="M1680.6,-131.5C1667.04,-131.5 1652.95,-131.5 1639.56,-131.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1680.84,-135 1690.84,-131.5 1680.84,-128 1680.84,-135"/>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
@@ -332,7 +332,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-217 213,-236 356,-236 356,-217 213,-217"/>
 <text text-anchor="middle" x="284.5" y="-224" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>

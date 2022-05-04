@@ -170,16 +170,16 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1686,-104.57 1686,-123.57 1825,-123.57 1825,-104.57 1686,-104.57"/>
-<text text-anchor="middle" x="1755.5" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node9"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1691,-104.57 1691,-123.57 1820,-123.57 1820,-104.57 1691,-104.57"/>
+<text text-anchor="middle" x="1755.5" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1857.43,-114.07C1846.6,-114.07 1835.64,-114.07 1825.14,-114.07"/>
+<path fill="none" stroke="midnightblue" d="M1857.67,-114.07C1845.01,-114.07 1832.18,-114.07 1820.1,-114.07"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1857.76,-117.57 1867.76,-114.07 1857.76,-110.57 1857.76,-117.57"/>
 </g>
 <!-- Node8&#45;&gt;Node11 -->
@@ -200,8 +200,8 @@
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M1675.85,-114.07C1663.75,-114.07 1651.35,-114.07 1639.51,-114.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1675.91,-117.57 1685.91,-114.07 1675.91,-110.57 1675.91,-117.57"/>
+<path fill="none" stroke="midnightblue" d="M1680.6,-114.07C1667.04,-114.07 1652.95,-114.07 1639.56,-114.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1680.84,-117.57 1690.84,-114.07 1680.84,-110.57 1680.84,-117.57"/>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
 <g id="edge10" class="edge">
@@ -341,7 +341,7 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-332.57 213,-351.57 356,-351.57 356,-332.57 213,-332.57"/>
 <text text-anchor="middle" x="284.5" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>

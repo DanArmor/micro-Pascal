@@ -1,5 +1,5 @@
 <map id="SyntaxAnalyzer::eat" name="SyntaxAnalyzer::eat">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node1" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="5,31,140,57"/>
 <area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="199,5,375,32"/>
 <area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="188,56,385,83"/>
 </map>

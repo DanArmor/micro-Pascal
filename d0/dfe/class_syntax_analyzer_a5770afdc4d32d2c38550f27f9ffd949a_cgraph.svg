@@ -35,7 +35,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2195,-362.85 2195,-381.85 2296,-381.85 2296,-362.85 2195,-362.85"/>
 <text text-anchor="middle" x="2245.5" y="-369.85" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eat</text>
 </a>
@@ -602,7 +602,7 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2186.5,-457.85 2186.5,-476.85 2304.5,-476.85 2304.5,-457.85 2186.5,-457.85"/>
 <text text-anchor="middle" x="2245.5" y="-464.85" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::eatAdv</text>
 </a>
@@ -767,17 +767,17 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="726.5,-1635.85 726.5,-1654.85 865.5,-1654.85 865.5,-1635.85 726.5,-1635.85"/>
-<text text-anchor="middle" x="796" y="-1642.85" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node26"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="731.5,-1635.85 731.5,-1654.85 860.5,-1654.85 860.5,-1635.85 731.5,-1635.85"/>
+<text text-anchor="middle" x="796" y="-1642.85" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
 <!-- Node25&#45;&gt;Node26 -->
 <g id="edge81" class="edge">
 <title>Node25&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M684.13,-1645.35C694.63,-1645.35 705.54,-1645.35 716.24,-1645.35"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="716.41,-1648.85 726.41,-1645.35 716.41,-1641.85 716.41,-1648.85"/>
+<path fill="none" stroke="midnightblue" d="M684.13,-1645.35C696.27,-1645.35 708.96,-1645.35 721.23,-1645.35"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="721.42,-1648.85 731.42,-1645.35 721.42,-1641.85 721.42,-1648.85"/>
 </g>
 <!-- Node26&#45;&gt;Node2 -->
 <g id="edge82" class="edge">

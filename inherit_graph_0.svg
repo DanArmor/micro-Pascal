@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d8/d88/class_arr_spec_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="d8/d88/class_arr_spec_a_s_t.html" target="_top" xlink:title="Узел, представляющий определение типа массива">
 <polygon fill="none" stroke="black" points="78,-798.5 78,-817.5 149,-817.5 149,-798.5 78,-798.5"/>
 <text text-anchor="middle" x="113.5" y="-805.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrSpecAST</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="da/dd1/class_call_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="da/dd1/class_call_a_s_t.html" target="_top" xlink:title="Узел, преставляющий вызов функции">
 <polygon fill="none" stroke="black" points="87,-646.5 87,-665.5 140,-665.5 140,-646.5 87,-646.5"/>
 <text text-anchor="middle" x="113.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallAST</text>
 </a>
@@ -95,7 +95,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="da/dbb/class_compound_a_s_t.html" target="_top" xlink:title="BEGIN END блоки">
+<g id="a_node7"><a xlink:href="da/dbb/class_compound_a_s_t.html" target="_top" xlink:title="Узел, представляющий составной операторор">
 <polygon fill="none" stroke="black" points="72,-608.5 72,-627.5 155,-627.5 155,-608.5 72,-608.5"/>
 <text text-anchor="middle" x="113.5" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00">CompoundAST</text>
 </a>
@@ -110,7 +110,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d6/d94/class_const_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="d6/d94/class_const_a_s_t.html" target="_top" xlink:title="Узел, представляющий константу">
 <polygon fill="none" stroke="black" points="82.5,-570.5 82.5,-589.5 144.5,-589.5 144.5,-570.5 82.5,-570.5"/>
 <text text-anchor="middle" x="113.5" y="-577.5" font-family="Helvetica,sans-Serif" font-size="10.00">ConstAST</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="d4/d3f/class_for_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="d4/d3f/class_for_a_s_t.html" target="_top" xlink:title="Узел, преставляющий for statement.">
 <polygon fill="none" stroke="black" points="88.5,-532.5 88.5,-551.5 138.5,-551.5 138.5,-532.5 88.5,-532.5"/>
 <text text-anchor="middle" x="113.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForAST</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="dc/d19/class_function_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="dc/d19/class_function_a_s_t.html" target="_top" xlink:title="Узел, представляющий определение функции">
 <polygon fill="none" stroke="black" points="76.5,-494.5 76.5,-513.5 150.5,-513.5 150.5,-494.5 76.5,-494.5"/>
 <text text-anchor="middle" x="113.5" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">FunctionAST</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="d7/d6b/class_if_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="d7/d6b/class_if_a_s_t.html" target="_top" xlink:title="Узел, преставляющий if statement.">
 <polygon fill="none" stroke="black" points="92.5,-456.5 92.5,-475.5 134.5,-475.5 134.5,-456.5 92.5,-456.5"/>
 <text text-anchor="middle" x="113.5" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">IfAST</text>
 </a>
@@ -170,7 +170,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="d6/dbc/class_iteration_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="d6/dbc/class_iteration_a_s_t.html" target="_top" xlink:title="Узел, представляющий заголовок цикла for.">
 <polygon fill="none" stroke="black" points="78,-418.5 78,-437.5 149,-437.5 149,-418.5 78,-418.5"/>
 <text text-anchor="middle" x="113.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">IterationAST</text>
 </a>
@@ -275,7 +275,7 @@
 <!-- Node18 -->
 <g id="node19" class="node">
 <title>Node18</title>
-<g id="a_node19"><a xlink:href="d2/db9/class_type_spec_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="d2/db9/class_type_spec_a_s_t.html" target="_top" xlink:title="Узел, представляющий определение типа">
 <polygon fill="none" stroke="black" points="73.5,-152.5 73.5,-171.5 153.5,-171.5 153.5,-152.5 73.5,-152.5"/>
 <text text-anchor="middle" x="113.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeSpecAST</text>
 </a>
@@ -320,7 +320,7 @@
 <!-- Node21 -->
 <g id="node22" class="node">
 <title>Node21</title>
-<g id="a_node22"><a xlink:href="d6/d7c/class_var_decl_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="d6/d7c/class_var_decl_a_s_t.html" target="_top" xlink:title="Узел, представляющий определение переменной">
 <polygon fill="none" stroke="black" points="78,-38.5 78,-57.5 149,-57.5 149,-38.5 78,-38.5"/>
 <text text-anchor="middle" x="113.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">VarDeclAST</text>
 </a>
@@ -335,7 +335,7 @@
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
-<g id="a_node23"><a xlink:href="dc/da0/class_while_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="dc/da0/class_while_a_s_t.html" target="_top" xlink:title="Узел, преставляющий while statement.">
 <polygon fill="none" stroke="black" points="83.5,-0.5 83.5,-19.5 143.5,-19.5 143.5,-0.5 83.5,-0.5"/>
 <text text-anchor="middle" x="113.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WhileAST</text>
 </a>

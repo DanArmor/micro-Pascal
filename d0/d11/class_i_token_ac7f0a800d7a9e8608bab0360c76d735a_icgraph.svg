@@ -50,9 +50,9 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aea3a3d1860938d64edf651bdc4016c04" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1675.5,-532.5 1675.5,-551.5 1814.5,-551.5 1814.5,-532.5 1675.5,-532.5"/>
-<text text-anchor="middle" x="1745" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIterSt</text>
+<g id="a_node11"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1680.5,-532.5 1680.5,-551.5 1809.5,-551.5 1809.5,-532.5 1680.5,-532.5"/>
+<text text-anchor="middle" x="1745" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
 </g>
 </g>
@@ -635,7 +635,7 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-959.5 213,-978.5 356,-978.5 356,-959.5 213,-959.5"/>
 <text text-anchor="middle" x="284.5" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>
@@ -689,7 +689,7 @@
 <!-- Node24&#45;&gt;Node11 -->
 <g id="edge33" class="edge">
 <title>Node24&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M2819.11,-762.32C2718.14,-730.26 2441.34,-645.27 2205,-599 2067.68,-572.12 1904.64,-555.42 1814.52,-547.5"/>
+<path fill="none" stroke="midnightblue" d="M2819.11,-762.32C2718.14,-730.26 2441.34,-645.27 2205,-599 2065.12,-571.62 1898.55,-554.8 1809.55,-547.07"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="2818.29,-765.73 2828.89,-765.43 2820.42,-759.06 2818.29,-765.73"/>
 </g>
 <!-- Node24&#45;&gt;Node24 -->
