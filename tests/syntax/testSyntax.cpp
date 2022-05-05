@@ -9,6 +9,15 @@
 #include "AST.hpp"
 #include "PascalRules.hpp"
 
+void checkEqSyn(IAST *ptr, std::vector<std::string> const &checkData){
+    TypeViewVisitor typeView;
+    ptr->accept(typeView);
+    std::vector<std::string> result = typeView.getData();
+    EXPECT_EQ(result.size(), checkData.size());
+    for(int i = 0; i < result.size(); i++)
+        EXPECT_EQ(result[i], checkData[i]);
+}
+
 
 /// @brief Тест синтаксического анализа Паскаля, простой тест
 TEST(SYNTAX, PASCAL_SIMPLE){
@@ -29,14 +38,8 @@ TEST(SYNTAX, PASCAL_SIMPLE){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS1.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
-
-    TypeViewVisitor typeView;
-    root->accept(typeView);
-    std::vector<std::string> result = typeView.getData();
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++)
-        EXPECT_EQ(result[i], checkData[i]);
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
+    checkEqSyn(root.get(), checkData);
 }
 
 /// @brief Тест синтаксического анализа Паскаля, средний текст
@@ -90,14 +93,8 @@ TEST(SYNTAX, PASCAL_MEDIUM){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS2.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
-
-    TypeViewVisitor typeView;
-    root->accept(typeView);
-    std::vector<std::string> result = typeView.getData();
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++)
-        EXPECT_EQ(result[i], checkData[i]);
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
+    checkEqSyn(root.get(), checkData);
 }
 
 /// @brief Тест синтаксического анализа Паскаля, средний текст с ошибкой
@@ -107,7 +104,7 @@ TEST(SYNTAX, PASCAL_MEDIUM_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS3.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    EXPECT_THROW(syntax.parseTokens(), SyntaxException);
+    EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
 TEST(SYNTAX, PASCAL_THROW_1){
@@ -116,7 +113,7 @@ TEST(SYNTAX, PASCAL_THROW_1){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS4.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    EXPECT_THROW(syntax.parseTokens(), SyntaxException);
+    EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
 TEST(SYNTAX, PASCAL_THROW_2){
@@ -125,7 +122,7 @@ TEST(SYNTAX, PASCAL_THROW_2){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS5.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    EXPECT_THROW(syntax.parseTokens(), SyntaxException);
+    EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
 TEST(SYNTAX, PASCAL_THROW_3){
@@ -134,7 +131,7 @@ TEST(SYNTAX, PASCAL_THROW_3){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS6.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    EXPECT_THROW(syntax.parseTokens(), SyntaxException);
+    EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
 /// @brief Тест синтаксического анализа Паскаля
@@ -185,14 +182,8 @@ TEST(SYNTAX, PASCAL_1){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS7.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
-
-    TypeViewVisitor typeView;
-    root->accept(typeView);
-    std::vector<std::string> result = typeView.getData();
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++)
-        EXPECT_EQ(result[i], checkData[i]);
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
+    checkEqSyn(root.get(), checkData);
 }
 
 /// @brief Тест синтаксического анализа Паскаля
@@ -254,14 +245,8 @@ TEST(SYNTAX, PASCAL_2){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS8.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
-
-    TypeViewVisitor typeView;
-    root->accept(typeView);
-    std::vector<std::string> result = typeView.getData();
-    EXPECT_EQ(result.size(), checkData.size());
-    for(int i = 0; i < result.size(); i++)
-        EXPECT_EQ(result[i], checkData[i]);
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
+    checkEqSyn(root.get(), checkData);
 }
 
 int main(void){

@@ -1,6 +1,13 @@
 #ifndef __INC_TOKEN_H
 #define __INC_TOKEN_H
 
+/**
+ * @file Token.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Классы для работы с токенами анализатора
+ * @version 1.0
+ */
+
 #include <string>
 #include <regex>
 
@@ -61,8 +68,8 @@ class IToken{
         NEQ, ///< <>
         LESS, ///< <
         LESS_EQ, ///< <=
-        MORE, ///< >
-        MORE_EQ, ///< >+
+        MORE, ///< \>
+        MORE_EQ, ///< >=
 
         STRING_BOUND, ///< '
 
@@ -79,7 +86,7 @@ class IToken{
         IF, ///< IF
         THEN, ///< THEN
         ELSE, ///< ELSE
-        DOWN, //< down
+        DOWN, ///< down
         TO, ///< to
         DOWNTO, ///< down to
         RETURN, ///< return
@@ -124,6 +131,7 @@ class IToken{
     private:
     /// @brief Тип токена
     Type type = ERROR;
+    /// @brief Дополнительный (уточняющий) тип токена
     AdvType advType = UNKNOWN;
 };
 
@@ -171,7 +179,6 @@ class Token : public IToken{
     ///@return Длину строкового представления токена
     std::size_t len(void);
 
-
     private:
     /// @brief Строковое представление токена
     std::string str;
@@ -192,10 +199,10 @@ class TokenTemplate : public IToken{
      * @param str regex строка, представляющая шаблон для определения токена
      * @param type тип токена
      */
-    TokenTemplate(std::string str, Type type, AdvType advType);
+    TokenTemplate(std::string const &str, Type type, AdvType advType);
 
     /// @brief Возвращает константную ссылку на regex-выражение токена
-    std::regex const & getRegex(void);
+    std::regex const &getRegex(void);
 
     private:
     /// @brief Строковое представление regex-шаблона

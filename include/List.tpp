@@ -11,7 +11,6 @@
  * @author DanArmor (https://github.com/DanArmor)
  * @brief Двусвязный список - реализация
  * @version 1.0
- * @date 2022-05-04
  */
 
 #include <cstddef>

@@ -7,14 +7,6 @@
 #include "lexerTestRules.hpp"
 #include "SyntExp.hpp"
 
-/**
- * @file testLexer_1.cpp
- * @author DanArmor (https://github.com/DanArmor)
- * @brief Тесты для лексера
- * @version 0.5
- * @date 2022-03-31
- */
-
 void checkEqualLex(List<Token> checkData, Lexer lexer, std::string const &fname){
     List<Token> result = lexer.analyzeFile(fname);
     EXPECT_EQ(result.size(), checkData.size());

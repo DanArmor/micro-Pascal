@@ -1,7 +1,16 @@
 #ifndef __INC_ASTCLASSES_H
 #define __INC_ASTCLASSES_H
 
-// Предварительные объявления
+/**
+ * @file ASTclasses.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Базовые классы ДАС: абстрактный посетитель и абстрактный узел
+ * @version 1.0
+ */
+
+#include "Token.hpp"
+
+// Предварительные объявления для посетителя
 class ProgramAST;
 class FunctionAST;
 class BlockAST;
@@ -25,11 +34,7 @@ class WhileAST;
 class ForAST;
 class IterationAST;
 
-/**
- * @brief Интерфейс "посетителя"
- * @section IVisiterExmpl1 Пример
- * @include examples/example_visiter.cpp
- */
+/// @brief Интерфейс "посетителя"
 class IVisitor{
     public:
     virtual void visit(ProgramAST &node) = 0;
@@ -57,13 +62,12 @@ class IVisitor{
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева
-class AST{
+class IAST{
     public:
 
-    //AST();
-    AST();
-    AST(Token token);
-    virtual ~AST() = default;
+    IAST();
+    IAST(Token token);
+    virtual ~IAST() = default;
 
     virtual void accept(IVisitor &visitor) = 0;
 

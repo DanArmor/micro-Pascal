@@ -1,6 +1,13 @@
 #ifndef __INC_VISITOR_H
 #define __INC_VISITOR_H
 
+/**
+ * @file Visitor.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Посетители для обхода ДАС
+ * @version 1.0
+ */
+
 #include <fstream>
 #include <string>
 #include <memory>
@@ -9,10 +16,10 @@
 #include "List.hpp"
 
 #include "ASTclasses.hpp"
+#include "AST.hpp"
 #include "SyntExp.hpp"
-#include "sup.hpp"
 
-/// @brief Посетителя для построения графического отображения АДС
+/// @brief Посетителя для построения графического отображения ДАС
 class GraphvizVisitor : public IVisitor {
 public:
     explicit GraphvizVisitor(std::string filename);
@@ -63,19 +70,18 @@ public:
 
 
     void done(void);
-
     void write(void);
 
 private:
     void addDef(std::string const &str);
-    void connectToNode(std::size_t index, AST *ptr);
+    void connectToNode(std::size_t index, IAST *ptr);
     std::fstream file;
     std::size_t nodeIndex = 0;
     std::vector<std::pair<std::string, std::string>> declarations;
     std::vector<std::pair<std::string, std::string>> links;
 };
 
-/// @brief Посетителя для вывода сведений о типах в прямом порядке по АДС
+/// @brief Посетителя для вывода сведений о типах в прямом порядке по ДАС
 class TypeViewVisitor : public IVisitor {
 public:
     TypeViewVisitor();
@@ -146,10 +152,10 @@ public:
 
     ///@brief Структура для хранения данных об именованном значении - переменной или константе
     struct VarData{
-        VarData(Token token, AST *typePtr);
+        VarData(Token token, IAST *typePtr);
         VarData(Token token, bool isConst);
         VarData();
-        AST *typePtr = nullptr;
+        IAST *typePtr = nullptr;
         Token token;
         bool isConst;
         std::string type;
@@ -203,33 +209,25 @@ public:
 
     void addProgName(std::string name);
 
-    void addVar(Token token, AST *ptr);
-
+    void addVar(Token token, IAST *ptr);
     void addVar(Token token);
-
     VarData &getVar(Token name);
 
     void addConst(Token token);
-
     VarData &getConst(Token name);
 
     bool checkVar(Token name);
-
     bool checkConst(Token name);
-
     void checkDefined(Token name);
 
     VarData &getDefined(Token name);
 
     void addFunc(Token token);
-
     void checkFunc(Token token);
-
     FunctionData &getFunc(Token name);
 
     /// @brief Добавление стандартной функции
     void prebuildFunction(Token tok, std::vector<std::string> params, std::string returnType);
-
     /// @brief Добавление стандартных функций
     void prebuildFunctions(List<FunctionData> funcs);
 
@@ -240,7 +238,7 @@ public:
     void clearBlock(void);
 
     /// @brief Создает копию посетителя, которая посещает ptr и возвращает результат
-    std::string getValue(AST *ptr);
+    std::string getValue(IAST *ptr);
 
     /**
      * @brief Аналог return для посетителя

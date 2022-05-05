@@ -1,8 +1,9 @@
 #include "Visitor.hpp"
 
 #include <fmt/format.h>
-#include "AST.hpp"
 
+#include "AST.hpp"
+#include "supAlgs.hpp"
 
 /*Определения GraphvizVisitor
 ==================*/
@@ -163,7 +164,7 @@ void GraphvizVisitor::addDef(std::string const &str){
     nodeIndex++;
 }
 
-void GraphvizVisitor::connectToNode(std::size_t index, AST *ptr){
+void GraphvizVisitor::connectToNode(std::size_t index, IAST *ptr){
     links.push_back(std::make_pair(std::to_string(index), std::to_string(nodeIndex)));
     ptr->accept(*this);
 }
@@ -324,6 +325,9 @@ std::vector<std::string> TypeViewVisitor::getData(void){
     return typesStrings;
 }
 
+/*Определения SemanticVisitor
+==================*/
+
 SemanticVisitor::SemanticVisitor() : vars(new std::map<std::string, VarData>), consts(new std::map<std::string, VarData>), functions(new std::map<std::string, FunctionData>){};
 
 void SemanticVisitor::visit(ProgramAST &node){
@@ -455,7 +459,7 @@ void SemanticVisitor::visit(SelectAST &node){
         node.from->accept(*this);
         typeIndex--;
     } else{
-        AST *type = getDefined(node.from->token).typePtr;
+        IAST *type = getDefined(node.from->token).typePtr;
         for(std::size_t i = 0; i  < typeIndex + 1; i++){
             if(!isIn(type->token.getStr(), {std::string("integer"), std::string("real"), std::string("string")})){
                 type = static_cast<ArrSpecAST*>(type)->subType.get();
@@ -519,7 +523,7 @@ void SemanticVisitor::addProgName(std::string name) {
     programName = name;
 }
 
-SemanticVisitor::VarData::VarData(Token token, AST *typePtr) : token(token), typePtr(typePtr){};
+SemanticVisitor::VarData::VarData(Token token, IAST *typePtr) : token(token), typePtr(typePtr){};
 
 void SemanticVisitor::addVar(Token token) {
     if (vars->count(token.getStr()) != 0)
@@ -527,7 +531,7 @@ void SemanticVisitor::addVar(Token token) {
     (*vars)[token.getStr()] = VarData(token, false);
 }
 
-void SemanticVisitor::addVar(Token token, AST *ptr) {
+void SemanticVisitor::addVar(Token token, IAST *ptr) {
     if (vars->count(token.getStr()) != 0)
         throw SemanticException(token, "Повторное объявление! ");
     (*vars)[token.getStr()] = VarData(token, ptr);
@@ -623,7 +627,7 @@ void SemanticVisitor::clearBlock(void) {
     consts->clear();
 }
 
-std::string SemanticVisitor::getValue(AST *ptr) {
+std::string SemanticVisitor::getValue(IAST *ptr) {
     auto vis = *this;
     ptr->accept(vis);
     return vis.value;

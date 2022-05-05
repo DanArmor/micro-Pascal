@@ -17,7 +17,7 @@ TEST(SEMANTIC, PASCAL_1_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM1.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), TypeException);
@@ -30,7 +30,7 @@ TEST(SEMANTIC, PASCAL_2_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM2.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), TypeException);
@@ -43,7 +43,7 @@ TEST(SEMANTIC, PASCAL_3_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM3.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), TypeException);
@@ -56,7 +56,7 @@ TEST(SEMANTIC, PASCAL_4_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM4.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), SemanticException);
@@ -69,7 +69,7 @@ TEST(SEMANTIC, PASCAL_5_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM5.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), SemanticException);
@@ -82,7 +82,7 @@ TEST(SEMANTIC, PASCAL_6_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM6.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), SemanticException);
@@ -95,7 +95,7 @@ TEST(SEMANTIC, PASCAL_7_THROW){
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM7.txt");
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<AST> root(syntax.parseTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
     EXPECT_THROW(root->accept(semantic), SemanticException);

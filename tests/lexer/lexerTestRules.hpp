@@ -1,8 +1,18 @@
 #ifndef __INC_LEXER_TEST_H
 #define __INC_LEXER_TEST_H
+
+/**
+ * @file lexerTestRules.hpp
+ * @author DanArmor
+ * @brief Тестовые правила для Лексера
+ * @version 0.1
+ * @copyright Copyright (c) 2022
+ */
+
 #include "List.hpp"
 #include "Lexer.hpp"
 
+/// @brief Тестовые правила для лексера
 namespace LexerTestRules{
     /// @brief Возвращает шаблоны токинов языка Pascal
     List<TokenTemplate> getMathRules(void){

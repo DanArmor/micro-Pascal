@@ -1,6 +1,13 @@
 #ifndef __INC_SYNTAX_H
 #define __INC_SYNTAX_H
 
+/**
+ * @file Syntax.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Синтаксический анализатор
+ * @version 1.0
+ */
+
 #include <vector>
 
 #include "magic_enum.hpp"
@@ -8,8 +15,6 @@
 #include "List.hpp"
 #include "Token.hpp"
 #include "ASTclasses.hpp"
-
-#include "sup.hpp"
 
 /// @brief Класс синтаксического анализатора
 class SyntaxAnalyzer{
@@ -19,44 +24,44 @@ class SyntaxAnalyzer{
 
     /// @brief Синтаксический анализ токенов, переданных анализатору.
     /// @details Обратите внимание, что синт. анализатор изменяет дополнительные типы некоторых токенов внутри собственного списка в процессе анализа   
-    std::unique_ptr<AST> parseTokens(void);
+    std::unique_ptr<IAST> analyzeTokens(void);
 
-    std::unique_ptr<AST> syntaxProgram(void);
+    std::unique_ptr<IAST> syntaxProgram(void);
 
-    std::unique_ptr<AST> syntaxFuncDef(void);
+    std::unique_ptr<IAST> syntaxFuncDef(void);
 
-    std::unique_ptr<AST> syntaxBlock(void);
+    std::unique_ptr<IAST> syntaxBlock(void);
 
-    std::vector<std::unique_ptr<AST>> syntaxConsts(void);
-    std::unique_ptr<AST> syntaxConstDecl(void);
+    std::vector<std::unique_ptr<IAST>> syntaxConsts(void);
+    std::unique_ptr<IAST> syntaxConstDecl(void);
 
-    std::vector<std::unique_ptr<AST>> syntaxVars(void);
-    std::vector<std::unique_ptr<AST>> syntaxVarDecl(void);
-    std::unique_ptr<AST> syntaxTypeSpec(void);
-
-
-    std::unique_ptr<AST> syntaxCompoundSt(void);
-    std::vector<std::unique_ptr<AST>> syntaxStList(void);
-    std::unique_ptr<AST> syntaxSt(void);
-
-    std::unique_ptr<AST> syntaxEmptySt(void);
-    std::unique_ptr<AST> syntaxAssignSt(void);
-    std::unique_ptr<AST> syntaxIfSt(void);
-    std::unique_ptr<AST> syntaxWhileSt(void);
-    std::unique_ptr<AST> syntaxForSt(void);
-    std::unique_ptr<AST> syntaxCallSt(void);
-    std::unique_ptr<AST> syntaxReturnSt(void);
+    std::vector<std::unique_ptr<IAST>> syntaxVars(void);
+    std::vector<std::unique_ptr<IAST>> syntaxVarDecl(void);
+    std::unique_ptr<IAST> syntaxTypeSpec(void);
 
 
-    std::unique_ptr<AST> syntaxVariable(void);
-    std::unique_ptr<AST> syntaxSelect(void);
+    std::unique_ptr<IAST> syntaxCompoundSt(void);
+    std::vector<std::unique_ptr<IAST>> syntaxStList(void);
+    std::unique_ptr<IAST> syntaxSt(void);
 
-    std::unique_ptr<AST> syntaxExpr(void);
-    std::unique_ptr<AST> syntaxSimpleExpr(void);
-    std::unique_ptr<AST> syntaxTerm(void);
-    std::unique_ptr<AST> syntaxFactor();
+    std::unique_ptr<IAST> syntaxEmptySt(void);
+    std::unique_ptr<IAST> syntaxAssignSt(void);
+    std::unique_ptr<IAST> syntaxIfSt(void);
+    std::unique_ptr<IAST> syntaxWhileSt(void);
+    std::unique_ptr<IAST> syntaxForSt(void);
+    std::unique_ptr<IAST> syntaxCallSt(void);
+    std::unique_ptr<IAST> syntaxReturnSt(void);
 
-    std::unique_ptr<AST> syntaxIter(void);
+
+    std::unique_ptr<IAST> syntaxVariable(void);
+    std::unique_ptr<IAST> syntaxSelect(void);
+
+    std::unique_ptr<IAST> syntaxExpr(void);
+    std::unique_ptr<IAST> syntaxSimpleExpr(void);
+    std::unique_ptr<IAST> syntaxTerm(void);
+    std::unique_ptr<IAST> syntaxFactor(void);
+
+    std::unique_ptr<IAST> syntaxIter(void);
 
     /// @brief Возвращает список токенов анализатора
     List<Token> getTokens(void);
@@ -73,8 +78,6 @@ class SyntaxAnalyzer{
     void eatAdv(IToken::AdvType const type);
 
     private:
-    std::unique_ptr<AST> createCopyOfType(AST *ptr);
-
     List<Token> tokens;
     std::size_t currentIndex = 0;
 };  

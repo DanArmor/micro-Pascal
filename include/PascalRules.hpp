@@ -1,6 +1,13 @@
 #ifndef __INC_PASCALTOKENS_H
 #define __INC_PASCALTOKENS_H
 
+/**
+ * @file PascalRules.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Правила языка Паскаль
+ * @version 1.0
+ */
+
 #include <vector>
 #include <string>
 

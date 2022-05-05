@@ -1,11 +1,3 @@
-/**
- * @file testList.cpp
- * @author DanArmor (https://github.com/DanArmor)
- * @brief Тесты для двусвязного списка
- * @version 1.0
- * @date 2022-03-17
- */
-
 #include <vector>
 #include <iostream>
 #include <utility>

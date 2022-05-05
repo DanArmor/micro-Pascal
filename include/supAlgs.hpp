@@ -1,5 +1,13 @@
 #ifndef __INC_SUP_H
 #define __INC_SUP_H
+
+/**
+ * @file supAlgs.hpp
+ * @author DanArmor (https://github.com/DanArmor)
+ * @brief Вспомогательные функции
+ * @version 1.0
+ */
+
 #include <initializer_list>
 /**
  * @brief Возвращает истину, если value находится среди значений cont

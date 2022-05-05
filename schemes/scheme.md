@@ -13,7 +13,7 @@
     object "Текст программы" as Text
     object "Синтаксис" as Syntax
     object "Список токенов" as List
-    object "АДС" as AST
+    object "ДАС" as AST
     object "Посетитель" as Visitor
 
     object "Токен" as Token

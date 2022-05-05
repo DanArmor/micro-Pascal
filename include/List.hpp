@@ -2,11 +2,10 @@
 #define _INC_LIST_H
 
 /**
- * @file List.cpp
+ * @file List.hpp
  * @author DanArmor (https://github.com/DanArmor)
  * @brief Двусвязный список - интерфейс
  * @version 1.0
- * @date 2022-05-04
  */
 
 #include <cstddef>

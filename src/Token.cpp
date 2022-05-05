@@ -62,7 +62,7 @@ std::string Token::getInfo(void) const{
 
 TokenTemplate::TokenTemplate(){};
 
-TokenTemplate::TokenTemplate(std::string str, Type type, AdvType advType) : IToken(type, advType), regStr(str), regTemplate(str){};
+TokenTemplate::TokenTemplate(std::string const &str, Type type, AdvType advType) : IToken(type, advType), regStr(str), regTemplate(str){};
 
 std::regex const & TokenTemplate::getRegex(void){
     return regTemplate;

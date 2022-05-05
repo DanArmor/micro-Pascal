@@ -8,11 +8,10 @@
 #include "List.hpp"
 
 /**
- * @file Lexer.cpp
+ * @file Lexer.hpp
  * @author DanArmor (https://github.com/DanArmor)
  * @brief Лексер
- * @version 0.5
- * @date 2022-03-17
+ * @version 1.0
  */
 
 /// @brief Класс Лексер, разбивающий текст программы на токены
