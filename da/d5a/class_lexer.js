@@ -1,7 +1,5 @@
 var class_lexer =
 [
-    [ "addTokenTemp", "da/d5a/class_lexer.html#a631e3b1ed369600a9c0b05fe568255f1", null ],
-    [ "addTokenTemp", "da/d5a/class_lexer.html#adb2375d979980a2a3edc1b7d40cd1bc1", null ],
     [ "analyzeFile", "da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39", null ],
     [ "analyzeProgramText", "da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1", null ],
     [ "getText", "da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30", null ],

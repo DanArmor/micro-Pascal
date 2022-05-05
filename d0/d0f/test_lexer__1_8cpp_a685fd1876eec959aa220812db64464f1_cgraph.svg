@@ -125,7 +125,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="../../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" target="_top" xlink:title="Возвращает строку, у которой убраны пустые символы в начале и конце">
 <polygon fill="none" stroke="black" points="417,-76.5 417,-95.5 514,-95.5 514,-76.5 417,-76.5"/>
 <text text-anchor="middle" x="465.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::getTrimmed</text>
 </a>

@@ -1,5 +1,5 @@
 <map id="Lexer::getTrimmed" name="Lexer::getTrimmed">
-<area shape="rect" id="node1" title=" " alt="" coords="773,107,903,133"/>
+<area shape="rect" id="node1" title="Возвращает строку, у которой убраны пустые символы в начале и конце" alt="" coords="773,107,903,133"/>
 <area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="548,107,725,133"/>
 <area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="376,107,500,133"/>
 <area shape="rect" id="node4" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="191,56,328,83"/>

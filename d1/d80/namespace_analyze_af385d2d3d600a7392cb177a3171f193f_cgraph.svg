@@ -262,7 +262,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="../../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" target="_top" xlink:title="Возвращает строку, у которой убраны пустые символы в начале и конце">
 <polygon fill="none" stroke="black" points="1970,-1258.99 1970,-1277.99 2067,-1277.99 2067,-1258.99 1970,-1258.99"/>
 <text text-anchor="middle" x="2018.5" y="-1265.99" font-family="Helvetica,sans-Serif" font-size="10.00">Lexer::getTrimmed</text>
 </a>

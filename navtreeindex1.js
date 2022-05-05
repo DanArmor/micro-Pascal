@@ -162,13 +162,11 @@ var NAVTREEINDEX1 =
 "d9/d2f/test_list_8cpp.html#afe941e8a6e7d255b8920950403f51237":[3,0,3,2,0,16],
 "d9/d2f/test_list_8cpp_source.html":[3,0,3,2,0],
 "da/d5a/class_lexer.html":[2,0,17],
-"da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39":[2,0,17,2],
-"da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1":[2,0,17,3],
-"da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0":[2,0,17,5],
-"da/d5a/class_lexer.html#a631e3b1ed369600a9c0b05fe568255f1":[2,0,17,0],
-"da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a":[2,0,17,6],
-"da/d5a/class_lexer.html#adb2375d979980a2a3edc1b7d40cd1bc1":[2,0,17,1],
-"da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30":[2,0,17,4],
+"da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39":[2,0,17,0],
+"da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1":[2,0,17,1],
+"da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0":[2,0,17,3],
+"da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a":[2,0,17,4],
+"da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30":[2,0,17,2],
 "da/da3/class_type_exception.html":[2,0,34],
 "da/da3/class_type_exception.html#a528dd45f8a30b7d95319b75cfae2eb1c":[2,0,34,0],
 "da/da3/class_type_exception.html#a561c26738e084417e8e68ded77b60a93":[2,0,34,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513":[2,0,40,4],
 "dc/da0/class_while_a_s_t.html#a524882127df8c7d015650cda37582021":[2,0,40,0],
 "dc/da0/class_while_a_s_t.html#a8c8b3542fac934c3f648a7c4363a91c7":[2,0,40,1],
-"dc/da0/class_while_a_s_t.html#a8ceecca5d27e7947a2ef3052a6d34227":[2,0,40,2]
+"dc/da0/class_while_a_s_t.html#a8ceecca5d27e7947a2ef3052a6d34227":[2,0,40,2],
+"dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb":[2,0,40,3],
+"dc/dca/class_token_template.html":[2,0,33]
 };
