@@ -17,7 +17,7 @@
 <area shape="rect" id="node7" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="2661,5,2732,32"/>
 <area shape="rect" id="node8" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="2647,259,2746,285"/>
 <area shape="rect" id="node9" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title=" " alt="" coords="2632,56,2761,83"/>
-<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="2639,1453,2754,1480"/>
+<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="2639,1453,2754,1480"/>
 <area shape="rect" id="node11" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="2643,107,2751,133"/>
 <area shape="rect" id="node12" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="2813,107,2961,133"/>
 <area shape="rect" id="node14" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="2393,645,2569,672"/>
@@ -25,10 +25,10 @@
 <area shape="rect" id="node16" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="2176,1453,2335,1480"/>
 <area shape="rect" id="node23" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2188,1051,2323,1077"/>
 <area shape="rect" id="node25" href="$d3/da8/sup_algs_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="2234,645,2277,672"/>
-<area shape="rect" id="node26" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="1954,1101,2091,1128"/>
+<area shape="rect" id="node26" href="$d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7" title="Устанавливает дополнительный тип токена" alt="" coords="1954,1101,2091,1128"/>
 <area shape="rect" id="node27" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1145,985,1332,1012"/>
 <area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="895,1203,1097,1229"/>
-<area shape="rect" id="node17" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="2628,1681,2765,1708"/>
+<area shape="rect" id="node17" href="$d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" title=" " alt="" coords="2628,1681,2765,1708"/>
 <area shape="rect" id="node18" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="2429,1605,2533,1632"/>
 <area shape="rect" id="node22" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="2432,1403,2531,1429"/>
 <area shape="rect" id="node19" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="2655,1529,2739,1556"/>

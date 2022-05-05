@@ -6,11 +6,11 @@
 <area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="945,385,1143,412"/>
 <area shape="rect" id="node6" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="739,208,897,235"/>
 <area shape="rect" id="node15" href="$d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="483,157,687,184"/>
-<area shape="rect" id="node16" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="517,292,654,319"/>
+<area shape="rect" id="node16" href="$d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7" title="Устанавливает дополнительный тип токена" alt="" coords="517,292,654,319"/>
 <area shape="rect" id="node17" href="$d0/dfe/class_syntax_analyzer.html#a5ef8e691db1611dd73eff73f011b7780" title=" " alt="" coords="480,367,691,393"/>
-<area shape="rect" id="node7" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="1191,5,1328,32"/>
+<area shape="rect" id="node7" href="$d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" title=" " alt="" coords="1191,5,1328,32"/>
 <area shape="rect" id="node8" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="992,107,1096,133"/>
-<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="1202,259,1317,285"/>
+<area shape="rect" id="node10" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="1202,259,1317,285"/>
 <area shape="rect" id="node14" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="995,208,1093,235"/>
 <area shape="rect" id="node9" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="1210,208,1309,235"/>
 <area shape="rect" id="node11" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="1217,56,1301,83"/>

@@ -80,7 +80,7 @@ var class_i_token =
     ] ],
     [ "IToken", "d0/d11/class_i_token.html#a7f8dcff44f39a47c9e92507f91a683af", null ],
     [ "IToken", "d0/d11/class_i_token.html#a462b374dffdaa22ae134eea2304708ac", null ],
-    [ "getAdvType", "d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24", null ],
-    [ "getType", "d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a", null ],
-    [ "setAdvType", "d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0", null ]
+    [ "getAdvType", "d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef", null ],
+    [ "getType", "d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036", null ],
+    [ "setAdvType", "d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7", null ]
 ];

@@ -6,7 +6,7 @@ var searchData=
   ['semanticexception_3',['SemanticException',['../d6/d2c/class_semantic_exception.html',1,'SemanticException'],['../d6/d2c/class_semantic_exception.html#aafb9bfda4c4f8b4369e28ce3748f8e2e',1,'SemanticException::SemanticException()']]],
   ['semanticvisitor_4',['SemanticVisitor',['../dd/dad/class_semantic_visitor.html',1,'SemanticVisitor'],['../dd/dad/class_semantic_visitor.html#acd7ecea6a0ae3e2cb91a9b52a1c2d565',1,'SemanticVisitor::SemanticVisitor()']]],
   ['semi_5',['SEMI',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa67db653da579d09e05caf3774df22a0e',1,'IToken']]],
-  ['setadvtype_6',['setAdvType',['../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0',1,'IToken']]],
+  ['setadvtype_6',['setAdvType',['../d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7',1,'IToken']]],
   ['setstr_7',['setStr',['../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a',1,'Token']]],
   ['settemplates_8',['setTemplates',['../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a',1,'Lexer']]],
   ['size_9',['size',['../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01',1,'List']]],

@@ -299,7 +299,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="../../d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2169,-794.29 2169,-813.29 2272,-813.29 2272,-794.29 2169,-794.29"/>
 <text text-anchor="middle" x="2220.5" y="-801.29" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getAdvType</text>
 </a>
@@ -329,7 +329,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" target="_top" xlink:title="Получение типа токена">
+<g id="a_node12"><a xlink:href="../../d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" target="_top" xlink:title="Получение типа токена">
 <polygon fill="none" stroke="black" points="2177.5,-1245.29 2177.5,-1264.29 2263.5,-1264.29 2263.5,-1245.29 2177.5,-1245.29"/>
 <text text-anchor="middle" x="2220.5" y="-1252.29" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getType</text>
 </a>
@@ -692,7 +692,7 @@
 <!-- Node24 -->
 <g id="node24" class="node">
 <title>Node24</title>
-<g id="a_node24"><a xlink:href="../../d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" target="_top" xlink:title="Устанавливает дополнительный тип токена">
+<g id="a_node24"><a xlink:href="../../d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7" target="_top" xlink:title="Устанавливает дополнительный тип токена">
 <polygon fill="none" stroke="black" points="1838,-979.29 1838,-998.29 1941,-998.29 1941,-979.29 1838,-979.29"/>
 <text text-anchor="middle" x="1889.5" y="-986.29" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::setAdvType</text>
 </a>
