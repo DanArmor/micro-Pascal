@@ -317,7 +317,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html" target="_top" xlink:title="Тесты для лексера">
+<g id="a_node6"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1038,-0.5 1038,-30.5 1143,-30.5 1143,-0.5 1038,-0.5"/>
 <text text-anchor="start" x="1046" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">tests/lexer/testLexer</text>
 <text text-anchor="middle" x="1090.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_1.cpp</text>
@@ -495,7 +495,7 @@
 <!-- Node21 -->
 <g id="node21" class="node">
 <title>Node21</title>
-<g id="a_node21"><a xlink:href="../../dd/d68/lexer_test_rules_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="../../dd/d68/lexer_test_rules_8hpp.html" target="_top" xlink:title="Тестовые правила для Лексера">
 <polygon fill="none" stroke="black" points="1230,-67.5 1230,-86.5 1377,-86.5 1377,-67.5 1230,-67.5"/>
 <text text-anchor="middle" x="1303.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">tests/lexer/lexerTestRules.hpp</text>
 </a>

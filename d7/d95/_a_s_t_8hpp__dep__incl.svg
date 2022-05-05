@@ -164,7 +164,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html" target="_top" xlink:title="Тесты для лексера">
+<g id="a_node5"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="103,-0.5 103,-30.5 208,-30.5 208,-0.5 103,-0.5"/>
 <text text-anchor="start" x="111" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">tests/lexer/testLexer</text>
 <text text-anchor="middle" x="155.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_1.cpp</text>
