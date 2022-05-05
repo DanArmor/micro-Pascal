@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Синтаксический анализатор", "index.html", [
+  [ "Анализатор программ на языке micro-Pascal", "index.html", [
     [ "Диаграмма объектов.", "d2/d22/md_schemes_scheme.html", [
       [ "Диаграмма классов:", "d2/d22/md_schemes_scheme.html#autotoc_md1", null ]
     ] ],

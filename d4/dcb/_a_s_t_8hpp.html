@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Синтаксический анализатор: Файл include/AST.hpp</title>
+<title>Анализатор программ на языке micro-Pascal: Файл include/AST.hpp</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">Анализатор программ на языке micro-Pascal<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+   <div id="projectbrief">Кто такой этот ваш micro-Pascal ? (c)</div>
   </td>
  </tr>
  </tbody>
@@ -119,13 +119,13 @@ $(document).ready(function(){initNavTree('d4/dcb/_a_s_t_8hpp.html','../../'); in
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db2/class_program_a_s_t.html">ProgramAST</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, отображающий начало программы  <a href="../../de/db2/class_program_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, отображающий программу  <a href="../../de/db2/class_program_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d19/class_function_a_s_t.html">FunctionAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, представляющий определение функции  <a href="../../dc/d19/class_function_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_block_a_s_t.html">BlockAST</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, отображающий блок (константы, переменные, инструкции)  <a href="../../d0/de0/class_block_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, отображающий блок (константы, переменные, составной оператор)  <a href="../../d0/de0/class_block_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, представляющий определение переменной  <a href="../../d6/d7c/class_var_decl_a_s_t.html#details">Подробнее...</a><br /></td></tr>
@@ -146,6 +146,7 @@ $(document).ready(function(){initNavTree('d4/dcb/_a_s_t_8hpp.html','../../'); in
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий целое число  <a href="../../d8/d90/class_number_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d21/class_string_a_s_t.html">StringAST</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий строку  <a href="../../d0/d21/class_string_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий бинарную операцию  <a href="../../d2/dc9/class_bin_op_a_s_t.html#details">Подробнее...</a><br /></td></tr>
@@ -157,13 +158,13 @@ $(document).ready(function(){initNavTree('d4/dcb/_a_s_t_8hpp.html','../../'); in
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, отображающий пустовые выражение, отсутствие операций  <a href="../../db/db7/class_no_op_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий бинарную операцию  <a href="../../d7/db1/class_assign_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий операцию присваивания  <a href="../../d7/db1/class_assign_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dff/class_var_a_s_t.html">VarAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, содержащий переменную  <a href="../../dc/dff/class_var_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df8/class_select_a_s_t.html">SelectAST</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, преставляющий выбор элемента в массиве  <a href="../../d5/df8/class_select_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, преставляющий выбор элемента массива  <a href="../../d5/df8/class_select_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd1/class_call_a_s_t.html">CallAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, преставляющий вызов функции  <a href="../../da/dd1/class_call_a_s_t.html#details">Подробнее...</a><br /></td></tr>
@@ -177,11 +178,11 @@ $(document).ready(function(){initNavTree('d4/dcb/_a_s_t_8hpp.html','../../'); in
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da0/class_while_a_s_t.html">WhileAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, преставляющий while statement.  <a href="../../dc/da0/class_while_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, представляющий заголовок цикла for.  <a href="../../d6/dbc/class_iteration_a_s_t.html#details">Подробнее...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_for_a_s_t.html">ForAST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, преставляющий for statement.  <a href="../../d4/d3f/class_for_a_s_t.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Узел, представляющий заголовок цикла for.  <a href="../../d6/dbc/class_iteration_a_s_t.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>

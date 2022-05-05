@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Синтаксический анализатор: Классы</title>
+<title>Анализатор программ на языке micro-Pascal: Классы</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo4.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">Анализатор программ на языке micro-Pascal<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+   <div id="projectbrief">Кто такой этот ваш micro-Pascal ? (c)</div>
   </td>
  </tr>
  </tbody>
@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('annotated.html',''); initResizable(); 
 <div class="levels">[уровень детализации <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="df/d7c/class_analyze_exception.html" target="_self">AnalyzeException</a></td><td class="desc">Базовое исключение анализатора </td></tr>
 <tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d8/d88/class_arr_spec_a_s_t.html" target="_self">ArrSpecAST</a></td><td class="desc">Узел, представляющий определение типа массива </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/db1/class_assign_a_s_t.html" target="_self">AssignAST</a></td><td class="desc">Узел, содержащий бинарную операцию </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/db1/class_assign_a_s_t.html" target="_self">AssignAST</a></td><td class="desc">Узел, содержащий операцию присваивания </td></tr>
 <tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/d7c/class_a_s_t_factory.html" target="_self">ASTFactory</a></td><td class="desc">Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным так, если бы они следовали слева-направо, сверху-вниз в анализируемом коде </td></tr>
 <tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d2/dc9/class_bin_op_a_s_t.html" target="_self">BinOpAST</a></td><td class="desc">Узел, содержащий бинарную операцию </td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/de0/class_block_a_s_t.html" target="_self">BlockAST</a></td><td class="desc">Узел, отображающий блок (константы, переменные, инструкции) </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/de0/class_block_a_s_t.html" target="_self">BlockAST</a></td><td class="desc">Узел, отображающий блок (константы, переменные, составной оператор) </td></tr>
 <tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="da/dd1/class_call_a_s_t.html" target="_self">CallAST</a></td><td class="desc">Узел, преставляющий вызов функции </td></tr>
 <tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="da/dbb/class_compound_a_s_t.html" target="_self">CompoundAST</a></td><td class="desc">Узел, представляющий составной операторор </td></tr>
 <tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d94/class_const_a_s_t.html" target="_self">ConstAST</a></td><td class="desc">Узел, представляющий константу </td></tr>
@@ -114,14 +114,14 @@ $(document).ready(function(){initNavTree('annotated.html',''); initResizable(); 
 <tr id="row_21_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d3/dde/class_node_iterator.html" target="_self">NodeIterator</a></td><td class="desc">Предварительное объявление для итератора узла </td></tr>
 <tr id="row_22_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="db/db7/class_no_op_a_s_t.html" target="_self">NoOpAST</a></td><td class="desc">Узел, отображающий пустовые выражение, отсутствие операций </td></tr>
 <tr id="row_23_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d8/d90/class_number_a_s_t.html" target="_self">NumberAST</a></td><td class="desc">Узел, содержащий целое число </td></tr>
-<tr id="row_24_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="de/db2/class_program_a_s_t.html" target="_self">ProgramAST</a></td><td class="desc">Узел, отображающий начало программы </td></tr>
+<tr id="row_24_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="de/db2/class_program_a_s_t.html" target="_self">ProgramAST</a></td><td class="desc">Узел, отображающий программу </td></tr>
 <tr id="row_25_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d8/de5/class_return_a_s_t.html" target="_self">ReturnAST</a></td><td class="desc">Узел, содержащий return statement </td></tr>
-<tr id="row_26_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/df8/class_select_a_s_t.html" target="_self">SelectAST</a></td><td class="desc">Узел, преставляющий выбор элемента в массиве </td></tr>
+<tr id="row_26_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/df8/class_select_a_s_t.html" target="_self">SelectAST</a></td><td class="desc">Узел, преставляющий выбор элемента массива </td></tr>
 <tr id="row_27_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d2c/class_semantic_exception.html" target="_self">SemanticException</a></td><td class="desc">Семантическое исключение </td></tr>
 <tr id="row_28_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_28_" class="arrow" onclick="toggleFolder('28_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="dd/dad/class_semantic_visitor.html" target="_self">SemanticVisitor</a></td><td class="desc">Посетитель-семантический анализатор </td></tr>
 <tr id="row_28_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d5/d3a/struct_semantic_visitor_1_1_function_data.html" target="_self">FunctionData</a></td><td class="desc">Структура для хранения данных о функции </td></tr>
 <tr id="row_28_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d6/d93/struct_semantic_visitor_1_1_var_data.html" target="_self">VarData</a></td><td class="desc">Структура для хранения данных об именованном значении - переменной или константе </td></tr>
-<tr id="row_29_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/d21/class_string_a_s_t.html" target="_self">StringAST</a></td><td class="desc"></td></tr>
+<tr id="row_29_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/d21/class_string_a_s_t.html" target="_self">StringAST</a></td><td class="desc">Узел, содержащий строку </td></tr>
 <tr id="row_30_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d0/dfe/class_syntax_analyzer.html" target="_self">SyntaxAnalyzer</a></td><td class="desc">Класс синтаксического анализатора </td></tr>
 <tr id="row_31_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="d7/d27/class_syntax_exception.html" target="_self">SyntaxException</a></td><td class="desc">Синтаксическое исключение </td></tr>
 <tr id="row_32_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="db/dc1/class_token.html" target="_self">Token</a></td><td class="desc">Класс, представляющий токен </td></tr>

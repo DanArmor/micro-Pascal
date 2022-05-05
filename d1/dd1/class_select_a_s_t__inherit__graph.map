@@ -1,4 +1,4 @@
 <map id="SelectAST" name="SelectAST">
-<area shape="rect" id="node1" title="Узел, преставляющий выбор элемента в массиве" alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node1" title="Узел, преставляющий выбор элемента массива" alt="" coords="5,80,91,107"/>
 <area shape="rect" id="node2" href="$d3/d96/class_i_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="22,5,74,32"/>
 </map>

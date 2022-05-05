@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Синтаксический анализатор: Исходный файл tests/lexer/lexerTestRules.hpp</title>
+<title>Анализатор программ на языке micro-Pascal: Исходный файл tests/lexer/lexerTestRules.hpp</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">Анализатор программ на языке micro-Pascal<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+   <div id="projectbrief">Кто такой этот ваш micro-Pascal ? (c)</div>
   </td>
  </tr>
  </tbody>
@@ -93,34 +93,34 @@ $(document).ready(function(){initNavTree('dd/d68/lexer_test_rules_8hpp_source.ht
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d72/_list_8hpp.html">List.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d5/d24/_lexer_8hpp.html">Lexer.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d4/d21/namespace_lexer_test_rules.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d21/namespace_lexer_test_rules.html">LexerTestRules</a>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">    8</a></span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;TokenTemplate&gt;</a> <a class="code hl_function" href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">getMathRules</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>         <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;TokenTemplate&gt;</a> templates = {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                {<span class="stringliteral">&quot;^\\s*\\+&quot;</span>, IToken::Type::PLUS, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                {<span class="stringliteral">&quot;^\\s*\\-&quot;</span>, IToken::Type::MINUS, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                {<span class="stringliteral">&quot;^\\s*\\*&quot;</span>, IToken::Type::MUL, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                {<span class="stringliteral">&quot;^\\s*\\/&quot;</span>, IToken::Type::FLOAT_DIV, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                {<span class="stringliteral">&quot;^\\s*\\(&quot;</span>, IToken::Type::LPAREN, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                {<span class="stringliteral">&quot;^\\s*\\)&quot;</span>, IToken::Type::RPAREN, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                {<span class="stringliteral">&quot;^\\s*\\=&quot;</span>, IToken::Type::EQ, IToken::AdvType::OPERATOR},</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+&quot;</span>, IToken::Type::INTEGER_CONST, IToken::AdvType::SOME_CONST},</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+\\.[0-9]*&quot;</span>, IToken::Type::REAL_CONST, IToken::AdvType::SOME_CONST},</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        };</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> templates;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d4/d21/namespace_lexer_test_rules.html">    7</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d21/namespace_lexer_test_rules.html">LexerTestRules</a>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">    9</a></span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;TokenTemplate&gt;</a> <a class="code hl_function" href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">getMathRules</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>         <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;TokenTemplate&gt;</a> templates = {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                {<span class="stringliteral">&quot;^\\s*\\+&quot;</span>, IToken::Type::PLUS, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                {<span class="stringliteral">&quot;^\\s*\\-&quot;</span>, IToken::Type::MINUS, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                {<span class="stringliteral">&quot;^\\s*\\*&quot;</span>, IToken::Type::MUL, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                {<span class="stringliteral">&quot;^\\s*\\/&quot;</span>, IToken::Type::FLOAT_DIV, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                {<span class="stringliteral">&quot;^\\s*\\(&quot;</span>, IToken::Type::LPAREN, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                {<span class="stringliteral">&quot;^\\s*\\)&quot;</span>, IToken::Type::RPAREN, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                {<span class="stringliteral">&quot;^\\s*\\=&quot;</span>, IToken::Type::EQ, IToken::AdvType::OPERATOR},</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+&quot;</span>, IToken::Type::INTEGER_CONST, IToken::AdvType::SOME_CONST},</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                {<span class="stringliteral">&quot;^\\s*[0-9]+\\.[0-9]*&quot;</span>, IToken::Type::REAL_CONST, IToken::AdvType::SOME_CONST},</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        };</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> templates;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_lexer_8hpp_html"><div class="ttname"><a href="../../d5/d24/_lexer_8hpp.html">Lexer.hpp</a></div><div class="ttdoc">Лексер</div></div>
 <div class="ttc" id="a_list_8hpp_html"><div class="ttname"><a href="../../dc/d72/_list_8hpp.html">List.hpp</a></div></div>
 <div class="ttc" id="aclass_list_html"><div class="ttname"><a href="../../d1/d34/class_list.html">List&lt; TokenTemplate &gt;</a></div></div>
-<div class="ttc" id="anamespace_lexer_test_rules_html"><div class="ttname"><a href="../../d4/d21/namespace_lexer_test_rules.html">LexerTestRules</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d68/lexer_test_rules_8hpp_source.html#l00006">lexerTestRules.hpp:6</a></div></div>
-<div class="ttc" id="anamespace_lexer_test_rules_html_a863c3734708374ba1911feeac17c3c35"><div class="ttname"><a href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">LexerTestRules::getMathRules</a></div><div class="ttdeci">List&lt; TokenTemplate &gt; getMathRules(void)</div><div class="ttdoc">Возвращает шаблоны токинов языка Pascal.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d68/lexer_test_rules_8hpp_source.html#l00008">lexerTestRules.hpp:8</a></div></div>
+<div class="ttc" id="anamespace_lexer_test_rules_html"><div class="ttname"><a href="../../d4/d21/namespace_lexer_test_rules.html">LexerTestRules</a></div><div class="ttdoc">Тестовые правила для лексера</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d68/lexer_test_rules_8hpp_source.html#l00007">lexerTestRules.hpp:7</a></div></div>
+<div class="ttc" id="anamespace_lexer_test_rules_html_a863c3734708374ba1911feeac17c3c35"><div class="ttname"><a href="../../d4/d21/namespace_lexer_test_rules.html#a863c3734708374ba1911feeac17c3c35">LexerTestRules::getMathRules</a></div><div class="ttdeci">List&lt; TokenTemplate &gt; getMathRules(void)</div><div class="ttdoc">Возвращает шаблоны токинов языка Pascal.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d68/lexer_test_rules_8hpp_source.html#l00009">lexerTestRules.hpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

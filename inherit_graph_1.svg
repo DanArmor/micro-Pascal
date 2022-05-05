@@ -35,7 +35,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d7/db1/class_assign_a_s_t.html" target="_top" xlink:title="Узел, содержащий бинарную операцию">
+<g id="a_node3"><a xlink:href="d7/db1/class_assign_a_s_t.html" target="_top" xlink:title="Узел, содержащий операцию присваивания">
 <polygon fill="none" stroke="black" points="83.5,-760.5 83.5,-779.5 149.5,-779.5 149.5,-760.5 83.5,-760.5"/>
 <text text-anchor="middle" x="116.5" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">AssignAST</text>
 </a>
@@ -65,7 +65,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d0/de0/class_block_a_s_t.html" target="_top" xlink:title="Узел, отображающий блок (константы, переменные, инструкции)">
+<g id="a_node5"><a xlink:href="d0/de0/class_block_a_s_t.html" target="_top" xlink:title="Узел, отображающий блок (константы, переменные, составной оператор)">
 <polygon fill="none" stroke="black" points="86,-684.5 86,-703.5 147,-703.5 147,-684.5 86,-684.5"/>
 <text text-anchor="middle" x="116.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">BlockAST</text>
 </a>
@@ -215,7 +215,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="de/db2/class_program_a_s_t.html" target="_top" xlink:title="Узел, отображающий начало программы">
+<g id="a_node15"><a xlink:href="de/db2/class_program_a_s_t.html" target="_top" xlink:title="Узел, отображающий программу">
 <polygon fill="none" stroke="black" points="80,-304.5 80,-323.5 153,-323.5 153,-304.5 80,-304.5"/>
 <text text-anchor="middle" x="116.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProgramAST</text>
 </a>
@@ -245,7 +245,7 @@
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="d5/df8/class_select_a_s_t.html" target="_top" xlink:title="Узел, преставляющий выбор элемента в массиве">
+<g id="a_node17"><a xlink:href="d5/df8/class_select_a_s_t.html" target="_top" xlink:title="Узел, преставляющий выбор элемента массива">
 <polygon fill="none" stroke="black" points="84.5,-228.5 84.5,-247.5 148.5,-247.5 148.5,-228.5 84.5,-228.5"/>
 <text text-anchor="middle" x="116.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">SelectAST</text>
 </a>
@@ -260,7 +260,7 @@
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="d0/d21/class_string_a_s_t.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="d0/d21/class_string_a_s_t.html" target="_top" xlink:title="Узел, содержащий строку">
 <polygon fill="none" stroke="black" points="85.5,-190.5 85.5,-209.5 147.5,-209.5 147.5,-190.5 85.5,-190.5"/>
 <text text-anchor="middle" x="116.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">StringAST</text>
 </a>

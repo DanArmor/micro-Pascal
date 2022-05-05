@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Синтаксический анализатор: Класс GraphvizVisitor</title>
+<title>Анализатор программ на языке micro-Pascal: Класс GraphvizVisitor</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -27,9 +27,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Синтаксический анализатор<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">Анализатор программ на языке micro-Pascal<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Кто такой этот ваш Pascal ? (c)</div>
+   <div id="projectbrief">Кто такой этот ваш micro-Pascal ? (c)</div>
   </td>
  </tr>
  </tbody>
@@ -316,7 +316,7 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a0b509ec69f8ebbde4e4908af836930db"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">ArrSpecAST::lHandTok</a></div><div class="ttdeci">Token lHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00088">AST.hpp:88</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a12acaf73724b24e94ac8c3b751678db7"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">ArrSpecAST::subType</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; subType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00090">AST.hpp:90</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a99a2f241557602ed85177809253da6a3"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">ArrSpecAST::rHandTok</a></div><div class="ttdeci">Token rHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00089">AST.hpp:89</a></div></div>
-<div class="ttc" id="aclass_i_a_s_t_html_a9868d324bdf738ccbbe159625b70c783"><div class="ttname"><a href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">IAST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00079">ASTclasses.hpp:79</a></div></div>
+<div class="ttc" id="aclass_i_a_s_t_html_a9868d324bdf738ccbbe159625b70c783"><div class="ttname"><a href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">IAST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00075">ASTclasses.hpp:75</a></div></div>
 <div class="ttc" id="aclass_token_html_aa5d6826fae7d616e2cfe3e27b5dd594a"><div class="ttname"><a href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">Token::getStr</a></div><div class="ttdeci">std::string const &amp; getStr(void) const</div><div class="ttdoc">Возвращает константную ссылку на строковое представление токена</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00023">Token.cpp:23</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -362,8 +362,8 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  103</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">var</a>.get());</div>
 <div class="line"><span class="lineno">  104</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">value</a>.get());</div>
 <div class="line"><span class="lineno">  105</span>}</div>
-<div class="ttc" id="aclass_assign_a_s_t_html_a257d00ba1a8dc66b59f56c2a570fc682"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">AssignAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00181">AST.hpp:181</a></div></div>
-<div class="ttc" id="aclass_assign_a_s_t_html_a6a0f4ebf2f5e8735e33ac9116c5a1917"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">AssignAST::value</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00182">AST.hpp:182</a></div></div>
+<div class="ttc" id="aclass_assign_a_s_t_html_a257d00ba1a8dc66b59f56c2a570fc682"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">AssignAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00182">AST.hpp:182</a></div></div>
+<div class="ttc" id="aclass_assign_a_s_t_html_a6a0f4ebf2f5e8735e33ac9116c5a1917"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">AssignAST::value</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00183">AST.hpp:183</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -408,8 +408,8 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">   86</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">left</a>.get());</div>
 <div class="line"><span class="lineno">   87</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">right</a>.get());</div>
 <div class="line"><span class="lineno">   88</span>}</div>
-<div class="ttc" id="aclass_bin_op_a_s_t_html_a8d19c01d77157058d7dc48d6ad65a507"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">BinOpAST::left</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; left</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00146">AST.hpp:146</a></div></div>
-<div class="ttc" id="aclass_bin_op_a_s_t_html_ab6426c7e12351c0adeeb1e2b83174f53"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">BinOpAST::right</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; right</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00147">AST.hpp:147</a></div></div>
+<div class="ttc" id="aclass_bin_op_a_s_t_html_a8d19c01d77157058d7dc48d6ad65a507"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">BinOpAST::left</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; left</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00147">AST.hpp:147</a></div></div>
+<div class="ttc" id="aclass_bin_op_a_s_t_html_ab6426c7e12351c0adeeb1e2b83174f53"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">BinOpAST::right</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; right</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00148">AST.hpp:148</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -505,7 +505,7 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  122</span>        connectToNode(backup, child.get());</div>
 <div class="line"><span class="lineno">  123</span>    }</div>
 <div class="line"><span class="lineno">  124</span>}</div>
-<div class="ttc" id="aclass_call_a_s_t_html_ac0afbd97aeaf23f7a99c1c7a347736f5"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html#ac0afbd97aeaf23f7a99c1c7a347736f5">CallAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00216">AST.hpp:216</a></div></div>
+<div class="ttc" id="aclass_call_a_s_t_html_ac0afbd97aeaf23f7a99c1c7a347736f5"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html#ac0afbd97aeaf23f7a99c1c7a347736f5">CallAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00217">AST.hpp:217</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -641,8 +641,8 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  151</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">iterSt</a>.get());</div>
 <div class="line"><span class="lineno">  152</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">body</a>.get());</div>
 <div class="line"><span class="lineno">  153</span>}</div>
-<div class="ttc" id="aclass_for_a_s_t_html_a3e653e419acdfb121c343cf75ad77269"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">ForAST::iterSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; iterSt</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00277">AST.hpp:277</a></div></div>
-<div class="ttc" id="aclass_for_a_s_t_html_ab7bb700b56cb0a91985cd5d12ba5dfae"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">ForAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00278">AST.hpp:278</a></div></div>
+<div class="ttc" id="aclass_for_a_s_t_html_a3e653e419acdfb121c343cf75ad77269"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">ForAST::iterSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; iterSt</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00265">AST.hpp:265</a></div></div>
+<div class="ttc" id="aclass_for_a_s_t_html_ab7bb700b56cb0a91985cd5d12ba5dfae"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">ForAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00266">AST.hpp:266</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -739,9 +739,9 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a> != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  138</span>        connectToNode(backup, node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a>.get());</div>
 <div class="line"><span class="lineno">  139</span>}</div>
-<div class="ttc" id="aclass_if_a_s_t_html_a073b2bbb8bd023242fdec48aee20265c"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">IfAST::elseBody</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; elseBody</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00241">AST.hpp:241</a></div></div>
-<div class="ttc" id="aclass_if_a_s_t_html_a0ad7c35cf8ae9cf84a9f69d71307c467"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a0ad7c35cf8ae9cf84a9f69d71307c467">IfAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00240">AST.hpp:240</a></div></div>
-<div class="ttc" id="aclass_if_a_s_t_html_ae27b12d50bf6ee4779d3a9830ac33e16"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#ae27b12d50bf6ee4779d3a9830ac33e16">IfAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00239">AST.hpp:239</a></div></div>
+<div class="ttc" id="aclass_if_a_s_t_html_a073b2bbb8bd023242fdec48aee20265c"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">IfAST::elseBody</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; elseBody</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00242">AST.hpp:242</a></div></div>
+<div class="ttc" id="aclass_if_a_s_t_html_a0ad7c35cf8ae9cf84a9f69d71307c467"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a0ad7c35cf8ae9cf84a9f69d71307c467">IfAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00241">AST.hpp:241</a></div></div>
+<div class="ttc" id="aclass_if_a_s_t_html_ae27b12d50bf6ee4779d3a9830ac33e16"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#ae27b12d50bf6ee4779d3a9830ac33e16">IfAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00240">AST.hpp:240</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -787,9 +787,9 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  159</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">condition</a>.get());</div>
 <div class="line"><span class="lineno">  160</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">postAction</a>.get());</div>
 <div class="line"><span class="lineno">  161</span>}</div>
-<div class="ttc" id="aclass_iteration_a_s_t_html_a0a6d164de3c4af7f93f7e2986bc95ce7"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">IterationAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00265">AST.hpp:265</a></div></div>
-<div class="ttc" id="aclass_iteration_a_s_t_html_ab2cd4888d4414b75575e498e99d27cc3"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">IterationAST::postAction</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; postAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00266">AST.hpp:266</a></div></div>
-<div class="ttc" id="aclass_iteration_a_s_t_html_aba16fd9ecafd41cccaf9890719127ee2"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#aba16fd9ecafd41cccaf9890719127ee2">IterationAST::assign</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; assign</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00264">AST.hpp:264</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_a0a6d164de3c4af7f93f7e2986bc95ce7"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">IterationAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00278">AST.hpp:278</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_ab2cd4888d4414b75575e498e99d27cc3"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">IterationAST::postAction</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; postAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00279">AST.hpp:279</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html_aba16fd9ecafd41cccaf9890719127ee2"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#aba16fd9ecafd41cccaf9890719127ee2">IterationAST::assign</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; assign</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00277">AST.hpp:277</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -963,7 +963,7 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  128</span>    addDef(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
 <div class="line"><span class="lineno">  129</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">toReturn</a>.get());</div>
 <div class="line"><span class="lineno">  130</span>}</div>
-<div class="ttc" id="aclass_return_a_s_t_html_afcc84e07e19c363355b5452a59d64f42"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">ReturnAST::toReturn</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; toReturn</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00228">AST.hpp:228</a></div></div>
+<div class="ttc" id="aclass_return_a_s_t_html_afcc84e07e19c363355b5452a59d64f42"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">ReturnAST::toReturn</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; toReturn</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00229">AST.hpp:229</a></div></div>
 </div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1008,8 +1008,8 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  114</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">from</a>.get());</div>
 <div class="line"><span class="lineno">  115</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">index</a>.get());</div>
 <div class="line"><span class="lineno">  116</span>}</div>
-<div class="ttc" id="aclass_select_a_s_t_html_a2b168b48c4c442aa9314c0fef87fa2b9"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">SelectAST::index</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; index</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00205">AST.hpp:205</a></div></div>
-<div class="ttc" id="aclass_select_a_s_t_html_af4e17a16e86b3afb8b285351af20967d"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">SelectAST::from</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; from</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00204">AST.hpp:204</a></div></div>
+<div class="ttc" id="aclass_select_a_s_t_html_a2b168b48c4c442aa9314c0fef87fa2b9"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">SelectAST::index</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; index</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00206">AST.hpp:206</a></div></div>
+<div class="ttc" id="aclass_select_a_s_t_html_af4e17a16e86b3afb8b285351af20967d"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">SelectAST::from</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; from</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00205">AST.hpp:205</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1135,7 +1135,7 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">   92</span>    addDef(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
 <div class="line"><span class="lineno">   93</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">down</a>.get());</div>
 <div class="line"><span class="lineno">   94</span>}</div>
-<div class="ttc" id="aclass_un_op_a_s_t_html_a7c0ba3275a38116a3cf78eb2c499ec0d"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">UnOpAST::down</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; down</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00159">AST.hpp:159</a></div></div>
+<div class="ttc" id="aclass_un_op_a_s_t_html_a7c0ba3275a38116a3cf78eb2c499ec0d"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">UnOpAST::down</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; down</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00160">AST.hpp:160</a></div></div>
 </div><!-- fragment --><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -1267,8 +1267,8 @@ $(document).ready(function(){initNavTree('d0/dc3/class_graphviz_visitor.html','.
 <div class="line"><span class="lineno">  144</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">body</a>.get());</div>
 <div class="line"><span class="lineno">  145</span>    connectToNode(backup, node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">condition</a>.get());</div>
 <div class="line"><span class="lineno">  146</span>}</div>
-<div class="ttc" id="aclass_while_a_s_t_html_a431765e283ca247891bd2e6177468513"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">WhileAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00252">AST.hpp:252</a></div></div>
-<div class="ttc" id="aclass_while_a_s_t_html_a8e4712d0f093abfeb314ca5bd245a2fb"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">WhileAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00253">AST.hpp:253</a></div></div>
+<div class="ttc" id="aclass_while_a_s_t_html_a431765e283ca247891bd2e6177468513"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">WhileAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00253">AST.hpp:253</a></div></div>
+<div class="ttc" id="aclass_while_a_s_t_html_a8e4712d0f093abfeb314ca5bd245a2fb"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">WhileAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00254">AST.hpp:254</a></div></div>
 </div><!-- fragment --><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-24-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-24-summary" class="dynsummary" style="display:block;">
