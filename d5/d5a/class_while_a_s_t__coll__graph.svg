@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../da/dc8/class_a_s_t.html" target="_top" xlink:title="Базовый класс узлов абстрактного синтаксического дерева">
-<polygon fill="none" stroke="black" points="12,-57.5 12,-76.5 48,-76.5 48,-57.5 12,-57.5"/>
-<text text-anchor="middle" x="30" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">AST</text>
+<g id="a_node2"><a xlink:href="../../d3/d96/class_i_a_s_t.html" target="_top" xlink:title="Базовый класс узлов абстрактного синтаксического дерева">
+<polygon fill="none" stroke="black" points="10.5,-57.5 10.5,-76.5 49.5,-76.5 49.5,-57.5 10.5,-57.5"/>
+<text text-anchor="middle" x="30" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">IAST</text>
 </a>
 </g>
 </g>

@@ -1,6 +1,6 @@
 <map id="NumberAST" name="NumberAST">
 <area shape="rect" id="node1" title="Узел, содержащий целое число" alt="" coords="5,247,100,273"/>
-<area shape="rect" id="node2" href="$da/dc8/class_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="29,171,77,197"/>
+<area shape="rect" id="node2" href="$d3/d96/class_i_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="27,171,79,197"/>
 <area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="23,81,82,108"/>
 <area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="21,5,84,32"/>
 </map>

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Базовое исключение анализатора">
 <polygon fill="#bfbfbf" stroke="black" points="105.5,-112.5 105.5,-131.5 197.5,-131.5 197.5,-112.5 105.5,-112.5"/>
 <text text-anchor="middle" x="151.5" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">AnalyzeException</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d4/d3a/class_lexer_exception.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="../../d4/d3a/class_lexer_exception.html" target="_top" xlink:title="Лексическое исключение">
 <polygon fill="none" stroke="black" points="0,-56.5 0,-75.5 83,-75.5 83,-56.5 0,-56.5"/>
 <text text-anchor="middle" x="41.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">LexerException</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d6/d2c/class_semantic_exception.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../d6/d2c/class_semantic_exception.html" target="_top" xlink:title="Семантическое исключение">
 <polygon fill="none" stroke="black" points="101.5,-56.5 101.5,-75.5 201.5,-75.5 201.5,-56.5 101.5,-56.5"/>
 <text text-anchor="middle" x="151.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticException</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../d7/d27/class_syntax_exception.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="../../d7/d27/class_syntax_exception.html" target="_top" xlink:title="Синтаксическое исключение">
 <polygon fill="none" stroke="black" points="219.5,-56.5 219.5,-75.5 307.5,-75.5 307.5,-56.5 219.5,-56.5"/>
 <text text-anchor="middle" x="263.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxException</text>
 </a>
@@ -80,7 +80,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../da/da3/class_type_exception.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="../../da/da3/class_type_exception.html" target="_top" xlink:title="Исключение типизирования">
 <polygon fill="none" stroke="black" points="111.5,-0.5 111.5,-19.5 191.5,-19.5 191.5,-0.5 111.5,-0.5"/>
 <text text-anchor="middle" x="151.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeException</text>
 </a>

@@ -1,8 +1,8 @@
 <map id="AnalyzeException" name="AnalyzeException">
-<area shape="rect" id="node1" title=" " alt="" coords="146,80,269,107"/>
-<area shape="rect" id="node3" href="$d4/d3a/class_lexer_exception.html" title=" " alt="" coords="5,155,116,181"/>
-<area shape="rect" id="node4" href="$d6/d2c/class_semantic_exception.html" title=" " alt="" coords="141,155,274,181"/>
-<area shape="rect" id="node6" href="$d7/d27/class_syntax_exception.html" title=" " alt="" coords="298,155,415,181"/>
+<area shape="rect" id="node1" title="Базовое исключение анализатора" alt="" coords="146,80,269,107"/>
+<area shape="rect" id="node3" href="$d4/d3a/class_lexer_exception.html" title="Лексическое исключение" alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node4" href="$d6/d2c/class_semantic_exception.html" title="Семантическое исключение" alt="" coords="141,155,274,181"/>
+<area shape="rect" id="node6" href="$d7/d27/class_syntax_exception.html" title="Синтаксическое исключение" alt="" coords="298,155,415,181"/>
 <area shape="rect" id="node2" title=" " alt="" coords="157,5,258,32"/>
-<area shape="rect" id="node5" href="$da/da3/class_type_exception.html" title=" " alt="" coords="154,229,261,256"/>
+<area shape="rect" id="node5" href="$da/da3/class_type_exception.html" title="Исключение типизирования" alt="" coords="154,229,261,256"/>
 </map>

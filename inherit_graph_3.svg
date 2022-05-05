@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d0/dc3/class_graphviz_visitor.html" target="_top" xlink:title="Посетителя для построения графического отображения АДС">
+<g id="a_node2"><a xlink:href="d0/dc3/class_graphviz_visitor.html" target="_top" xlink:title="Посетителя для построения графического отображения ДАС">
 <polygon fill="none" stroke="black" points="85,-76.5 85,-95.5 168,-95.5 168,-76.5 85,-76.5"/>
 <text text-anchor="middle" x="126.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">GraphvizVisitor</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d1/d49/class_type_view_visitor.html" target="_top" xlink:title="Посетителя для вывода сведений о типах в прямом порядке по АДС">
+<g id="a_node4"><a xlink:href="d1/d49/class_type_view_visitor.html" target="_top" xlink:title="Посетителя для вывода сведений о типах в прямом порядке по ДАС">
 <polygon fill="none" stroke="black" points="83,-0.5 83,-19.5 170,-19.5 170,-0.5 83,-0.5"/>
 <text text-anchor="middle" x="126.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeViewVisitor</text>
 </a>

@@ -125,7 +125,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a31fc5887c158652feb946f89270b4b36" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3e87b8ffb5f24f1db097bfb6aaeb8c2d" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1868,-104.57 1868,-123.57 2023,-123.57 2023,-104.57 1868,-104.57"/>
 <text text-anchor="middle" x="1945.5" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxAssignSt</text>
 </a>
@@ -140,7 +140,7 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a7f54bde730006b1b863290415809ab4e" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a1332b189c9be3ef8969eda9f078a97b3" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1336,-180.57 1336,-199.57 1461,-199.57 1461,-180.57 1336,-180.57"/>
 <text text-anchor="middle" x="1398.5" y="-187.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxSt</text>
 </a>
@@ -155,7 +155,7 @@
 <!-- Node21 -->
 <g id="node21" class="node">
 <title>Node21</title>
-<g id="a_node21"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3af9b5161a2cef6fdd26b0bb60334ac4" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a0d5fca8c5ec85c61bcf65df3693ce384" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2798,-123.57 2798,-142.57 2941,-142.57 2941,-123.57 2798,-123.57"/>
 <text text-anchor="middle" x="2869.5" y="-130.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxFactor</text>
 </a>
@@ -170,7 +170,7 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a931f1efdd45180108ad5c8a3f7fd86b2" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#acef4b19447f253a6e25d762733ca8ede" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1691,-104.57 1691,-123.57 1820,-123.57 1820,-104.57 1691,-104.57"/>
 <text text-anchor="middle" x="1755.5" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIter</text>
 </a>
@@ -191,7 +191,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a82e8472ea6d1064871de0d05eaa8b374" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#afd2005539c57ee2575cab3c50d061cd9" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1500.5,-104.57 1500.5,-123.57 1639.5,-123.57 1639.5,-104.57 1500.5,-104.57"/>
 <text text-anchor="middle" x="1570" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxForSt</text>
 </a>
@@ -218,7 +218,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a779e006875d35926152773989f4b1e5a" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a44506791ee9420b418715a9e87908aeb" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1160,-218.57 1160,-237.57 1291,-237.57 1291,-218.57 1160,-218.57"/>
 <text text-anchor="middle" x="1225.5" y="-225.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxIfSt</text>
 </a>
@@ -233,7 +233,7 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a6df61a82ef9de3c17b78be89a321a087" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a01d109f26cc4d069b40fed83435e3141" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1155,-142.57 1155,-161.57 1296,-161.57 1296,-142.57 1155,-142.57"/>
 <text text-anchor="middle" x="1225.5" y="-149.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxStList</text>
 </a>
@@ -248,7 +248,7 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a64dad7f0b22b08d182483469d3a1aa79" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a4a85e884f3f202c24ce09cc0c0e281b1" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1151,-256.57 1151,-275.57 1300,-275.57 1300,-256.57 1151,-256.57"/>
 <text text-anchor="middle" x="1225.5" y="-263.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxWhileSt</text>
 </a>
@@ -269,7 +269,7 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a5770afdc4d32d2c38550f27f9ffd949a" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a1390f811b111005b207bd039d2623dd4" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="944,-180.57 944,-199.57 1115,-199.57 1115,-180.57 944,-180.57"/>
 <text text-anchor="middle" x="1029.5" y="-187.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxCompoundSt</text>
 </a>
@@ -290,7 +290,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a2b54bac50e114b68e83c80d869b6ac7c" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="768,-313.57 768,-332.57 908,-332.57 908,-313.57 768,-313.57"/>
 <text text-anchor="middle" x="838" y="-320.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxBlock</text>
 </a>
@@ -305,7 +305,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae04232a95c6423677e600927c82851e4" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="580,-332.57 580,-351.57 732,-351.57 732,-332.57 580,-332.57"/>
 <text text-anchor="middle" x="656" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxFuncDef</text>
 </a>
@@ -320,7 +320,7 @@
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a8b337bd5b4a90cd5bd804a936e408e4b" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="392,-332.57 392,-351.57 544,-351.57 544,-332.57 392,-332.57"/>
 <text text-anchor="middle" x="468" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxProgram</text>
 </a>
@@ -341,7 +341,7 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a96cd5f6a041dae613d1c75175e26592e" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
+<g id="a_node18"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80" target="_top" xlink:title="Синтаксический анализ токенов, переданных анализатору.">
 <polygon fill="none" stroke="black" points="213,-332.57 213,-351.57 356,-351.57 356,-332.57 213,-332.57"/>
 <text text-anchor="middle" x="284.5" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::parseTokens</text>
 </a>
@@ -395,7 +395,7 @@
 <!-- Node22 -->
 <g id="node22" class="node">
 <title>Node22</title>
-<g id="a_node22"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a1e9b913cc8c2861927d7c05d10f1822d" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a1f83850370eb120ec67a6cc19ce99e2e" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2625,-180.57 2625,-199.57 2762,-199.57 2762,-180.57 2625,-180.57"/>
 <text text-anchor="middle" x="2693.5" y="-187.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxTerm</text>
 </a>
@@ -410,7 +410,7 @@
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3dfb6634a4bcdc61da5b1bafd1f3d136" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a65d458f8a460cd5153c013f9dc2b6d90" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2425,-180.57 2425,-199.57 2589,-199.57 2589,-180.57 2425,-180.57"/>
 <text text-anchor="middle" x="2507" y="-187.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxSimpleExpr</text>
 </a>
@@ -425,7 +425,7 @@
 <!-- Node24 -->
 <g id="node24" class="node">
 <title>Node24</title>
-<g id="a_node24"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ae8d09db1b25ec882248aeed978c13a4d" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a3c3f51ab7cdb341ac4fa460e352150ae" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2255,-218.57 2255,-237.57 2389,-237.57 2389,-218.57 2255,-218.57"/>
 <text text-anchor="middle" x="2322" y="-225.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxExpr</text>
 </a>
@@ -464,7 +464,7 @@
 <!-- Node25 -->
 <g id="node25" class="node">
 <title>Node25</title>
-<g id="a_node25"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a2db43946bee3e973ce1cf293b262e271" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a21f6ed68cce9f38063319d350afc1239" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2068.5,-142.57 2068.5,-161.57 2209.5,-161.57 2209.5,-142.57 2068.5,-142.57"/>
 <text text-anchor="middle" x="2139" y="-149.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxCallSt</text>
 </a>
@@ -479,7 +479,7 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#adad79b2219ae143b49203a836713bec9" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#ad43214817dbe71119316f653b4cbbefb" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2059,-332.57 2059,-351.57 2219,-351.57 2219,-332.57 2059,-332.57"/>
 <text text-anchor="middle" x="2139" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxConstDecl</text>
 </a>
@@ -494,7 +494,7 @@
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a55e935b2aa7f20b66e9228e977582fcd" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a24dfeabcc9335e5f3f040f7cf0c64fd9" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1679,-218.57 1679,-237.57 1832,-237.57 1832,-218.57 1679,-218.57"/>
 <text text-anchor="middle" x="1755.5" y="-225.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxReturnSt</text>
 </a>
@@ -509,7 +509,7 @@
 <!-- Node29 -->
 <g id="node29" class="node">
 <title>Node29</title>
-<g id="a_node29"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a1264dcb50cb09c564a36125c21043298" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#aee174af1cc97011051b2a8a87d2a5e7d" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2067.5,-104.57 2067.5,-123.57 2210.5,-123.57 2210.5,-104.57 2067.5,-104.57"/>
 <text text-anchor="middle" x="2139" y="-111.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxSelect</text>
 </a>
@@ -536,7 +536,7 @@
 <!-- Node27 -->
 <g id="node27" class="node">
 <title>Node27</title>
-<g id="a_node27"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a58a0f927ad0a45e4ce837a98e98330aa" target="_top" xlink:title=" ">
+<g id="a_node27"><a xlink:href="../../d0/dfe/class_syntax_analyzer.html#a177c60c88c15c37d6f5cf0c41a35190b" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="1497,-332.57 1497,-351.57 1643,-351.57 1643,-332.57 1497,-332.57"/>
 <text text-anchor="middle" x="1570" y="-339.57" font-family="Helvetica,sans-Serif" font-size="10.00">SyntaxAnalyzer::syntaxConsts</text>
 </a>

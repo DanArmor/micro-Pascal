@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Правила языка Паскаль">
 <polygon fill="#bfbfbf" stroke="black" points="219,-123.5 219,-142.5 342,-142.5 342,-123.5 219,-123.5"/>
 <text text-anchor="middle" x="280.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">include/PascalRules.hpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d0/d7c/_analyze_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d0/d7c/_analyze_8hpp.html" target="_top" xlink:title="Функции анализа кода на языке Pascal.">
 <polygon fill="none" stroke="black" points="32.5,-62 32.5,-81 134.5,-81 134.5,-62 32.5,-62"/>
 <text text-anchor="middle" x="83.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">include/Analyze.hpp</text>
 </a>

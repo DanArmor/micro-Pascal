@@ -1,4 +1,4 @@
 <map id="SemanticVisitor::compareTypes" name="SemanticVisitor::compareTypes">
 <area shape="rect" id="node1" title="Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать" alt="" coords="5,5,176,47"/>
-<area shape="rect" id="node2" href="$db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="224,13,267,39"/>
+<area shape="rect" id="node2" href="$d3/da8/sup_algs_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="224,13,267,39"/>
 </map>

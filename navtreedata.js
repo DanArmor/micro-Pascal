@@ -53,8 +53,7 @@ var NAVTREE =
       [ "Файлы", "files.html", "files_dup" ],
       [ "Список членов всех файлов", "globals.html", [
         [ "Указатель", "globals.html", null ],
-        [ "Функции", "globals_func.html", null ],
-        [ "Переменные", "globals_vars.html", null ]
+        [ "Функции", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -63,8 +62,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b",
-"dc/da0/class_while_a_s_t.html#afb0c78acaee641d791c7da2491cd23ca"
+"d3/db4/graph_draw_8cpp_source.html",
+"dc/de8/class_un_op_a_s_t.html#a6cda966c30a22dc5e40b7980a2ffcc68"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

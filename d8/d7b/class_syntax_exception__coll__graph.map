@@ -1,6 +1,6 @@
 <map id="SyntaxException" name="SyntaxException">
-<area shape="rect" id="node1" title=" " alt="" coords="33,247,151,273"/>
-<area shape="rect" id="node2" href="$df/d7c/class_analyze_exception.html" title=" " alt="" coords="31,171,153,197"/>
+<area shape="rect" id="node1" title="Синтаксическое исключение" alt="" coords="33,247,151,273"/>
+<area shape="rect" id="node2" href="$df/d7c/class_analyze_exception.html" title="Базовое исключение анализатора" alt="" coords="31,171,153,197"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,81,107,108"/>
 <area shape="rect" id="node4" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="131,81,189,108"/>
 <area shape="rect" id="node5" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="129,5,191,32"/>

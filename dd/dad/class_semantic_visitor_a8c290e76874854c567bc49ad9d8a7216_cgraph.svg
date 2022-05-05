@@ -65,7 +65,7 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="../../dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" target="_top" xlink:title="Создает копию посетителя, которая посещает ptr и возвращает результат">
+<g id="a_node6"><a xlink:href="../../dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f" target="_top" xlink:title="Создает копию посетителя, которая посещает ptr и возвращает результат">
 <polygon fill="none" stroke="black" points="144,-19.5 144,-38.5 272,-38.5 272,-19.5 144,-19.5"/>
 <text text-anchor="middle" x="208" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">SemanticVisitor::getValue</text>
 </a>
@@ -113,17 +113,17 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="342,-0.5 342,-19.5 412,-19.5 412,-0.5 342,-0.5"/>
-<text text-anchor="middle" x="377" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">AST::accept</text>
+<g id="a_node7"><a xlink:href="../../d3/d96/class_i_a_s_t.html#a86a33b4e7990941edb1817c708243a7c" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="340.5,-0.5 340.5,-19.5 413.5,-19.5 413.5,-0.5 340.5,-0.5"/>
+<text text-anchor="middle" x="377" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">IAST::accept</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge9" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M272.14,-21.82C291.99,-19.56 313.49,-17.11 331.75,-15.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="332.26,-18.5 341.8,-13.89 331.47,-11.54 332.26,-18.5"/>
+<path fill="none" stroke="midnightblue" d="M272.14,-21.82C291.44,-19.62 312.29,-17.25 330.21,-15.21"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="330.84,-18.66 340.38,-14.05 330.05,-11.71 330.84,-18.66"/>
 </g>
 </g>
 </svg>

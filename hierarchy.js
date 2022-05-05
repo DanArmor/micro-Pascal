@@ -1,6 +1,17 @@
 var hierarchy =
 [
-    [ "AST", "da/dc8/class_a_s_t.html", [
+    [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
+    [ "std::exception", null, [
+      [ "AnalyzeException", "df/d7c/class_analyze_exception.html", [
+        [ "LexerException", "d4/d3a/class_lexer_exception.html", null ],
+        [ "SemanticException", "d6/d2c/class_semantic_exception.html", [
+          [ "TypeException", "da/da3/class_type_exception.html", null ]
+        ] ],
+        [ "SyntaxException", "d7/d27/class_syntax_exception.html", null ]
+      ] ]
+    ] ],
+    [ "SemanticVisitor::FunctionData", "d5/d3a/struct_semantic_visitor_1_1_function_data.html", null ],
+    [ "IAST", "d3/d96/class_i_a_s_t.html", [
       [ "ArrSpecAST", "d8/d88/class_arr_spec_a_s_t.html", null ],
       [ "AssignAST", "d7/db1/class_assign_a_s_t.html", null ],
       [ "BinOpAST", "d2/dc9/class_bin_op_a_s_t.html", null ],
@@ -24,17 +35,6 @@ var hierarchy =
       [ "VarDeclAST", "d6/d7c/class_var_decl_a_s_t.html", null ],
       [ "WhileAST", "dc/da0/class_while_a_s_t.html", null ]
     ] ],
-    [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
-    [ "std::exception", null, [
-      [ "AnalyzeException", "df/d7c/class_analyze_exception.html", [
-        [ "LexerException", "d4/d3a/class_lexer_exception.html", null ],
-        [ "SemanticException", "d6/d2c/class_semantic_exception.html", [
-          [ "TypeException", "da/da3/class_type_exception.html", null ]
-        ] ],
-        [ "SyntaxException", "d7/d27/class_syntax_exception.html", null ]
-      ] ]
-    ] ],
-    [ "SemanticVisitor::FunctionData", "d5/d3a/struct_semantic_visitor_1_1_function_data.html", null ],
     [ "IToken", "d0/d11/class_i_token.html", [
       [ "Token", "db/dc1/class_token.html", null ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]

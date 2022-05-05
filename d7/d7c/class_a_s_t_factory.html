@@ -92,39 +92,42 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </div><!--header-->
 <div class="contents">
 
-<p>Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным слева-направо, сверху-вниз  
+<p>Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным так, если бы они следовали слева-направо, сверху-вниз в анализируемом коде  
  <a href="../../d7/d7c/class_a_s_t_factory.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/d0d/_a_s_t_factory_8hpp_source.html">ASTFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Открытые статические члены</h2></td></tr>
-<tr class="memitem:a8d1d4c9d01ab2e366d1af6bbaeaf7bef"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token)</td></tr>
-<tr class="separator:a8d1d4c9d01ab2e366d1af6bbaeaf7bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa828881938a481702a53a0cf1b48b40f"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#aa828881938a481702a53a0cf1b48b40f">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first)</td></tr>
-<tr class="separator:aa828881938a481702a53a0cf1b48b40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a1458d02e6d02fffc299cdd365f55d8"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a9a1458d02e6d02fffc299cdd365f55d8">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; second)</td></tr>
-<tr class="separator:a9a1458d02e6d02fffc299cdd365f55d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c9351b9af644ab1c6bd4b49ac67f04"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ac5c9351b9af644ab1c6bd4b49ac67f04">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; second, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; third)</td></tr>
-<tr class="separator:ac5c9351b9af644ab1c6bd4b49ac67f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09cdbe7b6ad1df67438da4f761d8df32"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a09cdbe7b6ad1df67438da4f761d8df32">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; params)</td></tr>
-<tr class="separator:a09cdbe7b6ad1df67438da4f761d8df32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8337d84836a411e97d8933831a9a13d"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ac8337d84836a411e97d8933831a9a13d">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; params, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first)</td></tr>
-<tr class="separator:ac8337d84836a411e97d8933831a9a13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab08eca1c1b6fdacaad04f4e4654e0f41"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ab08eca1c1b6fdacaad04f4e4654e0f41">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; params, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; second)</td></tr>
-<tr class="separator:ab08eca1c1b6fdacaad04f4e4654e0f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915d69d17996e7ad25a2ef276ef562eb"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a915d69d17996e7ad25a2ef276ef562eb">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; constsDecls, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt; varDecls, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; compound)</td></tr>
-<tr class="separator:a915d69d17996e7ad25a2ef276ef562eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9adccbcab7bae8b8d30f3e581b3e8ff5"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a9adccbcab7bae8b8d30f3e581b3e8ff5">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> firstTok, <a class="el" href="../../db/dc1/class_token.html">Token</a> secondTok, <a class="el" href="../../db/dc1/class_token.html">Token</a> thirdTok, std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; first)</td></tr>
-<tr class="separator:a9adccbcab7bae8b8d30f3e581b3e8ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d959009ba9e91a58a5c15e986d130b"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token)</td></tr>
+<tr class="separator:a31d959009ba9e91a58a5c15e986d130b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c09ffb4cd7da1d619473d7ba522f19"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ac5c09ffb4cd7da1d619473d7ba522f19">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first)</td></tr>
+<tr class="separator:ac5c09ffb4cd7da1d619473d7ba522f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebe4c5792bc48de0262b0cbcf3446e0"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#afebe4c5792bc48de0262b0cbcf3446e0">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; second)</td></tr>
+<tr class="separator:afebe4c5792bc48de0262b0cbcf3446e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade090e5d28202aba1fc311b4f54e31a0"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ade090e5d28202aba1fc311b4f54e31a0">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; second, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; third)</td></tr>
+<tr class="separator:ade090e5d28202aba1fc311b4f54e31a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bd14fe265ff634c3c1a4a4e538aa25"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a82bd14fe265ff634c3c1a4a4e538aa25">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt; params)</td></tr>
+<tr class="separator:a82bd14fe265ff634c3c1a4a4e538aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0857481955f8c9626f04848024b129"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a6d0857481955f8c9626f04848024b129">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt; params, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first)</td></tr>
+<tr class="separator:a6d0857481955f8c9626f04848024b129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae468c8feda27f24ded9c862643c3dd1f"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#ae468c8feda27f24ded9c862643c3dd1f">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt; params, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; second)</td></tr>
+<tr class="separator:ae468c8feda27f24ded9c862643c3dd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36e63701083c4836e0a4be6920d8a61"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#af36e63701083c4836e0a4be6920d8a61">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> token, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt; constsDecls, std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt; varDecls, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; compound)</td></tr>
+<tr class="separator:af36e63701083c4836e0a4be6920d8a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9528753dc05d1a90d084c7ebde93b006"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#a9528753dc05d1a90d084c7ebde93b006">createAST</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> firstTok, <a class="el" href="../../db/dc1/class_token.html">Token</a> secondTok, <a class="el" href="../../db/dc1/class_token.html">Token</a> thirdTok, std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; first)</td></tr>
+<tr class="separator:a9528753dc05d1a90d084c7ebde93b006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4647507a830972309beb5db2d84ce96"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96">createCopyOfType</a> (<a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> *typePtr)</td></tr>
+<tr class="memdesc:aa4647507a830972309beb5db2d84ce96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает "глубокую копию" указателя на тип typePtr.  <a href="../../d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4647507a830972309beb5db2d84ce96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p >Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным слева-направо, сверху-вниз </p>
+<div class="textblock"><p >Простая фабрика AST-узлов Возвращает узел по токену и аргументам, переданным так, если бы они следовали слева-направо, сверху-вниз в анализируемом коде </p>
 
 <p class="definition">См. определение в файле <a class="el" href="../../d4/d0d/_a_s_t_factory_8hpp_source.html">ASTFactory.hpp</a> строка <a class="el" href="../../d4/d0d/_a_s_t_factory_8hpp_source.html#l00009">9</a></p>
 </div><h2 class="groupheader">Методы</h2>
-<a id="a9adccbcab7bae8b8d30f3e581b3e8ff5" name="a9adccbcab7bae8b8d30f3e581b3e8ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9adccbcab7bae8b8d30f3e581b3e8ff5">&#9670;&nbsp;</a></span>createAST() <span class="overload">[1/9]</span></h2>
+<a id="a9528753dc05d1a90d084c7ebde93b006" name="a9528753dc05d1a90d084c7ebde93b006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9528753dc05d1a90d084c7ebde93b006">&#9670;&nbsp;</a></span>createAST() <span class="overload">[1/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +136,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>firstTok</em>, </td>
@@ -153,7 +156,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>&#160;</td>
         </tr>
         <tr>
@@ -169,29 +172,30 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00099">99</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                                                                 { </div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span>(firstTok.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a>)</div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>(firstTok, secondTok, thirdTok, std::move(first)));</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(firstTok));</div>
-<div class="line"><span class="lineno">  103</span>}</div>
-<div class="ttc" id="aclass_arr_spec_a_s_t_html"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a></div><div class="ttdoc">Узел, представляющий определение типа массива</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00074">AST.hpp:74</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a></div><div class="ttdeci">@ ARRAY</div><div class="ttdoc">array</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00086">Token.hpp:86</a></div></div>
-<div class="ttc" id="aclass_i_token_html_ac7f0a800d7a9e8608bab0360c76d735a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">IToken::getType</a></div><div class="ttdeci">virtual Type getType(void) const</div><div class="ttdoc">Получение типа токена</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00110">Token.hpp:110</a></div></div>
-<div class="ttc" id="aclass_no_op_a_s_t_html"><div class="ttname"><a href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a></div><div class="ttdoc">Узел, отображающий пустовые выражение, отсутствие операций</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00156">AST.hpp:156</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00108">108</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                                                                                                   { </div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span>(firstTok.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a>)</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>(firstTok, secondTok, thirdTok, std::move(first)));</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов!\n{}\n{}\n{}&quot;</span>,</div>
+<div class="line"><span class="lineno">  112</span>        firstTok.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>(), secondTok.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>(), thirdTok.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aclass_arr_spec_a_s_t_html"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a></div><div class="ttdoc">Узел, представляющий определение типа массива</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00081">AST.hpp:81</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a></div><div class="ttdeci">@ ARRAY</div><div class="ttdoc">array</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00094">Token.hpp:94</a></div></div>
+<div class="ttc" id="aclass_i_token_html_ac7f0a800d7a9e8608bab0360c76d735a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">IToken::getType</a></div><div class="ttdeci">virtual Type getType(void) const</div><div class="ttdoc">Получение типа токена</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00118">Token.hpp:118</a></div></div>
+<div class="ttc" id="aclass_token_html_ab9a75d3f89e77051d87462654e7576de"><div class="ttname"><a href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">Token::getInfo</a></div><div class="ttdeci">std::string getInfo(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00055">Token.cpp:55</a></div></div>
 </div><!-- fragment --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a9adccbcab7bae8b8d30f3e581b3e8ff5_cgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a9528753dc05d1a90d084c7ebde93b006_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a8d1d4c9d01ab2e366d1af6bbaeaf7bef" name="a8d1d4c9d01ab2e366d1af6bbaeaf7bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d1d4c9d01ab2e366d1af6bbaeaf7bef">&#9670;&nbsp;</a></span>createAST() <span class="overload">[2/9]</span></h2>
+<a id="a31d959009ba9e91a58a5c15e986d130b" name="a31d959009ba9e91a58a5c15e986d130b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d959009ba9e91a58a5c15e986d130b">&#9670;&nbsp;</a></span>createAST() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +204,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em></td><td>)</td>
@@ -214,41 +218,42 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00010">10</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                   {</div>
-<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">IToken::TYPE_SPEC</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a>(token));</div>
-<div class="line"><span class="lineno">   13</span>    }</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103">IToken::STRING_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d21/class_string_a_s_t.html">StringAST</a>(token));</div>
-<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a>(token));</div>
-<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9">IToken::REAL_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a>(token));</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dff/class_var_a_s_t.html">VarAST</a>(token));</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017">IToken::EMPTY</a>: {</div>
-<div class="line"><span class="lineno">   20</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;$&quot;</span>);</div>
-<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   25</span>}</div>
-<div class="ttc" id="aclass_i_token_html_a3e73305ee0ac36d0bf5f26b649589b24"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">IToken::getAdvType</a></div><div class="ttdeci">virtual AdvType getAdvType(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00115">Token.hpp:115</a></div></div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">IToken::TYPE_SPEC</a></div><div class="ttdeci">@ TYPE_SPEC</div><div class="ttdoc">Спецификатор типа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00019">Token.hpp:19</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a></div><div class="ttdeci">@ ID</div><div class="ttdoc">Индентификатор</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00037">Token.hpp:37</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017">IToken::EMPTY</a></div><div class="ttdeci">@ EMPTY</div><div class="ttdoc">Пустое выражение</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00032">Token.hpp:32</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a></div><div class="ttdeci">@ INTEGER_CONST</div><div class="ttdoc">Целая константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00039">Token.hpp:39</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9">IToken::REAL_CONST</a></div><div class="ttdeci">@ REAL_CONST</div><div class="ttdoc">Вещественная константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00040">Token.hpp:40</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103">IToken::STRING_CONST</a></div><div class="ttdeci">@ STRING_CONST</div><div class="ttdoc">Строковая константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00041">Token.hpp:41</a></div></div>
-<div class="ttc" id="aclass_number_a_s_t_html"><div class="ttname"><a href="../../d8/d90/class_number_a_s_t.html">NumberAST</a></div><div class="ttdoc">Узел, содержащий целое число</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00113">AST.hpp:113</a></div></div>
-<div class="ttc" id="aclass_string_a_s_t_html"><div class="ttname"><a href="../../d0/d21/class_string_a_s_t.html">StringAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00122">AST.hpp:122</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00017">17</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                    {</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">IToken::TYPE_SPEC</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a>(token));</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103">IToken::STRING_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/d21/class_string_a_s_t.html">StringAST</a>(token));</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a>(token));</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9">IToken::REAL_CONST</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d90/class_number_a_s_t.html">NumberAST</a>(token));</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a>: <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/dff/class_var_a_s_t.html">VarAST</a>(token));</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017">IToken::EMPTY</a>: {</div>
+<div class="line"><span class="lineno">   27</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;$&quot;</span>);</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aclass_i_token_html_a3e73305ee0ac36d0bf5f26b649589b24"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">IToken::getAdvType</a></div><div class="ttdeci">virtual AdvType getAdvType(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00123">Token.hpp:123</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">IToken::TYPE_SPEC</a></div><div class="ttdeci">@ TYPE_SPEC</div><div class="ttdoc">Спецификатор типа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00027">Token.hpp:27</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4cfaf7199ee3ca0c610348d482477a47">IToken::ID</a></div><div class="ttdeci">@ ID</div><div class="ttdoc">Индентификатор</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00045">Token.hpp:45</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017">IToken::EMPTY</a></div><div class="ttdeci">@ EMPTY</div><div class="ttdoc">Пустое выражение</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00040">Token.hpp:40</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aae21d55da39300f35c1373a7cf6d441bc">IToken::INTEGER_CONST</a></div><div class="ttdeci">@ INTEGER_CONST</div><div class="ttdoc">Целая константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00047">Token.hpp:47</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9">IToken::REAL_CONST</a></div><div class="ttdeci">@ REAL_CONST</div><div class="ttdoc">Вещественная константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00048">Token.hpp:48</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaef549bea49172155481e518971995103">IToken::STRING_CONST</a></div><div class="ttdeci">@ STRING_CONST</div><div class="ttdoc">Строковая константа</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00049">Token.hpp:49</a></div></div>
+<div class="ttc" id="aclass_no_op_a_s_t_html"><div class="ttname"><a href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a></div><div class="ttdoc">Узел, отображающий пустовые выражение, отсутствие операций</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00163">AST.hpp:163</a></div></div>
+<div class="ttc" id="aclass_number_a_s_t_html"><div class="ttname"><a href="../../d8/d90/class_number_a_s_t.html">NumberAST</a></div><div class="ttdoc">Узел, содержащий целое число</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00120">AST.hpp:120</a></div></div>
+<div class="ttc" id="aclass_string_a_s_t_html"><div class="ttname"><a href="../../d0/d21/class_string_a_s_t.html">StringAST</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00129">AST.hpp:129</a></div></div>
 <div class="ttc" id="aclass_token_html_a1f07fa2fffeb2f7ab803ef8b424eae8a"><div class="ttname"><a href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">Token::setStr</a></div><div class="ttdeci">void setStr(std::string const &amp;toSet)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00027">Token.cpp:27</a></div></div>
-<div class="ttc" id="aclass_type_spec_a_s_t_html"><div class="ttname"><a href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a></div><div class="ttdoc">Узел, представляющий определение типа</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00065">AST.hpp:65</a></div></div>
-<div class="ttc" id="aclass_var_a_s_t_html"><div class="ttname"><a href="../../dc/dff/class_var_a_s_t.html">VarAST</a></div><div class="ttdoc">Узел, содержащий переменную</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00179">AST.hpp:179</a></div></div>
+<div class="ttc" id="aclass_type_spec_a_s_t_html"><div class="ttname"><a href="../../d2/db9/class_type_spec_a_s_t.html">TypeSpecAST</a></div><div class="ttdoc">Узел, представляющий определение типа</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00072">AST.hpp:72</a></div></div>
+<div class="ttc" id="aclass_var_a_s_t_html"><div class="ttname"><a href="../../dc/dff/class_var_a_s_t.html">VarAST</a></div><div class="ttdoc">Узел, содержащий переменную</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00186">AST.hpp:186</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a8d1d4c9d01ab2e366d1af6bbaeaf7bef_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a31d959009ba9e91a58a5c15e986d130b_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -256,14 +261,14 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a8d1d4c9d01ab2e366d1af6bbaeaf7bef_icgraph.svg" width="4424" height="1279"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a31d959009ba9e91a58a5c15e986d130b_icgraph.svg" width="4388" height="1376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="aa828881938a481702a53a0cf1b48b40f" name="aa828881938a481702a53a0cf1b48b40f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa828881938a481702a53a0cf1b48b40f">&#9670;&nbsp;</a></span>createAST() <span class="overload">[3/9]</span></h2>
+<a id="ac5c09ffb4cd7da1d619473d7ba522f19" name="ac5c09ffb4cd7da1d619473d7ba522f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c09ffb4cd7da1d619473d7ba522f19">&#9670;&nbsp;</a></span>createAST() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +277,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -280,7 +285,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>&#160;</td>
         </tr>
         <tr>
@@ -296,31 +301,31 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00027">27</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                             {</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a>)</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a>(token, std::move(first)));</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e">IToken::RETURN</a>)</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/de5/class_return_a_s_t.html">ReturnAST</a>(token, std::move(first)));</div>
-<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   33</span>}</div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a></div><div class="ttdeci">@ OPERATOR</div><div class="ttdoc">Оператор</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00017">Token.hpp:17</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e">IToken::RETURN</a></div><div class="ttdeci">@ RETURN</div><div class="ttdoc">return</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00085">Token.hpp:85</a></div></div>
-<div class="ttc" id="aclass_return_a_s_t_html"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html">ReturnAST</a></div><div class="ttdoc">Узел, содержащий return statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00213">AST.hpp:213</a></div></div>
-<div class="ttc" id="aclass_un_op_a_s_t_html"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a></div><div class="ttdoc">Узел, содержащий унарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00144">AST.hpp:144</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00034">34</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                               {</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a>)</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a>(token, std::move(first)));</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e">IToken::RETURN</a>)</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/de5/class_return_a_s_t.html">ReturnAST</a>(token, std::move(first)));</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a></div><div class="ttdeci">@ OPERATOR</div><div class="ttdoc">Оператор</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00025">Token.hpp:25</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e">IToken::RETURN</a></div><div class="ttdeci">@ RETURN</div><div class="ttdoc">return</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00093">Token.hpp:93</a></div></div>
+<div class="ttc" id="aclass_return_a_s_t_html"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html">ReturnAST</a></div><div class="ttdoc">Узел, содержащий return statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00220">AST.hpp:220</a></div></div>
+<div class="ttc" id="aclass_un_op_a_s_t_html"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html">UnOpAST</a></div><div class="ttdoc">Узел, содержащий унарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00151">AST.hpp:151</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_aa828881938a481702a53a0cf1b48b40f_cgraph.svg" width="355" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ac5c09ffb4cd7da1d619473d7ba522f19_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a9a1458d02e6d02fffc299cdd365f55d8" name="a9a1458d02e6d02fffc299cdd365f55d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a1458d02e6d02fffc299cdd365f55d8">&#9670;&nbsp;</a></span>createAST() <span class="overload">[4/9]</span></h2>
+<a id="afebe4c5792bc48de0262b0cbcf3446e0" name="afebe4c5792bc48de0262b0cbcf3446e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebe4c5792bc48de0262b0cbcf3446e0">&#9670;&nbsp;</a></span>createAST() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +334,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -337,13 +342,13 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -359,56 +364,56 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00035">35</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">switch</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3">IToken::ASSIGN</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82">IToken::WHILE</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/da0/class_while_a_s_t.html">WhileAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3">IToken::FOR</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d4/d3f/class_for_a_s_t.html">ForAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   40</span>    }</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca">IToken::VARDECL</a>:{</div>
-<div class="line"><span class="lineno">   44</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;VARDECL&quot;</span>);</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2">IToken::SELECT</a>:{</div>
-<div class="line"><span class="lineno">   48</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;SELECT&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d5/df8/class_select_a_s_t.html">SelectAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20">IToken::CONSTDECL</a>:{</div>
-<div class="line"><span class="lineno">   52</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;CONSTDECL&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/d94/class_const_a_s_t.html">ConstAST</a>(token, std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   57</span>}</div>
-<div class="ttc" id="aclass_assign_a_s_t_html"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00166">AST.hpp:166</a></div></div>
-<div class="ttc" id="aclass_bin_op_a_s_t_html"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00131">AST.hpp:131</a></div></div>
-<div class="ttc" id="aclass_const_a_s_t_html"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html">ConstAST</a></div><div class="ttdoc">Узел, представляющий константу</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00087">AST.hpp:87</a></div></div>
-<div class="ttc" id="aclass_for_a_s_t_html"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html">ForAST</a></div><div class="ttdoc">Узел, преставляющий for statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00263">AST.hpp:263</a></div></div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca">IToken::VARDECL</a></div><div class="ttdeci">@ VARDECL</div><div class="ttdoc">Объявление переменной</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00023">Token.hpp:23</a></div></div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2">IToken::SELECT</a></div><div class="ttdeci">@ SELECT</div><div class="ttdoc">Выбор элемента массива</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00022">Token.hpp:22</a></div></div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20">IToken::CONSTDECL</a></div><div class="ttdeci">@ CONSTDECL</div><div class="ttdoc">Объявление константы</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00024">Token.hpp:24</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3">IToken::FOR</a></div><div class="ttdeci">@ FOR</div><div class="ttdoc">for</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00077">Token.hpp:77</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3">IToken::ASSIGN</a></div><div class="ttdeci">@ ASSIGN</div><div class="ttdoc">Присваивание</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00069">Token.hpp:69</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82">IToken::WHILE</a></div><div class="ttdeci">@ WHILE</div><div class="ttdoc">WHILE.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00076">Token.hpp:76</a></div></div>
-<div class="ttc" id="aclass_select_a_s_t_html"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html">SelectAST</a></div><div class="ttdoc">Узел, преставляющий выбор элемента в массиве</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00189">AST.hpp:189</a></div></div>
-<div class="ttc" id="aclass_var_decl_a_s_t_html"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a></div><div class="ttdoc">Узел, представляющий определение переменной</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00053">AST.hpp:53</a></div></div>
-<div class="ttc" id="aclass_while_a_s_t_html"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html">WhileAST</a></div><div class="ttdoc">Узел, преставляющий while statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00238">AST.hpp:238</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00042">42</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">switch</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3">IToken::ASSIGN</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82">IToken::WHILE</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/da0/class_while_a_s_t.html">WhileAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3">IToken::FOR</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d4/d3f/class_for_a_s_t.html">ForAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa">IToken::OPERATOR</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca">IToken::VARDECL</a>:{</div>
+<div class="line"><span class="lineno">   51</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;VARDECL&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2">IToken::SELECT</a>:{</div>
+<div class="line"><span class="lineno">   55</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;SELECT&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d5/df8/class_select_a_s_t.html">SelectAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20">IToken::CONSTDECL</a>:{</div>
+<div class="line"><span class="lineno">   59</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;CONSTDECL&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/d94/class_const_a_s_t.html">ConstAST</a>(token, std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="aclass_assign_a_s_t_html"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html">AssignAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00173">AST.hpp:173</a></div></div>
+<div class="ttc" id="aclass_bin_op_a_s_t_html"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html">BinOpAST</a></div><div class="ttdoc">Узел, содержащий бинарную операцию</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00138">AST.hpp:138</a></div></div>
+<div class="ttc" id="aclass_const_a_s_t_html"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html">ConstAST</a></div><div class="ttdoc">Узел, представляющий константу</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00094">AST.hpp:94</a></div></div>
+<div class="ttc" id="aclass_for_a_s_t_html"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html">ForAST</a></div><div class="ttdoc">Узел, преставляющий for statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00270">AST.hpp:270</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a2147f02d1f87da6c5c33a9797a8a52ca">IToken::VARDECL</a></div><div class="ttdeci">@ VARDECL</div><div class="ttdoc">Объявление переменной</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00031">Token.hpp:31</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a4414d806739cb21c66d1d80dc891b0e2">IToken::SELECT</a></div><div class="ttdeci">@ SELECT</div><div class="ttdoc">Выбор элемента массива</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00030">Token.hpp:30</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a61b0448814ce444ff03afcf5d76b1c20">IToken::CONSTDECL</a></div><div class="ttdeci">@ CONSTDECL</div><div class="ttdoc">Объявление константы</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00032">Token.hpp:32</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa2f69be00261acfa97d9d854b4384f2d3">IToken::FOR</a></div><div class="ttdeci">@ FOR</div><div class="ttdoc">for</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00085">Token.hpp:85</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e07ef48b8ad5f923f585bc084e82c3">IToken::ASSIGN</a></div><div class="ttdeci">@ ASSIGN</div><div class="ttdoc">Присваивание</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00077">Token.hpp:77</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4779da7e84ac858c6a7223d8b758bd82">IToken::WHILE</a></div><div class="ttdeci">@ WHILE</div><div class="ttdoc">WHILE.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00084">Token.hpp:84</a></div></div>
+<div class="ttc" id="aclass_select_a_s_t_html"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html">SelectAST</a></div><div class="ttdoc">Узел, преставляющий выбор элемента в массиве</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00196">AST.hpp:196</a></div></div>
+<div class="ttc" id="aclass_var_decl_a_s_t_html"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html">VarDeclAST</a></div><div class="ttdoc">Узел, представляющий определение переменной</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00060">AST.hpp:60</a></div></div>
+<div class="ttc" id="aclass_while_a_s_t_html"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html">WhileAST</a></div><div class="ttdoc">Узел, преставляющий while statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00245">AST.hpp:245</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a9a1458d02e6d02fffc299cdd365f55d8_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_afebe4c5792bc48de0262b0cbcf3446e0_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ac5c9351b9af644ab1c6bd4b49ac67f04" name="ac5c9351b9af644ab1c6bd4b49ac67f04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5c9351b9af644ab1c6bd4b49ac67f04">&#9670;&nbsp;</a></span>createAST() <span class="overload">[5/9]</span></h2>
+<a id="ade090e5d28202aba1fc311b4f54e31a0" name="ade090e5d28202aba1fc311b4f54e31a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade090e5d28202aba1fc311b4f54e31a0">&#9670;&nbsp;</a></span>createAST() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +422,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -425,19 +430,19 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>second</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>third</em>&#160;</td>
         </tr>
         <tr>
@@ -453,36 +458,36 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00059">59</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                                                                                  {</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">switch</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
-<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf">IToken::IF</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d7/d6b/class_if_a_s_t.html">IfAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097">IToken::TO</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08">IToken::DOWNTO</a> :{</div>
-<div class="line"><span class="lineno">   64</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;down to&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
-<div class="line"><span class="lineno">   66</span>        } </div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   69</span>}</div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097">IToken::TO</a></div><div class="ttdeci">@ TO</div><div class="ttdoc">to</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00083">Token.hpp:83</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf">IToken::IF</a></div><div class="ttdeci">@ IF</div><div class="ttdoc">IF.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00079">Token.hpp:79</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08">IToken::DOWNTO</a></div><div class="ttdeci">@ DOWNTO</div><div class="ttdoc">down to</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00084">Token.hpp:84</a></div></div>
-<div class="ttc" id="aclass_if_a_s_t_html"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html">IfAST</a></div><div class="ttdoc">Узел, преставляющий if statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00225">AST.hpp:225</a></div></div>
-<div class="ttc" id="aclass_iteration_a_s_t_html"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a></div><div class="ttdoc">Узел, представляющий заголовок цикла for.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00250">AST.hpp:250</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00066">66</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                                                                                                      {</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">switch</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>()){</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf">IToken::IF</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d7/d6b/class_if_a_s_t.html">IfAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097">IToken::TO</a> : <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08">IToken::DOWNTO</a> :{</div>
+<div class="line"><span class="lineno">   71</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;down to&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a>(token, std::move(first), std::move(second), std::move(third)));</div>
+<div class="line"><span class="lineno">   73</span>        } </div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa278d8aa0221025bb31524ac95814f097">IToken::TO</a></div><div class="ttdeci">@ TO</div><div class="ttdoc">to</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00091">Token.hpp:91</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa4f199717e06f0b9584810372cb4ab7bf">IToken::IF</a></div><div class="ttdeci">@ IF</div><div class="ttdoc">IF.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00087">Token.hpp:87</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaf13ad1305a20db9573479a976dea5a08">IToken::DOWNTO</a></div><div class="ttdeci">@ DOWNTO</div><div class="ttdoc">down to</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00092">Token.hpp:92</a></div></div>
+<div class="ttc" id="aclass_if_a_s_t_html"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html">IfAST</a></div><div class="ttdoc">Узел, преставляющий if statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00232">AST.hpp:232</a></div></div>
+<div class="ttc" id="aclass_iteration_a_s_t_html"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html">IterationAST</a></div><div class="ttdoc">Узел, представляющий заголовок цикла for.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00257">AST.hpp:257</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ac5c9351b9af644ab1c6bd4b49ac67f04_cgraph.svg" width="332" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ade090e5d28202aba1fc311b4f54e31a0_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a915d69d17996e7ad25a2ef276ef562eb" name="a915d69d17996e7ad25a2ef276ef562eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a915d69d17996e7ad25a2ef276ef562eb">&#9670;&nbsp;</a></span>createAST() <span class="overload">[6/9]</span></h2>
+<a id="af36e63701083c4836e0a4be6920d8a61" name="af36e63701083c4836e0a4be6920d8a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36e63701083c4836e0a4be6920d8a61">&#9670;&nbsp;</a></span>createAST() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,7 +496,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -499,19 +504,19 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>constsDecls</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>varDecls</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>compound</em>&#160;</td>
         </tr>
         <tr>
@@ -527,29 +532,29 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00105">105</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b">IToken::BLOCK</a>){</div>
-<div class="line"><span class="lineno">  108</span>        token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;BLOCK&quot;</span>);</div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/de0/class_block_a_s_t.html">BlockAST</a>(token, std::move(constsDecls), std::move(varDecls), std::move(compound)));</div>
-<div class="line"><span class="lineno">  110</span>    }</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">  112</span>}</div>
-<div class="ttc" id="aclass_block_a_s_t_html"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html">BlockAST</a></div><div class="ttdoc">Узел, отображающий блок (константы, переменные, инструкции)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00040">AST.hpp:40</a></div></div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b">IToken::BLOCK</a></div><div class="ttdeci">@ BLOCK</div><div class="ttdoc">Блок</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00033">Token.hpp:33</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00115">115</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b">IToken::BLOCK</a>){</div>
+<div class="line"><span class="lineno">  118</span>        token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;BLOCK&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../d0/de0/class_block_a_s_t.html">BlockAST</a>(token, std::move(constsDecls), std::move(varDecls), std::move(compound)));</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">  122</span>}</div>
+<div class="ttc" id="aclass_block_a_s_t_html"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html">BlockAST</a></div><div class="ttdoc">Узел, отображающий блок (константы, переменные, инструкции)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00047">AST.hpp:47</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b">IToken::BLOCK</a></div><div class="ttdeci">@ BLOCK</div><div class="ttdoc">Блок</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00041">Token.hpp:41</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a915d69d17996e7ad25a2ef276ef562eb_cgraph.svg" width="332" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_af36e63701083c4836e0a4be6920d8a61_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a09cdbe7b6ad1df67438da4f761d8df32" name="a09cdbe7b6ad1df67438da4f761d8df32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09cdbe7b6ad1df67438da4f761d8df32">&#9670;&nbsp;</a></span>createAST() <span class="overload">[7/9]</span></h2>
+<a id="a82bd14fe265ff634c3c1a4a4e538aa25" name="a82bd14fe265ff634c3c1a4a4e538aa25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82bd14fe265ff634c3c1a4a4e538aa25">&#9670;&nbsp;</a></span>createAST() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +563,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -566,7 +571,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -582,34 +587,36 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00071">71</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                                                         {</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
-<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">case</span> IToken::AdvType::COMPOUND : {</div>
-<div class="line"><span class="lineno">   74</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;COMPOUND&quot;</span>);</div>
-<div class="line"><span class="lineno">   75</span>            std::unique_ptr&lt;CompoundAST&gt; compound(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a>(token));</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : params)</div>
-<div class="line"><span class="lineno">   77</span>                compound-&gt;addChild(std::move(ptr));</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> std::move(compound);</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>    }</div>
-<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dd1/class_call_a_s_t.html">CallAST</a>(token, std::move(params)));</div>
-<div class="line"><span class="lineno">   82</span>}</div>
-<div class="ttc" id="aclass_call_a_s_t_html"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html">CallAST</a></div><div class="ttdoc">Узел, преставляющий вызов функции</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00202">AST.hpp:202</a></div></div>
-<div class="ttc" id="aclass_compound_a_s_t_html"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a></div><div class="ttdoc">Узел, представляющий составной операторор</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00099">AST.hpp:99</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00078">78</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                                                           {</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">switch</span> (token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>()){</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">case</span> IToken::AdvType::COMPOUND : {</div>
+<div class="line"><span class="lineno">   81</span>            token.<a class="code hl_function" href="../../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a">setStr</a>(<span class="stringliteral">&quot;COMPOUND&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            std::unique_ptr&lt;CompoundAST&gt; compound(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a>(token));</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;ptr : params)</div>
+<div class="line"><span class="lineno">   84</span>                compound-&gt;addChild(std::move(ptr));</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> std::move(compound);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">case</span> IToken::AdvType::FUNCTION_NAME : </div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../da/dd1/class_call_a_s_t.html">CallAST</a>(token, std::move(params)));</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+<div class="ttc" id="aclass_call_a_s_t_html"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html">CallAST</a></div><div class="ttdoc">Узел, преставляющий вызов функции</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00209">AST.hpp:209</a></div></div>
+<div class="ttc" id="aclass_compound_a_s_t_html"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html">CompoundAST</a></div><div class="ttdoc">Узел, представляющий составной операторор</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00106">AST.hpp:106</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a09cdbe7b6ad1df67438da4f761d8df32_cgraph.svg" width="355" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a82bd14fe265ff634c3c1a4a4e538aa25_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ac8337d84836a411e97d8933831a9a13d" name="ac8337d84836a411e97d8933831a9a13d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8337d84836a411e97d8933831a9a13d">&#9670;&nbsp;</a></span>createAST() <span class="overload">[8/9]</span></h2>
+<a id="a6d0857481955f8c9626f04848024b129" name="a6d0857481955f8c9626f04848024b129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0857481955f8c9626f04848024b129">&#9670;&nbsp;</a></span>createAST() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +625,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -626,13 +633,13 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>params</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>&#160;</td>
         </tr>
         <tr>
@@ -648,30 +655,30 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00084">84</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                                                                   {</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5">IToken::PROGRAM_NAME</a>){</div>
-<div class="line"><span class="lineno">   86</span>        std::unique_ptr&lt;ProgramAST&gt; programPTR(<span class="keyword">new</span> <a class="code hl_class" href="../../de/db2/class_program_a_s_t.html">ProgramAST</a>(token, std::move(params), std::move(first)));</div>
-<div class="line"><span class="lineno">   87</span>        programPTR-&gt;name.setStr(fmt::format(<span class="stringliteral">&quot;PROGRAM:\n{}&quot;</span>, programPTR-&gt;token.getStr()));</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> programPTR;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   91</span>}</div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5">IToken::PROGRAM_NAME</a></div><div class="ttdeci">@ PROGRAM_NAME</div><div class="ttdoc">Имя программы</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00021">Token.hpp:21</a></div></div>
-<div class="ttc" id="aclass_program_a_s_t_html"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html">ProgramAST</a></div><div class="ttdoc">Узел, отображающий начало программы</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00013">AST.hpp:13</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00093">93</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5">IToken::PROGRAM_NAME</a>){</div>
+<div class="line"><span class="lineno">   95</span>        std::unique_ptr&lt;ProgramAST&gt; programPTR(<span class="keyword">new</span> <a class="code hl_class" href="../../de/db2/class_program_a_s_t.html">ProgramAST</a>(token, std::move(params), std::move(first)));</div>
+<div class="line"><span class="lineno">   96</span>        programPTR-&gt;name.setStr(fmt::format(<span class="stringliteral">&quot;PROGRAM:\n{}&quot;</span>, programPTR-&gt;token.getStr()));</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span> programPTR;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">  100</span>}</div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5">IToken::PROGRAM_NAME</a></div><div class="ttdeci">@ PROGRAM_NAME</div><div class="ttdoc">Имя программы</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00029">Token.hpp:29</a></div></div>
+<div class="ttc" id="aclass_program_a_s_t_html"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html">ProgramAST</a></div><div class="ttdoc">Узел, отображающий начало программы</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00020">AST.hpp:20</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ac8337d84836a411e97d8933831a9a13d_cgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_a6d0857481955f8c9626f04848024b129_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
 </div>
 </div>
-<a id="ab08eca1c1b6fdacaad04f4e4654e0f41" name="ab08eca1c1b6fdacaad04f4e4654e0f41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab08eca1c1b6fdacaad04f4e4654e0f41">&#9670;&nbsp;</a></span>createAST() <span class="overload">[9/9]</span></h2>
+<a id="ae468c8feda27f24ded9c862643c3dd1f" name="ae468c8feda27f24ded9c862643c3dd1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae468c8feda27f24ded9c862643c3dd1f">&#9670;&nbsp;</a></span>createAST() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +687,7 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; ASTFactory::createAST </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createAST </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dc1/class_token.html">Token</a>&#160;</td>
           <td class="paramname"><em>token</em>, </td>
@@ -688,19 +695,19 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>params</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../da/dc8/class_a_s_t.html">AST</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -716,20 +723,85 @@ $(document).ready(function(){initNavTree('d7/d7c/class_a_s_t_factory.html','../.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00093">93</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                                                                                                                                              {</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>)</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d19/class_function_a_s_t.html">FunctionAST</a>(token, std::move(params), std::move(first), std::move(second)));</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;AST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../db/db7/class_no_op_a_s_t.html">NoOpAST</a>(token));</div>
-<div class="line"><span class="lineno">   97</span>}</div>
-<div class="ttc" id="aclass_function_a_s_t_html"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html">FunctionAST</a></div><div class="ttdoc">Узел, представляющий определение функции</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00026">AST.hpp:26</a></div></div>
-<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a></div><div class="ttdeci">@ FUNCTION_NAME</div><div class="ttdoc">Имя функции</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00015">Token.hpp:15</a></div></div>
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00102">102</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                                                                                                                  {</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span>(token.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a>)</div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">return</span> std::unique_ptr&lt;IAST&gt;(<span class="keyword">new</span> <a class="code hl_class" href="../../dc/d19/class_function_a_s_t.html">FunctionAST</a>(token, std::move(params), std::move(first), std::move(second)));</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Попытка создания AST узла из неверного токена и набора аргументов! {}&quot;</span>, token.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>()));</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+<div class="ttc" id="aclass_function_a_s_t_html"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html">FunctionAST</a></div><div class="ttdoc">Узел, представляющий определение функции</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00033">AST.hpp:33</a></div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a21db9a1e6f16fecc6667d01768f0194d">IToken::FUNCTION_NAME</a></div><div class="ttdeci">@ FUNCTION_NAME</div><div class="ttdoc">Имя функции</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00023">Token.hpp:23</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ab08eca1c1b6fdacaad04f4e4654e0f41_cgraph.svg" width="355" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_ae468c8feda27f24ded9c862643c3dd1f_cgraph.svg" width="507" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa4647507a830972309beb5db2d84ce96" name="aa4647507a830972309beb5db2d84ce96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4647507a830972309beb5db2d84ce96">&#9670;&nbsp;</a></span>createCopyOfType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; ASTFactory::createCopyOfType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> *&#160;</td>
+          <td class="paramname"><em>typePtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает "глубокую копию" указателя на тип typePtr. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html">ASTFactory.cpp</a> строка <a class="el" href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00124">124</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                             {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span>(typePtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24">getAdvType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a5902453d8b63f3f80260320a8ddec757">IToken::TYPE_SPEC</a> || typePtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a>){</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span>(typePtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a">getType</a>() == <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab4c2da56095f6e3e4c84789d19d69858">IToken::ARRAY</a>){</div>
+<div class="line"><span class="lineno">  127</span>            <a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a> *rawPtr = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../d8/d88/class_arr_spec_a_s_t.html">ArrSpecAST</a>*<span class="keyword">&gt;</span>(typePtr);</div>
+<div class="line"><span class="lineno">  128</span>            std::unique_ptr&lt;IAST&gt; arrPtr = <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b">createAST</a>(rawPtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>, rawPtr-&gt;<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">lHandTok</a>, rawPtr-&gt;<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">rHandTok</a>, <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96">createCopyOfType</a>(rawPtr-&gt;<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">subType</a>.get()));</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> arrPtr;</div>
+<div class="line"><span class="lineno">  130</span>        } <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b">createAST</a>(typePtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>);</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    } <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Применение createCopyOfType к узлу, не являющемуся типом! &quot;</span> + typePtr-&gt;<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>());</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="line"><span class="lineno">  136</span>}</div>
+<div class="ttc" id="aclass_a_s_t_factory_html_a31d959009ba9e91a58a5c15e986d130b"><div class="ttname"><a href="../../d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b">ASTFactory::createAST</a></div><div class="ttdeci">static std::unique_ptr&lt; IAST &gt; createAST(Token token)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00017">ASTFactory.cpp:17</a></div></div>
+<div class="ttc" id="aclass_a_s_t_factory_html_aa4647507a830972309beb5db2d84ce96"><div class="ttname"><a href="../../d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96">ASTFactory::createCopyOfType</a></div><div class="ttdeci">static std::unique_ptr&lt; IAST &gt; createCopyOfType(IAST *typePtr)</div><div class="ttdoc">Возвращает &quot;глубокую копию&quot; указателя на тип typePtr.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/_a_s_t_factory_8cpp_source.html#l00124">ASTFactory.cpp:124</a></div></div>
+<div class="ttc" id="aclass_arr_spec_a_s_t_html_a0b509ec69f8ebbde4e4908af836930db"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">ArrSpecAST::lHandTok</a></div><div class="ttdeci">Token lHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00088">AST.hpp:88</a></div></div>
+<div class="ttc" id="aclass_arr_spec_a_s_t_html_a12acaf73724b24e94ac8c3b751678db7"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">ArrSpecAST::subType</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; subType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00090">AST.hpp:90</a></div></div>
+<div class="ttc" id="aclass_arr_spec_a_s_t_html_a99a2f241557602ed85177809253da6a3"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">ArrSpecAST::rHandTok</a></div><div class="ttdeci">Token rHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00089">AST.hpp:89</a></div></div>
+<div class="ttc" id="aclass_i_a_s_t_html_a9868d324bdf738ccbbe159625b70c783"><div class="ttname"><a href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">IAST::token</a></div><div class="ttdeci">Token token</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de6/_a_s_tclasses_8hpp_source.html#l00079">ASTclasses.hpp:79</a></div></div>
+</div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_aa4647507a830972309beb5db2d84ce96_cgraph.svg" width="759" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d7c/class_a_s_t_factory_aa4647507a830972309beb5db2d84ce96_icgraph.svg" width="1948" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

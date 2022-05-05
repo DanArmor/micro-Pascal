@@ -27,7 +27,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "ASTclasses.hpp", "d8/de6/_a_s_tclasses_8hpp.html", [
       [ "IVisitor", "df/db7/class_i_visitor.html", "df/db7/class_i_visitor" ],
-      [ "AST", "da/dc8/class_a_s_t.html", "da/dc8/class_a_s_t" ]
+      [ "IAST", "d3/d96/class_i_a_s_t.html", "d3/d96/class_i_a_s_t" ]
     ] ],
     [ "ASTFactory.hpp", "d4/d0d/_a_s_t_factory_8hpp.html", [
       [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ]
@@ -41,7 +41,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "List< T >", "d1/d34/class_list.html", "d1/d34/class_list" ]
     ] ],
     [ "PascalRules.hpp", "db/dfd/_pascal_rules_8hpp.html", "db/dfd/_pascal_rules_8hpp" ],
-    [ "sup.hpp", "db/d0e/sup_8hpp.html", "db/d0e/sup_8hpp" ],
+    [ "supAlgs.hpp", "d3/da8/sup_algs_8hpp.html", "d3/da8/sup_algs_8hpp" ],
     [ "Syntax.hpp", "df/d3f/_syntax_8hpp.html", [
       [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", "d0/dfe/class_syntax_analyzer" ]
     ] ],

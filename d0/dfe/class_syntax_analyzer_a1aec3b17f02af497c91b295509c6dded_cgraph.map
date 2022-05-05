@@ -1,0 +1,16 @@
+<map id="SyntaxAnalyzer::syntaxVariable" name="SyntaxAnalyzer::syntaxVariable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,309,205,336"/>
+<area shape="rect" id="node2" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="253,208,412,235"/>
+<area shape="rect" id="node11" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="265,335,400,361"/>
+<area shape="rect" id="node12" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="471,309,647,336"/>
+<area shape="rect" id="node14" href="$d0/d11/class_i_token.html#a4fa3435db7157ca7316d4e4aee1df4c0" title="Устанавливает дополнительный тип токена" alt="" coords="264,385,401,412"/>
+<area shape="rect" id="node3" href="$d0/d11/class_i_token.html#a3e73305ee0ac36d0bf5f26b649589b24" title=" " alt="" coords="705,208,843,235"/>
+<area shape="rect" id="node4" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="507,107,611,133"/>
+<area shape="rect" id="node6" href="$d0/d11/class_i_token.html#ac7f0a800d7a9e8608bab0360c76d735a" title="Получение типа токена" alt="" coords="717,259,831,285"/>
+<area shape="rect" id="node10" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="509,157,608,184"/>
+<area shape="rect" id="node5" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="725,5,823,32"/>
+<area shape="rect" id="node7" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="732,56,816,83"/>
+<area shape="rect" id="node8" href="$db/dc1/class_token.html#a715f99ebacdd636c283d15dc8656631c" title=" " alt="" coords="731,107,817,133"/>
+<area shape="rect" id="node9" href="$db/dc1/class_token.html#a913f22d91c68c0b0f8c2d593b14deca2" title=" " alt="" coords="713,157,835,184"/>
+<area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="460,360,657,387"/>
+</map>

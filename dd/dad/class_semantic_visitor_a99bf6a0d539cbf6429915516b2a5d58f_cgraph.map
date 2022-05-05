@@ -2,10 +2,10 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,121,149,148"/>
 <area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a87acf26a41a709a3faf17b57ad675c2a" title="Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать" alt="" coords="197,9,368,50"/>
 <area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643" title=" " alt="" coords="199,96,366,123"/>
-<area shape="rect" id="node7" href="$dd/dad/class_semantic_visitor.html#a7e2681f9965e7aa34cd55bc5614310d8" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,147,368,173"/>
+<area shape="rect" id="node7" href="$dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,147,368,173"/>
 <area shape="rect" id="node9" href="$dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8" title="Аналог return для посетителя" alt="" coords="203,197,362,224"/>
-<area shape="rect" id="node3" href="$db/d0e/sup_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="487,5,529,32"/>
+<area shape="rect" id="node3" href="$d3/da8/sup_algs_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="487,5,529,32"/>
 <area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0" title=" " alt="" coords="416,56,600,83"/>
 <area shape="rect" id="node6" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="648,81,747,108"/>
-<area shape="rect" id="node8" href="$da/dc8/class_a_s_t.html#a2be6b7f1a62e69bf7c408a314cd09a87" title=" " alt="" coords="461,157,555,184"/>
+<area shape="rect" id="node8" href="$d3/d96/class_i_a_s_t.html#a86a33b4e7990941edb1817c708243a7c" title=" " alt="" coords="459,157,557,184"/>
 </map>

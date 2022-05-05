@@ -1,6 +1,6 @@
 <map id="IVisitor" name="IVisitor">
 <area shape="rect" id="node1" title="Интерфейс &quot;посетителя&quot;." alt="" coords="167,5,229,32"/>
-<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html" title="Посетителя для построения графического отображения АДС" alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html" title="Посетителя для построения графического отображения ДАС" alt="" coords="5,80,116,107"/>
 <area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html" title="Посетитель&#45;семантический анализатор" alt="" coords="141,80,255,107"/>
-<area shape="rect" id="node4" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по АДС" alt="" coords="280,80,396,107"/>
+<area shape="rect" id="node4" href="$d1/d49/class_type_view_visitor.html" title="Посетителя для вывода сведений о типах в прямом порядке по ДАС" alt="" coords="280,80,396,107"/>
 </map>

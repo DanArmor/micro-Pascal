@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d0/dc3/class_graphviz_visitor.html" target="_top" xlink:title="Посетителя для построения графического отображения АДС">
+<g id="a_node2"><a xlink:href="../../d0/dc3/class_graphviz_visitor.html" target="_top" xlink:title="Посетителя для построения графического отображения ДАС">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 83,-19.5 83,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="41.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GraphvizVisitor</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d1/d49/class_type_view_visitor.html" target="_top" xlink:title="Посетителя для вывода сведений о типах в прямом порядке по АДС">
+<g id="a_node4"><a xlink:href="../../d1/d49/class_type_view_visitor.html" target="_top" xlink:title="Посетителя для вывода сведений о типах в прямом порядке по ДАС">
 <polygon fill="none" stroke="black" points="206,-0.5 206,-19.5 293,-19.5 293,-0.5 206,-0.5"/>
 <text text-anchor="middle" x="249.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TypeViewVisitor</text>
 </a>

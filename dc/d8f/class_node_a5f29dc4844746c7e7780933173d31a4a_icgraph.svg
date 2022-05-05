@@ -125,7 +125,7 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="../../db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" target="_top" xlink:title="Тест семантического анализа Паскаля">
+<g id="a_node10"><a xlink:href="../../d0/d0f/test_lexer__1_8cpp.html#ab32b6906cc4e6cc339e245f6bd671744" target="_top" xlink:title="Тест разбора сложной программы на Pascal.">
 <polygon fill="none" stroke="black" points="108,-0.5 108,-19.5 149,-19.5 149,-0.5 108,-0.5"/>
 <text text-anchor="middle" x="128.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TEST</text>
 </a>
