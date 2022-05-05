@@ -1,12 +1,12 @@
 <map id="ASTFactory::createCopyOfType" name="ASTFactory::createCopyOfType">
-<area shape="rect" id="node1" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1739,31,1943,57"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a51ff8c81c92f9f81aacae95e4c12d00a" title=" " alt="" coords="1492,31,1691,57"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="779,5,981,32"/>
-<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a9a934470c35c197885531feb377ef5bc" title=" " alt="" coords="1264,56,1444,83"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="528,31,731,57"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="289,31,480,57"/>
+<area shape="rect" id="node1" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1751,31,1955,57"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a51ff8c81c92f9f81aacae95e4c12d00a" title=" " alt="" coords="1504,31,1703,57"/>
+<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="791,5,993,32"/>
+<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#a9a934470c35c197885531feb377ef5bc" title=" " alt="" coords="1276,56,1456,83"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="540,31,743,57"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="289,31,492,57"/>
 <area shape="rect" id="node6" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="104,5,241,32"/>
 <area shape="rect" id="node8" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="145,56,200,83"/>
 <area shape="rect" id="node7" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1029,56,1216,83"/>
+<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1041,56,1228,83"/>
 </map>

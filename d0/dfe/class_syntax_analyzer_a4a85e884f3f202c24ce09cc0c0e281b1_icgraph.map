@@ -1,14 +1,14 @@
 <map id="SyntaxAnalyzer::syntaxWhileSt" name="SyntaxAnalyzer::syntaxWhileSt">
-<area shape="rect" id="node1" title=" " alt="" coords="1991,56,2189,83"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a1332b189c9be3ef8969eda9f078a97b3" title=" " alt="" coords="1776,56,1943,83"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#afd2005539c57ee2575cab3c50d061cd9" title=" " alt="" coords="1541,5,1727,32"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a44506791ee9420b418715a9e87908aeb" title=" " alt="" coords="1547,56,1721,83"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a01d109f26cc4d069b40fed83435e3141" title=" " alt="" coords="1540,107,1728,133"/>
-<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a1390f811b111005b207bd039d2623dd4" title=" " alt="" coords="1264,132,1492,159"/>
-<area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1029,132,1216,159"/>
-<area shape="rect" id="node8" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="779,107,981,133"/>
-<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="528,132,731,159"/>
-<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="289,132,480,159"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2003,56,2201,83"/>
+<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a1332b189c9be3ef8969eda9f078a97b3" title=" " alt="" coords="1788,56,1955,83"/>
+<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#afd2005539c57ee2575cab3c50d061cd9" title=" " alt="" coords="1553,5,1739,32"/>
+<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#a44506791ee9420b418715a9e87908aeb" title=" " alt="" coords="1559,56,1733,83"/>
+<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#a01d109f26cc4d069b40fed83435e3141" title=" " alt="" coords="1552,107,1740,133"/>
+<area shape="rect" id="node6" href="$d0/dfe/class_syntax_analyzer.html#a1390f811b111005b207bd039d2623dd4" title=" " alt="" coords="1276,132,1504,159"/>
+<area shape="rect" id="node7" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1041,132,1228,159"/>
+<area shape="rect" id="node8" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="791,107,993,133"/>
+<area shape="rect" id="node9" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="540,132,743,159"/>
+<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="289,132,492,159"/>
 <area shape="rect" id="node11" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="104,107,241,133"/>
 <area shape="rect" id="node13" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="145,157,200,184"/>
 <area shape="rect" id="node12" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,107,56,133"/>

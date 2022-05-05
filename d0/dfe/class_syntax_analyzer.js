@@ -1,13 +1,13 @@
 var class_syntax_analyzer =
 [
     [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html#af6b77f480424fc5b2db7f5ab761709c6", null ],
+    [ "analyzeTokens", "d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc", null ],
     [ "eat", "d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0", null ],
     [ "eatAdv", "d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae", null ],
     [ "getCurTok", "d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374", null ],
     [ "getNextToken", "d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe", null ],
     [ "getTokens", "d0/dfe/class_syntax_analyzer.html#a3c83eaa2320d9f54a54739644ea7dec2", null ],
     [ "lookFoward", "d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa", null ],
-    [ "parseTokens", "d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80", null ],
     [ "syntaxAssignSt", "d0/dfe/class_syntax_analyzer.html#a3e87b8ffb5f24f1db097bfb6aaeb8c2d", null ],
     [ "syntaxBlock", "d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca", null ],
     [ "syntaxCallSt", "d0/dfe/class_syntax_analyzer.html#a21f6ed68cce9f38063319d350afc1239", null ],

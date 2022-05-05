@@ -1,5 +1,7 @@
 <map id="IAST::accept" name="IAST::accept">
-<area shape="rect" id="node1" title=" " alt="" coords="416,5,513,32"/>
-<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,5,368,32"/>
-<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="416,31,513,57"/>
+<area shape="rect" id="node2" href="$dd/de9/test_syntax_8cpp.html#a7a96a8629730ff61586d57fe617bae27" title=" " alt="" coords="235,5,330,32"/>
+<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f" title="Создает копию посетителя, которая посещает ptr и возвращает результат" alt="" coords="197,56,368,83"/>
+<area shape="rect" id="node3" href="$dd/de9/test_syntax_8cpp.html#ac491df98e51a6bba8b808af414b6614f" title="Тест синтаксического анализа Паскаля, простой тест" alt="" coords="50,5,105,32"/>
+<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="5,56,149,83"/>
 </map>

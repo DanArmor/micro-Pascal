@@ -101,9 +101,9 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 Открытые члены</h2></td></tr>
 <tr class="memitem:af6b77f480424fc5b2db7f5ab761709c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html#af6b77f480424fc5b2db7f5ab761709c6">SyntaxAnalyzer</a> (<a class="el" href="../../d1/d34/class_list.html">List</a>&lt; <a class="el" href="../../db/dc1/class_token.html">Token</a> &gt; const &amp;tokens)</td></tr>
 <tr class="separator:af6b77f480424fc5b2db7f5ab761709c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab735ce0145b85a156c674adc42b5df80"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80">parseTokens</a> (void)</td></tr>
-<tr class="memdesc:ab735ce0145b85a156c674adc42b5df80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Синтаксический анализ токенов, переданных анализатору.  <a href="../../d0/dfe/class_syntax_analyzer.html#ab735ce0145b85a156c674adc42b5df80">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab735ce0145b85a156c674adc42b5df80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbd9bc0fe0dae8cd2ddb4fbafea0fcc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc">analyzeTokens</a> (void)</td></tr>
+<tr class="memdesc:addbd9bc0fe0dae8cd2ddb4fbafea0fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Синтаксический анализ токенов, переданных анализатору.  <a href="../../d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc">Подробнее...</a><br /></td></tr>
+<tr class="separator:addbd9bc0fe0dae8cd2ddb4fbafea0fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada547456d19f4a7490f57f7dc9bfed94"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94">syntaxProgram</a> (void)</td></tr>
 <tr class="separator:ada547456d19f4a7490f57f7dc9bfed94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dc8338b4fc879f36e63f27fe3ce7041"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041">syntaxFuncDef</a> (void)</td></tr>
@@ -205,6 +205,56 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
+<a id="addbd9bc0fe0dae8cd2ddb4fbafea0fcc" name="addbd9bc0fe0dae8cd2ddb4fbafea0fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbd9bc0fe0dae8cd2ddb4fbafea0fcc">&#9670;&nbsp;</a></span>analyzeTokens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; SyntaxAnalyzer::analyzeTokens </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Синтаксический анализ токенов, переданных анализатору. </p>
+<p >Обратите внимание, что синт. анализатор изменяет дополнительные типы некоторых токенов внутри собственного списка в процессе анализа <br  />
+ </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d1/daa/_syntax_8cpp_source.html">Syntax.cpp</a> строка <a class="el" href="../../d1/daa/_syntax_8cpp_source.html#l00011">11</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                     {</div>
+<div class="line"><span class="lineno">   12</span>    std::unique_ptr&lt;IAST&gt; root = std::move(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94">syntaxProgram</a>());</div>
+<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>().getType() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">IToken::ENDOFSTREAM</a>)</div>
+<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d7/d27/class_syntax_exception.html">SyntaxException</a>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>(), <span class="stringliteral">&quot;Анализ программы завершился до встречи специального символа &lt;конца потока токенов&gt;!&quot;</span>);</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> root;</div>
+<div class="line"><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">IToken::ENDOFSTREAM</a></div><div class="ttdeci">@ ENDOFSTREAM</div><div class="ttdoc">Конец потока токенов (конец файла)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00039">Token.hpp:39</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html_a3ae6c7319e61cd669c417f189b098374"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">SyntaxAnalyzer::getCurTok</a></div><div class="ttdeci">Token &amp; getCurTok(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00461">Syntax.cpp:461</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html_ada547456d19f4a7490f57f7dc9bfed94"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94">SyntaxAnalyzer::syntaxProgram</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxProgram(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00018">Syntax.cpp:18</a></div></div>
+<div class="ttc" id="aclass_syntax_exception_html"><div class="ttname"><a href="../../d7/d27/class_syntax_exception.html">SyntaxException</a></div><div class="ttdoc">Синтаксическое исключение</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00039">SyntExp.hpp:39</a></div></div>
+</div><!-- fragment --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_addbd9bc0fe0dae8cd2ddb4fbafea0fcc_cgraph.svg" width="4543" height="4202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_addbd9bc0fe0dae8cd2ddb4fbafea0fcc_icgraph.svg" width="498" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="ae1d3434e5cc4b4bcd5a3a245814a44f0" name="ae1d3434e5cc4b4bcd5a3a245814a44f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1d3434e5cc4b4bcd5a3a245814a44f0">&#9670;&nbsp;</a></span>eat()</h2>
 
@@ -231,23 +281,21 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="line"><span class="lineno">  475</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d7/d27/class_syntax_exception.html">SyntaxException</a>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>(), fmt::format(<span class="stringliteral">&quot;Ошибка при обработке синтаксиса! Ожидался тип {}! Встречен &quot;</span>, magic_enum::enum_name(type)));</div>
 <div class="line"><span class="lineno">  476</span>    }</div>
 <div class="line"><span class="lineno">  477</span>}</div>
-<div class="ttc" id="aclass_syntax_analyzer_html_a3ae6c7319e61cd669c417f189b098374"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">SyntaxAnalyzer::getCurTok</a></div><div class="ttdeci">Token &amp; getCurTok(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00461">Syntax.cpp:461</a></div></div>
 <div class="ttc" id="aclass_syntax_analyzer_html_a9e41370d8d74fbd2e77648d2071e7dfe"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe">SyntaxAnalyzer::getNextToken</a></div><div class="ttdeci">void getNextToken(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00457">Syntax.cpp:457</a></div></div>
-<div class="ttc" id="aclass_syntax_exception_html"><div class="ttname"><a href="../../d7/d27/class_syntax_exception.html">SyntaxException</a></div><div class="ttdoc">Синтаксическое исключение</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00039">SyntExp.hpp:39</a></div></div>
-</div><!-- fragment --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ae1d3434e5cc4b4bcd5a3a245814a44f0_cgraph.svg" width="391" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ae1d3434e5cc4b4bcd5a3a245814a44f0_icgraph.svg" width="4340" height="1404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ae1d3434e5cc4b4bcd5a3a245814a44f0_icgraph.svg" width="4352" height="1404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -279,20 +327,20 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="line"><span class="lineno">  483</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d7/d27/class_syntax_exception.html">SyntaxException</a>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>(), fmt::format(<span class="stringliteral">&quot;Ошибка при обработке синтаксиса! Ожидался тип {}! Встречен &quot;</span>, magic_enum::enum_name(type)));</div>
 <div class="line"><span class="lineno">  484</span>    }</div>
 <div class="line"><span class="lineno">  485</span>}</div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9952c4a2db0a1382b9c94f40dd535fae_cgraph.svg" width="414" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9952c4a2db0a1382b9c94f40dd535fae_icgraph.svg" width="4182" height="447"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9952c4a2db0a1382b9c94f40dd535fae_icgraph.svg" width="4194" height="447"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -318,12 +366,12 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="fragment"><div class="line"><span class="lineno">  461</span>                                    {</div>
 <div class="line"><span class="lineno">  462</span>    <span class="keywordflow">return</span> tokens[currentIndex];</div>
 <div class="line"><span class="lineno">  463</span>}</div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3ae6c7319e61cd669c417f189b098374_icgraph.svg" width="4587" height="2355"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3ae6c7319e61cd669c417f189b098374_icgraph.svg" width="4599" height="2352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -349,12 +397,12 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="fragment"><div class="line"><span class="lineno">  457</span>                                     {</div>
 <div class="line"><span class="lineno">  458</span>    currentIndex++;</div>
 <div class="line"><span class="lineno">  459</span>}</div>
-</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9e41370d8d74fbd2e77648d2071e7dfe_icgraph.svg" width="4608" height="1416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9e41370d8d74fbd2e77648d2071e7dfe_icgraph.svg" width="4620" height="1416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -382,11 +430,11 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="fragment"><div class="line"><span class="lineno">  487</span>                                         {</div>
 <div class="line"><span class="lineno">  488</span>    <span class="keywordflow">return</span> tokens;</div>
 <div class="line"><span class="lineno">  489</span>}</div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3c83eaa2320d9f54a54739644ea7dec2_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -416,60 +464,12 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div class="line"><span class="lineno">  468</span>    <span class="keywordflow">return</span> tokens[currentIndex + 1];</div>
 <div class="line"><span class="lineno">  469</span>}</div>
 <div class="ttc" id="aclass_list_html_a49c179636e084dfbf7a52acd46acaf01"><div class="ttname"><a href="../../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01">List::size</a></div><div class="ttdeci">std::size_t size(void) noexcept</div></div>
-</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_af0905389742c4f842207bb2c073afbfa_cgraph.svg" width="315" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_af0905389742c4f842207bb2c073afbfa_icgraph.svg" width="4163" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="ab735ce0145b85a156c674adc42b5df80" name="ab735ce0145b85a156c674adc42b5df80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab735ce0145b85a156c674adc42b5df80">&#9670;&nbsp;</a></span>parseTokens()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d3/d96/class_i_a_s_t.html">IAST</a> &gt; SyntaxAnalyzer::parseTokens </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Синтаксический анализ токенов, переданных анализатору. </p>
-<p >Обратите внимание, что синт. анализатор изменяет дополнительные типы некоторых токенов внутри собственного списка в процессе анализа <br  />
- </p>
-
-<p class="definition">См. определение в файле <a class="el" href="../../d1/daa/_syntax_8cpp_source.html">Syntax.cpp</a> строка <a class="el" href="../../d1/daa/_syntax_8cpp_source.html#l00011">11</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                   {</div>
-<div class="line"><span class="lineno">   12</span>    std::unique_ptr&lt;IAST&gt; root = std::move(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94">syntaxProgram</a>());</div>
-<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>().getType() != <a class="code hl_enumvalue" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">IToken::ENDOFSTREAM</a>)</div>
-<div class="line"><span class="lineno">   14</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="../../d7/d27/class_syntax_exception.html">SyntaxException</a>(<a class="code hl_function" href="../../d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374">getCurTok</a>(), <span class="stringliteral">&quot;Анализ программы завершился до встречи специального символа &lt;конца потока токенов&gt;!&quot;</span>);</div>
-<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">return</span> root;</div>
-<div class="line"><span class="lineno">   16</span>}</div>
-<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5a6b296b0038616034d31c6d7ab03599">IToken::ENDOFSTREAM</a></div><div class="ttdeci">@ ENDOFSTREAM</div><div class="ttdoc">Конец потока токенов (конец файла)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00039">Token.hpp:39</a></div></div>
-<div class="ttc" id="aclass_syntax_analyzer_html_ada547456d19f4a7490f57f7dc9bfed94"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94">SyntaxAnalyzer::syntaxProgram</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxProgram(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daa/_syntax_8cpp_source.html#l00018">Syntax.cpp:18</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ab735ce0145b85a156c674adc42b5df80_cgraph.svg" width="4531" height="4202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_af0905389742c4f842207bb2c073afbfa_cgraph.svg" width="315" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -477,7 +477,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ab735ce0145b85a156c674adc42b5df80_icgraph.svg" width="486" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_af0905389742c4f842207bb2c073afbfa_icgraph.svg" width="4175" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -535,7 +535,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3e87b8ffb5f24f1db097bfb6aaeb8c2d_icgraph.svg" width="2667" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3e87b8ffb5f24f1db097bfb6aaeb8c2d_icgraph.svg" width="2679" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -583,7 +583,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a500e4e0cd0605ebbee4ab452948fa2ca_icgraph.svg" width="1222" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a500e4e0cd0605ebbee4ab452948fa2ca_icgraph.svg" width="1234" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -645,7 +645,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a21f6ed68cce9f38063319d350afc1239_icgraph.svg" width="4168" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a21f6ed68cce9f38063319d350afc1239_icgraph.svg" width="4180" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -694,7 +694,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1390f811b111005b207bd039d2623dd4_icgraph.svg" width="1498" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1390f811b111005b207bd039d2623dd4_icgraph.svg" width="1510" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -747,7 +747,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-20-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ad43214817dbe71119316f653b4cbbefb_icgraph.svg" width="1726" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ad43214817dbe71119316f653b4cbbefb_icgraph.svg" width="1738" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -798,7 +798,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-22-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a177c60c88c15c37d6f5cf0c41a35190b_icgraph.svg" width="1464" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a177c60c88c15c37d6f5cf0c41a35190b_icgraph.svg" width="1476" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -839,7 +839,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-24-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-24-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ac33091b7dd671e839b031a26058096bd_icgraph.svg" width="2210" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ac33091b7dd671e839b031a26058096bd_icgraph.svg" width="2222" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -898,7 +898,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-26-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-26-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3c3f51ab7cdb341ac4fa460e352150ae_icgraph.svg" width="3248" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a3c3f51ab7cdb341ac4fa460e352150ae_icgraph.svg" width="3260" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -982,7 +982,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-28-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-28-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a0d5fca8c5ec85c61bcf65df3693ce384_icgraph.svg" width="3932" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a0d5fca8c5ec85c61bcf65df3693ce384_icgraph.svg" width="3944" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1031,7 +1031,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-30-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-30-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_afd2005539c57ee2575cab3c50d061cd9_icgraph.svg" width="2192" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_afd2005539c57ee2575cab3c50d061cd9_icgraph.svg" width="2204" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1109,7 +1109,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-32-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-32-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a4dc8338b4fc879f36e63f27fe3ce7041_icgraph.svg" width="987" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a4dc8338b4fc879f36e63f27fe3ce7041_icgraph.svg" width="999" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1164,7 +1164,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-34-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-34-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a44506791ee9420b418715a9e87908aeb_icgraph.svg" width="2182" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a44506791ee9420b418715a9e87908aeb_icgraph.svg" width="2194" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1237,7 +1237,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-36-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-36-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_acef4b19447f253a6e25d762733ca8ede_icgraph.svg" width="2412" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_acef4b19447f253a6e25d762733ca8ede_icgraph.svg" width="2424" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1296,7 +1296,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-38-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-38-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ada547456d19f4a7490f57f7dc9bfed94_icgraph.svg" width="736" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_ada547456d19f4a7490f57f7dc9bfed94_icgraph.svg" width="748" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1339,7 +1339,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-40-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-40-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a24dfeabcc9335e5f3f040f7cf0c64fd9_icgraph.svg" width="2211" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a24dfeabcc9335e5f3f040f7cf0c64fd9_icgraph.svg" width="2223" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1394,7 +1394,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-42-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-42-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_aee174af1cc97011051b2a8a87d2a5e7d_icgraph.svg" width="3922" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_aee174af1cc97011051b2a8a87d2a5e7d_icgraph.svg" width="3934" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1445,7 +1445,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-44-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-44-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a65d458f8a460cd5153c013f9dc2b6d90_icgraph.svg" width="3479" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a65d458f8a460cd5153c013f9dc2b6d90_icgraph.svg" width="3491" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1515,7 +1515,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-46-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-46-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1332b189c9be3ef8969eda9f078a97b3_icgraph.svg" width="1959" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1332b189c9be3ef8969eda9f078a97b3_icgraph.svg" width="1971" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1567,7 +1567,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-48-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-48-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a01d109f26cc4d069b40fed83435e3141_icgraph.svg" width="1734" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a01d109f26cc4d069b40fed83435e3141_icgraph.svg" width="1746" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1620,7 +1620,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-50-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-50-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1f83850370eb120ec67a6cc19ce99e2e_icgraph.svg" width="3694" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1f83850370eb120ec67a6cc19ce99e2e_icgraph.svg" width="3706" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1681,7 +1681,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-52-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-52-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a5ef8e691db1611dd73eff73f011b7780_icgraph.svg" width="1955" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a5ef8e691db1611dd73eff73f011b7780_icgraph.svg" width="1967" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1744,7 +1744,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-54-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-54-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a51ff8c81c92f9f81aacae95e4c12d00a_icgraph.svg" width="1696" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a51ff8c81c92f9f81aacae95e4c12d00a_icgraph.svg" width="1708" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1787,7 +1787,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-56-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-56-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1aec3b17f02af497c91b295509c6dded_icgraph.svg" width="4180" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a1aec3b17f02af497c91b295509c6dded_icgraph.svg" width="4192" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1838,7 +1838,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-58-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-58-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9a934470c35c197885531feb377ef5bc_icgraph.svg" width="1450" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a9a934470c35c197885531feb377ef5bc_icgraph.svg" width="1462" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1883,7 +1883,7 @@ $(document).ready(function(){initNavTree('d0/dfe/class_syntax_analyzer.html','..
 <div id="dynsection-60-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-60-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a4a85e884f3f202c24ce09cc0c0e281b1_icgraph.svg" width="2195" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/dfe/class_syntax_analyzer_a4a85e884f3f202c24ce09cc0c0e281b1_icgraph.svg" width="2207" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

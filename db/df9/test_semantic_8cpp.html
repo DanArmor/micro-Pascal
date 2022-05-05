@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   17</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM1.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   18</span> </div>
 <div class="line"><span class="lineno">   19</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   20</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   20</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   21</span> </div>
 <div class="line"><span class="lineno">   22</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   23</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>);</div>
@@ -257,7 +257,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   30</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM2.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   31</span> </div>
 <div class="line"><span class="lineno">   32</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   33</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   33</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   34</span> </div>
 <div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   36</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>);</div>
@@ -308,7 +308,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   43</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM3.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   44</span> </div>
 <div class="line"><span class="lineno">   45</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   46</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   46</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   47</span> </div>
 <div class="line"><span class="lineno">   48</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   49</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../da/da3/class_type_exception.html">TypeException</a>);</div>
@@ -359,7 +359,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   56</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM4.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   57</span> </div>
 <div class="line"><span class="lineno">   58</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   59</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   59</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   60</span> </div>
 <div class="line"><span class="lineno">   61</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   62</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>);</div>
@@ -411,7 +411,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   69</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM5.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   70</span> </div>
 <div class="line"><span class="lineno">   71</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   72</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   72</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   73</span> </div>
 <div class="line"><span class="lineno">   74</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   75</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>);</div>
@@ -462,7 +462,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   82</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM6.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   85</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   85</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   86</span> </div>
 <div class="line"><span class="lineno">   87</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">   88</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>);</div>
@@ -513,7 +513,7 @@ $(document).ready(function(){initNavTree('db/df9/test_semantic_8cpp.html','../..
 <div class="line"><span class="lineno">   95</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = lexer.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(<span class="stringliteral">&quot;./build/tests/textM7.txt&quot;</span>);</div>
 <div class="line"><span class="lineno">   96</span> </div>
 <div class="line"><span class="lineno">   97</span>    <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> syntax(tokens);</div>
-<div class="line"><span class="lineno">   98</span>    std::unique_ptr&lt;IAST&gt; root(syntax.parseTokens());</div>
+<div class="line"><span class="lineno">   98</span>    std::unique_ptr&lt;IAST&gt; root(syntax.analyzeTokens());</div>
 <div class="line"><span class="lineno">   99</span> </div>
 <div class="line"><span class="lineno">  100</span>    <a class="code hl_class" href="../../dd/dad/class_semantic_visitor.html">SemanticVisitor</a> semantic;</div>
 <div class="line"><span class="lineno">  101</span>    EXPECT_THROW(root-&gt;accept(semantic), <a class="code hl_class" href="../../d6/d2c/class_semantic_exception.html">SemanticException</a>);</div>

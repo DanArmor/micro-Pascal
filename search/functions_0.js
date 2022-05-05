@@ -10,6 +10,7 @@ var searchData=
   ['analyzeexception_7',['AnalyzeException',['../df/d7c/class_analyze_exception.html#aa4e8534e7478ad3fed1904b669a17363',1,'AnalyzeException']]],
   ['analyzefile_8',['analyzeFile',['../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39',1,'Lexer::analyzeFile()'],['../d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8',1,'Analyze::analyzeFile()']]],
   ['analyzeprogramtext_9',['analyzeProgramText',['../da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1',1,'Lexer']]],
-  ['arrspecast_10',['ArrSpecAST',['../d8/d88/class_arr_spec_a_s_t.html#a1ca4ad04e3ae11b9425b252f211fb746',1,'ArrSpecAST']]],
-  ['assignast_11',['AssignAST',['../d7/db1/class_assign_a_s_t.html#a44c08f2dc236c677c2a7c98bfe9e2de2',1,'AssignAST']]]
+  ['analyzetokens_10',['analyzeTokens',['../d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc',1,'SyntaxAnalyzer']]],
+  ['arrspecast_11',['ArrSpecAST',['../d8/d88/class_arr_spec_a_s_t.html#a1ca4ad04e3ae11b9425b252f211fb746',1,'ArrSpecAST']]],
+  ['assignast_12',['AssignAST',['../d7/db1/class_assign_a_s_t.html#a44c08f2dc236c677c2a7c98bfe9e2de2',1,'AssignAST']]]
 ];
