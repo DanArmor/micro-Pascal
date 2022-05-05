@@ -19,24 +19,12 @@ class Lexer{
     public:
 
     /**
-     * @brief Добавляет в шаблоны для определения токена новый шаблон
-     * @param regStr regex-строка для определения токена 
-     * @param type тип токена
-     */
-    void addTokenTemp(std::string const &regStr, IToken::Type const type, IToken::AdvType const advType);
-
-    /**
-     * @brief Добавляет в шаблоны для определения токена новый шаблон
-     * @param tokenTemp шаблон токена
-     */
-    void addTokenTemp(TokenTemplate const &tokenTemp);
-
-    /**
      * @brief Устанавливает шаблоны токенов для разбора лексером
      * @param templates список шаблонов
      */
     void setTemplates(List<TokenTemplate> const &templates);
 
+    /// @brief Возвращает строку, у которой убраны пустые символы в начале и конце
     std::string getTrimmed(std::string const &str);
 
     std::string getText(void);

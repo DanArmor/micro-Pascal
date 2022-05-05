@@ -10,23 +10,6 @@
 
 #include "SyntExp.hpp"
 
-/**
- * @brief Добавляет в шаблоны для определения токена новый шаблон
- * @param regStr regex-строка для определения токена 
- * @param type тип токена
- */
-void Lexer::addTokenTemp(std::string const &regStr, IToken::Type const type, IToken::AdvType const advType){
-    tokenTemplates.pushBack(TokenTemplate(regStr, type, advType));
-}
-
-/**
- * @brief Добавляет в шаблоны для определения токена новый шаблон
- * @param tokenTemp шаблон токена
- */
-void Lexer::addTokenTemp(TokenTemplate const &tokenTemp){
-    tokenTemplates.pushBack(tokenTemp);
-}
-
 void Lexer::setTemplates(List<TokenTemplate> const &templates){
     tokenTemplates = templates;
 }
