@@ -1,6 +1,7 @@
 <map id="SyntaxAnalyzer::analyzeTokens" name="SyntaxAnalyzer::analyzeTokens">
-<area shape="rect" id="node1" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="289,31,492,57"/>
-<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="104,5,241,32"/>
-<area shape="rect" id="node4" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="145,56,200,83"/>
-<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="376,56,579,83"/>
+<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="191,31,328,57"/>
+<area shape="rect" id="node5" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="232,81,287,108"/>
+<area shape="rect" id="node3" href="$d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f" title="Анализ файла inName и вывод в &quot;output.svg&quot; .dot описания ДАС. Так же выводит в стандартный поток выво..." alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node4" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="49,56,99,83"/>
 </map>

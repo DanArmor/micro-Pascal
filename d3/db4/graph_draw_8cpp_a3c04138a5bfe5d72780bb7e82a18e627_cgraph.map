@@ -1,13 +1,13 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,420,56,447"/>
-<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="104,420,241,447"/>
+<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="104,420,241,447"/>
 <area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="1090,124,1214,151"/>
 <area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="298,496,501,523"/>
 <area shape="rect" id="node40" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="289,277,509,304"/>
 <area shape="rect" id="node41" href="$d1/d0c/namespace_pascal_rules.html#a5b3c3dcb5bb75fd385bd175120039ea2" title=" " alt="" coords="315,329,483,370"/>
 <area shape="rect" id="node42" href="$da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30" title=" " alt="" coords="348,395,451,421"/>
 <area shape="rect" id="node43" href="$d0/dfe/class_syntax_analyzer.html#a3c83eaa2320d9f54a54739644ea7dec2" title="Возвращает список токенов анализатора" alt="" coords="311,445,488,472"/>
-<area shape="rect" id="node44" href="$d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" title=" " alt="" coords="339,547,460,573"/>
+<area shape="rect" id="node44" href="$d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" title="Выводит в стандартный поток вывода подсвеченный текст программы" alt="" coords="339,547,460,573"/>
 <area shape="rect" id="node46" href="$dd/dad/class_semantic_visitor.html#a0e9d513580e7fe89bede454b5a1bc89c" title="Добавление стандартных функций" alt="" coords="317,194,482,235"/>
 <area shape="rect" id="node48" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="330,597,469,624"/>
 <area shape="rect" id="node49" href="$d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9" title=" " alt="" coords="327,756,471,783"/>

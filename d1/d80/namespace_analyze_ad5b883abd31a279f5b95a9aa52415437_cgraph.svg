@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по...">
 <polygon fill="#bfbfbf" stroke="black" points="0,-919.5 0,-938.5 103,-938.5 103,-919.5 0,-919.5"/>
 <text text-anchor="middle" x="51.5" y="-926.5" font-family="Helvetica,sans-Serif" font-size="10.00">Analyze::analyzeFile</text>
 </a>
@@ -111,7 +111,7 @@
 <!-- Node58 -->
 <g id="node45" class="node">
 <title>Node58</title>
-<g id="a_node45"><a xlink:href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" target="_top" xlink:title="Выводит в стандартный поток вывода подсвеченный текст программы">
 <polygon fill="none" stroke="black" points="558.5,-103.5 558.5,-122.5 649.5,-122.5 649.5,-103.5 558.5,-103.5"/>
 <text text-anchor="middle" x="604" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">Analyze::highlight</text>
 </a>

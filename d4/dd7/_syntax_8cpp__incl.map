@@ -2,12 +2,12 @@
 <area shape="rect" id="node1" title=" " alt="" coords="421,5,528,32"/>
 <area shape="rect" id="node2" href="$df/d3f/_syntax_8hpp.html" title="Синтаксический анализатор" alt="" coords="432,80,517,107"/>
 <area shape="rect" id="node15" title=" " alt="" coords="738,80,830,107"/>
-<area shape="rect" id="node16" href="$d4/d0d/_a_s_t_factory_8hpp.html" title=" " alt="" coords="599,80,713,107"/>
+<area shape="rect" id="node16" href="$d4/d0d/_a_s_t_factory_8hpp.html" title="Простая Фабрика для AST&#45;узлов" alt="" coords="599,80,713,107"/>
 <area shape="rect" id="node17" href="$da/dbf/_synt_exp_8hpp.html" title="Исключения анализатора" alt="" coords="344,155,437,181"/>
 <area shape="rect" id="node18" href="$d3/da8/sup_algs_8hpp.html" title="Вспомогательные функции" alt="" coords="199,80,292,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,229,64,256"/>
 <area shape="rect" id="node4" title=" " alt="" coords="512,155,632,181"/>
-<area shape="rect" id="node5" href="$dc/d72/_list_8hpp.html" title=" " alt="" coords="251,155,319,181"/>
+<area shape="rect" id="node5" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="251,155,319,181"/>
 <area shape="rect" id="node11" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="628,229,711,256"/>
 <area shape="rect" id="node14" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="656,155,773,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="209,229,274,256"/>

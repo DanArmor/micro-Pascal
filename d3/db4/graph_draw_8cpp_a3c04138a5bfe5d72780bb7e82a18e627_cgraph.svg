@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" target="_top" xlink:title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по...">
 <polygon fill="none" stroke="black" points="74,-985.99 74,-1004.99 177,-1004.99 177,-985.99 74,-985.99"/>
 <text text-anchor="middle" x="125.5" y="-992.99" font-family="Helvetica,sans-Serif" font-size="10.00">Analyze::analyzeFile</text>
 </a>
@@ -126,7 +126,7 @@
 <!-- Node59 -->
 <g id="node44" class="node">
 <title>Node59</title>
-<g id="a_node44"><a xlink:href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc" target="_top" xlink:title="Выводит в стандартный поток вывода подсвеченный текст программы">
 <polygon fill="none" stroke="black" points="250,-890.99 250,-909.99 341,-909.99 341,-890.99 250,-890.99"/>
 <text text-anchor="middle" x="295.5" y="-897.99" font-family="Helvetica,sans-Serif" font-size="10.00">Analyze::highlight</text>
 </a>

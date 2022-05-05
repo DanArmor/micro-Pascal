@@ -50,7 +50,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../d4/d0d/_a_s_t_factory_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="../../d4/d0d/_a_s_t_factory_8hpp.html" target="_top" xlink:title="Простая Фабрика для AST&#45;узлов">
 <polygon fill="none" stroke="black" points="445,-168.5 445,-187.5 531,-187.5 531,-168.5 445,-168.5"/>
 <text text-anchor="middle" x="488" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">ASTFactory.hpp</text>
 </a>
@@ -125,7 +125,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title="Двусвязный список &#45; интерфейс">
 <polygon fill="none" stroke="black" points="184.5,-112.5 184.5,-131.5 235.5,-131.5 235.5,-112.5 184.5,-112.5"/>
 <text text-anchor="middle" x="210" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">List.hpp</text>
 </a>

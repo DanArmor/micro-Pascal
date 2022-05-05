@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Простая Фабрика для AST&#45;узлов">
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="black" points="78.98,-224.5 78.98,-243.5 181.98,-243.5 181.98,-224.5 78.98,-224.5"/>
 <text text-anchor="middle" x="130.48" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/ASTFactory.cpp</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d4/d0d/_a_s_t_factory_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="../../d4/d0d/_a_s_t_factory_8hpp.html" target="_top" xlink:title="Простая Фабрика для AST&#45;узлов">
 <polygon fill="none" stroke="black" points="16.48,-168.5 16.48,-187.5 102.48,-187.5 102.48,-168.5 16.48,-168.5"/>
 <text text-anchor="middle" x="59.48" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">ASTFactory.hpp</text>
 </a>

@@ -95,21 +95,14 @@ $(document).ready(function(){initNavTree('d0/d7c/_analyze_8hpp.html','../../'); 
 <p>Функции анализа кода на языке Pascal.  
 <a href="#details">Подробнее...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../dc/d72/_list_8hpp_source.html">List.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d5/d24/_lexer_8hpp_source.html">Lexer.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../df/d3f/_syntax_8hpp_source.html">Syntax.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../d4/dcb/_a_s_t_8hpp_source.html">AST.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../db/dfd/_pascal_rules_8hpp_source.html">PascalRules.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../de/d32/_token_8hpp_source.html">Token.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф включаемых заголовочных файлов для Analyze.hpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/df5/_analyze_8hpp__incl.svg" width="1451" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/df5/_analyze_8hpp__incl.svg" width="716" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -117,7 +110,7 @@ $(document).ready(function(){initNavTree('d0/d7c/_analyze_8hpp.html','../../'); 
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d6f/_analyze_8hpp__dep__incl.svg" width="219" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d6f/_analyze_8hpp__dep__incl.svg" width="356" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -132,9 +125,14 @@ $(document).ready(function(){initNavTree('d0/d7c/_analyze_8hpp.html','../../'); 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:ab739189a39f22c6db3dc1c1faffb5ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc">Analyze::highlight</a> (std::string text, <a class="el" href="../../d1/d34/class_list.html">List</a>&lt; <a class="el" href="../../db/dc1/class_token.html">Token</a> &gt; tokens)</td></tr>
+<tr class="memdesc:ab739189a39f22c6db3dc1c1faffb5ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит в стандартный поток вывода подсвеченный текст программы  <a href="../../d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab739189a39f22c6db3dc1c1faffb5ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1597f9f086c3276d0287917efbed14b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8">Analyze::analyzeFile</a> (std::string name)</td></tr>
-<tr class="separator:a1597f9f086c3276d0287917efbed14b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b883abd31a279f5b95a9aa52415437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437">Analyze::analyzeFile</a> (std::string inName, std::string outName)</td></tr>
+<tr class="memdesc:ad5b883abd31a279f5b95a9aa52415437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода подсвеченный текст программы  <a href="../../d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5b883abd31a279f5b95a9aa52415437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af385d2d3d600a7392cb177a3171f193f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f">Analyze::analyzeFile</a> (std::string inName)</td></tr>
+<tr class="memdesc:af385d2d3d600a7392cb177a3171f193f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Анализ файла inName и вывод в "output.svg" .dot описания ДАС. Так же выводит в стандартный поток вывода подсвеченный текст программы  <a href="../../d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f">Подробнее...</a><br /></td></tr>
+<tr class="separator:af385d2d3d600a7392cb177a3171f193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Функции анализа кода на языке Pascal. </p>

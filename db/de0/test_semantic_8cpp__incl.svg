@@ -65,7 +65,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title="Двусвязный список &#45; интерфейс">
 <polygon fill="none" stroke="black" points="488.5,-168.5 488.5,-187.5 539.5,-187.5 539.5,-168.5 488.5,-168.5"/>
 <text text-anchor="middle" x="514" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">List.hpp</text>
 </a>

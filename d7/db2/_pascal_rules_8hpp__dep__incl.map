@@ -1,9 +1,7 @@
 <map id="include/PascalRules.hpp" name="include/PascalRules.hpp">
-<area shape="rect" id="node1" title="Правила языка Паскаль" alt="" coords="297,5,461,32"/>
-<area shape="rect" id="node2" href="$d0/d7c/_analyze_8hpp.html" title="Функции анализа кода на языке Pascal." alt="" coords="49,87,185,114"/>
-<area shape="rect" id="node5" href="$d0/d0f/test_lexer__1_8cpp.html" title="Тесты для лексера" alt="" coords="209,80,349,121"/>
-<area shape="rect" id="node6" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="374,87,587,114"/>
-<area shape="rect" id="node7" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="611,87,793,114"/>
-<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html" title=" " alt="" coords="5,169,113,196"/>
-<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="138,169,213,196"/>
+<area shape="rect" id="node1" title="Правила языка Паскаль" alt="" coords="231,5,395,32"/>
+<area shape="rect" id="node2" href="$d3/d0a/_analyze_8cpp.html" title="Функции анализа кода на языке Pascal &#45; Реализация" alt="" coords="5,87,119,114"/>
+<area shape="rect" id="node3" href="$d0/d0f/test_lexer__1_8cpp.html" title="Тесты для лексера" alt="" coords="143,80,283,121"/>
+<area shape="rect" id="node4" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="307,87,521,114"/>
+<area shape="rect" id="node5" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="545,87,726,114"/>
 </map>

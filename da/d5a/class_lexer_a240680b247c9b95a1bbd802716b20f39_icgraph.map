@@ -1,8 +1,9 @@
 <map id="Lexer::analyzeFile" name="Lexer::analyzeFile">
-<area shape="rect" id="node1" title="Анализирует файл" alt="" coords="293,56,417,83"/>
-<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8" title=" " alt="" coords="108,5,245,32"/>
-<area shape="rect" id="node4" href="$d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" title=" " alt="" coords="121,56,232,83"/>
-<area shape="rect" id="node6" href="$d0/d0f/test_lexer__1_8cpp.html#ab32b6906cc4e6cc339e245f6bd671744" title="Тест разбора сложной программы на Pascal." alt="" coords="149,107,204,133"/>
-<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="7,5,58,32"/>
-<area shape="rect" id="node5" href="$d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" title="Тест разбора простых математических выражений" alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node1" title="Анализирует файл" alt="" coords="376,107,500,133"/>
+<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="191,56,328,83"/>
+<area shape="rect" id="node5" href="$d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" title=" " alt="" coords="204,107,315,133"/>
+<area shape="rect" id="node7" href="$d0/d0f/test_lexer__1_8cpp.html#ab32b6906cc4e6cc339e245f6bd671744" title="Тест разбора сложной программы на Pascal." alt="" coords="232,157,287,184"/>
+<area shape="rect" id="node3" href="$d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f" title="Анализ файла inName и вывод в &quot;output.svg&quot; .dot описания ДАС. Так же выводит в стандартный поток выво..." alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node4" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="49,56,99,83"/>
+<area shape="rect" id="node6" href="$d0/d0f/test_lexer__1_8cpp.html#a42b988f5ceb814376db8a2df3c933b15" title="Тест разбора простых математических выражений" alt="" coords="47,107,101,133"/>
 </map>

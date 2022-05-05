@@ -1,7 +1,8 @@
 var namespaces_dup =
 [
     [ "Analyze", "d1/d80/namespace_analyze.html", [
-      [ "analyzeFile", "d1/d80/namespace_analyze.html#a1597f9f086c3276d0287917efbed14b8", null ],
+      [ "analyzeFile", "d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f", null ],
+      [ "analyzeFile", "d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437", null ],
       [ "highlight", "d1/d80/namespace_analyze.html#ab739189a39f22c6db3dc1c1faffb5ffc", null ]
     ] ],
     [ "LexerTestRules", "d4/d21/namespace_lexer_test_rules.html", [

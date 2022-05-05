@@ -1,5 +1,5 @@
 <map id="include/ASTFactory.hpp" name="include/ASTFactory.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="32,5,192,32"/>
+<area shape="rect" id="node1" title="Простая Фабрика для AST&#45;узлов" alt="" coords="32,5,192,32"/>
 <area shape="rect" id="node2" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="5,80,123,107"/>
 <area shape="rect" id="node3" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="71,155,153,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="46,229,101,256"/>

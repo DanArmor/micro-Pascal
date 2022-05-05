@@ -140,7 +140,7 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="../../dc/d72/_list_8hpp.html" target="_top" xlink:title="Двусвязный список &#45; интерфейс">
 <polygon fill="none" stroke="black" points="440.7,-168.5 440.7,-187.5 491.7,-187.5 491.7,-168.5 440.7,-168.5"/>
 <text text-anchor="middle" x="466.2" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">List.hpp</text>
 </a>
