@@ -114,19 +114,13 @@ class IToken{
     IToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
-    virtual Type getType(void) const{
-        return type;
-    }
+    Type getType(void) const;
 
     /// @return Дополнительный тип токена
-    virtual AdvType getAdvType(void) const{
-        return advType;
-    }
+    AdvType getAdvType(void) const;
 
     /// @brief Устанавливает дополнительный тип токена
-    virtual void setAdvType(IToken::AdvType newAdvType){
-        advType = newAdvType;
-    }
+    void setAdvType(IToken::AdvType newAdvType);
 
     private:
     /// @brief Тип токена

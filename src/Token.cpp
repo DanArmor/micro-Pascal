@@ -11,6 +11,18 @@ IToken::IToken(void){};
 
 IToken::IToken(Type type, AdvType advType) : type(type), advType(advType){};
 
+IToken::Type IToken::getType(void) const{
+    return type;
+}
+
+IToken::AdvType IToken::getAdvType(void) const{
+    return advType;
+}
+
+void IToken::setAdvType(IToken::AdvType newAdvType){
+    advType = newAdvType;
+}
+
 
 /*Определения Token
 ==================*/
