@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Анализатор программ на языке micro-Pascal", "index.html", [
-    [ "Диаграмма объектов.", "d2/d22/md_schemes_scheme.html", null ],
+    [ "scheme", "d2/d22/md_schemes_scheme.html", null ],
     [ "Пространства имен", "namespaces.html", [
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
