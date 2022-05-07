@@ -75,10 +75,10 @@ class PascalSyntaxAnalyzer : public ISyntaxAnalyzer {
 
     /// @brief Пропускает текущий токен, если он указанного типа. Иначе
     /// выбрасывается исключение
-    void eat(IToken::Type const type);
+    void eat(BaseToken::Type const type);
     /// @brief Пропускает текущий токен, если он указанного типа. Иначе
     /// выбрасывается исключение
-    void eatAdv(IToken::AdvType const type);
+    void eatAdv(BaseToken::AdvType const type);
 
    private:
     List<Token> tokens;

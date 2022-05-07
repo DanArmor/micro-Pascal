@@ -25,16 +25,16 @@ void Analyzer::addVisitor(std::unique_ptr<IVisitor> visitor) {
 void Analyzer::highlightOutput() {
     std::string text = lexer.getText();
     List<Token> tokens = syntax->getTokens();
-    std::map<IToken::AdvType, std::string> colors = {
-        {IToken::AdvType::SOME_CONST, "\033[31m"},
-        {IToken::AdvType::FUNCTION_NAME, "\033[32m"},
-        {IToken::AdvType::VAR_NAME, "\033[33m"},
-        {IToken::AdvType::TYPE_SPEC, "\033[1;34m"},
-        {IToken::AdvType::KEYWORD, "\033[35m"},
-        {IToken::AdvType::OPERATOR, "\033[36m"},
-        {IToken::AdvType::PROGRAM_NAME, "\033[1;31m"},
-        {IToken::AdvType::UNKNOWN, "\033[4;37m"},
-        {IToken::AdvType::NOTPROCESS, "\033[37m"},
+    std::map<BaseToken::AdvType, std::string> colors = {
+        {BaseToken::AdvType::SOME_CONST, "\033[31m"},
+        {BaseToken::AdvType::FUNCTION_NAME, "\033[32m"},
+        {BaseToken::AdvType::VAR_NAME, "\033[33m"},
+        {BaseToken::AdvType::TYPE_SPEC, "\033[1;34m"},
+        {BaseToken::AdvType::KEYWORD, "\033[35m"},
+        {BaseToken::AdvType::OPERATOR, "\033[36m"},
+        {BaseToken::AdvType::PROGRAM_NAME, "\033[1;31m"},
+        {BaseToken::AdvType::UNKNOWN, "\033[4;37m"},
+        {BaseToken::AdvType::NOTPROCESS, "\033[37m"},
     };
     int tokenI = 0;
     int i = 0;

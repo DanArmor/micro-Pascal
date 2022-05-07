@@ -14,7 +14,7 @@
 /**
  * @brief Класс-родитель для классов, работающих с токенами
  */
-class IToken {
+class BaseToken {
    public:
     /// @brief Типы токенов
     enum AdvType {
@@ -109,9 +109,9 @@ class IToken {
     };
 
     /// @brief Конструктор по-умолчанию
-    IToken(void);
+    BaseToken(void);
 
-    IToken(Type type, AdvType advType);
+    BaseToken(Type type, AdvType advType);
 
     /// @brief Получение типа токена
     Type getType(void) const;
@@ -120,7 +120,7 @@ class IToken {
     AdvType getAdvType(void) const;
 
     /// @brief Устанавливает дополнительный тип токена
-    void setAdvType(IToken::AdvType newAdvType);
+    void setAdvType(BaseToken::AdvType newAdvType);
 
    private:
     /// @brief Тип токена
@@ -130,7 +130,7 @@ class IToken {
 };
 
 /// @brief Класс, представляющий токен
-class Token : public IToken {
+class Token : public BaseToken {
    public:
     /// @brief Конструктор по-умолчанию
     Token();
@@ -182,7 +182,7 @@ class Token : public IToken {
 };
 
 /// @brief Класс, представляющий шаблон токена
-class TokenTemplate : public IToken {
+class TokenTemplate : public BaseToken {
    public:
     /// @brief Конструктор по-умолчанию
     TokenTemplate();

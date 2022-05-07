@@ -370,7 +370,7 @@ void SemanticVisitor::visit(CompoundAST &node) {
 }
 
 void SemanticVisitor::visit(NumberAST &node) {
-    if (node.token.getType() == IToken::INTEGER_CONST)
+    if (node.token.getType() == BaseToken::INTEGER_CONST)
         Return("integer");
     else
         Return("real");
@@ -392,21 +392,21 @@ void SemanticVisitor::visit(BinOpAST &node) {
             fmt::format("Ожидался числовой тип, а получен {}. ", rHand));
     }
     switch (node.token.getType()) {
-        case IToken::MOD:
+        case BaseToken::MOD:
             if (lHand != "integer" || rHand != "integer") {
                 throw TypeException(
                     node.token, fmt::format("MOD определен только над целыми "
                                             "операндами, а получены {} и {}. ",
                                             lHand, rHand));
             }
-        case IToken::LESS:
-        case IToken::LESS_EQ:
-        case IToken::EQ:
-        case IToken::MORE:
-        case IToken::MORE_EQ:
-        case IToken::OR:
-        case IToken::AND:
-        case IToken::NOT:
+        case BaseToken::LESS:
+        case BaseToken::LESS_EQ:
+        case BaseToken::EQ:
+        case BaseToken::MORE:
+        case BaseToken::MORE_EQ:
+        case BaseToken::OR:
+        case BaseToken::AND:
+        case BaseToken::NOT:
             Return("integer");
             break;
         default:
@@ -424,7 +424,7 @@ void SemanticVisitor::visit(UnOpAST &node) {
             node.token,
             fmt::format("Ожидался числовой тип, а получен {}. ", valType));
     }
-    if (isIn(node.token.getType(), {IToken::NOT})) {
+    if (isIn(node.token.getType(), {BaseToken::NOT})) {
         Return("integer");
     } else {
         Return(valType);
@@ -446,7 +446,7 @@ void SemanticVisitor::visit(VarAST &node) {
 }
 
 void SemanticVisitor::visit(SelectAST &node) {
-    if (node.from->token.getAdvType() == IToken::AdvType::SELECT) {
+    if (node.from->token.getAdvType() == BaseToken::AdvType::SELECT) {
         typeIndex++;
         node.from->accept(*this);
         typeIndex--;
@@ -492,7 +492,7 @@ void SemanticVisitor::visit(ReturnAST &node) {
     std::string returnType = getValue(node.toReturn.get());
     std::string expected = "integer";
     if (currCheckFunc != "")
-        expected = getFunc({currCheckFunc, IToken::ID, IToken::FUNCTION_NAME})
+        expected = getFunc({currCheckFunc, BaseToken::ID, BaseToken::FUNCTION_NAME})
                        .returnType;
     if (!compareTypes(expected, returnType)) {
         throw TypeException(

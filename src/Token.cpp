@@ -6,27 +6,27 @@
 
 /*Определения IToken
 ==================*/
-IToken::IToken(void) {}
+BaseToken::BaseToken(void) {}
 
-IToken::IToken(Type type, AdvType advType) : type(type), advType(advType) {}
+BaseToken::BaseToken(Type type, AdvType advType) : type(type), advType(advType) {}
 
-IToken::Type IToken::getType(void) const { return type; }
+BaseToken::Type BaseToken::getType(void) const { return type; }
 
-IToken::AdvType IToken::getAdvType(void) const { return advType; }
+BaseToken::AdvType BaseToken::getAdvType(void) const { return advType; }
 
-void IToken::setAdvType(IToken::AdvType newAdvType) { advType = newAdvType; }
+void BaseToken::setAdvType(BaseToken::AdvType newAdvType) { advType = newAdvType; }
 
 /*Определения Token
 ==================*/
-Token::Token() : IToken(IToken::ERROR, IToken::UNKNOWN), str("") {}
+Token::Token() : BaseToken(BaseToken::ERROR, BaseToken::UNKNOWN), str("") {}
 
 Token::Token(std::string const &str, Type const type, AdvType const advType)
-    : IToken(type, advType), str(str) {}
+    : BaseToken(type, advType), str(str) {}
 
 Token::Token(std::string const &str, Type const type, AdvType const advType,
              std::size_t const lineNum, std::size_t const inLinePosNum,
              std::size_t const inFilePos)
-    : IToken(type, advType),
+    : BaseToken(type, advType),
       str(str),
       lineNum(lineNum),
       posInLineNum(inLinePosNum),
@@ -62,6 +62,6 @@ std::string Token::getInfo(void) const {
 TokenTemplate::TokenTemplate() {}
 
 TokenTemplate::TokenTemplate(std::string const &str, Type type, AdvType advType)
-    : IToken(type, advType), regStr(str), regTemplate(str) {}
+    : BaseToken(type, advType), regStr(str), regTemplate(str) {}
 
 std::regex const &TokenTemplate::getRegex(void) { return regTemplate; }

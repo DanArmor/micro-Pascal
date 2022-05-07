@@ -62,7 +62,7 @@ List<Token> Lexer::analyzeProgramText(std::string const &text) {
         std::size_t spacesFromBegin = 0;
         std::size_t len = 0;
 
-        Token matched("", IToken::ERROR, IToken::UNKNOWN, lineNum, inLineNum,
+        Token matched("", BaseToken::ERROR, BaseToken::UNKNOWN, lineNum, inLineNum,
                       position);
         for (auto pattern = tokenTemplates.begin();
              pattern != tokenTemplates.end(); ++pattern) {
@@ -84,21 +84,21 @@ List<Token> Lexer::analyzeProgramText(std::string const &text) {
                 }
             }
         }
-        if (matched.getType() != IToken::NEWLINE &&
+        if (matched.getType() != BaseToken::NEWLINE &&
             matched.getStr().size() == 0)
             throw LexerException(matched, "Неизвестный токен!");
         position = position + len;
         inLineNum += len;
 
-        if (matched.getType() != IToken::NEWLINE &&
-            matched.getType() != IToken::COMMENT)
+        if (matched.getType() != BaseToken::NEWLINE &&
+            matched.getType() != BaseToken::COMMENT)
             tokens.pushBack(matched);
         if (position >= text.size()) break;
 
-        if (matched.getType() == IToken::NEWLINE) {
+        if (matched.getType() == BaseToken::NEWLINE) {
             lineNum++;
             inLineNum = 0;
-        } else if (matched.getType() == IToken::COMMENT) {
+        } else if (matched.getType() == BaseToken::COMMENT) {
             std::size_t const linesInComment = std::count(
                 matched.getStr().begin(), matched.getStr().end(), '\n');
             lineNum += linesInComment;
@@ -108,7 +108,7 @@ List<Token> Lexer::analyzeProgramText(std::string const &text) {
             }
         }
     }
-    Token endOfStream("$", IToken::ENDOFSTREAM, IToken::UNKNOWN);
+    Token endOfStream("$", BaseToken::ENDOFSTREAM, BaseToken::UNKNOWN);
     tokens.pushBack(endOfStream);
     return tokens;
 }
