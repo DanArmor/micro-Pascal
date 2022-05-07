@@ -1,9 +1,9 @@
 <map id="include/PascalSyntax.hpp" name="include/PascalSyntax.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="196,5,366,32"/>
+<area shape="rect" id="node1" title="Синтаксический анализатор программ на языке micro&#45;Pascal." alt="" coords="196,5,366,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="158,229,217,256"/>
 <area shape="rect" id="node3" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="22,155,140,181"/>
 <area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="40,229,122,256"/>
-<area shape="rect" id="node7" href="$df/d3f/_syntax_8hpp.html" title="Синтаксический анализатор" alt="" coords="198,80,284,107"/>
+<area shape="rect" id="node7" href="$df/d3f/_syntax_8hpp.html" title=" " alt="" coords="198,80,284,107"/>
 <area shape="rect" id="node9" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="359,155,427,181"/>
 <area shape="rect" id="node15" title=" " alt="" coords="409,80,529,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="16,304,69,331"/>

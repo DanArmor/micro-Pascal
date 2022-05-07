@@ -1,4 +1,4 @@
 <map id="Analyzer" name="Analyzer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node1" title="Анализатор программ. Объединяет в себе лексический, синтаксический анализ и работу с посетителями." alt="" coords="5,95,76,121"/>
 <area shape="rect" id="node2" href="$da/d5a/class_lexer.html" title="Класс Лексер, разбивающий текст программы на токены" alt="" coords="13,5,68,32"/>
 </map>

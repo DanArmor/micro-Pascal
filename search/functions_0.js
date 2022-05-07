@@ -11,8 +11,8 @@ var searchData=
   ['analyzefile_8',['analyzeFile',['../d6/d1a/class_analyzer.html#aaa75d76110c2f35ca78714bef24f4962',1,'Analyzer::analyzeFile()'],['../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39',1,'Lexer::analyzeFile()']]],
   ['analyzepascalprogram_9',['analyzePascalProgram',['../d3/db4/graph_draw_8cpp.html#a33bc391d1718919ab8e74041e88a93d7',1,'analyzePascalProgram(std::string fileName):&#160;graphDraw.cpp'],['../df/d0a/main_8cpp.html#a33bc391d1718919ab8e74041e88a93d7',1,'analyzePascalProgram(std::string fileName):&#160;main.cpp']]],
   ['analyzeprogramtext_10',['analyzeProgramText',['../da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1',1,'Lexer']]],
-  ['analyzer_11',['Analyzer',['../d6/d1a/class_analyzer.html#a448819e5a6a4cc0e7125cc7d6a9fb22f',1,'Analyzer']]],
-  ['analyzetokens_12',['analyzeTokens',['../d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28',1,'PascalSyntaxAnalyzer::analyzeTokens()'],['../d0/dfe/class_syntax_analyzer.html#a3dda9286eec6e959395e1b3eb443b50f',1,'SyntaxAnalyzer::analyzeTokens()']]],
+  ['analyzer_11',['Analyzer',['../d6/d1a/class_analyzer.html#a8c9320b641d0e28a22c25060bae3edf3',1,'Analyzer']]],
+  ['analyzetokens_12',['analyzeTokens',['../d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28',1,'PascalSyntaxAnalyzer::analyzeTokens()'],['../d5/d57/class_i_syntax_analyzer.html#a6e71311949eb7c79f3e33e812f957798',1,'ISyntaxAnalyzer::analyzeTokens()']]],
   ['arrspecast_13',['ArrSpecAST',['../d8/d88/class_arr_spec_a_s_t.html#a1ca4ad04e3ae11b9425b252f211fb746',1,'ArrSpecAST']]],
   ['assignast_14',['AssignAST',['../d7/db1/class_assign_a_s_t.html#a44c08f2dc236c677c2a7c98bfe9e2de2',1,'AssignAST']]]
 ];

@@ -36,6 +36,9 @@ var hierarchy =
       [ "VarDeclAST", "d6/d7c/class_var_decl_a_s_t.html", null ],
       [ "WhileAST", "dc/da0/class_while_a_s_t.html", null ]
     ] ],
+    [ "ISyntaxAnalyzer", "d5/d57/class_i_syntax_analyzer.html", [
+      [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", null ]
+    ] ],
     [ "IToken", "d0/d11/class_i_token.html", [
       [ "Token", "db/dc1/class_token.html", null ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", null ]
@@ -54,8 +57,5 @@ var hierarchy =
     [ "Node< Token >", "dc/d8f/class_node.html", null ],
     [ "Node< TokenTemplate >", "dc/d8f/class_node.html", null ],
     [ "NodeIterator< T >", "d3/dde/class_node_iterator.html", null ],
-    [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", [
-      [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", null ]
-    ] ],
     [ "SemanticVisitor::VarData", "d6/d93/struct_semantic_visitor_1_1_var_data.html", null ]
 ];

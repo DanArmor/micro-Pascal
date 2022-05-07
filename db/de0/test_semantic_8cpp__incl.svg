@@ -95,7 +95,7 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="../../df/ded/_pascal_syntax_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="../../df/ded/_pascal_syntax_8hpp.html" target="_top" xlink:title="Синтаксический анализатор программ на языке micro&#45;Pascal.">
 <polygon fill="none" stroke="black" points="672,-224.5 672,-243.5 766,-243.5 766,-224.5 672,-224.5"/>
 <text text-anchor="middle" x="719" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">PascalSyntax.hpp</text>
 </a>
@@ -347,7 +347,7 @@
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title="Синтаксический анализатор">
+<g id="a_node17"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="820,-168.5 820,-187.5 884,-187.5 884,-168.5 820,-168.5"/>
 <text text-anchor="middle" x="852" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">Syntax.hpp</text>
 </a>
@@ -381,7 +381,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="699.85,-72.95 689.32,-74.14 698.3,-79.77 699.85,-72.95"/>
 </g>
 <!-- Node17&#45;&gt;Node5 -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>Node17&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M819.73,-173.18C805.42,-171.52 788.38,-169.6 773,-168 606.88,-150.75 408.1,-133.05 328.5,-126.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="328.78,-122.6 318.52,-125.21 328.17,-129.57 328.78,-122.6"/>
@@ -393,7 +393,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="699.46,-69.05 689,-70.79 698.26,-75.95 699.46,-69.05"/>
 </g>
 <!-- Node17&#45;&gt;Node16 -->
-<g id="edge25" class="edge">
+<g id="edge24" class="edge">
 <title>Node17&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M859.1,-168.08C865.24,-160.38 874.27,-149.03 881.74,-139.65"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="884.54,-141.75 888.03,-131.75 879.06,-137.39 884.54,-141.75"/>

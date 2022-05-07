@@ -48,7 +48,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     ] ],
     [ "supAlgs.hpp", "d3/da8/sup_algs_8hpp.html", "d3/da8/sup_algs_8hpp" ],
     [ "Syntax.hpp", "df/d3f/_syntax_8hpp.html", [
-      [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", "d0/dfe/class_syntax_analyzer" ]
+      [ "ISyntaxAnalyzer", "d5/d57/class_i_syntax_analyzer.html", "d5/d57/class_i_syntax_analyzer" ]
     ] ],
     [ "SyntExp.hpp", "da/dbf/_synt_exp_8hpp.html", [
       [ "AnalyzeException", "df/d7c/class_analyze_exception.html", "df/d7c/class_analyze_exception" ],

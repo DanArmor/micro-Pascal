@@ -110,7 +110,7 @@
 <!-- Node16 -->
 <g id="node16" class="node">
 <title>Node16</title>
-<g id="a_node16"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title="Синтаксический анализатор">
+<g id="a_node16"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="580,-168.5 580,-187.5 644,-187.5 644,-168.5 580,-168.5"/>
 <text text-anchor="middle" x="612" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">Syntax.hpp</text>
 </a>
@@ -354,7 +354,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="188.35,-75.09 177.75,-75.25 186.13,-81.73 188.35,-75.09"/>
 </g>
 <!-- Node16&#45;&gt;Node4 -->
-<g id="edge22" class="edge">
+<g id="edge21" class="edge">
 <title>Node16&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M601.72,-168.32C592.16,-160.26 577.72,-148.08 566.22,-138.37"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="568.37,-135.61 558.47,-131.83 563.86,-140.96 568.37,-135.61"/>
@@ -366,7 +366,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="583.67,-80.6 574.27,-75.71 578.57,-85.4 583.67,-80.6"/>
 </g>
 <!-- Node16&#45;&gt;Node9 -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>Node16&#45;&gt;Node9</title>
 <path fill="none" stroke="midnightblue" d="M579.93,-171.17C524.04,-161.01 409.18,-140.12 350.78,-129.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="351.36,-126.05 340.9,-127.71 350.11,-132.94 351.36,-126.05"/>

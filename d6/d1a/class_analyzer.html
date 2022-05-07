@@ -93,6 +93,9 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 </div><!--header-->
 <div class="contents">
 
+<p>Анализатор программ. Объединяет в себе лексический, синтаксический анализ и работу с посетителями.  
+ <a href="../../d6/d1a/class_analyzer.html#details">Подробнее...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="../../closed.png" alt="+"/> Граф связей класса Analyzer:</div>
@@ -105,8 +108,8 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a448819e5a6a4cc0e7125cc7d6a9fb22f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#a448819e5a6a4cc0e7125cc7d6a9fb22f">Analyzer</a> (std::unique_ptr&lt; <a class="el" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> &gt; <a class="el" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>, <a class="el" href="../../d1/d34/class_list.html">List</a>&lt; <a class="el" href="../../dc/dca/class_token_template.html">TokenTemplate</a> &gt; templates)</td></tr>
-<tr class="separator:a448819e5a6a4cc0e7125cc7d6a9fb22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9320b641d0e28a22c25060bae3edf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#a8c9320b641d0e28a22c25060bae3edf3">Analyzer</a> (std::unique_ptr&lt; <a class="el" href="../../d5/d57/class_i_syntax_analyzer.html">ISyntaxAnalyzer</a> &gt; <a class="el" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>, <a class="el" href="../../d1/d34/class_list.html">List</a>&lt; <a class="el" href="../../dc/dca/class_token_template.html">TokenTemplate</a> &gt; templates)</td></tr>
+<tr class="separator:a8c9320b641d0e28a22c25060bae3edf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ecdc1f31b74ef853f20312d0025a36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#a39ecdc1f31b74ef853f20312d0025a36">addVisitor</a> (std::unique_ptr&lt; <a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &gt; visitor)</td></tr>
 <tr class="separator:a39ecdc1f31b74ef853f20312d0025a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6a504688e610850ecd202acb8de5c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#ad6a504688e610850ecd202acb8de5c51">highlightOutput</a> ()</td></tr>
@@ -120,15 +123,16 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 <tr class="separator:a7a25c8c2d63e6f8636746aa49b3548b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9f211e351544b828bcf36520bd8bee"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../df/db7/class_i_visitor.html">IVisitor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">visitorsToRun</a></td></tr>
 <tr class="separator:abd9f211e351544b828bcf36520bd8bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41d3a55249ad8ca8342161cd41cf2660"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a></td></tr>
-<tr class="separator:a41d3a55249ad8ca8342161cd41cf2660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70079c87cb0835cccaa59b5641759e67"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d5/d57/class_i_syntax_analyzer.html">ISyntaxAnalyzer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a></td></tr>
+<tr class="separator:a70079c87cb0835cccaa59b5641759e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00018">18</a></p>
+<div class="textblock"><p >Анализатор программ. Объединяет в себе лексический, синтаксический анализ и работу с посетителями. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00021">21</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="a448819e5a6a4cc0e7125cc7d6a9fb22f" name="a448819e5a6a4cc0e7125cc7d6a9fb22f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a448819e5a6a4cc0e7125cc7d6a9fb22f">&#9670;&nbsp;</a></span>Analyzer()</h2>
+<a id="a8c9320b641d0e28a22c25060bae3edf3" name="a8c9320b641d0e28a22c25060bae3edf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9320b641d0e28a22c25060bae3edf3">&#9670;&nbsp;</a></span>Analyzer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,7 +140,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
         <tr>
           <td class="memname">Analyzer::Analyzer </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d5/d57/class_i_syntax_analyzer.html">ISyntaxAnalyzer</a> &gt;&#160;</td>
           <td class="paramname"><em>syntax</em>, </td>
         </tr>
         <tr>
@@ -154,18 +158,18 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html">Analyzer.cpp</a> строка <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html#l00015">15</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>    : <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>(std::move(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>)) {</div>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    : <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>(std::move(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>)) {</div>
 <div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">lexer</a>.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">setTemplates</a>(templates);</div>
 <div class="line"><span class="lineno">   19</span>};</div>
-<div class="ttc" id="aclass_analyzer_html_a41d3a55249ad8ca8342161cd41cf2660"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">Analyzer::syntax</a></div><div class="ttdeci">std::unique_ptr&lt; SyntaxAnalyzer &gt; syntax</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00032">Analyzer.hpp:32</a></div></div>
-<div class="ttc" id="aclass_analyzer_html_a7a25c8c2d63e6f8636746aa49b3548b0"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">Analyzer::lexer</a></div><div class="ttdeci">Lexer lexer</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00030">Analyzer.hpp:30</a></div></div>
+<div class="ttc" id="aclass_analyzer_html_a70079c87cb0835cccaa59b5641759e67"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">Analyzer::syntax</a></div><div class="ttdeci">std::unique_ptr&lt; ISyntaxAnalyzer &gt; syntax</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00035">Analyzer.hpp:35</a></div></div>
+<div class="ttc" id="aclass_analyzer_html_a7a25c8c2d63e6f8636746aa49b3548b0"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">Analyzer::lexer</a></div><div class="ttdeci">Lexer lexer</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00033">Analyzer.hpp:33</a></div></div>
 <div class="ttc" id="aclass_lexer_html_a9d8216e3fe926123c3cdbbf9c87b614a"><div class="ttname"><a href="../../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a">Lexer::setTemplates</a></div><div class="ttdeci">void setTemplates(List&lt; TokenTemplate &gt; const &amp;templates)</div><div class="ttdoc">Устанавливает шаблоны токенов для разбора лексером</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_lexer_8cpp_source.html#l00013">Lexer.cpp:13</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d1a/class_analyzer_a448819e5a6a4cc0e7125cc7d6a9fb22f_cgraph.svg" width="324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d1a/class_analyzer_a8c9320b641d0e28a22c25060bae3edf3_cgraph.svg" width="324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -192,7 +196,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 <div class="fragment"><div class="line"><span class="lineno">   21</span>                                                         {</div>
 <div class="line"><span class="lineno">   22</span>    <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">visitorsToRun</a>.emplace_back(std::move(visitor));</div>
 <div class="line"><span class="lineno">   23</span>}</div>
-<div class="ttc" id="aclass_analyzer_html_abd9f211e351544b828bcf36520bd8bee"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">Analyzer::visitorsToRun</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IVisitor &gt; &gt; visitorsToRun</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00031">Analyzer.hpp:31</a></div></div>
+<div class="ttc" id="aclass_analyzer_html_abd9f211e351544b828bcf36520bd8bee"><div class="ttname"><a href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">Analyzer::visitorsToRun</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IVisitor &gt; &gt; visitorsToRun</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d7a/_analyzer_8hpp_source.html#l00034">Analyzer.hpp:34</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -222,9 +226,9 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 
 <p class="definition">См. определение в файле <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html">Analyzer.cpp</a> строка <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html#l00069">69</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   69</span>                                           {</div>
-<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>-&gt;setTokens(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">lexer</a>.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(inName));</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>-&gt;setTokens(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">lexer</a>.<a class="code hl_function" href="../../da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39">analyzeFile</a>(inName));</div>
 <div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    std::unique_ptr&lt;IAST&gt; root(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>-&gt;analyzeTokens());</div>
+<div class="line"><span class="lineno">   72</span>    std::unique_ptr&lt;IAST&gt; root(<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>-&gt;analyzeTokens());</div>
 <div class="line"><span class="lineno">   73</span> </div>
 <div class="line"><span class="lineno">   74</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">visitorsToRun</a>.size(); i++) {</div>
 <div class="line"><span class="lineno">   75</span>        root-&gt;accept(*<a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#abd9f211e351544b828bcf36520bd8bee">visitorsToRun</a>[i]);</div>
@@ -268,7 +272,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 <p class="definition">См. определение в файле <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html">Analyzer.cpp</a> строка <a class="el" href="../../d9/df3/_analyzer_8cpp_source.html#l00025">25</a></p>
 <div class="fragment"><div class="line"><span class="lineno">   25</span>                               {</div>
 <div class="line"><span class="lineno">   26</span>    std::string text = <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">lexer</a>.<a class="code hl_function" href="../../da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30">getText</a>();</div>
-<div class="line"><span class="lineno">   27</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a41d3a55249ad8ca8342161cd41cf2660">syntax</a>-&gt;getTokens();</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>-&gt;getTokens();</div>
 <div class="line"><span class="lineno">   28</span>    std::map&lt;IToken::AdvType, std::string&gt; colors = {</div>
 <div class="line"><span class="lineno">   29</span>        {IToken::AdvType::SOME_CONST, <span class="stringliteral">&quot;\033[31m&quot;</span>},</div>
 <div class="line"><span class="lineno">   30</span>        {IToken::AdvType::FUNCTION_NAME, <span class="stringliteral">&quot;\033[32m&quot;</span>},</div>
@@ -352,12 +356,12 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00030">30</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00033">33</a></p>
 
 </div>
 </div>
-<a id="a41d3a55249ad8ca8342161cd41cf2660" name="a41d3a55249ad8ca8342161cd41cf2660"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41d3a55249ad8ca8342161cd41cf2660">&#9670;&nbsp;</a></span>syntax</h2>
+<a id="a70079c87cb0835cccaa59b5641759e67" name="a70079c87cb0835cccaa59b5641759e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70079c87cb0835cccaa59b5641759e67">&#9670;&nbsp;</a></span>syntax</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +370,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a>&gt; Analyzer::syntax</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="../../d5/d57/class_i_syntax_analyzer.html">ISyntaxAnalyzer</a>&gt; Analyzer::syntax</td>
         </tr>
       </table>
   </td>
@@ -376,7 +380,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00032">32</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00035">35</a></p>
 
 </div>
 </div>
@@ -400,7 +404,7 @@ $(document).ready(function(){initNavTree('d6/d1a/class_analyzer.html','../../');
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00031">31</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html">Analyzer.hpp</a> строка <a class="el" href="../../d8/d7a/_analyzer_8hpp_source.html#l00034">34</a></p>
 
 </div>
 </div>

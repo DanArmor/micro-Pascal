@@ -1,15 +1,15 @@
 <map id="include/Syntax.hpp" name="include/Syntax.hpp">
-<area shape="rect" id="node1" title="Синтаксический анализатор" alt="" coords="359,5,490,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="224,80,292,107"/>
-<area shape="rect" id="node3" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="316,80,384,107"/>
-<area shape="rect" id="node10" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="441,80,558,107"/>
-<area shape="rect" id="node11" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="579,155,662,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="95,155,191,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="216,155,279,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="303,155,381,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="406,155,465,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="489,155,555,181"/>
-<area shape="rect" id="node12" title=" " alt="" coords="555,229,609,256"/>
-<area shape="rect" id="node13" title=" " alt="" coords="633,229,688,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="138,5,269,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="97,80,214,107"/>
+<area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="114,155,197,181"/>
+<area shape="rect" id="node7" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="429,80,497,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="90,229,143,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="168,229,223,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="221,155,287,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="311,155,407,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="432,155,495,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="519,155,597,181"/>
+<area shape="rect" id="node12" title=" " alt="" coords="622,155,681,181"/>
+<area shape="rect" id="node13" title=" " alt="" coords="705,155,771,181"/>
 </map>

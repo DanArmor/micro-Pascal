@@ -6,7 +6,7 @@ var searchData=
   ['setadvtype_3',['setAdvType',['../d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7',1,'IToken']]],
   ['setstr_4',['setStr',['../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a',1,'Token']]],
   ['settemplates_5',['setTemplates',['../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a',1,'Lexer']]],
-  ['settokens_6',['setTokens',['../d6/d00/class_pascal_syntax_analyzer.html#a548b90f91a14fbc2ff4feb979c305004',1,'PascalSyntaxAnalyzer::setTokens()'],['../d0/dfe/class_syntax_analyzer.html#a2b5cd35a3e9ac821518ef7f6311f8f7e',1,'SyntaxAnalyzer::setTokens()']]],
+  ['settokens_6',['setTokens',['../d6/d00/class_pascal_syntax_analyzer.html#a548b90f91a14fbc2ff4feb979c305004',1,'PascalSyntaxAnalyzer::setTokens()'],['../d5/d57/class_i_syntax_analyzer.html#a6381b9cf1778da959f9db3391486d029',1,'ISyntaxAnalyzer::setTokens()']]],
   ['size_7',['size',['../d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01',1,'List']]],
   ['stringast_8',['StringAST',['../d0/d21/class_string_a_s_t.html#a80bb816d3f2e3deed3b757d082c77cef',1,'StringAST']]],
   ['syntaxassignst_9',['syntaxAssignSt',['../d6/d00/class_pascal_syntax_analyzer.html#a1483de526ade4687ddb1d1c0c804b15c',1,'PascalSyntaxAnalyzer']]],

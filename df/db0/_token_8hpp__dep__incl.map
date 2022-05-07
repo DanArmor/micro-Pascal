@@ -5,8 +5,8 @@
 <area shape="rect" id="node8" href="$d4/d0d/_a_s_t_factory_8hpp.html" title="Простая Фабрика для AST&#45;узлов" alt="" coords="5,155,165,181"/>
 <area shape="rect" id="node10" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="545,80,708,107"/>
 <area shape="rect" id="node11" href="$d8/d7a/_analyzer_8hpp.html" title="Анализатор исходного кода" alt="" coords="438,229,578,256"/>
-<area shape="rect" id="node15" href="$df/ded/_pascal_syntax_8hpp.html" title=" " alt="" coords="704,229,875,256"/>
-<area shape="rect" id="node16" href="$df/d3f/_syntax_8hpp.html" title="Синтаксический анализатор" alt="" coords="443,155,573,181"/>
+<area shape="rect" id="node15" href="$df/ded/_pascal_syntax_8hpp.html" title="Синтаксический анализатор программ на языке micro&#45;Pascal." alt="" coords="704,229,875,256"/>
+<area shape="rect" id="node16" href="$df/d3f/_syntax_8hpp.html" title=" " alt="" coords="443,155,573,181"/>
 <area shape="rect" id="node17" href="$db/d42/_visitor_8hpp.html" title="Посетители для обхода ДАС" alt="" coords="924,155,1052,181"/>
 <area shape="rect" id="node18" href="$db/dfd/_pascal_rules_8hpp.html" title="Правила языка Паскаль" alt="" coords="1051,229,1215,256"/>
 <area shape="rect" id="node20" href="$d5/d24/_lexer_8hpp.html" title="Лексер" alt="" coords="1568,155,1691,181"/>

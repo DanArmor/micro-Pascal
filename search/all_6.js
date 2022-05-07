@@ -14,7 +14,7 @@ var searchData=
   ['getstandartfuncs_11',['getStandartFuncs',['../d1/d0c/namespace_pascal_rules.html#a5b3c3dcb5bb75fd385bd175120039ea2',1,'PascalRules']]],
   ['getstr_12',['getStr',['../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a',1,'Token']]],
   ['gettext_13',['getText',['../da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30',1,'Lexer']]],
-  ['gettokens_14',['getTokens',['../d6/d00/class_pascal_syntax_analyzer.html#ab716da35db298cb6e48cfa1c69c1822b',1,'PascalSyntaxAnalyzer::getTokens()'],['../d0/dfe/class_syntax_analyzer.html#a62e29942f3d3522987d25397d493f902',1,'SyntaxAnalyzer::getTokens()']]],
+  ['gettokens_14',['getTokens',['../d6/d00/class_pascal_syntax_analyzer.html#ab716da35db298cb6e48cfa1c69c1822b',1,'PascalSyntaxAnalyzer::getTokens()'],['../d5/d57/class_i_syntax_analyzer.html#a8c5f1d8c83e346c3ffe2a80255b6fd4c',1,'ISyntaxAnalyzer::getTokens()']]],
   ['gettrimmed_15',['getTrimmed',['../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0',1,'Lexer']]],
   ['gettype_16',['getType',['../d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036',1,'IToken']]],
   ['getvalue_17',['getValue',['../dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f',1,'SemanticVisitor']]],

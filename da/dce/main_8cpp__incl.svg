@@ -110,7 +110,7 @@
 <!-- Node22 -->
 <g id="node22" class="node">
 <title>Node22</title>
-<g id="a_node22"><a xlink:href="../../df/ded/_pascal_syntax_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="../../df/ded/_pascal_syntax_8hpp.html" target="_top" xlink:title="Синтаксический анализатор программ на языке micro&#45;Pascal.">
 <polygon fill="none" stroke="black" points="625,-224.5 625,-243.5 719,-243.5 719,-224.5 625,-224.5"/>
 <text text-anchor="middle" x="672" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">PascalSyntax.hpp</text>
 </a>
@@ -191,7 +191,7 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title="Синтаксический анализатор">
+<g id="a_node18"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="640,-168.5 640,-187.5 704,-187.5 704,-168.5 640,-168.5"/>
 <text text-anchor="middle" x="672" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">Syntax.hpp</text>
 </a>
@@ -354,7 +354,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="563.35,-79.74 572.15,-73.85 561.59,-72.96 563.35,-79.74"/>
 </g>
 <!-- Node18&#45;&gt;Node6 -->
-<g id="edge25" class="edge">
+<g id="edge24" class="edge">
 <title>Node18&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M691.65,-168.44C711.96,-159.6 743.9,-145.69 767.1,-135.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="768.67,-138.72 776.44,-131.52 765.88,-132.3 768.67,-138.72"/>
@@ -366,7 +366,7 @@
 <polygon fill="midnightblue" stroke="midnightblue" points="763.55,-85.26 767.88,-75.59 758.46,-80.45 763.55,-85.26"/>
 </g>
 <!-- Node18&#45;&gt;Node11 -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>Node18&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M639.8,-169.81C636.83,-169.18 633.86,-168.57 631,-168 554.55,-152.76 464.52,-137.2 415.76,-128.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="416.16,-125.48 405.72,-127.27 415,-132.38 416.16,-125.48"/>
