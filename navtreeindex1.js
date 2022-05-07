@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d5/d3a/struct_semantic_visitor_1_1_function_data.html#aaa0ea3b55b4bff02f5ba351c972d009b":[2,0,31,0,1],
 "d5/d3a/struct_semantic_visitor_1_1_function_data.html#af0ccb94315d0aee023e59867143d1aa4":[2,0,31,0,0],
 "d5/d57/class_i_syntax_analyzer.html":[2,0,15],
 "d5/d57/class_i_syntax_analyzer.html#a6381b9cf1778da959f9db3391486d029":[2,0,15,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "dc/da0/class_while_a_s_t.html#a8ceecca5d27e7947a2ef3052a6d34227":[2,0,42,2],
 "dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb":[2,0,42,3],
 "dc/dca/class_token_template.html":[2,0,35],
-"dc/dca/class_token_template.html#a36325c8ebd37a7f0967e37be6958bcdc":[2,0,35,1]
+"dc/dca/class_token_template.html#a36325c8ebd37a7f0967e37be6958bcdc":[2,0,35,1],
+"dc/dca/class_token_template.html#a4639e8bbe50d0d81e4f81d8021e3dbfe":[2,0,35,2]
 };
