@@ -14,11 +14,11 @@
 #include <stdexcept>
 #include <vector>
 
-/// Предварительное объявление для списка
+// Предварительное объявление для списка
 template <typename T>
 class List;
 
-/// Предварительное объявление для итератора узла
+// Предварительное объявление для итератора узла
 template <typename T>
 class NodeIterator;
 
