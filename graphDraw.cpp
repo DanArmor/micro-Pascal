@@ -10,7 +10,7 @@
 void analyzePascalProgram(std::string fileName) {
     auto semantic = std::make_unique<SemanticVisitor>();
     semantic->prebuildFunctions(PascalRules::getStandartFuncs());
-    auto graph = std::make_unique<GraphvizVisitor>(fileName);
+    auto graph = std::make_unique<GraphvizVisitor>("out.dot");
     Analyzer analyzer(std::make_unique<PascalSyntaxAnalyzer>(),
                       PascalRules::getPascalTemplates());
     analyzer.addVisitor(std::move(semantic));
