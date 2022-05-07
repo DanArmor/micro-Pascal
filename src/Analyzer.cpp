@@ -1,23 +1,30 @@
-#include "Analyze.hpp"
+#include "Analyzer.hpp"
 
 #include <fmt/format.h>
 
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 
-#include "AST.hpp"
+#include "ASTclasses.hpp"
 #include "Lexer.hpp"
 #include "List.hpp"
-#include "PascalRules.hpp"
-#include "SyntExp.hpp"
 #include "Syntax.hpp"
-#include "Visitor.hpp"
 
-/// @brief Функции анализа программ на языке Pascal
-namespace Analyze {
+Analyzer::Analyzer(std::unique_ptr<SyntaxAnalyzer> syntax,
+                   List<TokenTemplate> templates)
+    : syntax(std::move(syntax)) {
+    lexer.setTemplates(templates);
+};
 
-void highlight(std::string text, List<Token> tokens) {
+void Analyzer::addVisitor(std::unique_ptr<IVisitor> visitor) {
+    visitorsToRun.emplace_back(std::move(visitor));
+}
+
+void Analyzer::highlightOutput() {
+    std::string text = lexer.getText();
+    List<Token> tokens = syntax->getTokens();
     std::map<IToken::AdvType, std::string> colors = {
         {IToken::AdvType::SOME_CONST, "\033[31m"},
         {IToken::AdvType::FUNCTION_NAME, "\033[32m"},
@@ -59,34 +66,12 @@ void highlight(std::string text, List<Token> tokens) {
     std::cout << "\033[0m\n";
 }
 
-void analyzeFile(std::string inName, std::string outName) {
-    Lexer lexer;
-    lexer.setTemplates(PascalRules::getPascalTemplates());
-    List<Token> tokens = lexer.analyzeFile(inName);
+void Analyzer::analyzeFile(std::string inName) {
+    syntax->setTokens(lexer.analyzeFile(inName));
 
-    SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<IAST> root(syntax.analyzeTokens());
+    std::unique_ptr<IAST> root(syntax->analyzeTokens());
 
-    highlight(lexer.getText(), syntax.getTokens());
-
-    GraphvizVisitor graph("out.dot");
-    root->accept(graph);
-    graph.write();
-
-    int statusGraphviz = system("dot -V >nul 2>nul");
-    if (WEXITSTATUS(statusGraphviz) == 0) {
-        system(fmt::format("dot out.dot -Tsvg > {}", outName).c_str());
-    } else {
-        std::cout << "Проблема при определении Graphviz. .dot описание "
-                     "изображения сгенерировано, но генерация самого "
-                     "изображения требует Graphviz";
+    for (std::size_t i = 0; i < visitorsToRun.size(); i++) {
+        root->accept(*visitorsToRun[i]);
     }
-
-    SemanticVisitor semantic;
-    semantic.prebuildFunctions(PascalRules::getStandartFuncs());
-    root->accept(semantic);
 }
-
-void analyzeFile(std::string inName) { analyzeFile(inName, "output.svg"); }
-
-}  // namespace Analyze

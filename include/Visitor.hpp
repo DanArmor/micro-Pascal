@@ -19,7 +19,7 @@
 /// @brief Посетителя для построения графического отображения ДАС
 class GraphvizVisitor : public IVisitor {
    public:
-    explicit GraphvizVisitor(std::string filename);
+    GraphvizVisitor(std::string filename);
 
     void visit(ProgramAST &node);
 
@@ -72,6 +72,7 @@ class GraphvizVisitor : public IVisitor {
     void addDef(std::string const &str);
     void connectToNode(std::size_t index, IAST *ptr);
     std::fstream file;
+    std::string outName;
     std::size_t nodeIndex = 0;
     std::vector<std::pair<std::string, std::string>> declarations;
     std::vector<std::pair<std::string, std::string>> links;

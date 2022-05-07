@@ -6,9 +6,9 @@
 
 /*Определения IToken
 ==================*/
-IToken::IToken(void){};
+IToken::IToken(void) {}
 
-IToken::IToken(Type type, AdvType advType) : type(type), advType(advType){};
+IToken::IToken(Type type, AdvType advType) : type(type), advType(advType) {}
 
 IToken::Type IToken::getType(void) const { return type; }
 
@@ -18,10 +18,10 @@ void IToken::setAdvType(IToken::AdvType newAdvType) { advType = newAdvType; }
 
 /*Определения Token
 ==================*/
-Token::Token() : IToken(IToken::ERROR, IToken::UNKNOWN), str(""){};
+Token::Token() : IToken(IToken::ERROR, IToken::UNKNOWN), str("") {}
 
 Token::Token(std::string const &str, Type const type, AdvType const advType)
-    : IToken(type, advType), str(str){};
+    : IToken(type, advType), str(str) {}
 
 Token::Token(std::string const &str, Type const type, AdvType const advType,
              std::size_t const lineNum, std::size_t const inLinePosNum,
@@ -30,7 +30,7 @@ Token::Token(std::string const &str, Type const type, AdvType const advType,
       str(str),
       lineNum(lineNum),
       posInLineNum(inLinePosNum),
-      posNum(inFilePos){};
+      posNum(inFilePos) {}
 
 std::string const &Token::getStr(void) const { return str; }
 
@@ -59,9 +59,9 @@ std::string Token::getInfo(void) const {
 /* Определения TokenTemplate
 ==================*/
 
-TokenTemplate::TokenTemplate(){};
+TokenTemplate::TokenTemplate() {}
 
 TokenTemplate::TokenTemplate(std::string const &str, Type type, AdvType advType)
-    : IToken(type, advType), regStr(str), regTemplate(str){};
+    : IToken(type, advType), regStr(str), regTemplate(str) {}
 
 std::regex const &TokenTemplate::getRegex(void) { return regTemplate; }

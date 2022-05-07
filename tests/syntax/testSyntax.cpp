@@ -4,7 +4,7 @@
 
 #include "List.hpp"
 #include "Lexer.hpp"
-#include "Syntax.hpp"
+#include "PascalSyntax.hpp"
 #include "SyntExp.hpp"
 #include "AST.hpp"
 #include "PascalRules.hpp"
@@ -37,7 +37,7 @@ TEST(SYNTAX, PASCAL_SIMPLE){
     };
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS1.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
     checkEqSyn(root.get(), checkData);
 }
@@ -92,7 +92,7 @@ TEST(SYNTAX, PASCAL_MEDIUM){
     };
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS2.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
     checkEqSyn(root.get(), checkData);
 }
@@ -103,7 +103,7 @@ TEST(SYNTAX, PASCAL_MEDIUM_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS3.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
@@ -112,7 +112,7 @@ TEST(SYNTAX, PASCAL_THROW_1){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS4.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
@@ -121,7 +121,7 @@ TEST(SYNTAX, PASCAL_THROW_2){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS5.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
@@ -130,7 +130,7 @@ TEST(SYNTAX, PASCAL_THROW_3){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS6.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     EXPECT_THROW(syntax.analyzeTokens(), SyntaxException);
 }
 
@@ -181,7 +181,7 @@ TEST(SYNTAX, PASCAL_1){
     };
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS7.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
     checkEqSyn(root.get(), checkData);
 }
@@ -244,7 +244,7 @@ TEST(SYNTAX, PASCAL_2){
     };
     List<Token> tokens = lexer.analyzeFile("./build/tests/textS8.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
     checkEqSyn(root.get(), checkData);
 }

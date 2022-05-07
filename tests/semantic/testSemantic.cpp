@@ -4,7 +4,7 @@
 
 #include "List.hpp"
 #include "Lexer.hpp"
-#include "Syntax.hpp"
+#include "PascalSyntax.hpp"
 #include "SyntExp.hpp"
 #include "AST.hpp"
 #include "PascalRules.hpp"
@@ -16,7 +16,7 @@ TEST(SEMANTIC, PASCAL_1_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM1.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -29,7 +29,7 @@ TEST(SEMANTIC, PASCAL_2_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM2.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -42,7 +42,7 @@ TEST(SEMANTIC, PASCAL_3_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM3.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -55,7 +55,7 @@ TEST(SEMANTIC, PASCAL_4_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM4.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -68,7 +68,7 @@ TEST(SEMANTIC, PASCAL_5_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM5.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -81,7 +81,7 @@ TEST(SEMANTIC, PASCAL_6_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM6.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;
@@ -94,7 +94,7 @@ TEST(SEMANTIC, PASCAL_7_THROW){
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile("./build/tests/textM7.txt");
 
-    SyntaxAnalyzer syntax(tokens);
+    PascalSyntaxAnalyzer syntax(tokens);
     std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     SemanticVisitor semantic;

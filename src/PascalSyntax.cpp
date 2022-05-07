@@ -1,14 +1,18 @@
-#include "Syntax.hpp"
+#include "PascalSyntax.hpp"
 
 #include <fmt/format.h>
 
 #include "ASTFactory.hpp"
 #include "SyntExp.hpp"
+#include "Syntax.hpp"
 #include "supAlgs.hpp"
 
-SyntaxAnalyzer::SyntaxAnalyzer(List<Token> const &tokens) : tokens(tokens){};
+PascalSyntaxAnalyzer::PascalSyntaxAnalyzer(){}
 
-std::unique_ptr<IAST> SyntaxAnalyzer::analyzeTokens(void) {
+PascalSyntaxAnalyzer::PascalSyntaxAnalyzer(List<Token> const &tokens)
+    : tokens(tokens) {}
+
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::analyzeTokens(void) {
     std::unique_ptr<IAST> root = std::move(syntaxProgram());
     if (getCurTok().getType() != IToken::ENDOFSTREAM)
         throw SyntaxException(getCurTok(),
@@ -17,7 +21,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::analyzeTokens(void) {
     return root;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxProgram(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxProgram(void) {
     /* syntaxProgram ::= 'PROGRAM' 'ID' ';' syntaxBlock '.'  */
     eat(IToken::PROGRAM);
     Token &nameTok = getCurTok();
@@ -38,7 +42,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxProgram(void) {
                                  std::move(blockPTR));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxFuncDef(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxFuncDef(void) {
     Token funcTok = getCurTok();
     if (funcTok.getType() == IToken::FUNCTION)
         eat(IToken::FUNCTION);
@@ -72,7 +76,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxFuncDef(void) {
                                  std::move(body));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxBlock(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxBlock(void) {
     /* syntaxBlock ::= syntaxConsts* syntaxVars* syntaxCompoundSt */
     std::vector<std::unique_ptr<IAST>> constsList = syntaxConsts();
     std::vector<std::unique_ptr<IAST>> declsList = syntaxVars();
@@ -82,7 +86,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxBlock(void) {
                                  std::move(compoundPTR));
 }
 
-std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxConsts(void) {
+std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxConsts(void) {
     /* syntaxConsts ::= 'CONST' (syntaxConstDecl ';')+ */
     std::vector<std::unique_ptr<IAST>> constsList;
     if (getCurTok().getType() == IToken::CONST) {
@@ -95,7 +99,7 @@ std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxConsts(void) {
     return constsList;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxConstDecl(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxConstDecl(void) {
     /* syntaxConstDecl ::= '<ID>' '='
      * ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>') */
     Token &tok = getCurTok();
@@ -113,7 +117,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxConstDecl(void) {
                                  std::move(constValPTR));
 }
 
-std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxVars(void) {
+std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxVars(void) {
     /* syntaxVars ::= 'VAR' (syntaxVarDecl ';')+ */
     std::vector<std::unique_ptr<IAST>> declsList;
     if (getCurTok().getType() == IToken::VAR) {
@@ -128,7 +132,7 @@ std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxVars(void) {
     return declsList;
 }
 
-std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxVarDecl(void) {
+std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxVarDecl(void) {
     /* syntaxVarDecl ::= ('<ID>' ','*)+ ':' syntaxTypeSpec */
     std::vector<std::unique_ptr<IAST>> varsList;
     Token &tok = getCurTok();
@@ -156,7 +160,7 @@ std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxVarDecl(void) {
     return varDeclsList;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxTypeSpec(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxTypeSpec(void) {
     /* syntaxTypeSpec ::= ('integer'|'real'|'string'|'array' '['
      * '<INTEGER_CONST>' '..' '<INTEGER_CONST>' ']' of syntaxTypeSpec) */
     Token typeTok = getCurTok();
@@ -181,7 +185,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxTypeSpec(void) {
     }
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxCompoundSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxCompoundSt(void) {
     /* syntaxCompoundSt ::= 'BEGIN' (syntaxSt ';')* 'END' */
     Token beginTok = getCurTok();
     beginTok.setAdvType(IToken::AdvType::COMPOUND);
@@ -192,7 +196,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxCompoundSt(void) {
     return ASTFactory::createAST(beginTok, std::move(stList));
 }
 
-std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxStList(void) {
+std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxStList(void) {
     std::unique_ptr<IAST> stPTR = syntaxSt();
 
     std::vector<std::unique_ptr<IAST>> stList;
@@ -209,7 +213,7 @@ std::vector<std::unique_ptr<IAST>> SyntaxAnalyzer::syntaxStList(void) {
     return stList;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxSt(void) {
     /* syntaxSt ::=
      * (syntaxCompoundSt|'<ID>'(syntaxAssignSt|syntaxCallSt)|syntaxWhileSt|syntaxIfSt|syntaxEmptySt)
      */
@@ -241,12 +245,12 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSt(void) {
     }
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxEmptySt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxEmptySt(void) {
     /* syntaxEmptySt ::= '$NONE$' */
     return ASTFactory::createAST({"", IToken::EMPTY, IToken::UNKNOWN});
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxAssignSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxAssignSt(void) {
     /* syntaxAssignSt ::= syntaxVariable ':=' syntaxExpr */
     std::unique_ptr<IAST> lValue;
     if (lookFoward().getType() == IToken::LSQBRACKET)
@@ -261,7 +265,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxAssignSt(void) {
                                  std::move(toAssign));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxIfSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxIfSt(void) {
     /* syntaxIfSt ::= 'IF' syntaxExpr 'THEN' syntaxSt ('ELSE' syntaxSt)? */
     Token ifTok = getCurTok();
     eat(IToken::IF);
@@ -279,7 +283,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxIfSt(void) {
                                  std::move(bodyPTR), std::move(elseBodyPTR));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxWhileSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxWhileSt(void) {
     /* syntaxWhileSt ::= 'WHILE' syntaxExpr 'DO' syntaxExpr */
     Token whileTok = getCurTok();
     eat(IToken::WHILE);
@@ -290,7 +294,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxWhileSt(void) {
                                  std::move(bodyPTR));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxForSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxForSt(void) {
     /* syntaxForSt ::= 'for' syntaxIter 'do' syntaxSt */
     Token token = getCurTok();
     eat(IToken::FOR);
@@ -300,7 +304,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxForSt(void) {
     return ASTFactory::createAST(token, std::move(iterSt), std::move(body));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxCallSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxCallSt(void) {
     /* syntaxCallSt ::= '<ID>' '(' (syntaxExpr ','*)* ')' */
     Token &nameTok = getCurTok();
     nameTok.setAdvType(IToken::FUNCTION_NAME);
@@ -321,14 +325,14 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxCallSt(void) {
     return ASTFactory::createAST(nameTok, std::move(paramsList));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxReturnSt(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxReturnSt(void) {
     Token retTok = getCurTok();
     eat(IToken::RETURN);
     std::unique_ptr<IAST> toReturn = std::move(syntaxExpr());
     return ASTFactory::createAST(retTok, std::move(toReturn));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxVariable(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxVariable(void) {
     /* syntaxVariable ::= '<ID>' */
     getCurTok().setAdvType(IToken::VAR_NAME);
     std::unique_ptr<IAST> varPTR = ASTFactory::createAST(getCurTok());
@@ -336,7 +340,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxVariable(void) {
     return varPTR;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSelect(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxSelect(void) {
     Token tok = getCurTok();
     tok.setAdvType(IToken::SELECT);
     std::unique_ptr<IAST> var = std::move(syntaxVariable());
@@ -356,7 +360,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSelect(void) {
                                  std::move(selections[selections.size() - 1]));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxExpr(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxExpr(void) {
     /* syntaxExpr ::= syntaxSimpleExpr (('<'|'<='|'<>'|'='|'>'|'>=')
      * syntaxSimpleExr)? */
     std::unique_ptr<IAST> simpleExprPTR = syntaxSimpleExpr();
@@ -378,7 +382,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxExpr(void) {
     //        magic_enum::enum_name(getCurTok().getType())));
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSimpleExpr(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxSimpleExpr(void) {
     /* syntaxSimpleExpr ::= syntaxTerm (('+'|'-'|'OR') syntaxTerm)? */
     std::unique_ptr<IAST> termPTR = syntaxTerm();
 
@@ -394,7 +398,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxSimpleExpr(void) {
     return termPTR;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxTerm(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxTerm(void) {
     /* syntaxTerm ::= syntaxFactor (('/'|'*'|'DIV'|'MOD'|'AND') syntaxFactor)?
      */
     std::unique_ptr<IAST> factorPTR = syntaxFactor();
@@ -411,7 +415,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxTerm(void) {
     return factorPTR;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxFactor(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxFactor(void) {
     /* syntaxFactor ::= ('<INTEGER_CONST>'|'<REAL_CONST>'|'<STRING_CONST>'
         |'(' syntaxExpr ')'
         |'+' syntaxFactor| '-' syntaxFactor
@@ -453,7 +457,7 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxFactor(void) {
     return nullptr;
 }
 
-std::unique_ptr<IAST> SyntaxAnalyzer::syntaxIter(void) {
+std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxIter(void) {
     /* syntaxIter ::= syntaxAssignSt ('to'|'down to')
      * ('<INTEGER_CONST>'|syntaxVariable) */
     Token varTok = getCurTok();
@@ -493,17 +497,17 @@ std::unique_ptr<IAST> SyntaxAnalyzer::syntaxIter(void) {
                                  std::move(postAction));
 }
 
-void SyntaxAnalyzer::getNextToken(void) { currentIndex++; }
+void PascalSyntaxAnalyzer::getNextToken(void) { currentIndex++; }
 
-Token &SyntaxAnalyzer::getCurTok(void) { return tokens[currentIndex]; }
+Token &PascalSyntaxAnalyzer::getCurTok(void) { return tokens[currentIndex]; }
 
-Token &SyntaxAnalyzer::lookFoward(void) {
+Token &PascalSyntaxAnalyzer::lookFoward(void) {
     if (currentIndex + 1 >= tokens.size())
         throw std::invalid_argument("Неожиданный конец файла!");
     return tokens[currentIndex + 1];
 }
 
-void SyntaxAnalyzer::eat(IToken::Type const type) {
+void PascalSyntaxAnalyzer::eat(IToken::Type const type) {
     if (getCurTok().getType() == type) {
         getNextToken();
     } else {
@@ -515,7 +519,7 @@ void SyntaxAnalyzer::eat(IToken::Type const type) {
     }
 }
 
-void SyntaxAnalyzer::eatAdv(IToken::AdvType const type) {
+void PascalSyntaxAnalyzer::eatAdv(IToken::AdvType const type) {
     if (getCurTok().getAdvType() == type) {
         getNextToken();
     } else {
@@ -527,4 +531,7 @@ void SyntaxAnalyzer::eatAdv(IToken::AdvType const type) {
     }
 }
 
-List<Token> SyntaxAnalyzer::getTokens(void) { return tokens; }
+List<Token> PascalSyntaxAnalyzer::getTokens(void) { return tokens; }
+void PascalSyntaxAnalyzer::setTokens(List<Token> const &newTokens) {
+    tokens = newTokens;
+}

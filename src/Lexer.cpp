@@ -71,7 +71,6 @@ List<Token> Lexer::analyzeProgramText(std::string const &text) {
                 std::sregex_iterator(text.begin() + position, text.end(), r);
             auto wordsEnd = std::sregex_iterator();
             if (wordsBegin != wordsEnd) {
-                // std::cout << wordsBegin->str() << "\n";
                 std::string word = getTrimmed(wordsBegin->str());
                 if (wordsBegin->str().size() > len) {
                     len = wordsBegin->str().size();
@@ -85,14 +84,12 @@ List<Token> Lexer::analyzeProgramText(std::string const &text) {
                 }
             }
         }
-        // std::cout << position << " " << len << " " << offset << " ||| " <<
-        // text.size() << "\n";
         if (matched.getType() != IToken::NEWLINE &&
             matched.getStr().size() == 0)
             throw LexerException(matched, "Неизвестный токен!");
         position = position + len;
         inLineNum += len;
-        // std::cout << matched.getInfo() << "\n\n";
+
         if (matched.getType() != IToken::NEWLINE &&
             matched.getType() != IToken::COMMENT)
             tokens.pushBack(matched);
