@@ -18,7 +18,7 @@ class AnalyzeException : public std::exception {
    public:
     AnalyzeException(Token errorTok, std::string msg);
 
-    const char *what() const throw();
+    char const *what() const throw();
 
    protected:
     std::string msg;

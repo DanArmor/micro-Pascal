@@ -1,6 +1,13 @@
 #ifndef _INC_SYNTAX_H
 #define _INC_SYNTAX_H
 
+/**
+ * @file Syntax.hpp
+ * @author DanArmor
+ * @brief Интерфейс синтаксического анализатора
+ * @version 1.0
+ */
+
 #include <memory>
 
 #include "ASTclasses.hpp"

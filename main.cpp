@@ -21,7 +21,7 @@ void analyzePascalProgram(std::string fileName) {
 
 int main(int argc, char** argv) {
     if (argc != 2) {
-        std::cout << "Пожалуйста, введите только\033[31m название исходного "
+        std::cout << "Пожалуйсrа, введите только\033[31m название исходного "
                      "файла\33[0m для разбора после названия программы\n.";
         exit(1);
     }

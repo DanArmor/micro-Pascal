@@ -19,7 +19,7 @@
 /// @brief Посетителя для построения графического отображения ДАС
 class GraphvizVisitor : public IVisitor {
    public:
-    GraphvizVisitor(std::string filename);
+    explicit GraphvizVisitor(std::string filename);
 
     void visit(ProgramAST &node);
 
