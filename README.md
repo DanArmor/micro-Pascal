@@ -53,6 +53,7 @@ https://danarmor.github.io/micro-Pascal/ - ссылка на актуальну�
 * [Valgrind](https://valgrind.org/) - для проверок на утечки памяти
 * [Google tests](https://github.com/google/googletest) - тестирование
 * [Codacy](https://codacy.com/) - анализ кода
+* [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) - форматирование кода
 
 ### Синтаксические диаграммы:
 ![Изображение схемы синтаксиса](forReadme/diagram.svg)
