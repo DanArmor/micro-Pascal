@@ -3,12 +3,12 @@
 
 #include <memory>
 
-#include "List.hpp"
 #include "ASTclasses.hpp"
+#include "List.hpp"
 #include "Token.hpp"
 
-class SyntaxAnalyzer {
-    public:
+class ISyntaxAnalyzer {
+   public:
     virtual std::unique_ptr<IAST> analyzeTokens(void) = 0;
     virtual void setTokens(List<Token> const &newTokens) = 0;
     virtual List<Token> getTokens(void) = 0;

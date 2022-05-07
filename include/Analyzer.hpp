@@ -17,7 +17,7 @@
 #include "Token.hpp"
 class Analyzer {
    public:
-    Analyzer(std::unique_ptr<SyntaxAnalyzer> syntax,
+    Analyzer(std::unique_ptr<ISyntaxAnalyzer> syntax,
              List<TokenTemplate> templates);
 
     void addVisitor(std::unique_ptr<IVisitor> visitor);
@@ -29,7 +29,7 @@ class Analyzer {
    protected:
     Lexer lexer;
     std::vector<std::unique_ptr<IVisitor>> visitorsToRun;
-    std::unique_ptr<SyntaxAnalyzer> syntax;
+    std::unique_ptr<ISyntaxAnalyzer> syntax;
 };
 
 #endif

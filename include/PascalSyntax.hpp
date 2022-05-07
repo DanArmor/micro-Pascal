@@ -17,7 +17,7 @@
 #include "magic_enum.hpp"
 
 /// @brief Класс синтаксического анализатора
-class PascalSyntaxAnalyzer : public SyntaxAnalyzer {
+class PascalSyntaxAnalyzer : public ISyntaxAnalyzer {
    public:
     PascalSyntaxAnalyzer();
     explicit PascalSyntaxAnalyzer(List<Token> const &tokens);

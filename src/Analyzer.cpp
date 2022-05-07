@@ -12,7 +12,7 @@
 #include "List.hpp"
 #include "Syntax.hpp"
 
-Analyzer::Analyzer(std::unique_ptr<SyntaxAnalyzer> syntax,
+Analyzer::Analyzer(std::unique_ptr<ISyntaxAnalyzer> syntax,
                    List<TokenTemplate> templates)
     : syntax(std::move(syntax)) {
     lexer.setTemplates(templates);
