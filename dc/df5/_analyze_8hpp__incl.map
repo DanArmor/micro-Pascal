@@ -1,13 +1,13 @@
 <map id="include/Analyze.hpp" name="include/Analyze.hpp">
-<area shape="rect" id="node1" title="Функции анализа кода на языке Pascal." alt="" coords="497,5,633,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="577,155,632,181"/>
-<area shape="rect" id="node3" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="304,80,372,107"/>
-<area shape="rect" id="node10" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="602,80,685,107"/>
+<area shape="rect" id="node1" title="Функции анализа кода на языке Pascal." alt="" coords="498,5,634,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="579,155,633,181"/>
+<area shape="rect" id="node3" href="$dc/d72/_list_8hpp.html" title="Двусвязный список &#45; интерфейс" alt="" coords="308,80,376,107"/>
+<area shape="rect" id="node10" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="603,80,686,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,155,71,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="95,155,191,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="215,155,274,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="299,155,377,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="401,155,464,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="488,155,553,181"/>
-<area shape="rect" id="node11" title=" " alt="" coords="657,155,710,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="216,155,279,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="303,155,381,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="406,155,465,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="489,155,555,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="658,155,711,181"/>
 </map>

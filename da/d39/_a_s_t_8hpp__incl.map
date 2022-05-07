@@ -1,9 +1,9 @@
 <map id="include/AST.hpp" name="include/AST.hpp">
-<area shape="rect" id="node1" title="Узлы ДАС" alt="" coords="100,5,217,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,80,157,107"/>
-<area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="201,155,284,181"/>
-<area shape="rect" id="node7" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="232,80,349,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="177,229,231,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="256,229,309,256"/>
+<area shape="rect" id="node1" title="Узлы ДАС" alt="" coords="125,5,242,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="98,80,157,107"/>
+<area shape="rect" id="node4" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="181,80,298,107"/>
+<area shape="rect" id="node5" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="246,155,329,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="222,229,275,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="300,229,355,256"/>
 </map>

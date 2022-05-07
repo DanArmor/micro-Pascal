@@ -1,12 +1,9 @@
 <map id="include/AST.hpp" name="include/AST.hpp">
-<area shape="rect" id="node1" title="Узлы ДАС" alt="" coords="475,5,593,32"/>
-<area shape="rect" id="node2" href="$db/d42/_visitor_8hpp.html" title="Посетители для обхода ДАС" alt="" coords="289,80,417,107"/>
-<area shape="rect" id="node4" href="$d3/d0a/_analyze_8cpp.html" title=" " alt="" coords="5,237,119,263"/>
-<area shape="rect" id="node6" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="307,237,521,263"/>
-<area shape="rect" id="node7" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="545,237,726,263"/>
-<area shape="rect" id="node8" href="$dc/d65/_visitor_8cpp.html" title=" " alt="" coords="391,155,496,181"/>
-<area shape="rect" id="node9" href="$d0/d91/_a_s_t_8cpp.html" title=" " alt="" coords="623,80,717,107"/>
-<area shape="rect" id="node10" href="$d4/dfc/_a_s_t_factory_8cpp.html" title=" " alt="" coords="741,80,879,107"/>
-<area shape="rect" id="node3" href="$db/dfd/_pascal_rules_8hpp.html" title="Правила языка Паскаль" alt="" coords="151,155,315,181"/>
-<area shape="rect" id="node5" href="$d0/d0f/test_lexer__1_8cpp.html" title=" " alt="" coords="143,229,283,271"/>
+<area shape="rect" id="node1" title="Узлы ДАС" alt="" coords="350,5,467,32"/>
+<area shape="rect" id="node2" href="$d0/d91/_a_s_t_8cpp.html" title=" " alt="" coords="5,80,100,107"/>
+<area shape="rect" id="node3" href="$d4/dfc/_a_s_t_factory_8cpp.html" title=" " alt="" coords="124,80,261,107"/>
+<area shape="rect" id="node4" href="$d3/d0a/_analyze_8cpp.html" title=" " alt="" coords="285,80,399,107"/>
+<area shape="rect" id="node5" href="$dc/d65/_visitor_8cpp.html" title=" " alt="" coords="423,80,528,107"/>
+<area shape="rect" id="node6" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="553,80,766,107"/>
+<area shape="rect" id="node7" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="790,80,971,107"/>
 </map>

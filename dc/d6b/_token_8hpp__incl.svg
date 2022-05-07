@@ -12,8 +12,8 @@
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Классы для работы с токенами анализатора">
-<polygon fill="#bfbfbf" stroke="black" points="2,-56.5 2,-75.5 97,-75.5 97,-56.5 2,-56.5"/>
-<text text-anchor="middle" x="49.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">include/Token.hpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="1.5,-56.5 1.5,-75.5 96.5,-75.5 96.5,-56.5 1.5,-56.5"/>
+<text text-anchor="middle" x="49" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">include/Token.hpp</text>
 </a>
 </g>
 </g>
@@ -21,31 +21,31 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-0.5 0,-19.5 41,-19.5 41,-0.5 0,-0.5"/>
-<text text-anchor="middle" x="20.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
+<polygon fill="none" stroke="#bfbfbf" points="0,-0.5 0,-19.5 40,-19.5 40,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="20" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">regex</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M44.71,-56.08C40.74,-48.69 34.97,-37.95 30.07,-28.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="33.01,-26.91 25.2,-19.75 26.85,-30.22 33.01,-26.91"/>
+<path fill="none" stroke="midnightblue" d="M44.21,-56.08C40.24,-48.69 34.47,-37.95 29.57,-28.81"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="32.51,-26.91 24.7,-19.75 26.35,-30.22 32.51,-26.91"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="59.5,-0.5 59.5,-19.5 99.5,-19.5 99.5,-0.5 59.5,-0.5"/>
-<text text-anchor="middle" x="79.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">regex</text>
+<polygon fill="none" stroke="#bfbfbf" points="58.5,-0.5 58.5,-19.5 99.5,-19.5 99.5,-0.5 58.5,-0.5"/>
+<text text-anchor="middle" x="79" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M54.45,-56.08C58.6,-48.61 64.65,-37.72 69.77,-28.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="72.84,-30.19 74.64,-19.75 66.72,-26.79 72.84,-30.19"/>
+<path fill="none" stroke="midnightblue" d="M53.95,-56.08C58.1,-48.61 64.15,-37.72 69.27,-28.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="72.34,-30.19 74.14,-19.75 66.22,-26.79 72.34,-30.19"/>
 </g>
 </g>
 </svg>

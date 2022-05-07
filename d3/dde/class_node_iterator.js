@@ -2,8 +2,8 @@ var class_node_iterator =
 [
     [ "difference_type", "d3/dde/class_node_iterator.html#ad18e6b2db7e7e7ef63728e1ea19424eb", null ],
     [ "iterator_category", "d3/dde/class_node_iterator.html#a608609270f5e8a99d0e58fcd7b54a75b", null ],
-    [ "pointer", "d3/dde/class_node_iterator.html#a333820833a4a4cfe0407461eac7adff5", null ],
-    [ "reference", "d3/dde/class_node_iterator.html#ae76974257caee541bdd1deafbaf069ab", null ],
+    [ "pointer", "d3/dde/class_node_iterator.html#abd461342ece41e96efb24cb21f6883f6", null ],
+    [ "reference", "d3/dde/class_node_iterator.html#a56f09e99f92c85d72b5a8d07c371927e", null ],
     [ "value_type", "d3/dde/class_node_iterator.html#ac7c563ab9312af9ff52b1e1e7eb30994", null ],
     [ "NodeIterator", "d3/dde/class_node_iterator.html#abfe3e1e58b9609be1273a650913e73a6", null ],
     [ "NodeIterator", "d3/dde/class_node_iterator.html#a3f94d25a54367487ef817f5b2168ef45", null ],

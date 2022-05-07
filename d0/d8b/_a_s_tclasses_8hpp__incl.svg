@@ -36,8 +36,8 @@
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="11.5,-0.5 11.5,-19.5 52.5,-19.5 52.5,-0.5 11.5,-0.5"/>
-<text text-anchor="middle" x="32" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
+<polygon fill="none" stroke="#bfbfbf" points="12,-0.5 12,-19.5 52,-19.5 52,-0.5 12,-0.5"/>
+<text text-anchor="middle" x="32" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">regex</text>
 </a>
 </g>
 </g>
@@ -51,8 +51,8 @@
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="71,-0.5 71,-19.5 111,-19.5 111,-0.5 71,-0.5"/>
-<text text-anchor="middle" x="91" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">regex</text>
+<polygon fill="none" stroke="#bfbfbf" points="70.5,-0.5 70.5,-19.5 111.5,-19.5 111.5,-0.5 70.5,-0.5"/>
+<text text-anchor="middle" x="91" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">string</text>
 </a>
 </g>
 </g>

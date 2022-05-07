@@ -118,8 +118,6 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
 Открытые члены</h2></td></tr>
 <tr class="memitem:aa4e8534e7478ad3fed1904b669a17363"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7c/class_analyze_exception.html#aa4e8534e7478ad3fed1904b669a17363">AnalyzeException</a> (<a class="el" href="../../db/dc1/class_token.html">Token</a> <a class="el" href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">errorTok</a>, std::string <a class="el" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>)</td></tr>
 <tr class="separator:aa4e8534e7478ad3fed1904b669a17363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab59a7a9c2abaf49552608af56c33e6ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7c/class_analyze_exception.html#ab59a7a9c2abaf49552608af56c33e6ed">~AnalyzeException</a> ()</td></tr>
-<tr class="separator:ab59a7a9c2abaf49552608af56c33e6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb9e7b4c255d5ce1b90e517afd948fd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d7c/class_analyze_exception.html#adcb9e7b4c255d5ce1b90e517afd948fd">what</a> () const  throw ()</td></tr>
 <tr class="separator:adcb9e7b4c255d5ce1b90e517afd948fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -162,12 +160,12 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
 </div><div class="memdoc">
 
 <p class="definition">См. определение в файле <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html">SyntExp.cpp</a> строка <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html#l00011">11</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                                                   : <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">errorTok</a>(<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">errorTok</a>), <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>(<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>){</div>
-<div class="line"><span class="lineno">   12</span>    this-&gt;<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a> = <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a> + errorTok.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   13</span>};</div>
-<div class="ttc" id="aclass_analyze_exception_html_a4d2dc3bed0b418bdc2e71c925089ed11"><div class="ttname"><a href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">AnalyzeException::errorTok</a></div><div class="ttdeci">Token errorTok</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00027">SyntExp.hpp:27</a></div></div>
-<div class="ttc" id="aclass_analyze_exception_html_a4f0f8af3302ed2982eadafaeaf5189fa"><div class="ttname"><a href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">AnalyzeException::msg</a></div><div class="ttdeci">std::string msg</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00026">SyntExp.hpp:26</a></div></div>
-<div class="ttc" id="aclass_token_html_ab9a75d3f89e77051d87462654e7576de"><div class="ttname"><a href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">Token::getInfo</a></div><div class="ttdeci">std::string getInfo(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00067">Token.cpp:67</a></div></div>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>    : <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">errorTok</a>(<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">errorTok</a>), <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>(<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>) {</div>
+<div class="line"><span class="lineno">   14</span>    this-&gt;<a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a> = <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a> + errorTok.<a class="code hl_function" href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">getInfo</a>() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   15</span>};</div>
+<div class="ttc" id="aclass_analyze_exception_html_a4d2dc3bed0b418bdc2e71c925089ed11"><div class="ttname"><a href="../../df/d7c/class_analyze_exception.html#a4d2dc3bed0b418bdc2e71c925089ed11">AnalyzeException::errorTok</a></div><div class="ttdeci">Token errorTok</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00025">SyntExp.hpp:25</a></div></div>
+<div class="ttc" id="aclass_analyze_exception_html_a4f0f8af3302ed2982eadafaeaf5189fa"><div class="ttname"><a href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">AnalyzeException::msg</a></div><div class="ttdeci">std::string msg</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dbf/_synt_exp_8hpp_source.html#l00024">SyntExp.hpp:24</a></div></div>
+<div class="ttc" id="aclass_token_html_ab9a75d3f89e77051d87462654e7576de"><div class="ttname"><a href="../../db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de">Token::getInfo</a></div><div class="ttdeci">std::string getInfo(void) const</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/db6/_token_8cpp_source.html#l00051">Token.cpp:51</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -177,26 +175,6 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
 </div>
 </div>
 
-</div>
-</div>
-<a id="ab59a7a9c2abaf49552608af56c33e6ed" name="ab59a7a9c2abaf49552608af56c33e6ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab59a7a9c2abaf49552608af56c33e6ed">&#9670;&nbsp;</a></span>~AnalyzeException()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AnalyzeException::~AnalyzeException </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html">SyntExp.cpp</a> строка <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html#l00015">15</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{};</div>
-</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
@@ -221,10 +199,8 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html">SyntExp.cpp</a> строка <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html#l00017">17</a></p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                                {</div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>.c_str();</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html">SyntExp.cpp</a> строка <a class="el" href="../../d0/d66/_synt_exp_8cpp_source.html#l00018">18</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d7c/class_analyze_exception.html#a4f0f8af3302ed2982eadafaeaf5189fa">msg</a>.c_str(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -249,7 +225,7 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a> строка <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html#l00027">27</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a> строка <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html#l00025">25</a></p>
 
 </div>
 </div>
@@ -273,7 +249,7 @@ $(document).ready(function(){initNavTree('df/d7c/class_analyze_exception.html','
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a> строка <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html#l00026">26</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html">SyntExp.hpp</a> строка <a class="el" href="../../da/dbf/_synt_exp_8hpp_source.html#l00024">24</a></p>
 
 </div>
 </div>

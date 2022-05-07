@@ -1,7 +1,7 @@
 <map id="include/SyntExp.hpp" name="include/SyntExp.hpp">
-<area shape="rect" id="node1" title="Исключения анализатора" alt="" coords="5,5,144,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="22,155,77,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="35,80,114,107"/>
-<area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="139,80,221,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="153,155,207,181"/>
+<area shape="rect" id="node1" title="Исключения анализатора" alt="" coords="53,5,191,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="95,155,149,181"/>
+<area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="159,80,242,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="174,155,227,181"/>
 </map>
