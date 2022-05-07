@@ -24,8 +24,8 @@ std::unique_ptr<IAST> PascalSyntaxAnalyzer::analyzeTokens(void) {
 std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxProgram(void) {
     /* syntaxProgram ::= 'program' '<ID>' ';' (syntaxFuncDef)? syntaxBlock '.'  */
     eat(BaseToken::PROGRAM);
-    Token &nameTok = getCurTok();
-    nameTok.setAdvType(BaseToken::PROGRAM_NAME);
+    getCurTok().setAdvType(BaseToken::PROGRAM_NAME);
+    Token nameTok = getCurTok();
 
     eat(BaseToken::ID);
     eat(BaseToken::SEMI);
@@ -103,8 +103,7 @@ std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxConsts(void) {
 
 std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxConstDecl(void) {
     /* syntaxConstDecl ::= '<ID>' '=' syntaxExpr */
-    Token &tok = getCurTok();
-    tok.setAdvType(BaseToken::VAR_NAME);
+    getCurTok().setAdvType(BaseToken::VAR_NAME);
     std::unique_ptr<IAST> constNamePTR = ASTFactory::createAST(getCurTok());
     eat(BaseToken::ID);
     eat(BaseToken::EQ);
@@ -113,7 +112,6 @@ std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxConstDecl(void) {
     std::unique_ptr<IAST> constValPTR = syntaxExpr();
 
     constValTok.setAdvType(BaseToken::AdvType::CONSTDECL);
-
     return ASTFactory::createAST(constValTok, std::move(constNamePTR),
                                  std::move(constValPTR));
 }
@@ -136,15 +134,15 @@ std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxVars(void) {
 std::vector<std::unique_ptr<IAST>> PascalSyntaxAnalyzer::syntaxVarDecl(void) {
     /* '<ID>' (',' '<ID>')* ':' syntaxTypeSpec */
     std::vector<std::unique_ptr<IAST>> varsList;
-    Token &tok = getCurTok();
-    tok.setAdvType(BaseToken::VAR_NAME);
+    getCurTok().setAdvType(BaseToken::VAR_NAME);
+    Token tok = getCurTok();
     varsList.emplace_back(ASTFactory::createAST(tok));
     eat(BaseToken::ID);
 
     while (getCurTok().getType() == BaseToken::COMMA) {
         eat(BaseToken::COMMA);
-        Token &tok = getCurTok();
-        tok.setAdvType(BaseToken::VAR_NAME);
+        getCurTok().setAdvType(BaseToken::VAR_NAME);
+        Token tok = getCurTok();
         varsList.emplace_back(ASTFactory::createAST(tok));
         eat(BaseToken::ID);
     }
@@ -314,8 +312,8 @@ std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxForSt(void) {
 std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxCallSt(void) {
     /* syntaxCallSt ::= 
         '<ID>' '(' (syntaxExpr (',' syntaxExpr)*)? ')' */
-    Token &nameTok = getCurTok();
-    nameTok.setAdvType(BaseToken::FUNCTION_NAME);
+    getCurTok().setAdvType(BaseToken::FUNCTION_NAME);
+    Token nameTok = getCurTok();
     eat(BaseToken::ID);
     eat(BaseToken::LPAREN);
     std::vector<std::unique_ptr<IAST>> paramsList;
