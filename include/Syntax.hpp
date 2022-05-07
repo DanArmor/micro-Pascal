@@ -7,6 +7,7 @@
 #include "List.hpp"
 #include "Token.hpp"
 
+/// @brief Интерфейс синтаксических анализаторов
 class ISyntaxAnalyzer {
    public:
     virtual std::unique_ptr<IAST> analyzeTokens(void) = 0;

@@ -2,9 +2,9 @@
 #define __INC_PASCALSYNTAX_H
 
 /**
- * @file Syntax.hpp
+ * @file PascalSyntax.hpp
  * @author DanArmor (https://github.com/DanArmor)
- * @brief Синтаксический анализатор
+ * @brief Синтаксический анализатор программ на языке micro-Pascal
  * @version 1.0
  */
 
@@ -16,7 +16,7 @@
 #include "Token.hpp"
 #include "magic_enum.hpp"
 
-/// @brief Класс синтаксического анализатора
+/// @brief Класс синтаксического анализатора micro-Pascal
 class PascalSyntaxAnalyzer : public ISyntaxAnalyzer {
    public:
     PascalSyntaxAnalyzer();

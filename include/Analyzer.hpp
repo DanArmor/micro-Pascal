@@ -15,6 +15,9 @@
 #include "List.hpp"
 #include "Syntax.hpp"
 #include "Token.hpp"
+
+/// @brief Анализатор программ. Объединяет в себе лексический, синтаксический анализ
+/// и работу с посетителями.
 class Analyzer {
    public:
     Analyzer(std::unique_ptr<ISyntaxAnalyzer> syntax,
