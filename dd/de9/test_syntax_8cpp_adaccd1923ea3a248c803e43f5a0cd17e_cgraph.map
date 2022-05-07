@@ -1,52 +1,52 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест синтаксического анализа Паскаля, средний текст" alt="" coords="5,1333,60,1359"/>
-<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="666,15,790,42"/>
-<area shape="rect" id="node12" href="$d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="117,1282,319,1309"/>
-<area shape="rect" id="node46" href="$dd/de9/test_syntax_8cpp.html#a7a96a8629730ff61586d57fe617bae27" title=" " alt="" coords="171,1333,265,1359"/>
-<area shape="rect" id="node49" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,1383,328,1410"/>
-<area shape="rect" id="node50" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="149,1434,287,1461"/>
-<area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="2603,649,2781,675"/>
-<area shape="rect" id="node4" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="2867,598,2948,625"/>
-<area shape="rect" id="node5" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="2849,649,2966,675"/>
-<area shape="rect" id="node6" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="2872,699,2943,726"/>
-<area shape="rect" id="node7" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="2858,2090,2957,2117"/>
-<area shape="rect" id="node8" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title="Возвращает строку, у которой убраны пустые символы в начале и конце" alt="" coords="2843,750,2972,777"/>
-<area shape="rect" id="node9" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="2850,1990,2965,2017"/>
-<area shape="rect" id="node10" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="2853,547,2961,574"/>
-<area shape="rect" id="node11" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="3024,547,3172,574"/>
-<area shape="rect" id="node13" href="$d0/dfe/class_syntax_analyzer.html#a3ae6c7319e61cd669c417f189b098374" title=" " alt="" coords="2604,699,2780,726"/>
-<area shape="rect" id="node14" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="376,1282,579,1309"/>
-<area shape="rect" id="node15" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="2387,1965,2545,1991"/>
-<area shape="rect" id="node22" href="$d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2399,1206,2533,1233"/>
-<area shape="rect" id="node24" href="$d3/da8/sup_algs_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="2445,471,2487,498"/>
-<area shape="rect" id="node25" href="$d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7" title="Устанавливает дополнительный тип токена" alt="" coords="2165,2066,2302,2093"/>
-<area shape="rect" id="node26" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="877,1282,1064,1309"/>
-<area shape="rect" id="node45" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="627,1661,829,1687"/>
-<area shape="rect" id="node16" href="$d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" title=" " alt="" coords="2839,2217,2976,2243"/>
-<area shape="rect" id="node17" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="2640,2293,2744,2319"/>
-<area shape="rect" id="node21" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="2643,1939,2741,1966"/>
-<area shape="rect" id="node18" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="2865,2267,2949,2294"/>
-<area shape="rect" id="node19" href="$db/dc1/class_token.html#a715f99ebacdd636c283d15dc8656631c" title=" " alt="" coords="2865,2318,2950,2345"/>
-<area shape="rect" id="node20" href="$db/dc1/class_token.html#a913f22d91c68c0b0f8c2d593b14deca2" title=" " alt="" coords="2847,2369,2968,2395"/>
-<area shape="rect" id="node23" href="$d0/dfe/class_syntax_analyzer.html#a9e41370d8d74fbd2e77648d2071e7dfe" title=" " alt="" coords="2593,1439,2791,1466"/>
-<area shape="rect" id="node27" href="$d0/dfe/class_syntax_analyzer.html#a1390f811b111005b207bd039d2623dd4" title=" " alt="" coords="1112,1282,1340,1309"/>
-<area shape="rect" id="node38" href="$d0/dfe/class_syntax_analyzer.html#a177c60c88c15c37d6f5cf0c41a35190b" title=" " alt="" coords="1624,563,1819,590"/>
-<area shape="rect" id="node40" href="$d0/dfe/class_syntax_analyzer.html#a9a934470c35c197885531feb377ef5bc" title=" " alt="" coords="1631,1003,1811,1030"/>
-<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#a01d109f26cc4d069b40fed83435e3141" title=" " alt="" coords="1388,1130,1576,1157"/>
-<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#a1332b189c9be3ef8969eda9f078a97b3" title=" " alt="" coords="1638,1181,1805,1207"/>
-<area shape="rect" id="node30" href="$d0/dfe/class_syntax_analyzer.html#af0905389742c4f842207bb2c073afbfa" title=" " alt="" coords="2142,573,2325,599"/>
-<area shape="rect" id="node31" href="$d0/dfe/class_syntax_analyzer.html#a3e87b8ffb5f24f1db097bfb6aaeb8c2d" title=" " alt="" coords="1870,826,2077,853"/>
-<area shape="rect" id="node33" href="$d0/dfe/class_syntax_analyzer.html#a21f6ed68cce9f38063319d350afc1239" title=" " alt="" coords="1879,1282,2067,1309"/>
-<area shape="rect" id="node34" href="$d0/dfe/class_syntax_analyzer.html#ac33091b7dd671e839b031a26058096bd" title=" " alt="" coords="2132,2015,2335,2042"/>
-<area shape="rect" id="node35" href="$d0/dfe/class_syntax_analyzer.html#afd2005539c57ee2575cab3c50d061cd9" title=" " alt="" coords="2141,1434,2326,1461"/>
-<area shape="rect" id="node36" href="$d0/dfe/class_syntax_analyzer.html#a44506791ee9420b418715a9e87908aeb" title=" " alt="" coords="1886,1181,2061,1207"/>
-<area shape="rect" id="node37" href="$d0/dfe/class_syntax_analyzer.html#a24dfeabcc9335e5f3f040f7cf0c64fd9" title=" " alt="" coords="1871,1130,2075,1157"/>
-<area shape="rect" id="node32" href="$d0/dfe/class_syntax_analyzer.html#a3c3f51ab7cdb341ac4fa460e352150ae" title=" " alt="" coords="2144,927,2323,954"/>
-<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#ad43214817dbe71119316f653b4cbbefb" title=" " alt="" coords="1867,902,2080,929"/>
-<area shape="rect" id="node41" href="$d0/dfe/class_syntax_analyzer.html#a51ff8c81c92f9f81aacae95e4c12d00a" title=" " alt="" coords="1874,1711,2073,1738"/>
-<area shape="rect" id="node42" href="$d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="2131,2343,2335,2370"/>
-<area shape="rect" id="node43" href="$d0/dfe/class_syntax_analyzer.html#a5ef8e691db1611dd73eff73f011b7780" title=" " alt="" coords="2128,1661,2339,1687"/>
-<area shape="rect" id="node44" href="$d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2387,1674,2545,1701"/>
-<area shape="rect" id="node47" href="$d3/d96/class_i_a_s_t.html#a86a33b4e7990941edb1817c708243a7c" title=" " alt="" coords="429,1383,526,1410"/>
-<area shape="rect" id="node48" href="$d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96" title=" " alt="" coords="394,1333,561,1359"/>
+<area shape="rect" id="node1" title="Тест синтаксического анализа Паскаля, средний текст" alt="" coords="5,1360,60,1387"/>
+<area shape="rect" id="node2" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="604,13,728,40"/>
+<area shape="rect" id="node12" href="$d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="143,1294,293,1335"/>
+<area shape="rect" id="node46" href="$dd/de9/test_syntax_8cpp.html#a7a96a8629730ff61586d57fe617bae27" title=" " alt="" coords="171,1360,265,1387"/>
+<area shape="rect" id="node49" href="$d1/d0c/namespace_pascal_rules.html#a32cd5d2936870d166896898ad6cd968e" title="Возвращает шаблоны токинов языка Pascal." alt="" coords="108,1411,328,1437"/>
+<area shape="rect" id="node50" href="$da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a" title="Устанавливает шаблоны токенов для разбора лексером" alt="" coords="149,1461,287,1488"/>
+<area shape="rect" id="node3" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="2257,655,2435,681"/>
+<area shape="rect" id="node4" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="2511,604,2592,631"/>
+<area shape="rect" id="node5" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="2493,655,2610,681"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="2516,705,2587,732"/>
+<area shape="rect" id="node7" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="2502,2160,2601,2187"/>
+<area shape="rect" id="node8" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title="Возвращает строку, у которой убраны пустые символы в начале и конце" alt="" coords="2487,756,2616,783"/>
+<area shape="rect" id="node9" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="2494,2052,2609,2079"/>
+<area shape="rect" id="node10" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="2497,553,2605,580"/>
+<area shape="rect" id="node11" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="2668,553,2816,580"/>
+<area shape="rect" id="node13" href="$d6/d00/class_pascal_syntax_analyzer.html#a80fd2f225d07e698794427925fe6473b" title=" " alt="" coords="2271,706,2421,747"/>
+<area shape="rect" id="node14" href="$d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a" title=" " alt="" coords="384,1294,535,1335"/>
+<area shape="rect" id="node15" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="2043,2027,2201,2053"/>
+<area shape="rect" id="node22" href="$d6/d00/class_pascal_syntax_analyzer.html#ae7d30516233d8376e6495263662b7fd9" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2035,1236,2209,1263"/>
+<area shape="rect" id="node24" href="$d3/da8/sup_algs_8hpp.html#ae7d62ca130413d4c96863327c1af81a4" title="Возвращает истину, если value находится среди значений cont." alt="" coords="2101,469,2143,496"/>
+<area shape="rect" id="node25" href="$d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7" title="Устанавливает дополнительный тип токена" alt="" coords="1816,2144,1953,2171"/>
+<area shape="rect" id="node26" href="$d6/d00/class_pascal_syntax_analyzer.html#ab01912c3436af8d368fb00fc4f7362d7" title=" " alt="" coords="789,1294,940,1335"/>
+<area shape="rect" id="node45" href="$d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718" title=" " alt="" coords="591,1687,741,1729"/>
+<area shape="rect" id="node16" href="$d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" title=" " alt="" coords="2483,2295,2620,2321"/>
+<area shape="rect" id="node17" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="2294,2371,2398,2397"/>
+<area shape="rect" id="node21" href="$db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a" title=" " alt="" coords="2297,2001,2395,2028"/>
+<area shape="rect" id="node18" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="2509,2345,2593,2372"/>
+<area shape="rect" id="node19" href="$db/dc1/class_token.html#a715f99ebacdd636c283d15dc8656631c" title=" " alt="" coords="2509,2396,2594,2423"/>
+<area shape="rect" id="node20" href="$db/dc1/class_token.html#a913f22d91c68c0b0f8c2d593b14deca2" title=" " alt="" coords="2491,2447,2612,2473"/>
+<area shape="rect" id="node23" href="$d6/d00/class_pascal_syntax_analyzer.html#ae7d45d4a2d1a4200a1970708da736845" title=" " alt="" coords="2271,1469,2421,1510"/>
+<area shape="rect" id="node27" href="$d6/d00/class_pascal_syntax_analyzer.html#ada208f0427fef2e977e420bb5e87450a" title=" " alt="" coords="988,1294,1139,1335"/>
+<area shape="rect" id="node38" href="$d6/d00/class_pascal_syntax_analyzer.html#aa73dd3ea39d6257f4113757061233534" title=" " alt="" coords="1385,561,1536,602"/>
+<area shape="rect" id="node40" href="$d6/d00/class_pascal_syntax_analyzer.html#a22068acd135646a22afaa40d098742ed" title=" " alt="" coords="1385,1001,1536,1042"/>
+<area shape="rect" id="node28" href="$d6/d00/class_pascal_syntax_analyzer.html#acdfdfaf0ac3d4ed0be3e240ecc4ff535" title=" " alt="" coords="1187,1138,1337,1179"/>
+<area shape="rect" id="node29" href="$d6/d00/class_pascal_syntax_analyzer.html#af92e2fd2112e0b98c1d419e9068ffd49" title=" " alt="" coords="1385,1183,1536,1225"/>
+<area shape="rect" id="node30" href="$d6/d00/class_pascal_syntax_analyzer.html#a7248708de6944b95154537725f2379d3" title=" " alt="" coords="1809,571,1960,613"/>
+<area shape="rect" id="node31" href="$d6/d00/class_pascal_syntax_analyzer.html#a1483de526ade4687ddb1d1c0c804b15c" title=" " alt="" coords="1584,829,1735,870"/>
+<area shape="rect" id="node33" href="$d6/d00/class_pascal_syntax_analyzer.html#a17fc2ae65eb01ca8a797c5af969eebae" title=" " alt="" coords="1584,1301,1735,1342"/>
+<area shape="rect" id="node34" href="$d6/d00/class_pascal_syntax_analyzer.html#a2cbb9da12f9194bf4c71b8045f5f4ba4" title=" " alt="" coords="1809,2078,1960,2119"/>
+<area shape="rect" id="node35" href="$d6/d00/class_pascal_syntax_analyzer.html#aeab55be1d74a8810d1ea8aa51ba8e820" title=" " alt="" coords="1809,1465,1960,1506"/>
+<area shape="rect" id="node36" href="$d6/d00/class_pascal_syntax_analyzer.html#ada2725df1a0f0ca0aab5d02466661f01" title=" " alt="" coords="1584,1183,1735,1225"/>
+<area shape="rect" id="node37" href="$d6/d00/class_pascal_syntax_analyzer.html#a64ecaf3b371cf72ffcc81058e27ee463" title=" " alt="" coords="1584,1118,1735,1159"/>
+<area shape="rect" id="node32" href="$d6/d00/class_pascal_syntax_analyzer.html#ad459363d50d2dd23b8b0b2baee6be658" title=" " alt="" coords="1809,942,1960,983"/>
+<area shape="rect" id="node39" href="$d6/d00/class_pascal_syntax_analyzer.html#aa85cd72cb0382779d740d228fbeaa8da" title=" " alt="" coords="1584,918,1735,959"/>
+<area shape="rect" id="node41" href="$d6/d00/class_pascal_syntax_analyzer.html#a2e2096e84e73d49649b909bda93b3752" title=" " alt="" coords="1584,1745,1735,1786"/>
+<area shape="rect" id="node42" href="$d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1783,2421,1987,2448"/>
+<area shape="rect" id="node43" href="$d6/d00/class_pascal_syntax_analyzer.html#a81e6761557e6f305e3fa087676c40ce5" title=" " alt="" coords="1809,1707,1960,1749"/>
+<area shape="rect" id="node44" href="$d6/d00/class_pascal_syntax_analyzer.html#af42fc8dfb5ba18ea8079d357af1265f7" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="2047,1721,2197,1762"/>
+<area shape="rect" id="node47" href="$d3/d96/class_i_a_s_t.html#a86a33b4e7990941edb1817c708243a7c" title=" " alt="" coords="411,1411,508,1437"/>
+<area shape="rect" id="node48" href="$d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96" title=" " alt="" coords="376,1360,543,1387"/>
 </map>

@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Analyzer", "d6/d1a/class_analyzer.html", null ],
     [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
     [ "std::exception", null, [
       [ "AnalyzeException", "df/d7c/class_analyze_exception.html", [
@@ -53,6 +54,8 @@ var hierarchy =
     [ "Node< Token >", "dc/d8f/class_node.html", null ],
     [ "Node< TokenTemplate >", "dc/d8f/class_node.html", null ],
     [ "NodeIterator< T >", "d3/dde/class_node_iterator.html", null ],
-    [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", null ],
+    [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", [
+      [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", null ]
+    ] ],
     [ "SemanticVisitor::VarData", "d6/d93/struct_semantic_visitor_1_1_var_data.html", null ]
 ];

@@ -1,8 +1,3 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,107,83"/>
-<area shape="rect" id="node2" href="$df/d7c/class_analyze_exception.html" title="Базовое исключение анализатора" alt="" coords="155,56,277,83"/>
-<area shape="rect" id="node3" href="$d4/d3a/class_lexer_exception.html" title="Лексическое исключение" alt="" coords="337,5,447,32"/>
-<area shape="rect" id="node4" href="$d6/d2c/class_semantic_exception.html" title="Семантическое исключение" alt="" coords="325,56,459,83"/>
-<area shape="rect" id="node6" href="$d7/d27/class_syntax_exception.html" title="Синтаксическое исключение" alt="" coords="333,107,451,133"/>
-<area shape="rect" id="node5" href="$da/da3/class_type_exception.html" title="Исключение типизирования" alt="" coords="507,56,613,83"/>
+<area shape="rect" id="node1" href="$d6/d93/struct_semantic_visitor_1_1_var_data.html" title="Структура для хранения данных об именованном значении &#45; переменной или константе" alt="" coords="5,5,172,32"/>
 </map>

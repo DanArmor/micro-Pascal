@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['eat_0',['eat',['../d0/dfe/class_syntax_analyzer.html#ae1d3434e5cc4b4bcd5a3a245814a44f0',1,'SyntaxAnalyzer']]],
-  ['eatadv_1',['eatAdv',['../d0/dfe/class_syntax_analyzer.html#a9952c4a2db0a1382b9c94f40dd535fae',1,'SyntaxAnalyzer']]],
+  ['eat_0',['eat',['../d6/d00/class_pascal_syntax_analyzer.html#ae7d30516233d8376e6495263662b7fd9',1,'PascalSyntaxAnalyzer']]],
+  ['eatadv_1',['eatAdv',['../d6/d00/class_pascal_syntax_analyzer.html#af42fc8dfb5ba18ea8079d357af1265f7',1,'PascalSyntaxAnalyzer']]],
   ['else_2',['ELSE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa42b5f7546c0759d8f715842db2c8b7c7',1,'IToken']]],
   ['elsebody_3',['elseBody',['../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c',1,'IfAST']]],
   ['empty_4',['EMPTY',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aad2ec8c062791b671c834a4e2dbf7e017',1,'IToken']]],

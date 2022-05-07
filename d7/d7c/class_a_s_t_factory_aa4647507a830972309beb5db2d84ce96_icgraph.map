@@ -1,13 +1,10 @@
 <map id="ASTFactory::createCopyOfType" name="ASTFactory::createCopyOfType">
-<area shape="rect" id="node1" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1837,56,2041,83"/>
-<area shape="rect" id="node2" href="$d0/dfe/class_syntax_analyzer.html#a51ff8c81c92f9f81aacae95e4c12d00a" title=" " alt="" coords="1591,56,1789,83"/>
-<area shape="rect" id="node3" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="877,31,1080,57"/>
-<area shape="rect" id="node10" href="$d0/dfe/class_syntax_analyzer.html#a9a934470c35c197885531feb377ef5bc" title=" " alt="" coords="1363,81,1543,108"/>
-<area shape="rect" id="node4" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="627,56,829,83"/>
-<area shape="rect" id="node5" href="$d0/dfe/class_syntax_analyzer.html#addbd9bc0fe0dae8cd2ddb4fbafea0fcc" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="376,56,579,83"/>
-<area shape="rect" id="node6" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="191,31,328,57"/>
-<area shape="rect" id="node9" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="232,81,287,108"/>
-<area shape="rect" id="node7" href="$d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f" title="Анализ файла inName и вывод в &quot;output.svg&quot; .dot описания ДАС. Так же выводит в стандартный поток выво..." alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node8" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="49,56,99,83"/>
-<area shape="rect" id="node11" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1128,81,1315,108"/>
+<area shape="rect" id="node1" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1300,42,1504,69"/>
+<area shape="rect" id="node2" href="$d6/d00/class_pascal_syntax_analyzer.html#a2e2096e84e73d49649b909bda93b3752" title=" " alt="" coords="1101,35,1252,76"/>
+<area shape="rect" id="node3" href="$d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718" title=" " alt="" coords="505,5,656,47"/>
+<area shape="rect" id="node7" href="$d6/d00/class_pascal_syntax_analyzer.html#a22068acd135646a22afaa40d098742ed" title=" " alt="" coords="903,64,1053,105"/>
+<area shape="rect" id="node4" href="$d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a" title=" " alt="" coords="307,35,457,76"/>
+<area shape="rect" id="node5" href="$d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="108,35,259,76"/>
+<area shape="rect" id="node6" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="5,42,60,69"/>
+<area shape="rect" id="node8" href="$d6/d00/class_pascal_syntax_analyzer.html#ab01912c3436af8d368fb00fc4f7362d7" title=" " alt="" coords="704,64,855,105"/>
 </map>

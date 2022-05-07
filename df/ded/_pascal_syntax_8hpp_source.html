@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Анализатор программ на языке micro-Pascal: Исходный файл include/PascalSyntax.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="../../logo4.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Анализатор программ на языке micro-Pascal<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Кто такой этот ваш micro-Pascal ? (c)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('df/ded/_pascal_syntax_8hpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PascalSyntax.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/ded/_pascal_syntax_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __INC_PASCALSYNTAX_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __INC_PASCALSYNTAX_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="../../d8/de6/_a_s_tclasses_8hpp.html">ASTclasses.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="../../df/d3f/_syntax_8hpp.html">Syntax.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d72/_list_8hpp.html">List.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/d32/_token_8hpp.html">Token.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;magic_enum.hpp&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d6/d00/class_pascal_syntax_analyzer.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d6/d00/class_pascal_syntax_analyzer.html">PascalSyntaxAnalyzer</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ae8efc1306bfb6c3bf81352b2a2cb13dc">PascalSyntaxAnalyzer</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ae8efc1306bfb6c3bf81352b2a2cb13dc">PascalSyntaxAnalyzer</a>(<a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> <span class="keyword">const</span> &amp;tokens);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28">analyzeTokens</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a">syntaxProgram</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718">syntaxFuncDef</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ab01912c3436af8d368fb00fc4f7362d7">syntaxBlock</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::vector&lt;std::unique_ptr&lt;IAST&gt;&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#aa73dd3ea39d6257f4113757061233534">syntaxConsts</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#aa85cd72cb0382779d740d228fbeaa8da">syntaxConstDecl</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::vector&lt;std::unique_ptr&lt;IAST&gt;&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a22068acd135646a22afaa40d098742ed">syntaxVars</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::vector&lt;std::unique_ptr&lt;IAST&gt;&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a2e2096e84e73d49649b909bda93b3752">syntaxVarDecl</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a81e6761557e6f305e3fa087676c40ce5">syntaxTypeSpec</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ada208f0427fef2e977e420bb5e87450a">syntaxCompoundSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    std::vector&lt;std::unique_ptr&lt;IAST&gt;&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#acdfdfaf0ac3d4ed0be3e240ecc4ff535">syntaxStList</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#af92e2fd2112e0b98c1d419e9068ffd49">syntaxSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a2cbb9da12f9194bf4c71b8045f5f4ba4">syntaxEmptySt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a1483de526ade4687ddb1d1c0c804b15c">syntaxAssignSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ada2725df1a0f0ca0aab5d02466661f01">syntaxIfSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a1c3d21ae52633cd67f4a9d98305e303e">syntaxWhileSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#aeab55be1d74a8810d1ea8aa51ba8e820">syntaxForSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a17fc2ae65eb01ca8a797c5af969eebae">syntaxCallSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a64ecaf3b371cf72ffcc81058e27ee463">syntaxReturnSt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a29143dd884dc4a19bfa64da0ac1640b7">syntaxVariable</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ae443cbc65ec18c6277b095da042ec7a2">syntaxSelect</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ad459363d50d2dd23b8b0b2baee6be658">syntaxExpr</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#aca0a489432741e00e3d268ccd6452781">syntaxSimpleExpr</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a2a47b3776a55323696ebcc18a9699b57">syntaxTerm</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#add958b54cb4edebc082e2a246b6adb10">syntaxFactor</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::unique_ptr&lt;IAST&gt; <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a2c49546e46d84e7785ef131a1cfc7ff7">syntaxIter</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a548b90f91a14fbc2ff4feb979c305004">setTokens</a>(<a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> <span class="keyword">const</span> &amp;newTokens);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ab716da35db298cb6e48cfa1c69c1822b">getTokens</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ae7d45d4a2d1a4200a1970708da736845">getNextToken</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> &amp;<a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a80fd2f225d07e698794427925fe6473b">getCurTok</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="../../db/dc1/class_token.html">Token</a> &amp;<a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#a7248708de6944b95154537725f2379d3">lookFoward</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#ae7d30516233d8376e6495263662b7fd9">eat</a>(<a class="code hl_enumeration" href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">IToken::Type</a> <span class="keyword">const</span> type);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d00/class_pascal_syntax_analyzer.html#af42fc8dfb5ba18ea8079d357af1265f7">eatAdv</a>(<a class="code hl_enumeration" href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">IToken::AdvType</a> <span class="keyword">const</span> type);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    std::size_t currentIndex = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_a_s_tclasses_8hpp_html"><div class="ttname"><a href="../../d8/de6/_a_s_tclasses_8hpp.html">ASTclasses.hpp</a></div><div class="ttdoc">Базовые классы ДАС: абстрактный посетитель и абстрактный узел</div></div>
+<div class="ttc" id="a_list_8hpp_html"><div class="ttname"><a href="../../dc/d72/_list_8hpp.html">List.hpp</a></div><div class="ttdoc">Двусвязный список - интерфейс</div></div>
+<div class="ttc" id="a_syntax_8hpp_html"><div class="ttname"><a href="../../df/d3f/_syntax_8hpp.html">Syntax.hpp</a></div><div class="ttdoc">Синтаксический анализатор</div></div>
+<div class="ttc" id="a_token_8hpp_html"><div class="ttname"><a href="../../de/d32/_token_8hpp.html">Token.hpp</a></div><div class="ttdoc">Классы для работы с токенами анализатора</div></div>
+<div class="ttc" id="aclass_i_token_html_a84210eb1452d5a97b360c64841a925a3"><div class="ttname"><a href="../../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3">IToken::AdvType</a></div><div class="ttdeci">AdvType</div><div class="ttdoc">Типы токенов</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00020">Token.hpp:20</a></div></div>
+<div class="ttc" id="aclass_i_token_html_aa344b0520a49f41cb1e13363c138603a"><div class="ttname"><a href="../../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603a">IToken::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00036">Token.hpp:36</a></div></div>
+<div class="ttc" id="aclass_list_html"><div class="ttname"><a href="../../d1/d34/class_list.html">List&lt; Token &gt;</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html">PascalSyntaxAnalyzer</a></div><div class="ttdoc">Класс синтаксического анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ded/_pascal_syntax_8hpp_source.html#l00020">PascalSyntax.hpp:20</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a1483de526ade4687ddb1d1c0c804b15c"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a1483de526ade4687ddb1d1c0c804b15c">PascalSyntaxAnalyzer::syntaxAssignSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxAssignSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00253">PascalSyntax.cpp:253</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a17fc2ae65eb01ca8a797c5af969eebae"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a17fc2ae65eb01ca8a797c5af969eebae">PascalSyntaxAnalyzer::syntaxCallSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxCallSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00307">PascalSyntax.cpp:307</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a1c3d21ae52633cd67f4a9d98305e303e"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a1c3d21ae52633cd67f4a9d98305e303e">PascalSyntaxAnalyzer::syntaxWhileSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxWhileSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00286">PascalSyntax.cpp:286</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a22068acd135646a22afaa40d098742ed"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a22068acd135646a22afaa40d098742ed">PascalSyntaxAnalyzer::syntaxVars</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; syntaxVars(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00120">PascalSyntax.cpp:120</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a29143dd884dc4a19bfa64da0ac1640b7"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a29143dd884dc4a19bfa64da0ac1640b7">PascalSyntaxAnalyzer::syntaxVariable</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxVariable(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00335">PascalSyntax.cpp:335</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a2a47b3776a55323696ebcc18a9699b57"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a2a47b3776a55323696ebcc18a9699b57">PascalSyntaxAnalyzer::syntaxTerm</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxTerm(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00401">PascalSyntax.cpp:401</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a2c49546e46d84e7785ef131a1cfc7ff7"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a2c49546e46d84e7785ef131a1cfc7ff7">PascalSyntaxAnalyzer::syntaxIter</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxIter(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00460">PascalSyntax.cpp:460</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a2cbb9da12f9194bf4c71b8045f5f4ba4"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a2cbb9da12f9194bf4c71b8045f5f4ba4">PascalSyntaxAnalyzer::syntaxEmptySt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxEmptySt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00248">PascalSyntax.cpp:248</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a2e2096e84e73d49649b909bda93b3752"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a2e2096e84e73d49649b909bda93b3752">PascalSyntaxAnalyzer::syntaxVarDecl</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; syntaxVarDecl(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00135">PascalSyntax.cpp:135</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a548b90f91a14fbc2ff4feb979c305004"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a548b90f91a14fbc2ff4feb979c305004">PascalSyntaxAnalyzer::setTokens</a></div><div class="ttdeci">void setTokens(List&lt; Token &gt; const &amp;newTokens)</div><div class="ttdoc">Устанавливает список токенов анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00535">PascalSyntax.cpp:535</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a5eb6b9f8834aefdea576873bd6d3ef28"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28">PascalSyntaxAnalyzer::analyzeTokens</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; analyzeTokens(void)</div><div class="ttdoc">Синтаксический анализ токенов, переданных анализатору.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00015">PascalSyntax.cpp:15</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a64ecaf3b371cf72ffcc81058e27ee463"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a64ecaf3b371cf72ffcc81058e27ee463">PascalSyntaxAnalyzer::syntaxReturnSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxReturnSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00328">PascalSyntax.cpp:328</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a7248708de6944b95154537725f2379d3"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a7248708de6944b95154537725f2379d3">PascalSyntaxAnalyzer::lookFoward</a></div><div class="ttdeci">Token &amp; lookFoward(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00504">PascalSyntax.cpp:504</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a80fd2f225d07e698794427925fe6473b"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a80fd2f225d07e698794427925fe6473b">PascalSyntaxAnalyzer::getCurTok</a></div><div class="ttdeci">Token &amp; getCurTok(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00502">PascalSyntax.cpp:502</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a81e6761557e6f305e3fa087676c40ce5"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a81e6761557e6f305e3fa087676c40ce5">PascalSyntaxAnalyzer::syntaxTypeSpec</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxTypeSpec(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00163">PascalSyntax.cpp:163</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_a99dc990814a355dae3fcb44cb42a1d2a"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a">PascalSyntaxAnalyzer::syntaxProgram</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxProgram(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00024">PascalSyntax.cpp:24</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_aa73dd3ea39d6257f4113757061233534"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#aa73dd3ea39d6257f4113757061233534">PascalSyntaxAnalyzer::syntaxConsts</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; syntaxConsts(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00089">PascalSyntax.cpp:89</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_aa85cd72cb0382779d740d228fbeaa8da"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#aa85cd72cb0382779d740d228fbeaa8da">PascalSyntaxAnalyzer::syntaxConstDecl</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxConstDecl(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00102">PascalSyntax.cpp:102</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ab01912c3436af8d368fb00fc4f7362d7"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ab01912c3436af8d368fb00fc4f7362d7">PascalSyntaxAnalyzer::syntaxBlock</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxBlock(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00079">PascalSyntax.cpp:79</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ab716da35db298cb6e48cfa1c69c1822b"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ab716da35db298cb6e48cfa1c69c1822b">PascalSyntaxAnalyzer::getTokens</a></div><div class="ttdeci">List&lt; Token &gt; getTokens(void)</div><div class="ttdoc">Возвращает список токенов анализатора</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00534">PascalSyntax.cpp:534</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_aca0a489432741e00e3d268ccd6452781"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#aca0a489432741e00e3d268ccd6452781">PascalSyntaxAnalyzer::syntaxSimpleExpr</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxSimpleExpr(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00385">PascalSyntax.cpp:385</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_acdfdfaf0ac3d4ed0be3e240ecc4ff535"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#acdfdfaf0ac3d4ed0be3e240ecc4ff535">PascalSyntaxAnalyzer::syntaxStList</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; syntaxStList(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00199">PascalSyntax.cpp:199</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ad459363d50d2dd23b8b0b2baee6be658"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ad459363d50d2dd23b8b0b2baee6be658">PascalSyntaxAnalyzer::syntaxExpr</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxExpr(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00363">PascalSyntax.cpp:363</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ada208f0427fef2e977e420bb5e87450a"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ada208f0427fef2e977e420bb5e87450a">PascalSyntaxAnalyzer::syntaxCompoundSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxCompoundSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00188">PascalSyntax.cpp:188</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ada2725df1a0f0ca0aab5d02466661f01"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ada2725df1a0f0ca0aab5d02466661f01">PascalSyntaxAnalyzer::syntaxIfSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxIfSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00268">PascalSyntax.cpp:268</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_add958b54cb4edebc082e2a246b6adb10"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#add958b54cb4edebc082e2a246b6adb10">PascalSyntaxAnalyzer::syntaxFactor</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxFactor(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00418">PascalSyntax.cpp:418</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ae443cbc65ec18c6277b095da042ec7a2"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ae443cbc65ec18c6277b095da042ec7a2">PascalSyntaxAnalyzer::syntaxSelect</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxSelect(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00343">PascalSyntax.cpp:343</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ae7d30516233d8376e6495263662b7fd9"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ae7d30516233d8376e6495263662b7fd9">PascalSyntaxAnalyzer::eat</a></div><div class="ttdeci">void eat(IToken::Type const type)</div><div class="ttdoc">Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00510">PascalSyntax.cpp:510</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ae7d45d4a2d1a4200a1970708da736845"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ae7d45d4a2d1a4200a1970708da736845">PascalSyntaxAnalyzer::getNextToken</a></div><div class="ttdeci">void getNextToken(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00500">PascalSyntax.cpp:500</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_ae8efc1306bfb6c3bf81352b2a2cb13dc"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#ae8efc1306bfb6c3bf81352b2a2cb13dc">PascalSyntaxAnalyzer::PascalSyntaxAnalyzer</a></div><div class="ttdeci">PascalSyntaxAnalyzer()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00010">PascalSyntax.cpp:10</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_aeab55be1d74a8810d1ea8aa51ba8e820"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#aeab55be1d74a8810d1ea8aa51ba8e820">PascalSyntaxAnalyzer::syntaxForSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxForSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00297">PascalSyntax.cpp:297</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_af42fc8dfb5ba18ea8079d357af1265f7"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#af42fc8dfb5ba18ea8079d357af1265f7">PascalSyntaxAnalyzer::eatAdv</a></div><div class="ttdeci">void eatAdv(IToken::AdvType const type)</div><div class="ttdoc">Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00522">PascalSyntax.cpp:522</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_af92e2fd2112e0b98c1d419e9068ffd49"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#af92e2fd2112e0b98c1d419e9068ffd49">PascalSyntaxAnalyzer::syntaxSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxSt(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00216">PascalSyntax.cpp:216</a></div></div>
+<div class="ttc" id="aclass_pascal_syntax_analyzer_html_afc7e8b0293dc9d194d6d8ebc708e1718"><div class="ttname"><a href="../../d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718">PascalSyntaxAnalyzer::syntaxFuncDef</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; syntaxFuncDef(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d15/_pascal_syntax_8cpp_source.html#l00045">PascalSyntax.cpp:45</a></div></div>
+<div class="ttc" id="aclass_syntax_analyzer_html"><div class="ttname"><a href="../../d0/dfe/class_syntax_analyzer.html">SyntaxAnalyzer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d3f/_syntax_8hpp_source.html#l00010">Syntax.hpp:10</a></div></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="../../db/dc1/class_token.html">Token</a></div><div class="ttdoc">Класс, представляющий токен</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d32/_token_8hpp_source.html#l00133">Token.hpp:133</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../df/ded/_pascal_syntax_8hpp.html">PascalSyntax.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>

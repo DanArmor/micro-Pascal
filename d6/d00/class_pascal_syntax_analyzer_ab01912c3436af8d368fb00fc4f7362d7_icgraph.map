@@ -1,0 +1,7 @@
+<map id="PascalSyntaxAnalyzer::syntaxBlock" name="PascalSyntaxAnalyzer::syntaxBlock">
+<area shape="rect" id="node1" title=" " alt="" coords="704,35,855,76"/>
+<area shape="rect" id="node2" href="$d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718" title=" " alt="" coords="505,5,656,47"/>
+<area shape="rect" id="node3" href="$d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a" title=" " alt="" coords="307,35,457,76"/>
+<area shape="rect" id="node4" href="$d6/d00/class_pascal_syntax_analyzer.html#a5eb6b9f8834aefdea576873bd6d3ef28" title="Синтаксический анализ токенов, переданных анализатору." alt="" coords="108,35,259,76"/>
+<area shape="rect" id="node5" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="5,42,60,69"/>
+</map>

@@ -1,6 +1,8 @@
 var dir_d44c64559bbebec7f509842c48db8b23 =
 [
-    [ "Analyze.hpp", "d0/d7c/_analyze_8hpp.html", "d0/d7c/_analyze_8hpp" ],
+    [ "Analyzer.hpp", "d8/d7a/_analyzer_8hpp.html", [
+      [ "Analyzer", "d6/d1a/class_analyzer.html", "d6/d1a/class_analyzer" ]
+    ] ],
     [ "AST.hpp", "d4/dcb/_a_s_t_8hpp.html", [
       [ "ProgramAST", "de/db2/class_program_a_s_t.html", "de/db2/class_program_a_s_t" ],
       [ "FunctionAST", "dc/d19/class_function_a_s_t.html", "dc/d19/class_function_a_s_t" ],
@@ -41,6 +43,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "List< T >", "d1/d34/class_list.html", "d1/d34/class_list" ]
     ] ],
     [ "PascalRules.hpp", "db/dfd/_pascal_rules_8hpp.html", "db/dfd/_pascal_rules_8hpp" ],
+    [ "PascalSyntax.hpp", "df/ded/_pascal_syntax_8hpp.html", [
+      [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", "d6/d00/class_pascal_syntax_analyzer" ]
+    ] ],
     [ "supAlgs.hpp", "d3/da8/sup_algs_8hpp.html", "d3/da8/sup_algs_8hpp" ],
     [ "Syntax.hpp", "df/d3f/_syntax_8hpp.html", [
       [ "SyntaxAnalyzer", "d0/dfe/class_syntax_analyzer.html", "d0/dfe/class_syntax_analyzer" ]

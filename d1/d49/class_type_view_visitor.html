@@ -211,7 +211,7 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Посетителя для вывода сведений о типах в прямом порядке по ДАС </p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00081">81</a></p>
+<p class="definition">См. определение в файле <a class="el" href="../../db/d42/_visitor_8hpp_source.html">Visitor.hpp</a> строка <a class="el" href="../../db/d42/_visitor_8hpp_source.html#l00082">82</a></p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="ab68d7e2e4fd797b72b32538ccc379775" name="ab68d7e2e4fd797b72b32538ccc379775"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab68d7e2e4fd797b72b32538ccc379775">&#9670;&nbsp;</a></span>TypeViewVisitor()</h2>
@@ -228,8 +228,8 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00190">190</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  190</span>{};</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00186">186</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,10 +250,8 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00325">325</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>                                                 {</div>
-<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">return</span> typesStrings;</div>
-<div class="line"><span class="lineno">  327</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00314">314</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>{ <span class="keywordflow">return</span> typesStrings; }</div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="../../closed.png" alt="+"/> Граф вызова функции:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -291,12 +289,14 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a807ad7f66e9f3f95c7833a4b8aeab8fc">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00228">228</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  228</span>                                           {</div>
-<div class="line"><span class="lineno">  229</span>    std::string arrStr = fmt::format(<span class="stringliteral">&quot;{}[{} .. {}]&quot;</span>, node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">lHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">rHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  230</span>    typesStrings.push_back(arrStr);</div>
-<div class="line"><span class="lineno">  231</span>    node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">subType</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  232</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00218">218</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                            {</div>
+<div class="line"><span class="lineno">  219</span>    std::string arrStr =</div>
+<div class="line"><span class="lineno">  220</span>        fmt::format(<span class="stringliteral">&quot;{}[{} .. {}]&quot;</span>, node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(), node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">lHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>(),</div>
+<div class="line"><span class="lineno">  221</span>                    node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">rHandTok</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  222</span>    typesStrings.push_back(arrStr);</div>
+<div class="line"><span class="lineno">  223</span>    node.<a class="code hl_variable" href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">subType</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  224</span>}</div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a0b509ec69f8ebbde4e4908af836930db"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a0b509ec69f8ebbde4e4908af836930db">ArrSpecAST::lHandTok</a></div><div class="ttdeci">Token lHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00086">AST.hpp:86</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a12acaf73724b24e94ac8c3b751678db7"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a12acaf73724b24e94ac8c3b751678db7">ArrSpecAST::subType</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; subType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00088">AST.hpp:88</a></div></div>
 <div class="ttc" id="aclass_arr_spec_a_s_t_html_a99a2f241557602ed85177809253da6a3"><div class="ttname"><a href="../../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3">ArrSpecAST::rHandTok</a></div><div class="ttdeci">Token rHandTok</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00087">AST.hpp:87</a></div></div>
@@ -339,12 +339,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a83611ea7b4dde8db8d15e5702951f025">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00270">270</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>                                          {</div>
-<div class="line"><span class="lineno">  271</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  272</span>    node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">var</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  273</span>    node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">value</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  274</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00260">260</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>                                           {</div>
+<div class="line"><span class="lineno">  261</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  262</span>    node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">var</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  263</span>    node.<a class="code hl_variable" href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">value</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  264</span>}</div>
 <div class="ttc" id="aclass_assign_a_s_t_html_a257d00ba1a8dc66b59f56c2a570fc682"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a257d00ba1a8dc66b59f56c2a570fc682">AssignAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00175">AST.hpp:175</a></div></div>
 <div class="ttc" id="aclass_assign_a_s_t_html_a6a0f4ebf2f5e8735e33ac9116c5a1917"><div class="ttname"><a href="../../d7/db1/class_assign_a_s_t.html#a6a0f4ebf2f5e8735e33ac9116c5a1917">AssignAST::value</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; value</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00176">AST.hpp:176</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -384,12 +384,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a5b1f67b770cdf5b7f44a22bcf81e42e6">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00255">255</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>                                         {</div>
-<div class="line"><span class="lineno">  256</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  257</span>    node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">left</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  258</span>    node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">right</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  259</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00245">245</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>                                          {</div>
+<div class="line"><span class="lineno">  246</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  247</span>    node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">left</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  248</span>    node.<a class="code hl_variable" href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">right</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  249</span>}</div>
 <div class="ttc" id="aclass_bin_op_a_s_t_html_a8d19c01d77157058d7dc48d6ad65a507"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#a8d19c01d77157058d7dc48d6ad65a507">BinOpAST::left</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; left</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00142">AST.hpp:142</a></div></div>
 <div class="ttc" id="aclass_bin_op_a_s_t_html_ab6426c7e12351c0adeeb1e2b83174f53"><div class="ttname"><a href="../../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53">BinOpAST::right</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; right</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00143">AST.hpp:143</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -429,17 +429,13 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a8a8b3567dd0b69c5c05c351f8537c7c2">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00207">207</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  207</span>                                         {</div>
-<div class="line"><span class="lineno">  208</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  209</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ab265ea52ef5b473bee89de063dce4145">consts</a>){</div>
-<div class="line"><span class="lineno">  210</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  211</span>    }</div>
-<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ae248d480eedde90268ee44d40c9f5949">declarations</a>){</div>
-<div class="line"><span class="lineno">  213</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="line"><span class="lineno">  215</span>    node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ab6aa481049c833ac083cd9200b97b6c6">compound</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  216</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00201">201</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                          {</div>
+<div class="line"><span class="lineno">  202</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ab265ea52ef5b473bee89de063dce4145">consts</a>) child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ae248d480eedde90268ee44d40c9f5949">declarations</a>) child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  205</span>    node.<a class="code hl_variable" href="../../d0/de0/class_block_a_s_t.html#ab6aa481049c833ac083cd9200b97b6c6">compound</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  206</span>}</div>
 <div class="ttc" id="aclass_block_a_s_t_html_ab265ea52ef5b473bee89de063dce4145"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ab265ea52ef5b473bee89de063dce4145">BlockAST::consts</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; consts</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00053">AST.hpp:53</a></div></div>
 <div class="ttc" id="aclass_block_a_s_t_html_ab6aa481049c833ac083cd9200b97b6c6"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ab6aa481049c833ac083cd9200b97b6c6">BlockAST::compound</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; compound</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00055">AST.hpp:55</a></div></div>
 <div class="ttc" id="aclass_block_a_s_t_html_ae248d480eedde90268ee44d40c9f5949"><div class="ttname"><a href="../../d0/de0/class_block_a_s_t.html#ae248d480eedde90268ee44d40c9f5949">BlockAST::declarations</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; declarations</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00054">AST.hpp:54</a></div></div>
@@ -480,13 +476,13 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a182fd51025832787190bf67799cdbd3b">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00286">286</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  286</span>                                        {</div>
-<div class="line"><span class="lineno">  287</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#ac0afbd97aeaf23f7a99c1c7a347736f5">params</a>){</div>
-<div class="line"><span class="lineno">  289</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  290</span>    }</div>
-<div class="line"><span class="lineno">  291</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00276">276</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>                                         {</div>
+<div class="line"><span class="lineno">  277</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dd1/class_call_a_s_t.html#ac0afbd97aeaf23f7a99c1c7a347736f5">params</a>) {</div>
+<div class="line"><span class="lineno">  279</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  280</span>    }</div>
+<div class="line"><span class="lineno">  281</span>}</div>
 <div class="ttc" id="aclass_call_a_s_t_html_ac0afbd97aeaf23f7a99c1c7a347736f5"><div class="ttname"><a href="../../da/dd1/class_call_a_s_t.html#ac0afbd97aeaf23f7a99c1c7a347736f5">CallAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00208">AST.hpp:208</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -525,13 +521,11 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a61877193fd55d2f97b7fc12465b7a3ce">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00240">240</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  240</span>                                            {</div>
-<div class="line"><span class="lineno">  241</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#ab7c906f822101313eaab2024ba46806e">children</a>){</div>
-<div class="line"><span class="lineno">  243</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  244</span>    }</div>
-<div class="line"><span class="lineno">  245</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00232">232</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                                             {</div>
+<div class="line"><span class="lineno">  233</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../da/dbb/class_compound_a_s_t.html#ab7c906f822101313eaab2024ba46806e">children</a>) child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  235</span>}</div>
 <div class="ttc" id="aclass_compound_a_s_t_html_ab7c906f822101313eaab2024ba46806e"><div class="ttname"><a href="../../da/dbb/class_compound_a_s_t.html#ab7c906f822101313eaab2024ba46806e">CompoundAST::children</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; children</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00113">AST.hpp:113</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -570,12 +564,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a2e1b667be6c9402438d287173ba04997">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00234">234</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  234</span>                                         {</div>
-<div class="line"><span class="lineno">  235</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  236</span>    node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a950b479ce77b15c04bdbfd0f7a073010">constName</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  237</span>    node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#af108cf005760d693f13c8dac81367b91">constValue</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  238</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00226">226</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>                                          {</div>
+<div class="line"><span class="lineno">  227</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  228</span>    node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#a950b479ce77b15c04bdbfd0f7a073010">constName</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  229</span>    node.<a class="code hl_variable" href="../../d6/d94/class_const_a_s_t.html#af108cf005760d693f13c8dac81367b91">constValue</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  230</span>}</div>
 <div class="ttc" id="aclass_const_a_s_t_html_a950b479ce77b15c04bdbfd0f7a073010"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html#a950b479ce77b15c04bdbfd0f7a073010">ConstAST::constName</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; constName</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00099">AST.hpp:99</a></div></div>
 <div class="ttc" id="aclass_const_a_s_t_html_af108cf005760d693f13c8dac81367b91"><div class="ttname"><a href="../../d6/d94/class_const_a_s_t.html#af108cf005760d693f13c8dac81367b91">ConstAST::constValue</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; constValue</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00100">AST.hpp:100</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -615,12 +609,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a86be47c16993c817b6e8b4055edb15f6">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00312">312</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>                                       {</div>
-<div class="line"><span class="lineno">  313</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  314</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">iterSt</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  315</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  316</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00301">301</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>                                        {</div>
+<div class="line"><span class="lineno">  302</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  303</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">iterSt</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  304</span>    node.<a class="code hl_variable" href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  305</span>}</div>
 <div class="ttc" id="aclass_for_a_s_t_html_a3e653e419acdfb121c343cf75ad77269"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#a3e653e419acdfb121c343cf75ad77269">ForAST::iterSt</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; iterSt</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00255">AST.hpp:255</a></div></div>
 <div class="ttc" id="aclass_for_a_s_t_html_ab7bb700b56cb0a91985cd5d12ba5dfae"><div class="ttname"><a href="../../d4/d3f/class_for_a_s_t.html#ab7bb700b56cb0a91985cd5d12ba5dfae">ForAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00256">AST.hpp:256</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -660,14 +654,13 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a90a5478ca69b33e9683dccf2a0f8ed71">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00199">199</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                                            {</div>
-<div class="line"><span class="lineno">  200</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ae3b4019733de1079b35b020db0cc873d">params</a>)</div>
-<div class="line"><span class="lineno">  202</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  203</span>    node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ab036ccc5fa59d4e35890b09e84ebc20f">returnType</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  204</span>    node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a9fec4f763054d4d119c4d7d0d2620189">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  205</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00194">194</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                             {</div>
+<div class="line"><span class="lineno">  195</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ae3b4019733de1079b35b020db0cc873d">params</a>) child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  197</span>    node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#ab036ccc5fa59d4e35890b09e84ebc20f">returnType</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  198</span>    node.<a class="code hl_variable" href="../../dc/d19/class_function_a_s_t.html#a9fec4f763054d4d119c4d7d0d2620189">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  199</span>}</div>
 <div class="ttc" id="aclass_function_a_s_t_html_a9fec4f763054d4d119c4d7d0d2620189"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#a9fec4f763054d4d119c4d7d0d2620189">FunctionAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00041">AST.hpp:41</a></div></div>
 <div class="ttc" id="aclass_function_a_s_t_html_ab036ccc5fa59d4e35890b09e84ebc20f"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#ab036ccc5fa59d4e35890b09e84ebc20f">FunctionAST::returnType</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; returnType</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00040">AST.hpp:40</a></div></div>
 <div class="ttc" id="aclass_function_a_s_t_html_ae3b4019733de1079b35b020db0cc873d"><div class="ttname"><a href="../../dc/d19/class_function_a_s_t.html#ae3b4019733de1079b35b020db0cc873d">FunctionAST::params</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; params</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00039">AST.hpp:39</a></div></div>
@@ -708,14 +701,13 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a03ad7a121d846dd882c6fe9f316af66a">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00298">298</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  298</span>                                      {</div>
-<div class="line"><span class="lineno">  299</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  300</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a0ad7c35cf8ae9cf84a9f69d71307c467">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  301</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ae27b12d50bf6ee4779d3a9830ac33e16">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  302</span>    <span class="keywordflow">if</span>(node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a> != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  303</span>        node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  304</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00288">288</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>                                       {</div>
+<div class="line"><span class="lineno">  289</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  290</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a0ad7c35cf8ae9cf84a9f69d71307c467">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  291</span>    node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#ae27b12d50bf6ee4779d3a9830ac33e16">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">if</span> (node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a> != <span class="keyword">nullptr</span>) node.<a class="code hl_variable" href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">elseBody</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  293</span>}</div>
 <div class="ttc" id="aclass_if_a_s_t_html_a073b2bbb8bd023242fdec48aee20265c"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a073b2bbb8bd023242fdec48aee20265c">IfAST::elseBody</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; elseBody</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00232">AST.hpp:232</a></div></div>
 <div class="ttc" id="aclass_if_a_s_t_html_a0ad7c35cf8ae9cf84a9f69d71307c467"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#a0ad7c35cf8ae9cf84a9f69d71307c467">IfAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00231">AST.hpp:231</a></div></div>
 <div class="ttc" id="aclass_if_a_s_t_html_ae27b12d50bf6ee4779d3a9830ac33e16"><div class="ttname"><a href="../../d7/d6b/class_if_a_s_t.html#ae27b12d50bf6ee4779d3a9830ac33e16">IfAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00230">AST.hpp:230</a></div></div>
@@ -756,13 +748,13 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aa09fedaa5d35191b58aab8845b391366">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00318">318</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>                                             {</div>
-<div class="line"><span class="lineno">  319</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  320</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#aba16fd9ecafd41cccaf9890719127ee2">assign</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  321</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  322</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">postAction</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  323</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00307">307</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>                                              {</div>
+<div class="line"><span class="lineno">  308</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  309</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#aba16fd9ecafd41cccaf9890719127ee2">assign</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  310</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  311</span>    node.<a class="code hl_variable" href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">postAction</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  312</span>}</div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_a0a6d164de3c4af7f93f7e2986bc95ce7"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#a0a6d164de3c4af7f93f7e2986bc95ce7">IterationAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00269">AST.hpp:269</a></div></div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_ab2cd4888d4414b75575e498e99d27cc3"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#ab2cd4888d4414b75575e498e99d27cc3">IterationAST::postAction</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; postAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00270">AST.hpp:270</a></div></div>
 <div class="ttc" id="aclass_iteration_a_s_t_html_aba16fd9ecafd41cccaf9890719127ee2"><div class="ttname"><a href="../../d6/dbc/class_iteration_a_s_t.html#aba16fd9ecafd41cccaf9890719127ee2">IterationAST::assign</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; assign</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00268">AST.hpp:268</a></div></div>
@@ -803,10 +795,10 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a1c34e8c02a76a644a08ec7138ed07d42">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00266">266</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>                                        {</div>
-<div class="line"><span class="lineno">  267</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  268</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00256">256</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                                         {</div>
+<div class="line"><span class="lineno">  257</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  258</span>}</div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -844,10 +836,10 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aed3edb6efa2ac3247bf8a1596673c914">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00247">247</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  247</span>                                          {</div>
-<div class="line"><span class="lineno">  248</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  249</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00237">237</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  237</span>                                           {</div>
+<div class="line"><span class="lineno">  238</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  239</span>}</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -885,13 +877,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a4c1cf68f8a99b1e88dcc33dfa4f5709b">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00192">192</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                           {</div>
-<div class="line"><span class="lineno">  193</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a0794121c7cd15940d8069e5616b61c58">functions</a>)</div>
-<div class="line"><span class="lineno">  195</span>        child-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  196</span>    node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a57e714880da53ef28abd79c81075c2c0">block</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  197</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00188">188</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                                            {</div>
+<div class="line"><span class="lineno">  189</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;child : node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a0794121c7cd15940d8069e5616b61c58">functions</a>) child-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  191</span>    node.<a class="code hl_variable" href="../../de/db2/class_program_a_s_t.html#a57e714880da53ef28abd79c81075c2c0">block</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  192</span>}</div>
 <div class="ttc" id="aclass_program_a_s_t_html_a0794121c7cd15940d8069e5616b61c58"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html#a0794121c7cd15940d8069e5616b61c58">ProgramAST::functions</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; IAST &gt; &gt; functions</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00026">AST.hpp:26</a></div></div>
 <div class="ttc" id="aclass_program_a_s_t_html_a57e714880da53ef28abd79c81075c2c0"><div class="ttname"><a href="../../de/db2/class_program_a_s_t.html#a57e714880da53ef28abd79c81075c2c0">ProgramAST::block</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; block</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00027">AST.hpp:27</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -931,11 +922,11 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a44aea13582365aa466c079e6b42f5e00">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00293">293</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  293</span>                                          {</div>
-<div class="line"><span class="lineno">  294</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  295</span>    node.<a class="code hl_variable" href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">toReturn</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  296</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00283">283</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>                                           {</div>
+<div class="line"><span class="lineno">  284</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  285</span>    node.<a class="code hl_variable" href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">toReturn</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  286</span>}</div>
 <div class="ttc" id="aclass_return_a_s_t_html_afcc84e07e19c363355b5452a59d64f42"><div class="ttname"><a href="../../d8/de5/class_return_a_s_t.html#afcc84e07e19c363355b5452a59d64f42">ReturnAST::toReturn</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; toReturn</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00219">AST.hpp:219</a></div></div>
 </div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -974,12 +965,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a93fc8b873f10a161e3f53697f054de70">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00280">280</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>                                          {</div>
-<div class="line"><span class="lineno">  281</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  282</span>    node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">from</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  283</span>    node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">index</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  284</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00270">270</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                           {</div>
+<div class="line"><span class="lineno">  271</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  272</span>    node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">from</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  273</span>    node.<a class="code hl_variable" href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">index</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  274</span>}</div>
 <div class="ttc" id="aclass_select_a_s_t_html_a2b168b48c4c442aa9314c0fef87fa2b9"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#a2b168b48c4c442aa9314c0fef87fa2b9">SelectAST::index</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; index</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00198">AST.hpp:198</a></div></div>
 <div class="ttc" id="aclass_select_a_s_t_html_af4e17a16e86b3afb8b285351af20967d"><div class="ttname"><a href="../../d5/df8/class_select_a_s_t.html#af4e17a16e86b3afb8b285351af20967d">SelectAST::from</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; from</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00197">AST.hpp:197</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1019,10 +1010,10 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#aa9c149efcd1c2fa057ae713290f1b268">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00251">251</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  251</span>                                          {</div>
-<div class="line"><span class="lineno">  252</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  253</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00241">241</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>                                           {</div>
+<div class="line"><span class="lineno">  242</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  243</span>}</div>
 </div><!-- fragment --><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
@@ -1060,10 +1051,10 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#ac1382c24e52b9673204d4667dbb97f4c">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00224">224</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>                                            {</div>
-<div class="line"><span class="lineno">  225</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  226</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00214">214</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>                                             {</div>
+<div class="line"><span class="lineno">  215</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  216</span>}</div>
 </div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1101,11 +1092,11 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#ad75b65bd8e866dbc3a75cc1c97297fda">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00261">261</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  261</span>                                        {</div>
-<div class="line"><span class="lineno">  262</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  263</span>    node.<a class="code hl_variable" href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">down</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  264</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00251">251</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>                                         {</div>
+<div class="line"><span class="lineno">  252</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  253</span>    node.<a class="code hl_variable" href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">down</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  254</span>}</div>
 <div class="ttc" id="aclass_un_op_a_s_t_html_a7c0ba3275a38116a3cf78eb2c499ec0d"><div class="ttname"><a href="../../dc/de8/class_un_op_a_s_t.html#a7c0ba3275a38116a3cf78eb2c499ec0d">UnOpAST::down</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; down</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00154">AST.hpp:154</a></div></div>
 </div><!-- fragment --><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
@@ -1144,10 +1135,10 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a8b3e94b2c729724d3508cb5b30dd0876">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00276">276</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  276</span>                                       {</div>
-<div class="line"><span class="lineno">  277</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  278</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00266">266</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>                                        {</div>
+<div class="line"><span class="lineno">  267</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  268</span>}</div>
 </div><!-- fragment --><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="../../closed.png" alt="+"/> Граф вызовов:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1185,12 +1176,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a36a7a5238714bb444a24a8576e50704c">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00218">218</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>                                           {</div>
-<div class="line"><span class="lineno">  219</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  220</span>    node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a37bead2ee39ca5ed5f446f8c21186759">var</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  221</span>    node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a90c0e4e95f0722767ba774c099fcf7c5">type</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  222</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00208">208</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>                                            {</div>
+<div class="line"><span class="lineno">  209</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  210</span>    node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a37bead2ee39ca5ed5f446f8c21186759">var</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  211</span>    node.<a class="code hl_variable" href="../../d6/d7c/class_var_decl_a_s_t.html#a90c0e4e95f0722767ba774c099fcf7c5">type</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  212</span>}</div>
 <div class="ttc" id="aclass_var_decl_a_s_t_html_a37bead2ee39ca5ed5f446f8c21186759"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html#a37bead2ee39ca5ed5f446f8c21186759">VarDeclAST::var</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; var</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00066">AST.hpp:66</a></div></div>
 <div class="ttc" id="aclass_var_decl_a_s_t_html_a90c0e4e95f0722767ba774c099fcf7c5"><div class="ttname"><a href="../../d6/d7c/class_var_decl_a_s_t.html#a90c0e4e95f0722767ba774c099fcf7c5">VarDeclAST::type</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; type</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00067">AST.hpp:67</a></div></div>
 </div><!-- fragment --><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1230,12 +1221,12 @@ $(document).ready(function(){initNavTree('d1/d49/class_type_view_visitor.html','
 
 <p>Замещает <a class="el" href="../../df/db7/class_i_visitor.html#a5b3c4c3332757f51ed80fd23ec2a0995">IVisitor</a>.</p>
 
-<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00306">306</a></p>
-<div class="fragment"><div class="line"><span class="lineno">  306</span>                                         {</div>
-<div class="line"><span class="lineno">  307</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
-<div class="line"><span class="lineno">  308</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  309</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  310</span>}</div>
+<p class="definition">См. определение в файле <a class="el" href="../../dc/d65/_visitor_8cpp_source.html">Visitor.cpp</a> строка <a class="el" href="../../dc/d65/_visitor_8cpp_source.html#l00295">295</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>                                          {</div>
+<div class="line"><span class="lineno">  296</span>    typesStrings.push_back(node.<a class="code hl_variable" href="../../d3/d96/class_i_a_s_t.html#a9868d324bdf738ccbbe159625b70c783">token</a>.<a class="code hl_function" href="../../db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a">getStr</a>());</div>
+<div class="line"><span class="lineno">  297</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">body</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  298</span>    node.<a class="code hl_variable" href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">condition</a>-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  299</span>}</div>
 <div class="ttc" id="aclass_while_a_s_t_html_a431765e283ca247891bd2e6177468513"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a431765e283ca247891bd2e6177468513">WhileAST::condition</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; condition</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00243">AST.hpp:243</a></div></div>
 <div class="ttc" id="aclass_while_a_s_t_html_a8e4712d0f093abfeb314ca5bd245a2fb"><div class="ttname"><a href="../../dc/da0/class_while_a_s_t.html#a8e4712d0f093abfeb314ca5bd245a2fb">WhileAST::body</a></div><div class="ttdeci">std::unique_ptr&lt; IAST &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dcb/_a_s_t_8hpp_source.html#l00244">AST.hpp:244</a></div></div>
 </div><!-- fragment --><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

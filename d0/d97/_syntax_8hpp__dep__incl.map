@@ -1,7 +1,11 @@
 <map id="include/Syntax.hpp" name="include/Syntax.hpp">
-<area shape="rect" id="node1" title="Синтаксический анализатор" alt="" coords="223,5,354,32"/>
-<area shape="rect" id="node2" href="$d3/d0a/_analyze_8cpp.html" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" id="node3" href="$d1/daa/_syntax_8cpp.html" title=" " alt="" coords="143,80,250,107"/>
-<area shape="rect" id="node4" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="274,80,487,107"/>
-<area shape="rect" id="node5" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="511,80,693,107"/>
+<area shape="rect" id="node1" title="Синтаксический анализатор" alt="" coords="251,5,381,32"/>
+<area shape="rect" id="node2" href="$d8/d7a/_analyzer_8hpp.html" title="Анализатор исходного кода" alt="" coords="157,80,297,107"/>
+<area shape="rect" id="node5" href="$d9/df3/_analyzer_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node6" href="$df/ded/_pascal_syntax_8hpp.html" title=" " alt="" coords="373,80,544,107"/>
+<area shape="rect" id="node7" href="$dd/d15/_pascal_syntax_8cpp.html" title=" " alt="" coords="821,155,968,181"/>
+<area shape="rect" id="node3" href="$d3/db4/graph_draw_8cpp.html" title=" " alt="" coords="147,155,255,181"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html" title=" " alt="" coords="280,155,355,181"/>
+<area shape="rect" id="node8" href="$db/df9/test_semantic_8cpp.html" title=" " alt="" coords="379,155,592,181"/>
+<area shape="rect" id="node9" href="$dd/de9/test_syntax_8cpp.html" title=" " alt="" coords="616,155,797,181"/>
 </map>

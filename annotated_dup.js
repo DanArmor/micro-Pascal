@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "AnalyzeException", "df/d7c/class_analyze_exception.html", "df/d7c/class_analyze_exception" ],
+    [ "Analyzer", "d6/d1a/class_analyzer.html", "d6/d1a/class_analyzer" ],
     [ "ArrSpecAST", "d8/d88/class_arr_spec_a_s_t.html", "d8/d88/class_arr_spec_a_s_t" ],
     [ "AssignAST", "d7/db1/class_assign_a_s_t.html", "d7/db1/class_assign_a_s_t" ],
     [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
@@ -24,6 +25,7 @@ var annotated_dup =
     [ "NodeIterator", "d3/dde/class_node_iterator.html", "d3/dde/class_node_iterator" ],
     [ "NoOpAST", "db/db7/class_no_op_a_s_t.html", "db/db7/class_no_op_a_s_t" ],
     [ "NumberAST", "d8/d90/class_number_a_s_t.html", "d8/d90/class_number_a_s_t" ],
+    [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", "d6/d00/class_pascal_syntax_analyzer" ],
     [ "ProgramAST", "de/db2/class_program_a_s_t.html", "de/db2/class_program_a_s_t" ],
     [ "ReturnAST", "d8/de5/class_return_a_s_t.html", "d8/de5/class_return_a_s_t" ],
     [ "SelectAST", "d5/df8/class_select_a_s_t.html", "d5/df8/class_select_a_s_t" ],

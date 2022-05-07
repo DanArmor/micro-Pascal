@@ -1,4 +1,6 @@
 <map id="GraphvizVisitor::visit" name="GraphvizVisitor::visit">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,145,32"/>
-<area shape="rect" id="node2" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="193,5,292,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,145,57"/>
+<area shape="rect" id="node2" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="216,5,315,32"/>
+<area shape="rect" id="node3" href="$d0/dc3/class_graphviz_visitor.html#a11a48d0833e5c502ffa019419cfe1fa9" title=" " alt="" coords="193,56,337,83"/>
+<area shape="rect" id="node4" href="$d0/dc3/class_graphviz_visitor.html#aee357a5bb30083f42fbf1213c9af8d3c" title=" " alt="" coords="385,56,529,83"/>
 </map>

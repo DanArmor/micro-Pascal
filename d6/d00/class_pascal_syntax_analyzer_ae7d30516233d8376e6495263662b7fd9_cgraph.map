@@ -1,0 +1,5 @@
+<map id="PascalSyntaxAnalyzer::eat" name="PascalSyntaxAnalyzer::eat">
+<area shape="rect" id="node1" title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение" alt="" coords="5,46,180,73"/>
+<area shape="rect" id="node2" href="$d6/d00/class_pascal_syntax_analyzer.html#a80fd2f225d07e698794427925fe6473b" title=" " alt="" coords="228,5,379,47"/>
+<area shape="rect" id="node3" href="$d6/d00/class_pascal_syntax_analyzer.html#ae7d45d4a2d1a4200a1970708da736845" title=" " alt="" coords="228,71,379,112"/>
+</map>

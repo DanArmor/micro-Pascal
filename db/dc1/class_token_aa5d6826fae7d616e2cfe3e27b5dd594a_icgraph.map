@@ -1,52 +1,52 @@
 <map id="Token::getStr" name="Token::getStr">
-<area shape="rect" id="node1" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="2737,452,2836,479"/>
-<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9" title=" " alt="" coords="2507,5,2682,32"/>
-<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23" title=" " alt="" coords="2267,56,2438,83"/>
-<area shape="rect" id="node6" href="$dd/dad/class_semantic_visitor.html#a582af2f761a582eaaa1912007d335ac1" title=" " alt="" coords="2514,208,2675,235"/>
-<area shape="rect" id="node7" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="2506,325,2683,352"/>
-<area shape="rect" id="node12" href="$dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0" title=" " alt="" coords="2500,427,2689,453"/>
-<area shape="rect" id="node14" href="$dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e" title=" " alt="" coords="2001,427,2182,453"/>
-<area shape="rect" id="node16" href="$dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037" title=" " alt="" coords="2267,376,2439,403"/>
-<area shape="rect" id="node17" href="$dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0" title=" " alt="" coords="2503,157,2687,184"/>
-<area shape="rect" id="node18" href="$dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643" title=" " alt="" coords="2269,107,2436,133"/>
-<area shape="rect" id="node20" href="$dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99" title=" " alt="" coords="2507,477,2682,504"/>
-<area shape="rect" id="node21" href="$dd/dad/class_semantic_visitor.html#a9c6408c4a81900cc78c1e2171d7f1709" title=" " alt="" coords="2273,528,2432,555"/>
-<area shape="rect" id="node22" href="$dc/d19/class_function_a_s_t.html#aedf688f70367c4119edc64fb0117edba" title=" " alt="" coords="2505,629,2685,656"/>
-<area shape="rect" id="node23" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="2543,680,2647,707"/>
-<area shape="rect" id="node45" href="$db/dc1/class_token.html#a4cfe5f0f0c83091c2fa42acb6d04108f" title=" " alt="" coords="2554,731,2635,757"/>
-<area shape="rect" id="node46" href="$dd/dad/class_semantic_visitor.html#a7b702fae5a7bbe5f58ae2720170bbfdc" title="Добавление стандартной функции" alt="" coords="2512,259,2677,301"/>
-<area shape="rect" id="node48" href="$d0/dc3/class_graphviz_visitor.html#a054ce6ff4eb5e18044b1d4b0bf09bf22" title=" " alt="" coords="2525,781,2665,808"/>
-<area shape="rect" id="node49" href="$d1/d49/class_type_view_visitor.html#a5387c5d6dec8f472cd425d7d66bd446c" title=" " alt="" coords="2521,832,2668,859"/>
-<area shape="rect" id="node50" href="$dd/dad/class_semantic_visitor.html#af26e9b0991e68c289c87994af7bf148d" title=" " alt="" coords="2523,883,2667,909"/>
-<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a5908079286361da3432020ad5474f4e7" title=" " alt="" coords="2281,5,2425,32"/>
-<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="2019,81,2163,108"/>
-<area shape="rect" id="node8" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="2291,325,2415,352"/>
-<area shape="rect" id="node9" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="2023,268,2160,295"/>
-<area shape="rect" id="node10" href="$d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" title=" " alt="" coords="2036,323,2147,349"/>
-<area shape="rect" id="node11" href="$d0/d0f/test_lexer__1_8cpp.html#ab32b6906cc4e6cc339e245f6bd671744" title="Тест разбора сложной программы на Pascal." alt="" coords="2064,373,2119,400"/>
-<area shape="rect" id="node13" href="$dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f" title=" " alt="" coords="2253,427,2452,453"/>
-<area shape="rect" id="node15" href="$dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" title=" " alt="" coords="1752,427,1896,453"/>
-<area shape="rect" id="node19" href="$dd/dad/class_semantic_visitor.html#a42aa0e91b2f4de83d76ef4c2f3b5c95c" title=" " alt="" coords="2281,157,2425,184"/>
-<area shape="rect" id="node24" href="$df/d7c/class_analyze_exception.html#aa4e8534e7478ad3fed1904b669a17363" title=" " alt="" coords="2265,958,2440,999"/>
-<area shape="rect" id="node25" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="2273,907,2432,933"/>
-<area shape="rect" id="node26" href="$d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1989,501,2193,528"/>
-<area shape="rect" id="node27" href="$d0/dfe/class_syntax_analyzer.html#a3e87b8ffb5f24f1db097bfb6aaeb8c2d" title=" " alt="" coords="459,1160,665,1187"/>
-<area shape="rect" id="node28" href="$d0/dfe/class_syntax_analyzer.html#acef4b19447f253a6e25d762733ca8ede" title=" " alt="" coords="239,957,411,984"/>
-<area shape="rect" id="node29" href="$d0/dfe/class_syntax_analyzer.html#afd2005539c57ee2575cab3c50d061cd9" title=" " alt="" coords="5,932,191,959"/>
-<area shape="rect" id="node30" href="$d0/dfe/class_syntax_analyzer.html#a500e4e0cd0605ebbee4ab452948fa2ca" title=" " alt="" coords="1731,579,1917,605"/>
-<area shape="rect" id="node31" href="$d0/dfe/class_syntax_analyzer.html#a4dc8338b4fc879f36e63f27fe3ce7041" title=" " alt="" coords="1468,653,1671,680"/>
-<area shape="rect" id="node32" href="$d0/dfe/class_syntax_analyzer.html#ada547456d19f4a7490f57f7dc9bfed94" title=" " alt="" coords="1209,653,1412,680"/>
-<area shape="rect" id="node33" href="$d0/dfe/class_syntax_analyzer.html#a21f6ed68cce9f38063319d350afc1239" title=" " alt="" coords="1997,1160,2185,1187"/>
-<area shape="rect" id="node34" href="$d0/dfe/class_syntax_analyzer.html#a0d5fca8c5ec85c61bcf65df3693ce384" title=" " alt="" coords="1729,1147,1919,1173"/>
-<area shape="rect" id="node35" href="$d0/dfe/class_syntax_analyzer.html#a1f83850370eb120ec67a6cc19ce99e2e" title=" " alt="" coords="1478,1261,1661,1288"/>
-<area shape="rect" id="node36" href="$d0/dfe/class_syntax_analyzer.html#a65d458f8a460cd5153c013f9dc2b6d90" title=" " alt="" coords="1201,1261,1420,1288"/>
-<area shape="rect" id="node37" href="$d0/dfe/class_syntax_analyzer.html#a3c3f51ab7cdb341ac4fa460e352150ae" title=" " alt="" coords="975,1211,1153,1237"/>
-<area shape="rect" id="node38" href="$d0/dfe/class_syntax_analyzer.html#ad43214817dbe71119316f653b4cbbefb" title=" " alt="" coords="713,1160,927,1187"/>
-<area shape="rect" id="node39" href="$d0/dfe/class_syntax_analyzer.html#a44506791ee9420b418715a9e87908aeb" title=" " alt="" coords="733,1300,907,1327"/>
-<area shape="rect" id="node40" href="$d0/dfe/class_syntax_analyzer.html#a24dfeabcc9335e5f3f040f7cf0c64fd9" title=" " alt="" coords="718,1388,922,1415"/>
-<area shape="rect" id="node41" href="$d0/dfe/class_syntax_analyzer.html#aee174af1cc97011051b2a8a87d2a5e7d" title=" " alt="" coords="725,1109,915,1136"/>
-<area shape="rect" id="node42" href="$d0/dfe/class_syntax_analyzer.html#a1390f811b111005b207bd039d2623dd4" title=" " alt="" coords="1977,603,2205,629"/>
-<area shape="rect" id="node43" href="$d0/dfe/class_syntax_analyzer.html#ac33091b7dd671e839b031a26058096bd" title=" " alt="" coords="1990,805,2193,832"/>
-<area shape="rect" id="node44" href="$d0/dfe/class_syntax_analyzer.html#a5ef8e691db1611dd73eff73f011b7780" title=" " alt="" coords="1719,653,1929,680"/>
-<area shape="rect" id="node47" href="$dd/dad/class_semantic_visitor.html#a0e9d513580e7fe89bede454b5a1bc89c" title="Добавление стандартных функций" alt="" coords="2270,259,2435,301"/>
+<area shape="rect" id="node1" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="2331,436,2429,463"/>
+<area shape="rect" id="node2" href="$dd/dad/class_semantic_visitor.html#a0e0845cf894c0257901a092c0ec99dc9" title=" " alt="" coords="2101,5,2275,32"/>
+<area shape="rect" id="node4" href="$dd/dad/class_semantic_visitor.html#a42ccfc47d8a517399496388a105dcf23" title=" " alt="" coords="1861,56,2031,83"/>
+<area shape="rect" id="node6" href="$dd/dad/class_semantic_visitor.html#a582af2f761a582eaaa1912007d335ac1" title=" " alt="" coords="2107,208,2269,235"/>
+<area shape="rect" id="node7" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="2099,259,2277,285"/>
+<area shape="rect" id="node12" href="$dd/dad/class_semantic_visitor.html#a2d725cf78ec050f19b089c651ae2eca0" title=" " alt="" coords="2093,360,2283,387"/>
+<area shape="rect" id="node14" href="$dd/dad/class_semantic_visitor.html#aa10747b1413aed0668d09d68cbdb9d5e" title=" " alt="" coords="1606,360,1787,387"/>
+<area shape="rect" id="node16" href="$dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037" title=" " alt="" coords="1860,309,2032,336"/>
+<area shape="rect" id="node17" href="$dd/dad/class_semantic_visitor.html#a2a1ffedc7dc1d345d4020cabd39d23e0" title=" " alt="" coords="2096,157,2280,184"/>
+<area shape="rect" id="node18" href="$dd/dad/class_semantic_visitor.html#a38d36a89c00bd58542c0b06674c04643" title=" " alt="" coords="1863,107,2029,133"/>
+<area shape="rect" id="node20" href="$dd/dad/class_semantic_visitor.html#a77366aa5cb857ad347b0e487287f5d99" title=" " alt="" coords="2101,411,2275,437"/>
+<area shape="rect" id="node21" href="$dd/dad/class_semantic_visitor.html#a9c6408c4a81900cc78c1e2171d7f1709" title=" " alt="" coords="1867,461,2025,488"/>
+<area shape="rect" id="node22" href="$dc/d19/class_function_a_s_t.html#aedf688f70367c4119edc64fb0117edba" title=" " alt="" coords="2098,563,2278,589"/>
+<area shape="rect" id="node23" href="$db/dc1/class_token.html#ab9a75d3f89e77051d87462654e7576de" title=" " alt="" coords="2136,613,2240,640"/>
+<area shape="rect" id="node45" href="$db/dc1/class_token.html#a4cfe5f0f0c83091c2fa42acb6d04108f" title=" " alt="" coords="2147,664,2229,691"/>
+<area shape="rect" id="node46" href="$dd/dad/class_semantic_visitor.html#a7b702fae5a7bbe5f58ae2720170bbfdc" title="Добавление стандартной функции" alt="" coords="2105,715,2271,757"/>
+<area shape="rect" id="node48" href="$d0/dc3/class_graphviz_visitor.html#a054ce6ff4eb5e18044b1d4b0bf09bf22" title=" " alt="" coords="2118,781,2258,808"/>
+<area shape="rect" id="node49" href="$d1/d49/class_type_view_visitor.html#a5387c5d6dec8f472cd425d7d66bd446c" title=" " alt="" coords="2115,832,2261,859"/>
+<area shape="rect" id="node50" href="$dd/dad/class_semantic_visitor.html#af26e9b0991e68c289c87994af7bf148d" title=" " alt="" coords="2116,883,2260,909"/>
+<area shape="rect" id="node3" href="$dd/dad/class_semantic_visitor.html#a5908079286361da3432020ad5474f4e7" title=" " alt="" coords="1874,5,2018,32"/>
+<area shape="rect" id="node5" href="$dd/dad/class_semantic_visitor.html#a8c290e76874854c567bc49ad9d8a7216" title=" " alt="" coords="1625,81,1769,108"/>
+<area shape="rect" id="node8" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="1884,259,2008,285"/>
+<area shape="rect" id="node9" href="$d6/d1a/class_analyzer.html#aaa75d76110c2f35ca78714bef24f4962" title=" " alt="" coords="1626,208,1767,235"/>
+<area shape="rect" id="node10" href="$d0/d0f/test_lexer__1_8cpp.html#a685fd1876eec959aa220812db64464f1" title=" " alt="" coords="1641,259,1752,285"/>
+<area shape="rect" id="node11" href="$db/df9/test_semantic_8cpp.html#a804faf7fd199a3c491020f1f2caa618b" title="Тест семантического анализа Паскаля" alt="" coords="1669,309,1724,336"/>
+<area shape="rect" id="node13" href="$dd/dad/class_semantic_visitor.html#a44b32ee220302ba2d55c0c36a191a51f" title=" " alt="" coords="1847,360,2045,387"/>
+<area shape="rect" id="node15" href="$dd/dad/class_semantic_visitor.html#a1bdd0de54198ad56d2b31f946a2dcff6" title=" " alt="" coords="1399,360,1543,387"/>
+<area shape="rect" id="node19" href="$dd/dad/class_semantic_visitor.html#a42aa0e91b2f4de83d76ef4c2f3b5c95c" title=" " alt="" coords="1874,157,2018,184"/>
+<area shape="rect" id="node24" href="$df/d7c/class_analyze_exception.html#aa4e8534e7478ad3fed1904b669a17363" title=" " alt="" coords="1859,898,2033,939"/>
+<area shape="rect" id="node25" href="$d7/d7c/class_a_s_t_factory.html#a31d959009ba9e91a58a5c15e986d130b" title=" " alt="" coords="1867,847,2025,873"/>
+<area shape="rect" id="node26" href="$d7/d7c/class_a_s_t_factory.html#aa4647507a830972309beb5db2d84ce96" title="Возвращает &quot;глубокую копию&quot; указателя на тип typePtr." alt="" coords="1595,435,1799,461"/>
+<area shape="rect" id="node27" href="$d6/d00/class_pascal_syntax_analyzer.html#a1483de526ade4687ddb1d1c0c804b15c" title=" " alt="" coords="403,1129,553,1170"/>
+<area shape="rect" id="node28" href="$d6/d00/class_pascal_syntax_analyzer.html#a2c49546e46d84e7785ef131a1cfc7ff7" title=" " alt="" coords="204,919,355,961"/>
+<area shape="rect" id="node29" href="$d6/d00/class_pascal_syntax_analyzer.html#aeab55be1d74a8810d1ea8aa51ba8e820" title=" " alt="" coords="5,890,156,931"/>
+<area shape="rect" id="node30" href="$d6/d00/class_pascal_syntax_analyzer.html#ab01912c3436af8d368fb00fc4f7362d7" title=" " alt="" coords="1396,498,1547,539"/>
+<area shape="rect" id="node31" href="$d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718" title=" " alt="" coords="1197,587,1348,629"/>
+<area shape="rect" id="node32" href="$d6/d00/class_pascal_syntax_analyzer.html#a99dc990814a355dae3fcb44cb42a1d2a" title=" " alt="" coords="999,587,1149,629"/>
+<area shape="rect" id="node33" href="$d6/d00/class_pascal_syntax_analyzer.html#a17fc2ae65eb01ca8a797c5af969eebae" title=" " alt="" coords="1621,1126,1772,1167"/>
+<area shape="rect" id="node34" href="$d6/d00/class_pascal_syntax_analyzer.html#add958b54cb4edebc082e2a246b6adb10" title=" " alt="" coords="1396,1105,1547,1146"/>
+<area shape="rect" id="node35" href="$d6/d00/class_pascal_syntax_analyzer.html#a2a47b3776a55323696ebcc18a9699b57" title=" " alt="" coords="1197,1227,1348,1269"/>
+<area shape="rect" id="node36" href="$d6/d00/class_pascal_syntax_analyzer.html#aca0a489432741e00e3d268ccd6452781" title=" " alt="" coords="999,1227,1149,1269"/>
+<area shape="rect" id="node37" href="$d6/d00/class_pascal_syntax_analyzer.html#ad459363d50d2dd23b8b0b2baee6be658" title=" " alt="" coords="800,1191,951,1233"/>
+<area shape="rect" id="node38" href="$d6/d00/class_pascal_syntax_analyzer.html#aa85cd72cb0382779d740d228fbeaa8da" title=" " alt="" coords="601,1133,752,1174"/>
+<area shape="rect" id="node39" href="$d6/d00/class_pascal_syntax_analyzer.html#ada2725df1a0f0ca0aab5d02466661f01" title=" " alt="" coords="601,1278,752,1319"/>
+<area shape="rect" id="node40" href="$d6/d00/class_pascal_syntax_analyzer.html#a64ecaf3b371cf72ffcc81058e27ee463" title=" " alt="" coords="601,1401,752,1442"/>
+<area shape="rect" id="node41" href="$d6/d00/class_pascal_syntax_analyzer.html#ae443cbc65ec18c6277b095da042ec7a2" title=" " alt="" coords="601,1067,752,1109"/>
+<area shape="rect" id="node42" href="$d6/d00/class_pascal_syntax_analyzer.html#ada208f0427fef2e977e420bb5e87450a" title=" " alt="" coords="1621,537,1772,578"/>
+<area shape="rect" id="node43" href="$d6/d00/class_pascal_syntax_analyzer.html#a2cbb9da12f9194bf4c71b8045f5f4ba4" title=" " alt="" coords="1621,755,1772,797"/>
+<area shape="rect" id="node44" href="$d6/d00/class_pascal_syntax_analyzer.html#a81e6761557e6f305e3fa087676c40ce5" title=" " alt="" coords="1396,587,1547,629"/>
+<area shape="rect" id="node47" href="$dd/dad/class_semantic_visitor.html#a0e9d513580e7fe89bede454b5a1bc89c" title="Добавление стандартных функций" alt="" coords="1863,963,2029,1005"/>
 </map>

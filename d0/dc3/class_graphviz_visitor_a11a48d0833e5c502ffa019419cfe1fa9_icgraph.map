@@ -1,6 +1,4 @@
 <map id="GraphvizVisitor::write" name="GraphvizVisitor::write">
-<area shape="rect" id="node1" title=" " alt="" coords="376,31,520,57"/>
-<area shape="rect" id="node2" href="$d1/d80/namespace_analyze.html#ad5b883abd31a279f5b95a9aa52415437" title="Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода по..." alt="" coords="191,31,328,57"/>
-<area shape="rect" id="node3" href="$d1/d80/namespace_analyze.html#af385d2d3d600a7392cb177a3171f193f" title="Анализ файла inName и вывод в &quot;output.svg&quot; .dot описания ДАС. Так же выводит в стандартный поток выво..." alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node4" href="$d3/db4/graph_draw_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="49,56,99,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="193,5,337,32"/>
+<area shape="rect" id="node2" href="$d0/dc3/class_graphviz_visitor.html#a054ce6ff4eb5e18044b1d4b0bf09bf22" title=" " alt="" coords="5,5,145,32"/>
 </map>
