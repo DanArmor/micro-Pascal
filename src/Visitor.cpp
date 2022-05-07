@@ -3,6 +3,7 @@
 #include <fmt/format.h>
 
 #include "AST.hpp"
+#include "SyntExp.hpp"
 #include "supAlgs.hpp"
 
 /*Определения GraphvizVisitor

@@ -35,8 +35,8 @@ class ForAST;
 class IterationAST;
 
 /// @brief Интерфейс "посетителя"
-class IVisitor{
-    public:
+class IVisitor {
+   public:
     virtual void visit(ProgramAST &node) = 0;
     virtual void visit(FunctionAST &node) = 0;
     virtual void visit(BlockAST &node) = 0;
@@ -62,9 +62,8 @@ class IVisitor{
 };
 
 /// @brief Базовый класс узлов абстрактного синтаксического дерева
-class IAST{
-    public:
-
+class IAST {
+   public:
     IAST();
     IAST(Token token);
     virtual ~IAST() = default;

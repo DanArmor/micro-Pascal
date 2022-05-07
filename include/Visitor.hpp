@@ -9,19 +9,16 @@
  */
 
 #include <fstream>
-#include <string>
 #include <memory>
-
-#include "Token.hpp"
-#include "List.hpp"
+#include <string>
 
 #include "ASTclasses.hpp"
-#include "AST.hpp"
-#include "SyntExp.hpp"
+#include "List.hpp"
+#include "Token.hpp"
 
 /// @brief Посетителя для построения графического отображения ДАС
 class GraphvizVisitor : public IVisitor {
-public:
+   public:
     explicit GraphvizVisitor(std::string filename);
 
     void visit(ProgramAST &node);
@@ -68,11 +65,10 @@ public:
 
     void visit(IterationAST &node);
 
-
     void done(void);
     void write(void);
 
-private:
+   private:
     void addDef(std::string const &str);
     void connectToNode(std::size_t index, IAST *ptr);
     std::fstream file;
@@ -83,7 +79,7 @@ private:
 
 /// @brief Посетителя для вывода сведений о типах в прямом порядке по ДАС
 class TypeViewVisitor : public IVisitor {
-public:
+   public:
     TypeViewVisitor();
 
     void visit(ProgramAST &node);
@@ -132,26 +128,27 @@ public:
 
     std::vector<std::string> getData(void);
 
-private:
+   private:
     std::vector<std::string> typesStrings;
 };
 
 /// @brief Посетитель-семантический анализатор
 class SemanticVisitor : public IVisitor {
-public:
-    
+   public:
     ///@brief Структура для хранения данных о функции
-    struct FunctionData{
+    struct FunctionData {
         explicit FunctionData(Token token);
-        FunctionData(Token token, std::vector<std::string> params, std::string returnType);
+        FunctionData(Token token, std::vector<std::string> params,
+                     std::string returnType);
         FunctionData();
         Token token;
         std::vector<std::string> params;
         std::string returnType;
     };
 
-    ///@brief Структура для хранения данных об именованном значении - переменной или константе
-    struct VarData{
+    ///@brief Структура для хранения данных об именованном значении - переменной
+    ///или константе
+    struct VarData {
         VarData(Token token, IAST *typePtr);
         VarData(Token token, bool isConst);
         VarData();
@@ -227,17 +224,20 @@ public:
     FunctionData &getFunc(Token name);
 
     /// @brief Добавление стандартной функции
-    void prebuildFunction(Token tok, std::vector<std::string> params, std::string returnType);
+    void prebuildFunction(Token tok, std::vector<std::string> params,
+                          std::string returnType);
     /// @brief Добавление стандартных функций
     void prebuildFunctions(List<FunctionData> funcs);
 
-    /// @brief Сравнение типов по правилам Паскаля. Если strict == true, то имена типов должны абсолютно совпадать
+    /// @brief Сравнение типов по правилам Паскаля. Если strict == true, то
+    /// имена типов должны абсолютно совпадать
     bool compareTypes(std::string A, std::string B, bool strict = false);
 
     /// @brief Очищение списка переменных и констант
     void clearBlock(void);
 
-    /// @brief Создает копию посетителя, которая посещает ptr и возвращает результат
+    /// @brief Создает копию посетителя, которая посещает ptr и возвращает
+    /// результат
     std::string getValue(IAST *ptr);
 
     /**
@@ -246,7 +246,7 @@ public:
      */
     void Return(std::string inValue);
 
-private:
+   private:
     std::size_t typeIndex = 0;
     bool isConst = false;
     std::string value;

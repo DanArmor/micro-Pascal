@@ -8,28 +8,30 @@
  * @version 1.0
  */
 
-#include <vector>
 #include <string>
+#include <vector>
 
-#include "Token.hpp"
 #include "List.hpp"
+#include "Token.hpp"
 #include "Visitor.hpp"
 
-
 /// @brief Специальные правила Паскаля
-namespace PascalRules{
+namespace PascalRules {
 
-    List<SemanticVisitor::FunctionData> getStandartFuncs(void){
-         List<SemanticVisitor::FunctionData> functions = {
-             {{"writeln", IToken::ID, IToken::FUNCTION_NAME}, std::vector<std::string>{"string"}, "void"},
-             {{"sin", IToken::ID, IToken::FUNCTION_NAME}, std::vector<std::string>{"real"}, "real"}
-        };
-        return functions;
-    }
+List<SemanticVisitor::FunctionData> getStandartFuncs(void) {
+    List<SemanticVisitor::FunctionData> functions = {
+        {{"writeln", IToken::ID, IToken::FUNCTION_NAME},
+         std::vector<std::string>{"string"},
+         "void"},
+        {{"sin", IToken::ID, IToken::FUNCTION_NAME},
+         std::vector<std::string>{"real"},
+         "real"}};
+    return functions;
+}
 
-    /// @brief Возвращает шаблоны токинов языка Pascal
-    List<TokenTemplate> getPascalTemplates(void){
-         List<TokenTemplate> templates = {
+/// @brief Возвращает шаблоны токинов языка Pascal
+List<TokenTemplate> getPascalTemplates(void) {
+    List<TokenTemplate> templates = {
         //{"^[\t ][^a-zA-Z\\d\\s:]", IToken::ERROR},
 
         {"^[\t ]*\\+", IToken::Type::PLUS, IToken::AdvType::OPERATOR},
@@ -46,7 +48,6 @@ namespace PascalRules{
         {"^[\t ]*\\[", IToken::Type::LSQBRACKET, IToken::AdvType::OPERATOR},
         {"^[\t ]*\\]", IToken::Type::RSQBRACKET, IToken::AdvType::OPERATOR},
         {"^[\t ]*\\.\\.", IToken::Type::RANGE, IToken::AdvType::OPERATOR},
-
 
         {"^[\t ]*begin", IToken::Type::BEGIN, IToken::AdvType::KEYWORD},
         {"^[\t ]*end", IToken::Type::END, IToken::AdvType::KEYWORD},
@@ -92,17 +93,19 @@ namespace PascalRules{
 
         {"^[\t ]*\\:\\=", IToken::Type::ASSIGN, IToken::AdvType::OPERATOR},
 
-        {"^[\t ]*[0-9]+", IToken::Type::INTEGER_CONST, IToken::AdvType::SOME_CONST},
-        {"^[\t ]*[0-9]+\\.[0-9]*", IToken::Type::REAL_CONST, IToken::AdvType::SOME_CONST},
+        {"^[\t ]*[0-9]+", IToken::Type::INTEGER_CONST,
+         IToken::AdvType::SOME_CONST},
+        {"^[\t ]*[0-9]+\\.[0-9]*", IToken::Type::REAL_CONST,
+         IToken::AdvType::SOME_CONST},
         {"^[\t ]*'.*'", IToken::STRING_CONST, IToken::AdvType::SOME_CONST},
         {"^[\t ]*\\{(.|\n)*\\}", IToken::COMMENT, IToken::AdvType::NOTPROCESS},
 
-        {"^[\t ]*[_A-Za-z|А-Яа-я]+[[:alnum:]]*\\b", IToken::Type::ID, IToken::AdvType::UNKNOWN},
-        {"^[\t ]*\n", IToken::NEWLINE, IToken::AdvType::NOTPROCESS}
-        };
-        return templates;
-    }
-
+        {"^[\t ]*[_A-Za-z|А-Яа-я]+[[:alnum:]]*\\b", IToken::Type::ID,
+         IToken::AdvType::UNKNOWN},
+        {"^[\t ]*\n", IToken::NEWLINE, IToken::AdvType::NOTPROCESS}};
+    return templates;
 }
+
+}  // namespace PascalRules
 
 #endif

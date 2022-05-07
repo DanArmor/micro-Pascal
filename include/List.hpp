@@ -10,31 +10,29 @@
 
 #include <cstddef>
 #include <initializer_list>
-#include <vector>
-#include <stdexcept>
 #include <iterator>
+#include <stdexcept>
+#include <vector>
 
 /// Предварительное объявление для списка
-template<typename T>
+template <typename T>
 class List;
 
 /// Предварительное объявление для итератора узла
-template<typename T>
+template <typename T>
 class NodeIterator;
 
 /**
  * @brief Узел с одним указателм на данные и одним указателем на следующий узел
  * @tparam U - тип хранящихся значений
  */
-template<typename U>
-class Node{
-
+template <typename U>
+class Node {
     /// Список, способный получить доступ к защищенным полям узла
     friend class List<U>;
     friend class NodeIterator<U>;
 
-    public:
-
+   public:
     /// @brief Конструктор по-умолчанию
     Node();
 
@@ -45,7 +43,7 @@ class Node{
      * @brief Возвращает ссылку на данные узла
      * @return U - данные узла
      */
-    U& data(void) noexcept;
+    U &data(void) noexcept;
 
     /// @brief Присоединяет узел pNext в качестве следующего узла
     void connectAsNext(Node *pNext) noexcept;
@@ -53,28 +51,30 @@ class Node{
     /// @brief Присоединяет узел pPrev в качестве предыдущего узла
     void connectAsPrev(Node *pPrev) noexcept;
 
-    /// @brief Создает узел из value и присоединяет в качестве следующего узла к вызывающему
+    /// @brief Создает узел из value и присоединяет в качестве следующего узла к
+    /// вызывающему
     void connectAsNext(U const &value) noexcept;
 
-    /// @brief Создает узел из value и присоединяет в качестве предыдущего узла к вызывающему
+    /// @brief Создает узел из value и присоединяет в качестве предыдущего узла
+    /// к вызывающему
     void connectAsPrev(U const &value) noexcept;
 
     /**
      * @brief Исключает узел из цепи, в которой находится.
-     * Пример, y - узел. к которому вызван метод: 
+     * Пример, y - узел. к которому вызван метод:
      * x <-> y <-> z переходит в x <-> z
      */
     void exclude(void) noexcept;
 
     /**
      * @brief Исключает узел из цепи, в которой находится.
-     * Пример, y - узел. к которому вызван метод: 
+     * Пример, y - узел. к которому вызван метод:
      * x <-> y <-> z переходит в x <-> z.
      * Возвращает узел y.
      */
     Node *excludeAndReturn(void) noexcept;
 
-    protected:
+   protected:
     /// @brief Данные
     U innerData;
     /// @brief Указатель на следующий узел
@@ -84,18 +84,17 @@ class Node{
 };
 
 /// @brief Итератор для СД, построенных на базе узлов (Node)
-template<typename T>
-struct NodeIterator{
-    public:
-
+template <typename T>
+struct NodeIterator {
+   public:
     /// @brief аллаисы, требуемые для итераторов
     using difference_type = std::ptrdiff_t;
     using value_type = T;
-    using pointer = T*;
-    using reference = T&;
+    using pointer = T *;
+    using reference = T &;
     using iterator_category = std::bidirectional_iterator_tag;
 
-    /// @brief Конструктор из указателя 
+    /// @brief Конструктор из указателя
     explicit NodeIterator(Node<T> *inPtr);
 
     /// @brief Конструктор для двунаправленного узла
@@ -110,25 +109,24 @@ struct NodeIterator{
     /// @brief Получение данных итератора
     T &operator*(void);
 
-
     /// @brief Не указывают ли итераторы на один и тот же узел
-    friend bool operator!=(NodeIterator const &lhs, NodeIterator const &rhs){
+    friend bool operator!=(NodeIterator const &lhs, NodeIterator const &rhs) {
         return lhs.ptr != rhs.ptr;
     }
 
     /// @brief Указывают ли итераторы на один и тот же узел
-    friend bool operator==(NodeIterator const &lhs, NodeIterator const &rhs){
+    friend bool operator==(NodeIterator const &lhs, NodeIterator const &rhs) {
         return lhs.ptr == rhs.ptr;
     }
 
     ///@brief Дефолтные операторы и т п
-    NodeIterator(NodeIterator&&) = default;
-    NodeIterator(NodeIterator const&) = default;
-    NodeIterator& operator=(NodeIterator&&) = default;
-    NodeIterator& operator=(NodeIterator const&) = default;
+    NodeIterator(NodeIterator &&) = default;
+    NodeIterator(NodeIterator const &) = default;
+    NodeIterator &operator=(NodeIterator &&) = default;
+    NodeIterator &operator=(NodeIterator const &) = default;
     NodeIterator() = default;
-    
-    private:
+
+   private:
     Node<T> *ptr;
     Node<T> *innerEnd;
 };
@@ -137,10 +135,9 @@ struct NodeIterator{
  * @brief Двусвязный список данных одного типа
  * @tparam T - тип хранящихся значений
  */
-template<typename T>
-class List{
-    public:
-
+template <typename T>
+class List {
+   public:
     /// @brief Конструктор по-умолчанию
     List();
 
@@ -152,7 +149,7 @@ class List{
 
     /// @brief Конструктор из размера
     explicit List(std::size_t n);
-    
+
     /// @brief Конструктор из другого списка
     List(List<T> const &list);
 
@@ -166,14 +163,14 @@ class List{
      * @brief Вставка в конец списка
      * @param[in] value значение для вставки
      */
-    virtual void pushBack(T const &value){
+    virtual void pushBack(T const &value) {
         sizeOfList++;
         goToEnd();
-        if(getWorkPtr() == nullptr){
+        if (getWorkPtr() == nullptr) {
             getWorkPtr() = new Node<T>(value);
             startPtr = getWorkPtr();
             endPtr = getWorkPtr();
-        } else  [[likely]]{
+        } else [[likely]] {
             getWorkPtr()->connectAsNext(value);
             endPtr = getWorkPtr()->nextPtr;
             workPtr = getWorkPtr()->nextPtr;
@@ -181,17 +178,17 @@ class List{
     }
 
     /**
-     * @brief Вставка в начало списка 
+     * @brief Вставка в начало списка
      * @param[in] value - значение для вставки
      */
-    virtual void pushFront(T const &value){
+    virtual void pushFront(T const &value) {
         sizeOfList++;
         goToBegin();
-        if(getWorkPtr() == nullptr){
+        if (getWorkPtr() == nullptr) {
             getWorkPtr() = new Node<T>(value);
             startPtr = getWorkPtr();
             endPtr = getWorkPtr();
-        } else [[likely]]{
+        } else [[likely]] {
             getWorkPtr()->connectAsPrev(value);
             startPtr = getWorkPtr()->prevPtr;
             workPtr = getWorkPtr()->prevPtr;
@@ -200,9 +197,9 @@ class List{
 
     /**
      * @param[in] index - индекс элемента в списке
-     * @return T& - ссылку на элемент с номером index. 
+     * @return T& - ссылку на элемент с номером index.
      */
-    T& operator[](std::size_t const index);
+    T &operator[](std::size_t const index);
 
     /**
      * @brief Безопасная функция для удаления, т.к.
@@ -228,11 +225,10 @@ class List{
 
     List<T> &operator=(List<T> const &list);
 
-    private:
-
+   private:
     /**
      * @brief внутренняя функция удаления. Небезопасна, т.к.
-     * не меняет указатель на начало и конец списка после удаления 
+     * не меняет указатель на начало и конец списка после удаления
      * @param i - позиция для удаления
      */
     void removeAt_inner(std::size_t i);
@@ -258,7 +254,8 @@ class List{
     /// @brief перемещает рабочий указатель назад до указанного индекса
     void moveBackUntil(std::size_t const index);
 
-    /// @param[in] index - индекс необходимого элемента, на которой переместится рабочий указатель
+    /// @param[in] index - индекс необходимого элемента, на которой переместится
+    /// рабочий указатель
     void goToIndex(std::size_t const index);
 
     /// @brief Размер списка
@@ -270,8 +267,7 @@ class List{
     /// @brief Рабочий указатель
     Node<T> *workPtr;
     /// @brief Индекс текущего элемента
-    std::size_t currIndex; 
-
+    std::size_t currIndex;
 };
 
 #include "List.tpp"

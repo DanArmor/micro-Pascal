@@ -17,8 +17,8 @@
  * @return true Если value имеется среди cont
  * @return false Если value отсутствует среди cont
  */
-template<typename T>
-bool isIn(T const &value, std::initializer_list<T> const &cont){
+template <typename T>
+bool isIn(T const &value, std::initializer_list<T> const &cont) {
     return std::find(cont.begin(), cont.end(), value) != cont.end();
 }
 

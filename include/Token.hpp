@@ -8,103 +8,103 @@
  * @version 1.0
  */
 
-#include <string>
 #include <regex>
+#include <string>
 
 /**
  * @brief Класс-родитель для классов, работающих с токенами
  */
-class IToken{
-    public:
+class IToken {
+   public:
     /// @brief Типы токенов
-    enum AdvType{
-        KEYWORD, ///< Ключевое слово
-        FUNCTION_NAME, ///< Имя функции
-        VAR_NAME, ///< Имя переменной/константы
-        OPERATOR, ///< Оператор
-        SOME_CONST, ///< Константа
-        TYPE_SPEC, ///< Спецификатор типа
-        NOTPROCESS, ///< Необрабатываемые токены
-        PROGRAM_NAME, ///< Имя программы
-        SELECT, ///< Выбор элемента массива
-        VARDECL, ///< Объявление переменной
-        CONSTDECL, ///< Объявление константы
-        COMPOUND, ///< Составной оператор
-        UNKNOWN ///< Неопределенный тип
+    enum AdvType {
+        KEYWORD,        ///< Ключевое слово
+        FUNCTION_NAME,  ///< Имя функции
+        VAR_NAME,       ///< Имя переменной/константы
+        OPERATOR,       ///< Оператор
+        SOME_CONST,     ///< Константа
+        TYPE_SPEC,      ///< Спецификатор типа
+        NOTPROCESS,     ///< Необрабатываемые токены
+        PROGRAM_NAME,   ///< Имя программы
+        SELECT,         ///< Выбор элемента массива
+        VARDECL,        ///< Объявление переменной
+        CONSTDECL,      ///< Объявление константы
+        COMPOUND,       ///< Составной оператор
+        UNKNOWN         ///< Неопределенный тип
     };
 
-    enum Type{
-        ERROR, ///< Ошибка
-        ENDOFSTREAM, ///< Конец потока токенов (конец файла)
-        EMPTY, ///< Пустое выражение
-        BLOCK, ///< Блок
-        NEWLINE, ///< Символ новой строки
-        COMMENT, ///< Комментарий
+    enum Type {
+        ERROR,  ///< Ошибка
+        ENDOFSTREAM,  ///< Конец потока токенов (конец файла)
+        EMPTY,    ///< Пустое выражение
+        BLOCK,    ///< Блок
+        NEWLINE,  ///< Символ новой строки
+        COMMENT,  ///< Комментарий
 
-        ID, ///< Индентификатор
+        ID,  ///< Индентификатор
 
-        INTEGER_CONST, ///< Целая константа
-        REAL_CONST, ///< Вещественная константа
-        STRING_CONST, ///< Строковая константа
+        INTEGER_CONST,  ///< Целая константа
+        REAL_CONST,     ///< Вещественная константа
+        STRING_CONST,   ///< Строковая константа
 
-        LPAREN, ///< Левая скобка
-        RPAREN, ///< Правая скобка
-        LBRACE, ///< Левая фигурная скобка
-        RBRACE, ///< Правая фигурная скобка
-        LSQBRACKET, ///< Левая квадратная собка
-        RSQBRACKET, ///< Правая квадратная скобка
+        LPAREN,      ///< Левая скобка
+        RPAREN,      ///< Правая скобка
+        LBRACE,      ///< Левая фигурная скобка
+        RBRACE,      ///< Правая фигурная скобка
+        LSQBRACKET,  ///< Левая квадратная собка
+        RSQBRACKET,  ///< Правая квадратная скобка
 
-        PLUS, ///< Плюс
-        MINUS, ///< Минус
-        MUL, ///< Умножение
-        MOD, ///< Взятие модуля
-        INTEGER_DIV, ///< Целочисленное деление
-        FLOAT_DIV, ///< Вещественное деление
+        PLUS,         ///< Плюс
+        MINUS,        ///< Минус
+        MUL,          ///< Умножение
+        MOD,          ///< Взятие модуля
+        INTEGER_DIV,  ///< Целочисленное деление
+        FLOAT_DIV,    ///< Вещественное деление
 
-        AND, ///< Логическое И
-        NOT, ///< Логическое отрицание
-        OR, ///< Логическое ИЛИ
-        EQ, ///< =
-        NEQ, ///< <>
-        LESS, ///< <
-        LESS_EQ, ///< <=
-        MORE, ///< \>
-        MORE_EQ, ///< >=
+        AND,      ///< Логическое И
+        NOT,      ///< Логическое отрицание
+        OR,       ///< Логическое ИЛИ
+        EQ,       ///< =
+        NEQ,      ///< <>
+        LESS,     ///< <
+        LESS_EQ,  ///< <=
+        MORE,     ///< \>
+        MORE_EQ,  ///< >=
 
-        STRING_BOUND, ///< '
+        STRING_BOUND,  ///< '
 
-        ASSIGN, ///< Присваивание
+        ASSIGN,  ///< Присваивание
 
-        BEGIN, ///< Начало блока
-        END, ///< Конец блока
-        PROGRAM,  ///<Начало программы
-        VAR, ///< Ключевое слово VAR
-        CONST, ///< Ключевое слово CONST
-        WHILE, ///< WHILE
-        FOR, ///< for
-        DO, ///< DO
-        IF, ///< IF
-        THEN, ///< THEN
-        ELSE, ///< ELSE
-        DOWN, ///< down
-        TO, ///< to
-        DOWNTO, ///< down to
-        RETURN, ///< return
-        ARRAY, ///< array
-        OF, ///< of
-        FUNCTION, ///< function
-        PROCEDURE, ///< procedure
-        RANGE, ///< ..
+        BEGIN,      ///< Начало блока
+        END,        ///< Конец блока
+        PROGRAM,    ///<Начало программы
+        VAR,        ///< Ключевое слово VAR
+        CONST,      ///< Ключевое слово CONST
+        WHILE,      ///< WHILE
+        FOR,        ///< for
+        DO,         ///< DO
+        IF,         ///< IF
+        THEN,       ///< THEN
+        ELSE,       ///< ELSE
+        DOWN,       ///< down
+        TO,         ///< to
+        DOWNTO,     ///< down to
+        RETURN,     ///< return
+        ARRAY,      ///< array
+        OF,         ///< of
+        FUNCTION,   ///< function
+        PROCEDURE,  ///< procedure
+        RANGE,      ///< ..
 
-        INTEGER, ///< integer
-        REAL, ///< real
-        STRING, ///< string
-        VOID, ///< "Пустой тип"
+        INTEGER,  ///< integer
+        REAL,     ///< real
+        STRING,   ///< string
+        VOID,     ///< "Пустой тип"
 
-        DOT, ///< Точка
-        SEMI, ///< Точка с запятой
-        COLON, ///< Двоеточие
-        COMMA, ///< Запятая
+        DOT,    ///< Точка
+        SEMI,   ///< Точка с запятой
+        COLON,  ///< Двоеточие
+        COMMA,  ///< Запятая
 
     };
 
@@ -122,7 +122,7 @@ class IToken{
     /// @brief Устанавливает дополнительный тип токена
     void setAdvType(IToken::AdvType newAdvType);
 
-    private:
+   private:
     /// @brief Тип токена
     Type type = ERROR;
     /// @brief Дополнительный (уточняющий) тип токена
@@ -130,9 +130,8 @@ class IToken{
 };
 
 /// @brief Класс, представляющий токен
-class Token : public IToken{
-    public:
-
+class Token : public IToken {
+   public:
     /// @brief Конструктор по-умолчанию
     Token();
 
@@ -147,8 +146,9 @@ class Token : public IToken{
      * @param[in] inLinePosNum позиция в строке
      * @param[in] inFilePos позиция в файле
      */
-    Token(std::string const &str, Type const type, AdvType const advType, 
-    std::size_t const lineNum, std::size_t const inLinePosNum, std::size_t const inFilePos);
+    Token(std::string const &str, Type const type, AdvType const advType,
+          std::size_t const lineNum, std::size_t const inLinePosNum,
+          std::size_t const inFilePos);
 
     /// @return номер строки, начиная с 1, в которой находится токен
     std::size_t line(void) const;
@@ -164,7 +164,7 @@ class Token : public IToken{
     std::size_t pos(void) const;
 
     /// @brief Возвращает константную ссылку на строковое представление токена
-    std::string const & getStr(void) const;
+    std::string const &getStr(void) const;
 
     void setStr(std::string const &toSet);
 
@@ -173,7 +173,7 @@ class Token : public IToken{
     ///@return Длину строкового представления токена
     std::size_t len(void);
 
-    private:
+   private:
     /// @brief Строковое представление токена
     std::string str;
     std::size_t lineNum = std::string::npos;
@@ -182,9 +182,8 @@ class Token : public IToken{
 };
 
 /// @brief Класс, представляющий шаблон токена
-class TokenTemplate : public IToken{
-    public:
-
+class TokenTemplate : public IToken {
+   public:
     /// @brief Конструктор по-умолчанию
     TokenTemplate();
 
@@ -198,12 +197,11 @@ class TokenTemplate : public IToken{
     /// @brief Возвращает константную ссылку на regex-выражение токена
     std::regex const &getRegex(void);
 
-    private:
+   private:
     /// @brief Строковое представление regex-шаблона
     std::string regStr;
     /// @brief Regex-шаблон токена
     std::regex regTemplate;
-
 };
 
 #endif

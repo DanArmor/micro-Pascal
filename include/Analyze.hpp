@@ -14,17 +14,19 @@
 #include "Token.hpp"
 
 /// @brief Функции анализа программ на языке Pascal
-namespace Analyze{
+namespace Analyze {
 
 /// @brief Выводит в стандартный поток вывода подсвеченный текст программы
 void highlight(std::string text, List<Token> tokens);
 
-/// @brief Анализ файла inName и вывод в outName .dot описания ДАС. Так же выводит в стандартный поток вывода подсвеченный текст программы
+/// @brief Анализ файла inName и вывод в outName .dot описания ДАС. Так же
+/// выводит в стандартный поток вывода подсвеченный текст программы
 void analyzeFile(std::string inName, std::string outName);
 
-/// @brief Анализ файла inName и вывод в "output.svg" .dot описания ДАС. Так же выводит в стандартный поток вывода подсвеченный текст программы
+/// @brief Анализ файла inName и вывод в "output.svg" .dot описания ДАС. Так же
+/// выводит в стандартный поток вывода подсвеченный текст программы
 void analyzeFile(std::string inName);
 
-}
+}  // namespace Analyze
 
 #endif

@@ -1,23 +1,23 @@
 #include "Analyze.hpp"
 
-#include <string>
-#include <vector>
-#include <iostream>
-
 #include <fmt/format.h>
 
-#include "List.hpp"
-#include "Lexer.hpp"
-#include "Syntax.hpp"
-#include "SyntExp.hpp"
+#include <iostream>
+#include <string>
+#include <vector>
+
 #include "AST.hpp"
+#include "Lexer.hpp"
+#include "List.hpp"
 #include "PascalRules.hpp"
+#include "SyntExp.hpp"
+#include "Syntax.hpp"
 #include "Visitor.hpp"
 
 /// @brief Функции анализа программ на языке Pascal
-namespace Analyze{
+namespace Analyze {
 
-void highlight(std::string text, List<Token> tokens){
+void highlight(std::string text, List<Token> tokens) {
     std::map<IToken::AdvType, std::string> colors = {
         {IToken::AdvType::SOME_CONST, "\033[31m"},
         {IToken::AdvType::FUNCTION_NAME, "\033[32m"},
@@ -31,26 +31,25 @@ void highlight(std::string text, List<Token> tokens){
     };
     int tokenI = 0;
     int i = 0;
-    while(i < text.size()){
-        if(tokenI < tokens.size()-1 && i == tokens[tokenI].pos()){
+    while (i < text.size()) {
+        if (tokenI < tokens.size() - 1 && i == tokens[tokenI].pos()) {
             std::cout << "\033[0m" << colors[tokens[tokenI].getAdvType()];
             std::size_t len = tokens[tokenI].len();
-            while(len != 0){
+            while (len != 0) {
                 std::cout << text[i];
                 i++;
                 len--;
             }
             tokenI++;
-        } else{
+        } else {
             std::cout << "\033[0m\033[30;1m";
-            if(tokenI < tokens.size() - 1){
-                while(i != tokens[tokenI].pos()){
+            if (tokenI < tokens.size() - 1) {
+                while (i != tokens[tokenI].pos()) {
                     std::cout << text[i];
                     i++;
                 }
-            }
-            else{
-                while(i < text.size()){
+            } else {
+                while (i < text.size()) {
                     std::cout << text[i];
                     i++;
                 }
@@ -60,13 +59,13 @@ void highlight(std::string text, List<Token> tokens){
     std::cout << "\033[0m\n";
 }
 
-void analyzeFile(std::string inName, std::string outName){
+void analyzeFile(std::string inName, std::string outName) {
     Lexer lexer;
     lexer.setTemplates(PascalRules::getPascalTemplates());
     List<Token> tokens = lexer.analyzeFile(inName);
 
     SyntaxAnalyzer syntax(tokens);
-    std::unique_ptr<IAST>root(syntax.analyzeTokens());
+    std::unique_ptr<IAST> root(syntax.analyzeTokens());
 
     highlight(lexer.getText(), syntax.getTokens());
 
@@ -75,10 +74,12 @@ void analyzeFile(std::string inName, std::string outName){
     graph.write();
 
     int statusGraphviz = system("dot -V >nul 2>nul");
-    if(WEXITSTATUS(statusGraphviz) == 0){
+    if (WEXITSTATUS(statusGraphviz) == 0) {
         system(fmt::format("dot out.dot -Tsvg > {}", outName).c_str());
-    } else{
-        std::cout << "Проблема при определении Graphviz. .dot описание изображения сгенерировано, но генерация самого изображения требует Graphviz";
+    } else {
+        std::cout << "Проблема при определении Graphviz. .dot описание "
+                     "изображения сгенерировано, но генерация самого "
+                     "изображения требует Graphviz";
     }
 
     SemanticVisitor semantic;
@@ -86,8 +87,6 @@ void analyzeFile(std::string inName, std::string outName){
     root->accept(semantic);
 }
 
-void analyzeFile(std::string inName){
-    analyzeFile(inName, "output.svg");
-}
+void analyzeFile(std::string inName) { analyzeFile(inName, "output.svg"); }
 
-}
+}  // namespace Analyze

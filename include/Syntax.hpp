@@ -10,20 +10,19 @@
 
 #include <vector>
 
-#include "magic_enum.hpp"
-
+#include "ASTclasses.hpp"
 #include "List.hpp"
 #include "Token.hpp"
-#include "ASTclasses.hpp"
+#include "magic_enum.hpp"
 
 /// @brief Класс синтаксического анализатора
-class SyntaxAnalyzer{
-
-    public:
+class SyntaxAnalyzer {
+   public:
     explicit SyntaxAnalyzer(List<Token> const &tokens);
 
     /// @brief Синтаксический анализ токенов, переданных анализатору.
-    /// @details Обратите внимание, что синт. анализатор изменяет дополнительные типы некоторых токенов внутри собственного списка в процессе анализа   
+    /// @details Обратите внимание, что синт. анализатор изменяет дополнительные
+    /// типы некоторых токенов внутри собственного списка в процессе анализа
     std::unique_ptr<IAST> analyzeTokens(void);
 
     std::unique_ptr<IAST> syntaxProgram(void);
@@ -39,7 +38,6 @@ class SyntaxAnalyzer{
     std::vector<std::unique_ptr<IAST>> syntaxVarDecl(void);
     std::unique_ptr<IAST> syntaxTypeSpec(void);
 
-
     std::unique_ptr<IAST> syntaxCompoundSt(void);
     std::vector<std::unique_ptr<IAST>> syntaxStList(void);
     std::unique_ptr<IAST> syntaxSt(void);
@@ -51,7 +49,6 @@ class SyntaxAnalyzer{
     std::unique_ptr<IAST> syntaxForSt(void);
     std::unique_ptr<IAST> syntaxCallSt(void);
     std::unique_ptr<IAST> syntaxReturnSt(void);
-
 
     std::unique_ptr<IAST> syntaxVariable(void);
     std::unique_ptr<IAST> syntaxSelect(void);
@@ -72,15 +69,16 @@ class SyntaxAnalyzer{
 
     Token &lookFoward(void);
 
-    /// @brief Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение
+    /// @brief Пропускает текущий токен, если он указанного типа. Иначе
+    /// выбрасывается исключение
     void eat(IToken::Type const type);
-    /// @brief Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение
+    /// @brief Пропускает текущий токен, если он указанного типа. Иначе
+    /// выбрасывается исключение
     void eatAdv(IToken::AdvType const type);
 
-    private:
+   private:
     List<Token> tokens;
     std::size_t currentIndex = 0;
-};  
-
+};
 
 #endif
