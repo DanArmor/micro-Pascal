@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['of_0',['OF',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa28892e3ebb59b3db02a99d278bd9484a',1,'IToken']]],
-  ['operator_1',['OPERATOR',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a15328248d4bec08c6f4f7e83eef426aa',1,'IToken']]],
-  ['or_2',['OR',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa022f02b3498c9aa6e2aa435deede3e76',1,'IToken']]]
+  ['of_0',['OF',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6bab6112e9419d45ca15b5f99d253431b1a',1,'BaseToken']]],
+  ['operator_1',['OPERATOR',['../dd/dfe/class_base_token.html#a5a15145b04658c98d27318b257e9a8efa02d1387a00d00ff652178021d6029986',1,'BaseToken']]],
+  ['or_2',['OR',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6baa9f1a80972509d524970e8973daaaa29',1,'BaseToken']]]
 ];

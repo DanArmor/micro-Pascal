@@ -20,9 +20,9 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" target="_top" xlink:title="Получение типа токена">
-<polygon fill="none" stroke="black" points="165,-114.5 165,-133.5 251,-133.5 251,-114.5 165,-114.5"/>
-<text text-anchor="middle" x="208" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getType</text>
+<g id="a_node2"><a xlink:href="../../dd/dfe/class_base_token.html#adf680862efcd78640cb9442b6918dd4d" target="_top" xlink:title="Получение типа токена">
+<polygon fill="none" stroke="black" points="155.5,-114.5 155.5,-133.5 260.5,-133.5 260.5,-114.5 155.5,-114.5"/>
+<text text-anchor="middle" x="208" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseToken::getType</text>
 </a>
 </g>
 </g>

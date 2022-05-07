@@ -7,14 +7,14 @@
 <area shape="rect" id="node16" href="$d6/d1a/class_analyzer.html#ad6a504688e610850ecd202acb8de5c51" title=" " alt="" coords="236,325,400,352"/>
 <area shape="rect" id="node4" href="$da/d5a/class_lexer.html#a240680b247c9b95a1bbd802716b20f39" title="Анализирует файл" alt="" coords="476,157,600,184"/>
 <area shape="rect" id="node5" href="$da/d5a/class_lexer.html#a473a8abf892384a3e2769651318d7ab1" title="Анализирует текст программы" alt="" coords="648,157,825,184"/>
-<area shape="rect" id="node6" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="897,5,979,32"/>
-<area shape="rect" id="node7" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="879,56,997,83"/>
-<area shape="rect" id="node8" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="903,107,973,133"/>
-<area shape="rect" id="node9" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="889,157,987,184"/>
-<area shape="rect" id="node10" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title="Возвращает строку, у которой убраны пустые символы в начале и конце" alt="" coords="873,208,1003,235"/>
-<area shape="rect" id="node11" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="881,259,995,285"/>
-<area shape="rect" id="node12" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="884,309,992,336"/>
-<area shape="rect" id="node13" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="1051,309,1199,336"/>
+<area shape="rect" id="node6" href="$d1/d34/class_list.html#ab62bcc4a78278e99a01cacea8ee22423" title="Итератор для начала списка" alt="" coords="903,5,984,32"/>
+<area shape="rect" id="node7" href="$dd/d5d/_lexer_8cpp.html#a0f45215a7e2c46f1cfbaf626be68fe07" title=" " alt="" coords="885,56,1002,83"/>
+<area shape="rect" id="node8" href="$d1/d34/class_list.html#a56026b900ba2e5a6c894797b57e9bdf1" title="Конец списка" alt="" coords="908,107,979,133"/>
+<area shape="rect" id="node9" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="894,157,993,184"/>
+<area shape="rect" id="node10" href="$da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0" title="Возвращает строку, у которой убраны пустые символы в начале и конце" alt="" coords="879,208,1008,235"/>
+<area shape="rect" id="node11" href="$dd/dfe/class_base_token.html#adf680862efcd78640cb9442b6918dd4d" title="Получение типа токена" alt="" coords="873,259,1013,285"/>
+<area shape="rect" id="node12" href="$d1/d34/class_list.html#a0c471cf5c09edf2dcbdf1f37cac53e45" title="Вставка в конец списка" alt="" coords="889,309,997,336"/>
+<area shape="rect" id="node13" href="$dc/d8f/class_node.html#a5f29dc4844746c7e7780933173d31a4a" title="Присоединяет узел pNext в качестве следующего узла" alt="" coords="1061,309,1209,336"/>
 <area shape="rect" id="node17" href="$da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30" title=" " alt="" coords="487,300,589,327"/>
 <area shape="rect" id="node18" href="$d1/d34/class_list.html#a49c179636e084dfbf7a52acd46acaf01" title=" " alt="" coords="501,351,575,377"/>
 </map>

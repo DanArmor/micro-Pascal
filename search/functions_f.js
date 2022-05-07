@@ -3,7 +3,7 @@ var searchData=
   ['selectast_0',['SelectAST',['../d5/df8/class_select_a_s_t.html#ad091886fea74ac4bc355ffd69fba6cce',1,'SelectAST']]],
   ['semanticexception_1',['SemanticException',['../d6/d2c/class_semantic_exception.html#aafb9bfda4c4f8b4369e28ce3748f8e2e',1,'SemanticException']]],
   ['semanticvisitor_2',['SemanticVisitor',['../dd/dad/class_semantic_visitor.html#acd7ecea6a0ae3e2cb91a9b52a1c2d565',1,'SemanticVisitor']]],
-  ['setadvtype_3',['setAdvType',['../d0/d11/class_i_token.html#ab582fbd31b3afc11875dddf2d53a6aa7',1,'IToken']]],
+  ['setadvtype_3',['setAdvType',['../dd/dfe/class_base_token.html#a14274971b0df74ada437774f4e4c5688',1,'BaseToken']]],
   ['setstr_4',['setStr',['../db/dc1/class_token.html#a1f07fa2fffeb2f7ab803ef8b424eae8a',1,'Token']]],
   ['settemplates_5',['setTemplates',['../da/d5a/class_lexer.html#a9d8216e3fe926123c3cdbbf9c87b614a',1,'Lexer']]],
   ['settokens_6',['setTokens',['../d6/d00/class_pascal_syntax_analyzer.html#a548b90f91a14fbc2ff4feb979c305004',1,'PascalSyntaxAnalyzer::setTokens()'],['../d5/d57/class_i_syntax_analyzer.html#a6381b9cf1778da959f9db3391486d029',1,'ISyntaxAnalyzer::setTokens()']]],

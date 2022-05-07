@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['advtype_0',['AdvType',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3',1,'IToken']]]
+  ['advtype_0',['AdvType',['../dd/dfe/class_base_token.html#a5a15145b04658c98d27318b257e9a8ef',1,'BaseToken']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['begin_0',['BEGIN',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa3f5273830265629f7cbec96ad330211a',1,'IToken']]],
-  ['block_1',['BLOCK',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa35e52719094498e4e018c5f13ae8b82b',1,'IToken']]]
+  ['begin_0',['BEGIN',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba8209e1ae62d2cadbfef2328beb4d36a5',1,'BaseToken']]],
+  ['block_1',['BLOCK',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba53a83f0d6ee6b15fefbcb91ac3c79ac9',1,'BaseToken']]]
 ];

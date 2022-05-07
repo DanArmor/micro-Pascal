@@ -51,9 +51,9 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d0/d11/class_i_token.html" target="_top" xlink:title="Класс&#45;родитель для классов, работающих с токенами">
-<polygon fill="none" stroke="black" points="12,-181.5 12,-200.5 59,-200.5 59,-181.5 12,-181.5"/>
-<text text-anchor="middle" x="35.5" y="-188.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken</text>
+<g id="a_node4"><a xlink:href="../../dd/dfe/class_base_token.html" target="_top" xlink:title="Класс&#45;родитель для классов, работающих с токенами">
+<polygon fill="none" stroke="black" points="2.5,-181.5 2.5,-200.5 68.5,-200.5 68.5,-181.5 2.5,-181.5"/>
+<text text-anchor="middle" x="35.5" y="-188.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseToken</text>
 </a>
 </g>
 </g>

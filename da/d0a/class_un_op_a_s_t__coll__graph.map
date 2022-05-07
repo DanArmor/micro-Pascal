@@ -1,6 +1,6 @@
 <map id="UnOpAST" name="UnOpAST">
-<area shape="rect" id="node1" title="Узел, содержащий унарную операцию" alt="" coords="5,247,88,273"/>
-<area shape="rect" id="node2" href="$d3/d96/class_i_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="21,171,73,197"/>
-<area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="17,81,76,108"/>
-<area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="15,5,78,32"/>
+<area shape="rect" id="node1" title="Узел, содержащий унарную операцию" alt="" coords="8,247,91,273"/>
+<area shape="rect" id="node2" href="$d3/d96/class_i_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="23,171,75,197"/>
+<area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="20,81,79,108"/>
+<area shape="rect" id="node4" href="$dd/dfe/class_base_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="5,5,93,32"/>
 </map>

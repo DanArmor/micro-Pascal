@@ -1,19 +1,19 @@
 var searchData=
 [
-  ['range_0',['RANGE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa7d0856f1cc1d4f4c84d6a7c8bde15ea3',1,'IToken']]],
+  ['range_0',['RANGE',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba431af1b0c972aae978766da3d3c3e11c',1,'BaseToken']]],
   ['rawline_1',['rawLine',['../db/dc1/class_token.html#a3c71657da7d2a9f7cd6bec8fd7e69100',1,'Token']]],
   ['rawposinline_2',['rawPosInLine',['../db/dc1/class_token.html#ae013a27300b9c0547061284a26a3abf3',1,'Token']]],
-  ['rbrace_3',['RBRACE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aac31eb5ff1826672e6401341c809c98a4',1,'IToken']]],
-  ['real_4',['REAL',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1651f94d95583971c358e682b73cd957',1,'IToken']]],
-  ['real_5fconst_5',['REAL_CONST',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aaed51391a798f8827ffa92f6efa00b9f9',1,'IToken']]],
+  ['rbrace_3',['RBRACE',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6baef80e3b209df5268519e037bbb485e42',1,'BaseToken']]],
+  ['real_4',['REAL',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba6472bb27bf02a556d7b002a0d13d116c',1,'BaseToken']]],
+  ['real_5fconst_5',['REAL_CONST',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba47949ccd1a73507c0742630099a690f6',1,'BaseToken']]],
   ['reference_6',['reference',['../d3/dde/class_node_iterator.html#a56f09e99f92c85d72b5a8d07c371927e',1,'NodeIterator']]],
   ['removeat_7',['removeAt',['../d1/d34/class_list.html#a0932514a25b68c813750998115a7ad45',1,'List']]],
-  ['return_8',['RETURN',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa1925ef23f26447e31c39376baa2a789e',1,'IToken']]],
+  ['return_8',['RETURN',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6baf014bd5adc4546e5f086ad511055ea92',1,'BaseToken']]],
   ['return_9',['Return',['../dd/dad/class_semantic_visitor.html#a875ded9e50d07a91b08f8b0343b8f0f8',1,'SemanticVisitor']]],
   ['returnast_10',['ReturnAST',['../d8/de5/class_return_a_s_t.html',1,'ReturnAST'],['../d8/de5/class_return_a_s_t.html#a5dda06333def4b29e8acf6439bbdcc3a',1,'ReturnAST::ReturnAST()']]],
   ['returntype_11',['returnType',['../dc/d19/class_function_a_s_t.html#ab036ccc5fa59d4e35890b09e84ebc20f',1,'FunctionAST::returnType()'],['../d5/d3a/struct_semantic_visitor_1_1_function_data.html#a37cac5a8cf5432ea87a0de5bf898d3ba',1,'SemanticVisitor::FunctionData::returnType()']]],
   ['rhandtok_12',['rHandTok',['../d8/d88/class_arr_spec_a_s_t.html#a99a2f241557602ed85177809253da6a3',1,'ArrSpecAST']]],
   ['right_13',['right',['../d2/dc9/class_bin_op_a_s_t.html#ab6426c7e12351c0adeeb1e2b83174f53',1,'BinOpAST']]],
-  ['rparen_14',['RPAREN',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa844be0422b59633c7da0d3eb1821754f',1,'IToken']]],
-  ['rsqbracket_15',['RSQBRACKET',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aab73796db691fefc6391f764d47d3d64a',1,'IToken']]]
+  ['rparen_14',['RPAREN',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba58d3686b8ca401526fb64513485547af',1,'BaseToken']]],
+  ['rsqbracket_15',['RSQBRACKET',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba384f80b0d1477c3b3f91ccab51b222d6',1,'BaseToken']]]
 ];

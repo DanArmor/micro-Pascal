@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Узел, представляющий заголовок цикла for." alt="" coords="5,247,100,273"/>
 <area shape="rect" id="node2" href="$d3/d96/class_i_a_s_t.html" title="Базовый класс узлов абстрактного синтаксического дерева" alt="" coords="27,171,79,197"/>
 <area shape="rect" id="node3" href="$db/dc1/class_token.html" title="Класс, представляющий токен" alt="" coords="23,81,82,108"/>
-<area shape="rect" id="node4" href="$d0/d11/class_i_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="21,5,84,32"/>
+<area shape="rect" id="node4" href="$dd/dfe/class_base_token.html" title="Класс&#45;родитель для классов, работающих с токенами" alt="" coords="9,5,97,32"/>
 </map>

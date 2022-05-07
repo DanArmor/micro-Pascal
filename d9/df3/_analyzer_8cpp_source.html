@@ -115,16 +115,16 @@ $(document).ready(function(){initNavTree('d9/df3/_analyzer_8cpp_source.html','..
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d1a/class_analyzer.html#ad6a504688e610850ecd202acb8de5c51">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d1a/class_analyzer.html#ad6a504688e610850ecd202acb8de5c51">Analyzer::highlightOutput</a>() {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::string text = <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a7a25c8c2d63e6f8636746aa49b3548b0">lexer</a>.<a class="code hl_function" href="../../da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30">getText</a>();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="../../d1/d34/class_list.html">List&lt;Token&gt;</a> tokens = <a class="code hl_variable" href="../../d6/d1a/class_analyzer.html#a70079c87cb0835cccaa59b5641759e67">syntax</a>-&gt;getTokens();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::map&lt;IToken::AdvType, std::string&gt; colors = {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {IToken::AdvType::SOME_CONST, <span class="stringliteral">&quot;\033[31m&quot;</span>},</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {IToken::AdvType::FUNCTION_NAME, <span class="stringliteral">&quot;\033[32m&quot;</span>},</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {IToken::AdvType::VAR_NAME, <span class="stringliteral">&quot;\033[33m&quot;</span>},</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {IToken::AdvType::TYPE_SPEC, <span class="stringliteral">&quot;\033[1;34m&quot;</span>},</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {IToken::AdvType::KEYWORD, <span class="stringliteral">&quot;\033[35m&quot;</span>},</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {IToken::AdvType::OPERATOR, <span class="stringliteral">&quot;\033[36m&quot;</span>},</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {IToken::AdvType::PROGRAM_NAME, <span class="stringliteral">&quot;\033[1;31m&quot;</span>},</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {IToken::AdvType::UNKNOWN, <span class="stringliteral">&quot;\033[4;37m&quot;</span>},</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {IToken::AdvType::NOTPROCESS, <span class="stringliteral">&quot;\033[37m&quot;</span>},</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::map&lt;BaseToken::AdvType, std::string&gt; colors = {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {BaseToken::AdvType::SOME_CONST, <span class="stringliteral">&quot;\033[31m&quot;</span>},</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {BaseToken::AdvType::FUNCTION_NAME, <span class="stringliteral">&quot;\033[32m&quot;</span>},</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {BaseToken::AdvType::VAR_NAME, <span class="stringliteral">&quot;\033[33m&quot;</span>},</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {BaseToken::AdvType::TYPE_SPEC, <span class="stringliteral">&quot;\033[1;34m&quot;</span>},</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {BaseToken::AdvType::KEYWORD, <span class="stringliteral">&quot;\033[35m&quot;</span>},</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {BaseToken::AdvType::OPERATOR, <span class="stringliteral">&quot;\033[36m&quot;</span>},</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {BaseToken::AdvType::PROGRAM_NAME, <span class="stringliteral">&quot;\033[1;31m&quot;</span>},</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {BaseToken::AdvType::UNKNOWN, <span class="stringliteral">&quot;\033[4;37m&quot;</span>},</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {BaseToken::AdvType::NOTPROCESS, <span class="stringliteral">&quot;\033[37m&quot;</span>},</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> tokenI = 0;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> i = 0;</div>

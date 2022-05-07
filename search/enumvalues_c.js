@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['plus_0',['PLUS',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa82462b1d5a3ab59778ab2019a530f89c',1,'IToken']]],
-  ['procedure_1',['PROCEDURE',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5ac3cd82189b6506354642bc4115f58c',1,'IToken']]],
-  ['program_2',['PROGRAM',['../d0/d11/class_i_token.html#aa344b0520a49f41cb1e13363c138603aa5057de577058322f33bc675542aaef50',1,'IToken']]],
-  ['program_5fname_3',['PROGRAM_NAME',['../d0/d11/class_i_token.html#a84210eb1452d5a97b360c64841a925a3a0ff154e08a67a9942e0a16f48bc115e5',1,'IToken']]]
+  ['plus_0',['PLUS',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba4b7e0a0ae25e8e0fdb0be2cb21357b80',1,'BaseToken']]],
+  ['procedure_1',['PROCEDURE',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba56ae56681f44784dc2b23978d5d5a798',1,'BaseToken']]],
+  ['program_2',['PROGRAM',['../dd/dfe/class_base_token.html#a58c886305c7a1918f96137cd720ebf6ba3bbdec3fb1c409ed8f27e69888e06bd8',1,'BaseToken']]],
+  ['program_5fname_3',['PROGRAM_NAME',['../dd/dfe/class_base_token.html#a5a15145b04658c98d27318b257e9a8efadcaf6f9e37dc41c56f3cc2bf5a0f77e8',1,'BaseToken']]]
 ];

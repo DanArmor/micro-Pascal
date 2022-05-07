@@ -2,6 +2,10 @@ var hierarchy =
 [
     [ "Analyzer", "d6/d1a/class_analyzer.html", null ],
     [ "ASTFactory", "d7/d7c/class_a_s_t_factory.html", null ],
+    [ "BaseToken", "dd/dfe/class_base_token.html", [
+      [ "Token", "db/dc1/class_token.html", null ],
+      [ "TokenTemplate", "dc/dca/class_token_template.html", null ]
+    ] ],
     [ "std::exception", null, [
       [ "AnalyzeException", "df/d7c/class_analyze_exception.html", [
         [ "LexerException", "d4/d3a/class_lexer_exception.html", null ],
@@ -38,10 +42,6 @@ var hierarchy =
     ] ],
     [ "ISyntaxAnalyzer", "d5/d57/class_i_syntax_analyzer.html", [
       [ "PascalSyntaxAnalyzer", "d6/d00/class_pascal_syntax_analyzer.html", null ]
-    ] ],
-    [ "IToken", "d0/d11/class_i_token.html", [
-      [ "Token", "db/dc1/class_token.html", null ],
-      [ "TokenTemplate", "dc/dca/class_token_template.html", null ]
     ] ],
     [ "IVisitor", "df/db7/class_i_visitor.html", [
       [ "GraphvizVisitor", "d0/dc3/class_graphviz_visitor.html", null ],

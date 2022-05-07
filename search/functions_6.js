@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getadvtype_0',['getAdvType',['../d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef',1,'IToken']]],
+  ['getadvtype_0',['getAdvType',['../dd/dfe/class_base_token.html#a800db3c8e8a3e81d20e85206cd5b2927',1,'BaseToken']]],
   ['getconst_1',['getConst',['../dd/dad/class_semantic_visitor.html#a57d5d38a8fe988e01d4c51fd06e01037',1,'SemanticVisitor']]],
   ['getcurtok_2',['getCurTok',['../d6/d00/class_pascal_syntax_analyzer.html#a80fd2f225d07e698794427925fe6473b',1,'PascalSyntaxAnalyzer']]],
   ['getdata_3',['getData',['../d1/d49/class_type_view_visitor.html#a02d309072827f3e9c1c513e9632cfd96',1,'TypeViewVisitor']]],
@@ -16,7 +16,7 @@ var searchData=
   ['gettext_13',['getText',['../da/d5a/class_lexer.html#adbeec9404aa60bf4320f23e4b90bfc30',1,'Lexer']]],
   ['gettokens_14',['getTokens',['../d5/d57/class_i_syntax_analyzer.html#a8c5f1d8c83e346c3ffe2a80255b6fd4c',1,'ISyntaxAnalyzer::getTokens()'],['../d6/d00/class_pascal_syntax_analyzer.html#ab716da35db298cb6e48cfa1c69c1822b',1,'PascalSyntaxAnalyzer::getTokens()']]],
   ['gettrimmed_15',['getTrimmed',['../da/d5a/class_lexer.html#a50d38d21286cb6b84e9a24d267b3b6e0',1,'Lexer']]],
-  ['gettype_16',['getType',['../d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036',1,'IToken']]],
+  ['gettype_16',['getType',['../dd/dfe/class_base_token.html#adf680862efcd78640cb9442b6918dd4d',1,'BaseToken']]],
   ['getvalue_17',['getValue',['../dd/dad/class_semantic_visitor.html#aa68ccc7853fd99ddb5664502ecc7754f',1,'SemanticVisitor']]],
   ['getvar_18',['getVar',['../dd/dad/class_semantic_visitor.html#a9c6408c4a81900cc78c1e2171d7f1709',1,'SemanticVisitor']]],
   ['graphvizvisitor_19',['GraphvizVisitor',['../d0/dc3/class_graphviz_visitor.html#a2218eb187f6fcfe7653bde12757e6deb',1,'GraphvizVisitor']]]

@@ -37,7 +37,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d6/d00/class_pascal_syntax_analyzer.html#ae7d30516233d8376e6495263662b7fd9" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
+<g id="a_node4"><a xlink:href="../../d6/d00/class_pascal_syntax_analyzer.html#aa5eea5fe502fc1d029ed7eea6af2b4a0" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2461,-951.52 2461,-970.52 2592,-970.52 2592,-951.52 2461,-951.52"/>
 <text text-anchor="middle" x="2526.5" y="-958.52" font-family="Helvetica,sans-Serif" font-size="10.00">PascalSyntaxAnalyzer::eat</text>
 </a>
@@ -420,7 +420,7 @@
 <!-- Node29 -->
 <g id="node29" class="node">
 <title>Node29</title>
-<g id="a_node29"><a xlink:href="../../d6/d00/class_pascal_syntax_analyzer.html#af42fc8dfb5ba18ea8079d357af1265f7" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
+<g id="a_node29"><a xlink:href="../../d6/d00/class_pascal_syntax_analyzer.html#a30076a5cf45ea845d8071679ca9075a0" target="_top" xlink:title="Пропускает текущий токен, если он указанного типа. Иначе выбрасывается исключение">
 <polygon fill="none" stroke="black" points="2470,-1275.02 2470,-1305.02 2583,-1305.02 2583,-1275.02 2470,-1275.02"/>
 <text text-anchor="start" x="2478" y="-1293.02" font-family="Helvetica,sans-Serif" font-size="10.00">PascalSyntaxAnalyzer</text>
 <text text-anchor="middle" x="2526.5" y="-1282.02" font-family="Helvetica,sans-Serif" font-size="10.00">::eatAdv</text>

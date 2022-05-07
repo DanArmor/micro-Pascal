@@ -1,5 +1,5 @@
-<map id="IToken::setAdvType" name="IToken::setAdvType">
-<area shape="rect" id="node1" title="Устанавливает дополнительный тип токена" alt="" coords="3287,481,3424,508"/>
+<map id="BaseToken::setAdvType" name="BaseToken::setAdvType">
+<area shape="rect" id="node1" title="Устанавливает дополнительный тип токена" alt="" coords="3287,481,3449,508"/>
 <area shape="rect" id="node2" href="$d6/d00/class_pascal_syntax_analyzer.html#a17fc2ae65eb01ca8a797c5af969eebae" title=" " alt="" coords="3088,431,3239,473"/>
 <area shape="rect" id="node9" href="$d6/d00/class_pascal_syntax_analyzer.html#ada208f0427fef2e977e420bb5e87450a" title=" " alt="" coords="903,433,1053,474"/>
 <area shape="rect" id="node11" href="$d6/d00/class_pascal_syntax_analyzer.html#afc7e8b0293dc9d194d6d8ebc708e1718" title=" " alt="" coords="505,695,656,737"/>

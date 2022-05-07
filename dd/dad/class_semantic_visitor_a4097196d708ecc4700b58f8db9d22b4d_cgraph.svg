@@ -20,17 +20,17 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="../../d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" target="_top" xlink:title="Получение типа токена">
-<polygon fill="none" stroke="black" points="160.5,-38.5 160.5,-57.5 246.5,-57.5 246.5,-38.5 160.5,-38.5"/>
-<text text-anchor="middle" x="203.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">IToken::getType</text>
+<g id="a_node2"><a xlink:href="../../dd/dfe/class_base_token.html#adf680862efcd78640cb9442b6918dd4d" target="_top" xlink:title="Получение типа токена">
+<polygon fill="none" stroke="black" points="151,-38.5 151,-57.5 256,-57.5 256,-38.5 151,-38.5"/>
+<text text-anchor="middle" x="203.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseToken::getType</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M108.25,-35.86C121.93,-37.62 136.63,-39.51 150.25,-41.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="150.06,-44.77 160.43,-42.58 150.96,-37.83 150.06,-44.77"/>
+<path fill="none" stroke="midnightblue" d="M108.25,-35.86C118.76,-37.21 129.87,-38.64 140.63,-40.03"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="140.44,-43.54 150.81,-41.34 141.34,-36.59 140.44,-43.54"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">

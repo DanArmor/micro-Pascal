@@ -58,7 +58,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
       [ "TypeException", "da/da3/class_type_exception.html", "da/da3/class_type_exception" ]
     ] ],
     [ "Token.hpp", "de/d32/_token_8hpp.html", [
-      [ "IToken", "d0/d11/class_i_token.html", "d0/d11/class_i_token" ],
+      [ "BaseToken", "dd/dfe/class_base_token.html", "dd/dfe/class_base_token" ],
       [ "Token", "db/dc1/class_token.html", "db/dc1/class_token" ],
       [ "TokenTemplate", "dc/dca/class_token_template.html", "dc/dca/class_token_template" ]
     ] ],

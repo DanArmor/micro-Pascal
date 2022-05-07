@@ -1,9 +1,9 @@
 <map id="Token::getInfo" name="Token::getInfo">
 <area shape="rect" id="node1" title=" " alt="" coords="5,132,109,159"/>
-<area shape="rect" id="node2" href="$d0/d11/class_i_token.html#aa0b191c52b609726899a0db5115ec0ef" title=" " alt="" coords="157,5,295,32"/>
-<area shape="rect" id="node3" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="177,56,275,83"/>
-<area shape="rect" id="node4" href="$d0/d11/class_i_token.html#a968b6332dda18b7049a4737be3ffd036" title="Получение типа токена" alt="" coords="169,107,283,133"/>
-<area shape="rect" id="node5" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="184,157,268,184"/>
-<area shape="rect" id="node6" href="$db/dc1/class_token.html#a715f99ebacdd636c283d15dc8656631c" title=" " alt="" coords="183,208,269,235"/>
-<area shape="rect" id="node7" href="$db/dc1/class_token.html#a913f22d91c68c0b0f8c2d593b14deca2" title=" " alt="" coords="165,259,287,285"/>
+<area shape="rect" id="node2" href="$dd/dfe/class_base_token.html#a800db3c8e8a3e81d20e85206cd5b2927" title=" " alt="" coords="157,5,320,32"/>
+<area shape="rect" id="node3" href="$db/dc1/class_token.html#aa5d6826fae7d616e2cfe3e27b5dd594a" title="Возвращает константную ссылку на строковое представление токена" alt="" coords="189,56,288,83"/>
+<area shape="rect" id="node4" href="$dd/dfe/class_base_token.html#adf680862efcd78640cb9442b6918dd4d" title="Получение типа токена" alt="" coords="169,107,309,133"/>
+<area shape="rect" id="node5" href="$db/dc1/class_token.html#a81497d9f05f9c69ba4ab8e9c62a391d1" title=" " alt="" coords="197,157,281,184"/>
+<area shape="rect" id="node6" href="$db/dc1/class_token.html#a715f99ebacdd636c283d15dc8656631c" title=" " alt="" coords="196,208,281,235"/>
+<area shape="rect" id="node7" href="$db/dc1/class_token.html#a913f22d91c68c0b0f8c2d593b14deca2" title=" " alt="" coords="178,259,299,285"/>
 </map>
