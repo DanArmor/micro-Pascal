@@ -477,7 +477,7 @@ std::unique_ptr<IAST> PascalSyntaxAnalyzer::syntaxIter(void) {
     Token finTok = getCurTok();
     if (finTok.getAdvType() != BaseToken::SOME_CONST and
         finTok.getType() != BaseToken::ID)
-        throw AnalyzeException(finTok,
+        throw SyntaxException(finTok,
                                "Конечным значением цикла for должна быть целая "
                                "константа или переменная!");
     // Пропустим константу или переменную вызовом syntaxFactor

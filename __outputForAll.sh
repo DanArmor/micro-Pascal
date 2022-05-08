@@ -19,6 +19,5 @@ do
     ./graphDraw "$prog_file"
     i=$prog_file
     dot out.dot -Tsvg > "public/output$i.svg"
+    wait $!
 done
-
-dot out.dot -Tsvg > output.svg
