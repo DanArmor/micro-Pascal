@@ -1,5 +1,5 @@
 <map id="include/Syntax.hpp" name="include/Syntax.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="251,5,381,32"/>
+<area shape="rect" id="node1" title="Интерфейс синтаксического анализатора" alt="" coords="251,5,381,32"/>
 <area shape="rect" id="node2" href="$d8/d7a/_analyzer_8hpp.html" title="Анализатор исходного кода" alt="" coords="157,80,297,107"/>
 <area shape="rect" id="node5" href="$d9/df3/_analyzer_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
 <area shape="rect" id="node6" href="$df/ded/_pascal_syntax_8hpp.html" title="Синтаксический анализатор программ на языке micro&#45;Pascal." alt="" coords="373,80,544,107"/>

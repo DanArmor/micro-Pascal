@@ -1,5 +1,5 @@
 <map id="include/Syntax.hpp" name="include/Syntax.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="138,5,269,32"/>
+<area shape="rect" id="node1" title="Интерфейс синтаксического анализатора" alt="" coords="138,5,269,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,73,107"/>
 <area shape="rect" id="node3" href="$d8/de6/_a_s_tclasses_8hpp.html" title="Базовые классы ДАС: абстрактный посетитель и абстрактный узел" alt="" coords="97,80,214,107"/>
 <area shape="rect" id="node4" href="$de/d32/_token_8hpp.html" title="Классы для работы с токенами анализатора" alt="" coords="114,155,197,181"/>

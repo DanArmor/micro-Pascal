@@ -65,7 +65,7 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title="Интерфейс синтаксического анализатора">
 <polygon fill="none" stroke="black" points="144.65,-168.5 144.65,-187.5 208.65,-187.5 208.65,-168.5 144.65,-168.5"/>
 <text text-anchor="middle" x="176.65" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">Syntax.hpp</text>
 </a>

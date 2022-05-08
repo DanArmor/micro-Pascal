@@ -191,7 +191,7 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="../../df/d3f/_syntax_8hpp.html" target="_top" xlink:title="Интерфейс синтаксического анализатора">
 <polygon fill="none" stroke="black" points="640,-168.5 640,-187.5 704,-187.5 704,-168.5 640,-168.5"/>
 <text text-anchor="middle" x="672" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">Syntax.hpp</text>
 </a>
