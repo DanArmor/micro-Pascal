@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('d2/d22/md_schemes_scheme.html','../../
 <div class="line">    skinparam backgroundColor #EEEBDC</div>
 <div class="line">    skinparam handwritten false</div>
 <div class="line">    skinparam arrowFontColor black</div>
-<div class="line">    &#39;left to right direction</div>
+<div class="line">    left to right direction</div>
 <div class="line"> </div>
 <div class="line">    object &quot;Лексер&quot; as Lexer</div>
 <div class="line">    object &quot;Текст программы&quot; as Text</div>
@@ -109,7 +109,6 @@ $(document).ready(function(){initNavTree('d2/d22/md_schemes_scheme.html','../../
 <div class="line">    object &quot;Фабрика AST узлов&quot; as ASTFactory</div>
 <div class="line"> </div>
 <div class="line">    Lexer --&gt; TokenTemp : &quot;Добавить\n шаблон&quot;</div>
-<div class="line">    Lexer --&gt; TokenTemp : &quot;Удалить\n шаблон&quot;</div>
 <div class="line">    Lexer --&gt; Text : &quot;Разбить\nна токены&quot;</div>
 <div class="line">    Lexer --&gt; List : &quot;Создать&quot;</div>
 <div class="line">    Lexer --&gt; Token : &quot;Создать&quot;</div>
@@ -121,9 +120,13 @@ $(document).ready(function(){initNavTree('d2/d22/md_schemes_scheme.html','../../
 <div class="line"> </div>
 <div class="line">    Visitor --&gt; AST : &quot;Посетить \nузел&quot;</div>
 <div class="line">    Visitor &lt;-- AST : &quot;Принять \nпосетителя&quot;</div>
+<div class="line"> </div>
 <div class="line">    Lexer &lt;-UP- Analyzer : &quot;Использовать&quot;</div>
+<div class="line">    Analyzer &lt;-DOWN- Lexer : &quot;Вернуть\nсписок токенов&quot;</div>
 <div class="line">    Syntax &lt;-UP- Analyzer : &quot;Использовать&quot;</div>
+<div class="line">    Analyzer &lt;-DOWN- Syntax : &quot;Вернуть\nкорень ДАС&quot;</div>
 <div class="line">    Visitor &lt;-UP- Analyzer : &quot;Использовать&quot;</div>
+<div class="line">    Analyzer &lt;-DOWN- Visitor : &quot;Вернуть\nрезультат&quot;</div>
 <div class="line">@enduml</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
