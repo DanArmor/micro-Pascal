@@ -44,7 +44,7 @@ https://danarmor.github.io/micro-Pascal/ - ссылка на актуальну�
 
 ### Что используется из стороннего?
 * [magic_enum.hpp](https://github.com/Neargye/magic_enum) - для получения имен энамов в рантайме 
-* [plantUML](https://github.com/plantuml/plantuml) - для написания объектной схемы и схемы классов 
+* [plantUML](https://github.com/plantuml/plantuml) - для написания объектной модели
 * [Graphviz](https://gitlab.com/graphviz/graphviz) - для отрисовски дерева синтаксиса
 * [Doxygen](https://github.com/doxygen/doxygen) - документация 
 * [Doxygen Awesome](https://jothepro.github.io/doxygen-awesome-css/) - стиль для документации 
